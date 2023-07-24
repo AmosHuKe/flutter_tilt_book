@@ -8,29 +8,64 @@
 // AppGenerator
 // **************************************************************************
 
-import 'dart:async';
 import 'dart:core';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_tilt/src/gestures_listener.dart';
-import 'package:flutter_tilt/src/state/tilt_state.dart';
-import 'package:flutter_tilt/src/tilt_container.dart';
-import 'package:flutter_tilt/src/tilt_parallax_container.dart';
-import 'package:flutter_tilt/src/type/gestures_type.dart';
-import 'package:flutter_tilt/src/type/tilt_light_type.dart';
-import 'package:flutter_tilt/src/type/tilt_shadow_type.dart';
-import 'package:flutter_tilt/src/type/tilt_type.dart';
-import 'package:flutter_tilt/src/utils.dart';
-import 'package:flutter_tilt_book/tilt.dart';
+import 'package:flutter_tilt_book/book.dart';
+import 'package:flutter_tilt_book/views/default.dart';
+import 'package:flutter_tilt_book/views/disable_effects.dart';
+import 'package:flutter_tilt_book/views/events.dart';
+import 'package:flutter_tilt_book/views/example.dart';
+import 'package:flutter_tilt_book/views/initial_tilt.dart';
+import 'package:flutter_tilt_book/views/keep_tilt.dart';
+import 'package:flutter_tilt_book/views/light_direction.dart';
+import 'package:flutter_tilt_book/views/reverse_tilt.dart';
+import 'package:flutter_tilt_book/views/shadow_direction.dart';
+import 'package:flutter_tilt_book/views/tilt_direction.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 final directories = [
   WidgetbookComponent(
-    name: 'Tilt',
+    name: 'Flutter_Tilt',
     useCases: [
       WidgetbookUseCase(
-        name: 'Flutter Tilt Demo',
-        builder: (context) => tiltDemoUseCase(context),
+        name: 'Example',
+        builder: (context) => exampleUseCase(context),
+      ),
+      WidgetbookUseCase(
+        name: 'Default',
+        builder: (context) => defaultUseCase(context),
+      ),
+      WidgetbookUseCase(
+        name: 'Reverse tilt',
+        builder: (context) => reverseTiltUseCase(context),
+      ),
+      WidgetbookUseCase(
+        name: 'Keep tilt',
+        builder: (context) => keepTiltUseCase(context),
+      ),
+      WidgetbookUseCase(
+        name: 'Tilt direction',
+        builder: (context) => tiltDirectionUseCase(context),
+      ),
+      WidgetbookUseCase(
+        name: 'Light direction',
+        builder: (context) => lightDirectionUseCase(context),
+      ),
+      WidgetbookUseCase(
+        name: 'Shadow direction',
+        builder: (context) => shadowDirectionUseCase(context),
+      ),
+      WidgetbookUseCase(
+        name: 'Initial tilt',
+        builder: (context) => initialTiltUseCase(context),
+      ),
+      WidgetbookUseCase(
+        name: 'Disable effects',
+        builder: (context) => disableEffectsUseCase(context),
+      ),
+      WidgetbookUseCase(
+        name: 'Events',
+        builder: (context) => eventsUseCase(context),
       ),
     ],
   ),

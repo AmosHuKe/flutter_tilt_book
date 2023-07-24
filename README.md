@@ -1,5 +1,7 @@
 # flutter_tilt_book
 
+Flutter 3.10.6
+
 ```sh
 # run
 $ flutter run -d chrome -t lib/widgetbook.dart
