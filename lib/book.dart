@@ -11,6 +11,7 @@ import 'package:flutter_tilt_book/views/shadow_direction.dart';
 import 'package:flutter_tilt_book/views/initial_tilt.dart';
 import 'package:flutter_tilt_book/views/disable_effects.dart';
 import 'package:flutter_tilt_book/views/events.dart';
+import 'package:flutter_tilt_book/views/parallax_image.dart';
 
 // ignore: camel_case_types
 class Flutter_Tilt {}
@@ -46,3 +47,6 @@ Widget disableEffectsUseCase(BuildContext context) => const DisableEffects();
 
 @widgetbook.UseCase(name: 'Events', type: Flutter_Tilt)
 Widget eventsUseCase(BuildContext context) => const Events();
+
+@widgetbook.UseCase(name: 'Parallax image', type: Flutter_Tilt)
+Widget parallaxImageUseCase(BuildContext context) => const ParallaxImage();

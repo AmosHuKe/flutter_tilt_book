@@ -18,6 +18,7 @@ import 'package:flutter_tilt_book/views/example.dart';
 import 'package:flutter_tilt_book/views/initial_tilt.dart';
 import 'package:flutter_tilt_book/views/keep_tilt.dart';
 import 'package:flutter_tilt_book/views/light_direction.dart';
+import 'package:flutter_tilt_book/views/parallax_image.dart';
 import 'package:flutter_tilt_book/views/reverse_tilt.dart';
 import 'package:flutter_tilt_book/views/shadow_direction.dart';
 import 'package:flutter_tilt_book/views/tilt_direction.dart';
@@ -66,6 +67,10 @@ final directories = [
       WidgetbookUseCase(
         name: 'Events',
         builder: (context) => eventsUseCase(context),
+      ),
+      WidgetbookUseCase(
+        name: 'Parallax image',
+        builder: (context) => parallaxImageUseCase(context),
       ),
     ],
   ),
