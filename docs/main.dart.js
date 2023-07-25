@@ -79975,9 +79975,9 @@ return A.d5(B.r,B.bR,B.q,B.co,s,s,200,s,s,350)}}
 A.JT.prototype={
 C(a){return B.JG}}
 A.MF.prototype={
-C(a){return A.jh(null,B.zM,A.b([B.Lz,A.aaj(A.anL("parallax_image/2.png",337,742),B.Ke),A.aaj(A.anL("parallax_image/3.png",337,742),B.Kh)],t.p),B.mL,null,null,B.MU,B.eC)}}
+C(a){return A.jh(null,B.zM,A.b([B.Lz,A.aaj(A.anL("assets/parallax_image/2.png",337,742),B.Ke),A.aaj(A.anL("assets/parallax_image/3.png",337,742),B.Kh)],t.p),B.mL,null,null,B.MU,B.eC)}}
 A.F8.prototype={
-C(a){return A.anL("parallax_image/1.png",337,742)}}
+C(a){return A.anL("assets/parallax_image/1.png",337,742)}}
 A.KX.prototype={
 C(a){return B.JE}}
 A.MG.prototype={

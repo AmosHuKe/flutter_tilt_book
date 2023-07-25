@@ -44,7 +44,7 @@ class TiltDemo extends StatelessWidget {
         TiltParallax(
           size: const Offset(20, 20),
           child: Image.asset(
-            'parallax_image/2.png',
+            'assets/parallax_image/2.png',
             width: 742,
             height: 337,
           ),
@@ -52,7 +52,7 @@ class TiltDemo extends StatelessWidget {
         TiltParallax(
           size: const Offset(30, 30),
           child: Image.asset(
-            'parallax_image/3.png',
+            'assets/parallax_image/3.png',
             width: 742,
             height: 337,
           ),
@@ -69,7 +69,7 @@ class Box extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image.asset(
-      'parallax_image/1.png',
+      'assets/parallax_image/1.png',
       width: 742,
       height: 337,
     );
