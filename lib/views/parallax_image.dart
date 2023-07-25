@@ -27,15 +27,16 @@ class TiltDemo extends StatelessWidget {
       shadowConfig: const ShadowConfig(disable: true),
       childInner: [
         const Positioned.fill(
-          top: 90,
-          left: 110,
+          top: 80,
+          left: 140,
           child: TiltParallax(
             size: Offset(10, 10),
             child: Text(
               'Flutter Tilt',
               style: TextStyle(
-                color: Colors.black87,
+                color: Colors.black54,
                 fontSize: 40,
+                fontWeight: FontWeight.bold,
               ),
             ),
           ),
@@ -43,46 +44,17 @@ class TiltDemo extends StatelessWidget {
         TiltParallax(
           size: const Offset(20, 20),
           child: Image.asset(
-            'parallax_image/1.png',
-            alignment: Alignment.bottomCenter,
-            width: 400,
-            height: 300,
+            'parallax_image/2.png',
+            width: 742,
+            height: 337,
           ),
         ),
         TiltParallax(
           size: const Offset(30, 30),
           child: Image.asset(
-            'parallax_image/2.png',
-            alignment: Alignment.bottomCenter,
-            width: 400,
-            height: 300,
-          ),
-        ),
-        TiltParallax(
-          size: const Offset(40, 40),
-          child: Image.asset(
-            'parallax_image/y1.png',
-            alignment: Alignment.bottomLeft,
-            width: 400,
-            height: 300,
-          ),
-        ),
-        TiltParallax(
-          size: const Offset(40, 40),
-          child: Image.asset(
-            'parallax_image/y3.png',
-            alignment: Alignment.bottomRight,
-            width: 400,
-            height: 300,
-          ),
-        ),
-        TiltParallax(
-          size: const Offset(50, 50),
-          child: Image.asset(
-            'parallax_image/y2.png',
-            alignment: Alignment.bottomCenter,
-            width: 400,
-            height: 300,
+            'parallax_image/3.png',
+            width: 742,
+            height: 337,
           ),
         ),
       ],
@@ -97,9 +69,9 @@ class Box extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image.asset(
-      'parallax_image/bg.png',
-      width: 400,
-      height: 300,
+      'parallax_image/1.png',
+      width: 742,
+      height: 337,
     );
   }
 }

@@ -33,6 +33,10 @@ final directories = [
         builder: (context) => exampleUseCase(context),
       ),
       WidgetbookUseCase(
+        name: 'Parallax image',
+        builder: (context) => parallaxImageUseCase(context),
+      ),
+      WidgetbookUseCase(
         name: 'Default',
         builder: (context) => defaultUseCase(context),
       ),
@@ -67,10 +71,6 @@ final directories = [
       WidgetbookUseCase(
         name: 'Events',
         builder: (context) => eventsUseCase(context),
-      ),
-      WidgetbookUseCase(
-        name: 'Parallax image',
-        builder: (context) => parallaxImageUseCase(context),
       ),
     ],
   ),

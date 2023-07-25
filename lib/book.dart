@@ -19,6 +19,9 @@ class Flutter_Tilt {}
 @widgetbook.UseCase(name: 'Example', type: Flutter_Tilt)
 Widget exampleUseCase(BuildContext context) => const Example();
 
+@widgetbook.UseCase(name: 'Parallax image', type: Flutter_Tilt)
+Widget parallaxImageUseCase(BuildContext context) => const ParallaxImage();
+
 @widgetbook.UseCase(name: 'Default', type: Flutter_Tilt)
 Widget defaultUseCase(BuildContext context) => const Default();
 
@@ -47,6 +50,3 @@ Widget disableEffectsUseCase(BuildContext context) => const DisableEffects();
 
 @widgetbook.UseCase(name: 'Events', type: Flutter_Tilt)
 Widget eventsUseCase(BuildContext context) => const Events();
-
-@widgetbook.UseCase(name: 'Parallax image', type: Flutter_Tilt)
-Widget parallaxImageUseCase(BuildContext context) => const ParallaxImage();
