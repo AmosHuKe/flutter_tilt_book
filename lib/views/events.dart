@@ -7,10 +7,14 @@ class Events extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color(0xFFFFFFFF),
-        body: Center(child: TiltDemo()),
+        backgroundColor: const Color(0xFFFFFFFF),
+        body: ListView(
+          children: const [
+            Center(child: TiltDemo()),
+          ],
+        ),
       ),
     );
   }
@@ -25,6 +29,8 @@ class TiltDemo extends StatefulWidget {
 
 class _TiltDemoState extends State<TiltDemo> {
   TiltDataModel? tiltData;
+  String gestureMove = '';
+  String gestureLeave = '';
 
   @override
   Widget build(BuildContext context) {
@@ -36,18 +42,50 @@ class _TiltDemoState extends State<TiltDemo> {
           /// Tilt here
           child: Tilt(
             borderRadius: BorderRadius.circular(30),
-            onGestureMove: (TiltDataModel tiltDataModel) {
+            onGestureMove:
+                (TiltDataModel tiltDataModel, GesturesType gesturesType) {
               setState(() {
                 tiltData = tiltDataModel;
+                gestureMove = gesturesType.name;
               });
             },
-            onGestureLeave: (TiltDataModel tiltDataModel) {
+            onGestureLeave:
+                (TiltDataModel tiltDataModel, GesturesType gesturesType) {
               setState(() {
                 tiltData = tiltDataModel;
+                gestureLeave = gesturesType.name;
               });
             },
             child: const Box(),
           ),
+        ),
+        const SizedBox(height: 64),
+        Center(
+          child: Transform(
+              alignment: Alignment.center,
+              transform: tiltData?.transform ?? Matrix4.identity(),
+              child: Stack(
+                alignment: AlignmentDirectional.center,
+                children: [
+                  Container(
+                    color: Colors.black,
+                    width: 350,
+                    height: 200,
+                  ),
+                  Positioned(
+                    left: tiltData?.position.dx,
+                    top: tiltData?.position.dy,
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        color: Colors.red,
+                        shape: BoxShape.circle,
+                      ),
+                      width: 4,
+                      height: 4,
+                    ),
+                  ),
+                ],
+              )),
         ),
         const SizedBox(height: 64),
         Padding(
@@ -55,6 +93,13 @@ class _TiltDemoState extends State<TiltDemo> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const Text(
+                'gestures:',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              Text('move: $gestureMove'),
+              Text('leave: $gestureLeave'),
+              const SizedBox(height: 8),
               const Text(
                 'position:',
                 style: TextStyle(fontWeight: FontWeight.bold),
