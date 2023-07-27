@@ -2,18 +2,20 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_tilt/flutter_tilt.dart';
 
+import 'package:flutter_tilt_book/layouts/base.dart';
+
 class Example extends StatelessWidget {
   const Example({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.brown,
-      ),
-      home: const Scaffold(
-        backgroundColor: Color(0xFFFFFFFF),
-        body: Center(child: TiltDemo()),
+    return BaseLayout(
+      title: 'Example',
+      body: Theme(
+        data: ThemeData(
+          primarySwatch: Colors.brown,
+        ),
+        child: const TiltDemo(),
       ),
     );
   }
