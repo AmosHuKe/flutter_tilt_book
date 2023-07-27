@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_tilt/flutter_tilt.dart';
 
-import 'package:flutter_tilt_book/layouts/base.dart';
+import 'package:flutter_tilt_book/layouts/base_layout.dart';
 
 class Example extends StatelessWidget {
   const Example({super.key});
