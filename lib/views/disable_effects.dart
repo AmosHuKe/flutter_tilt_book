@@ -44,11 +44,11 @@ class _DisableEffectsState extends State<DisableEffects> {
 
       /// tools
       tools: [
-        SizedBox(
-          width: 300,
-          child: Column(
-            children: [
-              CheckboxListTile(
+        Wrap(
+          children: [
+            SizedBox(
+              width: 300,
+              child: CheckboxListTile(
                 title: const Text('Disable tilt'),
                 value: disableTilt,
                 onChanged: (bool? value) {
@@ -58,7 +58,10 @@ class _DisableEffectsState extends State<DisableEffects> {
                 },
                 secondary: const Icon(Icons.settings),
               ),
-              CheckboxListTile(
+            ),
+            SizedBox(
+              width: 300,
+              child: CheckboxListTile(
                 title: const Text('Disable light'),
                 value: disableLight,
                 onChanged: (bool? value) {
@@ -68,7 +71,10 @@ class _DisableEffectsState extends State<DisableEffects> {
                 },
                 secondary: const Icon(Icons.settings),
               ),
-              CheckboxListTile(
+            ),
+            SizedBox(
+              width: 300,
+              child: CheckboxListTile(
                 title: const Text('Disable shadow'),
                 value: disableShadow,
                 onChanged: (bool? value) {
@@ -78,8 +84,8 @@ class _DisableEffectsState extends State<DisableEffects> {
                 },
                 secondary: const Icon(Icons.settings),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ],
     );

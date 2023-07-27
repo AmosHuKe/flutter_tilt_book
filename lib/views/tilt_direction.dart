@@ -43,11 +43,11 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
 
       /// tools
       tools: [
-        SizedBox(
-          width: 300,
-          child: Column(
-            children: [
-              CheckboxListTile(
+        Wrap(
+          children: [
+            SizedBox(
+              width: 300,
+              child: CheckboxListTile(
                 title: const Text('none'),
                 value: tiltDirection.contains(TiltDirection.none),
                 onChanged: (bool? value) {
@@ -59,7 +59,10 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
                 },
                 secondary: const Icon(Icons.settings),
               ),
-              CheckboxListTile(
+            ),
+            SizedBox(
+              width: 300,
+              child: CheckboxListTile(
                 title: const Text('top'),
                 value: tiltDirection.contains(TiltDirection.top),
                 onChanged: (bool? value) {
@@ -71,7 +74,10 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
                 },
                 secondary: const Icon(Icons.settings),
               ),
-              CheckboxListTile(
+            ),
+            SizedBox(
+              width: 300,
+              child: CheckboxListTile(
                 title: const Text('bottom'),
                 value: tiltDirection.contains(TiltDirection.bottom),
                 onChanged: (bool? value) {
@@ -83,7 +89,10 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
                 },
                 secondary: const Icon(Icons.settings),
               ),
-              CheckboxListTile(
+            ),
+            SizedBox(
+              width: 300,
+              child: CheckboxListTile(
                 title: const Text('left'),
                 value: tiltDirection.contains(TiltDirection.left),
                 onChanged: (bool? value) {
@@ -95,7 +104,10 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
                 },
                 secondary: const Icon(Icons.settings),
               ),
-              CheckboxListTile(
+            ),
+            SizedBox(
+              width: 300,
+              child: CheckboxListTile(
                 title: const Text('right'),
                 value: tiltDirection.contains(TiltDirection.right),
                 onChanged: (bool? value) {
@@ -107,7 +119,10 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
                 },
                 secondary: const Icon(Icons.settings),
               ),
-              CheckboxListTile(
+            ),
+            SizedBox(
+              width: 300,
+              child: CheckboxListTile(
                 title: const Text('topLeft'),
                 value: tiltDirection.contains(TiltDirection.topLeft),
                 onChanged: (bool? value) {
@@ -119,7 +134,10 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
                 },
                 secondary: const Icon(Icons.settings),
               ),
-              CheckboxListTile(
+            ),
+            SizedBox(
+              width: 300,
+              child: CheckboxListTile(
                 title: const Text('topRight'),
                 value: tiltDirection.contains(TiltDirection.topRight),
                 onChanged: (bool? value) {
@@ -131,7 +149,10 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
                 },
                 secondary: const Icon(Icons.settings),
               ),
-              CheckboxListTile(
+            ),
+            SizedBox(
+              width: 300,
+              child: CheckboxListTile(
                 title: const Text('bottomLeft'),
                 value: tiltDirection.contains(TiltDirection.bottomLeft),
                 onChanged: (bool? value) {
@@ -143,7 +164,10 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
                 },
                 secondary: const Icon(Icons.settings),
               ),
-              CheckboxListTile(
+            ),
+            SizedBox(
+              width: 300,
+              child: CheckboxListTile(
                 title: const Text('bottomRight'),
                 value: tiltDirection.contains(TiltDirection.bottomRight),
                 onChanged: (bool? value) {
@@ -155,7 +179,10 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
                 },
                 secondary: const Icon(Icons.settings),
               ),
-              CheckboxListTile(
+            ),
+            SizedBox(
+              width: 300,
+              child: CheckboxListTile(
                 title: const Text('(0.8, 0.4)'),
                 value: tiltDirection.contains(const TiltDirection(0.8, 0.4)),
                 onChanged: (bool? value) {
@@ -167,8 +194,8 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
                 },
                 secondary: const Icon(Icons.settings),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ],
     );

@@ -17,7 +17,7 @@ class _ShadowDirectionDemoState extends State<ShadowDirectionDemo> {
   @override
   Widget build(BuildContext context) {
     return BaseLayout(
-      title: 'Reverse tilt',
+      title: 'Shadow direction',
 
       /// Tilt here
       body: Tilt(
@@ -41,11 +41,11 @@ class _ShadowDirectionDemoState extends State<ShadowDirectionDemo> {
 
       /// tools
       tools: [
-        SizedBox(
-          width: 300,
-          child: Column(
-            children: [
-              RadioListTile<ShadowDirection>(
+        Wrap(
+          children: [
+            SizedBox(
+              width: 300,
+              child: RadioListTile<ShadowDirection>(
                 title: const Text('none'),
                 secondary: const Icon(Icons.settings),
                 groupValue: shadowDirection,
@@ -56,7 +56,10 @@ class _ShadowDirectionDemoState extends State<ShadowDirectionDemo> {
                   });
                 },
               ),
-              RadioListTile<ShadowDirection>(
+            ),
+            SizedBox(
+              width: 300,
+              child: RadioListTile<ShadowDirection>(
                 title: const Text('around'),
                 secondary: const Icon(Icons.settings),
                 groupValue: shadowDirection,
@@ -67,7 +70,10 @@ class _ShadowDirectionDemoState extends State<ShadowDirectionDemo> {
                   });
                 },
               ),
-              RadioListTile<ShadowDirection>(
+            ),
+            SizedBox(
+              width: 300,
+              child: RadioListTile<ShadowDirection>(
                 title: const Text('all'),
                 secondary: const Icon(Icons.settings),
                 groupValue: shadowDirection,
@@ -78,7 +84,10 @@ class _ShadowDirectionDemoState extends State<ShadowDirectionDemo> {
                   });
                 },
               ),
-              RadioListTile<ShadowDirection>(
+            ),
+            SizedBox(
+              width: 300,
+              child: RadioListTile<ShadowDirection>(
                 title: const Text('top'),
                 secondary: const Icon(Icons.settings),
                 groupValue: shadowDirection,
@@ -89,7 +98,10 @@ class _ShadowDirectionDemoState extends State<ShadowDirectionDemo> {
                   });
                 },
               ),
-              RadioListTile<ShadowDirection>(
+            ),
+            SizedBox(
+              width: 300,
+              child: RadioListTile<ShadowDirection>(
                 title: const Text('bottom'),
                 secondary: const Icon(Icons.settings),
                 groupValue: shadowDirection,
@@ -100,7 +112,10 @@ class _ShadowDirectionDemoState extends State<ShadowDirectionDemo> {
                   });
                 },
               ),
-              RadioListTile<ShadowDirection>(
+            ),
+            SizedBox(
+              width: 300,
+              child: RadioListTile<ShadowDirection>(
                 title: const Text('left'),
                 secondary: const Icon(Icons.settings),
                 groupValue: shadowDirection,
@@ -111,7 +126,10 @@ class _ShadowDirectionDemoState extends State<ShadowDirectionDemo> {
                   });
                 },
               ),
-              RadioListTile<ShadowDirection>(
+            ),
+            SizedBox(
+              width: 300,
+              child: RadioListTile<ShadowDirection>(
                 title: const Text('right'),
                 secondary: const Icon(Icons.settings),
                 groupValue: shadowDirection,
@@ -122,7 +140,10 @@ class _ShadowDirectionDemoState extends State<ShadowDirectionDemo> {
                   });
                 },
               ),
-              RadioListTile<ShadowDirection>(
+            ),
+            SizedBox(
+              width: 300,
+              child: RadioListTile<ShadowDirection>(
                 title: const Text('center'),
                 secondary: const Icon(Icons.settings),
                 groupValue: shadowDirection,
@@ -133,7 +154,10 @@ class _ShadowDirectionDemoState extends State<ShadowDirectionDemo> {
                   });
                 },
               ),
-              RadioListTile<ShadowDirection>(
+            ),
+            SizedBox(
+              width: 300,
+              child: RadioListTile<ShadowDirection>(
                 title: const Text('topLeft'),
                 secondary: const Icon(Icons.settings),
                 groupValue: shadowDirection,
@@ -144,7 +168,10 @@ class _ShadowDirectionDemoState extends State<ShadowDirectionDemo> {
                   });
                 },
               ),
-              RadioListTile<ShadowDirection>(
+            ),
+            SizedBox(
+              width: 300,
+              child: RadioListTile<ShadowDirection>(
                 title: const Text('topRight'),
                 secondary: const Icon(Icons.settings),
                 groupValue: shadowDirection,
@@ -155,7 +182,10 @@ class _ShadowDirectionDemoState extends State<ShadowDirectionDemo> {
                   });
                 },
               ),
-              RadioListTile<ShadowDirection>(
+            ),
+            SizedBox(
+              width: 300,
+              child: RadioListTile<ShadowDirection>(
                 title: const Text('bottomLeft'),
                 secondary: const Icon(Icons.settings),
                 groupValue: shadowDirection,
@@ -166,7 +196,10 @@ class _ShadowDirectionDemoState extends State<ShadowDirectionDemo> {
                   });
                 },
               ),
-              RadioListTile<ShadowDirection>(
+            ),
+            SizedBox(
+              width: 300,
+              child: RadioListTile<ShadowDirection>(
                 title: const Text('bottomRight'),
                 secondary: const Icon(Icons.settings),
                 groupValue: shadowDirection,
@@ -177,7 +210,10 @@ class _ShadowDirectionDemoState extends State<ShadowDirectionDemo> {
                   });
                 },
               ),
-              RadioListTile<ShadowDirection>(
+            ),
+            SizedBox(
+              width: 300,
+              child: RadioListTile<ShadowDirection>(
                 title: const Text('xCenter'),
                 secondary: const Icon(Icons.settings),
                 groupValue: shadowDirection,
@@ -188,7 +224,10 @@ class _ShadowDirectionDemoState extends State<ShadowDirectionDemo> {
                   });
                 },
               ),
-              RadioListTile<ShadowDirection>(
+            ),
+            SizedBox(
+              width: 300,
+              child: RadioListTile<ShadowDirection>(
                 title: const Text('yCenter'),
                 secondary: const Icon(Icons.settings),
                 groupValue: shadowDirection,
@@ -199,8 +238,8 @@ class _ShadowDirectionDemoState extends State<ShadowDirectionDemo> {
                   });
                 },
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ],
     );
