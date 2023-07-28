@@ -28,7 +28,13 @@ class _ShadowDirectionDemoState extends State<ShadowDirectionDemo> {
           width: 350,
           height: 200,
           alignment: Alignment.center,
-          color: Colors.blueAccent,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Color(0xFF8989ba), Color(0xFFa7a6cb)],
+            ),
+          ),
           child: const Text(
             'Flutter Tilt ✨',
             style: TextStyle(

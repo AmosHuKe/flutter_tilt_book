@@ -20,7 +20,13 @@ class InitialTilt extends StatelessWidget {
           width: 350,
           height: 200,
           alignment: Alignment.center,
-          color: Colors.blueAccent,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              colors: [Color(0xFF80d0c7), Color(0xFF13547a)],
+            ),
+          ),
           child: const Text(
             'Flutter Tilt ✨',
             style: TextStyle(

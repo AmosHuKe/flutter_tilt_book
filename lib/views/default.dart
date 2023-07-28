@@ -19,7 +19,13 @@ class Default extends StatelessWidget {
           width: 350,
           height: 200,
           alignment: Alignment.center,
-          color: Colors.pink,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.bottomLeft,
+              end: Alignment.topRight,
+              colors: [Color(0xFFff9a9e), Color(0xFFfad0c4)],
+            ),
+          ),
           child: const Text(
             'Flutter Tilt ✨',
             style: TextStyle(

@@ -20,7 +20,13 @@ class KeepTilt extends StatelessWidget {
           width: 350,
           height: 200,
           alignment: Alignment.center,
-          color: Colors.amber,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Color(0xFF3cba92), Color(0xFF0ba360)],
+            ),
+          ),
           child: const Text(
             'Flutter Tilt ✨',
             style: TextStyle(

@@ -27,7 +27,13 @@ class _LightDirectionDemoState extends State<LightDirectionDemo> {
           width: 350,
           height: 200,
           alignment: Alignment.center,
-          color: Colors.blueAccent,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Color(0xFF537895), Color(0xFF09203f)],
+            ),
+          ),
           child: const Text(
             'Flutter Tilt ✨',
             style: TextStyle(
