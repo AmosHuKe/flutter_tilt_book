@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+
 import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
 import 'package:flutter_tilt_book/views/example.dart';
@@ -12,6 +13,7 @@ import 'package:flutter_tilt_book/views/initial_tilt.dart';
 import 'package:flutter_tilt_book/views/disable_effects.dart';
 import 'package:flutter_tilt_book/views/events.dart';
 import 'package:flutter_tilt_book/views/parallax_image.dart';
+import 'package:flutter_tilt_book/views/animation.dart';
 
 // ignore: camel_case_types
 class Flutter_Tilt {}
@@ -22,8 +24,14 @@ Widget exampleUseCase(BuildContext context) => const Example();
 @widgetbook.UseCase(name: 'Parallax image', type: Flutter_Tilt)
 Widget parallaxImageUseCase(BuildContext context) => const ParallaxImage();
 
+@widgetbook.UseCase(name: 'Events', type: Flutter_Tilt)
+Widget eventsUseCase(BuildContext context) => const Events();
+
 @widgetbook.UseCase(name: 'Default', type: Flutter_Tilt)
 Widget defaultUseCase(BuildContext context) => const Default();
+
+@widgetbook.UseCase(name: 'Animation', type: Flutter_Tilt)
+Widget animationUseCase(BuildContext context) => const AnimationDemo();
 
 @widgetbook.UseCase(name: 'Reverse tilt', type: Flutter_Tilt)
 Widget reverseTiltUseCase(BuildContext context) => const ReverseTilt();
@@ -47,6 +55,3 @@ Widget initialTiltUseCase(BuildContext context) => const InitialTilt();
 
 @widgetbook.UseCase(name: 'Disable effects', type: Flutter_Tilt)
 Widget disableEffectsUseCase(BuildContext context) => const DisableEffects();
-
-@widgetbook.UseCase(name: 'Events', type: Flutter_Tilt)
-Widget eventsUseCase(BuildContext context) => const Events();

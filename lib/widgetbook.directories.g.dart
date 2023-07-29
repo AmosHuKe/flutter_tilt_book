@@ -10,7 +10,9 @@
 
 import 'dart:core';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_tilt_book/book.dart';
+import 'package:flutter_tilt_book/views/animation.dart';
 import 'package:flutter_tilt_book/views/default.dart';
 import 'package:flutter_tilt_book/views/disable_effects.dart';
 import 'package:flutter_tilt_book/views/events.dart';
@@ -37,8 +39,16 @@ final directories = [
         builder: (context) => parallaxImageUseCase(context),
       ),
       WidgetbookUseCase(
+        name: 'Events',
+        builder: (context) => eventsUseCase(context),
+      ),
+      WidgetbookUseCase(
         name: 'Default',
         builder: (context) => defaultUseCase(context),
+      ),
+      WidgetbookUseCase(
+        name: 'Animation',
+        builder: (context) => animationUseCase(context),
       ),
       WidgetbookUseCase(
         name: 'Reverse tilt',
@@ -67,10 +77,6 @@ final directories = [
       WidgetbookUseCase(
         name: 'Disable effects',
         builder: (context) => disableEffectsUseCase(context),
-      ),
-      WidgetbookUseCase(
-        name: 'Events',
-        builder: (context) => eventsUseCase(context),
       ),
     ],
   ),
