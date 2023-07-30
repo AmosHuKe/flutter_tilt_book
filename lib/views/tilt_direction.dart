@@ -20,7 +20,7 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
   @override
   Widget build(BuildContext context) {
     return BaseLayout(
-      title: 'Reverse tilt',
+      title: 'Tilt direction',
 
       /// Tilt here
       body: Tilt(
