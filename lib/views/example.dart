@@ -53,10 +53,10 @@ class _TiltDemoState extends State<TiltDemo> {
         minBlurRadius: 10,
         maxBlurRadius: 15,
       ),
-      childInner: [
-        Positioned.fill(
-          top: -20,
-          child: Center(
+      childLayout: ChildLayout(
+        outer: [
+          Positioned(
+            top: 200,
             child: TiltParallax(
               size: const Offset(-20, -20),
               child: Text(
@@ -65,24 +65,24 @@ class _TiltDemoState extends State<TiltDemo> {
               ),
             ),
           ),
-        ),
-        Positioned(
-          bottom: 10,
-          right: 10,
-          child: TiltParallax(
-            size: const Offset(25, 25),
-            child: SizedBox(
-              width: 50,
-              height: 50,
-              child: FloatingActionButton(
-                onPressed: _incrementCounter,
-                tooltip: 'Increment',
-                child: const Icon(Icons.add),
+          Positioned(
+            bottom: 10,
+            right: 10,
+            child: TiltParallax(
+              size: const Offset(25, 25),
+              child: SizedBox(
+                width: 50,
+                height: 50,
+                child: FloatingActionButton(
+                  onPressed: _incrementCounter,
+                  tooltip: 'Increment',
+                  child: const Icon(Icons.add),
+                ),
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
       // onGestureMove: (TiltDataModel tiltDataModel, GesturesType gesturesType) {
       //   print('--- onGestureMove ---');
       //   print(tiltDataModel.areaProgress);

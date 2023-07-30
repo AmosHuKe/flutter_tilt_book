@@ -239,10 +239,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_tilt
-      sha256: "66be9db79008611e9aa99d4ee77565594ec89655940a224bffc3f28b0ad4786a"
+      sha256: "5cab9347d502d420337cfc1e17862f9e989b6c2ccb43eb59687f06b51466d339"
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.9"
+    version: "0.1.0"
   freezed_annotation:
     dependency: transitive
     description:

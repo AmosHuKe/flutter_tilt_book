@@ -20,9 +20,9 @@ class AnimationDemo extends StatelessWidget {
           leaveDuration: Duration(seconds: 1),
           leaveCurve: Curves.bounceOut,
         ),
-        childInner: const [
-          Positioned.fill(
-            child: Center(
+        childLayout: const ChildLayout(
+          outer: [
+            Positioned(
               child: TiltParallax(
                 size: Offset(40, 40),
                 child: Text(
@@ -34,8 +34,8 @@ class AnimationDemo extends StatelessWidget {
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
         child: Container(
           width: 350,
           height: 200,

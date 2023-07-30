@@ -9,7 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_tilt: ^0.0.9
+  flutter_tilt: ^0.1.0
   widgetbook_annotation: ^3.0.0
   widgetbook: ^3.1.0
   flutter_svg: ^2.0.7
