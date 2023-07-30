@@ -15,7 +15,11 @@ class LayoutDemo extends StatelessWidget {
       /// Tilt here
       body: Tilt(
         borderRadius: BorderRadius.circular(30),
-        tiltConfig: const TiltConfig(angle: 20),
+        tiltConfig: const TiltConfig(
+          angle: 20,
+          leaveDuration: Duration(seconds: 1),
+          leaveCurve: Curves.elasticOut,
+        ),
         shadowConfig: const ShadowConfig(disable: true),
         childLayout: ChildLayout(
           outer: [
@@ -62,22 +66,59 @@ class LayoutDemo extends StatelessWidget {
           ],
           behind: [
             Positioned(
-              bottom: -20,
+              bottom: -10,
               child: TiltParallax(
-                size: const Offset(-30, -30),
+                size: const Offset(-50, -50),
                 child: Container(
-                  width: 315,
-                  height: 180,
+                  width: 350 * 0.8,
+                  height: 200 * 0.8,
                   alignment: Alignment.bottomCenter,
-                  padding: const EdgeInsets.only(bottom: 12),
+                  padding: const EdgeInsets.only(bottom: 4),
                   decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(30),
+                    gradient: LinearGradient(
+                      begin: Alignment.topRight,
+                      end: Alignment.bottomLeft,
+                      colors: [
+                        const Color(0xFF80d0c7).withOpacity(0.6),
+                        const Color(0xFF13547a).withOpacity(0.6),
+                      ],
+                    ),
+                    borderRadius: BorderRadius.circular(20),
                   ),
                   child: const Text(
                     'behind',
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 18,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              bottom: -5,
+              child: TiltParallax(
+                size: const Offset(-25, -25),
+                child: Container(
+                  width: 350 * 0.9,
+                  height: 200 * 0.9,
+                  alignment: Alignment.bottomCenter,
+                  padding: const EdgeInsets.only(bottom: 4),
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topRight,
+                      end: Alignment.bottomLeft,
+                      colors: [
+                        const Color(0xFF80d0c7).withOpacity(0.8),
+                        const Color(0xFF13547a).withOpacity(0.8),
+                      ],
+                    ),
+                    borderRadius: BorderRadius.circular(25),
+                  ),
+                  child: const Text(
+                    'behind',
+                    style: TextStyle(
+                      fontSize: 18,
                       color: Colors.white,
                     ),
                   ),
@@ -90,11 +131,14 @@ class LayoutDemo extends StatelessWidget {
           width: 350,
           height: 200,
           alignment: Alignment.center,
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
-              colors: [Color(0xFF80d0c7), Color(0xFF13547a)],
+              colors: [
+                const Color(0xFF80d0c7).withOpacity(0.9),
+                const Color(0xFF13547a).withOpacity(0.9),
+              ],
             ),
           ),
           child: const Text(

@@ -31,11 +31,11 @@ Widget eventsUseCase(BuildContext context) => const Events();
 @widgetbook.UseCase(name: 'Default', type: Flutter_Tilt)
 Widget defaultUseCase(BuildContext context) => const Default();
 
-@widgetbook.UseCase(name: 'Animation', type: Flutter_Tilt)
-Widget animationUseCase(BuildContext context) => const AnimationDemo();
-
 @widgetbook.UseCase(name: 'Layout', type: Flutter_Tilt)
 Widget layoutUseCase(BuildContext context) => const LayoutDemo();
+
+@widgetbook.UseCase(name: 'Animation', type: Flutter_Tilt)
+Widget animationUseCase(BuildContext context) => const AnimationDemo();
 
 @widgetbook.UseCase(name: 'Reverse tilt', type: Flutter_Tilt)
 Widget reverseTiltUseCase(BuildContext context) => const ReverseTilt();

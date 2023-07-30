@@ -48,12 +48,12 @@ final directories = [
         builder: (context) => defaultUseCase(context),
       ),
       WidgetbookUseCase(
-        name: 'Animation',
-        builder: (context) => animationUseCase(context),
-      ),
-      WidgetbookUseCase(
         name: 'Layout',
         builder: (context) => layoutUseCase(context),
+      ),
+      WidgetbookUseCase(
+        name: 'Animation',
+        builder: (context) => animationUseCase(context),
       ),
       WidgetbookUseCase(
         name: 'Reverse tilt',
