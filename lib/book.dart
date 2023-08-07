@@ -15,6 +15,7 @@ import 'package:flutter_tilt_book/views/events.dart';
 import 'package:flutter_tilt_book/views/parallax_image.dart';
 import 'package:flutter_tilt_book/views/animation.dart';
 import 'package:flutter_tilt_book/views/layout.dart';
+import 'package:flutter_tilt_book/views/layout2.dart';
 
 // ignore: camel_case_types
 class Flutter_Tilt {}
@@ -33,6 +34,9 @@ Widget defaultUseCase(BuildContext context) => const Default();
 
 @widgetbook.UseCase(name: 'Layout', type: Flutter_Tilt)
 Widget layoutUseCase(BuildContext context) => const LayoutDemo();
+
+@widgetbook.UseCase(name: 'Layout2', type: Flutter_Tilt)
+Widget layout2UseCase(BuildContext context) => const Layout2Demo();
 
 @widgetbook.UseCase(name: 'Animation', type: Flutter_Tilt)
 Widget animationUseCase(BuildContext context) => const AnimationDemo();

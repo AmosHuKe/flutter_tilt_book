@@ -20,6 +20,7 @@ class _EventsState extends State<Events> {
   Widget build(BuildContext context) {
     return BaseLayout(
       title: 'Events',
+      dartCode: code(),
 
       /// Tilt here
       body: Tilt(
@@ -132,3 +133,46 @@ class _EventsState extends State<Events> {
     );
   }
 }
+
+String code() => '''
+import 'package:flutter_tilt/flutter_tilt.dart';
+
+······
+
+TiltDataModel? tiltData;
+String gestureMove = '';
+String gestureLeave = '';
+
+Tilt(
+  borderRadius: BorderRadius.circular(30),
+  onGestureMove:
+      (TiltDataModel tiltDataModel, GesturesType gesturesType) {
+    setState(() {
+      tiltData = tiltDataModel;
+      gestureMove = gesturesType.name;
+    });
+  },
+  onGestureLeave:
+      (TiltDataModel tiltDataModel, GesturesType gesturesType) {
+    setState(() {
+      tiltData = tiltDataModel;
+      gestureLeave = gesturesType.name;
+    });
+  },
+  child: Container(
+    width: 350,
+    height: 200,
+    alignment: Alignment.center,
+    color: Colors.blueAccent,
+    child: const Text(
+      'Flutter Tilt ✨',
+      style: TextStyle(
+        fontSize: 20,
+        color: Colors.white,
+      ),
+    ),
+  ),
+),
+
+······
+''';

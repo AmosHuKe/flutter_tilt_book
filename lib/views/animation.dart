@@ -11,6 +11,7 @@ class AnimationDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     return BaseLayout(
       title: 'Animation',
+      dartCode: code(),
 
       /// Tilt here
       body: Tilt(
@@ -39,7 +40,6 @@ class AnimationDemo extends StatelessWidget {
         child: Container(
           width: 350,
           height: 200,
-          alignment: Alignment.center,
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topRight,
@@ -52,3 +52,48 @@ class AnimationDemo extends StatelessWidget {
     );
   }
 }
+
+String code() =>
+    '''
+import 'package:flutter_tilt/flutter_tilt.dart';
+
+······
+
+Tilt(
+  borderRadius: BorderRadius.circular(30),
+  tiltConfig: const TiltConfig(
+    angle: 30,
+    leaveDuration: Duration(seconds: 1),
+    leaveCurve: Curves.bounceOut,
+  ),
+  childLayout: const ChildLayout(
+    outer: [
+      Positioned(
+        child: TiltParallax(
+          size: Offset(40, 40),
+          child: Text(
+            'Flutter Tilt ✨',
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.white,
+            ),
+          ),
+        ),
+      ),
+    ],
+  ),
+  child: Container(
+    width: 350,
+    height: 200,
+    decoration: const BoxDecoration(
+      gradient: LinearGradient(
+        begin: Alignment.topRight,
+        end: Alignment.bottomLeft,
+        colors: [Color(0xFF80d0c7), Color(0xFF13547a)],
+      ),
+    ),
+  ),
+),
+
+······
+''';

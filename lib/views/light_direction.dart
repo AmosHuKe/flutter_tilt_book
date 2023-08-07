@@ -18,6 +18,7 @@ class _LightDirectionDemoState extends State<LightDirectionDemo> {
   Widget build(BuildContext context) {
     return BaseLayout(
       title: 'Light direction',
+      dartCode: code(lightDirection: lightDirection),
 
       /// Tilt here
       body: Tilt(
@@ -250,3 +251,35 @@ class _LightDirectionDemoState extends State<LightDirectionDemo> {
     );
   }
 }
+
+String code({required LightDirection lightDirection}) => '''
+import 'package:flutter_tilt/flutter_tilt.dart';
+
+······
+
+Tilt(
+  borderRadius: BorderRadius.circular(30),
+  lightConfig: LightConfig(direction: $lightDirection),
+  child: Container(
+    width: 350,
+    height: 200,
+    alignment: Alignment.center,
+    decoration: const BoxDecoration(
+      gradient: LinearGradient(
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        colors: [Color(0xFF537895), Color(0xFF09203f)],
+      ),
+    ),
+    child: const Text(
+      'Flutter Tilt ✨',
+      style: TextStyle(
+        fontSize: 20,
+        color: Colors.white,
+      ),
+    ),
+  ),
+),
+
+······
+''';

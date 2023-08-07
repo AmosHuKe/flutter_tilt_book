@@ -20,6 +20,11 @@ class _DisableEffectsState extends State<DisableEffects> {
   Widget build(BuildContext context) {
     return BaseLayout(
       title: 'Disable effects',
+      dartCode: code(
+        disableTilt: disableTilt,
+        disableLight: disableLight,
+        disableShadow: disableShadow,
+      ),
 
       /// Tilt here
       body: Tilt(
@@ -91,3 +96,36 @@ class _DisableEffectsState extends State<DisableEffects> {
     );
   }
 }
+
+String code({
+  required bool disableTilt,
+  required bool disableLight,
+  required bool disableShadow,
+}) =>
+    '''
+import 'package:flutter_tilt/flutter_tilt.dart';
+
+······
+
+Tilt(
+  borderRadius: BorderRadius.circular(30),
+  tiltConfig: TiltConfig(disable: $disableTilt),
+  lightConfig: LightConfig(disable: $disableLight),
+  shadowConfig: ShadowConfig(disable: $disableShadow),
+  child: Container(
+    width: 350,
+    height: 200,
+    alignment: Alignment.center,
+    color: Colors.blueAccent,
+    child: const Text(
+      'Flutter Tilt ✨',
+      style: TextStyle(
+        fontSize: 20,
+        color: Colors.white,
+      ),
+    ),
+  ),
+),
+
+······
+''';

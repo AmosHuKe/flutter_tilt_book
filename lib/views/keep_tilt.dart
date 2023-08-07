@@ -11,6 +11,7 @@ class KeepTilt extends StatelessWidget {
   Widget build(BuildContext context) {
     return BaseLayout(
       title: 'Keep tilt',
+      dartCode: code(),
 
       /// Tilt here
       body: Tilt(
@@ -39,3 +40,35 @@ class KeepTilt extends StatelessWidget {
     );
   }
 }
+
+String code() => '''
+import 'package:flutter_tilt/flutter_tilt.dart';
+
+······
+
+Tilt(
+  borderRadius: BorderRadius.circular(30),
+  tiltConfig: const TiltConfig(enableRevert: false),
+  child: Container(
+    width: 350,
+    height: 200,
+    alignment: Alignment.center,
+    decoration: const BoxDecoration(
+      gradient: LinearGradient(
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        colors: [Color(0xFF3cba92), Color(0xFF0ba360)],
+      ),
+    ),
+    child: const Text(
+      'Flutter Tilt ✨',
+      style: TextStyle(
+        fontSize: 20,
+        color: Colors.white,
+      ),
+    ),
+  ),
+),
+
+······
+''';

@@ -20,6 +20,7 @@ import 'package:flutter_tilt_book/views/example.dart';
 import 'package:flutter_tilt_book/views/initial_tilt.dart';
 import 'package:flutter_tilt_book/views/keep_tilt.dart';
 import 'package:flutter_tilt_book/views/layout.dart';
+import 'package:flutter_tilt_book/views/layout2.dart';
 import 'package:flutter_tilt_book/views/light_direction.dart';
 import 'package:flutter_tilt_book/views/parallax_image.dart';
 import 'package:flutter_tilt_book/views/reverse_tilt.dart';
@@ -50,6 +51,10 @@ final directories = [
       WidgetbookUseCase(
         name: 'Layout',
         builder: (context) => layoutUseCase(context),
+      ),
+      WidgetbookUseCase(
+        name: 'Layout2',
+        builder: (context) => layout2UseCase(context),
       ),
       WidgetbookUseCase(
         name: 'Animation',
