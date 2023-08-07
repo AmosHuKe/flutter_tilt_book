@@ -50,45 +50,35 @@ class _DisableEffectsState extends State<DisableEffects> {
       /// tools
       tools: [
         Wrap(
+          spacing: 12,
+          runSpacing: 12,
           children: [
-            SizedBox(
-              width: 300,
-              child: CheckboxListTile(
-                title: const Text('Disable tilt'),
-                value: disableTilt,
-                onChanged: (bool? value) {
-                  setState(() {
-                    disableTilt = value!;
-                  });
-                },
-                secondary: const Icon(Icons.settings),
-              ),
+            FilterChip(
+              label: const Text('Disable tilt'),
+              selected: disableTilt,
+              onSelected: (bool value) {
+                setState(() {
+                  disableTilt = value;
+                });
+              },
             ),
-            SizedBox(
-              width: 300,
-              child: CheckboxListTile(
-                title: const Text('Disable light'),
-                value: disableLight,
-                onChanged: (bool? value) {
-                  setState(() {
-                    disableLight = value!;
-                  });
-                },
-                secondary: const Icon(Icons.settings),
-              ),
+            FilterChip(
+              label: const Text('Disable light'),
+              selected: disableLight,
+              onSelected: (bool value) {
+                setState(() {
+                  disableLight = value;
+                });
+              },
             ),
-            SizedBox(
-              width: 300,
-              child: CheckboxListTile(
-                title: const Text('Disable shadow'),
-                value: disableShadow,
-                onChanged: (bool? value) {
-                  setState(() {
-                    disableShadow = value!;
-                  });
-                },
-                secondary: const Icon(Icons.settings),
-              ),
+            FilterChip(
+              label: const Text('Disable shadow'),
+              selected: disableShadow,
+              onSelected: (bool value) {
+                setState(() {
+                  disableShadow = value;
+                });
+              },
             ),
           ],
         ),

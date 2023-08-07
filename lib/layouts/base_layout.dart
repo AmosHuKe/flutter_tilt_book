@@ -1,6 +1,7 @@
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:js' as js;
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
@@ -141,7 +142,10 @@ class _BaseLayoutState extends State<BaseLayout> {
                         children: [
                           if (currentIndex == 0)
                             ActionChip(
-                              avatar: const Icon(Icons.code),
+                              avatar: const Icon(
+                                CupertinoIcons.chevron_left_slash_chevron_right,
+                                size: 14,
+                              ),
                               label: const Text('Code'),
                               onPressed: () {
                                 setState(() {
@@ -151,7 +155,10 @@ class _BaseLayoutState extends State<BaseLayout> {
                             ),
                           if (currentIndex == 1)
                             ActionChip(
-                              avatar: const Icon(Icons.remove_red_eye_outlined),
+                              avatar: const Icon(
+                                CupertinoIcons.eye,
+                                size: 14,
+                              ),
                               label: const Text('Preview'),
                               onPressed: () {
                                 setState(() {

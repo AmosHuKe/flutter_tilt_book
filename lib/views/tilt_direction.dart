@@ -51,156 +51,118 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
       /// tools
       tools: [
         Wrap(
+          spacing: 12,
+          runSpacing: 12,
           children: [
-            SizedBox(
-              width: 300,
-              child: CheckboxListTile(
-                title: const Text('none'),
-                value: tiltDirection.contains(TiltDirection.none),
-                onChanged: (bool? value) {
-                  setState(() {
-                    value!
-                        ? tiltDirection.add(TiltDirection.none)
-                        : tiltDirection.remove(TiltDirection.none);
-                  });
-                },
-                secondary: const Icon(Icons.settings),
-              ),
+            FilterChip(
+              label: const Text('none'),
+              selected: tiltDirection.contains(TiltDirection.none),
+              onSelected: (bool value) {
+                setState(() {
+                  value
+                      ? tiltDirection.add(TiltDirection.none)
+                      : tiltDirection.remove(TiltDirection.none);
+                });
+              },
             ),
-            SizedBox(
-              width: 300,
-              child: CheckboxListTile(
-                title: const Text('top'),
-                value: tiltDirection.contains(TiltDirection.top),
-                onChanged: (bool? value) {
-                  setState(() {
-                    value!
-                        ? tiltDirection.add(TiltDirection.top)
-                        : tiltDirection.remove(TiltDirection.top);
-                  });
-                },
-                secondary: const Icon(Icons.settings),
-              ),
+            FilterChip(
+              label: const Text('top'),
+              selected: tiltDirection.contains(TiltDirection.top),
+              onSelected: (bool value) {
+                setState(() {
+                  value
+                      ? tiltDirection.add(TiltDirection.top)
+                      : tiltDirection.remove(TiltDirection.top);
+                });
+              },
             ),
-            SizedBox(
-              width: 300,
-              child: CheckboxListTile(
-                title: const Text('bottom'),
-                value: tiltDirection.contains(TiltDirection.bottom),
-                onChanged: (bool? value) {
-                  setState(() {
-                    value!
-                        ? tiltDirection.add(TiltDirection.bottom)
-                        : tiltDirection.remove(TiltDirection.bottom);
-                  });
-                },
-                secondary: const Icon(Icons.settings),
-              ),
+            FilterChip(
+              label: const Text('bottom'),
+              selected: tiltDirection.contains(TiltDirection.bottom),
+              onSelected: (bool value) {
+                setState(() {
+                  value
+                      ? tiltDirection.add(TiltDirection.bottom)
+                      : tiltDirection.remove(TiltDirection.bottom);
+                });
+              },
             ),
-            SizedBox(
-              width: 300,
-              child: CheckboxListTile(
-                title: const Text('left'),
-                value: tiltDirection.contains(TiltDirection.left),
-                onChanged: (bool? value) {
-                  setState(() {
-                    value!
-                        ? tiltDirection.add(TiltDirection.left)
-                        : tiltDirection.remove(TiltDirection.left);
-                  });
-                },
-                secondary: const Icon(Icons.settings),
-              ),
+            FilterChip(
+              label: const Text('left'),
+              selected: tiltDirection.contains(TiltDirection.left),
+              onSelected: (bool value) {
+                setState(() {
+                  value
+                      ? tiltDirection.add(TiltDirection.left)
+                      : tiltDirection.remove(TiltDirection.left);
+                });
+              },
             ),
-            SizedBox(
-              width: 300,
-              child: CheckboxListTile(
-                title: const Text('right'),
-                value: tiltDirection.contains(TiltDirection.right),
-                onChanged: (bool? value) {
-                  setState(() {
-                    value!
-                        ? tiltDirection.add(TiltDirection.right)
-                        : tiltDirection.remove(TiltDirection.right);
-                  });
-                },
-                secondary: const Icon(Icons.settings),
-              ),
+            FilterChip(
+              label: const Text('right'),
+              selected: tiltDirection.contains(TiltDirection.right),
+              onSelected: (bool value) {
+                setState(() {
+                  value
+                      ? tiltDirection.add(TiltDirection.right)
+                      : tiltDirection.remove(TiltDirection.right);
+                });
+              },
             ),
-            SizedBox(
-              width: 300,
-              child: CheckboxListTile(
-                title: const Text('topLeft'),
-                value: tiltDirection.contains(TiltDirection.topLeft),
-                onChanged: (bool? value) {
-                  setState(() {
-                    value!
-                        ? tiltDirection.add(TiltDirection.topLeft)
-                        : tiltDirection.remove(TiltDirection.topLeft);
-                  });
-                },
-                secondary: const Icon(Icons.settings),
-              ),
+            FilterChip(
+              label: const Text('topLeft'),
+              selected: tiltDirection.contains(TiltDirection.topLeft),
+              onSelected: (bool value) {
+                setState(() {
+                  value
+                      ? tiltDirection.add(TiltDirection.topLeft)
+                      : tiltDirection.remove(TiltDirection.topLeft);
+                });
+              },
             ),
-            SizedBox(
-              width: 300,
-              child: CheckboxListTile(
-                title: const Text('topRight'),
-                value: tiltDirection.contains(TiltDirection.topRight),
-                onChanged: (bool? value) {
-                  setState(() {
-                    value!
-                        ? tiltDirection.add(TiltDirection.topRight)
-                        : tiltDirection.remove(TiltDirection.topRight);
-                  });
-                },
-                secondary: const Icon(Icons.settings),
-              ),
+            FilterChip(
+              label: const Text('topRight'),
+              selected: tiltDirection.contains(TiltDirection.topRight),
+              onSelected: (bool value) {
+                setState(() {
+                  value
+                      ? tiltDirection.add(TiltDirection.topRight)
+                      : tiltDirection.remove(TiltDirection.topRight);
+                });
+              },
             ),
-            SizedBox(
-              width: 300,
-              child: CheckboxListTile(
-                title: const Text('bottomLeft'),
-                value: tiltDirection.contains(TiltDirection.bottomLeft),
-                onChanged: (bool? value) {
-                  setState(() {
-                    value!
-                        ? tiltDirection.add(TiltDirection.bottomLeft)
-                        : tiltDirection.remove(TiltDirection.bottomLeft);
-                  });
-                },
-                secondary: const Icon(Icons.settings),
-              ),
+            FilterChip(
+              label: const Text('bottomLeft'),
+              selected: tiltDirection.contains(TiltDirection.bottomLeft),
+              onSelected: (bool value) {
+                setState(() {
+                  value
+                      ? tiltDirection.add(TiltDirection.bottomLeft)
+                      : tiltDirection.remove(TiltDirection.bottomLeft);
+                });
+              },
             ),
-            SizedBox(
-              width: 300,
-              child: CheckboxListTile(
-                title: const Text('bottomRight'),
-                value: tiltDirection.contains(TiltDirection.bottomRight),
-                onChanged: (bool? value) {
-                  setState(() {
-                    value!
-                        ? tiltDirection.add(TiltDirection.bottomRight)
-                        : tiltDirection.remove(TiltDirection.bottomRight);
-                  });
-                },
-                secondary: const Icon(Icons.settings),
-              ),
+            FilterChip(
+              label: const Text('bottomRight'),
+              selected: tiltDirection.contains(TiltDirection.bottomRight),
+              onSelected: (bool value) {
+                setState(() {
+                  value
+                      ? tiltDirection.add(TiltDirection.bottomRight)
+                      : tiltDirection.remove(TiltDirection.bottomRight);
+                });
+              },
             ),
-            SizedBox(
-              width: 300,
-              child: CheckboxListTile(
-                title: const Text('(0.8, 0.4)'),
-                value: tiltDirection.contains(const TiltDirection(0.8, 0.4)),
-                onChanged: (bool? value) {
-                  setState(() {
-                    value!
-                        ? tiltDirection.add(const TiltDirection(0.8, 0.4))
-                        : tiltDirection.remove(const TiltDirection(0.8, 0.4));
-                  });
-                },
-                secondary: const Icon(Icons.settings),
-              ),
+            FilterChip(
+              label: const Text('TiltDirection(0.8, 0.4)'),
+              selected: tiltDirection.contains(const TiltDirection(0.8, 0.4)),
+              onSelected: (bool value) {
+                setState(() {
+                  value
+                      ? tiltDirection.add(const TiltDirection(0.8, 0.4))
+                      : tiltDirection.remove(const TiltDirection(0.8, 0.4));
+                });
+              },
             ),
           ],
         ),
