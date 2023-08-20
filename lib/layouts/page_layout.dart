@@ -20,13 +20,11 @@ class PageLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.only(top: 24, bottom: 24, right: 24),
       padding: const EdgeInsets.all(24),
-      decoration: const BoxDecoration(
-        color: Color(0xFFF6F7FA),
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(36),
-          bottomLeft: Radius.circular(36),
-        ),
+      decoration: BoxDecoration(
+        color: const Color(0xFFF6F7FA),
+        borderRadius: BorderRadius.circular(36),
       ),
       child: Row(
         children: [
@@ -73,8 +71,24 @@ class BodyContainer extends StatefulWidget {
   State<BodyContainer> createState() => _BodyContainerState();
 }
 
-class _BodyContainerState extends State<BodyContainer> {
-  int currentIndex = 0;
+class _BodyContainerState extends State<BodyContainer>
+    with SingleTickerProviderStateMixin {
+  int initialIndex = 0;
+
+  late TabController tabController = TabController(
+    initialIndex: initialIndex,
+    length: 2,
+    vsync: this,
+  )..addListener(() => pageController.jumpToPage(tabController.index));
+
+  late PageController pageController =
+      PageController(initialPage: initialIndex);
+
+  @override
+  void dispose() {
+    super.dispose();
+    tabController.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -100,41 +114,51 @@ class _BodyContainerState extends State<BodyContainer> {
               ),
 
               /// Action
-              Row(
-                children: [
-                  if (currentIndex == 1)
-                    ActionChip(
-                      avatar: const Padding(
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 0.5,
+                  vertical: 3,
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: const BorderRadius.all(Radius.circular(100)),
+                  border: Border.all(color: const Color(0xFFE9EAED)),
+                ),
+                child: TabBar(
+                  controller: tabController,
+                  isScrollable: true,
+                  dividerColor: Colors.transparent,
+                  indicatorWeight: 0,
+                  indicatorSize: TabBarIndicatorSize.label,
+                  indicatorPadding: const EdgeInsets.symmetric(horizontal: -12),
+                  indicator: const BoxDecoration(
+                    color: Color(0xFF171819),
+                    shape: BoxShape.circle,
+                  ),
+                  labelColor: Colors.white,
+                  unselectedLabelColor: Colors.black,
+                  overlayColor:
+                      const MaterialStatePropertyAll(Colors.transparent),
+                  tabs: const [
+                    /// Preview
+                    Tab(
+                      height: 36,
+                      icon: Padding(
                         padding: EdgeInsets.only(bottom: 2),
-                        child: Icon(
-                          Remix.eye_line,
-                          size: 14,
-                        ),
+                        child: Icon(Remix.eye_line, size: 14),
                       ),
-                      label: const Text('Preview'),
-                      onPressed: () {
-                        setState(() {
-                          currentIndex = 0;
-                        });
-                      },
                     ),
-                  if (currentIndex == 0)
-                    ActionChip(
-                      avatar: const Padding(
+
+                    /// Code
+                    Tab(
+                      height: 36,
+                      icon: Padding(
                         padding: EdgeInsets.only(bottom: 2),
-                        child: Icon(
-                          Remix.code_s_slash_line,
-                          size: 14,
-                        ),
+                        child: Icon(Remix.code_s_slash_line, size: 14),
                       ),
-                      label: const Text('Code'),
-                      onPressed: () {
-                        setState(() {
-                          currentIndex = 1;
-                        });
-                      },
-                    ),
-                ],
+                    )
+                  ],
+                ),
               ),
             ],
           ),
@@ -143,25 +167,35 @@ class _BodyContainerState extends State<BodyContainer> {
 
           /// Body
           Expanded(
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(24),
-              child: ListView(
-                physics: const AlwaysScrollableScrollPhysics(
-                  parent: BouncingScrollPhysics(),
-                ),
-                children: [
-                  /// Preview
-                  if (currentIndex == 0)
+            child: PageView(
+              controller: pageController,
+              children: [
+                /// Preview
+                ListView(
+                  physics: const AlwaysScrollableScrollPhysics(
+                    parent: BouncingScrollPhysics(),
+                  ),
+                  children: [
                     Padding(
                       padding: const EdgeInsets.only(top: 40, bottom: 100),
                       child: Center(child: widget.body),
                     ),
+                  ],
+                ),
 
-                  /// Code
-                  if (currentIndex == 1)
-                    BookMarkdown(dartCode: widget.dartCode),
-                ],
-              ),
+                /// Code
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(24),
+                  child: ListView(
+                    physics: const AlwaysScrollableScrollPhysics(
+                      parent: BouncingScrollPhysics(),
+                    ),
+                    children: [
+                      BookMarkdown(dartCode: widget.dartCode),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
         ],

@@ -1,6 +1,7 @@
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:js' as js;
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 import 'package:go_router/go_router.dart';
 import 'package:remixicon_updated/remixicon_updated.dart';
@@ -44,14 +45,33 @@ class NavigatorContainer extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           /// Title
-          const Padding(
-            padding: EdgeInsets.only(top: 12, left: 24),
-            child: Text(
-              Config.appTitle,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-              ),
+          Padding(
+            padding: const EdgeInsets.only(top: 12, left: 24),
+            child: Builder(
+              builder: (context) {
+                Widget title = const Text(
+                  Config.appTitle,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                  ),
+                );
+
+                title = title
+                    .animate(onPlay: (controller) => controller.repeat())
+                    .shimmer(
+                  duration: 3600.ms,
+                  colors: [
+                    Colors.white,
+                    const Color(0xFF16686D),
+                    const Color(0xFF16686D),
+                    const Color(0xFF2071A8),
+                    Colors.white,
+                  ],
+                );
+
+                return title;
+              },
             ),
           ),
           const BookDivider(

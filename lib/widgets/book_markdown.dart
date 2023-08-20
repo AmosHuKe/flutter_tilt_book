@@ -19,31 +19,33 @@ class _BookMarkdownState extends State<BookMarkdown> {
   Widget build(BuildContext context) {
     init().then((highlighter) {
       final highlightedCode = highlighter.highlight(widget.dartCode);
-      setState(() {
-        child = SelectionArea(
-            child: Container(
-          padding: const EdgeInsets.all(20),
-          decoration: BoxDecoration(
-            color: const Color(0xFFF6F8FA),
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: Row(
-            children: [
-              Expanded(
-                child: Text.rich(
-                  highlightedCode,
-                  style: const TextStyle(
-                    fontSize: 14,
-                    height: 1.3,
-                    wordSpacing: 4,
-                    letterSpacing: 1,
+      if (mounted) {
+        setState(() {
+          child = SelectionArea(
+              child: Container(
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: const Color(0xFFF6F8FA),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Text.rich(
+                    highlightedCode,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      height: 1.3,
+                      wordSpacing: 4,
+                      letterSpacing: 1,
+                    ),
                   ),
                 ),
-              ),
-            ],
-          ),
-        ));
-      });
+              ],
+            ),
+          ));
+        });
+      }
     });
     return child;
   }

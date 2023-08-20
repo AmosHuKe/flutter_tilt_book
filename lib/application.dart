@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_animate/flutter_animate.dart';
+
 import 'package:flutter_tilt_book/router.dart';
 import 'package:flutter_tilt_book/config/config.dart';
 
@@ -13,6 +15,6 @@ class Application extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3: true),
       routerConfig: R.config,
-    );
+    ).animate().fadeIn(duration: 400.ms, curve: Curves.easeIn);
   }
 }
