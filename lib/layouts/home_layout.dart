@@ -7,7 +7,7 @@ import 'package:remixicon_updated/remixicon_updated.dart';
 
 import 'package:flutter_tilt_book/router.dart';
 import 'package:flutter_tilt_book/config/config.dart';
-import 'package:flutter_tilt_book/widget/book_divider.dart';
+import 'package:flutter_tilt_book/widgets/book_divider.dart';
 
 class HomeLayout extends StatelessWidget {
   const HomeLayout({super.key, required this.child});

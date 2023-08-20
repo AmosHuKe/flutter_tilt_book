@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_tilt_book/widget/book_markdown.dart';
+import 'package:flutter_tilt_book/widgets/book_markdown.dart';
 import 'package:remixicon_updated/remixicon_updated.dart';
 
 class PageLayout extends StatelessWidget {
