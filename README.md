@@ -4,11 +4,8 @@ Flutter 3.13.0
 
 ```sh
 # run
-$ flutter run -d chrome -t lib/widgetbook.dart
-
-# build_runner
-$ flutter pub run build_runner watch
+$ flutter run -d chrome
 
 # build web
-$ flutter build web --release -t lib/widgetbook.dart
+$ flutter build web --release
 ```

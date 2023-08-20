@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_tilt/flutter_tilt.dart';
 
-import 'package:flutter_tilt_book/layouts/base_layout.dart';
+import 'package:flutter_tilt_book/layouts/page_layout.dart';
 
 class ParallaxImage extends StatelessWidget {
   const ParallaxImage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return BaseLayout(
+    return PageLayout(
       title: 'Parallax image',
       dartCode: code(),
 

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_tilt/flutter_tilt.dart';
 
-import 'package:flutter_tilt_book/layouts/base_layout.dart';
+import 'package:flutter_tilt_book/layouts/page_layout.dart';
 
 class DisableEffects extends StatefulWidget {
   const DisableEffects({super.key});
@@ -18,7 +18,7 @@ class _DisableEffectsState extends State<DisableEffects> {
 
   @override
   Widget build(BuildContext context) {
-    return BaseLayout(
+    return PageLayout(
       title: 'Disable effects',
       dartCode: code(
         disableTilt: disableTilt,

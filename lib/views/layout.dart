@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_tilt/flutter_tilt.dart';
 
-import 'package:flutter_tilt_book/layouts/base_layout.dart';
+import 'package:flutter_tilt_book/layouts/page_layout.dart';
 
 class LayoutDemo extends StatelessWidget {
   const LayoutDemo({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return BaseLayout(
+    return PageLayout(
       title: 'Layout',
       dartCode: code(),
 

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_tilt/flutter_tilt.dart';
 
-import 'package:flutter_tilt_book/layouts/base_layout.dart';
+import 'package:flutter_tilt_book/layouts/page_layout.dart';
 
 class LightDirectionDemo extends StatefulWidget {
   const LightDirectionDemo({super.key});
@@ -16,7 +16,7 @@ class _LightDirectionDemoState extends State<LightDirectionDemo> {
 
   @override
   Widget build(BuildContext context) {
-    return BaseLayout(
+    return PageLayout(
       title: 'Light direction',
       dartCode: code(lightDirection: lightDirection),
 

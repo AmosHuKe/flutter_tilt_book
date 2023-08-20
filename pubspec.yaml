@@ -1,7 +1,7 @@
 name: flutter_tilt_book
 description: A new Flutter project.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-version: 1.0.1
+version: 2.0.0
 
 environment:
   sdk: '>=3.0.6 <4.0.0'
@@ -9,19 +9,17 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  go_router: ^10.1.0
   flutter_tilt: ^1.0.3
-  widgetbook_annotation: ^3.0.0
-  widgetbook: ^3.1.0
   flutter_svg: ^2.0.7
   syntax_highlight: ^0.2.0
+  remixicon: ^1.0.0
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: any
-  widgetbook_generator: ^3.0.0
-  build_runner: ^2.4.6
 
 flutter:
   uses-material-design: true
