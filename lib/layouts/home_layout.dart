@@ -118,7 +118,7 @@ class NavigatorContainer extends StatelessWidget {
                   ),
                 ),
 
-                /// 模拟内阴影
+                /// 模拟内阴影，视觉提醒用户下方还有更多菜单
                 Positioned(
                   left: 0,
                   right: 0,
@@ -167,13 +167,13 @@ class NavigatorItem extends StatelessWidget {
     final bool selected =
         GoRouterState.of(context).matchedLocation == '/$routerName';
 
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 8),
-      padding: const EdgeInsets.symmetric(vertical: 4),
-      child: GestureDetector(
-        onTap: () => context.goNamed(routerName),
-        child: MouseRegion(
-          cursor: SystemMouseCursors.click,
+    return GestureDetector(
+      onTap: () => context.goNamed(routerName),
+      child: MouseRegion(
+        cursor: SystemMouseCursors.click,
+        child: Container(
+          margin: const EdgeInsets.symmetric(vertical: 8),
+          padding: const EdgeInsets.symmetric(vertical: 4),
           child: AnimatedCrossFade(
             crossFadeState:
                 selected ? CrossFadeState.showSecond : CrossFadeState.showFirst,
