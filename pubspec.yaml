@@ -13,6 +13,7 @@ dependencies:
   flutter_tilt: ^1.0.3
   syntax_highlight: ^0.2.0
   remixicon_updated: ^1.0.2
+  cupertino_icons: ^1.0.5
 
 dev_dependencies:
   flutter_test:
@@ -23,6 +24,4 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/
     - assets/parallax_image/
-    - assets/packages/
