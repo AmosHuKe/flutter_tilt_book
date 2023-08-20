@@ -7,5 +7,5 @@ Flutter 3.13.0
 $ flutter run -d chrome
 
 # build web
-$ flutter build web --release
+$ flutter build web --release --no-tree-shake-icons
 ```
