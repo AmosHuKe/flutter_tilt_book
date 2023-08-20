@@ -37,7 +37,7 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "3781843882";
+    const serviceWorkerVersion = "778455739";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
@@ -59,11 +59,24 @@
         serviceWorker: {
           serviceWorkerVersion: serviceWorkerVersion,
         },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
-            document.getElementById('amos-loader-wrapper')?.remove();
+        onEntrypointLoaded: async function(engineInitializer) {
+          await engineInitializer.initializeEngine().then(function(appRunner) {
             appRunner.runApp();
           });
+          
+          /// 清除加载
+          const amosLoader = document.getElementById('amos-loader-wrapper');
+          let timer;
+          let opacity = 1;
+          timer = setInterval(function() {
+            opacity -= 0.01;
+            amosLoader.style.opacity = opacity;
+            if (opacity <= 0) {
+              opacity = 0;
+              clearInterval(timer);
+              amosLoader?.remove();
+            }
+          }, 2);
         }
       });
     });
