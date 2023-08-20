@@ -1,7 +1,6 @@
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:js' as js;
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
@@ -106,7 +105,7 @@ class _BodyContainerState extends State<BodyContainer> {
                   if (currentIndex == 1)
                     ActionChip(
                       avatar: const Icon(
-                        CupertinoIcons.eye,
+                        Remix.eye_line,
                         size: 14,
                       ),
                       label: const Text('Preview'),
@@ -119,7 +118,7 @@ class _BodyContainerState extends State<BodyContainer> {
                   if (currentIndex == 0)
                     ActionChip(
                       avatar: const Icon(
-                        CupertinoIcons.chevron_left_slash_chevron_right,
+                        Remix.code_s_slash_line,
                         size: 14,
                       ),
                       label: const Text('Code'),

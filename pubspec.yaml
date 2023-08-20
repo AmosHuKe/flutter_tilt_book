@@ -14,7 +14,6 @@ dependencies:
   flutter_svg: ^2.0.7
   syntax_highlight: ^0.2.0
   remixicon: ^1.0.0
-  cupertino_icons: ^1.0.2
 
 dev_dependencies:
   flutter_test:
