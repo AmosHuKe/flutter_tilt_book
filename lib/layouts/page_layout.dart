@@ -1,11 +1,7 @@
-// ignore: avoid_web_libraries_in_flutter
-import 'dart:js' as js;
-
 import 'package:flutter/material.dart';
 
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_tilt_book/widget/book_markdown.dart';
-import 'package:remixicon/remixicon.dart';
+import 'package:remixicon_updated/remixicon_updated.dart';
 
 class PageLayout extends StatelessWidget {
   const PageLayout({
@@ -23,35 +19,39 @@ class PageLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: Column(
-              children: [
-                /// Banner
-                const BannerContainer(),
-
-                /// Body
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 24),
+    return Container(
+      padding: const EdgeInsets.all(24),
+      decoration: const BoxDecoration(
+        color: Color(0xFFF6F7FA),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(36),
+          bottomLeft: Radius.circular(36),
+        ),
+      ),
+      child: Row(
+        children: [
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.only(right: 24),
+              child: Column(
+                children: [
+                  /// Body
+                  Expanded(
                     child: BodyContainer(
                       title: title,
                       body: body,
                       dartCode: dartCode,
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
-        ),
 
-        /// Tools
-        SizedBox(width: 420, child: ToolsContainer(tools: tools)),
-      ],
+          /// Tools
+          SizedBox(width: 420, child: ToolsContainer(tools: tools)),
+        ],
+      ),
     );
   }
 }
@@ -104,9 +104,12 @@ class _BodyContainerState extends State<BodyContainer> {
                 children: [
                   if (currentIndex == 1)
                     ActionChip(
-                      avatar: const Icon(
-                        Remix.eye_line,
-                        size: 14,
+                      avatar: const Padding(
+                        padding: EdgeInsets.only(bottom: 2),
+                        child: Icon(
+                          Remix.eye_line,
+                          size: 14,
+                        ),
                       ),
                       label: const Text('Preview'),
                       onPressed: () {
@@ -117,9 +120,12 @@ class _BodyContainerState extends State<BodyContainer> {
                     ),
                   if (currentIndex == 0)
                     ActionChip(
-                      avatar: const Icon(
-                        Remix.code_s_slash_line,
-                        size: 14,
+                      avatar: const Padding(
+                        padding: EdgeInsets.only(bottom: 2),
+                        child: Icon(
+                          Remix.code_s_slash_line,
+                          size: 14,
+                        ),
                       ),
                       label: const Text('Code'),
                       onPressed: () {
@@ -137,18 +143,25 @@ class _BodyContainerState extends State<BodyContainer> {
 
           /// Body
           Expanded(
-            child: ListView(
-              children: [
-                /// Preview
-                if (currentIndex == 0)
-                  Padding(
-                    padding: const EdgeInsets.only(top: 40, bottom: 100),
-                    child: Center(child: widget.body),
-                  ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(24),
+              child: ListView(
+                physics: const AlwaysScrollableScrollPhysics(
+                  parent: BouncingScrollPhysics(),
+                ),
+                children: [
+                  /// Preview
+                  if (currentIndex == 0)
+                    Padding(
+                      padding: const EdgeInsets.only(top: 40, bottom: 100),
+                      child: Center(child: widget.body),
+                    ),
 
-                /// Code
-                if (currentIndex == 1) BookMarkdown(dartCode: widget.dartCode),
-              ],
+                  /// Code
+                  if (currentIndex == 1)
+                    BookMarkdown(dartCode: widget.dartCode),
+                ],
+              ),
             ),
           ),
         ],
@@ -175,7 +188,7 @@ class ToolsContainer extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
-            'Action',
+            'Tools',
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
@@ -185,6 +198,9 @@ class ToolsContainer extends StatelessWidget {
           if (tools != null)
             Expanded(
               child: ListView(
+                physics: const AlwaysScrollableScrollPhysics(
+                  parent: BouncingScrollPhysics(),
+                ),
                 children: [
                   ...?tools,
                 ],
@@ -199,75 +215,6 @@ class ToolsContainer extends StatelessWidget {
                 color: Colors.grey,
               ),
             ),
-        ],
-      ),
-    );
-  }
-}
-
-/// Banner
-class BannerContainer extends StatelessWidget {
-  const BannerContainer({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(24),
-      decoration: BoxDecoration(
-        color: const Color(0xFFFFFFFF),
-        borderRadius: BorderRadius.circular(24),
-      ),
-      child: Row(
-        children: [
-          GestureDetector(
-            onTap: () => js.context.callMethod(
-                'open', ['https://github.com/AmosHuKe/flutter_tilt']),
-            child: MouseRegion(
-              cursor: SystemMouseCursors.click,
-              child: Row(
-                children: [
-                  SvgPicture.asset(
-                    'assets/github-logo.svg',
-                    width: 24,
-                    height: 24,
-                  ),
-                  const SizedBox(width: 6),
-                  const Text(
-                    'Github: flutter_tilt',
-                    style: TextStyle(fontSize: 14),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Container(
-            margin: const EdgeInsets.symmetric(horizontal: 12),
-            child: const Text(
-              '|',
-              style: TextStyle(color: Colors.grey),
-            ),
-          ),
-          GestureDetector(
-            onTap: () => js.context
-                .callMethod('open', ['https://pub.dev/packages/flutter_tilt']),
-            child: MouseRegion(
-              cursor: SystemMouseCursors.click,
-              child: Row(
-                children: [
-                  Image.asset(
-                    'assets/flutter-logo.png',
-                    width: 20,
-                    height: 20,
-                  ),
-                  const SizedBox(width: 6),
-                  const Text(
-                    'Package: flutter_tilt',
-                    style: TextStyle(fontSize: 14),
-                  ),
-                ],
-              ),
-            ),
-          ),
         ],
       ),
     );

@@ -1,15 +1,13 @@
 import 'package:flutter/widgets.dart';
 
-class RouterData {
-  RouterData({
+class BookLinkData {
+  BookLinkData({
     required this.title,
     required this.icon,
-    required this.name,
-    required this.widget,
+    required this.url,
   });
 
   final String title;
   final IconData icon;
-  final String name;
-  final Widget widget;
+  final String url;
 }
