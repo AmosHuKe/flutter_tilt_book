@@ -22,6 +22,7 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
     return PageLayout(
       title: 'Tilt direction',
       dartCode: code(tiltDirection: tiltDirection),
+      minHeight: 440,
 
       /// Tilt here
       body: Tilt(

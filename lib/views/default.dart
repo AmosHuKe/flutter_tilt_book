@@ -12,6 +12,7 @@ class Default extends StatelessWidget {
     return PageLayout(
       title: 'Default',
       dartCode: code(),
+      minHeight: 440,
 
       /// Tilt here
       body: Tilt(

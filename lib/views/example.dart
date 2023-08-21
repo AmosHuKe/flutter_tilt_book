@@ -12,6 +12,7 @@ class Example extends StatelessWidget {
     return PageLayout(
       title: 'Example',
       dartCode: code(),
+      minHeight: 700,
       body: const TiltDemo(),
     );
   }

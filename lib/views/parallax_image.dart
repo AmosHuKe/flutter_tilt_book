@@ -12,6 +12,7 @@ class ParallaxImage extends StatelessWidget {
     return PageLayout(
       title: 'Parallax image',
       dartCode: code(),
+      minHeight: 580,
 
       /// Tilt here
       body: Tilt(

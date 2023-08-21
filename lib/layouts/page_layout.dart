@@ -8,15 +8,26 @@ import 'package:flutter_tilt_book/widgets/layout.dart';
 class PageLayout extends StatelessWidget {
   const PageLayout({
     super.key,
+    required this.minHeight,
     required this.title,
     required this.body,
     this.dartCode = '...',
     this.tools,
   });
 
+  /// 最小高度
+  final double minHeight;
+
+  /// 标题
   final String title;
+
+  /// 主内容
   final Widget body;
+
+  /// dart 代码
   final String dartCode;
+
+  /// 工具
   final List<Widget>? tools;
 
   @override
@@ -28,41 +39,44 @@ class PageLayout extends StatelessWidget {
         color: const Color(0xFFF6F7FA),
         borderRadius: BorderRadius.circular(36),
       ),
-      child: LayoutAdaptive(
-        mdChild: ListView(
-          children: [
-            /// Body
-            Container(
-              height: 720,
-              padding: const EdgeInsets.only(bottom: 24),
-              child: BodyContainer(
-                title: title,
-                body: body,
-                dartCode: dartCode,
-              ),
-            ),
-
-            /// Tools
-            SizedBox(height: 320, child: ToolsContainer(tools: tools)),
-          ],
-        ),
-        child: Row(
-          children: [
-            /// Body
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.only(right: 24),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(24),
+        child: LayoutAdaptive(
+          mdChild: ListView(
+            children: [
+              /// Body
+              Container(
+                height: minHeight,
+                padding: const EdgeInsets.only(bottom: 24),
                 child: BodyContainer(
                   title: title,
                   body: body,
                   dartCode: dartCode,
                 ),
               ),
-            ),
 
-            /// Tools
-            SizedBox(width: 420, child: ToolsContainer(tools: tools)),
-          ],
+              /// Tools
+              SizedBox(height: 320, child: ToolsContainer(tools: tools)),
+            ],
+          ),
+          child: Row(
+            children: [
+              /// Body
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 24),
+                  child: BodyContainer(
+                    title: title,
+                    body: body,
+                    dartCode: dartCode,
+                  ),
+                ),
+              ),
+
+              /// Tools
+              SizedBox(width: 420, child: ToolsContainer(tools: tools)),
+            ],
+          ),
         ),
       ),
     );
@@ -107,7 +121,7 @@ class _BodyContainerState extends State<BodyContainer>
 
   @override
   Widget build(BuildContext context) {
-    final bool sm = Layout(context).sm;
+    final Layout layout = Layout(context);
 
     return Container(
       padding: const EdgeInsets.all(24),
@@ -119,7 +133,7 @@ class _BodyContainerState extends State<BodyContainer>
         children: [
           /// Title
           Flex(
-            direction: sm ? Axis.vertical : Axis.horizontal,
+            direction: layout.sm ? Axis.vertical : Axis.horizontal,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               /// Title
@@ -191,9 +205,11 @@ class _BodyContainerState extends State<BodyContainer>
               children: [
                 /// Preview
                 ListView(
+                  physics:
+                      layout.md ? const NeverScrollableScrollPhysics() : null,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(top: 40, bottom: 100),
+                      padding: const EdgeInsets.only(top: 50, bottom: 100),
                       child: Center(child: widget.body),
                     ),
                   ],

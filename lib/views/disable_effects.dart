@@ -25,6 +25,7 @@ class _DisableEffectsState extends State<DisableEffects> {
         disableLight: disableLight,
         disableShadow: disableShadow,
       ),
+      minHeight: 440,
 
       /// Tilt here
       body: Tilt(

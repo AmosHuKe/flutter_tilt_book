@@ -19,6 +19,7 @@ class _ShadowDirectionDemoState extends State<ShadowDirectionDemo> {
     return PageLayout(
       title: 'Shadow direction',
       dartCode: code(shadowDirection: shadowDirection),
+      minHeight: 440,
 
       /// Tilt here
       body: Tilt(

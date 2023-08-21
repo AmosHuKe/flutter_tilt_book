@@ -12,6 +12,7 @@ class ReverseTilt extends StatelessWidget {
     return PageLayout(
       title: 'Reverse tilt',
       dartCode: code(),
+      minHeight: 440,
 
       /// Tilt here
       body: Tilt(

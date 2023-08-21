@@ -19,6 +19,7 @@ class _LightDirectionDemoState extends State<LightDirectionDemo> {
     return PageLayout(
       title: 'Light direction',
       dartCode: code(lightDirection: lightDirection),
+      minHeight: 440,
 
       /// Tilt here
       body: Tilt(

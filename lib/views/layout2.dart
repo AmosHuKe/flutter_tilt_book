@@ -12,6 +12,7 @@ class Layout2Demo extends StatelessWidget {
     return PageLayout(
       title: 'Layout',
       dartCode: code(),
+      minHeight: 520,
 
       /// Tilt here
       body: Tilt(
@@ -75,8 +76,7 @@ class Layout2Demo extends StatelessWidget {
   }
 }
 
-String code() =>
-    '''
+String code() => '''
 import 'package:flutter_tilt/flutter_tilt.dart';
 
 ······

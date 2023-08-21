@@ -21,6 +21,7 @@ class _EventsState extends State<Events> {
     return PageLayout(
       title: 'Events',
       dartCode: code(),
+      minHeight: 440,
 
       /// Tilt here
       body: Tilt(
