@@ -9,6 +9,16 @@ class ParallaxImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    /// 适应不同屏幕
+    double scaleFactor = 1;
+    final screenWidth = MediaQuery.of(context).size.width;
+    if (screenWidth < 1500) scaleFactor = 0.8;
+    if (screenWidth < 1360) scaleFactor = 0.6;
+    if (screenWidth < 1280) scaleFactor = 1;
+    if (screenWidth < 1076) scaleFactor = 0.8;
+    if (screenWidth < 940) scaleFactor = 0.6;
+    if (screenWidth < 768) scaleFactor = 0.4;
+
     return PageLayout(
       title: 'Parallax image',
       dartCode: code(),
@@ -20,43 +30,43 @@ class ParallaxImage extends StatelessWidget {
         shadowConfig: const ShadowConfig(disable: true),
         childLayout: ChildLayout(
           outer: [
-            const Positioned.fill(
-              top: 80,
-              left: 140,
+            Positioned(
+              top: 80 * scaleFactor,
+              left: 140 * scaleFactor,
               child: TiltParallax(
-                size: Offset(10, 10),
+                size: Offset(10 * scaleFactor, 10 * scaleFactor),
                 child: Text(
                   'Flutter Tilt',
                   style: TextStyle(
                     color: Colors.black54,
-                    fontSize: 40,
+                    fontSize: 40 * scaleFactor,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
             ),
             TiltParallax(
-              size: const Offset(20, 20),
+              size: Offset(20 * scaleFactor, 20 * scaleFactor),
               child: Image.asset(
                 'assets/parallax_image/2.png',
-                width: 742,
-                height: 337,
+                width: 742 * scaleFactor,
+                height: 337 * scaleFactor,
               ),
             ),
             TiltParallax(
-              size: const Offset(30, 30),
+              size: Offset(30 * scaleFactor, 30 * scaleFactor),
               child: Image.asset(
                 'assets/parallax_image/3.png',
-                width: 742,
-                height: 337,
+                width: 742 * scaleFactor,
+                height: 337 * scaleFactor,
               ),
             ),
           ],
         ),
         child: Image.asset(
           'assets/parallax_image/1.png',
-          width: 742,
-          height: 337,
+          width: 742 * scaleFactor,
+          height: 337 * scaleFactor,
         ),
       ),
     );
