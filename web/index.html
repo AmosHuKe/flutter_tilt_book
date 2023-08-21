@@ -23,7 +23,7 @@
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="flutter_tilt_book">
+  <meta name="apple-mobile-web-app-title" content="Flutter Tilt">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
@@ -32,7 +32,7 @@
   <!-- loading -->
   <link rel="stylesheet" type="text/css" href="css/loading/loading.css">
 
-  <title>flutter_tilt_book</title>
+  <title>Flutter Tilt</title>
   <link rel="manifest" href="manifest.json">
 
   <script>
@@ -59,24 +59,13 @@
         serviceWorker: {
           serviceWorkerVersion: serviceWorkerVersion,
         },
-        onEntrypointLoaded: async function(engineInitializer) {
-          await engineInitializer.initializeEngine().then(function(appRunner) {
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
             appRunner.runApp();
+            // 清除加载
+            const amosLoader = document.getElementById('amos-loader-wrapper');
+            amosLoader?.remove();
           });
-          
-          /// 清除加载
-          const amosLoader = document.getElementById('amos-loader-wrapper');
-          let timer;
-          let opacity = 1;
-          timer = setInterval(function() {
-            opacity -= 0.01;
-            amosLoader.style.opacity = opacity;
-            if (opacity <= 0) {
-              opacity = 0;
-              clearInterval(timer);
-              amosLoader?.remove();
-            }
-          }, 2);
         }
       });
     });

@@ -13,6 +13,7 @@ class Application extends StatelessWidget {
     return MaterialApp.router(
       title: Config.appTitle,
       debugShowCheckedModeBanner: false,
+      color: const Color(0xFF171819),
       theme: ThemeData(useMaterial3: true),
       routerConfig: R.config,
     ).animate().fadeIn(duration: 400.ms, curve: Curves.easeIn);

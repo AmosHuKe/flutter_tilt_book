@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_tilt_book/widgets/book_markdown.dart';
 import 'package:remixicon_updated/remixicon_updated.dart';
+
+import 'package:flutter_tilt_book/widgets/book_markdown.dart';
+import 'package:flutter_tilt_book/widgets/layout.dart';
 
 class PageLayout extends StatelessWidget {
   const PageLayout({
@@ -26,29 +28,42 @@ class PageLayout extends StatelessWidget {
         color: const Color(0xFFF6F7FA),
         borderRadius: BorderRadius.circular(36),
       ),
-      child: Row(
-        children: [
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.only(right: 24),
-              child: Column(
-                children: [
-                  /// Body
-                  Expanded(
-                    child: BodyContainer(
-                      title: title,
-                      body: body,
-                      dartCode: dartCode,
-                    ),
-                  ),
-                ],
+      child: LayoutAdaptive(
+        mdChild: ListView(
+          children: [
+            /// Body
+            Container(
+              height: 720,
+              padding: const EdgeInsets.only(bottom: 24),
+              child: BodyContainer(
+                title: title,
+                body: body,
+                dartCode: dartCode,
               ),
             ),
-          ),
 
-          /// Tools
-          SizedBox(width: 420, child: ToolsContainer(tools: tools)),
-        ],
+            /// Tools
+            SizedBox(height: 320, child: ToolsContainer(tools: tools)),
+          ],
+        ),
+        child: Row(
+          children: [
+            /// Body
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.only(right: 24),
+                child: BodyContainer(
+                  title: title,
+                  body: body,
+                  dartCode: dartCode,
+                ),
+              ),
+            ),
+
+            /// Tools
+            SizedBox(width: 420, child: ToolsContainer(tools: tools)),
+          ],
+        ),
       ),
     );
   }
@@ -92,6 +107,8 @@ class _BodyContainerState extends State<BodyContainer>
 
   @override
   Widget build(BuildContext context) {
+    final bool sm = Layout(context).sm;
+
     return Container(
       padding: const EdgeInsets.all(24),
       decoration: BoxDecoration(
@@ -101,7 +118,8 @@ class _BodyContainerState extends State<BodyContainer>
       child: Column(
         children: [
           /// Title
-          Row(
+          Flex(
+            direction: sm ? Axis.vertical : Axis.horizontal,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               /// Title
@@ -169,12 +187,10 @@ class _BodyContainerState extends State<BodyContainer>
           Expanded(
             child: PageView(
               controller: pageController,
+              physics: const NeverScrollableScrollPhysics(),
               children: [
                 /// Preview
                 ListView(
-                  physics: const AlwaysScrollableScrollPhysics(
-                    parent: BouncingScrollPhysics(),
-                  ),
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(top: 40, bottom: 100),
@@ -187,9 +203,6 @@ class _BodyContainerState extends State<BodyContainer>
                 ClipRRect(
                   borderRadius: BorderRadius.circular(24),
                   child: ListView(
-                    physics: const AlwaysScrollableScrollPhysics(
-                      parent: BouncingScrollPhysics(),
-                    ),
                     children: [
                       BookMarkdown(dartCode: widget.dartCode),
                     ],
@@ -232,9 +245,6 @@ class ToolsContainer extends StatelessWidget {
           if (tools != null)
             Expanded(
               child: ListView(
-                physics: const AlwaysScrollableScrollPhysics(
-                  parent: BouncingScrollPhysics(),
-                ),
                 children: [
                   ...?tools,
                 ],

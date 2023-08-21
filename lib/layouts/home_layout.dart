@@ -118,6 +118,29 @@ class NavigatorContainer extends StatelessWidget {
                   ),
                 ),
 
+                /// 模拟内阴影，视觉提醒用户上方还有更多菜单
+                Positioned(
+                  left: 0,
+                  right: 0,
+                  top: 0,
+                  child: IgnorePointer(
+                    child: Container(
+                      height: 14,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.bottomCenter,
+                          end: Alignment.topCenter,
+                          colors: [
+                            const Color(0xFF171819).withOpacity(0.0),
+                            const Color(0xFF171819).withOpacity(0.6),
+                            const Color(0xFF171819)
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+
                 /// 模拟内阴影，视觉提醒用户下方还有更多菜单
                 Positioned(
                   left: 0,
@@ -172,7 +195,7 @@ class NavigatorItem extends StatelessWidget {
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
         child: Container(
-          margin: const EdgeInsets.symmetric(vertical: 8),
+          margin: const EdgeInsets.symmetric(vertical: 6),
           padding: const EdgeInsets.symmetric(vertical: 4),
           child: AnimatedCrossFade(
             crossFadeState:
