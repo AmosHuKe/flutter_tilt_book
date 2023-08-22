@@ -62,10 +62,7 @@ class PageLayout extends StatelessWidget {
               ),
 
               /// Tools
-              SizedBox(
-                height: layout.sm ? 480 : 320,
-                child: ToolsContainer(tools: tools),
-              ),
+              ToolsContainer(tools: tools),
             ],
           ),
           child: Row(
@@ -213,24 +210,28 @@ class _BodyContainerState extends State<BodyContainer>
               physics: const NeverScrollableScrollPhysics(),
               children: [
                 /// Preview
-                ListView(
-                  physics:
-                      layout.md ? const NeverScrollableScrollPhysics() : null,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 50, bottom: 100),
-                      child: Center(child: widget.body),
+                LayoutAdaptive(
+                  mdChild: Padding(
+                    padding: const EdgeInsets.only(top: 40, bottom: 40),
+                    child: Column(
+                      children: [widget.body],
                     ),
-                  ],
+                  ),
+                  child: ListView(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 50, bottom: 100),
+                        child: Center(child: widget.body),
+                      ),
+                    ],
+                  ),
                 ),
 
                 /// Code
                 ClipRRect(
                   borderRadius: BorderRadius.circular(24),
                   child: ListView(
-                    children: [
-                      BookMarkdown(dartCode: widget.dartCode),
-                    ],
+                    children: [BookMarkdown(dartCode: widget.dartCode)],
                   ),
                 ),
               ],
@@ -275,11 +276,14 @@ class ToolsContainer extends StatelessWidget {
           ),
           const SizedBox(height: 24),
           if (tools != null)
-            Expanded(
-              child: ListView(
-                children: [
-                  ...?tools,
-                ],
+            LayoutAdaptive(
+              mdChild: Column(
+                children: [...?tools],
+              ),
+              child: Expanded(
+                child: ListView(
+                  children: [...?tools],
+                ),
               ),
             ),
           if (tools == null)
