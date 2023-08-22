@@ -32,22 +32,28 @@ class PageLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Layout layout = Layout(context);
+
     return Container(
-      margin: const EdgeInsets.only(top: 24, bottom: 24, right: 24),
-      padding: const EdgeInsets.all(24),
+      margin: layout.sm ? null : const EdgeInsets.all(12),
+      padding: layout.sm ? null : const EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: const Color(0xFFF6F7FA),
-        borderRadius: BorderRadius.circular(36),
+        borderRadius: layout.sm
+            ? const BorderRadius.vertical(top: Radius.circular(24))
+            : BorderRadius.circular(36),
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(24),
+        borderRadius: layout.sm
+            ? const BorderRadius.vertical(top: Radius.circular(24))
+            : BorderRadius.circular(24),
         child: LayoutAdaptive(
           mdChild: ListView(
             children: [
               /// Body
               Container(
                 height: minHeight,
-                padding: const EdgeInsets.only(bottom: 24),
+                padding: const EdgeInsets.only(bottom: 12),
                 child: BodyContainer(
                   title: title,
                   body: body,
@@ -56,7 +62,10 @@ class PageLayout extends StatelessWidget {
               ),
 
               /// Tools
-              SizedBox(height: 320, child: ToolsContainer(tools: tools)),
+              SizedBox(
+                height: layout.sm ? 480 : 320,
+                child: ToolsContainer(tools: tools),
+              ),
             ],
           ),
           child: Row(
@@ -64,7 +73,7 @@ class PageLayout extends StatelessWidget {
               /// Body
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.only(right: 24),
+                  padding: const EdgeInsets.only(right: 12),
                   child: BodyContainer(
                     title: title,
                     body: body,
@@ -124,7 +133,7 @@ class _BodyContainerState extends State<BodyContainer>
     final Layout layout = Layout(context);
 
     return Container(
-      padding: const EdgeInsets.all(24),
+      padding: EdgeInsets.all(layout.sm ? 12 : 24),
       decoration: BoxDecoration(
         color: const Color(0xFFFFFFFF),
         borderRadius: BorderRadius.circular(24),
@@ -241,21 +250,28 @@ class ToolsContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Layout layout = Layout(context);
+
     return Container(
-      padding: const EdgeInsets.all(24),
+      padding: EdgeInsets.all(layout.sm ? 12 : 24),
       decoration: BoxDecoration(
         color: const Color(0xFFFFFFFF),
         borderRadius: BorderRadius.circular(24),
       ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            'Tools',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
+          Flex(
+            direction: layout.sm ? Axis.vertical : Axis.horizontal,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [
+              Text(
+                'Tools',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
           ),
           const SizedBox(height: 24),
           if (tools != null)

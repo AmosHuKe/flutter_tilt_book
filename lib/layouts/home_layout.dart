@@ -1,14 +1,15 @@
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:js' as js;
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 
 import 'package:go_router/go_router.dart';
 import 'package:remixicon_updated/remixicon_updated.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 import 'package:flutter_tilt_book/router.dart';
 import 'package:flutter_tilt_book/config/config.dart';
 import 'package:flutter_tilt_book/widgets/book_divider.dart';
+import 'package:flutter_tilt_book/widgets/layout.dart';
 
 class HomeLayout extends StatelessWidget {
   const HomeLayout({super.key, required this.child});
@@ -17,16 +18,57 @@ class HomeLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFF171819),
-      body: Row(
-        children: [
-          /// 导航
-          const SizedBox(width: 200, child: NavigatorContainer()),
+    final GlobalKey<ScaffoldState> scaffoldGlobalKey =
+        GlobalKey<ScaffoldState>();
 
-          /// 主内容
-          Expanded(child: child),
-        ],
+    return Scaffold(
+      key: scaffoldGlobalKey,
+      backgroundColor: const Color(0xFF171819),
+      drawer: Container(
+        width: 200,
+        padding: const EdgeInsets.only(top: 24, bottom: 24, right: 24),
+        color: const Color(0xFF171819),
+        child: const NavigatorContainer(),
+      ),
+      body: LayoutAdaptive(
+        smChild: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            /// 导航
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(12),
+                  child: IconButton(
+                    onPressed: () =>
+                        scaffoldGlobalKey.currentState!.openDrawer(),
+                    icon: const Icon(Remix.menu_2_line, color: Colors.white),
+                  ),
+                ),
+                const LogoTitle(),
+                const SizedBox(width: 64),
+              ],
+            ),
+
+            /// 主内容
+            Expanded(child: child),
+          ],
+        ),
+        child: Row(
+          children: [
+            /// 导航
+            Container(
+              width: 200,
+              padding: const EdgeInsets.only(top: 24, bottom: 24, right: 24),
+              color: const Color(0xFF171819),
+              child: const NavigatorContainer(),
+            ),
+
+            /// 主内容
+            Expanded(child: child),
+          ],
+        ),
       ),
     );
   }
@@ -38,136 +80,107 @@ class NavigatorContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.only(top: 24, bottom: 24, right: 24),
-      color: const Color(0xFF171819),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          /// Title
-          Padding(
-            padding: const EdgeInsets.only(top: 12, left: 24),
-            child: Builder(
-              builder: (context) {
-                Widget title = const Text(
-                  Config.appTitle,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                );
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        /// Title
+        const Padding(
+          padding: EdgeInsets.only(top: 12, left: 24),
+          child: LogoTitle(),
+        ),
+        const BookDivider(
+          padding: EdgeInsets.only(left: 24, top: 24, bottom: 12),
+        ),
 
-                title = title
-                    .animate(onPlay: (controller) => controller.repeat())
-                    .shimmer(
-                  duration: 3600.ms,
-                  colors: [
-                    Colors.white,
-                    const Color(0xFF16686D),
-                    const Color(0xFF16686D),
-                    const Color(0xFF2071A8),
-                    Colors.white,
-                  ],
-                );
+        /// Banner
+        const BannerContainer(),
+        const BookDivider(
+          padding: EdgeInsets.only(left: 24, top: 12, bottom: 24),
+        ),
 
-                return title;
-              },
+        /// Menu
+        const Padding(
+          padding: EdgeInsets.only(left: 24, bottom: 12),
+          child: Text(
+            'MENU',
+            style: TextStyle(
+              color: Color(0xFF616163),
+              fontSize: 12,
+              fontWeight: FontWeight.bold,
             ),
           ),
-          const BookDivider(
-            padding: EdgeInsets.only(left: 24, top: 24, bottom: 12),
-          ),
-
-          /// Banner
-          const BannerContainer(),
-          const BookDivider(
-            padding: EdgeInsets.only(left: 24, top: 12, bottom: 24),
-          ),
-
-          /// Menu
-          const Padding(
-            padding: EdgeInsets.only(left: 24, bottom: 12),
-            child: Text(
-              'MENU',
-              style: TextStyle(
-                color: Color(0xFF616163),
-                fontSize: 12,
-                fontWeight: FontWeight.bold,
+        ),
+        Expanded(
+          child: Stack(
+            children: [
+              ListView(
+                physics: const AlwaysScrollableScrollPhysics(
+                  parent: BouncingScrollPhysics(),
+                ),
+                children: List.generate(
+                  R.routerData.length + 1,
+                  (index) {
+                    if (index == R.routerData.length) {
+                      return const SizedBox(height: 100);
+                    }
+                    return NavigatorItem(
+                      title: R.routerData[index].title,
+                      icon: R.routerData[index].icon,
+                      routerName: R.routerData[index].name,
+                    );
+                  },
+                ),
               ),
-            ),
-          ),
-          Expanded(
-            child: Stack(
-              children: [
-                ListView(
-                  physics: const AlwaysScrollableScrollPhysics(
-                    parent: BouncingScrollPhysics(),
-                  ),
-                  children: List.generate(
-                    R.routerData.length + 1,
-                    (index) {
-                      if (index == R.routerData.length) {
-                        return const SizedBox(height: 100);
-                      }
-                      return NavigatorItem(
-                        title: R.routerData[index].title,
-                        icon: R.routerData[index].icon,
-                        routerName: R.routerData[index].name,
-                      );
-                    },
-                  ),
-                ),
 
-                /// 模拟内阴影，视觉提醒用户上方还有更多菜单
-                Positioned(
-                  left: 0,
-                  right: 0,
-                  top: 0,
-                  child: IgnorePointer(
-                    child: Container(
-                      height: 14,
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.bottomCenter,
-                          end: Alignment.topCenter,
-                          colors: [
-                            const Color(0xFF171819).withOpacity(0.0),
-                            const Color(0xFF171819).withOpacity(0.6),
-                            const Color(0xFF171819)
-                          ],
-                        ),
+              /// 模拟内阴影，视觉提醒用户上方还有更多菜单
+              Positioned(
+                left: 0,
+                right: 0,
+                top: 0,
+                child: IgnorePointer(
+                  child: Container(
+                    height: 14,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.bottomCenter,
+                        end: Alignment.topCenter,
+                        colors: [
+                          const Color(0xFF171819).withOpacity(0.0),
+                          const Color(0xFF171819).withOpacity(0.6),
+                          const Color(0xFF171819)
+                        ],
                       ),
                     ),
                   ),
                 ),
+              ),
 
-                /// 模拟内阴影，视觉提醒用户下方还有更多菜单
-                Positioned(
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  child: IgnorePointer(
-                    child: Container(
-                      height: 100,
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [
-                            const Color(0xFF171819).withOpacity(0.0),
-                            const Color(0xFF171819).withOpacity(0.6),
-                            const Color(0xFF171819)
-                          ],
-                        ),
+              /// 模拟内阴影，视觉提醒用户下方还有更多菜单
+              Positioned(
+                left: 0,
+                right: 0,
+                bottom: 0,
+                child: IgnorePointer(
+                  child: Container(
+                    height: 100,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          const Color(0xFF171819).withOpacity(0.0),
+                          const Color(0xFF171819).withOpacity(0.6),
+                          const Color(0xFF171819)
+                        ],
                       ),
                     ),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
@@ -323,5 +336,32 @@ class BannerContainer extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class LogoTitle extends StatelessWidget {
+  const LogoTitle({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    Widget title = const Text(
+      Config.appTitle,
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: 20,
+      ),
+    );
+
+    title = title.animate(onPlay: (controller) => controller.repeat()).shimmer(
+      duration: 3600.ms,
+      colors: [
+        Colors.white,
+        const Color(0xFF16686D),
+        const Color(0xFF16686D),
+        const Color(0xFF2071A8),
+        Colors.white,
+      ],
+    );
+    return title;
   }
 }
