@@ -60,7 +60,10 @@
           serviceWorkerVersion: serviceWorkerVersion,
         },
         onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
+          engineInitializer.initializeEngine({
+            renderer: 'canvaskit',
+            canvasKitVariant: 'full',
+          }).then(function(appRunner) {
             appRunner.runApp();
             // 清除加载
             const amosLoader = document.getElementById('amos-loader-wrapper');
