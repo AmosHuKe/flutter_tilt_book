@@ -1,10 +1,9 @@
-// ignore: avoid_web_libraries_in_flutter
-import 'dart:js' as js;
 import 'package:flutter/material.dart';
 
 import 'package:go_router/go_router.dart';
 import 'package:remixicon_updated/remixicon_updated.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'package:flutter_tilt_book/router.dart';
 import 'package:flutter_tilt_book/config/config.dart';
@@ -300,10 +299,7 @@ class BannerContainer extends StatelessWidget {
         children: List.generate(
           Config.bookLinkData.length,
           (index) => GestureDetector(
-            onTap: () => js.context.callMethod(
-              'open',
-              [Config.bookLinkData[index].url],
-            ),
+            onTap: () => launchUrl(Uri.parse(Config.bookLinkData[index].url)),
             child: MouseRegion(
               cursor: SystemMouseCursors.click,
               child: Row(
