@@ -16,7 +16,7 @@ class Application extends StatelessWidget {
       color: const Color(0xFF171819),
       theme: ThemeData(
         useMaterial3: true,
-        fontFamilyFallback: const ['Roboto', 'Noto Color Emoji'],
+        fontFamilyFallback: const ['Roboto', 'Noto Emoji'],
       ),
       routerConfig: R.config,
     ).animate().fadeIn(duration: 400.ms, curve: Curves.easeIn);
