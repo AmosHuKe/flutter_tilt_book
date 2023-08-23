@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:remixicon_updated/remixicon_updated.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:seo/seo.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'package:flutter_tilt_book/router.dart';
@@ -229,11 +230,15 @@ class NavigatorItem extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(width: 6),
-                      Text(
-                        title,
-                        style: const TextStyle(
-                          color: Color(0xFF848486),
-                          fontSize: 14,
+                      Seo.text(
+                        text: title,
+                        style: TextTagStyle.h1,
+                        child: Text(
+                          title,
+                          style: const TextStyle(
+                            color: Color(0xFF848486),
+                            fontSize: 14,
+                          ),
                         ),
                       ),
                     ],
@@ -315,11 +320,15 @@ class BannerContainer extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                      Text(
-                        Config.bookLinkData[index].title,
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 14,
+                      Seo.link(
+                        anchor: Config.bookLinkData[index].title,
+                        href: Config.bookLinkData[index].title,
+                        child: Text(
+                          Config.bookLinkData[index].title,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
                         ),
                       ),
                     ],

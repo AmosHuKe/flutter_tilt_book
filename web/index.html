@@ -53,6 +53,19 @@
     <div class="amos-loader-section"></div>
   </div>
   <script>
+    let flutterWebRenderer = 'canvaskit'
+
+    // package: seo 
+    import('./script/botd-1.1.0.js')
+      .then((botd) => botd.load())
+      .then((botd) => botd.detect())
+      .then(function (result) {
+        console.log(result);
+        if (result.bot) {
+          flutterWebRenderer = 'html';
+        }
+      });
+
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
@@ -62,7 +75,7 @@
         onEntrypointLoaded: function(engineInitializer) {
           engineInitializer.initializeEngine({
             assetBase: '/flutter_tilt_book/',
-            renderer: 'canvaskit',
+            renderer: flutterWebRenderer,
             canvasKitVariant: 'full',
             canvasKitBaseUrl: '/flutter_tilt_book/canvaskit/'
           }).then(function(appRunner) {

@@ -4,6 +4,7 @@ import 'package:remixicon_updated/remixicon_updated.dart';
 
 import 'package:flutter_tilt_book/widgets/book_markdown.dart';
 import 'package:flutter_tilt_book/widgets/layout.dart';
+import 'package:seo/seo.dart';
 
 class PageLayout extends StatelessWidget {
   const PageLayout({
@@ -143,11 +144,15 @@ class _BodyContainerState extends State<BodyContainer>
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               /// Title
-              Text(
-                widget.title,
-                style: const TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+              Seo.text(
+                text: widget.title,
+                style: TextTagStyle.h1,
+                child: Text(
+                  widget.title,
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
 
