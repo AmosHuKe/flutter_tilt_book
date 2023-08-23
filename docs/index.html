@@ -37,7 +37,7 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "1319368469";
+    const serviceWorkerVersion = "3248825533";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
@@ -61,8 +61,10 @@
         },
         onEntrypointLoaded: function(engineInitializer) {
           engineInitializer.initializeEngine({
+            assetBase: '/flutter_tilt_book/',
             renderer: 'canvaskit',
             canvasKitVariant: 'full',
+            canvasKitBaseUrl: '/flutter_tilt_book/canvaskit/'
           }).then(function(appRunner) {
             appRunner.runApp();
             // 清除加载

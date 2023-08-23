@@ -14,7 +14,10 @@ class Application extends StatelessWidget {
       title: Config.appTitle,
       debugShowCheckedModeBanner: false,
       color: const Color(0xFF171819),
-      theme: ThemeData(useMaterial3: true),
+      theme: ThemeData(
+        useMaterial3: true,
+        fontFamilyFallback: const ['Roboto', 'Noto Color Emoji'],
+      ),
       routerConfig: R.config,
     ).animate().fadeIn(duration: 400.ms, curve: Curves.easeIn);
   }

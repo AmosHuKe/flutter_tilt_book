@@ -61,8 +61,10 @@
         },
         onEntrypointLoaded: function(engineInitializer) {
           engineInitializer.initializeEngine({
+            assetBase: '/flutter_tilt_book/',
             renderer: 'canvaskit',
             canvasKitVariant: 'full',
+            canvasKitBaseUrl: '/flutter_tilt_book/canvaskit/'
           }).then(function(appRunner) {
             appRunner.runApp();
             // 清除加载
