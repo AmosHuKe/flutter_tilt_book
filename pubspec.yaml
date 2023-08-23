@@ -1,7 +1,7 @@
 name: flutter_tilt_book
 description: Flutter Tilt.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-version: 2.0.6
+version: 2.0.7
 
 environment:
   sdk: '>=3.0.6 <4.0.0'
@@ -14,7 +14,6 @@ dependencies:
   flutter_animate: ^4.2.0+1
   syntax_highlight: ^0.2.0
   url_launcher: ^6.1.12
-  seo: ^0.0.5
   remixicon_updated: ^1.0.2
   cupertino_icons: ^1.0.5
 
