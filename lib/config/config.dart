@@ -19,7 +19,7 @@ import 'package:flutter_tilt_book/views/shadow_direction.dart';
 import 'package:flutter_tilt_book/views/tilt_direction.dart';
 
 class Config {
-  static const String appTitle = 'Flutter Title';
+  static const String appTitle = 'Flutter Tilt';
 
   static final List<BookLinkData> bookLinkData = [
     BookLinkData(

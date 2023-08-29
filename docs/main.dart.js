@@ -82496,7 +82496,7 @@ $0(){return this.a.b},
 $S:13}
 A.G0.prototype={
 D(a){var s,r=null,q=A.are(r,B.Hf,r,!0)
-q=A.atp(new A.rY($.aAS(),"Flutter Title",q,B.ca,!1,r),r)
+q=A.atp(new A.rY($.aAS(),"Flutter Tilt",q,B.ca,!1,r),r)
 s=A.cq(4e5,0)
 return q.PX(new A.Il(r,s,B.cN,0,1))}}
 A.rv.prototype={
@@ -82542,7 +82542,7 @@ A.Zu.prototype={
 $0(){return A.ask(A.eQ($.asD()[this.a].c,0,null))},
 $S:0}
 A.JQ.prototype={
-D(a){var s=null,r=A.atp(B.UG,new A.a6h()),q=A.cq(36e5,0)
+D(a){var s=null,r=A.atp(B.Ul,new A.a6h()),q=A.cq(36e5,0)
 return r.PX(new A.MS(s,A.a([B.j,B.lx,B.lx,B.BL,B.j],t.W),s,s,s,s,s,s,q,s,0,1))}}
 A.a6h.prototype={
 $1(a){return a.UN(0)},
@@ -82627,7 +82627,7 @@ A.x7.prototype={
 ag(){return new A.Qx(B.i)}}
 A.Qx.prototype={
 D(a){var s=this,r=null,q=s.d,p=s.e,o=s.f,n=A.cL(30),m=A.ax2(r,q),l=A.ave(B.cR,p),k=A.awt(r,o),j=t.p
-return new A.eq(440,"Disable effects",A.hC(r,n,A.bp(B.x,B.br,B.l,B.rY,r,200,r,r,350),B.bT,l,r,r,k,m),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: TiltConfig(disable: "+q+"),\n  lightConfig: LightConfig(disable: "+p+"),\n  shadowConfig: ShadowConfig(disable: "+o+"),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    color: Colors.blueAccent,\n    child: const Text(\n      'Flutter Tilt \u2728',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",A.a([A.Bk(A.a([A.hP(B.Ur,new A.ahk(s),q),A.hP(B.Um,new A.ahl(s),p),A.hP(B.UC,new A.ahm(s),o)],j),12,12)],j),r)}}
+return new A.eq(440,"Disable effects",A.hC(r,n,A.bp(B.x,B.br,B.l,B.rY,r,200,r,r,350),B.bT,l,r,r,k,m),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: TiltConfig(disable: "+q+"),\n  lightConfig: LightConfig(disable: "+p+"),\n  shadowConfig: ShadowConfig(disable: "+o+"),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    color: Colors.blueAccent,\n    child: const Text(\n      'Flutter Tilt \u2728',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",A.a([A.Bk(A.a([A.hP(B.Us,new A.ahk(s),q),A.hP(B.Un,new A.ahl(s),p),A.hP(B.UD,new A.ahm(s),o)],j),12,12)],j),r)}}
 A.ahk.prototype={
 $1(a){var s=this.a
 s.aa(new A.ahj(s,a))},
@@ -82676,7 +82676,7 @@ j=o?g:s.d.a
 j=A.d1("x: "+A.j(j==null?0:j)+"\xb0",g,g,g,g)
 i=o?g:s.d.b
 i=A.d1("y: "+A.j(i==null?0:i)+"\xb0",g,g,g,g)
-return new A.eq(440,"Events",f,"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTiltDataModel? tiltData;\nString gestureMove = '';\nString gestureLeave = '';\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  onGestureMove:\n      (TiltDataModel tiltDataModel, GesturesType gesturesType) {\n    setState(() {\n      tiltData = tiltDataModel;\n      gestureMove = gesturesType.name;\n    });\n  },\n  onGestureLeave:\n      (TiltDataModel tiltDataModel, GesturesType gesturesType) {\n    setState(() {\n      tiltData = tiltDataModel;\n      gestureLeave = gesturesType.name;\n    });\n  },\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    color: Colors.blueAccent,\n    child: const Text(\n      'Flutter Tilt \u2728',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",A.a([A.Bk(A.a([e,A.ee(A.iv(A.a([B.Ul,r,p,B.hk,B.UF,n,m,B.hk,B.Uk,l,k,B.hk,B.Uz,j,i,B.hk,B.Uj,A.d1(A.j(o?g:s.c),g,g,g,g)],q),B.dz,B.ah,B.a5),g,200)],q),24,64)],q),g)}}
+return new A.eq(440,"Events",f,"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTiltDataModel? tiltData;\nString gestureMove = '';\nString gestureLeave = '';\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  onGestureMove:\n      (TiltDataModel tiltDataModel, GesturesType gesturesType) {\n    setState(() {\n      tiltData = tiltDataModel;\n      gestureMove = gesturesType.name;\n    });\n  },\n  onGestureLeave:\n      (TiltDataModel tiltDataModel, GesturesType gesturesType) {\n    setState(() {\n      tiltData = tiltDataModel;\n      gestureLeave = gesturesType.name;\n    });\n  },\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    color: Colors.blueAccent,\n    child: const Text(\n      'Flutter Tilt \u2728',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",A.a([A.Bk(A.a([e,A.ee(A.iv(A.a([B.Um,r,p,B.hk,B.UG,n,m,B.hk,B.Uk,l,k,B.hk,B.UA,j,i,B.hk,B.Uj,A.d1(A.j(o?g:s.c),g,g,g,g)],q),B.dz,B.ah,B.a5),g,200)],q),24,64)],q),g)}}
 A.ahw.prototype={
 $2(a,b){var s=this.a
 s.aa(new A.aht(s,a,b))},
@@ -82719,12 +82719,12 @@ A.Js.prototype={
 D(a){var s=null
 return new A.eq(440,"Keep tilt",A.hC(s,A.cL(30),A.bp(B.x,B.br,B.l,s,B.zZ,200,s,s,350),B.bT,B.bY,s,s,B.cp,B.UR),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: const TiltConfig(enableRevert: false),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: const BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topCenter,\n        end: Alignment.bottomCenter,\n        colors: [Color(0xFF3cba92), Color(0xFF0ba360)],\n      ),\n    ),\n    child: const Text(\n      'Flutter Tilt \u2728',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",s,s)}}
 A.JB.prototype={
-D(a){var s,r=null,q=A.cL(30),p=t.p,o=A.a([A.dI(r,A.ic(A.bp(B.x,B.Uo,B.l,B.m,r,60,r,r,60),B.tc),r,r,0,r,r,r)],p),n=A.a([A.dI(r,A.ic(A.bp(B.x,B.Un,B.l,B.m,r,60,r,r,60),B.Ln),r,r,r,0,r,r)],p),m=t.W,l=A.a([A.L(153,128,208,199),A.L(153,19,84,122)],m)
+D(a){var s,r=null,q=A.cL(30),p=t.p,o=A.a([A.dI(r,A.ic(A.bp(B.x,B.Up,B.l,B.m,r,60,r,r,60),B.tc),r,r,0,r,r,r)],p),n=A.a([A.dI(r,A.ic(A.bp(B.x,B.Uo,B.l,B.m,r,60,r,r,60),B.Ln),r,r,r,0,r,r)],p),m=t.W,l=A.a([A.L(153,128,208,199),A.L(153,19,84,122)],m)
 l=A.dI(-10,A.ic(A.bp(B.bz,B.yx,B.l,r,new A.bf(r,r,r,A.cL(20),r,new A.ds(B.dh,B.dj,B.a8,l,r,r),B.A),160,r,B.m6,280),B.Lo),r,r,r,r,r,r)
 s=A.a([A.L(204,128,208,199),A.L(204,19,84,122)],m)
 p=A.a([l,A.dI(-5,A.ic(A.bp(B.bz,B.yx,B.l,r,new A.bf(r,r,r,A.cL(25),r,new A.ds(B.dh,B.dj,B.a8,s,r,r),B.A),180,r,B.m6,315),B.Lj),r,r,r,r,r,r)],p)
 s=B.d.bk(229.5)
-return new A.eq(480,"Layout",A.hC(r,q,A.bp(B.x,B.Uw,B.l,r,new A.bf(r,r,r,r,r,new A.ds(B.dh,B.dj,B.a8,A.a([A.L(s,128,208,199),A.L(s,19,84,122)],m),r,r),B.A),200,r,r,350),new A.kx(o,n,p),B.bY,r,r,B.jV,B.UQ),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: const TiltConfig(\n    angle: 20,\n    leaveDuration: Duration(seconds: 1),\n    leaveCurve: Curves.elasticOut,\n  ),\n  shadowConfig: const ShadowConfig(disable: true),\n  childLayout: ChildLayout(\n    outer: [\n      Positioned(\n        left: 0,\n        child: TiltParallax(\n          size: const Offset(40, 40),\n          child: Container(\n            width: 60,\n            height: 60,\n            alignment: Alignment.center,\n            color: Colors.black,\n            child: const Text(\n              'outer',\n              style: TextStyle(\n                fontSize: 20,\n                color: Colors.white,\n              ),\n            ),\n          ),\n        ),\n      ),\n    ],\n    inner: [\n      Positioned(\n        right: 0,\n        child: TiltParallax(\n          size: const Offset(-40, -40),\n          child: Container(\n            width: 60,\n            height: 60,\n            alignment: Alignment.center,\n            color: Colors.black,\n            child: const Text(\n              'inner',\n              style: TextStyle(\n                fontSize: 20,\n                color: Colors.white,\n              ),\n            ),\n          ),\n        ),\n      ),\n    ],\n    behind: [\n      Positioned(\n        bottom: -10,\n        child: TiltParallax(\n          size: const Offset(-50, -50),\n          child: Container(\n            width: 350 * 0.8,\n            height: 200 * 0.8,\n            alignment: Alignment.bottomCenter,\n            padding: const EdgeInsets.only(bottom: 4),\n            decoration: BoxDecoration(\n              gradient: LinearGradient(\n                begin: Alignment.topRight,\n                end: Alignment.bottomLeft,\n                colors: [\n                  const Color(0xFF80d0c7).withOpacity(0.6),\n                  const Color(0xFF13547a).withOpacity(0.6),\n                ],\n              ),\n              borderRadius: BorderRadius.circular(20),\n            ),\n            child: const Text(\n              'behind',\n              style: TextStyle(\n                fontSize: 18,\n                color: Colors.white,\n              ),\n            ),\n          ),\n        ),\n      ),\n      Positioned(\n        bottom: -5,\n        child: TiltParallax(\n          size: const Offset(-25, -25),\n          child: Container(\n            width: 350 * 0.9,\n            height: 200 * 0.9,\n            alignment: Alignment.bottomCenter,\n            padding: const EdgeInsets.only(bottom: 4),\n            decoration: BoxDecoration(\n              gradient: LinearGradient(\n                begin: Alignment.topRight,\n                end: Alignment.bottomLeft,\n                colors: [\n                  const Color(0xFF80d0c7).withOpacity(0.8),\n                  const Color(0xFF13547a).withOpacity(0.8),\n                ],\n              ),\n              borderRadius: BorderRadius.circular(25),\n            ),\n            child: const Text(\n              'behind',\n              style: TextStyle(\n                fontSize: 18,\n                color: Colors.white,\n              ),\n            ),\n          ),\n        ),\n      ),\n    ],\n  ),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topRight,\n        end: Alignment.bottomLeft,\n        colors: [\n          const Color(0xFF80d0c7).withOpacity(0.9),\n          const Color(0xFF13547a).withOpacity(0.9),\n        ],\n      ),\n    ),\n    child: const Text(\n      'child',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",r,r)}}
+return new A.eq(480,"Layout",A.hC(r,q,A.bp(B.x,B.Ux,B.l,r,new A.bf(r,r,r,r,r,new A.ds(B.dh,B.dj,B.a8,A.a([A.L(s,128,208,199),A.L(s,19,84,122)],m),r,r),B.A),200,r,r,350),new A.kx(o,n,p),B.bY,r,r,B.jV,B.UQ),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: const TiltConfig(\n    angle: 20,\n    leaveDuration: Duration(seconds: 1),\n    leaveCurve: Curves.elasticOut,\n  ),\n  shadowConfig: const ShadowConfig(disable: true),\n  childLayout: ChildLayout(\n    outer: [\n      Positioned(\n        left: 0,\n        child: TiltParallax(\n          size: const Offset(40, 40),\n          child: Container(\n            width: 60,\n            height: 60,\n            alignment: Alignment.center,\n            color: Colors.black,\n            child: const Text(\n              'outer',\n              style: TextStyle(\n                fontSize: 20,\n                color: Colors.white,\n              ),\n            ),\n          ),\n        ),\n      ),\n    ],\n    inner: [\n      Positioned(\n        right: 0,\n        child: TiltParallax(\n          size: const Offset(-40, -40),\n          child: Container(\n            width: 60,\n            height: 60,\n            alignment: Alignment.center,\n            color: Colors.black,\n            child: const Text(\n              'inner',\n              style: TextStyle(\n                fontSize: 20,\n                color: Colors.white,\n              ),\n            ),\n          ),\n        ),\n      ),\n    ],\n    behind: [\n      Positioned(\n        bottom: -10,\n        child: TiltParallax(\n          size: const Offset(-50, -50),\n          child: Container(\n            width: 350 * 0.8,\n            height: 200 * 0.8,\n            alignment: Alignment.bottomCenter,\n            padding: const EdgeInsets.only(bottom: 4),\n            decoration: BoxDecoration(\n              gradient: LinearGradient(\n                begin: Alignment.topRight,\n                end: Alignment.bottomLeft,\n                colors: [\n                  const Color(0xFF80d0c7).withOpacity(0.6),\n                  const Color(0xFF13547a).withOpacity(0.6),\n                ],\n              ),\n              borderRadius: BorderRadius.circular(20),\n            ),\n            child: const Text(\n              'behind',\n              style: TextStyle(\n                fontSize: 18,\n                color: Colors.white,\n              ),\n            ),\n          ),\n        ),\n      ),\n      Positioned(\n        bottom: -5,\n        child: TiltParallax(\n          size: const Offset(-25, -25),\n          child: Container(\n            width: 350 * 0.9,\n            height: 200 * 0.9,\n            alignment: Alignment.bottomCenter,\n            padding: const EdgeInsets.only(bottom: 4),\n            decoration: BoxDecoration(\n              gradient: LinearGradient(\n                begin: Alignment.topRight,\n                end: Alignment.bottomLeft,\n                colors: [\n                  const Color(0xFF80d0c7).withOpacity(0.8),\n                  const Color(0xFF13547a).withOpacity(0.8),\n                ],\n              ),\n              borderRadius: BorderRadius.circular(25),\n            ),\n            child: const Text(\n              'behind',\n              style: TextStyle(\n                fontSize: 18,\n                color: Colors.white,\n              ),\n            ),\n          ),\n        ),\n      ),\n    ],\n  ),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topRight,\n        end: Alignment.bottomLeft,\n        colors: [\n          const Color(0xFF80d0c7).withOpacity(0.9),\n          const Color(0xFF13547a).withOpacity(0.9),\n        ],\n      ),\n    ),\n    child: const Text(\n      'child',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",r,r)}}
 A.Jz.prototype={
 D(a){var s,r,q=null,p=A.cL(20),o=A.wt(B.m,4),n=A.cL(14)
 n=A.ic(A.bp(q,q,B.l,q,new A.bf(q,q,A.wt(B.m,2.8),n,q,q,B.A),210,q,q,210),B.te)
@@ -82787,7 +82787,7 @@ A.Wj.prototype={
 D(a){var s,r=this,q=null,p=r.d,o=A.n(p).c,n=A.j(A.aa(p,!0,o)),m=A.cL(30)
 o=A.ax2(A.aa(p,!0,o),!1)
 s=t.p
-return new A.eq(440,"Tilt direction",A.hC(q,m,A.bp(B.x,B.br,B.l,q,B.A_,200,q,q,350),B.bT,B.bY,q,q,B.cp,o),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: TiltConfig(direction: "+n+"),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: const BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topLeft,\n        end: Alignment.bottomRight,\n        colors: [Color(0xFF667eea), Color(0xFF764ba2)],\n      ),\n    ),\n    child: const Text(\n      'Flutter Tilt \u2728',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",A.a([A.Bk(A.a([A.hP(B.Uq,new A.amw(r),p.q(0,B.kb)),A.hP(B.Uv,new A.amx(r),p.q(0,B.d9)),A.hP(B.UA,new A.amy(r),p.q(0,B.da)),A.hP(B.UD,new A.amz(r),p.q(0,B.eA)),A.hP(B.UH,new A.amA(r),p.q(0,B.eB)),A.hP(B.Uu,new A.amB(r),p.q(0,$.apr())),A.hP(B.UJ,new A.amC(r),p.q(0,$.aps())),A.hP(B.Uy,new A.amD(r),p.q(0,$.app())),A.hP(B.UE,new A.amE(r),p.q(0,$.apq())),A.hP(B.Ut,new A.amF(r),p.q(0,B.kc))],s),12,12)],s),q)}}
+return new A.eq(440,"Tilt direction",A.hC(q,m,A.bp(B.x,B.br,B.l,q,B.A_,200,q,q,350),B.bT,B.bY,q,q,B.cp,o),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: TiltConfig(direction: "+n+"),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: const BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topLeft,\n        end: Alignment.bottomRight,\n        colors: [Color(0xFF667eea), Color(0xFF764ba2)],\n      ),\n    ),\n    child: const Text(\n      'Flutter Tilt \u2728',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",A.a([A.Bk(A.a([A.hP(B.Ur,new A.amw(r),p.q(0,B.kb)),A.hP(B.Uw,new A.amx(r),p.q(0,B.d9)),A.hP(B.UB,new A.amy(r),p.q(0,B.da)),A.hP(B.UE,new A.amz(r),p.q(0,B.eA)),A.hP(B.UH,new A.amA(r),p.q(0,B.eB)),A.hP(B.Uv,new A.amB(r),p.q(0,$.apr())),A.hP(B.UJ,new A.amC(r),p.q(0,$.aps())),A.hP(B.Uz,new A.amD(r),p.q(0,$.app())),A.hP(B.UF,new A.amE(r),p.q(0,$.apq())),A.hP(B.Uu,new A.amF(r),p.q(0,B.kc))],s),12,12)],s),q)}}
 A.amw.prototype={
 $1(a){var s=this.a
 s.aa(new A.amv(s,a))},
@@ -83393,7 +83393,7 @@ q=q.BE(e)}return q}}
 A.rb.prototype={
 D(a){var s=null,r=this.c
 r=r==null?s:"GoException: "+r.a
-return A.aqY(!0,A.iu(A.iv(A.a([B.Up,B.y6,A.d1(r==null?"page not found":r,s,s,s,s),B.y6,new A.Bx(new A.a2i(a),B.UL,s)],t.p),B.a3,B.fD,B.a5),s,s),!0)}}
+return A.aqY(!0,A.iu(A.iv(A.a([B.Uq,B.y6,A.d1(r==null?"page not found":r,s,s,s,s),B.y6,new A.Bx(new A.a2i(a),B.UL,s)],t.p),B.a3,B.fD,B.a5),s,s),!0)}}
 A.a2i.prototype={
 $0(){return A.a3N(this.a).uP(0,"/",null)},
 $S:0}
@@ -87655,8 +87655,8 @@ B.a3=new A.oe(2,"center")
 B.bx=new A.Ov(1,"down")
 B.l=new A.qL(0,"none")
 B.RW=new A.l(!0,null,null,null,null,null,10,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.UB=new A.bG("You have pushed the button this many times",null,B.RW,null,null,null,null,null)
-B.GX=A.a(s([B.UB]),t.p)
+B.UC=new A.bG("You have pushed the button this many times",null,B.RW,null,null,null,null,null)
+B.GX=A.a(s([B.UC]),t.p)
 B.D4=new A.wL(B.aR,B.fD,B.a5,B.a3,null,B.bx,null,B.GX,null)
 B.Bd=new A.kw(B.x,null,null,B.D4,null)
 B.F7=new A.c2(60560,"Remix","remixicon_updated",!1)
@@ -88191,8 +88191,8 @@ B.by=new A.k6(2,"deleteIcon")
 B.GW=A.a(s([B.b1,B.aj,B.by]),A.ah("x<k6>"))
 B.mL=A.a(s([B.iS,B.fh,B.dO,B.fk,B.fo,B.cS,B.mK,B.j2,B.aX,B.fp,B.ci,B.dL,B.dM,B.fi,B.dN,B.iT,B.c0,B.iU,B.iV,B.mI,B.aW,B.fj,B.dP,B.dQ,B.iW,B.iX,B.iY,B.iZ,B.mJ,B.j_,B.j0,B.fl,B.dR,B.dS,B.j1,B.fm,B.fn]),A.ah("x<bu>"))
 B.yu=new A.l(!0,null,null,null,null,null,20,B.b2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.Us=new A.bG("Tools",null,B.yu,null,null,null,null,null)
-B.GY=A.a(s([B.Us]),t.p)
+B.Ut=new A.bG("Tools",null,B.yu,null,null,null,null,null)
+B.GY=A.a(s([B.Ut]),t.p)
 B.WY=new A.fX(0,1)
 B.X3=new A.fX(0.5,1)
 B.X4=new A.fX(0.5375,0.75)
@@ -89393,8 +89393,8 @@ B.LA=new A.bw(B.E0,null,null)
 B.Ef=new A.au(24,0,0,12)
 B.C7=new A.u(4284572003)
 B.Q0=new A.l(!0,B.C7,null,null,null,null,12,B.b2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.Ux=new A.bG("MENU",null,B.Q0,null,null,null,null,null)
-B.LC=new A.bw(B.Ef,B.Ux,null)
+B.Uy=new A.bG("MENU",null,B.Q0,null,null,null,null,null)
+B.LC=new A.bw(B.Ef,B.Uy,null)
 B.LD=new A.yX(null)
 B.b_=new A.KV(0,"fill")
 B.a6=new A.KV(1,"stroke")
@@ -90070,26 +90070,26 @@ B.Ui=new A.d2(B.Ss,B.TX,B.TC,B.QT,B.Tt,B.Sl,B.U0,B.Rp,B.S_,B.Tm,B.QK,B.TE,B.Tq,B
 B.ey=new A.l(!0,null,null,null,null,null,16,B.b2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
 B.Uj=new A.bG("transform:",null,B.ey,null,null,null,null,null)
 B.Uk=new A.bG("areaProgress:",null,B.ey,null,null,null,null,null)
-B.Ul=new A.bG("gestures:",null,B.ey,null,null,null,null,null)
-B.Um=new A.bG("Disable light",null,null,null,null,null,null,null)
+B.Ul=new A.bG("Flutter Tilt",null,B.ex,null,null,null,null,null)
+B.Um=new A.bG("gestures:",null,B.ey,null,null,null,null,null)
+B.Un=new A.bG("Disable light",null,null,null,null,null,null,null)
 B.yv=new A.bG("Home",null,null,null,null,null,null,null)
-B.Un=new A.bG("inner",null,B.ex,null,null,null,null,null)
-B.Uo=new A.bG("outer",null,B.ex,null,null,null,null,null)
-B.Up=new A.bG("Page Not Found",null,B.hp,null,null,null,null,null)
-B.Uq=new A.bG("none",null,null,null,null,null,null,null)
-B.Ur=new A.bG("Disable tilt",null,null,null,null,null,null,null)
-B.Ut=new A.bG("TiltDirection(0.8, 0.4)",null,null,null,null,null,null,null)
-B.Uu=new A.bG("topLeft",null,null,null,null,null,null,null)
-B.Uv=new A.bG("top",null,null,null,null,null,null,null)
-B.Uw=new A.bG("child",null,B.ex,null,null,null,null,null)
-B.Uy=new A.bG("bottomLeft",null,null,null,null,null,null,null)
-B.Uz=new A.bG("angle:",null,B.ey,null,null,null,null,null)
-B.UA=new A.bG("bottom",null,null,null,null,null,null,null)
-B.UC=new A.bG("Disable shadow",null,null,null,null,null,null,null)
-B.UD=new A.bG("left",null,null,null,null,null,null,null)
-B.UE=new A.bG("bottomRight",null,null,null,null,null,null,null)
-B.UF=new A.bG("position:",null,B.ey,null,null,null,null,null)
-B.UG=new A.bG("Flutter Title",null,B.ex,null,null,null,null,null)
+B.Uo=new A.bG("inner",null,B.ex,null,null,null,null,null)
+B.Up=new A.bG("outer",null,B.ex,null,null,null,null,null)
+B.Uq=new A.bG("Page Not Found",null,B.hp,null,null,null,null,null)
+B.Ur=new A.bG("none",null,null,null,null,null,null,null)
+B.Us=new A.bG("Disable tilt",null,null,null,null,null,null,null)
+B.Uu=new A.bG("TiltDirection(0.8, 0.4)",null,null,null,null,null,null,null)
+B.Uv=new A.bG("topLeft",null,null,null,null,null,null,null)
+B.Uw=new A.bG("top",null,null,null,null,null,null,null)
+B.Ux=new A.bG("child",null,B.ex,null,null,null,null,null)
+B.Uz=new A.bG("bottomLeft",null,null,null,null,null,null,null)
+B.UA=new A.bG("angle:",null,B.ey,null,null,null,null,null)
+B.UB=new A.bG("bottom",null,null,null,null,null,null,null)
+B.UD=new A.bG("Disable shadow",null,null,null,null,null,null,null)
+B.UE=new A.bG("left",null,null,null,null,null,null,null)
+B.UF=new A.bG("bottomRight",null,null,null,null,null,null,null)
+B.UG=new A.bG("position:",null,B.ey,null,null,null,null,null)
 B.UH=new A.bG("right",null,null,null,null,null,null,null)
 B.UJ=new A.bG("topRight",null,null,null,null,null,null,null)
 B.SF=new A.l(!0,B.j,null,null,null,null,18,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
