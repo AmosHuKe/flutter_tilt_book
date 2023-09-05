@@ -1,4 +1,4 @@
-import 'dart:js_interop';
+import 'package:js/js.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_tilt/flutter_tilt.dart';
