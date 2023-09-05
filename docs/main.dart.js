@@ -25362,7 +25362,7 @@ _.f=d
 _.y=e
 _.z=f
 _.Q=g},
-ayy(a,b){return new A.kd(b,null,10,a,!1,!0,B.an,B.J)},
+ayy(a,b){return new A.kd(b,null,10,a,!1,!0,!0,B.an,B.J)},
 aKu(a,b){var s,r,q,p,o,n,m,l,k,j=a.a,i=a.b,h=A.bz("dx",new A.afk()),g=A.bz("dy",new A.afl())
 for(s=b.length,r=i<0,q=j<0,p=i>0,o=j>0,n=0;n<b.length;b.length===s||(0,A.J)(b),++n){m=b[n]
 if(o){l=h.b
@@ -25385,15 +25385,16 @@ g.b=l}if(o&&j<=m.a)h.b=j
 if(p&&i<=m.b)g.b=i
 if(q&&j>=m.a)h.b=j
 if(r&&i>=m.b)g.b=i}return new A.fC(h.bT(),g.bT())},
-kd:function kd(a,b,c,d,e,f,g,h){var _=this
+kd:function kd(a,b,c,d,e,f,g,h,i){var _=this
 _.a=a
 _.b=b
 _.c=c
 _.d=d
 _.e=e
-_.at=f
-_.ch=g
-_.cx=h},
+_.x=f
+_.at=g
+_.ch=h
+_.cx=i},
 kK:function kK(a,b,c){this.a=a
 this.b=b
 this.c=c},
@@ -83168,14 +83169,17 @@ n.r=A.aBM(n.e,n.f,o,s.d)
 n.w=!1
 n.x=b
 n.alH(n.gF0(),b)},
-alJ(){var s,r=this,q=r.a,p=r.e,o=r.f
-q=q.w.b
-s=A.FZ(p,o,q==null?B.e:q)
-q=r.gmT()
-p=r.gmT()
-o=r.gmT()
-r.a.toString
-r.Q=q.Z(0,new A.i(p.a-s.a,o.b-s.b).ad(0,0.05))},
+alJ(){var s,r,q,p=this,o=p.a.w
+if(!o.x)return
+s=p.e
+r=p.f
+o=o.b
+q=A.FZ(s,r,o==null?B.e:o)
+o=p.gmT()
+s=p.gmT()
+r=p.gmT()
+p.a.toString
+p.Q=o.Z(0,new A.i(s.a-q.a,r.b-q.b).ad(0,0.05))},
 aiC(){var s=this
 if(s.y==null){s.a.toString
 s.y=A.bY(A.cr(0,16),new A.ao_(s))
@@ -83567,7 +83571,7 @@ $R:4,
 $S:488}
 A.Gq.prototype={
 D(a){var s=null
-return new A.ex(440,"Animation",A.hI(s,A.cP(30),A.bq(s,s,B.l,s,B.l2,200,s,s,350),B.Bl,B.bY,s,s,B.cp,B.UV),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: const TiltConfig(\n    angle: 30,\n    leaveDuration: Duration(seconds: 1),\n    leaveCurve: Curves.bounceOut,\n  ),\n  childLayout: const ChildLayout(\n    outer: [\n      Positioned(\n        child: TiltParallax(\n          size: Offset(40, 40),\n          child: Text(\n            'Flutter Tilt \u2728',\n            style: TextStyle(\n              fontSize: 20,\n              color: Colors.white,\n            ),\n          ),\n        ),\n      ),\n    ],\n  ),\n  child: Container(\n    width: 350,\n    height: 200,\n    decoration: const BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topRight,\n        end: Alignment.bottomLeft,\n        colors: [Color(0xFF80d0c7), Color(0xFF13547a)],\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",s,s)}}
+return new A.ex(440,"Animation",A.hI(s,A.cP(30),A.bq(s,s,B.l,s,B.l2,200,s,s,350),B.Bl,B.bY,s,s,B.cp,B.V_),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: const TiltConfig(\n    angle: 30,\n    leaveDuration: Duration(seconds: 1),\n    leaveCurve: Curves.bounceOut,\n  ),\n  childLayout: const ChildLayout(\n    outer: [\n      Positioned(\n        child: TiltParallax(\n          size: Offset(40, 40),\n          child: Text(\n            'Flutter Tilt \u2728',\n            style: TextStyle(\n              fontSize: 20,\n              color: Colors.white,\n            ),\n          ),\n        ),\n      ),\n    ],\n  ),\n  child: Container(\n    width: 350,\n    height: 200,\n    decoration: const BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topRight,\n        end: Alignment.bottomLeft,\n        colors: [Color(0xFF80d0c7), Color(0xFF13547a)],\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",s,s)}}
 A.I_.prototype={
 D(a){var s=null
 return new A.ex(440,"Default",A.hI(s,A.cP(30),A.bq(B.x,B.bs,B.l,s,B.A0,200,s,s,350),B.bT,B.bY,s,s,B.cp,B.d8),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: const BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.bottomLeft,\n        end: Alignment.topRight,\n        colors: [Color(0xFFff9a9e), Color(0xFFfad0c4)],\n      ),\n    ),\n    child: const Text(\n      'Flutter Tilt \u2728',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",s,s)}}
@@ -83650,7 +83654,7 @@ af(){return new A.EF(B.i)}}
 A.EF.prototype={
 a8L(){this.ab(new A.anE(this))},
 D(a){var s=null
-return new A.uD(A.asG(s,s,B.Kq,s),A.hI(s,A.cP(24),B.KF,new A.kK(A.a([A.dM(s,A.ik(A.d5(""+this.d,s,s,s,B.S0),B.th),s,s,s,s,200,s),A.dM(10,A.ik(A.ei(A.awc(B.Fw,!1,this.ga8K(),"Increment"),50,50),B.L6),s,s,s,10,s,s)],t.p),B.aJ,B.aJ),B.G5,s,s,B.NW,B.V_),s)}}
+return new A.uD(A.asG(s,s,B.Kq,s),A.hI(s,A.cP(24),B.KF,new A.kK(A.a([A.dM(s,A.ik(A.d5(""+this.d,s,s,s,B.S0),B.th),s,s,s,s,200,s),A.dM(10,A.ik(A.ei(A.awc(B.Fw,!1,this.ga8K(),"Increment"),50,50),B.L6),s,s,s,10,s,s)],t.p),B.aJ,B.aJ),B.G5,s,s,B.NW,B.UX),s)}}
 A.anE.prototype={
 $0(){++this.a.d},
 $S:0}
@@ -83662,17 +83666,17 @@ this.a.toString
 return A.ei(A.asp(A.auZ(A.d5("Flutter Tilt Demo",s,s,s,B.S1)),B.D7,B.Bi,s,s),450,250)}}
 A.JI.prototype={
 D(a){var s=null,r=A.cP(30),q=A.a([A.dM(s,A.ik(A.bq(B.x,B.bs,B.l,B.m,s,60,s,s,200),B.L4),s,s,s,s,s,s)],t.p)
-return new A.ex(440,"Initial tilt",A.hI(s,r,A.bq(B.x,s,B.l,s,B.l2,200,s,s,350),new A.kK(q,B.aJ,B.aJ),B.bY,s,s,B.cp,B.UW),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: const TiltConfig(initial: Offset(-1.0, -1.0)),\n  childLayout: ChildLayout(\n    outer: [\n      Positioned(\n        child: TiltParallax(\n          size: const Offset(20, 20),\n          child: Container(\n            width: 200,\n            height: 60,\n            alignment: Alignment.center,\n            color: Colors.black,\n            child: const Text(\n              'Flutter Tilt \u2728',\n              style: TextStyle(\n                fontSize: 20,\n                color: Colors.white,\n              ),\n            ),\n          ),\n        ),\n      ),\n    ],\n  ),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: const BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topRight,\n        end: Alignment.bottomLeft,\n        colors: [Color(0xFF80d0c7), Color(0xFF13547a)],\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",s,s)}}
+return new A.ex(440,"Initial tilt",A.hI(s,r,A.bq(B.x,s,B.l,s,B.l2,200,s,s,350),new A.kK(q,B.aJ,B.aJ),B.bY,s,s,B.cp,B.UY),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: const TiltConfig(initial: Offset(-1.0, -1.0)),\n  childLayout: ChildLayout(\n    outer: [\n      Positioned(\n        child: TiltParallax(\n          size: const Offset(20, 20),\n          child: Container(\n            width: 200,\n            height: 60,\n            alignment: Alignment.center,\n            color: Colors.black,\n            child: const Text(\n              'Flutter Tilt \u2728',\n              style: TextStyle(\n                fontSize: 20,\n                color: Colors.white,\n              ),\n            ),\n          ),\n        ),\n      ),\n    ],\n  ),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: const BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topRight,\n        end: Alignment.bottomLeft,\n        colors: [Color(0xFF80d0c7), Color(0xFF13547a)],\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",s,s)}}
 A.JU.prototype={
 D(a){var s=null
-return new A.ex(440,"Keep tilt",A.hI(s,A.cP(30),A.bq(B.x,B.bs,B.l,s,B.A2,200,s,s,350),B.bT,B.bY,s,s,B.cp,B.UY),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: const TiltConfig(enableRevert: false),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: const BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topCenter,\n        end: Alignment.bottomCenter,\n        colors: [Color(0xFF3cba92), Color(0xFF0ba360)],\n      ),\n    ),\n    child: const Text(\n      'Flutter Tilt \u2728',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",s,s)}}
+return new A.ex(440,"Keep tilt",A.hI(s,A.cP(30),A.bq(B.x,B.bs,B.l,s,B.A2,200,s,s,350),B.bT,B.bY,s,s,B.cp,B.UV),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: const TiltConfig(\n    enableRevert: false,\n    enableSensorRevert: false,\n  ),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: const BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topCenter,\n        end: Alignment.bottomCenter,\n        colors: [Color(0xFF3cba92), Color(0xFF0ba360)],\n      ),\n    ),\n    child: const Text(\n      'Flutter Tilt \u2728',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",s,s)}}
 A.K2.prototype={
 D(a){var s,r=null,q=A.cP(30),p=t.p,o=A.a([A.dM(r,A.ik(A.bq(B.x,B.Uw,B.l,B.m,r,60,r,r,60),B.tg),r,r,0,r,r,r)],p),n=A.a([A.dM(r,A.ik(A.bq(B.x,B.Uv,B.l,B.m,r,60,r,r,60),B.Lu),r,r,r,0,r,r)],p),m=t.W,l=A.a([A.L(153,128,208,199),A.L(153,19,84,122)],m)
 l=A.dM(-10,A.ik(A.bq(B.bA,B.yB,B.l,r,new A.bh(r,r,r,A.cP(20),r,new A.dw(B.dh,B.dj,B.a8,l,r,r),B.A),160,r,B.ma,280),B.Lv),r,r,r,r,r,r)
 s=A.a([A.L(204,128,208,199),A.L(204,19,84,122)],m)
 p=A.a([l,A.dM(-5,A.ik(A.bq(B.bA,B.yB,B.l,r,new A.bh(r,r,r,A.cP(25),r,new A.dw(B.dh,B.dj,B.a8,s,r,r),B.A),180,r,B.ma,315),B.Lq),r,r,r,r,r,r)],p)
 s=B.d.bm(229.5)
-return new A.ex(480,"Layout",A.hI(r,q,A.bq(B.x,B.UE,B.l,r,new A.bh(r,r,r,r,r,new A.dw(B.dh,B.dj,B.a8,A.a([A.L(s,128,208,199),A.L(s,19,84,122)],m),r,r),B.A),200,r,r,350),new A.kK(o,n,p),B.bY,r,r,B.jW,B.UX),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: const TiltConfig(\n    angle: 20,\n    leaveDuration: Duration(seconds: 1),\n    leaveCurve: Curves.elasticOut,\n  ),\n  shadowConfig: const ShadowConfig(disable: true),\n  childLayout: ChildLayout(\n    outer: [\n      Positioned(\n        left: 0,\n        child: TiltParallax(\n          size: const Offset(40, 40),\n          child: Container(\n            width: 60,\n            height: 60,\n            alignment: Alignment.center,\n            color: Colors.black,\n            child: const Text(\n              'outer',\n              style: TextStyle(\n                fontSize: 20,\n                color: Colors.white,\n              ),\n            ),\n          ),\n        ),\n      ),\n    ],\n    inner: [\n      Positioned(\n        right: 0,\n        child: TiltParallax(\n          size: const Offset(-40, -40),\n          child: Container(\n            width: 60,\n            height: 60,\n            alignment: Alignment.center,\n            color: Colors.black,\n            child: const Text(\n              'inner',\n              style: TextStyle(\n                fontSize: 20,\n                color: Colors.white,\n              ),\n            ),\n          ),\n        ),\n      ),\n    ],\n    behind: [\n      Positioned(\n        bottom: -10,\n        child: TiltParallax(\n          size: const Offset(-50, -50),\n          child: Container(\n            width: 350 * 0.8,\n            height: 200 * 0.8,\n            alignment: Alignment.bottomCenter,\n            padding: const EdgeInsets.only(bottom: 4),\n            decoration: BoxDecoration(\n              gradient: LinearGradient(\n                begin: Alignment.topRight,\n                end: Alignment.bottomLeft,\n                colors: [\n                  const Color(0xFF80d0c7).withOpacity(0.6),\n                  const Color(0xFF13547a).withOpacity(0.6),\n                ],\n              ),\n              borderRadius: BorderRadius.circular(20),\n            ),\n            child: const Text(\n              'behind',\n              style: TextStyle(\n                fontSize: 18,\n                color: Colors.white,\n              ),\n            ),\n          ),\n        ),\n      ),\n      Positioned(\n        bottom: -5,\n        child: TiltParallax(\n          size: const Offset(-25, -25),\n          child: Container(\n            width: 350 * 0.9,\n            height: 200 * 0.9,\n            alignment: Alignment.bottomCenter,\n            padding: const EdgeInsets.only(bottom: 4),\n            decoration: BoxDecoration(\n              gradient: LinearGradient(\n                begin: Alignment.topRight,\n                end: Alignment.bottomLeft,\n                colors: [\n                  const Color(0xFF80d0c7).withOpacity(0.8),\n                  const Color(0xFF13547a).withOpacity(0.8),\n                ],\n              ),\n              borderRadius: BorderRadius.circular(25),\n            ),\n            child: const Text(\n              'behind',\n              style: TextStyle(\n                fontSize: 18,\n                color: Colors.white,\n              ),\n            ),\n          ),\n        ),\n      ),\n    ],\n  ),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topRight,\n        end: Alignment.bottomLeft,\n        colors: [\n          const Color(0xFF80d0c7).withOpacity(0.9),\n          const Color(0xFF13547a).withOpacity(0.9),\n        ],\n      ),\n    ),\n    child: const Text(\n      'child',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",r,r)}}
+return new A.ex(480,"Layout",A.hI(r,q,A.bq(B.x,B.UE,B.l,r,new A.bh(r,r,r,r,r,new A.dw(B.dh,B.dj,B.a8,A.a([A.L(s,128,208,199),A.L(s,19,84,122)],m),r,r),B.A),200,r,r,350),new A.kK(o,n,p),B.bY,r,r,B.jW,B.UZ),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: const TiltConfig(\n    angle: 20,\n    leaveDuration: Duration(seconds: 1),\n    leaveCurve: Curves.elasticOut,\n  ),\n  shadowConfig: const ShadowConfig(disable: true),\n  childLayout: ChildLayout(\n    outer: [\n      Positioned(\n        left: 0,\n        child: TiltParallax(\n          size: const Offset(40, 40),\n          child: Container(\n            width: 60,\n            height: 60,\n            alignment: Alignment.center,\n            color: Colors.black,\n            child: const Text(\n              'outer',\n              style: TextStyle(\n                fontSize: 20,\n                color: Colors.white,\n              ),\n            ),\n          ),\n        ),\n      ),\n    ],\n    inner: [\n      Positioned(\n        right: 0,\n        child: TiltParallax(\n          size: const Offset(-40, -40),\n          child: Container(\n            width: 60,\n            height: 60,\n            alignment: Alignment.center,\n            color: Colors.black,\n            child: const Text(\n              'inner',\n              style: TextStyle(\n                fontSize: 20,\n                color: Colors.white,\n              ),\n            ),\n          ),\n        ),\n      ),\n    ],\n    behind: [\n      Positioned(\n        bottom: -10,\n        child: TiltParallax(\n          size: const Offset(-50, -50),\n          child: Container(\n            width: 350 * 0.8,\n            height: 200 * 0.8,\n            alignment: Alignment.bottomCenter,\n            padding: const EdgeInsets.only(bottom: 4),\n            decoration: BoxDecoration(\n              gradient: LinearGradient(\n                begin: Alignment.topRight,\n                end: Alignment.bottomLeft,\n                colors: [\n                  const Color(0xFF80d0c7).withOpacity(0.6),\n                  const Color(0xFF13547a).withOpacity(0.6),\n                ],\n              ),\n              borderRadius: BorderRadius.circular(20),\n            ),\n            child: const Text(\n              'behind',\n              style: TextStyle(\n                fontSize: 18,\n                color: Colors.white,\n              ),\n            ),\n          ),\n        ),\n      ),\n      Positioned(\n        bottom: -5,\n        child: TiltParallax(\n          size: const Offset(-25, -25),\n          child: Container(\n            width: 350 * 0.9,\n            height: 200 * 0.9,\n            alignment: Alignment.bottomCenter,\n            padding: const EdgeInsets.only(bottom: 4),\n            decoration: BoxDecoration(\n              gradient: LinearGradient(\n                begin: Alignment.topRight,\n                end: Alignment.bottomLeft,\n                colors: [\n                  const Color(0xFF80d0c7).withOpacity(0.8),\n                  const Color(0xFF13547a).withOpacity(0.8),\n                ],\n              ),\n              borderRadius: BorderRadius.circular(25),\n            ),\n            child: const Text(\n              'behind',\n              style: TextStyle(\n                fontSize: 18,\n                color: Colors.white,\n              ),\n            ),\n          ),\n        ),\n      ),\n    ],\n  ),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topRight,\n        end: Alignment.bottomLeft,\n        colors: [\n          const Color(0xFF80d0c7).withOpacity(0.9),\n          const Color(0xFF13547a).withOpacity(0.9),\n        ],\n      ),\n    ),\n    child: const Text(\n      'child',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",r,r)}}
 A.K0.prototype={
 D(a){var s,r,q=null,p=A.cP(20),o=A.wT(B.m,4),n=A.cP(14)
 n=A.ik(A.bq(q,q,B.l,q,new A.bh(q,q,A.wT(B.m,2.8),n,q,q,B.A),210,q,q,210),B.ti)
@@ -83712,7 +83716,7 @@ o=A.a([A.dM(n,A.ik(A.d5("Flutter Tilt",n,n,n,A.q2(n,n,B.F,n,n,n,n,n,n,n,n,40*l,n
 return new A.ex(580,"Parallax image",A.hI(n,n,A.arQ("assets/parallax_image/1.png",p,q),new A.kK(o,B.aJ,B.aJ),B.iS,n,n,B.jW,B.d8),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  lightConfig: const LightConfig(disable: true),\n  shadowConfig: const ShadowConfig(disable: true),\n  childLayout: ChildLayout(\n    outer: [\n      const Positioned.fill(\n        top: 80,\n        left: 140,\n        child: TiltParallax(\n          size: Offset(10, 10),\n          child: Text(\n            'Flutter Tilt',\n            style: TextStyle(\n              color: Colors.black54,\n              fontSize: 40,\n              fontWeight: FontWeight.bold,\n            ),\n          ),\n        ),\n      ),\n      TiltParallax(\n        size: const Offset(20, 20),\n        child: Image.asset(\n          'assets/parallax_image/2.png',\n          width: 742,\n          height: 337,\n        ),\n      ),\n      TiltParallax(\n        size: const Offset(30, 30),\n        child: Image.asset(\n          'assets/parallax_image/3.png',\n          width: 742,\n          height: 337,\n        ),\n      ),\n    ],\n  ),\n  child: Image.asset(\n    'assets/parallax_image/1.png',\n    width: 742,\n    height: 337,\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",n,n)}}
 A.MA.prototype={
 D(a){var s=null
-return new A.ex(440,"Reverse tilt",A.hI(s,A.cP(30),A.bq(B.x,B.bs,B.l,s,B.A_,200,s,s,350),B.bT,B.bY,s,s,B.NX,B.UZ),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: const TiltConfig(enableReverse: true),\n  shadowConfig: const ShadowConfig(enableReverse: true),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: const BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topCenter,\n        end: Alignment.bottomCenter,\n        colors: [Color(0xFFffb199), Color(0xFFff0844)],\n      ),\n    ),\n    child: const Text(\n      'Flutter Tilt \u2728',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",s,s)}}
+return new A.ex(440,"Reverse tilt",A.hI(s,A.cP(30),A.bq(B.x,B.bs,B.l,s,B.A_,200,s,s,350),B.bT,B.bY,s,s,B.NX,B.UW),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: const TiltConfig(enableReverse: true),\n  shadowConfig: const ShadowConfig(enableReverse: true),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: const BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topCenter,\n        end: Alignment.bottomCenter,\n        colors: [Color(0xFFffb199), Color(0xFFff0844)],\n      ),\n    ),\n    child: const Text(\n      'Flutter Tilt \u2728',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",s,s)}}
 A.AG.prototype={
 af(){return new A.Vy(B.xJ,B.i)}}
 A.Vy.prototype={
@@ -91253,16 +91257,16 @@ B.Li=new A.i(0.25,1)
 B.UT=new A.Bq(B.Lc,B.Lj,B.Lb,B.Le,B.Li)
 B.UU=new A.Br(null)
 B.eA=new A.Ov(3,"decal")
-B.B_=new A.PM()
-B.UV=new A.kd(!1,null,30,null,!1,!0,B.cb,B.B_)
+B.UV=new A.kd(!1,null,10,null,!1,!1,!1,B.an,B.J)
+B.d8=new A.kd(!1,null,10,null,!1,!0,!0,B.an,B.J)
+B.UW=new A.kd(!1,null,10,null,!0,!0,!0,B.an,B.J)
+B.UX=new A.kd(!1,null,15,null,!1,!0,!0,B.an,B.J)
 B.Lp=new A.i(-1,-1)
-B.UW=new A.kd(!1,B.Lp,10,null,!1,!0,B.an,B.J)
+B.UY=new A.kd(!1,B.Lp,10,null,!1,!0,!0,B.an,B.J)
 B.Am=new A.Iu()
-B.UX=new A.kd(!1,null,20,null,!1,!0,B.cb,B.Am)
-B.UY=new A.kd(!1,null,10,null,!1,!1,B.an,B.J)
-B.d8=new A.kd(!1,null,10,null,!1,!0,B.an,B.J)
-B.UZ=new A.kd(!1,null,10,null,!0,!0,B.an,B.J)
-B.V_=new A.kd(!1,null,15,null,!1,!0,B.an,B.J)
+B.UZ=new A.kd(!1,null,20,null,!1,!0,!0,B.cb,B.Am)
+B.B_=new A.PM()
+B.V_=new A.kd(!1,null,30,null,!1,!0,!0,B.cb,B.B_)
 B.V0=new A.Bu(null)
 B.V1=new A.Bv(null)
 B.kc=new A.fC(0,0)

@@ -17,7 +17,10 @@ class KeepTilt extends StatelessWidget {
       /// Tilt here
       body: Tilt(
         borderRadius: BorderRadius.circular(30),
-        tiltConfig: const TiltConfig(enableRevert: false),
+        tiltConfig: const TiltConfig(
+          enableRevert: false,
+          enableSensorRevert: false,
+        ),
         child: Container(
           width: 350,
           height: 200,
@@ -49,7 +52,10 @@ import 'package:flutter_tilt/flutter_tilt.dart';
 
 Tilt(
   borderRadius: BorderRadius.circular(30),
-  tiltConfig: const TiltConfig(enableRevert: false),
+  tiltConfig: const TiltConfig(
+    enableRevert: false,
+    enableSensorRevert: false,
+  ),
   child: Container(
     width: 350,
     height: 200,
