@@ -1,19 +1,14 @@
-import 'package:js/js.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_tilt/flutter_tilt.dart';
 
 import 'package:flutter_tilt_book/layouts/page_layout.dart';
 
-@JS("requestDeviceMotionEventPermission")
-external void requestDeviceMotionEventPermission();
-
 class Default extends StatelessWidget {
   const Default({super.key});
 
   @override
   Widget build(BuildContext context) {
-    requestDeviceMotionEventPermission();
     return PageLayout(
       title: 'Default',
       dartCode: code(),
