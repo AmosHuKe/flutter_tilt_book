@@ -26890,7 +26890,8 @@ while(true)switch(s){case 0:if($.a1==null)A.asO()
 $.a1.toString
 s=2
 return A.a5(A.a53(A.a(["dart","yaml"],t.s)),$async$aqk)
-case 2:if($.a1==null)A.asO()
+case 2:globalThis.requestDeviceMotionEventPermission()
+if($.a1==null)A.asO()
 q=$.a1
 q.toString
 p=$.aT().d.i(0,0)
