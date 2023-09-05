@@ -13,9 +13,7 @@ class Default extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    WidgetsBinding.instance.endOfFrame.then(
-      (value) => requestDeviceMotionEventPermission(),
-    );
+    requestDeviceMotionEventPermission();
     return PageLayout(
       title: 'Default',
       dartCode: code(),
