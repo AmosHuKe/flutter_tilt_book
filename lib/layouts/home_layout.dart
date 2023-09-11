@@ -17,11 +17,7 @@ class HomeLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final GlobalKey<ScaffoldState> scaffoldGlobalKey =
-        GlobalKey<ScaffoldState>();
-
     return Scaffold(
-      key: scaffoldGlobalKey,
       backgroundColor: const Color(0xFF171819),
       drawer: Container(
         width: 200,
@@ -40,8 +36,7 @@ class HomeLayout extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(12),
                   child: IconButton(
-                    onPressed: () =>
-                        scaffoldGlobalKey.currentState!.openDrawer(),
+                    onPressed: () => Scaffold.of(context).openDrawer(),
                     icon: const Icon(Remix.menu_2_line, color: Colors.white),
                   ),
                 ),

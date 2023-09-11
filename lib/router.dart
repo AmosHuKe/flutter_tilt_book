@@ -11,10 +11,6 @@ class R {
   static final config = GoRouter(
     initialLocation: '/${routerData[0].name}',
     routes: [
-      GoRoute(
-        path: '/',
-        redirect: (_, state) => '/${routerData[0].name}',
-      ),
       ShellRoute(
         builder: (_, state, child) => HomeLayout(child: child),
         routes: List.generate(
