@@ -35,9 +35,11 @@ class HomeLayout extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(12),
-                  child: IconButton(
-                    onPressed: () => Scaffold.of(context).openDrawer(),
-                    icon: const Icon(Remix.menu_2_line, color: Colors.white),
+                  child: Builder(
+                    builder: (context) => IconButton(
+                      onPressed: () => Scaffold.of(context).openDrawer(),
+                      icon: const Icon(Remix.menu_2_line, color: Colors.white),
+                    ),
                   ),
                 ),
                 const LogoTitle(),
