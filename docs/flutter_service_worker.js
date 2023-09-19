@@ -22,10 +22,10 @@ const RESOURCES = {"assets/AssetManifest.bin": "acf6f30d8bac3d92fb82169f4106807f
 "assets/assets/parallax_image/2.png": "850bd000ae8987b888cf24103bb5233b",
 "assets/assets/parallax_image/3.png": "f3552185508b52222be6b645d848f742",
 "assets/FontManifest.json": "12824aa41d28e1c31a2ba515969de782",
-"assets/fonts/MaterialIcons-Regular.otf": "65e21b5db78a7c132bbb04776ec9c399",
+"assets/fonts/MaterialIcons-Regular.otf": "e7069dfd19b331be16bed984668fe080",
 "assets/NOTICES": "b3657d75997b6de9db3ea5a3684794e4",
-"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "89ed8f4e49bcdfc0b5bfc9b24591e347",
-"assets/packages/remixicon_updated/fonts/Remix.ttf": "93744a4ade008ab19fab00650c9d862d",
+"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
+"assets/packages/remixicon_updated/fonts/Remix.ttf": "fb2d9e347d28dcd7ef575c67030e33de",
 "assets/packages/syntax_highlight/grammars/dart.json": "f8a855de8bd770569dd31041df4a8613",
 "assets/packages/syntax_highlight/grammars/sql.json": "957a963dfa0e8d634766e08c80e00723",
 "assets/packages/syntax_highlight/grammars/yaml.json": "7c2dfa28161c688d8e09478a461f17bf",
@@ -48,12 +48,12 @@ const RESOURCES = {"assets/AssetManifest.bin": "acf6f30d8bac3d92fb82169f4106807f
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "063ea79d7305674c1ce793ee95b73dfb",
-"/": "063ea79d7305674c1ce793ee95b73dfb",
-"main.dart.js": "846923d6ea88d5f89408af2a61d41836",
+"index.html": "7acaa6903e518eec8b22dfe4dcaf2ad4",
+"/": "7acaa6903e518eec8b22dfe4dcaf2ad4",
+"main.dart.js": "cdc4d6f346b902fc1345f79fbdafd130",
 "main.js": "b4a61335b5f681237a6e450995d03286",
 "manifest.json": "a18b7e0aa2c53cc9f83f5fb323bb8f8a",
-"version.json": "40db74f419c4e386b1e68b5c0b86b3be"};
+"version.json": "d2b59b6a33cc34d5d025934d43d04d8b"};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
