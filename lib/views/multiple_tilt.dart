@@ -74,7 +74,8 @@ Wrap(
       tiltConfig: const TiltConfig(filterQuality: FilterQuality.high),
       child: Image.asset(
         'assets/multiple_tilt_image/sun.png',
-        width: 160,
+        width: 159.5,
+        height: 275,
       ),
     ),
 
@@ -84,7 +85,8 @@ Wrap(
       tiltConfig: const TiltConfig(filterQuality: FilterQuality.high),
       child: Image.asset(
         'assets/multiple_tilt_image/moon.png',
-        width: 160,
+        width: 159.5,
+        height: 275,
       ),
     ),
 
@@ -94,7 +96,8 @@ Wrap(
       tiltConfig: const TiltConfig(filterQuality: FilterQuality.high),
       child: Image.asset(
         'assets/multiple_tilt_image/star.png',
-        width: 160,
+        width: 159.5,
+        height: 275,
       ),
     ),
   ],
