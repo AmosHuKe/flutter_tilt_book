@@ -23,47 +23,52 @@ class HomeLayout extends StatelessWidget {
         width: 200,
         padding: const EdgeInsets.only(top: 24, bottom: 24, right: 24),
         color: const Color(0xFF171819),
-        child: const NavigatorContainer(),
+        child: const SafeArea(
+          child: NavigatorContainer(),
+        ),
       ),
-      body: LayoutAdaptive(
-        smChild: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            /// 导航
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(12),
-                  child: Builder(
-                    builder: (context) => IconButton(
-                      onPressed: () => Scaffold.of(context).openDrawer(),
-                      icon: const Icon(Remix.menu_2_line, color: Colors.white),
+      body: SafeArea(
+        child: LayoutAdaptive(
+          smChild: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              /// 导航
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: Builder(
+                      builder: (context) => IconButton(
+                        onPressed: () => Scaffold.of(context).openDrawer(),
+                        icon:
+                            const Icon(Remix.menu_2_line, color: Colors.white),
+                      ),
                     ),
                   ),
-                ),
-                const LogoTitle(),
-                const SizedBox(width: 64),
-              ],
-            ),
+                  const LogoTitle(),
+                  const SizedBox(width: 64),
+                ],
+              ),
 
-            /// 主内容
-            Expanded(child: child),
-          ],
-        ),
-        child: Row(
-          children: [
-            /// 导航
-            Container(
-              width: 200,
-              padding: const EdgeInsets.only(top: 24, bottom: 24, right: 24),
-              color: const Color(0xFF171819),
-              child: const NavigatorContainer(),
-            ),
+              /// 主内容
+              Expanded(child: child),
+            ],
+          ),
+          child: Row(
+            children: [
+              /// 导航
+              Container(
+                width: 200,
+                padding: const EdgeInsets.only(top: 24, bottom: 24, right: 24),
+                color: const Color(0xFF171819),
+                child: const NavigatorContainer(),
+              ),
 
-            /// 主内容
-            Expanded(child: child),
-          ],
+              /// 主内容
+              Expanded(child: child),
+            ],
+          ),
         ),
       ),
     );
