@@ -17,7 +17,7 @@ class _ShadowDirectionDemoState extends State<ShadowDirectionDemo> {
   @override
   Widget build(BuildContext context) {
     return PageLayout(
-      title: 'Shadow direction',
+      title: 'Shadow Direction',
       dartCode: code(shadowDirection: shadowDirection),
       minHeight: 440,
 

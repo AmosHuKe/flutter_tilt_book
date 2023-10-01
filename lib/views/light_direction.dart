@@ -17,7 +17,7 @@ class _LightDirectionDemoState extends State<LightDirectionDemo> {
   @override
   Widget build(BuildContext context) {
     return PageLayout(
-      title: 'Light direction',
+      title: 'Light Direction',
       dartCode: code(lightDirection: lightDirection),
       minHeight: 440,
 

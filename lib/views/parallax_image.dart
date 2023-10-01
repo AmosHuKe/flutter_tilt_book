@@ -20,7 +20,7 @@ class ParallaxImage extends StatelessWidget {
     if (screenWidth < 768) scaleFactor = 0.4;
 
     return PageLayout(
-      title: 'Parallax image',
+      title: 'Parallax Image',
       dartCode: code(),
       minHeight: 580,
 

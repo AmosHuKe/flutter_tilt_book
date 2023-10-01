@@ -20,7 +20,7 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
   @override
   Widget build(BuildContext context) {
     return PageLayout(
-      title: 'Tilt direction',
+      title: 'Tilt Direction',
       dartCode: code(tiltDirection: tiltDirection),
       minHeight: 440,
 

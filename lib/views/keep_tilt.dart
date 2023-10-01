@@ -10,7 +10,7 @@ class KeepTilt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PageLayout(
-      title: 'Keep tilt',
+      title: 'Keep Tilt',
       dartCode: code(),
       minHeight: 440,
 

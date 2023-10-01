@@ -19,7 +19,7 @@ class _DisableEffectsState extends State<DisableEffects> {
   @override
   Widget build(BuildContext context) {
     return PageLayout(
-      title: 'Disable effects',
+      title: 'Disable Effects',
       dartCode: code(
         disableTilt: disableTilt,
         disableLight: disableLight,

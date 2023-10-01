@@ -10,7 +10,7 @@ class InitialTilt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PageLayout(
-      title: 'Initial tilt',
+      title: 'Initial Tilt',
       dartCode: code(),
       minHeight: 440,
 

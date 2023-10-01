@@ -10,7 +10,7 @@ class ReverseTilt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PageLayout(
-      title: 'Reverse tilt',
+      title: 'Reverse Tilt',
       dartCode: code(),
       minHeight: 440,
 
