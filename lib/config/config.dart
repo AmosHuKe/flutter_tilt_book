@@ -17,6 +17,7 @@ import 'package:flutter_tilt_book/views/parallax_image.dart';
 import 'package:flutter_tilt_book/views/reverse_tilt.dart';
 import 'package:flutter_tilt_book/views/shadow_direction.dart';
 import 'package:flutter_tilt_book/views/tilt_direction.dart';
+import 'package:flutter_tilt_book/views/multiple_tilt.dart';
 
 class Config {
   static const String appTitle = 'Flutter Tilt';
@@ -46,6 +47,12 @@ class Config {
       icon: Remix.landscape_line,
       name: 'ParallaxImage',
       widget: const ParallaxImage(),
+    ),
+    RouterData(
+      title: 'Multiple Tilt',
+      icon: Remix.checkbox_multiple_blank_line,
+      name: 'MultipleTilt',
+      widget: const MultipleTilt(),
     ),
     RouterData(
       title: 'Events',
