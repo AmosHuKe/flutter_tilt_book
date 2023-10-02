@@ -25,8 +25,8 @@ class MultipleTilt extends StatelessWidget {
             tiltConfig: const TiltConfig(filterQuality: FilterQuality.high),
             child: Image.asset(
               'assets/multiple_tilt_image/sun.png',
+              filterQuality: FilterQuality.high,
               width: 159.5,
-              height: 275,
             ),
           ),
 
@@ -36,7 +36,7 @@ class MultipleTilt extends StatelessWidget {
             tiltConfig: const TiltConfig(filterQuality: FilterQuality.high),
             child: Image.asset(
               'assets/multiple_tilt_image/moon.png',
-              width: 159.5,
+              filterQuality: FilterQuality.high,
               height: 275,
             ),
           ),
@@ -47,8 +47,8 @@ class MultipleTilt extends StatelessWidget {
             tiltConfig: const TiltConfig(filterQuality: FilterQuality.high),
             child: Image.asset(
               'assets/multiple_tilt_image/star.png',
+              filterQuality: FilterQuality.high,
               width: 159.5,
-              height: 275,
             ),
           ),
         ],
@@ -74,8 +74,8 @@ Wrap(
       tiltConfig: const TiltConfig(filterQuality: FilterQuality.high),
       child: Image.asset(
         'assets/multiple_tilt_image/sun.png',
+        filterQuality: FilterQuality.high,
         width: 159.5,
-        height: 275,
       ),
     ),
 
@@ -85,7 +85,7 @@ Wrap(
       tiltConfig: const TiltConfig(filterQuality: FilterQuality.high),
       child: Image.asset(
         'assets/multiple_tilt_image/moon.png',
-        width: 159.5,
+        filterQuality: FilterQuality.high,
         height: 275,
       ),
     ),
@@ -96,8 +96,8 @@ Wrap(
       tiltConfig: const TiltConfig(filterQuality: FilterQuality.high),
       child: Image.asset(
         'assets/multiple_tilt_image/star.png',
+        filterQuality: FilterQuality.high,
         width: 159.5,
-        height: 275,
       ),
     ),
   ],
