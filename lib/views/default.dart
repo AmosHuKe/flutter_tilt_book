@@ -41,7 +41,8 @@ class Default extends StatelessWidget {
   }
 }
 
-String code() => '''
+String code() =>
+    '''
 import 'package:flutter_tilt/flutter_tilt.dart';
 
 ······

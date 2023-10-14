@@ -18,6 +18,7 @@ import 'package:flutter_tilt_book/views/reverse_tilt.dart';
 import 'package:flutter_tilt_book/views/shadow_direction.dart';
 import 'package:flutter_tilt_book/views/tilt_direction.dart';
 import 'package:flutter_tilt_book/views/multiple_tilt.dart';
+import 'package:flutter_tilt_book/views/dialog.dart';
 
 class Config {
   static const String appTitle = 'Flutter Tilt';
@@ -59,6 +60,12 @@ class Config {
       icon: Remix.drag_drop_line,
       name: 'Events',
       widget: const Events(),
+    ),
+    RouterData(
+      title: 'Dialog',
+      icon: Remix.discuss_line,
+      name: 'Dialog',
+      widget: const DialogDemo(),
     ),
     RouterData(
       title: 'Default',
