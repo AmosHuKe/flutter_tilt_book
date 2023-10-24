@@ -32,7 +32,7 @@ class Config {
     BookLinkData(
       title: 'Github.com',
       icon: Remix.github_fill,
-      url: 'https://github.com/AmosHuKe/flutter_tilt',
+      url: 'https://github.com/fluttercandies/flutter_tilt',
     ),
   ];
 
