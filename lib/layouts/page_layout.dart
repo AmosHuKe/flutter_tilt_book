@@ -153,9 +153,9 @@ class _BodyContainerState extends State<BodyContainer>
 
               /// Action
               Container(
+                width: 94,
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 0.5,
-                  vertical: 3,
+                  vertical: 4,
                 ),
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -165,6 +165,7 @@ class _BodyContainerState extends State<BodyContainer>
                 child: TabBar(
                   controller: tabController,
                   isScrollable: true,
+                  tabAlignment: TabAlignment.center,
                   dividerColor: Colors.transparent,
                   indicatorWeight: 0,
                   indicatorSize: TabBarIndicatorSize.label,

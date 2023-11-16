@@ -125,7 +125,7 @@ class _AnimationCardState extends State<AnimationCard>
           filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
           child: Align(
             child: Transform.scale(
-              scale: 1.4,
+              scale: 1.2,
               filterQuality: FilterQuality.high,
               // Tilt here
               child: Tilt(
@@ -170,7 +170,6 @@ Padding(
           width: 159.5,
         ),
       ),
-
       AnimationCard(
         child: Image.asset(
           'assets/multiple_tilt_image/moon.png',
@@ -178,7 +177,6 @@ Padding(
           height: 275,
         ),
       ),
-
       AnimationCard(
         child: Image.asset(
           'assets/multiple_tilt_image/star.png',
@@ -267,7 +265,7 @@ class _AnimationCardState extends State<AnimationCard>
           filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
           child: Align(
             child: Transform.scale(
-              scale: 1.4,
+              scale: 1.2,
               filterQuality: FilterQuality.high,
               // Tilt here
               child: Tilt(

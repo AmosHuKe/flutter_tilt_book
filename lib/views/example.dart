@@ -38,7 +38,12 @@ class _TiltDemoState extends State<TiltDemo> {
   Widget build(BuildContext context) {
     return Theme(
       data: ThemeData(
-        primarySwatch: Colors.brown,
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.brown),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.brown,
+          titleTextStyle: TextStyle(color: Colors.white),
+        ),
       ),
 
       /// Tilt here
@@ -73,11 +78,12 @@ class _TiltDemoState extends State<TiltDemo> {
               child: TiltParallax(
                 size: const Offset(25, 25),
                 child: SizedBox(
-                  width: 50,
-                  height: 50,
+                  width: 48,
+                  height: 48,
                   child: FloatingActionButton(
                     onPressed: _incrementCounter,
                     tooltip: 'Increment',
+                    elevation: 0.0,
                     child: const Icon(Icons.add),
                   ),
                 ),
@@ -85,12 +91,14 @@ class _TiltDemoState extends State<TiltDemo> {
             ),
           ],
         ),
-        // onGestureMove: (TiltDataModel tiltDataModel, GesturesType gesturesType) {
+        // onGestureMove:
+        //     (TiltDataModel tiltDataModel, GesturesType gesturesType) {
         //   print('--- onGestureMove ---');
         //   print(tiltDataModel.areaProgress);
         //   print(gesturesType.name);
         // },
-        // onGestureLeave: (TiltDataModel tiltDataModel, GesturesType gesturesType) {
+        // onGestureLeave:
+        //     (TiltDataModel tiltDataModel, GesturesType gesturesType) {
         //   print('--- onGestureLeave ---');
         //   print(tiltDataModel.areaProgress);
         //   print(gesturesType.name);
@@ -117,8 +125,10 @@ class _MyHomePageState extends State<MyHomePage> {
       width: 250,
       height: 450,
       child: Scaffold(
+        primary: false,
         backgroundColor: const Color(0x206D6E6F),
         appBar: AppBar(
+          primary: false,
           title: Text(
             widget.title,
             style: const TextStyle(fontSize: 18),
@@ -163,9 +173,13 @@ class _TiltDemoState extends State<TiltDemo> {
 
   @override
   Widget build(BuildContext context) {
-    return Theme(
-      data: ThemeData(
-        primarySwatch: Colors.brown,
+    return ThemeData(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.brown),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.brown,
+          titleTextStyle: TextStyle(color: Colors.white),
+        ),
       ),
 
       /// Tilt here
@@ -244,8 +258,10 @@ class _MyHomePageState extends State<MyHomePage> {
       width: 250,
       height: 450,
       child: Scaffold(
+        primary: false,
         backgroundColor: const Color(0x206D6E6F),
         appBar: AppBar(
+          primary: false,
           title: Text(
             widget.title,
             style: const TextStyle(fontSize: 18),
@@ -266,6 +282,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
 
 ······
 ''';
