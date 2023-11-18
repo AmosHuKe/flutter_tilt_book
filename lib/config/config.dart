@@ -19,6 +19,7 @@ import 'package:flutter_tilt_book/views/shadow_direction.dart';
 import 'package:flutter_tilt_book/views/tilt_direction.dart';
 import 'package:flutter_tilt_book/views/multiple_tilt.dart';
 import 'package:flutter_tilt_book/views/dialog.dart';
+import 'package:flutter_tilt_book/views/parallax_card.dart';
 
 class Config {
   static const String appTitle = 'Flutter Tilt';
@@ -48,6 +49,12 @@ class Config {
       icon: Remix.landscape_line,
       name: 'ParallaxImage',
       widget: const ParallaxImage(),
+    ),
+    RouterData(
+      title: 'Parallax Card',
+      icon: Remix.image_2_line,
+      name: 'ParallaxCard',
+      widget: const ParallaxCard(),
     ),
     RouterData(
       title: 'Multiple Tilt',
