@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_tilt/flutter_tilt.dart';
 
 import 'package:flutter_tilt_book/layouts/page_layout.dart';
+import 'package:flutter_tilt_book/widgets/tilt_box.dart';
 
 class TiltDirectionDemo extends StatefulWidget {
   const TiltDirectionDemo({super.key});
@@ -16,21 +17,29 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
     TiltDirection.top,
     TiltDirection.bottom,
   };
+  TiltDataModel? tiltData;
+  final double width = 350;
+  final double height = 200;
+  final double angle = 20.0;
 
   @override
   Widget build(BuildContext context) {
     return PageLayout(
       title: 'Tilt Direction',
-      dartCode: code(tiltDirection: tiltDirection),
+      dartCode: code(
+        width: width,
+        height: height,
+        tiltDirection: tiltDirection,
+      ),
       minHeight: 440,
 
       /// Tilt here
       body: Tilt(
         borderRadius: BorderRadius.circular(30),
-        tiltConfig: TiltConfig(direction: tiltDirection.toList()),
+        tiltConfig: TiltConfig(angle: angle, direction: tiltDirection.toList()),
         child: Container(
-          width: 350,
-          height: 200,
+          width: width,
+          height: height,
           alignment: Alignment.center,
           decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -47,6 +56,18 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
             ),
           ),
         ),
+        onGestureMove:
+            (TiltDataModel tiltDataModel, GesturesType gesturesType) {
+          setState(() {
+            tiltData = tiltDataModel;
+          });
+        },
+        onGestureLeave:
+            (TiltDataModel tiltDataModel, GesturesType gesturesType) {
+          setState(() {
+            tiltData = tiltDataModel;
+          });
+        },
       ),
 
       /// tools
@@ -165,6 +186,65 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
                 });
               },
             ),
+            FilterChip(
+              label: const Text('Left: 0.8, Right: 0.3, Top: 0.7, Bottom: 0.4'),
+              selected: tiltDirection.contains(const TiltDirection(0.8, 0.7)) &&
+                  tiltDirection.contains(const TiltDirection(-0.3, -0.4)),
+              onSelected: (bool value) {
+                setState(() {
+                  if (value) {
+                    tiltDirection.add(const TiltDirection(0.8, 0.7));
+                    tiltDirection.add(const TiltDirection(-0.3, -0.4));
+                  } else {
+                    tiltDirection.remove(const TiltDirection(0.8, 0.7));
+                    tiltDirection.remove(const TiltDirection(-0.3, -0.4));
+                  }
+                });
+              },
+            ),
+          ],
+        ),
+        const SizedBox(height: 24),
+        Wrap(
+          spacing: 64,
+          runSpacing: 24,
+          children: [
+            TiltBox(
+              width: width,
+              height: height,
+              maxAngle: angle,
+              tiltData: tiltData,
+            ),
+            SizedBox(
+              width: 200,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'areaProgress:',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                  Text('x: 100% * ${(tiltData?.areaProgress.dx ?? 0)}'),
+                  Text('y: 100% * ${(tiltData?.areaProgress.dy ?? 0)}'),
+                  const SizedBox(height: 8),
+                  Text(
+                    'angle (max: $angle):',
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                    ),
+                  ),
+                  Text('x: ${tiltData?.angle.dx ?? 0}°'),
+                  Text('y: ${tiltData?.angle.dy ?? 0}°'),
+                  const SizedBox(height: 8),
+                  const Text(
+                    'transform:',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                  Text('${tiltData?.transform}'),
+                ],
+              ),
+            ),
           ],
         ),
       ],
@@ -172,7 +252,12 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
   }
 }
 
-String code({required Set<TiltDirection> tiltDirection}) => '''
+String code({
+  required double width,
+  required double height,
+  required Set<TiltDirection> tiltDirection,
+}) =>
+    '''
 import 'package:flutter_tilt/flutter_tilt.dart';
 
 ······
@@ -181,8 +266,8 @@ Tilt(
   borderRadius: BorderRadius.circular(30),
   tiltConfig: TiltConfig(direction: ${tiltDirection.toList()}),
   child: Container(
-    width: 350,
-    height: 200,
+    width: $width,
+    height: $height,
     alignment: Alignment.center,
     decoration: const BoxDecoration(
       gradient: LinearGradient(

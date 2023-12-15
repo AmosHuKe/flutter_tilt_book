@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_tilt/flutter_tilt.dart';
 
 import 'package:flutter_tilt_book/layouts/page_layout.dart';
+import 'package:flutter_tilt_book/widgets/tilt_box.dart';
 
 class Events extends StatefulWidget {
   const Events({super.key});
@@ -15,12 +16,15 @@ class _EventsState extends State<Events> {
   TiltDataModel? tiltData;
   String gestureMove = '';
   String gestureLeave = '';
+  final double width = 350;
+  final double height = 200;
+  final double angle = const TiltConfig().angle;
 
   @override
   Widget build(BuildContext context) {
     return PageLayout(
       title: 'Events',
-      dartCode: code(),
+      dartCode: code(width: width, height: height),
       minHeight: 440,
 
       /// Tilt here
@@ -41,8 +45,8 @@ class _EventsState extends State<Events> {
           });
         },
         child: Container(
-          width: 350,
-          height: 200,
+          width: width,
+          height: height,
           alignment: Alignment.center,
           color: Colors.blueAccent,
           child: const Text(
@@ -61,31 +65,11 @@ class _EventsState extends State<Events> {
           spacing: 64,
           runSpacing: 24,
           children: [
-            Transform(
-              alignment: Alignment.center,
-              transform: tiltData?.transform ?? Matrix4.identity(),
-              child: Stack(
-                alignment: AlignmentDirectional.center,
-                children: [
-                  Container(
-                    color: Colors.black,
-                    width: 350,
-                    height: 200,
-                  ),
-                  Positioned(
-                    left: tiltData?.position.dx,
-                    top: tiltData?.position.dy,
-                    child: Container(
-                      decoration: const BoxDecoration(
-                        color: Colors.red,
-                        shape: BoxShape.circle,
-                      ),
-                      width: 4,
-                      height: 4,
-                    ),
-                  ),
-                ],
-              ),
+            TiltBox(
+              width: width,
+              height: height,
+              maxAngle: angle,
+              tiltData: tiltData,
             ),
             SizedBox(
               width: 200,
@@ -135,7 +119,7 @@ class _EventsState extends State<Events> {
   }
 }
 
-String code() => '''
+String code({required double width, required double height}) => '''
 import 'package:flutter_tilt/flutter_tilt.dart';
 
 ······
@@ -161,8 +145,8 @@ Tilt(
     });
   },
   child: Container(
-    width: 350,
-    height: 200,
+    width: $width,
+    height: $height,
     alignment: Alignment.center,
     color: Colors.blueAccent,
     child: const Text(
