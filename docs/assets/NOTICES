@@ -6464,6 +6464,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 --------------------------------------------------------------------------------
 flutter_lints
+flutter_shaders
 go_router
 plugin_platform_interface
 url_launcher
