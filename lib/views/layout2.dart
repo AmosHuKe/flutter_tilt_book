@@ -12,7 +12,7 @@ class Layout2Demo extends StatelessWidget {
     return PageLayout(
       title: 'Layout',
       dartCode: code(),
-      minHeight: 520,
+      minHeight: 560,
 
       /// Tilt here
       body: Tilt(
