@@ -20,6 +20,7 @@ import 'package:flutter_tilt_book/views/tilt_direction.dart';
 import 'package:flutter_tilt_book/views/multiple_tilt.dart';
 import 'package:flutter_tilt_book/views/dialog.dart';
 import 'package:flutter_tilt_book/views/parallax_card.dart';
+import 'package:flutter_tilt_book/views/tilt_stream_controller.dart.dart';
 
 class Config {
   static const String appTitle = 'Flutter Tilt';
@@ -97,6 +98,12 @@ class Config {
       icon: Remix.sketching,
       name: 'AnimationDemo',
       widget: const AnimationDemo(),
+    ),
+    RouterData(
+      title: 'TiltStreamController',
+      icon: Remix.remote_control_line,
+      name: 'TiltStreamControllerDemo',
+      widget: const TiltStreamControllerDemo(),
     ),
     RouterData(
       title: 'Reverse Tilt',
