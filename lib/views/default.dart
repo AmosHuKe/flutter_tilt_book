@@ -12,7 +12,9 @@ class Default extends StatelessWidget {
     return PageLayout(
       title: 'Default',
       dartCode: code(),
-      minHeight: 440,
+      sourceCodeLink:
+          'https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/default.dart',
+      minHeight: 500,
 
       /// Tilt here
       body: Tilt(
@@ -41,8 +43,7 @@ class Default extends StatelessWidget {
   }
 }
 
-String code() =>
-    '''
+String code() => '''
 import 'package:flutter_tilt/flutter_tilt.dart';
 
 ······

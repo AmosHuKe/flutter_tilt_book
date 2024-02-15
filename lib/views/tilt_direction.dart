@@ -31,7 +31,9 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
         height: height,
         tiltDirection: tiltDirection,
       ),
-      minHeight: 440,
+      sourceCodeLink:
+          'https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/tilt_direction.dart',
+      minHeight: 500,
 
       /// Tilt here
       body: Tilt(

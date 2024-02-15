@@ -12,7 +12,9 @@ class Example extends StatelessWidget {
     return PageLayout(
       title: 'Example',
       dartCode: code(),
-      minHeight: 700,
+      sourceCodeLink:
+          'https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/example.dart',
+      minHeight: 740,
       body: const TiltDemo(),
     );
   }

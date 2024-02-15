@@ -25,7 +25,9 @@ class _EventsState extends State<Events> {
     return PageLayout(
       title: 'Events',
       dartCode: code(width: width, height: height),
-      minHeight: 440,
+      sourceCodeLink:
+          'https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/events.dart',
+      minHeight: 500,
 
       /// Tilt here
       body: Tilt(

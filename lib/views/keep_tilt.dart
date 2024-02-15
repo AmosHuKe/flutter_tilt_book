@@ -12,7 +12,9 @@ class KeepTilt extends StatelessWidget {
     return PageLayout(
       title: 'Keep Tilt',
       dartCode: code(),
-      minHeight: 440,
+      sourceCodeLink:
+          'https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/keep_tilt.dart',
+      minHeight: 500,
 
       /// Tilt here
       body: Tilt(

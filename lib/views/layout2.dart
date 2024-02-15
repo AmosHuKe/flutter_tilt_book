@@ -12,7 +12,9 @@ class Layout2Demo extends StatelessWidget {
     return PageLayout(
       title: 'Layout',
       dartCode: code(),
-      minHeight: 560,
+      sourceCodeLink:
+          'https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/layout2.dart',
+      minHeight: 600,
 
       /// Tilt here
       body: Tilt(

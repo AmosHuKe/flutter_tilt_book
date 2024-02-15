@@ -13,6 +13,8 @@ class DialogDemo extends StatelessWidget {
     return PageLayout(
       title: 'Dialog',
       dartCode: code(),
+      sourceCodeLink:
+          'https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/dialog.dart',
       minHeight: 300,
       body: ElevatedButton(
         onPressed: () => _showDialog(context),

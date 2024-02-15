@@ -25,7 +25,9 @@ class _DisableEffectsState extends State<DisableEffects> {
         disableLight: disableLight,
         disableShadow: disableShadow,
       ),
-      minHeight: 440,
+      sourceCodeLink:
+          'https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/disable_effects.dart',
+      minHeight: 500,
 
       /// Tilt here
       body: Tilt(

@@ -12,7 +12,9 @@ class InitialTilt extends StatelessWidget {
     return PageLayout(
       title: 'Initial Tilt',
       dartCode: code(),
-      minHeight: 440,
+      sourceCodeLink:
+          'https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/initial_tilt.dart',
+      minHeight: 500,
 
       /// Tilt here
       body: Tilt(

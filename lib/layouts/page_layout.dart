@@ -4,6 +4,7 @@ import 'package:remixicon_updated/remixicon_updated.dart';
 
 import 'package:flutter_tilt_book/widgets/book_markdown.dart';
 import 'package:flutter_tilt_book/widgets/layout.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class PageLayout extends StatelessWidget {
   const PageLayout({
@@ -12,6 +13,7 @@ class PageLayout extends StatelessWidget {
     required this.title,
     required this.body,
     this.dartCode = '...',
+    this.sourceCodeLink,
     this.tools,
   });
 
@@ -26,6 +28,9 @@ class PageLayout extends StatelessWidget {
 
   /// dart 代码
   final String dartCode;
+
+  /// 源代码链接
+  final String? sourceCodeLink;
 
   /// 工具
   final List<Widget>? tools;
@@ -58,6 +63,7 @@ class PageLayout extends StatelessWidget {
                   title: title,
                   body: body,
                   dartCode: dartCode,
+                  sourceCodeLink: sourceCodeLink,
                 ),
               ),
 
@@ -75,6 +81,7 @@ class PageLayout extends StatelessWidget {
                     title: title,
                     body: body,
                     dartCode: dartCode,
+                    sourceCodeLink: sourceCodeLink,
                   ),
                 ),
               ),
@@ -96,11 +103,13 @@ class BodyContainer extends StatefulWidget {
     required this.title,
     required this.body,
     required this.dartCode,
+    this.sourceCodeLink,
   });
 
   final String title;
   final Widget body;
   final String dartCode;
+  final String? sourceCodeLink;
 
   @override
   State<BodyContainer> createState() => _BodyContainerState();
@@ -142,14 +151,48 @@ class _BodyContainerState extends State<BodyContainer>
             direction: layout.sm ? Axis.vertical : Axis.horizontal,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              /// Title
-              Text(
-                widget.title,
-                style: const TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
+              Column(
+                crossAxisAlignment: layout.sm
+                    ? CrossAxisAlignment.center
+                    : CrossAxisAlignment.start,
+                children: [
+                  /// Title
+                  Text(
+                    widget.title,
+                    style: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+
+                  /// Source Code
+                  if (widget.sourceCodeLink != null)
+                    GestureDetector(
+                      onTap: () =>
+                          launchUrl(Uri.parse(widget.sourceCodeLink ?? '')),
+                      child: const MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.only(bottom: 2, right: 4),
+                              child: Icon(Remix.external_link_line, size: 12),
+                            ),
+                            Text(
+                              "Source Code",
+                              style: TextStyle(
+                                fontSize: 12,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                ],
               ),
+
+              if (layout.sm) const SizedBox(height: 12),
 
               /// Action
               Container(
@@ -231,8 +274,10 @@ class _BodyContainerState extends State<BodyContainer>
                 /// Code
                 ClipRRect(
                   borderRadius: BorderRadius.circular(24),
-                  child: ListView(
-                    children: [BookMarkdown(dartCode: widget.dartCode)],
+                  child: Expanded(
+                    child: ListView(
+                      children: [BookMarkdown(dartCode: widget.dartCode)],
+                    ),
                   ),
                 ),
               ],

@@ -19,7 +19,9 @@ class _LightDirectionDemoState extends State<LightDirectionDemo> {
     return PageLayout(
       title: 'Light Direction',
       dartCode: code(lightDirection: lightDirection),
-      minHeight: 440,
+      sourceCodeLink:
+          'https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/light_direction.dart',
+      minHeight: 500,
 
       /// Tilt here
       body: Tilt(
