@@ -51,31 +51,30 @@ class _BookSyntaxHighlightState extends State<BookSyntaxHighlight> {
         highlight_styles.a11YLightTheme,
       );
       result.render(renderer);
-
-      setState(() {
-        codeSpan = renderer.span;
-      });
+      if (mounted) {
+        setState(() {
+          codeSpan = renderer.span;
+        });
+      }
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return SelectionArea(
-      child: Container(
-        padding: const EdgeInsets.all(20),
-        decoration: BoxDecoration(
-          color: const Color(0xFFF6F8FA),
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Row(
-          children: [
-            Expanded(
-              child: codeSpan == null
-                  ? const Center(child: CupertinoActivityIndicator())
-                  : Text.rich(codeSpan!),
-            ),
-          ],
-        ),
+    return Container(
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: const Color(0xFFF6F8FA),
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Row(
+        children: [
+          Expanded(
+            child: codeSpan == null
+                ? const Center(child: CupertinoActivityIndicator())
+                : Text.rich(codeSpan!),
+          ),
+        ],
       ),
     );
   }

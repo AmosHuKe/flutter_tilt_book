@@ -274,8 +274,12 @@ class _BodyContainerState extends State<BodyContainer>
                 /// Code
                 ClipRRect(
                   borderRadius: BorderRadius.circular(24),
-                  child: ListView(
-                    children: [BookSyntaxHighlight(dartCode: widget.dartCode)],
+                  child: SelectionArea(
+                    child: ListView(
+                      children: [
+                        BookSyntaxHighlight(dartCode: widget.dartCode)
+                      ],
+                    ),
                   ),
                 ),
               ],
