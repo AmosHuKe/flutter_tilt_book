@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:remixicon_updated/remixicon_updated.dart';
 
-import 'package:flutter_tilt_book/widgets/book_markdown.dart';
+import 'package:flutter_tilt_book/widgets/book_syntax_highlight.dart';
 import 'package:flutter_tilt_book/widgets/layout.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -274,10 +274,8 @@ class _BodyContainerState extends State<BodyContainer>
                 /// Code
                 ClipRRect(
                   borderRadius: BorderRadius.circular(24),
-                  child: Expanded(
-                    child: ListView(
-                      children: [BookMarkdown(dartCode: widget.dartCode)],
-                    ),
+                  child: ListView(
+                    children: [BookSyntaxHighlight(dartCode: widget.dartCode)],
                   ),
                 ),
               ],

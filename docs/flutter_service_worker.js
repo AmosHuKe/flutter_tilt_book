@@ -3,9 +3,9 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/AssetManifest.bin": "cb7b37c47b2a5c537c58220a57ebe96f",
-"assets/AssetManifest.bin.json": "e735e26216f70d628956134a669433bf",
-"assets/AssetManifest.json": "292ecba9905ff741d048630f54a36285",
+const RESOURCES = {"assets/AssetManifest.bin": "b9e5d69b88e0d97574283f5765c61531",
+"assets/AssetManifest.bin.json": "abdef1121055419ee957e217863045bf",
+"assets/AssetManifest.json": "40c26f8e3d1e68d2a8c8659c616e757d",
 "assets/assets/fonts/Noto_Emoji/NotoEmoji-VariableFont_wght.ttf": "c845179fa1d62f94ae65e3f385547867",
 "assets/assets/fonts/Roboto/Roboto-Black.ttf": "d6a6f8878adb0d8e69f9fa2e0b622924",
 "assets/assets/fonts/Roboto/Roboto-BlackItalic.ttf": "c3332e3b8feff748ecb0c6cb75d65eae",
@@ -28,16 +28,8 @@ const RESOURCES = {"assets/AssetManifest.bin": "cb7b37c47b2a5c537c58220a57ebe96f
 "assets/assets/parallax_image/3.png": "f3552185508b52222be6b645d848f742",
 "assets/FontManifest.json": "89aaafdbc321fbedae9c5858acbc3f64",
 "assets/fonts/MaterialIcons-Regular.otf": "e7069dfd19b331be16bed984668fe080",
-"assets/NOTICES": "4d66ec56079266194f945addc9d7f9b0",
+"assets/NOTICES": "653450f5e4f6747d5157d58c085414dd",
 "assets/packages/remixicon_updated/fonts/Remix.ttf": "fb2d9e347d28dcd7ef575c67030e33de",
-"assets/packages/syntax_highlight/grammars/dart.json": "b533a238112e4038ed399e53ca050e33",
-"assets/packages/syntax_highlight/grammars/serverpod_protocol.json": "cc9b878a8ae5032ca4073881e5889fd5",
-"assets/packages/syntax_highlight/grammars/sql.json": "957a963dfa0e8d634766e08c80e00723",
-"assets/packages/syntax_highlight/grammars/yaml.json": "7c2dfa28161c688d8e09478a461f17bf",
-"assets/packages/syntax_highlight/themes/dark_plus.json": "b212b7b630779cb4955e27a1c228bf71",
-"assets/packages/syntax_highlight/themes/dark_vs.json": "2839d5be4f19e6b315582a36a6dcd1c3",
-"assets/packages/syntax_highlight/themes/light_plus.json": "2a29ad892e1f54e93062fee13b3688c6",
-"assets/packages/syntax_highlight/themes/light_vs.json": "8025deae1ca1a4d1cb803c7b9f8528a1",
 "assets/shaders/ink_sparkle.frag": "ecc85a2e95f5e9f53123dcaf8cb9b6ce",
 "canvaskit/canvaskit.js": "c86fbd9e7b17accae76e5ad116583dc4",
 "canvaskit/canvaskit.js.symbols": "38cba9233b92472a36ff011dc21c2c9f",
@@ -56,12 +48,12 @@ const RESOURCES = {"assets/AssetManifest.bin": "cb7b37c47b2a5c537c58220a57ebe96f
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "514db508d78a0c2330c11cd19911b13d",
-"/": "514db508d78a0c2330c11cd19911b13d",
-"main.dart.js": "741fa485e99d6ecb7023b4b8178cdc0b",
+"index.html": "d5ab7e82cef1b1902687a7a974c9bb16",
+"/": "d5ab7e82cef1b1902687a7a974c9bb16",
+"main.dart.js": "e0cb6cf2e85a52f41ddc6fd86309faa9",
 "main.js": "4d9936a905c49e290d12d33b58ac7045",
 "manifest.json": "1329bb82d17a800d44268cc8b0a770b9",
-"version.json": "5d98652ca7c49a74d5362727bb08797c"};
+"version.json": "14b359a412d06b20c25dfdd2a58f3744"};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
