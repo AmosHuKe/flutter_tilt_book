@@ -64,6 +64,9 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
     aroundAnimationController.stop();
     ltrbAnimationController.stop();
     rtlbAnimationController.stop();
+    tiltStreamController.add(
+      const TiltStreamModel(position: Offset.zero, gestureUse: false),
+    );
   }
 
   /// Animation around
@@ -177,7 +180,7 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
           Tilt(
             tiltStreamController: controllerBind ? tiltStreamController : null,
             borderRadius: BorderRadius.circular(30),
-            tiltConfig: const TiltConfig(enableGestureSensors: false),
+            tiltConfig: const TiltConfig(enableGestureSensors: true),
             childLayout: const ChildLayout(
               outer: [
                 Positioned(
@@ -349,6 +352,9 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
     aroundAnimationController.stop();
     ltrbAnimationController.stop();
     rtlbAnimationController.stop();
+    tiltStreamController.add(
+      const TiltStreamModel(position: Offset.zero, gestureUse: false),
+    );
   }
 
   /// Animation around
@@ -456,7 +462,7 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
         Tilt(
           tiltStreamController: controllerBind ? tiltStreamController : null,
           borderRadius: BorderRadius.circular(30),
-          tiltConfig: const TiltConfig(enableGestureSensors: false),
+          tiltConfig: const TiltConfig(enableGestureSensors: true),
           childLayout: const ChildLayout(
             outer: [
               Positioned(
