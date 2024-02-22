@@ -27,9 +27,9 @@ const RESOURCES = {"assets/AssetManifest.bin": "b9e5d69b88e0d97574283f5765c61531
 "assets/assets/parallax_image/2.png": "850bd000ae8987b888cf24103bb5233b",
 "assets/assets/parallax_image/3.png": "f3552185508b52222be6b645d848f742",
 "assets/FontManifest.json": "89aaafdbc321fbedae9c5858acbc3f64",
-"assets/fonts/MaterialIcons-Regular.otf": "e7069dfd19b331be16bed984668fe080",
-"assets/NOTICES": "653450f5e4f6747d5157d58c085414dd",
-"assets/packages/remixicon_updated/fonts/Remix.ttf": "fb2d9e347d28dcd7ef575c67030e33de",
+"assets/fonts/MaterialIcons-Regular.otf": "8ea08ea2444cc58ec5807fd7669e488f",
+"assets/NOTICES": "eed5755f9ce4b995a0fe0bbe98443027",
+"assets/packages/remixicon_updated/fonts/Remix.ttf": "93744a4ade008ab19fab00650c9d862d",
 "assets/shaders/ink_sparkle.frag": "ecc85a2e95f5e9f53123dcaf8cb9b6ce",
 "canvaskit/canvaskit.js": "c86fbd9e7b17accae76e5ad116583dc4",
 "canvaskit/canvaskit.js.symbols": "38cba9233b92472a36ff011dc21c2c9f",
@@ -48,12 +48,12 @@ const RESOURCES = {"assets/AssetManifest.bin": "b9e5d69b88e0d97574283f5765c61531
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "e05c48a3ec2f231d13d541a9b5f5daee",
-"/": "e05c48a3ec2f231d13d541a9b5f5daee",
-"main.dart.js": "94f3e689a284faf0f8b4d357b6dde38c",
-"main.js": "4d9936a905c49e290d12d33b58ac7045",
-"manifest.json": "1329bb82d17a800d44268cc8b0a770b9",
-"version.json": "3105787da3f6cf3304a639b195f56bbd"};
+"index.html": "113f3b605e921179e1617db3e3a8bc76",
+"/": "113f3b605e921179e1617db3e3a8bc76",
+"main.dart.js": "dc43cc369e13984fd3b208cd70bc9cb1",
+"main.js": "b4a61335b5f681237a6e450995d03286",
+"manifest.json": "a18b7e0aa2c53cc9f83f5fb323bb8f8a",
+"version.json": "1086a9e047b76ef0d29bc834f16ffcc3"};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
