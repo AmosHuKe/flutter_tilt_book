@@ -51,8 +51,8 @@ class BentoGrids extends StatelessWidget {
                   children: [
                     /// Tilt here
                     Tilt(
-                      tiltConfig: TiltConfig(
-                        angle: 2 * scaleFactor,
+                      tiltConfig: const TiltConfig(
+                        angle: 2,
                         enableGestureSensors: false,
                         filterQuality: FilterQuality.high,
                       ),
@@ -118,8 +118,8 @@ class BentoGrids extends StatelessWidget {
                       children: [
                         /// Tilt here
                         Tilt(
-                          tiltConfig: TiltConfig(
-                            angle: 2 * scaleFactor,
+                          tiltConfig: const TiltConfig(
+                            angle: 2,
                             enableGestureSensors: false,
                             filterQuality: FilterQuality.high,
                           ),
@@ -185,8 +185,8 @@ class BentoGrids extends StatelessWidget {
 
                         /// Tilt here
                         Tilt(
-                          tiltConfig: TiltConfig(
-                            angle: 2 * scaleFactor,
+                          tiltConfig: const TiltConfig(
+                            angle: 2,
                             enableGestureSensors: false,
                             filterQuality: FilterQuality.high,
                           ),
@@ -276,7 +276,7 @@ Container(
     children: [
       /// Tilt here
       Tilt(
-        tiltConfig: TiltConfig(
+        tiltConfig: const TiltConfig(
           angle: 2,
           enableGestureSensors: false,
           filterQuality: FilterQuality.high,
@@ -343,7 +343,7 @@ Container(
         children: [
           /// Tilt here
           Tilt(
-            tiltConfig: TiltConfig(
+            tiltConfig: const TiltConfig(
               angle: 2,
               enableGestureSensors: false,
               filterQuality: FilterQuality.high,
@@ -409,7 +409,7 @@ Container(
 
           /// Tilt here
           Tilt(
-            tiltConfig: TiltConfig(
+            tiltConfig: const TiltConfig(
               angle: 2,
               enableGestureSensors: false,
               filterQuality: FilterQuality.high,
