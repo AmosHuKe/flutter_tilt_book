@@ -66,6 +66,7 @@ class BentoGrids extends StatelessWidget {
                       border: Border.all(
                         color: const Color(0xFF181818),
                         width: 2 * scaleFactor,
+                        strokeAlign: BorderSide.strokeAlignOutside,
                       ),
                       child: Container(
                         width: 250 * scaleFactor,
@@ -132,6 +133,7 @@ class BentoGrids extends StatelessWidget {
                           border: Border.all(
                             color: const Color(0xFF181818),
                             width: 2 * scaleFactor,
+                            strokeAlign: BorderSide.strokeAlignOutside,
                           ),
                           child: Container(
                             width: 500 * scaleFactor,
@@ -198,6 +200,7 @@ class BentoGrids extends StatelessWidget {
                           border: Border.all(
                             color: const Color(0xFF181818),
                             width: 2 * scaleFactor,
+                            strokeAlign: BorderSide.strokeAlignOutside,
                           ),
                           child: Container(
                             width: 500 * scaleFactor,
@@ -285,7 +288,11 @@ Container(
         ),
         shadowConfig: const ShadowConfig(disable: true),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: const Color(0xFF181818), width: 2),
+        border: Border.all(
+          color: const Color(0xFF181818),
+          width: 2,
+          strokeAlign: BorderSide.strokeAlignOutside,
+        ),
         child: Container(
           width: 250,
           height: 500,
@@ -348,8 +355,11 @@ Container(
             ),
             shadowConfig: const ShadowConfig(disable: true),
             borderRadius: BorderRadius.circular(12),
-            border:
-                Border.all(color: const Color(0xFF181818), width: 2),
+            border: Border.all(
+              color: const Color(0xFF181818),
+              width: 2,
+              strokeAlign: BorderSide.strokeAlignOutside,
+            ),
             child: Container(
               width: 500,
               height: 237,
@@ -411,8 +421,11 @@ Container(
             ),
             shadowConfig: const ShadowConfig(disable: true),
             borderRadius: BorderRadius.circular(12),
-            border:
-                Border.all(color: const Color(0xFF181818), width: 2),
+            border: Border.all(
+              color: const Color(0xFF181818),
+              width: 2,
+              strokeAlign: BorderSide.strokeAlignOutside,
+            ),
             child: Container(
               width: 500,
               height: 237,
