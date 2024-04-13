@@ -18,6 +18,7 @@ import 'package:flutter_tilt_book/views/reverse_tilt.dart';
 import 'package:flutter_tilt_book/views/shadow_direction.dart';
 import 'package:flutter_tilt_book/views/tilt_direction.dart';
 import 'package:flutter_tilt_book/views/multiple_tilt.dart';
+import 'package:flutter_tilt_book/views/bento_grids.dart';
 import 'package:flutter_tilt_book/views/dialog.dart';
 import 'package:flutter_tilt_book/views/parallax_card.dart';
 import 'package:flutter_tilt_book/views/tilt_stream_controller.dart.dart';
@@ -62,6 +63,12 @@ class Config {
       icon: Remix.checkbox_multiple_blank_line,
       name: 'MultipleTilt',
       widget: const MultipleTilt(),
+    ),
+    RouterData(
+      title: 'Bento Grids',
+      icon: Remix.layout_masonry_line,
+      name: 'BentoGrids',
+      widget: const BentoGrids(),
     ),
     RouterData(
       title: 'Events',
