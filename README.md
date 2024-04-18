@@ -10,5 +10,9 @@ $ flutter run -d chrome
 
 # build web
 $ flutter build web --release
+
+# build web canvaskit
+$ flutter build web --web-renderer canvaskit --release
 ```
+
 © AmosHuKe
