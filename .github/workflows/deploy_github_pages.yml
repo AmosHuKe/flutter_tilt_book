@@ -1,0 +1,51 @@
+name: 'Deploy GitHub Pages'
+run-name: 'Deploy GitHub Pages'
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**.md'
+
+jobs:
+
+  code-analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+      - name: Prepare dependencies
+        run: |
+          flutter --version
+          flutter pub get
+      - name: Check Dart code formatting
+        run: |
+          dart format . -o none --set-exit-if-changed
+      - name: Analyze Dart code
+        run: |
+          flutter analyze .
+
+  deploy:
+    needs: [code-analysis]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+      - name: Prepare dependencies
+        run: |
+          flutter --version
+          flutter pub get
+      - name: Build web (CanvasKit)
+        run: |
+          flutter build web --web-renderer canvaskit --release
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: 'pages-book'
+          folder: 'build/web'
