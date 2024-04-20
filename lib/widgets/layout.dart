@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 class Layout {
-  Layout(this.context);
+  const Layout(this.context);
 
   final BuildContext context;
 
