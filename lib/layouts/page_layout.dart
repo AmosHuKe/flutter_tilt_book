@@ -209,7 +209,7 @@ class _BodyContainerState extends State<BodyContainer>
                   controller: tabController,
                   isScrollable: true,
                   tabAlignment: TabAlignment.center,
-                  dividerColor: Colors.transparent,
+                  dividerHeight: 0,
                   indicatorWeight: 0,
                   indicatorSize: TabBarIndicatorSize.label,
                   indicatorPadding: const EdgeInsets.symmetric(horizontal: -12),
@@ -225,19 +225,13 @@ class _BodyContainerState extends State<BodyContainer>
                     /// Preview
                     Tab(
                       height: 36,
-                      icon: Padding(
-                        padding: EdgeInsets.only(bottom: 2),
-                        child: Icon(Remix.eye_line, size: 14),
-                      ),
+                      icon: Icon(Remix.eye_line, size: 14),
                     ),
 
                     /// Code
                     Tab(
                       height: 36,
-                      icon: Padding(
-                        padding: EdgeInsets.only(bottom: 2),
-                        child: Icon(Remix.code_s_slash_line, size: 14),
-                      ),
+                      icon: Icon(Remix.code_s_slash_line, size: 14),
                     )
                   ],
                 ),
