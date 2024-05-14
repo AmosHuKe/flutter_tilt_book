@@ -220,7 +220,7 @@ class _BodyContainerState extends State<BodyContainer>
                   labelColor: Colors.white,
                   unselectedLabelColor: Colors.black,
                   overlayColor:
-                      const MaterialStatePropertyAll(Colors.transparent),
+                      const WidgetStatePropertyAll(Colors.transparent),
                   tabs: const [
                     /// Preview
                     Tab(

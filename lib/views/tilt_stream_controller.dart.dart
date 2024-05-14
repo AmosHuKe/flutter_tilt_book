@@ -18,10 +18,10 @@ class TiltStreamControllerDemo extends StatefulWidget {
 
 class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
     with TickerProviderStateMixin {
-  final MaterialStateProperty<Icon?> thumbIcon =
-      MaterialStateProperty.resolveWith<Icon?>(
-    (Set<MaterialState> states) {
-      return states.contains(MaterialState.selected)
+  final WidgetStateProperty<Icon?> thumbIcon =
+      WidgetStateProperty.resolveWith<Icon?>(
+    (Set<WidgetState> states) {
+      return states.contains(WidgetState.selected)
           ? const Icon(Remix.link_m)
           : const Icon(Remix.link_unlink_m);
     },
