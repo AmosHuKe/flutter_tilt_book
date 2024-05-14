@@ -21,7 +21,7 @@ import 'package:flutter_tilt_book/views/multiple_tilt.dart';
 import 'package:flutter_tilt_book/views/bento_grids.dart';
 import 'package:flutter_tilt_book/views/dialog.dart';
 import 'package:flutter_tilt_book/views/parallax_card.dart';
-import 'package:flutter_tilt_book/views/tilt_stream_controller.dart.dart';
+import 'package:flutter_tilt_book/views/tilt_stream_controller.dart';
 
 class Config {
   static const String appTitle = 'Flutter Tilt';
