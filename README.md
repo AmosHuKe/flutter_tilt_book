@@ -2,7 +2,7 @@
 
 https://amoshuke.github.io/flutter_tilt_book
 
-Flutter 3.19.6
+Flutter 3.22.1
 
 ```sh
 # run
