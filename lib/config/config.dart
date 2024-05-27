@@ -1,27 +1,45 @@
 import 'package:remixicon_updated/remixicon_updated.dart';
 
+import 'package:flutter_tilt_book/widgets/deferred_widget.dart';
+
 import 'package:flutter_tilt_book/models/router.dart';
 import 'package:flutter_tilt_book/models/book_link.dart';
 
-import 'package:flutter_tilt_book/views/animation.dart';
-import 'package:flutter_tilt_book/views/default.dart';
-import 'package:flutter_tilt_book/views/disable_effects.dart';
-import 'package:flutter_tilt_book/views/events.dart';
-import 'package:flutter_tilt_book/views/example.dart';
-import 'package:flutter_tilt_book/views/initial_tilt.dart';
-import 'package:flutter_tilt_book/views/keep_tilt.dart';
-import 'package:flutter_tilt_book/views/layout.dart';
-import 'package:flutter_tilt_book/views/layout2.dart';
-import 'package:flutter_tilt_book/views/light_direction.dart';
-import 'package:flutter_tilt_book/views/parallax_image.dart';
-import 'package:flutter_tilt_book/views/reverse_tilt.dart';
-import 'package:flutter_tilt_book/views/shadow_direction.dart';
-import 'package:flutter_tilt_book/views/tilt_direction.dart';
-import 'package:flutter_tilt_book/views/multiple_tilt.dart';
-import 'package:flutter_tilt_book/views/bento_grids.dart';
-import 'package:flutter_tilt_book/views/dialog.dart';
-import 'package:flutter_tilt_book/views/parallax_card.dart';
-import 'package:flutter_tilt_book/views/tilt_stream_controller.dart';
+import 'package:flutter_tilt_book/views/animation.dart'
+    deferred as animation_widget;
+import 'package:flutter_tilt_book/views/default.dart'
+    deferred as default_widget;
+import 'package:flutter_tilt_book/views/disable_effects.dart'
+    deferred as disable_effects_widget;
+import 'package:flutter_tilt_book/views/events.dart' deferred as events_widget;
+import 'package:flutter_tilt_book/views/example.dart'
+    deferred as example_widget;
+import 'package:flutter_tilt_book/views/initial_tilt.dart'
+    deferred as initial_tilt_widget;
+import 'package:flutter_tilt_book/views/keep_tilt.dart'
+    deferred as keep_tilt_widget;
+import 'package:flutter_tilt_book/views/layout.dart' deferred as layout_widget;
+import 'package:flutter_tilt_book/views/layout2.dart'
+    deferred as layout2_widget;
+import 'package:flutter_tilt_book/views/light_direction.dart'
+    deferred as light_direction_widget;
+import 'package:flutter_tilt_book/views/parallax_image.dart'
+    deferred as parallax_image_widget;
+import 'package:flutter_tilt_book/views/reverse_tilt.dart'
+    deferred as reverse_tilt_widget;
+import 'package:flutter_tilt_book/views/shadow_direction.dart'
+    deferred as shadow_direction_widget;
+import 'package:flutter_tilt_book/views/tilt_direction.dart'
+    deferred as tilt_direction_widget;
+import 'package:flutter_tilt_book/views/multiple_tilt.dart'
+    deferred as multiple_tilt_widget;
+import 'package:flutter_tilt_book/views/bento_grids.dart'
+    deferred as bento_grids_widget;
+import 'package:flutter_tilt_book/views/dialog.dart' deferred as dialog_widget;
+import 'package:flutter_tilt_book/views/parallax_card.dart'
+    deferred as parallax_card_widget;
+import 'package:flutter_tilt_book/views/tilt_stream_controller.dart'
+    deferred as tilt_stream_controller_widget;
 
 class Config {
   static const String appTitle = 'Flutter Tilt';
@@ -44,115 +62,172 @@ class Config {
       title: 'Example',
       icon: Remix.magic_line,
       name: 'Example',
-      widget: const Example(),
+      widget: DeferredWidget(
+        example_widget.loadLibrary,
+        () => example_widget.Example(),
+      ),
     ),
     RouterData(
       title: 'Parallax Image',
       icon: Remix.landscape_line,
       name: 'ParallaxImage',
-      widget: const ParallaxImage(),
+      widget: DeferredWidget(
+        parallax_image_widget.loadLibrary,
+        () => parallax_image_widget.ParallaxImage(),
+      ),
     ),
     RouterData(
       title: 'Parallax Card',
       icon: Remix.image_2_line,
       name: 'ParallaxCard',
-      widget: const ParallaxCard(),
+      widget: DeferredWidget(
+        parallax_card_widget.loadLibrary,
+        () => parallax_card_widget.ParallaxCard(),
+      ),
     ),
     RouterData(
       title: 'Multiple Tilt',
       icon: Remix.checkbox_multiple_blank_line,
       name: 'MultipleTilt',
-      widget: const MultipleTilt(),
+      widget: DeferredWidget(
+        multiple_tilt_widget.loadLibrary,
+        () => multiple_tilt_widget.MultipleTilt(),
+      ),
     ),
     RouterData(
       title: 'Bento Grids',
       icon: Remix.layout_masonry_line,
       name: 'BentoGrids',
-      widget: const BentoGrids(),
+      widget: DeferredWidget(
+        bento_grids_widget.loadLibrary,
+        () => bento_grids_widget.BentoGrids(),
+      ),
     ),
     RouterData(
       title: 'Events',
       icon: Remix.drag_drop_line,
       name: 'Events',
-      widget: const Events(),
+      widget: DeferredWidget(
+        events_widget.loadLibrary,
+        () => events_widget.Events(),
+      ),
     ),
     RouterData(
       title: 'Dialog',
       icon: Remix.discuss_line,
       name: 'Dialog',
-      widget: const DialogDemo(),
+      widget: DeferredWidget(
+        dialog_widget.loadLibrary,
+        () => dialog_widget.DialogDemo(),
+      ),
     ),
     RouterData(
       title: 'Default',
       icon: Remix.stack_line,
       name: 'Default',
-      widget: const Default(),
+      widget: DeferredWidget(
+        default_widget.loadLibrary,
+        () => default_widget.Default(),
+      ),
     ),
     RouterData(
       title: 'Layout',
       icon: Remix.layout_2_line,
       name: 'LayoutDemo',
-      widget: const LayoutDemo(),
+      widget: DeferredWidget(
+        layout_widget.loadLibrary,
+        () => layout_widget.LayoutDemo(),
+      ),
     ),
     RouterData(
       title: 'Layout2',
       icon: Remix.layout_4_line,
       name: 'Layout2Demo',
-      widget: const Layout2Demo(),
+      widget: DeferredWidget(
+        layout2_widget.loadLibrary,
+        () => layout2_widget.Layout2Demo(),
+      ),
     ),
     RouterData(
       title: 'Animation',
       icon: Remix.sketching,
       name: 'AnimationDemo',
-      widget: const AnimationDemo(),
+      widget: DeferredWidget(
+        animation_widget.loadLibrary,
+        () => animation_widget.AnimationDemo(),
+      ),
     ),
     RouterData(
       title: 'TiltStreamController',
       icon: Remix.remote_control_line,
       name: 'TiltStreamControllerDemo',
-      widget: const TiltStreamControllerDemo(),
+      widget: DeferredWidget(
+        tilt_stream_controller_widget.loadLibrary,
+        () => tilt_stream_controller_widget.TiltStreamControllerDemo(),
+      ),
     ),
     RouterData(
       title: 'Reverse Tilt',
       icon: Remix.anticlockwise_2_line,
       name: 'ReverseTilt',
-      widget: const ReverseTilt(),
+      widget: DeferredWidget(
+        reverse_tilt_widget.loadLibrary,
+        () => reverse_tilt_widget.ReverseTilt(),
+      ),
     ),
     RouterData(
       title: 'Keep Tilt',
       icon: Remix.collage_line,
       name: 'KeepTilt',
-      widget: const KeepTilt(),
+      widget: DeferredWidget(
+        keep_tilt_widget.loadLibrary,
+        () => keep_tilt_widget.KeepTilt(),
+      ),
     ),
     RouterData(
       title: 'Tilt Direction',
       icon: Remix.split_cells_horizontal,
       name: 'TiltDirectionDemo',
-      widget: const TiltDirectionDemo(),
+      widget: DeferredWidget(
+        tilt_direction_widget.loadLibrary,
+        () => tilt_direction_widget.TiltDirectionDemo(),
+      ),
     ),
     RouterData(
       title: 'Light Direction',
       icon: Remix.lightbulb_line,
       name: 'LightDirectionDemo',
-      widget: const LightDirectionDemo(),
+      widget: DeferredWidget(
+        light_direction_widget.loadLibrary,
+        () => light_direction_widget.LightDirectionDemo(),
+      ),
     ),
     RouterData(
       title: 'Shadow Direction',
       icon: Remix.bring_forward,
       name: 'ShadowDirectionDemo',
-      widget: const ShadowDirectionDemo(),
+      widget: DeferredWidget(
+        shadow_direction_widget.loadLibrary,
+        () => shadow_direction_widget.ShadowDirectionDemo(),
+      ),
     ),
     RouterData(
       title: 'Initial Tilt',
       icon: Remix.focus_line,
       name: 'InitialTilt',
-      widget: const InitialTilt(),
+      widget: DeferredWidget(
+        initial_tilt_widget.loadLibrary,
+        () => initial_tilt_widget.InitialTilt(),
+      ),
     ),
     RouterData(
       title: 'Disable Effects',
       icon: Remix.shape_line,
       name: 'DisableEffects',
-      widget: const DisableEffects(),
+      widget: DeferredWidget(
+        disable_effects_widget.loadLibrary,
+        () => disable_effects_widget.DisableEffects(),
+      ),
     ),
   ];
 }
