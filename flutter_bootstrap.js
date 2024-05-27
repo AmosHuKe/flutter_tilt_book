@@ -10,7 +10,22 @@ _flutter.buildConfig = {"engineRevision":"55eae6864b296dd9f43b2cc7577ec256e5c32a
 
 
 _flutter.loader.load({
+  config: {
+    assetBase: '/flutter_tilt_book/',
+    // https://github.com/flutter/flutter/issues/147610
+    // renderer: 'canvaskit',
+    canvasKitVariant: 'full',
+    canvasKitBaseUrl: '/flutter_tilt_book/canvaskit/'
+  },
   serviceWorkerSettings: {
-    serviceWorkerVersion: "3254970827"
-  }
+    serviceWorkerVersion: "3044657280",
+  },
+  onEntrypointLoaded: async function (engineInitializer) {
+    const appRunner = await engineInitializer.initializeEngine();
+    await appRunner.runApp();
+
+    // 清除加载
+    const amosLoader = document.getElementById('amos-loader-wrapper');
+    amosLoader?.remove();
+  },
 });
