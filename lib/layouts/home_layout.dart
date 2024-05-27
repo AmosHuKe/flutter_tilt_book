@@ -51,7 +51,7 @@ class HomeLayout extends StatelessWidget {
               ),
 
               /// 主内容
-              Expanded(child: child),
+              Expanded(child: BodyContainer(child: child)),
             ],
           ),
           child: Row(
@@ -65,11 +65,35 @@ class HomeLayout extends StatelessWidget {
               ),
 
               /// 主内容
-              Expanded(child: child),
+              Expanded(child: BodyContainer(child: child)),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+/// 主内容
+class BodyContainer extends StatelessWidget {
+  const BodyContainer({super.key, required this.child});
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    final Layout layout = Layout(context);
+
+    return Container(
+      margin: layout.sm ? null : const EdgeInsets.all(12),
+      padding: layout.sm ? null : const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: const Color(0xFFF6F7FA),
+        borderRadius: layout.sm
+            ? const BorderRadius.vertical(top: Radius.circular(24))
+            : BorderRadius.circular(36),
+      ),
+      child: child,
     );
   }
 }

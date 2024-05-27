@@ -39,26 +39,35 @@ class PageLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     final Layout layout = Layout(context);
 
-    return Container(
-      margin: layout.sm ? null : const EdgeInsets.all(12),
-      padding: layout.sm ? null : const EdgeInsets.all(12),
-      decoration: BoxDecoration(
-        color: const Color(0xFFF6F7FA),
-        borderRadius: layout.sm
-            ? const BorderRadius.vertical(top: Radius.circular(24))
-            : BorderRadius.circular(36),
-      ),
-      child: ClipRRect(
-        borderRadius: layout.sm
-            ? const BorderRadius.vertical(top: Radius.circular(24))
-            : BorderRadius.circular(24),
-        child: LayoutAdaptive(
-          mdChild: ListView(
-            children: [
-              /// Body
-              Container(
-                height: minHeight,
-                padding: const EdgeInsets.only(bottom: 12),
+    return ClipRRect(
+      borderRadius: layout.sm
+          ? const BorderRadius.vertical(top: Radius.circular(24))
+          : BorderRadius.circular(24),
+      child: LayoutAdaptive(
+        mdChild: ListView(
+          children: [
+            /// Body
+            Container(
+              height: minHeight,
+              padding: const EdgeInsets.only(bottom: 12),
+              child: BodyContainer(
+                title: title,
+                body: body,
+                dartCode: dartCode,
+                sourceCodeLink: sourceCodeLink,
+              ),
+            ),
+
+            /// Tools
+            ToolsContainer(tools: tools),
+          ],
+        ),
+        child: Row(
+          children: [
+            /// Body
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.only(right: 12),
                 child: BodyContainer(
                   title: title,
                   body: body,
@@ -66,30 +75,11 @@ class PageLayout extends StatelessWidget {
                   sourceCodeLink: sourceCodeLink,
                 ),
               ),
+            ),
 
-              /// Tools
-              ToolsContainer(tools: tools),
-            ],
-          ),
-          child: Row(
-            children: [
-              /// Body
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.only(right: 12),
-                  child: BodyContainer(
-                    title: title,
-                    body: body,
-                    dartCode: dartCode,
-                    sourceCodeLink: sourceCodeLink,
-                  ),
-                ),
-              ),
-
-              /// Tools
-              SizedBox(width: 420, child: ToolsContainer(tools: tools)),
-            ],
-          ),
+            /// Tools
+            SizedBox(width: 420, child: ToolsContainer(tools: tools)),
+          ],
         ),
       ),
     );
