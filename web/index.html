@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -27,55 +28,28 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <!-- loading -->
   <link rel="stylesheet" type="text/css" href="css/loading/loading.css">
 
   <title>Flutter Tilt</title>
   <link rel="manifest" href="manifest.json">
-
-  <script>
-    // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = null;
-  </script>
-  <!-- JS functions to be called from dart -->
-  <script src="main.js"></script>
-  <!-- This script adds the flutter initialization JS code -->
-  <script src="flutter.js" defer></script>
 </head>
+
 <body>
   <!-- loading -->
   <div id="amos-loader-wrapper">
     <div id="docsInLarkWebviewLoadingIndicator" class="index-spinner ud__loading__lottie">
-        <svg class="ud__svg ud__svg-spin-loading" width="1em" height="1em" viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="35" stroke="currentColor" stroke-width="11" stroke-linecap="round" stroke-miterlimit="10" fill="none"></circle>
-        </svg>
+      <svg class="ud__svg ud__svg-spin-loading" width="1em" height="1em" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="35" stroke="currentColor" stroke-width="11" stroke-linecap="round"
+          stroke-miterlimit="10" fill="none"></circle>
+      </svg>
     </div>
     <div class="amos-loader-section"></div>
   </div>
-  <script>
-    window.addEventListener('load', function(ev) {
-      // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine({
-            assetBase: '/flutter_tilt_book/',
-            renderer: 'canvaskit',
-            canvasKitVariant: 'full',
-            canvasKitBaseUrl: '/flutter_tilt_book/canvaskit/'
-          }).then(function(appRunner) {
-            appRunner.runApp();
-            // 清除加载
-            const amosLoader = document.getElementById('amos-loader-wrapper');
-            amosLoader?.remove();
-          });
-        }
-      });
-    });
-  </script>
+
+  <script src="flutter_bootstrap.js" async></script>
 </body>
+
 </html>
