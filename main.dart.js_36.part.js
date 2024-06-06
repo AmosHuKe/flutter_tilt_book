@@ -2,16 +2,16 @@
 a[b][c]=a[b][c]||[]
 a[b][c].push({p:"main.dart.js_36",e:"beginPart"})})(self,"$__dart_deferred_initializers__","eventLog")
 $__dart_deferred_initializers__.current=function(a,b,c,$){var J,A,C,E,I,F,K,B={
-axh(d){var x=null
-return new B.TF(d,x,x,x,x,x,x,x,x,x)},
-akw:function akw(d,e){this.a=d
+axi(d){var x=null
+return new B.Tx(d,x,x,x,x,x,x,x,x,x)},
+akx:function akx(d,e){this.a=d
 this.b=e},
-M9:function M9(d,e,f,g){var _=this
+M3:function M3(d,e,f,g){var _=this
 _.c=d
 _.d=e
 _.ch=f
 _.a=g},
-CX:function CX(d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,a0,a1,a2,a3,a4,a5,a6){var _=this
+CT:function CT(d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,a0,a1,a2,a3,a4,a5,a6){var _=this
 _.c=d
 _.d=e
 _.e=f
@@ -40,7 +40,7 @@ _.id=a3
 _.k1=a4
 _.k2=a5
 _.a=a6},
-CY:function CY(d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s){var _=this
+CU:function CU(d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s){var _=this
 _.d=d
 _.f=_.e=!1
 _.p7$=e
@@ -60,12 +60,12 @@ _.aR$=r
 _.a=null
 _.b=s
 _.c=null},
-ahM:function ahM(d){this.a=d},
-ahN:function ahN(d){this.a=d},
 ahL:function ahL(d){this.a=d},
-ahO:function ahO(d,e){this.a=d
+ahM:function ahM(d){this.a=d},
+ahK:function ahK(d){this.a=d},
+ahN:function ahN(d,e){this.a=d
 this.b=e},
-Es:function Es(d,e){var _=this
+Ep:function Ep(d,e){var _=this
 _.ab=_.aO=_.aM=_.y2=_.y1=_.xr=_.x2=_.x1=_.to=_.ry=_.rx=_.RG=_.R8=_.p4=_.p3=_.p2=_.p1=_.ok=_.k4=_.k3=_.k2=_.k1=_.id=_.go=_.fy=_.fx=_.fr=_.dy=_.dx=_.db=null
 _.b9=_.av=null
 _.bB=d
@@ -78,12 +78,12 @@ _.t$=0
 _.F$=e
 _.W$=_.N$=0
 _.P$=!1},
-akv:function akv(d,e,f){this.a=d
+akw:function akw(d,e,f){this.a=d
 this.b=e
 this.c=f},
-TG:function TG(){},
-TD:function TD(){},
-TE:function TE(d,e,f,g,h,i,j,k,l,m){var _=this
+Ty:function Ty(){},
+Tv:function Tv(){},
+Tw:function Tw(d,e,f,g,h,i,j,k,l,m){var _=this
 _.y=d
 _.a=e
 _.b=f
@@ -94,13 +94,13 @@ _.f=j
 _.r=k
 _.w=l
 _.x=m},
-akn:function akn(){},
+ako:function ako(){},
+akq:function akq(d){this.a=d},
 akp:function akp(d){this.a=d},
-ako:function ako(d){this.a=d},
-akk:function akk(d,e){this.a=d
+akl:function akl(d,e){this.a=d
 this.b=e},
-akl:function akl(d){this.a=d},
-TF:function TF(d,e,f,g,h,i,j,k,l,m){var _=this
+akm:function akm(d){this.a=d},
+Tx:function Tx(d,e,f,g,h,i,j,k,l,m){var _=this
 _.y=d
 _.z=$
 _.a=e
@@ -112,29 +112,29 @@ _.f=j
 _.r=k
 _.w=l
 _.x=m},
-aks:function aks(d){this.a=d},
 akt:function akt(d){this.a=d},
 aku:function aku(d){this.a=d},
-akr:function akr(d){this.a=d},
-akq:function akq(){},
-Er:function Er(d,e){this.a=d
+akv:function akv(d){this.a=d},
+aks:function aks(d){this.a=d},
+akr:function akr(){},
+Eo:function Eo(d,e){this.a=d
 this.b=e},
-akm:function akm(d){this.a=d},
-Ft:function Ft(){},
-Fu:function Fu(){},
-VD:function VD(){},
-VE:function VE(){},
-k5:function k5(){},
-Bi:function Bi(){},
-abY:function abY(d,e){this.a=d
+akn:function akn(d){this.a=d},
+Fr:function Fr(){},
+Fs:function Fs(){},
+Vu:function Vu(){},
+Vv:function Vv(){},
+k1:function k1(){},
+Be:function Be(){},
+abV:function abV(d,e){this.a=d
 this.b=e},
-abZ:function abZ(d){this.a=d},
-abW:function abW(d,e){this.a=d
+abW:function abW(d){this.a=d},
+abT:function abT(d,e){this.a=d
 this.b=e},
-abX:function abX(d,e){this.a=d
+abU:function abU(d,e){this.a=d
 this.b=e},
-Bh:function Bh(){},
-aEA(d){var x,w,v,u=d.a,t=(u>>>16&255)/255,s=(u>>>8&255)/255,r=(u&255)/255,q=Math.max(t,Math.max(s,r)),p=Math.min(t,Math.min(s,r)),o=q-p,n=A.bh("hue")
+Bd:function Bd(){},
+aEB(d){var x,w,v,u=d.a,t=(u>>>16&255)/255,s=(u>>>8&255)/255,r=(u&255)/255,q=Math.max(t,Math.max(s,r)),p=Math.min(t,Math.min(s,r)),o=q-p,n=A.bh("hue")
 if(q===0)n.b=0
 else if(q===t)n.b=60*C.c.cP((s-r)/o,6)
 else if(q===s)n.b=60*((r-t)/o+2)
@@ -143,13 +143,13 @@ n.b=isNaN(n.aQ())?0:n.aQ()
 x=n.aQ()
 w=(q+p)/2
 v=w===1?0:A.E(o/(1-Math.abs(2*w-1)),0,1)
-return new B.y6((u>>>24&255)/255,x,v,w)},
-y6:function y6(d,e,f,g){var _=this
+return new B.xZ((u>>>24&255)/255,x,v,w)},
+xZ:function xZ(d,e,f,g){var _=this
 _.a=d
 _.b=e
 _.c=f
 _.d=g},
-ou:function ou(d,e,f,g,h,i,j,k,l,m){var _=this
+op:function op(d,e,f,g,h,i,j,k,l,m){var _=this
 _.c=d
 _.d=e
 _.e=f
@@ -160,28 +160,28 @@ _.Q=j
 _.as=k
 _.ax=l
 _.a=m},
-Cy:function Cy(d,e){var _=this
+Cv:function Cv(d,e){var _=this
 _.f=_.e=_.d=!1
 _.r=d
 _.a=null
 _.b=e
 _.c=null},
-agj:function agj(d){this.a=d},
-agh:function agh(d){this.a=d},
-agc:function agc(d){this.a=d},
-agd:function agd(d){this.a=d},
-agb:function agb(d,e){this.a=d
-this.b=e},
+agi:function agi(d){this.a=d},
 agg:function agg(d){this.a=d},
-age:function age(d){this.a=d},
-agf:function agf(d,e){this.a=d
+agb:function agb(d){this.a=d},
+agc:function agc(d){this.a=d},
+aga:function aga(d,e){this.a=d
 this.b=e},
-agi:function agi(d,e){this.a=d
+agf:function agf(d){this.a=d},
+agd:function agd(d){this.a=d},
+age:function age(d,e){this.a=d
 this.b=e},
-aI6(){return new B.n9(null)},
-aJc(){return new B.Uk(new A.aP(new B.alV(),y.v),null,null,C.j)},
-n9:function n9(d){this.a=d},
-Uk:function Uk(d,e,f,g){var _=this
+agh:function agh(d,e){this.a=d
+this.b=e},
+aI7(){return new B.n4(null)},
+aJd(){return new B.Uc(new A.aO(new B.alW(),y.v),null,null,C.j)},
+n4:function n4(d){this.a=d},
+Uc:function Uc(d,e,f,g){var _=this
 _.d=d
 _.e=$
 _.f=!0
@@ -192,27 +192,27 @@ _.aR$=f
 _.a=null
 _.b=g
 _.c=null},
-alV:function alV(){},
-alI:function alI(d){this.a=d},
-alT:function alT(d){this.a=d},
+alW:function alW(){},
+alJ:function alJ(d){this.a=d},
 alU:function alU(d){this.a=d},
-alO:function alO(d){this.a=d},
-alN:function alN(d,e){this.a=d
-this.b=e},
+alV:function alV(d){this.a=d},
 alP:function alP(d){this.a=d},
-alM:function alM(d,e){this.a=d
+alO:function alO(d,e){this.a=d
 this.b=e},
 alQ:function alQ(d){this.a=d},
-alL:function alL(d,e){this.a=d
+alN:function alN(d,e){this.a=d
 this.b=e},
 alR:function alR(d){this.a=d},
-alK:function alK(d,e){this.a=d
+alM:function alM(d,e){this.a=d
 this.b=e},
 alS:function alS(d){this.a=d},
-alJ:function alJ(d,e){this.a=d
+alL:function alL(d,e){this.a=d
 this.b=e},
-FI:function FI(){},
-aw6(d){var x
+alT:function alT(d){this.a=d},
+alK:function alK(d,e){this.a=d
+this.b=e},
+FG:function FG(){},
+aw7(d){var x
 d.ak(y.y)
 x=A.a_(d)
 return x.cp}},D,G,L,H,M
@@ -229,12 +229,12 @@ G=c[28]
 L=c[66]
 H=c[33]
 M=c[69]
-B.akw.prototype={
+B.akx.prototype={
 J(){return"_SwitchType."+this.b}}
-B.M9.prototype={
+B.M3.prototype={
 a3r(d){var x,w,v=A.a_(d)
-B.aw6(d)
-x=new B.Er(d,A.a_(d).ax)
+B.aw7(d)
+x=new B.Eo(d,A.a_(d).ax)
 switch(v.f.a){case 0:w=new A.C(x.gIK(),x.gZW())
 break
 case 1:w=new A.C(x.gIK(),x.gZX())
@@ -242,11 +242,11 @@ break
 default:w=null}return w},
 E(d){var x,w=this,v=null
 switch(0){case 0:break}x=w.a3r(d)
-return new B.CX(w.c,w.d,v,v,v,v,v,v,v,v,v,v,v,v,w.ch,C.V,v,v,v,v,v,v,v,!1,x,!1,D.Z2,v)}}
-B.CX.prototype={
+return new B.CT(w.c,w.d,v,v,v,v,v,v,v,v,v,v,v,v,w.ch,C.V,v,v,v,v,v,v,v,!1,x,!1,D.Z0,v)}}
+B.CT.prototype={
 a8(){var x=null
-return new B.CY(new B.Es(A.B3(x,x,x,x,x,C.aY,x,x,C.a_,C.a5),$.ao()),$,$,$,$,$,$,$,$,$,x,!1,!1,x,x,C.j)}}
-B.CY.prototype={
+return new B.CU(new B.Ep(A.B_(x,x,x,x,x,C.aY,x,x,C.a_,C.a5),$.ao()),$,$,$,$,$,$,$,$,$,x,!1,!1,x,x,C.j)}}
+B.CU.prototype={
 aJ(d){var x,w=this
 w.aU(d)
 if(d.c!==w.a.c){x=w.kb$
@@ -268,9 +268,9 @@ A.a_(x)
 x=this.kb$
 x===$&&A.a()
 x.b=D.mg
-x.c=new A.ko(D.mg)},
-gr_(){return new A.aP(new B.ahM(this),y.b)},
-gPl(){return new A.aP(new B.ahN(this),y.b)},
+x.c=new A.kj(D.mg)},
+gr_(){return new A.aO(new B.ahL(this),y.b)},
+gPl(){return new A.aO(new B.ahM(this),y.b)},
 gOs(){var x=this,w=x.a
 switch(w.k2.a){case 1:w=x.c
 w.toString
@@ -310,7 +310,7 @@ u=u.gm()
 x=v.a
 w=x.c
 if(u>=0.5!==w){x.d.$1(!w)
-v.a2(new B.ahL(v))}else v.Dw()
+v.a2(new B.ahK(v))}else v.Dw()
 u=v.mJ$
 u===$&&A.a()
 u.c9()},
@@ -320,27 +320,27 @@ x.$1(d)},
 E(c8){var x,w,v,u,t,s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,b0,b1,b2,b3,b4,b5,b6,b7,b8,b9,c0,c1,c2,c3,c4,c5=this,c6=null,c7={}
 if(c5.e){c5.e=!1
 c5.Dw()}x=A.a_(c8)
-w=c7.a=B.aw6(c8)
+w=c7.a=B.aw7(c8)
 v=x.ax
 u=v.b
 c7.b=null
-switch(c5.a.k2.a){case 0:t=new B.Er(c8,A.a_(c8).ax)
-s=B.axh(c8)
+switch(c5.a.k2.a){case 0:t=new B.Eo(c8,A.a_(c8).ax)
+s=B.axi(c8)
 c7.b=s
 r=s
 q=w
 break
 case 1:p=x.UG(y.c)
 q=c7.a=(p==null?D.BX:p).adQ(x,w)
-switch(x.w.a){case 0:case 1:case 3:case 5:t=new B.Er(c8,A.a_(c8).ax)
-s=B.axh(c8)
+switch(x.w.a){case 0:case 1:case 3:case 5:t=new B.Eo(c8,A.a_(c8).ax)
+s=B.axi(c8)
 c7.b=s
 r=s
 break
 case 2:case 4:c5.f=!0
 c5.a.toString
-t=new B.akk(c8,A.a_(c8).ax)
-s=new B.TE(c8,c6,c6,c6,c6,c6,c6,c6,c6,c6)
+t=new B.akl(c8,A.a_(c8).ax)
+s=new B.Tw(c8,c6,c6,c6,c6,c6,c6,c6,c6,c6)
 c7.b=s
 r=c5.mJ$
 r===$&&A.a()
@@ -353,7 +353,7 @@ default:r=c6
 q=w
 t=r}o=c5.p7$
 o===$&&A.a()
-o.e=A.c5(0,t.gU2())
+o.e=A.c4(0,t.gU2())
 n=c5.glX()
 n.D(0,C.x)
 m=c5.glX()
@@ -506,10 +506,10 @@ e.sadP(a1)
 e.saiY(a2)
 e.saiZ(a3)
 e.saj_(a4)
-e.sl5(A.FQ(c8,c6))
+e.sl5(A.FO(c8,c6))
 c5.a.toString
 e.sajy(!0)
-e.sana(c5.gOs())
+e.san9(c5.gOs())
 a0=c8.ak(y.I)
 a0.toString
 e.sbv(a0.w)
@@ -524,17 +524,17 @@ e.sadK(a7)
 e.saiU(a8)
 e.sadJ(a5)
 e.saiT(a6)
-e.seY(A.apN(c8))
+e.seY(A.apO(c8))
 e.szb(t.gzb())
 e.szi(t.gzi())
 e.salK(c5.p7$)
 e.sajt(c5.f)
 c1=c5.F_$
-if(c1===$){c2=A.az([C.zg,new A.cj(c5.gOp(),new A.as(A.b([],y.f),y.j),y.D)],y.n,y.E)
+if(c1===$){c2=A.az([C.zg,new A.ci(c5.gOp(),new A.as(A.b([],y.f),y.j),y.D)],y.n,y.E)
 c5.F_$!==$&&A.ad()
 c5.F_$=c2
 c1=c2}c5.a.toString
-v=new B.ahO(c7,c5).$1(c5.glX())
+v=new B.ahN(c7,c5).$1(c5.glX())
 c5.a.toString
 a0=c5.gacx()
 a0=a0
@@ -544,8 +544,8 @@ c3=c5.gLs()
 c3=c3
 c4=c5.gLs()
 c4=c4
-return A.c8(c6,A.ep(c6,A.aq9(new B.ou(!0,k,!1,c1,c5.ga4t(),c5.ga4D(),h,v,A.ep(c6,A.c8(c6,A.ik(c6,c6,c6,e,q),!1,!0,!1,!1,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6),C.V,!1,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,b0,c4,a0,c3,c6),c6),1),o,!0,c6,c6,c6,c6,c5.gac9(),c5.gacb(),c5.gacd(),c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6),!1,c6,!1,!1,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,r,c6)}}
-B.Es.prototype={
+return A.c7(c6,A.em(c6,A.aqa(new B.op(!0,k,!1,c1,c5.ga4t(),c5.ga4D(),h,v,A.em(c6,A.c7(c6,A.ig(c6,c6,c6,e,q),!1,!0,!1,!1,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6),C.V,!1,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,b0,c4,a0,c3,c6),c6),1),o,!0,c6,c6,c6,c6,c5.gac9(),c5.gacb(),c5.gacd(),c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6),!1,c6,!1,!1,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,r,c6)}}
+B.Ep.prototype={
 salK(d){if(d===this.db)return
 this.db=d
 this.a0()},
@@ -625,7 +625,7 @@ this.a0()},
 sajy(d){if(d===this.aO)return
 this.aO=d
 this.a0()},
-sana(d){if(d===this.ab)return
+san9(d){if(d===this.ab)return
 this.ab=d
 this.a0()},
 sajt(d){if(d===this.av)return
@@ -651,23 +651,23 @@ if(b3.b.gaI()===C.I){w=b3.k2
 w.toString
 v=b3.k3
 v.toString
-b3.ap=A.Q(w,v,b3.b.gm())
+b3.ap=A.P(w,v,b3.b.gm())
 v=b3.k1
 v.toString
 w=b3.k3
 w.toString
-b3.aG=A.Q(v,w,b3.b.gm())}if(b4===0){w=b3.k2
+b3.aG=A.P(v,w,b3.b.gm())}if(b4===0){w=b3.k2
 w.toString
 v=b3.k3
 v.toString
-b3.ap=A.Q(w,v,b3.b.gm())
+b3.ap=A.P(w,v,b3.b.gm())
 v=b3.k1
 v.toString
 b3.aG=v}if(b4===1){w=b3.k1
 w.toString
 v=b3.k3
 v.toString
-b3.aG=A.Q(w,v,b3.b.gm())
+b3.aG=A.P(w,v,b3.b.gm())
 v=b3.k2
 v.toString
 b3.ap=v}}w=b3.av
@@ -686,7 +686,7 @@ u=b3.v
 u===$&&A.a()
 s=new A.C(v+u,v)}else{if(v==null){v=b3.k1
 v.toString}v*=2
-s=new A.C(v,v)}v=new B.akv(b3,t,s)
+s=new A.C(v,v)}v=new B.akw(b3,t,s)
 if(w)if(b3.b.gaI()===C.I){w=b3.ap
 w.toString
 w*=2
@@ -694,18 +694,18 @@ v=b3.v
 v===$&&A.a()
 r=new A.C(w+v,w)}else{w=b3.a.gaI()===C.u||b3.a.a.gaI()===C.ak
 v=b3.a
-r=w?A.AB(t,s,v.gm()):A.AB(t,s,v.gm())}else if(b3.b.gaI()===C.I){w=b3.k3
+r=w?A.Ax(t,s,v.gm()):A.Ax(t,s,v.gm())}else if(b3.b.gaI()===C.I){w=b3.k3
 w.toString
 w*=2
 r=new A.C(w,w)}else if(b3.a.gaI()===C.u||b3.a.a.gaI()===C.ak){w=v.$1(!0)
-r=w.b.ae(w.a.gm())}else{w=v.$1(!1)
-r=w.b.ae(w.a.gm())}w=b3.k4
+r=w.b.ad(w.a.gm())}else{w=v.$1(!1)
+r=w.b.ad(w.a.gm())}w=b3.k4
 q=w==null?0:1-Math.abs(b4-w)*2
 w=r.a-q
 v=r.b-q
 u=b3.db
 u.toString
-p=A.ct(C.cv,u,C.c2).gm()
+p=A.cs(C.cv,u,C.c2).gm()
 u=b3.xr
 u.toString
 o=b3.rx
@@ -714,7 +714,7 @@ o=A.r(u,o,p)
 o.toString
 u=b3.to
 n=u==null||b3.ry==null?null:A.r(u,b3.ry,p)
-m=A.Q(b3.x2,b3.x1,p)
+m=A.P(b3.x2,b3.x1,p)
 if(b3.b.gaI()!==C.u){u=b3.id
 u.toString
 l=b3.go
@@ -742,7 +742,7 @@ u=A.r(l,u,p)
 u.toString
 k=u}}}u=b3.aM
 u.toString
-j=A.at6(k,u)
+j=A.at7(k,u)
 u=b4<0.5
 i=u?b3.dy:b3.dx
 h=u?b3.R8:b3.p3
@@ -764,7 +764,7 @@ a3.toString
 a4=b3.v
 a4===$&&A.a()
 a5=e+a1+a4/2-w/2+x*(a3-a4)
-a6=A.jz(new A.v(e,a0,e+o,a0+l),new A.aI(a1,a1))
+a6=A.jv(new A.v(e,a0,e+o,a0+l),new A.aI(a1,a1))
 b5.cX(a6,f)
 if(n!=null){x=e+1
 o=a0+1
@@ -772,7 +772,7 @@ l=b3.p2
 l.toString
 a3=b3.p1
 a3.toString
-a7=A.jz(new A.v(x,o,x+(l-2),o+(a3-2)),new A.aI(a1,a1))
+a7=A.jv(new A.v(x,o,x+(l-2),o+(a3-2)),new A.aI(a1,a1))
 a8=u.b_()
 a8.se7(C.b2)
 a8.seu(m==null?2:m)
@@ -809,7 +809,7 @@ x.toString
 if(!x){x=b3.at
 x.toString}else x=!0
 if(x)b2=u
-else b2=new A.af(0,u,y.t).ae(b3.b.gm())
+else b2=new A.af(0,u,y.t).ad(b3.b.gm())
 if(b2>0)b5.le(new A.f(a5+a2,d/2).M(0,C.e),b2,b1)}b3.a95(new A.f(a5,a0-(a2-a1)),b5,p,j,h,g,i,new A.C(w,v),q)},
 a95(a3,a4,a5,a6,a7,a8,a9,b0,b1){var x,w,v,u,t,s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,a0,a1=this,a2=null
 try{a1.P=!0
@@ -822,7 +822,7 @@ j=a1.W
 if(j!=null)j.l()
 j=a1.av
 j.toString
-a1.W=A.aJ7(new A.fh(a6,a2,a2,j?a2:a1.b9,C.km),a1.ga41())}j=a1.W
+a1.W=A.aJ8(new A.fe(a6,a2,a2,j?a2:a1.b9,C.km),a1.ga41())}j=a1.W
 j.toString
 x=j
 j=a1.av
@@ -850,13 +850,13 @@ d=j==null?a2:j.e
 q=d
 a0=j==null?a2:j.w
 p=a0
-j=A.ds(u.a)
+j=A.dp(u.a)
 o=A.b([],y.d)
-if(s!=null)J.dz(o,new A.f8("FILL",s))
-if(t!=null)J.dz(o,new A.f8("wght",t))
-if(r!=null)J.dz(o,new A.f8("GRAD",r))
-if(q!=null)J.dz(o,new A.f8("opsz",q))
-n=A.cn(a2,A.fM(a2,a2,w,a2,a2,a2,a2,a2,u.b,a2,a2,v,a2,o,a2,a2,a2,!1,a2,a2,a2,a2,u.c,p,a2,a2),j)
+if(s!=null)J.dx(o,new A.f6("FILL",s))
+if(t!=null)J.dx(o,new A.f6("wght",t))
+if(r!=null)J.dx(o,new A.f6("GRAD",r))
+if(q!=null)J.dx(o,new A.f6("opsz",q))
+n=A.cm(a2,A.fK(a2,a2,w,a2,a2,a2,a2,a2,u.b,a2,a2,v,a2,o,a2,a2,a2,!1,a2,a2,a2,a2,u.c,p,a2,a2),j)
 o=a1.bB
 j=a1.y2
 j.toString
@@ -867,7 +867,7 @@ m=(b0.a-v)/2
 l=(b0.b-v)/2
 k=a3.M(0,new A.f(m,l))
 o.aA(a4,k)}}finally{a1.P=!1}},
-a91(d,e,f){var x,w,v,u=e.a,t=e.b,s=f.b,r=s/2,q=A.avn(u,t,u+f.a,t+s,new A.aI(r,r))
+a91(d,e,f){var x,w,v,u=e.a,t=e.b,s=f.b,r=s/2,q=A.avo(u,t,u+f.a,t+s,new A.aI(r,r))
 u=this.b9
 if(u!=null)for(t=u.length,x=0;x<t;++x){w=u[x]
 s=q.bL(w.b)
@@ -875,7 +875,7 @@ v=$.a8().b_()
 v.sao(w.a)
 r=w.c
 r=r>0?r*0.57735+0.5:0
-v.sFK(new A.tm(w.e,r))
+v.sFK(new A.tb(w.e,r))
 d.cX(s,v)}u=q.cH(0.5)
 t=$.a8().b_()
 t.sao(D.Co)
@@ -886,19 +886,19 @@ x=w.W
 if(x!=null)x.l()
 w.N=w.F=w.t=w.W=null
 w.Y3()}}
-B.TG.prototype={
+B.Ty.prototype={
 adQ(d,e){switch(d.w.a){case 0:case 1:case 3:case 5:return e
 case 2:case 4:return C.yB}}}
-B.TD.prototype={}
-B.TE.prototype={
-gdZ(){return new A.aP(new B.akn(),y.o)},
-gkv(){return D.XR},
-gjw(){return new A.aP(new B.akp(this),y.k)},
+B.Tv.prototype={}
+B.Tw.prototype={
+gdZ(){return new A.aO(new B.ako(),y.o)},
+gkv(){return D.XP},
+gjw(){return new A.aO(new B.akq(this),y.k)},
 gnb(){return C.ba},
-gcB(){return new A.aP(new B.ako(this),y.b)},
+gcB(){return new A.aO(new B.akp(this),y.b)},
 gkE(){return 0}}
-B.akk.prototype={
-gFn(){return new A.aP(new B.akl(this),y.k)},
+B.akl.prototype={
+gFn(){return new A.aO(new B.akm(this),y.k)},
 gwt(){return 14},
 gxV(){return 14},
 gyT(){return 14},
@@ -909,21 +909,21 @@ gzh(){return 51},
 gzi(){return D.Qe},
 gU2(){return 140},
 gza(){return null}}
-B.TF.prototype={
+B.Tx.prototype={
 gcu(){var x,w=this,v=w.z
 if(v===$){x=A.a_(w.y)
 w.z!==$&&A.ad()
 v=w.z=x.ax}return v},
-gkv(){return new A.aP(new B.aks(this),y.k)},
-gjw(){return new A.aP(new B.akt(this),y.k)},
-gnb(){return new A.aP(new B.aku(this),y.b)},
-gcB(){return new A.aP(new B.akr(this),y.b)},
-gdZ(){return new A.aP(new B.akq(),y.F)},
-gpE(){return D.XQ},
+gkv(){return new A.aO(new B.akt(this),y.k)},
+gjw(){return new A.aO(new B.aku(this),y.k)},
+gnb(){return new A.aO(new B.akv(this),y.b)},
+gcB(){return new A.aO(new B.aks(this),y.b)},
+gdZ(){return new A.aO(new B.akr(),y.F)},
+gpE(){return D.XO},
 gkE(){return 20}}
-B.Er.prototype={
+B.Eo.prototype={
 gwt(){return 12},
-gFn(){return new A.aP(new B.akm(this),y.k)},
+gFn(){return new A.aO(new B.akn(this),y.k)},
 gxV(){return 8},
 gyT(){return 14},
 gZW(){return 48},
@@ -936,7 +936,7 @@ gzh(){return 52},
 gzi(){return D.Qg},
 gU2(){return 300},
 gza(){return null}}
-B.Ft.prototype={
+B.Fr.prototype={
 bj(){this.c4()
 this.bT()
 this.dH()},
@@ -944,21 +944,21 @@ l(){var x=this,w=x.aR$
 if(w!=null)w.G(x.gdu())
 x.aR$=null
 x.aD()}}
-B.Fu.prototype={
+B.Fs.prototype={
 aw(){var x,w=this,v=null
 w.aL()
 x=A.bv(v,C.a3,0,v,1,!w.a.c?0:1,w)
 w.p7$=x
-w.kb$=A.ct(C.c2,x,C.cv)
+w.kb$=A.cs(C.c2,x,C.cv)
 x=A.bv(v,C.ag,0,v,1,v,w)
 w.mJ$=x
-w.EV$=A.ct(C.af,x,v)
+w.EV$=A.cs(C.af,x,v)
 x=A.bv(v,C.d5,0,v,1,w.t_$||w.rZ$?1:0,w)
 w.EX$=x
-w.EW$=A.ct(C.af,x,v)
+w.EW$=A.cs(C.af,x,v)
 x=A.bv(v,C.d5,0,v,1,w.t_$||w.rZ$?1:0,w)
 w.EZ$=x
-w.EY$=A.ct(C.af,x,v)},
+w.EY$=A.cs(C.af,x,v)},
 l(){var x=this,w=x.p7$
 w===$&&A.a()
 w.l()
@@ -984,18 +984,18 @@ w=x.EY$
 w===$&&A.a()
 w.l()
 x.ZA()}}
-B.VD.prototype={}
-B.VE.prototype={}
-B.k5.prototype={
-gnc(){return A.bV(A.i(this).h("k5.T"))}}
-B.Bi.prototype={
+B.Vu.prototype={}
+B.Vv.prototype={}
+B.k1.prototype={
+gnc(){return A.bU(A.k(this).h("k1.T"))}}
+B.Be.prototype={
 Dw(){var x=this.a.c,w=this.p7$
 if(x){w===$&&A.a()
 w.bu()}else{w===$&&A.a()
 w.c9()}},
 acy(d){var x,w=this
 w.a.toString
-w.a2(new B.abY(w,d))
+w.a2(new B.abV(w,d))
 x=w.mJ$
 x===$&&A.a()
 x.bu()},
@@ -1008,19 +1008,19 @@ case null:case void 0:w.$1(!1)
 break}this.c.gR().ur(C.yH)},
 acw(){return this.Oq(null)},
 Lt(d){var x,w=this
-if(w.xy$!=null)w.a2(new B.abZ(w))
+if(w.xy$!=null)w.a2(new B.abW(w))
 x=w.mJ$
 x===$&&A.a()
 x.c9()},
 a6s(){return this.Lt(null)},
 a4u(d){var x,w=this
-if(d!==w.rZ$){w.a2(new B.abW(w,d))
+if(d!==w.rZ$){w.a2(new B.abT(w,d))
 x=w.EZ$
 if(d){x===$&&A.a()
 x.bu()}else{x===$&&A.a()
 x.c9()}}},
 a4E(d){var x,w=this
-if(d!==w.t_$){w.a2(new B.abX(w,d))
+if(d!==w.t_$){w.a2(new B.abU(w,d))
 x=w.EX$
 if(d){x===$&&A.a()
 x.bu()}else{x===$&&A.a()
@@ -1032,7 +1032,7 @@ if(w.rZ$)v.D(0,C.H)
 x=w.a.c
 if(x)v.D(0,C.x)
 return v}}
-B.Bh.prototype={
+B.Bd.prototype={
 sbr(d){var x=this,w=x.a
 if(d===w)return
 if(w!=null)w.a.G(x.gcI())
@@ -1101,34 +1101,34 @@ t5(d){return null},
 guq(){return null},
 zW(d){return!1},
 k(d){return"<optimized out>#"+A.b8(this)}}
-B.y6.prototype={
-amX(){var x=this,w=x.d,v=(1-Math.abs(2*w-1))*x.c,u=x.b
-return A.aKf(x.a,u,v,v*(1-Math.abs(C.c.cP(u/60,2)-1)),w-v/2)},
+B.xZ.prototype={
+amW(){var x=this,w=x.d,v=(1-Math.abs(2*w-1))*x.c,u=x.b
+return A.aKg(x.a,u,v,v*(1-Math.abs(C.c.cP(u/60,2)-1)),w-v/2)},
 j(d,e){var x=this
 if(e==null)return!1
 if(x===e)return!0
-return e instanceof B.y6&&e.a===x.a&&e.b===x.b&&e.c===x.c&&e.d===x.d},
+return e instanceof B.xZ&&e.a===x.a&&e.b===x.b&&e.c===x.c&&e.d===x.d},
 gB(d){var x=this
 return A.H(x.a,x.b,x.c,x.d,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a,C.a)},
 k(d){var x=this
-return"HSLColor("+A.j(x.a)+", "+A.j(x.b)+", "+A.j(x.c)+", "+A.j(x.d)+")"}}
-B.ou.prototype={
-a8(){return new B.Cy(new A.aU(null,y.z),C.j)}}
-B.Cy.prototype={
+return"HSLColor("+A.i(x.a)+", "+A.i(x.b)+", "+A.i(x.c)+", "+A.i(x.d)+")"}}
+B.op.prototype={
+a8(){return new B.Cv(new A.aU(null,y.z),C.j)}}
+B.Cv.prototype={
 aw(){this.aL()
-$.bm.k2$.push(new B.agj(this))
+$.bm.k2$.push(new B.agi(this))
 $.Z.S$.f.a.f.D(0,this.gLd())},
 l(){$.Z.S$.f.a.f.C(0,this.gLd())
 this.aD()},
-OR(d){this.vB(new B.agh(this))},
+OR(d){this.vB(new B.agg(this))},
 a4v(d){if(this.c==null)return
 this.OR(d)},
-a_r(d){if(!this.e)this.vB(new B.agc(this))},
-a_t(d){if(this.e)this.vB(new B.agd(this))},
+a_r(d){if(!this.e)this.vB(new B.agb(this))},
+a_t(d){if(this.e)this.vB(new B.agc(this))},
 a_p(d){var x=this
-if(x.f!==d){x.vB(new B.agb(x,d))
+if(x.f!==d){x.vB(new B.aga(x,d))
 x.a.toString}},
-M2(d,e){var x,w,v,u,t,s,r=this,q=new B.agg(r),p=new B.agf(r,new B.age(r))
+M2(d,e){var x,w,v,u,t,s,r=this,q=new B.agf(r),p=new B.age(r,new B.agd(r))
 if(d==null){x=r.a
 x.toString
 w=x}else w=d
@@ -1146,10 +1146,10 @@ if(v!==t)r.a.z.$1(t)},
 vB(d){return this.M2(null,d)},
 a7G(d){return this.M2(d,null)},
 aJ(d){this.aU(d)
-if(this.a.c!==d.c)$.bm.k2$.push(new B.agi(this,d))},
+if(this.a.c!==d.c)$.bm.k2$.push(new B.agh(this,d))},
 ga_n(){var x,w=this.c
 w.toString
-w=A.c7(w,C.hQ)
+w=A.c6(w,C.hQ)
 x=w==null?null:w.ch
 $label0$0:{if(C.et===x||x==null){w=this.a.c
 break $label0$0}if(C.fZ===x){w=!0
@@ -1158,17 +1158,17 @@ E(d){var x,w,v,u=this,t=null,s=u.a,r=s.as
 s=s.d
 x=u.ga_n()
 w=u.a
-v=A.iD(A.kp(!1,x,w.ax,t,!0,!0,s,!0,t,u.ga_o(),t,t,t,t),r,u.r,u.ga_q(),u.ga_s(),t)
+v=A.iy(A.kk(!1,x,w.ax,t,!0,!0,s,!0,t,u.ga_o(),t,t,t,t),r,u.r,u.ga_q(),u.ga_s(),t)
 if(w.c)s=w.w.a!==0
 else s=!1
-if(s)v=A.nT(w.w,v)
+if(s)v=A.nQ(w.w,v)
 return v}}
-B.n9.prototype={
-a8(){return B.aJc()}}
-B.Uk.prototype={
+B.n4.prototype={
+a8(){return B.aJd()}}
+B.Uc.prototype={
 aw(){var x,w=this
 w.aL()
-w.e=new A.fP(null,null,y.i)
+w.e=new A.fN(null,null,y.i)
 w.aeh()
 w.ak6()
 w.amL()
@@ -1205,37 +1205,37 @@ aeh(){var x=this.w=A.bv(null,C.fk,0,null,1,null,this)
 x.b1()
 x=x.bq$
 x.b=!0
-x.a.push(new B.alI(this))},
+x.a.push(new B.alJ(this))},
 ak6(){var x=this.x=A.bv(null,C.fk,0,null,1,null,this)
 x.b1()
 x=x.bq$
 x.b=!0
-x.a.push(new B.alT(this))},
+x.a.push(new B.alU(this))},
 amL(){var x=this.y=A.bv(null,C.fk,0,null,1,null,this)
 x.b1()
 x=x.bq$
 x.b=!0
-x.a.push(new B.alU(this))},
+x.a.push(new B.alV(this))},
 E(d){var x,w,v,u,t,s,r=this,q=null,p=r.f
 if(p){x=r.e
 x===$&&A.a()}else x=q
-x=E.dk(q,A.bL(30),A.b2(q,q,C.l,q,K.ic,150,q,q,300),D.C9,F.by,q,q,F.bE,D.Wv,x)
+x=E.dg(q,A.bL(30),A.b2(q,q,C.l,q,K.ic,150,q,q,300),D.C9,F.by,q,q,F.bE,D.Wv,x)
 if(p){w=r.e
 w===$&&A.a()}else w=q
 v=y.p
-w=A.cV(A.b([x,new A.bs(C.j1,new B.M9(p,new B.alO(r),r.d,q),q),E.dk(q,A.bL(30),A.b2(q,q,C.l,q,L.ld,150,q,q,300),D.Ca,F.by,q,q,F.bE,F.cR,w)],v),C.N,C.F,C.z)
+w=A.cT(A.b([x,new A.br(C.j1,new B.M3(p,new B.alP(r),r.d,q),q),E.dg(q,A.bL(30),A.b2(q,q,C.l,q,L.ld,150,q,q,300),D.Ca,F.by,q,q,F.bE,F.cR,w)],v),C.N,C.F,C.z)
 p=r.r
-x=G.eo(M.z1,new B.alP(r),p==null)
+x=G.el(M.z1,new B.alQ(r),p==null)
 u=r.w
 u===$&&A.a()
-u=G.eo(D.Wf,new B.alQ(r),p===u)
+u=G.el(D.Wf,new B.alR(r),p===u)
 t=r.x
 t===$&&A.a()
-t=G.eo(D.VO,new B.alR(r),p===t)
+t=G.el(D.VO,new B.alS(r),p===t)
 s=r.y
 s===$&&A.a()
-return E.e3(w,"import 'dart:async';\nimport 'dart:math' as math;\n\nimport 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nclass TiltStreamControllerDemo extends StatefulWidget {\n  const TiltStreamControllerDemo({super.key});\n\n  @override\n  State<TiltStreamControllerDemo> createState() =>\n      _TiltStreamControllerDemoState();\n}\n\nclass _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>\n    with TickerProviderStateMixin {\n  final WidgetStateProperty<Icon?> thumbIcon =\n      WidgetStateProperty.resolveWith<Icon?>(\n    (Set<WidgetState> states) {\n      return states.contains(WidgetState.selected)\n          ? const Icon(Remix.link_m)\n          : const Icon(Remix.link_unlink_m);\n    },\n  );\n  late StreamController<TiltStreamModel> tiltStreamController;\n  bool controllerBind = true;\n  AnimationController? animationSelected;\n\n  /// AnimationController around\n  late AnimationController aroundAnimationController;\n\n  /// AnimationController leftTop -> rightBottom\n  late AnimationController ltrbAnimationController;\n\n  /// AnimationController rightTop -> leftBottom\n  late AnimationController rtlbAnimationController;\n\n  @override\n  void initState() {\n    super.initState();\n    tiltStreamController = StreamController.broadcast();\n\n    aroundAnimation();\n    ltrbAnimation();\n    rtlbAnimation();\n    animationSelected = aroundAnimationController;\n    animationSelected?.repeat(reverse: false);\n  }\n\n  @override\n  void dispose() {\n    tiltStreamController.close();\n    aroundAnimationController.dispose();\n    ltrbAnimationController.dispose();\n    rtlbAnimationController.dispose();\n    super.dispose();\n  }\n\n  void stopAllAnimation() {\n    aroundAnimationController.stop();\n    ltrbAnimationController.stop();\n    rtlbAnimationController.stop();\n    tiltStreamController.add(\n      const TiltStreamModel(position: Offset.zero, gestureUse: false),\n    );\n  }\n\n  /// Animation around\n  void aroundAnimation() {\n    aroundAnimationController = AnimationController(\n      lowerBound: 0.0,\n      upperBound: 1.0,\n      duration: const Duration(milliseconds: 3000),\n      vsync: this,\n    );\n    aroundAnimationController.addListener(() {\n      final double radian =\n          aroundAnimationController.value * 360 * math.pi / 180;\n      const double r = 75;\n      // P = (cos\u03b8, sin\u03b8)\n      final double x = math.cos(radian) * r + 150;\n      final double y = math.sin(radian) * r + 75;\n      tiltStreamController.add(TiltStreamModel(position: Offset(x, y)));\n    });\n  }\n\n  /// Animation leftTop -> rightBottom\n  void ltrbAnimation() {\n    ltrbAnimationController = AnimationController(\n      lowerBound: 0.0,\n      upperBound: 1.0,\n      duration: const Duration(milliseconds: 3000),\n      vsync: this,\n    );\n    ltrbAnimationController.addListener(() {\n      final double x = ltrbAnimationController.value * 300;\n      final double y = ltrbAnimationController.value * 150;\n      tiltStreamController.add(TiltStreamModel(position: Offset(x, y)));\n    });\n  }\n\n  /// Animation rightTop -> leftBottom\n  void rtlbAnimation() {\n    rtlbAnimationController = AnimationController(\n      lowerBound: 0.0,\n      upperBound: 1.0,\n      duration: const Duration(milliseconds: 3000),\n      vsync: this,\n    );\n    rtlbAnimationController.addListener(() {\n      final double x = (1 - rtlbAnimationController.value) * 300;\n      final double y = (rtlbAnimationController.value) * 150;\n      tiltStreamController.add(TiltStreamModel(position: Offset(x, y)));\n    });\n  }\n\n  @override\n  Widget build(BuildContext context) {\n    return Column(\n      children: [\n        /// Tilt here\n        Tilt(\n          tiltStreamController: controllerBind ? tiltStreamController : null,\n          borderRadius: BorderRadius.circular(30),\n          tiltConfig: const TiltConfig(enableGestureSensors: false),\n          childLayout: const ChildLayout(\n            outer: [\n              Positioned(\n                child: TiltParallax(\n                  size: Offset(10, 10),\n                  child: Text(\n                    'Flutter Tilt 1 \u2728',\n                    style: TextStyle(\n                      fontSize: 14,\n                      color: Colors.white,\n                    ),\n                  ),\n                ),\n              ),\n            ],\n          ),\n          child: Container(\n            width: 300,\n            height: 150,\n            decoration: const BoxDecoration(\n              gradient: LinearGradient(\n                begin: Alignment.topRight,\n                end: Alignment.bottomLeft,\n                colors: [Color(0xFF80d0c7), Color(0xFF13547a)],\n              ),\n            ),\n          ),\n        ),\n\n        /// bind\n        Padding(\n          padding: const EdgeInsets.all(20),\n          child: Switch(\n            thumbIcon: thumbIcon,\n            value: controllerBind,\n            onChanged: (value) {\n              setState(() {\n                controllerBind = value;\n              });\n            },\n          ),\n        ),\n\n        /// Tilt here\n        Tilt(\n          tiltStreamController: controllerBind ? tiltStreamController : null,\n          borderRadius: BorderRadius.circular(30),\n          tiltConfig: const TiltConfig(enableGestureSensors: true),\n          childLayout: const ChildLayout(\n            outer: [\n              Positioned(\n                child: TiltParallax(\n                  size: Offset(10, 10),\n                  child: Text(\n                    'Flutter Tilt 2 \u2728',\n                    style: TextStyle(\n                      fontSize: 14,\n                      color: Colors.white,\n                    ),\n                  ),\n                ),\n              ),\n            ],\n          ),\n          child: Container(\n            width: 300,\n            height: 150,\n            decoration: const BoxDecoration(\n              gradient: LinearGradient(\n                begin: Alignment.topCenter,\n                end: Alignment.bottomCenter,\n                colors: [Color(0xFF8989ba), Color(0xFFa7a6cb)],\n              ),\n            ),\n          ),\n        ),\n\n        /// Tools\n        /// Animation\n        const Text(\n          \"Animation\",\n          style: TextStyle(\n            fontSize: 16,\n            fontWeight: FontWeight.bold,\n          ),\n        ),\n        const SizedBox(height: 12),\n        Wrap(\n          spacing: 12,\n          runSpacing: 12,\n          children: [\n            FilterChip(\n              label: const Text('none'),\n              selected: animationSelected == null,\n              onSelected: (bool value) {\n                setState(() {\n                  if (value) {\n                    stopAllAnimation();\n                    animationSelected = null;\n                  }\n                });\n              },\n            ),\n            FilterChip(\n              label: const Text('around'),\n              selected: animationSelected == aroundAnimationController,\n              onSelected: (bool value) {\n                setState(() {\n                  if (value) {\n                    animationSelected = aroundAnimationController\n                      ..repeat(reverse: false);\n                  } else {\n                    stopAllAnimation();\n                  }\n                });\n              },\n            ),\n            FilterChip(\n              label: const Text('leftTop -> rightBottom'),\n              selected: animationSelected == ltrbAnimationController,\n              onSelected: (bool value) {\n                setState(() {\n                  if (value) {\n                    animationSelected = ltrbAnimationController\n                      ..repeat(reverse: true);\n                  } else {\n                    stopAllAnimation();\n                  }\n                });\n              },\n            ),\n            FilterChip(\n              label: const Text('rightTop -> leftBottom'),\n              selected: animationSelected == rtlbAnimationController,\n              onSelected: (bool value) {\n                setState(() {\n                  if (value) {\n                    animationSelected = rtlbAnimationController\n                      ..repeat(reverse: true);\n                  } else {\n                    stopAllAnimation();\n                  }\n                });\n              },\n            ),\n          ],\n        ),\n      ],\n    );\n  }\n}\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",800,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/tilt_stream_controller.dart","TiltStreamController",A.b([D.W0,F.kj,A.nj(C.aJ,A.b([x,u,t,G.eo(D.VS,new B.alS(r),p===s)],v),C.aJ,12,12)],v))}}
-B.FI.prototype={
+return E.e1(w,"import 'dart:async';\nimport 'dart:math' as math;\n\nimport 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nclass TiltStreamControllerDemo extends StatefulWidget {\n  const TiltStreamControllerDemo({super.key});\n\n  @override\n  State<TiltStreamControllerDemo> createState() =>\n      _TiltStreamControllerDemoState();\n}\n\nclass _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>\n    with TickerProviderStateMixin {\n  final WidgetStateProperty<Icon?> thumbIcon =\n      WidgetStateProperty.resolveWith<Icon?>(\n    (Set<WidgetState> states) {\n      return states.contains(WidgetState.selected)\n          ? const Icon(Remix.link_m)\n          : const Icon(Remix.link_unlink_m);\n    },\n  );\n  late StreamController<TiltStreamModel> tiltStreamController;\n  bool controllerBind = true;\n  AnimationController? animationSelected;\n\n  /// AnimationController around\n  late AnimationController aroundAnimationController;\n\n  /// AnimationController leftTop -> rightBottom\n  late AnimationController ltrbAnimationController;\n\n  /// AnimationController rightTop -> leftBottom\n  late AnimationController rtlbAnimationController;\n\n  @override\n  void initState() {\n    super.initState();\n    tiltStreamController = StreamController.broadcast();\n\n    aroundAnimation();\n    ltrbAnimation();\n    rtlbAnimation();\n    animationSelected = aroundAnimationController;\n    animationSelected?.repeat(reverse: false);\n  }\n\n  @override\n  void dispose() {\n    tiltStreamController.close();\n    aroundAnimationController.dispose();\n    ltrbAnimationController.dispose();\n    rtlbAnimationController.dispose();\n    super.dispose();\n  }\n\n  void stopAllAnimation() {\n    aroundAnimationController.stop();\n    ltrbAnimationController.stop();\n    rtlbAnimationController.stop();\n    tiltStreamController.add(\n      const TiltStreamModel(position: Offset.zero, gestureUse: false),\n    );\n  }\n\n  /// Animation around\n  void aroundAnimation() {\n    aroundAnimationController = AnimationController(\n      lowerBound: 0.0,\n      upperBound: 1.0,\n      duration: const Duration(milliseconds: 3000),\n      vsync: this,\n    );\n    aroundAnimationController.addListener(() {\n      final double radian =\n          aroundAnimationController.value * 360 * math.pi / 180;\n      const double r = 75;\n      // P = (cos\u03b8, sin\u03b8)\n      final double x = math.cos(radian) * r + 150;\n      final double y = math.sin(radian) * r + 75;\n      tiltStreamController.add(TiltStreamModel(position: Offset(x, y)));\n    });\n  }\n\n  /// Animation leftTop -> rightBottom\n  void ltrbAnimation() {\n    ltrbAnimationController = AnimationController(\n      lowerBound: 0.0,\n      upperBound: 1.0,\n      duration: const Duration(milliseconds: 3000),\n      vsync: this,\n    );\n    ltrbAnimationController.addListener(() {\n      final double x = ltrbAnimationController.value * 300;\n      final double y = ltrbAnimationController.value * 150;\n      tiltStreamController.add(TiltStreamModel(position: Offset(x, y)));\n    });\n  }\n\n  /// Animation rightTop -> leftBottom\n  void rtlbAnimation() {\n    rtlbAnimationController = AnimationController(\n      lowerBound: 0.0,\n      upperBound: 1.0,\n      duration: const Duration(milliseconds: 3000),\n      vsync: this,\n    );\n    rtlbAnimationController.addListener(() {\n      final double x = (1 - rtlbAnimationController.value) * 300;\n      final double y = (rtlbAnimationController.value) * 150;\n      tiltStreamController.add(TiltStreamModel(position: Offset(x, y)));\n    });\n  }\n\n  @override\n  Widget build(BuildContext context) {\n    return Column(\n      children: [\n        /// Tilt here\n        Tilt(\n          tiltStreamController: controllerBind ? tiltStreamController : null,\n          borderRadius: BorderRadius.circular(30),\n          tiltConfig: const TiltConfig(enableGestureSensors: false),\n          childLayout: const ChildLayout(\n            outer: [\n              Positioned(\n                child: TiltParallax(\n                  size: Offset(10, 10),\n                  child: Text(\n                    'Flutter Tilt 1 \u2728',\n                    style: TextStyle(\n                      fontSize: 14,\n                      color: Colors.white,\n                    ),\n                  ),\n                ),\n              ),\n            ],\n          ),\n          child: Container(\n            width: 300,\n            height: 150,\n            decoration: const BoxDecoration(\n              gradient: LinearGradient(\n                begin: Alignment.topRight,\n                end: Alignment.bottomLeft,\n                colors: [Color(0xFF80d0c7), Color(0xFF13547a)],\n              ),\n            ),\n          ),\n        ),\n\n        /// bind\n        Padding(\n          padding: const EdgeInsets.all(20),\n          child: Switch(\n            thumbIcon: thumbIcon,\n            value: controllerBind,\n            onChanged: (value) {\n              setState(() {\n                controllerBind = value;\n              });\n            },\n          ),\n        ),\n\n        /// Tilt here\n        Tilt(\n          tiltStreamController: controllerBind ? tiltStreamController : null,\n          borderRadius: BorderRadius.circular(30),\n          tiltConfig: const TiltConfig(enableGestureSensors: true),\n          childLayout: const ChildLayout(\n            outer: [\n              Positioned(\n                child: TiltParallax(\n                  size: Offset(10, 10),\n                  child: Text(\n                    'Flutter Tilt 2 \u2728',\n                    style: TextStyle(\n                      fontSize: 14,\n                      color: Colors.white,\n                    ),\n                  ),\n                ),\n              ),\n            ],\n          ),\n          child: Container(\n            width: 300,\n            height: 150,\n            decoration: const BoxDecoration(\n              gradient: LinearGradient(\n                begin: Alignment.topCenter,\n                end: Alignment.bottomCenter,\n                colors: [Color(0xFF8989ba), Color(0xFFa7a6cb)],\n              ),\n            ),\n          ),\n        ),\n\n        /// Tools\n        /// Animation\n        const Text(\n          \"Animation\",\n          style: TextStyle(\n            fontSize: 16,\n            fontWeight: FontWeight.bold,\n          ),\n        ),\n        const SizedBox(height: 12),\n        Wrap(\n          spacing: 12,\n          runSpacing: 12,\n          children: [\n            FilterChip(\n              label: const Text('none'),\n              selected: animationSelected == null,\n              onSelected: (bool value) {\n                setState(() {\n                  if (value) {\n                    stopAllAnimation();\n                    animationSelected = null;\n                  }\n                });\n              },\n            ),\n            FilterChip(\n              label: const Text('around'),\n              selected: animationSelected == aroundAnimationController,\n              onSelected: (bool value) {\n                setState(() {\n                  if (value) {\n                    animationSelected = aroundAnimationController\n                      ..repeat(reverse: false);\n                  } else {\n                    stopAllAnimation();\n                  }\n                });\n              },\n            ),\n            FilterChip(\n              label: const Text('leftTop -> rightBottom'),\n              selected: animationSelected == ltrbAnimationController,\n              onSelected: (bool value) {\n                setState(() {\n                  if (value) {\n                    animationSelected = ltrbAnimationController\n                      ..repeat(reverse: true);\n                  } else {\n                    stopAllAnimation();\n                  }\n                });\n              },\n            ),\n            FilterChip(\n              label: const Text('rightTop -> leftBottom'),\n              selected: animationSelected == rtlbAnimationController,\n              onSelected: (bool value) {\n                setState(() {\n                  if (value) {\n                    animationSelected = rtlbAnimationController\n                      ..repeat(reverse: true);\n                  } else {\n                    stopAllAnimation();\n                  }\n                });\n              },\n            ),\n          ],\n        ),\n      ],\n    );\n  }\n}\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",800,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/tilt_stream_controller.dart","TiltStreamController",A.b([D.W0,F.kj,A.nf(C.aJ,A.b([x,u,t,G.el(D.VS,new B.alT(r),p===s)],v),C.aJ,12,12)],v))}}
+B.FG.prototype={
 bj(){this.c4()
 this.bT()
 this.dH()},
@@ -1243,58 +1243,58 @@ l(){var x=this,w=x.aR$
 if(w!=null)w.G(x.gdu())
 x.aR$=null
 x.aD()}}
-var z=a.updateTypes(["~(A)","A(ou)","~(fB)","~(fC)","~(em)","~(A?)","~()","~(hU)","~([aF?])","~([n0?])","~(jh)","~(jw)","~(jx)"])
-B.ahM.prototype={
+var z=a.updateTypes(["~(A)","A(op)","~(fy)","~(fz)","~(ej)","~(A?)","~()","~(hS)","~([aF?])","~([mW?])","~(jc)","~(js)","~(jt)"])
+B.ahL.prototype={
 $1(d){if(d.p(0,C.w))return this.a.a.r
 if(d.p(0,C.x))return this.a.a.e
 return this.a.a.r},
 $S:25}
-B.ahN.prototype={
+B.ahM.prototype={
 $1(d){if(d.p(0,C.x))return this.a.a.f
 return this.a.a.w},
 $S:25}
-B.ahL.prototype={
+B.ahK.prototype={
 $0(){this.a.e=!0},
 $S:0}
-B.ahO.prototype={
-$1(d){var x=A.fo(this.b.a.cy,d,y.Q)
+B.ahN.prototype={
+$1(d){var x=A.fl(this.b.a.cy,d,y.Q)
 if(x==null)x=null
 if(x==null){x=this.a.b.gdZ().a.$1(d)
 x.toString}return x},
 $S:187}
-B.akv.prototype={
-$1(d){var x,w=this.b,v=this.a,u=this.c,t=y.h,s=y.e,r=y.W,q=y.M,p=v.ok,o=s.h("dn<aj.T>")
+B.akw.prototype={
+$1(d){var x,w=this.b,v=this.a,u=this.c,t=y.h,s=y.e,r=y.W,q=y.M,p=v.ok,o=s.h("dj<aj.T>")
 if(d){p.toString
-x=A.b([new A.ed(new A.dn(new A.dN(D.md),new A.af(w,p,s),o),11,r),new A.ed(new A.dn(new A.dN(D.mc),new A.af(p,u,s),o),72,r),new A.ed(new A.rp(u,u,q),17,r)],t)}else{p.toString
-x=A.b([new A.ed(new A.rp(w,w,q),17,r),new A.ed(new A.dn(new A.dN(new A.ko(D.mc)),new A.af(w,p,s),o),72,r),new A.ed(new A.dn(new A.dN(new A.ko(D.md)),new A.af(p,u,s),o),11,r)],t)}w=A.aqJ(x,y.Y)
+x=A.b([new A.eb(new A.dj(new A.dL(D.md),new A.af(w,p,s),o),11,r),new A.eb(new A.dj(new A.dL(D.mc),new A.af(p,u,s),o),72,r),new A.eb(new A.ri(u,u,q),17,r)],t)}else{p.toString
+x=A.b([new A.eb(new A.ri(w,w,q),17,r),new A.eb(new A.dj(new A.dL(new A.kj(D.mc)),new A.af(w,p,s),o),72,r),new A.eb(new A.dj(new A.dL(new A.kj(D.md)),new A.af(p,u,s),o),11,r)],t)}w=A.aqK(x,y.Y)
 v=v.db
 v.toString
 return new A.al(v,w,w.$ti.h("al<aj.T>"))},
 $S:535}
-B.akn.prototype={
+B.ako.prototype={
 $1(d){if(d.p(0,C.w))return C.bk
 return C.aX},
 $S:31}
-B.akp.prototype={
+B.akq.prototype={
 $1(d){var x
 if(d.p(0,C.x)){x=D.mh.c_(this.a.y)
 return x}x=D.Ei.c_(this.a.y)
 return x},
 $S:6}
-B.ako.prototype={
+B.akp.prototype={
 $1(d){var x
 if(d.p(0,C.H)){x=D.mh.c_(this.a.y)
-x=B.aEA(A.I(204,x.gm()>>>16&255,x.gm()>>>8&255,x.gm()&255))
-return new B.y6(x.a,x.b,0.835,0.69).amX()}return C.y},
+x=B.aEB(A.I(204,x.gm()>>>16&255,x.gm()>>>8&255,x.gm()&255))
+return new B.xZ(x.a,x.b,0.835,0.69).amW()}return C.y},
 $S:6}
-B.akl.prototype={
+B.akm.prototype={
 $1(d){var x,w
 if(d.p(0,C.w)){x=this.a.b.k3.a
 return A.I(97,x>>>16&255,x>>>8&255,x&255)}x=this.a.b
 w=x.e
 return w==null?x.c:w},
 $S:6}
-B.aks.prototype={
+B.akt.prototype={
 $1(d){var x,w,v=this
 if(d.p(0,C.w)){if(d.p(0,C.x)){x=v.a.gcu().k2.a
 return A.I(255,x>>>16&255,x>>>8&255,x&255)}x=v.a.gcu().k3.a
@@ -1316,7 +1316,7 @@ if(w==null){w=x.ab
 x=w==null?x.k3:w}else x=w
 return x},
 $S:6}
-B.akt.prototype={
+B.aku.prototype={
 $1(d){var x,w,v=this
 if(d.p(0,C.w)){if(d.p(0,C.x)){x=v.a.gcu().k3.a
 return A.I(31,x>>>16&255,x>>>8&255,x&255)}x=v.a.gcu()
@@ -1335,7 +1335,7 @@ return w==null?x.k2:w}x=v.a.gcu()
 w=x.RG
 return w==null?x.k2:w},
 $S:6}
-B.aku.prototype={
+B.akv.prototype={
 $1(d){var x,w
 if(d.p(0,C.x))return C.y
 if(d.p(0,C.w)){x=this.a.gcu().k3.a
@@ -1345,7 +1345,7 @@ if(w==null){w=x.ab
 x=w==null?x.k3:w}else x=w
 return x},
 $S:6}
-B.akr.prototype={
+B.aks.prototype={
 $1(d){var x,w=this
 if(d.p(0,C.x)){if(d.p(0,C.B)){x=w.a.gcu().b
 return A.I(C.c.ar(25.5),x.gm()>>>16&255,x.gm()>>>8&255,x.gm()&255)}if(d.p(0,C.G)){x=w.a.gcu().b
@@ -1355,10 +1355,10 @@ return A.I(C.c.ar(25.5),x>>>16&255,x>>>8&255,x&255)}if(d.p(0,C.G)){x=w.a.gcu().k
 return A.I(20,x>>>16&255,x>>>8&255,x&255)}if(d.p(0,C.H)){x=w.a.gcu().k3.a
 return A.I(C.c.ar(25.5),x>>>16&255,x>>>8&255,x&255)}return null},
 $S:25}
-B.akq.prototype={
+B.akr.prototype={
 $1(d){return C.f0.O(d)},
 $S:187}
-B.akm.prototype={
+B.akn.prototype={
 $1(d){var x,w,v=this
 if(d.p(0,C.w)){if(d.p(0,C.x)){x=v.a.b.k3.a
 return A.I(97,x>>>16&255,x>>>8&255,x&255)}x=v.a.b
@@ -1382,64 +1382,64 @@ return w==null?x.k2:w}x=v.a.b
 w=x.RG
 return w==null?x.k2:w},
 $S:6}
-B.abY.prototype={
+B.abV.prototype={
 $0(){this.a.xy$=this.b.c},
 $S:0}
-B.abZ.prototype={
+B.abW.prototype={
 $0(){this.a.xy$=null},
 $S:0}
-B.abW.prototype={
+B.abT.prototype={
 $0(){this.a.rZ$=this.b},
 $S:0}
-B.abX.prototype={
+B.abU.prototype={
 $0(){this.a.t_$=this.b},
 $S:0}
-B.agj.prototype={
+B.agi.prototype={
 $1(d){var x=$.Z.S$.f.a.b
-if(x==null)x=A.vh()
+if(x==null)x=A.v4()
 this.a.OR(x)},
 $S:3}
-B.agh.prototype={
+B.agg.prototype={
 $0(){var x=$.Z.S$.f.a.b
-switch((x==null?A.vh():x).a){case 0:x=!1
+switch((x==null?A.v4():x).a){case 0:x=!1
 break
 case 1:x=!0
 break
 default:x=null}this.a.d=x},
 $S:0}
-B.agc.prototype={
+B.agb.prototype={
 $0(){this.a.e=!0},
 $S:0}
-B.agd.prototype={
+B.agc.prototype={
 $0(){this.a.e=!1},
 $S:0}
-B.agb.prototype={
+B.aga.prototype={
 $0(){this.a.f=this.b},
 $S:0}
-B.agg.prototype={
+B.agf.prototype={
 $1(d){var x=this.a
 return x.e&&d.c&&x.d},
 $S:z+1}
-B.age.prototype={
+B.agd.prototype={
 $1(d){var x,w=this.a.c
 w.toString
-w=A.c7(w,C.hQ)
+w=A.c6(w,C.hQ)
 x=w==null?null:w.ch
 $label0$0:{if(C.et===x||x==null){w=d.c
 break $label0$0}if(C.fZ===x){w=!0
 break $label0$0}w=null}return w},
 $S:z+1}
-B.agf.prototype={
+B.age.prototype={
 $1(d){var x=this.a
 return x.f&&x.d&&this.b.$1(d)},
 $S:z+1}
-B.agi.prototype={
+B.agh.prototype={
 $1(d){this.a.a7G(this.b)},
 $S:3}
-B.alV.prototype={
+B.alW.prototype={
 $1(d){return d.p(0,C.x)?D.GG:D.GH},
 $S:536}
-B.alI.prototype={
+B.alJ.prototype={
 $0(){var x,w,v=this.a,u=v.w
 u===$&&A.a()
 u=u.x
@@ -1449,156 +1449,156 @@ u=Math.cos(x)
 w=Math.sin(x)
 v=v.e
 v===$&&A.a()
-v.D(0,new E.bU(new A.f(u*75+150,w*75+75),F.bv,!0))},
+v.D(0,new E.bT(new A.f(u*75+150,w*75+75),F.bv,!0))},
 $S:0}
-B.alT.prototype={
+B.alU.prototype={
 $0(){var x=this.a,w=x.x
 w===$&&A.a()
 w=w.x
 w===$&&A.a()
 x=x.e
 x===$&&A.a()
-x.D(0,new E.bU(new A.f(w*300,w*150),F.bv,!0))},
+x.D(0,new E.bT(new A.f(w*300,w*150),F.bv,!0))},
 $S:0}
-B.alU.prototype={
+B.alV.prototype={
 $0(){var x=this.a,w=x.y
 w===$&&A.a()
 w=w.x
 w===$&&A.a()
 x=x.e
 x===$&&A.a()
-x.D(0,new E.bU(new A.f((1-w)*300,w*150),F.bv,!0))},
+x.D(0,new E.bT(new A.f((1-w)*300,w*150),F.bv,!0))},
 $S:0}
+B.alP.prototype={
+$1(d){var x=this.a
+x.a2(new B.alO(x,d))},
+$S:4}
 B.alO.prototype={
+$0(){this.a.f=this.b},
+$S:0}
+B.alQ.prototype={
 $1(d){var x=this.a
 x.a2(new B.alN(x,d))},
 $S:4}
 B.alN.prototype={
-$0(){this.a.f=this.b},
-$S:0}
-B.alP.prototype={
-$1(d){var x=this.a
-x.a2(new B.alM(x,d))},
-$S:4}
-B.alM.prototype={
 $0(){if(this.b){var x=this.a
 x.uF()
 x.r=null}},
 $S:0}
-B.alQ.prototype={
+B.alR.prototype={
 $1(d){var x=this.a
-x.a2(new B.alL(x,d))},
+x.a2(new B.alM(x,d))},
 $S:4}
-B.alL.prototype={
+B.alM.prototype={
 $0(){var x,w=this.a
 if(this.b){x=w.w
 x===$&&A.a()
 x.tP(!1)
 w.r=x}else w.uF()},
 $S:0}
-B.alR.prototype={
+B.alS.prototype={
 $1(d){var x=this.a
-x.a2(new B.alK(x,d))},
+x.a2(new B.alL(x,d))},
 $S:4}
-B.alK.prototype={
+B.alL.prototype={
 $0(){var x,w=this.a
 if(this.b){x=w.x
 x===$&&A.a()
 x.tP(!0)
 w.r=x}else w.uF()},
 $S:0}
-B.alS.prototype={
+B.alT.prototype={
 $1(d){var x=this.a
-x.a2(new B.alJ(x,d))},
+x.a2(new B.alK(x,d))},
 $S:4}
-B.alJ.prototype={
+B.alK.prototype={
 $0(){var x,w=this.a
 if(this.b){x=w.y
 x===$&&A.a()
 x.tP(!0)
 w.r=x}else w.uF()},
-$S:0};(function aliases(){var x=B.Ft.prototype
+$S:0};(function aliases(){var x=B.Fr.prototype
 x.ZA=x.l
-x=B.Fu.prototype
+x=B.Fs.prototype
 x.ZB=x.l
-x=B.Bh.prototype
+x=B.Bd.prototype
 x.Y3=x.l
-x=B.FI.prototype
+x=B.FG.prototype
 x.ZS=x.l})();(function installTearOffs(){var x=a._instance_1u,w=a._instance_0u,v=a.installInstanceTearOff
 var u
-x(u=B.CY.prototype,"gacb","acc",2)
+x(u=B.CU.prototype,"gacb","acc",2)
 x(u,"gacd","ace",3)
 x(u,"gac9","aca",4)
 x(u,"gac7","ac8",5)
-w(B.Es.prototype,"ga41","a42",6)
-x(u=B.Bi.prototype,"gacx","acy",7)
+w(B.Ep.prototype,"ga41","a42",6)
+x(u=B.Be.prototype,"gacx","acy",7)
 v(u,"gOp",0,0,function(){return[null]},["$1","$0"],["Oq","acw"],8,0,0)
 v(u,"gLs",0,0,null,["$1","$0"],["Lt","a6s"],9,0,0)
 x(u,"ga4t","a4u",0)
 x(u,"ga4D","a4E",0)
-x(u=B.Cy.prototype,"gLd","a4v",10)
+x(u=B.Cv.prototype,"gLd","a4v",10)
 x(u,"ga_q","a_r",11)
 x(u,"ga_s","a_t",12)
 x(u,"ga_o","a_p",0)})();(function inheritance(){var x=a.mixinHard,w=a.mixin,v=a.inherit,u=a.inheritMany
-v(B.akw,A.le)
-v(B.M9,A.W)
-u(A.K,[B.CX,B.ou,B.n9])
-u(A.Y,[B.Ft,B.Cy,B.FI])
-v(B.Fu,B.Ft)
-v(B.CY,B.Fu)
-u(A.d_,[B.ahM,B.ahN,B.ahO,B.akv,B.akn,B.akp,B.ako,B.akl,B.aks,B.akt,B.aku,B.akr,B.akq,B.akm,B.agj,B.agg,B.age,B.agf,B.agi,B.alV,B.alO,B.alP,B.alQ,B.alR,B.alS])
-u(A.ej,[B.ahL,B.abY,B.abZ,B.abW,B.abX,B.agh,B.agc,B.agd,B.agb,B.alI,B.alT,B.alU,B.alN,B.alM,B.alL,B.alK,B.alJ])
-v(B.Bh,A.dA)
-v(B.Es,B.Bh)
-u(A.x,[B.k5,B.TD,B.VD,B.VE,B.Bi,B.y6])
-v(B.TG,B.k5)
-u(A.iN,[B.TE,B.TF])
-v(B.akk,B.VD)
-v(B.Er,B.VE)
-v(B.Uk,B.FI)
-x(B.Ft,A.d8)
-x(B.Fu,B.Bi)
-w(B.VD,B.TD)
-w(B.VE,B.TD)
-x(B.FI,A.d8)})()
-A.cF(b.typeUniverse,JSON.parse('{"CX":{"K":[],"c":[]},"M9":{"W":[],"c":[]},"CY":{"Y":["CX"]},"Es":{"a3":[]},"TG":{"k5":["iN"],"k5.T":"iN"},"TE":{"iN":[]},"TF":{"iN":[]},"Bh":{"a3":[]},"ou":{"K":[],"c":[]},"Cy":{"Y":["ou"]},"n9":{"K":[],"c":[]},"Uk":{"Y":["n9"]},"aHF":{"aS":[],"aD":[],"c":[]}}'))
-A.UO(b.typeUniverse,JSON.parse('{"Bi":1}'))
-var y=(function rtii(){var x=A.L
-return{E:x("aB<aF>"),D:x("cj<nV>"),M:x("rp<C>"),I:x("eJ"),V:x("o<cU>"),d:x("o<f8>"),h:x("o<ed<C>>"),p:x("o<c>"),f:x("o<~(aB<aF>)>"),z:x("aU<Y<K>>"),j:x("as<~(aB<aF>)>"),Y:x("C"),y:x("aHF"),c:x("iN"),W:x("ed<C>"),e:x("af<C>"),t:x("af<F>"),n:x("ee"),C:x("bI"),i:x("fP<bU>"),k:x("aP<m>"),F:x("aP<c1>"),b:x("aP<m?>"),v:x("aP<dS?>"),o:x("aP<c1?>"),Q:x("c1?")}})();(function constants(){var x=a.makeConstList
-D.BX=new B.TG()
+v(B.akx,A.l9)
+v(B.M3,A.W)
+u(A.K,[B.CT,B.op,B.n4])
+u(A.Y,[B.Fr,B.Cv,B.FG])
+v(B.Fs,B.Fr)
+v(B.CU,B.Fs)
+u(A.cZ,[B.ahL,B.ahM,B.ahN,B.akw,B.ako,B.akq,B.akp,B.akm,B.akt,B.aku,B.akv,B.aks,B.akr,B.akn,B.agi,B.agf,B.agd,B.age,B.agh,B.alW,B.alP,B.alQ,B.alR,B.alS,B.alT])
+u(A.ef,[B.ahK,B.abV,B.abW,B.abT,B.abU,B.agg,B.agb,B.agc,B.aga,B.alJ,B.alU,B.alV,B.alO,B.alN,B.alM,B.alL,B.alK])
+v(B.Bd,A.dy)
+v(B.Ep,B.Bd)
+u(A.z,[B.k1,B.Tv,B.Vu,B.Vv,B.Be,B.xZ])
+v(B.Ty,B.k1)
+u(A.iI,[B.Tw,B.Tx])
+v(B.akl,B.Vu)
+v(B.Eo,B.Vv)
+v(B.Uc,B.FG)
+x(B.Fr,A.d6)
+x(B.Fs,B.Be)
+w(B.Vu,B.Tv)
+w(B.Vv,B.Tv)
+x(B.FG,A.d6)})()
+A.cD(b.typeUniverse,JSON.parse('{"CT":{"K":[],"c":[]},"M3":{"W":[],"c":[]},"CU":{"Y":["CT"]},"Ep":{"a3":[]},"Ty":{"k1":["iI"],"k1.T":"iI"},"Tw":{"iI":[]},"Tx":{"iI":[]},"Bd":{"a3":[]},"op":{"K":[],"c":[]},"Cv":{"Y":["op"]},"n4":{"K":[],"c":[]},"Uc":{"Y":["n4"]},"aHG":{"aR":[],"aD":[],"c":[]}}'))
+A.EQ(b.typeUniverse,JSON.parse('{"Be":1}'))
+var y=(function rtii(){var x=A.N
+return{E:x("aB<aF>"),D:x("ci<nS>"),M:x("ri<C>"),I:x("eH"),V:x("o<cS>"),d:x("o<f6>"),h:x("o<eb<C>>"),p:x("o<c>"),f:x("o<~(aB<aF>)>"),z:x("aU<Y<K>>"),j:x("as<~(aB<aF>)>"),Y:x("C"),y:x("aHG"),c:x("iI"),W:x("eb<C>"),e:x("af<C>"),t:x("af<F>"),n:x("ez"),C:x("bH"),i:x("fN<bT>"),k:x("aO<l>"),F:x("aO<c0>"),b:x("aO<l?>"),v:x("aO<dQ?>"),o:x("aO<c0?>"),Q:x("c0?")}})();(function constants(){var x=a.makeConstList
+D.BX=new B.Ty()
 D.VL=new A.b4("Flutter Tilt 1 \u2728",null,C.kw,null,null,null,null,null)
-D.Wy=new H.n7(D.VL,C.jH,null,null)
-D.NO=new A.eR(null,null,null,null,null,null,D.Wy,null)
+D.Wy=new H.n2(D.VL,C.jH,null,null)
+D.NO=new A.eP(null,null,null,null,null,null,D.Wy,null)
 D.IH=A.b(x([D.NO]),y.p)
-D.C9=new E.hw(D.IH,C.an,C.an)
+D.C9=new E.hu(D.IH,C.an,C.an)
 D.VM=new A.b4("Flutter Tilt 2 \u2728",null,C.kw,null,null,null,null,null)
-D.Wz=new H.n7(D.VM,C.jH,null,null)
-D.NP=new A.eR(null,null,null,null,null,null,D.Wz,null)
+D.Wz=new H.n2(D.VM,C.jH,null,null)
+D.NP=new A.eP(null,null,null,null,null,null,D.Wz,null)
 D.II=A.b(x([D.NP]),y.p)
-D.Ca=new E.hw(D.II,C.an,C.an)
-D.Co=new A.m(167772160)
-D.mc=new A.d0(0.2,0,0,1)
-D.md=new A.d0(0.31,0,0.56,1)
-D.mg=new A.d0(0.175,0.885,0.32,1.275)
-D.iy=new A.m(4281648985)
-D.lO=new A.m(4281389400)
-D.lN=new A.m(4280584765)
-D.lP=new A.m(4281391963)
-D.mh=new A.c0(D.iy,"systemGreen",null,D.iy,D.lO,D.lN,D.lP,D.iy,D.lO,D.lN,D.lP,0)
-D.iI=new A.m(678983808)
-D.lB=new A.m(1366849664)
-D.lx=new A.m(1031305344)
-D.lF=new A.m(1719171200)
-D.Ei=new A.c0(D.iI,"secondarySystemFill",null,D.iI,D.lB,D.lx,D.lF,D.iI,D.lB,D.lx,D.lF,0)
-D.Gt=new A.bz(61103,"Remix","remixicon_updated",!1)
-D.GG=new A.dS(D.Gt,null,null,null,null)
-D.Gp=new A.bz(61104,"Remix","remixicon_updated",!1)
-D.GH=new A.dS(D.Gp,null,null,null,null)
-D.DV=new A.m(637534208)
+D.Ca=new E.hu(D.II,C.an,C.an)
+D.Co=new A.l(167772160)
+D.mc=new A.d_(0.2,0,0,1)
+D.md=new A.d_(0.31,0,0.56,1)
+D.mg=new A.d_(0.175,0.885,0.32,1.275)
+D.iy=new A.l(4281648985)
+D.lO=new A.l(4281389400)
+D.lN=new A.l(4280584765)
+D.lP=new A.l(4281391963)
+D.mh=new A.c_(D.iy,"systemGreen",null,D.iy,D.lO,D.lN,D.lP,D.iy,D.lO,D.lN,D.lP,0)
+D.iI=new A.l(678983808)
+D.lB=new A.l(1366849664)
+D.lx=new A.l(1031305344)
+D.lF=new A.l(1719171200)
+D.Ei=new A.c_(D.iI,"secondarySystemFill",null,D.iI,D.lB,D.lx,D.lF,D.iI,D.lB,D.lx,D.lF,0)
+D.Gt=new A.by(61103,"Remix","remixicon_updated",!1)
+D.GG=new A.dQ(D.Gt,null,null,null,null)
+D.Gp=new A.by(61104,"Remix","remixicon_updated",!1)
+D.GH=new A.dQ(D.Gp,null,null,null,null)
+D.DV=new A.l(637534208)
 D.tx=new A.f(0,3)
-D.AQ=new A.cU(0,C.c_,D.DV,D.tx,8)
-D.Cr=new A.m(251658240)
-D.AR=new A.cU(0,C.c_,D.Cr,D.tx,1)
+D.AQ=new A.cS(0,C.c_,D.DV,D.tx,8)
+D.Cr=new A.l(251658240)
+D.AR=new A.cS(0,C.c_,D.Cr,D.tx,1)
 D.Io=A.b(x([D.AQ,D.AR]),y.V)
 D.Ji=A.b(x([]),y.V)
 D.Qe=new A.C(28,28)
@@ -1607,10 +1607,10 @@ D.VO=new A.b4("leftTop -> rightBottom",null,null,null,null,null,null,null)
 D.VS=new A.b4("rightTop -> leftBottom",null,null,null,null,null,null,null)
 D.W0=new A.b4("Animation",null,I.cQ,null,null,null,null,null)
 D.Wf=new A.b4("around",null,null,null,null,null,null,null)
-D.Wv=new E.eV(!1,null,10,null,!1,null,!1,!0,!0,!0,C.X,C.E)
-D.WC=new E.bU(C.e,F.bv,!1)
-D.XQ=new A.by(2,A.L("by<F>"))
-D.XR=new A.by(C.i,A.L("by<m>"))
-D.Z2=new B.akw(0,"material")})()};
+D.Wv=new E.eT(!1,null,10,null,!1,null,!1,!0,!0,!0,C.X,C.E)
+D.WC=new E.bT(C.e,F.bv,!1)
+D.XO=new A.bx(2,A.N("bx<F>"))
+D.XP=new A.bx(C.i,A.N("bx<l>"))
+D.Z0=new B.akx(0,"material")})()};
 ((a,b)=>{a[b]=a.current
-a.eventLog.push({p:"main.dart.js_36",e:"endPart",h:b})})($__dart_deferred_initializers__,"l6Y+bHXn6nR0xzcriyMmPZSbVbg=");
+a.eventLog.push({p:"main.dart.js_36",e:"endPart",h:b})})($__dart_deferred_initializers__,"XnW3VgG+lax9GxzABnaFFuflaoU=");
