@@ -3,36 +3,24 @@ import 'package:remixicon_updated/remixicon_updated.dart';
 import '../models/book_link.dart';
 import '../models/router.dart';
 
-import '../views/animation.dart'
-    deferred as animation_widget;
+import '../views/animation.dart' deferred as animation_widget;
 import '../views/bento_grids.dart' deferred as bento_grids_widget;
-import '../views/default.dart'
-    deferred as default_widget;
+import '../views/default.dart' deferred as default_widget;
 import '../views/dialog.dart' deferred as dialog_widget;
-import '../views/disable_effects.dart'
-    deferred as disable_effects_widget;
+import '../views/disable_effects.dart' deferred as disable_effects_widget;
 import '../views/events.dart' deferred as events_widget;
-import '../views/example.dart'
-    deferred as example_widget;
-import '../views/initial_tilt.dart'
-    deferred as initial_tilt_widget;
-import '../views/keep_tilt.dart'
-    deferred as keep_tilt_widget;
+import '../views/example.dart' deferred as example_widget;
+import '../views/initial_tilt.dart' deferred as initial_tilt_widget;
+import '../views/keep_tilt.dart' deferred as keep_tilt_widget;
 import '../views/layout.dart' deferred as layout_widget;
-import '../views/layout2.dart'
-    deferred as layout2_widget;
-import '../views/light_direction.dart'
-    deferred as light_direction_widget;
+import '../views/layout2.dart' deferred as layout2_widget;
+import '../views/light_direction.dart' deferred as light_direction_widget;
 import '../views/multiple_tilt.dart' deferred as multiple_tilt_widget;
 import '../views/parallax_card.dart' deferred as parallax_card_widget;
-import '../views/parallax_image.dart'
-    deferred as parallax_image_widget;
-import '../views/reverse_tilt.dart'
-    deferred as reverse_tilt_widget;
-import '../views/shadow_direction.dart'
-    deferred as shadow_direction_widget;
-import '../views/tilt_direction.dart'
-    deferred as tilt_direction_widget;
+import '../views/parallax_image.dart' deferred as parallax_image_widget;
+import '../views/reverse_tilt.dart' deferred as reverse_tilt_widget;
+import '../views/shadow_direction.dart' deferred as shadow_direction_widget;
+import '../views/tilt_direction.dart' deferred as tilt_direction_widget;
 import '../views/tilt_stream_controller.dart'
     deferred as tilt_stream_controller_widget;
 
