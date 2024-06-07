@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_animate/flutter_animate.dart';
 
-import 'package:flutter_tilt_book/router.dart';
-import 'package:flutter_tilt_book/config/config.dart';
+import '../config/config.dart';
+import '../router.dart';
 
 class Application extends StatelessWidget {
   const Application({super.key});

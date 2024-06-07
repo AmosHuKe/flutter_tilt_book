@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_tilt/flutter_tilt.dart';
 import 'package:remixicon_updated/remixicon_updated.dart';
 
-import 'package:flutter_tilt_book/layouts/page_layout.dart';
+import '../layouts/page_layout.dart';
 
 class TiltStreamControllerDemo extends StatefulWidget {
   const TiltStreamControllerDemo({super.key});
@@ -216,7 +216,7 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
       tools: [
         /// Animation
         const Text(
-          "Animation",
+          'Animation',
           style: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.bold,
@@ -495,7 +495,7 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
         /// Tools
         /// Animation
         const Text(
-          "Animation",
+          'Animation',
           style: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.bold,

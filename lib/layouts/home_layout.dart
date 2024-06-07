@@ -4,10 +4,10 @@ import 'package:go_router/go_router.dart';
 import 'package:remixicon_updated/remixicon_updated.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:flutter_tilt_book/router.dart';
-import 'package:flutter_tilt_book/config/config.dart';
-import 'package:flutter_tilt_book/widgets/book_divider.dart';
-import 'package:flutter_tilt_book/widgets/layout.dart';
+import '../config/config.dart';
+import '../router.dart';
+import '../widgets/book_divider.dart';
+import '../widgets/layout.dart';
 
 class HomeLayout extends StatelessWidget {
   const HomeLayout({super.key, required this.child});
@@ -171,7 +171,7 @@ class NavigatorContainer extends StatelessWidget {
                         colors: [
                           const Color(0xFF171819).withOpacity(0.0),
                           const Color(0xFF171819).withOpacity(0.6),
-                          const Color(0xFF171819)
+                          const Color(0xFF171819),
                         ],
                       ),
                     ),
@@ -194,7 +194,7 @@ class NavigatorContainer extends StatelessWidget {
                         colors: [
                           const Color(0xFF171819).withOpacity(0.0),
                           const Color(0xFF171819).withOpacity(0.6),
-                          const Color(0xFF171819)
+                          const Color(0xFF171819),
                         ],
                       ),
                     ),

@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 
 import 'package:go_router/go_router.dart';
 
-import 'package:flutter_tilt_book/layouts/home_layout.dart';
+import '../layouts/home_layout.dart';
 import 'config/config.dart';
 
 class R {

@@ -142,14 +142,14 @@ class _AnimationCardState extends State<AnimationCard>
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Text(
-                            "Artwork",
+                            'Artwork',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 20.0,
                             ),
                           ),
                           Text(
-                            "Micha Huigen",
+                            'Micha Huigen',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 40.0,
@@ -160,7 +160,7 @@ class _AnimationCardState extends State<AnimationCard>
                           Align(
                             alignment: Alignment.centerRight,
                             child: Text(
-                              "Flutter Tilt",
+                              'Flutter Tilt',
                               style: TextStyle(
                                 color: Colors.white60,
                                 fontSize: 14.0,
@@ -314,14 +314,14 @@ class _AnimationCardState extends State<AnimationCard>
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Text(
-                            "Artwork",
+                            'Artwork',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 20.0,
                             ),
                           ),
                           Text(
-                            "Micha Huigen",
+                            'Micha Huigen',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 40.0,
@@ -332,7 +332,7 @@ class _AnimationCardState extends State<AnimationCard>
                           Align(
                             alignment: Alignment.centerRight,
                             child: Text(
-                              "Flutter Tilt",
+                              'Flutter Tilt',
                               style: TextStyle(
                                 color: Colors.white60,
                                 fontSize: 14.0,

@@ -34,7 +34,7 @@ class Layout2Demo extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-            )
+            ),
           ],
           behind: [
             TiltParallax(
@@ -100,7 +100,7 @@ Tilt(
             color: Colors.black,
           ),
         ),
-      )
+      ),
     ],
     behind: [
       TiltParallax(

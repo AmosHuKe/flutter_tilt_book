@@ -226,8 +226,8 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
                     'areaProgress:',
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                   ),
-                  Text('x: 100% * ${(tiltData?.areaProgress.dx ?? 0)}'),
-                  Text('y: 100% * ${(tiltData?.areaProgress.dy ?? 0)}'),
+                  Text('x: 100% * ${tiltData?.areaProgress.dx ?? 0}'),
+                  Text('y: 100% * ${tiltData?.areaProgress.dy ?? 0}'),
                   const SizedBox(height: 8),
                   Text(
                     'angle (max: $angle):',

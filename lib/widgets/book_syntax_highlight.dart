@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'package:re_highlight/re_highlight.dart';
 import 'package:re_highlight/languages/dart.dart' as highlight_languages;
+import 'package:re_highlight/re_highlight.dart';
 import 'package:re_highlight/styles/a11y-light.dart' as highlight_styles;
 
 class BookSyntaxHighlight extends StatefulWidget {

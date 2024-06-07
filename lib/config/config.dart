@@ -1,45 +1,42 @@
 import 'package:remixicon_updated/remixicon_updated.dart';
 
-import 'package:flutter_tilt_book/widgets/deferred_widget.dart';
+import '../models/book_link.dart';
+import '../models/router.dart';
 
-import 'package:flutter_tilt_book/models/router.dart';
-import 'package:flutter_tilt_book/models/book_link.dart';
-
-import 'package:flutter_tilt_book/views/animation.dart'
+import '../views/animation.dart'
     deferred as animation_widget;
-import 'package:flutter_tilt_book/views/default.dart'
+import '../views/bento_grids.dart' deferred as bento_grids_widget;
+import '../views/default.dart'
     deferred as default_widget;
-import 'package:flutter_tilt_book/views/disable_effects.dart'
+import '../views/dialog.dart' deferred as dialog_widget;
+import '../views/disable_effects.dart'
     deferred as disable_effects_widget;
-import 'package:flutter_tilt_book/views/events.dart' deferred as events_widget;
-import 'package:flutter_tilt_book/views/example.dart'
+import '../views/events.dart' deferred as events_widget;
+import '../views/example.dart'
     deferred as example_widget;
-import 'package:flutter_tilt_book/views/initial_tilt.dart'
+import '../views/initial_tilt.dart'
     deferred as initial_tilt_widget;
-import 'package:flutter_tilt_book/views/keep_tilt.dart'
+import '../views/keep_tilt.dart'
     deferred as keep_tilt_widget;
-import 'package:flutter_tilt_book/views/layout.dart' deferred as layout_widget;
-import 'package:flutter_tilt_book/views/layout2.dart'
+import '../views/layout.dart' deferred as layout_widget;
+import '../views/layout2.dart'
     deferred as layout2_widget;
-import 'package:flutter_tilt_book/views/light_direction.dart'
+import '../views/light_direction.dart'
     deferred as light_direction_widget;
-import 'package:flutter_tilt_book/views/parallax_image.dart'
+import '../views/multiple_tilt.dart' deferred as multiple_tilt_widget;
+import '../views/parallax_card.dart' deferred as parallax_card_widget;
+import '../views/parallax_image.dart'
     deferred as parallax_image_widget;
-import 'package:flutter_tilt_book/views/reverse_tilt.dart'
+import '../views/reverse_tilt.dart'
     deferred as reverse_tilt_widget;
-import 'package:flutter_tilt_book/views/shadow_direction.dart'
+import '../views/shadow_direction.dart'
     deferred as shadow_direction_widget;
-import 'package:flutter_tilt_book/views/tilt_direction.dart'
+import '../views/tilt_direction.dart'
     deferred as tilt_direction_widget;
-import 'package:flutter_tilt_book/views/multiple_tilt.dart'
-    deferred as multiple_tilt_widget;
-import 'package:flutter_tilt_book/views/bento_grids.dart'
-    deferred as bento_grids_widget;
-import 'package:flutter_tilt_book/views/dialog.dart' deferred as dialog_widget;
-import 'package:flutter_tilt_book/views/parallax_card.dart'
-    deferred as parallax_card_widget;
-import 'package:flutter_tilt_book/views/tilt_stream_controller.dart'
+import '../views/tilt_stream_controller.dart'
     deferred as tilt_stream_controller_widget;
+
+import '../widgets/deferred_widget.dart';
 
 class Config {
   static const String appTitle = 'Flutter Tilt';

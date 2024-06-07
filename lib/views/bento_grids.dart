@@ -95,7 +95,7 @@ class BentoGrids extends StatelessWidget {
                                       Icons.arrow_right_alt,
                                       size: 16 * scaleFactor,
                                       color: Colors.grey,
-                                    )
+                                    ),
                                   ],
                                 ),
                                 Text(
@@ -163,7 +163,7 @@ class BentoGrids extends StatelessWidget {
                                           Icons.arrow_right_alt,
                                           size: 16 * scaleFactor,
                                           color: Colors.grey,
-                                        )
+                                        ),
                                       ],
                                     ),
                                     Text(
@@ -230,7 +230,7 @@ class BentoGrids extends StatelessWidget {
                                           Icons.arrow_right_alt,
                                           size: 16 * scaleFactor,
                                           color: Colors.grey,
-                                        )
+                                        ),
                                       ],
                                     ),
                                     Text(
@@ -249,7 +249,7 @@ class BentoGrids extends StatelessWidget {
                           ),
                         ),
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -320,7 +320,7 @@ Container(
                         Icons.arrow_right_alt,
                         size: 16,
                         color: Colors.grey,
-                      )
+                      ),
                     ],
                   ),
                   Text(
@@ -364,7 +364,8 @@ Container(
               width: 500,
               height: 237,
               color: const Color(0xFF010101),
-              padding: const EdgeInsets.all(20).copyWith(right: 0),
+              padding:
+                  const EdgeInsets.all(20).copyWith(right: 0),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -387,7 +388,7 @@ Container(
                             Icons.arrow_right_alt,
                             size: 16,
                             color: Colors.grey,
-                          )
+                          ),
                         ],
                       ),
                       Text(
@@ -430,7 +431,8 @@ Container(
               width: 500,
               height: 237,
               color: const Color(0xFF010101),
-              padding: const EdgeInsets.all(20).copyWith(right: 0),
+              padding:
+                  const EdgeInsets.all(20).copyWith(right: 0),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -453,7 +455,7 @@ Container(
                             Icons.arrow_right_alt,
                             size: 16,
                             color: Colors.grey,
-                          )
+                          ),
                         ],
                       ),
                       Text(
@@ -472,7 +474,7 @@ Container(
             ),
           ),
         ],
-      )
+      ),
     ],
   ),
 ),

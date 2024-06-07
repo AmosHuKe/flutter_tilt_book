@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:remixicon_updated/remixicon_updated.dart';
-
-import 'package:flutter_tilt_book/widgets/book_syntax_highlight.dart';
-import 'package:flutter_tilt_book/widgets/layout.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../widgets/book_syntax_highlight.dart';
+import '../widgets/layout.dart';
 
 class PageLayout extends StatelessWidget {
   const PageLayout({
@@ -170,7 +170,7 @@ class _BodyContainerState extends State<BodyContainer>
                               child: Icon(Remix.external_link_line, size: 12),
                             ),
                             Text(
-                              "Source Code",
+                              'Source Code',
                               style: TextStyle(
                                 fontSize: 12,
                               ),
@@ -222,7 +222,7 @@ class _BodyContainerState extends State<BodyContainer>
                     Tab(
                       height: 36,
                       icon: Icon(Remix.code_s_slash_line, size: 14),
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -261,7 +261,7 @@ class _BodyContainerState extends State<BodyContainer>
                   child: SelectionArea(
                     child: ListView(
                       children: [
-                        BookSyntaxHighlight(dartCode: widget.dartCode)
+                        BookSyntaxHighlight(dartCode: widget.dartCode),
                       ],
                     ),
                   ),
