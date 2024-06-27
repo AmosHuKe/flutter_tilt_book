@@ -26,24 +26,24 @@ Fh:function Fh(){}},C,G,E,F,H,I,K
 B=c[0]
 D=c[2]
 A=a.updateHolder(c[5],A)
-C=c[63]
-G=c[64]
+C=c[64]
+G=c[65]
 E=c[34]
 F=c[37]
 H=c[32]
 I=c[29]
-K=c[60]
+K=c[61]
 A.pk.prototype={
-E(d){return E.e1(C.A1,"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nAnimationCard(),\n\n...\n\nclass AnimationCard extends StatefulWidget {\n  const AnimationCard({super.key});\n\n  @override\n  State<AnimationCard> createState() => _AnimationCardState();\n}\n\nclass _AnimationCardState extends State<AnimationCard>\n    with SingleTickerProviderStateMixin {\n  late AnimationController scaleAnimationController;\n  late Animation<double> scaleAnimation;\n  double opacity = 0;\n  bool isHover = false;\n\n  @override\n  void initState() {\n    super.initState();\n    scaleAnimationController = AnimationController(\n      vsync: this,\n      duration: const Duration(milliseconds: 2400),\n      reverseDuration: const Duration(milliseconds: 1000),\n    );\n    scaleAnimation = Tween(begin: 1.2, end: 1.26).animate(\n      CurvedAnimation(\n        parent: scaleAnimationController,\n        curve: const Cubic(0.16, 1, 0.3, 1),\n        reverseCurve: Curves.easeInCirc,\n      ),\n    );\n    scaleAnimationController.addListener(() {\n      switch (scaleAnimationController.status) {\n        case AnimationStatus.forward:\n          if (opacity == 1) return;\n          setState(() => opacity = 1);\n        case AnimationStatus.reverse:\n          if (opacity == 0) return;\n          setState(() => opacity = 0);\n        case AnimationStatus.dismissed:\n        case AnimationStatus.completed:\n      }\n    });\n  }\n\n  @override\n  void dispose() {\n    scaleAnimationController.dispose();\n    super.dispose();\n  }\n\n  @override\n  Widget build(BuildContext context) {\n    return Listener(\n      onPointerDown: (_) {\n        if (isHover) return;\n        scaleAnimationController.forward();\n      },\n      onPointerUp: (_) {\n        if (isHover) return;\n        scaleAnimationController.reverse();\n      },\n      onPointerCancel: (_) {\n        if (isHover) return;\n        scaleAnimationController.reverse();\n      },\n      child: MouseRegion(\n        cursor: SystemMouseCursors.click,\n        onEnter: (_) {\n          isHover = true;\n          scaleAnimationController.forward();\n        },\n        onExit: (_) {\n          isHover = true;\n          scaleAnimationController.reverse();\n        },\n        // Tilt here\n        child: Tilt(\n          borderRadius: BorderRadius.circular(24),\n          tiltConfig: const TiltConfig(\n            angle: 6.0,\n            enableReverse: true,\n            enableOutsideAreaMove: false,\n            leaveDuration: Duration(milliseconds: 600),\n            filterQuality: FilterQuality.high,\n          ),\n          lightConfig: const LightConfig(disable: true),\n          shadowConfig: const ShadowConfig(enableReverse: true),\n          childLayout: ChildLayout(\n            inner: [\n              ScaleTransition(\n                scale: scaleAnimation,\n                alignment: Alignment.center,\n                filterQuality: FilterQuality.high,\n                child: TiltParallax(\n                  child: Image.asset(\n                    'assets/parallax_card/Artwork-MichaHuigen.jpg',\n                    filterQuality: FilterQuality.high,\n                    width: 360.0,\n                  ),\n                ),\n              ),\n              Positioned.fill(\n                child: AnimatedOpacity(\n                  opacity: opacity,\n                  duration: const Duration(milliseconds: 600),\n                  child: Container(\n                    decoration: const BoxDecoration(\n                      gradient: LinearGradient(\n                        begin: Alignment.topCenter,\n                        end: Alignment.bottomCenter,\n                        colors: [Colors.black12, Colors.black87],\n                      ),\n                    ),\n                    child: const Padding(\n                      padding: EdgeInsets.symmetric(\n                        horizontal: 28,\n                        vertical: 20,\n                      ),\n                      child: Column(\n                        crossAxisAlignment: CrossAxisAlignment.start,\n                        mainAxisAlignment: MainAxisAlignment.end,\n                        children: [\n                          Text(\n                            'Artwork',\n                            style: TextStyle(\n                              color: Colors.white,\n                              fontSize: 20.0,\n                            ),\n                          ),\n                          Text(\n                            'Micha Huigen',\n                            style: TextStyle(\n                              color: Colors.white,\n                              fontSize: 40.0,\n                              fontWeight: FontWeight.bold,\n                            ),\n                          ),\n                          SizedBox(height: 12),\n                          Align(\n                            alignment: Alignment.centerRight,\n                            child: Text(\n                              'Flutter Tilt',\n                              style: TextStyle(\n                                color: Colors.white60,\n                                fontSize: 14.0,\n                                fontWeight: FontWeight.bold,\n                              ),\n                            ),\n                          ),\n                        ],\n                      ),\n                    ),\n                  ),\n                ),\n              ),\n            ],\n          ),\n          child: const SizedBox(),\n        ),\n      ),\n    );\n  }\n}\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",1314,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/parallax_card.dart","Parallax Card",null)}}
+E(d){return E.e2(C.A5,"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nAnimationCard(),\n\n...\n\nclass AnimationCard extends StatefulWidget {\n  const AnimationCard({super.key});\n\n  @override\n  State<AnimationCard> createState() => _AnimationCardState();\n}\n\nclass _AnimationCardState extends State<AnimationCard>\n    with SingleTickerProviderStateMixin {\n  late AnimationController scaleAnimationController;\n  late Animation<double> scaleAnimation;\n  double opacity = 0;\n  bool isHover = false;\n\n  @override\n  void initState() {\n    super.initState();\n    scaleAnimationController = AnimationController(\n      vsync: this,\n      duration: const Duration(milliseconds: 2400),\n      reverseDuration: const Duration(milliseconds: 1000),\n    );\n    scaleAnimation = Tween(begin: 1.2, end: 1.26).animate(\n      CurvedAnimation(\n        parent: scaleAnimationController,\n        curve: const Cubic(0.16, 1, 0.3, 1),\n        reverseCurve: Curves.easeInCirc,\n      ),\n    );\n    scaleAnimationController.addListener(() {\n      switch (scaleAnimationController.status) {\n        case AnimationStatus.forward:\n          if (opacity == 1) return;\n          setState(() => opacity = 1);\n        case AnimationStatus.reverse:\n          if (opacity == 0) return;\n          setState(() => opacity = 0);\n        case AnimationStatus.dismissed:\n        case AnimationStatus.completed:\n      }\n    });\n  }\n\n  @override\n  void dispose() {\n    scaleAnimationController.dispose();\n    super.dispose();\n  }\n\n  @override\n  Widget build(BuildContext context) {\n    return Listener(\n      onPointerDown: (_) {\n        if (isHover) return;\n        scaleAnimationController.forward();\n      },\n      onPointerUp: (_) {\n        if (isHover) return;\n        scaleAnimationController.reverse();\n      },\n      onPointerCancel: (_) {\n        if (isHover) return;\n        scaleAnimationController.reverse();\n      },\n      child: MouseRegion(\n        cursor: SystemMouseCursors.click,\n        onEnter: (_) {\n          isHover = true;\n          scaleAnimationController.forward();\n        },\n        onExit: (_) {\n          isHover = true;\n          scaleAnimationController.reverse();\n        },\n        // Tilt here\n        child: Tilt(\n          borderRadius: BorderRadius.circular(24),\n          tiltConfig: const TiltConfig(\n            angle: 6.0,\n            enableReverse: true,\n            enableOutsideAreaMove: false,\n            leaveDuration: Duration(milliseconds: 600),\n            filterQuality: FilterQuality.high,\n          ),\n          lightConfig: const LightConfig(disable: true),\n          shadowConfig: const ShadowConfig(enableReverse: true),\n          childLayout: ChildLayout(\n            inner: [\n              ScaleTransition(\n                scale: scaleAnimation,\n                alignment: Alignment.center,\n                filterQuality: FilterQuality.high,\n                child: TiltParallax(\n                  child: Image.asset(\n                    'assets/parallax_card/Artwork-MichaHuigen.jpg',\n                    filterQuality: FilterQuality.high,\n                    width: 360.0,\n                  ),\n                ),\n              ),\n              Positioned.fill(\n                child: AnimatedOpacity(\n                  opacity: opacity,\n                  duration: const Duration(milliseconds: 600),\n                  child: Container(\n                    decoration: const BoxDecoration(\n                      gradient: LinearGradient(\n                        begin: Alignment.topCenter,\n                        end: Alignment.bottomCenter,\n                        colors: [Colors.black12, Colors.black87],\n                      ),\n                    ),\n                    child: const Padding(\n                      padding: EdgeInsets.symmetric(\n                        horizontal: 28,\n                        vertical: 20,\n                      ),\n                      child: Column(\n                        crossAxisAlignment: CrossAxisAlignment.start,\n                        mainAxisAlignment: MainAxisAlignment.end,\n                        children: [\n                          Text(\n                            'Artwork',\n                            style: TextStyle(\n                              color: Colors.white,\n                              fontSize: 20.0,\n                            ),\n                          ),\n                          Text(\n                            'Micha Huigen',\n                            style: TextStyle(\n                              color: Colors.white,\n                              fontSize: 40.0,\n                              fontWeight: FontWeight.bold,\n                            ),\n                          ),\n                          SizedBox(height: 12),\n                          Align(\n                            alignment: Alignment.centerRight,\n                            child: Text(\n                              'Flutter Tilt',\n                              style: TextStyle(\n                                color: Colors.white60,\n                                fontSize: 14.0,\n                                fontWeight: FontWeight.bold,\n                              ),\n                            ),\n                          ),\n                        ],\n                      ),\n                    ),\n                  ),\n                ),\n              ),\n            ],\n          ),\n          child: const SizedBox(),\n        ),\n      ),\n    );\n  }\n}\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",1314,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/parallax_card.dart","Parallax Card",null)}}
 A.we.prototype={
 a8(){return new A.Nj(null,null,D.j)}}
 A.Nj.prototype={
 aw(){var x,w,v=this
 v.aL()
-x=B.bv(null,C.ET,0,D.c5,1,null,v)
+x=B.bv(null,C.EX,0,D.c7,1,null,v)
 v.d=x
 w=y.g
-v.e=new B.al(B.cs(C.E2,x,C.E8),new B.af(1.2,1.26,w),w.h("al<aj.T>"))
+v.e=new B.al(B.cs(C.E6,x,C.Ec),new B.af(1.2,1.26,w),w.h("al<aj.T>"))
 w=v.d
 w.b1()
 w=w.bq$
@@ -53,11 +53,11 @@ l(){var x=this.d
 x===$&&B.a()
 x.l()
 this.Zo()},
-E(d){var x,w=this,v=null,u=B.bL(24),t=w.e
+E(d){var x,w=this,v=null,u=B.bI(24),t=w.e
 t===$&&B.a()
-t=B.a8D(D.t,H.ho(I.kr("assets/parallax_card/Artwork-MichaHuigen.jpg",D.aR,v,360),D.jH),D.aR,t)
+t=B.a8D(D.t,H.eU(I.ks("assets/parallax_card/Artwork-MichaHuigen.jpg",D.aR,v,360),D.h0),D.aR,t)
 x=w.f
-return B.mi(D.bg,B.iy(E.dg(v,u,F.kl,new E.hu(D.an,B.b([t,B.aqg(0,B.aC4(B.b2(v,C.MX,D.l,v,C.AM,v,v,v,v),D.cx,x))],y.e),D.an),K.fE,v,v,G.y2,C.Wo,v),D.aX,v,new A.adn(w),new A.ado(w),v),new A.adp(w),new A.adq(w),v,v,v,new A.adr(w))}}
+return B.mj(D.bg,B.iy(E.d7(v,u,F.kn,new E.h0(D.ac,B.b([t,B.aqg(0,B.aC4(B.aX(v,C.N1,D.l,v,C.AQ,v,v,v,v),D.bS,x))],y.e),D.ac),K.ee,v,v,G.y6,C.Ws,v),D.aX,v,new A.adn(w),new A.ado(w),v),new A.adp(w),new A.adq(w),v,v,v,new A.adr(w))}}
 A.Fh.prototype={
 l(){var x=this,w=x.aH$
 if(w!=null)w.G(x.gf5())
@@ -126,28 +126,28 @@ w(A.pk,B.W)
 w(A.we,B.J)
 w(A.Fh,B.Y)
 w(A.Nj,A.Fh)
-v(B.ef,[A.adu,A.ads,A.adt])
+v(B.eg,[A.adu,A.ads,A.adt])
 v(B.cZ,[A.adq,A.adr,A.adp,A.adn,A.ado])
-x(A.Fh,B.ex)})()
+x(A.Fh,B.ey)})()
 B.cD(b.typeUniverse,JSON.parse('{"we":{"J":[],"c":[]},"pk":{"W":[],"c":[]},"Nj":{"Y":["we"]}}'))
 var y={e:B.N("o<c>"),g:B.N("af<F>")};(function constants(){var x=a.makeConstList
-C.A1=new A.we(null)
-C.Iw=B.b(x([D.m1,D.M]),B.N("o<l>"))
-C.Hn=new B.dn(D.bN,D.br,D.ad,C.Iw,null,null)
-C.AM=new B.bo(null,null,null,null,null,C.Hn,D.C)
-C.E2=new B.d_(0.16,1,0.3,1)
-C.E8=new B.d_(0.6,0.04,0.98,0.335)
-C.ET=new B.aC(24e5)
-C.Fo=new B.ak(28,20,28,20)
-C.Wb=new B.b4("Artwork",null,D.dw,null,null,null,null,null)
-C.Su=new B.j(!0,D.i,null,null,null,null,40,D.ah,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-C.W5=new B.b4("Micha Huigen",null,C.Su,null,null,null,null,null)
-C.TY=new B.j(!0,D.lG,null,null,null,null,14,D.ah,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-C.W4=new B.b4("Flutter Tilt",null,C.TY,null,null,null,null,null)
-C.zX=new B.dZ(D.i3,null,null,C.W4,null)
-C.If=B.b(x([C.Wb,C.W5,F.kj,C.zX]),y.e)
-C.DX=new B.rf(D.aw,D.tb,D.z,D.as,null,D.bl,null,C.If,null)
-C.MX=new B.br(C.Fo,C.DX,null)
-C.Wo=new E.eT(!1,null,6,null,!0,D.aR,!0,!0,!0,!1,D.cx,D.E)})()};
+C.A5=new A.we(null)
+C.IA=B.b(x([D.m4,D.N]),B.N("o<l>"))
+C.Hr=new B.dn(D.bN,D.br,D.ae,C.IA,null,null)
+C.AQ=new B.bi(null,null,null,null,null,C.Hr,D.C)
+C.E6=new B.d_(0.16,1,0.3,1)
+C.Ec=new B.d_(0.6,0.04,0.98,0.335)
+C.EX=new B.aC(24e5)
+C.Fs=new B.ak(28,20,28,20)
+C.Wf=new B.b4("Artwork",null,D.dw,null,null,null,null,null)
+C.Sy=new B.j(!0,D.i,null,null,null,null,40,D.ai,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+C.W9=new B.b4("Micha Huigen",null,C.Sy,null,null,null,null,null)
+C.U1=new B.j(!0,D.lJ,null,null,null,null,14,D.ai,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+C.W8=new B.b4("Flutter Tilt",null,C.U1,null,null,null,null,null)
+C.A0=new B.e_(D.i6,null,null,C.W8,null)
+C.Ij=B.b(x([C.Wf,C.W9,F.kl,C.A0]),y.e)
+C.E0=new B.rf(D.aw,D.te,D.z,D.as,null,D.bl,null,C.Ij,null)
+C.N1=new B.br(C.Fs,C.E0,null)
+C.Ws=new E.dX(!1,null,6,null,!0,D.aR,!0,!0,!0,!1,D.bS,D.E)})()};
 ((a,b)=>{a[b]=a.current
-a.eventLog.push({p:"main.dart.js_11",e:"endPart",h:b})})($__dart_deferred_initializers__,"ZtPmdzNFveKaMDWbWdOSYTclQMs=");
+a.eventLog.push({p:"main.dart.js_11",e:"endPart",h:b})})($__dart_deferred_initializers__,"fyyLJMe7oWqM0DZpYlH2EuDeYhs=");

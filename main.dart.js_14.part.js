@@ -26,30 +26,30 @@ B=c[0]
 C=c[2]
 H=c[41]
 A=a.updateHolder(c[6],A)
-D=c[62]
+D=c[63]
 I=c[22]
 E=c[34]
 F=c[37]
 G=c[29]
 A.pb.prototype={
 E(d){var x=null
-return E.e1(new B.br(C.d6,B.ne(C.zy,B.b([new A.nT(G.kr("assets/multiple_tilt_image/sun.png",C.aR,x,159.5),x),new A.nT(G.kr("assets/multiple_tilt_image/moon.png",C.aR,275,x),x),new A.nT(G.kr("assets/multiple_tilt_image/star.png",C.aR,x,159.5),x)],y.e),C.zy,24,24),x),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nPadding(\n  padding: const EdgeInsets.all(8),\n  child: Wrap(\n    spacing: 24,\n    runSpacing: 24,\n    alignment: WrapAlignment.center,\n    runAlignment: WrapAlignment.center,\n    children: [\n      AnimationCard(\n        child: Image.asset(\n          'assets/multiple_tilt_image/sun.png',\n          filterQuality: FilterQuality.high,\n          width: 159.5,\n        ),\n      ),\n      AnimationCard(\n        child: Image.asset(\n          'assets/multiple_tilt_image/moon.png',\n          filterQuality: FilterQuality.high,\n          height: 275,\n        ),\n      ),\n      AnimationCard(\n        child: Image.asset(\n          'assets/multiple_tilt_image/star.png',\n          filterQuality: FilterQuality.high,\n          width: 159.5,\n        ),\n      ),\n    ],\n  ),\n),\n\n...\n\nclass AnimationCard extends StatefulWidget {\n  const AnimationCard({super.key, required this.child});\n\n  final Widget child;\n\n  @override\n  State<AnimationCard> createState() => _AnimationCardState();\n}\n\nclass _AnimationCardState extends State<AnimationCard>\n    with SingleTickerProviderStateMixin {\n  late AnimationController scaleAnimationController;\n  late Animation<double> scaleAnimation;\n\n  @override\n  void initState() {\n    super.initState();\n    scaleAnimationController = AnimationController(\n      vsync: this,\n      duration: const Duration(milliseconds: 350),\n    );\n    scaleAnimation = Tween(begin: 1.0, end: 1.05).animate(\n      CurvedAnimation(\n        parent: scaleAnimationController,\n        curve: Curves.easeOut,\n      ),\n    );\n  }\n\n  @override\n  void dispose() {\n    scaleAnimationController.dispose();\n    super.dispose();\n  }\n\n  @override\n  Widget build(BuildContext context) {\n    return Listener(\n      onPointerDown: (_) => scaleAnimationController.forward(),\n      onPointerUp: (_) => scaleAnimationController.reverse(),\n      onPointerCancel: (_) => scaleAnimationController.reverse(),\n      child: MouseRegion(\n        cursor: SystemMouseCursors.click,\n        onEnter: (_) => scaleAnimationController.forward(),\n        onExit: (_) => scaleAnimationController.reverse(),\n        child: ScaleTransition(\n          scale: scaleAnimation,\n          alignment: Alignment.center,\n          filterQuality: FilterQuality.high,\n          child: GestureDetector(\n            onTap: () => _showDialog(context),\n            // Tilt here\n            child: Tilt(\n              borderRadius: BorderRadius.circular(20),\n              tiltConfig: const TiltConfig(filterQuality: FilterQuality.high),\n              lightConfig: const LightConfig(\n                minIntensity: 0.1,\n                maxIntensity: 0.4,\n              ),\n              child: widget.child,\n            ),\n          ),\n        ),\n      ),\n    );\n  }\n\n  Future<void> _showDialog(BuildContext context) async {\n    return showDialog<void>(\n      context: context,\n      builder: (BuildContext context) {\n        return BackdropFilter(\n          filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),\n          child: Align(\n            child: Transform.scale(\n              scale: 1.2,\n              filterQuality: FilterQuality.high,\n              // Tilt here\n              child: Tilt(\n                borderRadius: BorderRadius.circular(20),\n                tiltConfig: const TiltConfig(\n                  enableRevert: false,\n                  enableSensorRevert: false,\n                  filterQuality: FilterQuality.high,\n                ),\n                lightConfig: const LightConfig(\n                  minIntensity: 0.1,\n                  maxIntensity: 0.4,\n                ),\n                shadowConfig: const ShadowConfig(disable: true),\n                child: widget.child,\n              ),\n            ),\n          ),\n        );\n      },\n    );\n  }\n}\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",1314,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/multiple_tilt.dart","Multiple Tilt",x)}}
+return E.e2(new B.br(C.d6,B.l5(C.hM,B.b([new A.nT(G.ks("assets/multiple_tilt_image/sun.png",C.aR,x,159.5),x),new A.nT(G.ks("assets/multiple_tilt_image/moon.png",C.aR,275,x),x),new A.nT(G.ks("assets/multiple_tilt_image/star.png",C.aR,x,159.5),x)],y.e),C.hM,24,24),x),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nPadding(\n  padding: const EdgeInsets.all(8),\n  child: Wrap(\n    spacing: 24,\n    runSpacing: 24,\n    alignment: WrapAlignment.center,\n    runAlignment: WrapAlignment.center,\n    children: [\n      AnimationCard(\n        child: Image.asset(\n          'assets/multiple_tilt_image/sun.png',\n          filterQuality: FilterQuality.high,\n          width: 159.5,\n        ),\n      ),\n      AnimationCard(\n        child: Image.asset(\n          'assets/multiple_tilt_image/moon.png',\n          filterQuality: FilterQuality.high,\n          height: 275,\n        ),\n      ),\n      AnimationCard(\n        child: Image.asset(\n          'assets/multiple_tilt_image/star.png',\n          filterQuality: FilterQuality.high,\n          width: 159.5,\n        ),\n      ),\n    ],\n  ),\n),\n\n...\n\nclass AnimationCard extends StatefulWidget {\n  const AnimationCard({super.key, required this.child});\n\n  final Widget child;\n\n  @override\n  State<AnimationCard> createState() => _AnimationCardState();\n}\n\nclass _AnimationCardState extends State<AnimationCard>\n    with SingleTickerProviderStateMixin {\n  late AnimationController scaleAnimationController;\n  late Animation<double> scaleAnimation;\n\n  @override\n  void initState() {\n    super.initState();\n    scaleAnimationController = AnimationController(\n      vsync: this,\n      duration: const Duration(milliseconds: 350),\n    );\n    scaleAnimation = Tween(begin: 1.0, end: 1.05).animate(\n      CurvedAnimation(\n        parent: scaleAnimationController,\n        curve: Curves.easeOut,\n      ),\n    );\n  }\n\n  @override\n  void dispose() {\n    scaleAnimationController.dispose();\n    super.dispose();\n  }\n\n  @override\n  Widget build(BuildContext context) {\n    return Listener(\n      onPointerDown: (_) => scaleAnimationController.forward(),\n      onPointerUp: (_) => scaleAnimationController.reverse(),\n      onPointerCancel: (_) => scaleAnimationController.reverse(),\n      child: MouseRegion(\n        cursor: SystemMouseCursors.click,\n        onEnter: (_) => scaleAnimationController.forward(),\n        onExit: (_) => scaleAnimationController.reverse(),\n        child: ScaleTransition(\n          scale: scaleAnimation,\n          alignment: Alignment.center,\n          filterQuality: FilterQuality.high,\n          child: GestureDetector(\n            onTap: () => _showDialog(context),\n            // Tilt here\n            child: Tilt(\n              borderRadius: BorderRadius.circular(20),\n              tiltConfig: const TiltConfig(filterQuality: FilterQuality.high),\n              lightConfig: const LightConfig(\n                minIntensity: 0.1,\n                maxIntensity: 0.4,\n              ),\n              child: widget.child,\n            ),\n          ),\n        ),\n      ),\n    );\n  }\n\n  Future<void> _showDialog(BuildContext context) async {\n    return showDialog<void>(\n      context: context,\n      builder: (BuildContext context) {\n        return BackdropFilter(\n          filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),\n          child: Align(\n            child: Transform.scale(\n              scale: 1.2,\n              filterQuality: FilterQuality.high,\n              // Tilt here\n              child: Tilt(\n                borderRadius: BorderRadius.circular(20),\n                tiltConfig: const TiltConfig(\n                  enableRevert: false,\n                  enableSensorRevert: false,\n                  filterQuality: FilterQuality.high,\n                ),\n                lightConfig: const LightConfig(\n                  minIntensity: 0.1,\n                  maxIntensity: 0.4,\n                ),\n                shadowConfig: const ShadowConfig(disable: true),\n                child: widget.child,\n              ),\n            ),\n          ),\n        );\n      },\n    );\n  }\n}\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",1314,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/multiple_tilt.dart","Multiple Tilt",x)}}
 A.nT.prototype={
 a8(){return new A.Ni(null,null,C.j)}}
 A.Ni.prototype={
 aw(){var x,w,v=this,u=null
 v.aL()
-x=B.bv(u,D.EW,0,u,1,u,v)
+x=B.bv(u,D.F_,0,u,1,u,v)
 v.d=x
 w=y.g
-v.e=new B.al(B.cs(C.cv,x,u),new B.af(1,1.05,w),w.h("al<aj.T>"))},
+v.e=new B.al(B.cs(C.cw,x,u),new B.af(1,1.05,w),w.h("al<aj.T>"))},
 l(){var x=this.d
 x===$&&B.a()
 x.l()
 this.Zp()},
 E(d){var x=this,w=null,v=x.e
 v===$&&B.a()
-return B.mi(C.bg,B.iy(B.a8D(C.t,B.em(w,E.dg(w,B.bL(20),x.a.c,F.aP,D.n2,w,w,F.bE,D.Ws,w),C.V,!1,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,new A.adh(x,d),w,w,w,w),C.aR,v),C.aX,w,new A.adi(x),new A.adj(x),w),new A.adk(x),new A.adl(x),w,w,w,new A.adm(x))},
+return B.mj(C.bg,B.iy(B.a8D(C.t,B.en(w,E.d7(w,B.bI(20),x.a.c,F.aP,D.n5,w,w,F.bE,D.Wy,w),C.V,!1,w,w,w,w,w,w,w,w,w,w,w,w,w,w,w,new A.adh(x,d),w,w,w,w),C.aR,v),C.aX,w,new A.adi(x),new A.adj(x),w),new A.adk(x),new A.adl(x),w,w,w,new A.adm(x))},
 Cd(d){return this.abH(d)},
 abH(d){var x=0,w=B.U(y.f),v,u=this
 var $async$Cd=B.V(function(e,f){if(e===1)return B.R(f,w)
@@ -96,8 +96,8 @@ A.adh.prototype={
 $0(){return this.a.Cd(this.b)},
 $S:0}
 A.adg.prototype={
-$1(d){var x=null,w=$.a8().rn(10,10,C.ad),v=E.dg(x,B.bL(20),this.a.a.c,F.aP,D.n2,x,x,H.ck,D.Wt,x),u=1.2
-return B.Gp(new B.dZ(C.t,x,x,new B.l_(B.p4(u,1.2,1),C.t,!0,C.aR,v,x),x),w)},
+$1(d){var x=null,w=$.a8().rn(10,10,C.ae),v=E.d7(x,B.bI(20),this.a.a.c,F.aP,D.n5,x,x,H.bY,D.Wz,x),u=1.2
+return B.Gp(new B.e_(C.t,x,x,new B.l0(B.p4(u,1.2,1),C.t,!0,C.aR,v,x),x),w)},
 $S:186};(function aliases(){var x=A.Fg.prototype
 x.Zp=x.l})();(function inheritance(){var x=a.mixinHard,w=a.inherit,v=a.inheritMany
 w(A.pb,B.W)
@@ -105,12 +105,12 @@ w(A.nT,B.J)
 w(A.Fg,B.Y)
 w(A.Ni,A.Fg)
 v(B.cZ,[A.adl,A.adm,A.adk,A.adi,A.adj,A.adg])
-w(A.adh,B.ef)
-x(A.Fg,B.ex)})()
+w(A.adh,B.eg)
+x(A.Fg,B.ey)})()
 B.cD(b.typeUniverse,JSON.parse('{"nT":{"J":[],"c":[]},"pb":{"W":[],"c":[]},"Ni":{"Y":["nT"]}}'))
-var y={e:B.N("o<c>"),g:B.N("af<F>"),f:B.N("~")};(function constants(){D.EW=new B.aC(35e4)
-D.n2=new E.jg(!1,C.i,0.1,0.4,4,F.cb,null)
-D.Wt=new E.eT(!1,null,10,null,!1,C.aR,!0,!1,!1,!0,C.X,C.E)
-D.Ws=new E.eT(!1,null,10,null,!1,C.aR,!0,!0,!0,!0,C.X,C.E)})()};
+var y={e:B.N("o<c>"),g:B.N("af<F>"),f:B.N("~")};(function constants(){D.F_=new B.aC(35e4)
+D.n5=new E.jh(!1,C.i,0.1,0.4,4,F.cd,null)
+D.Wz=new E.dX(!1,null,10,null,!1,C.aR,!0,!1,!1,!0,C.W,C.E)
+D.Wy=new E.dX(!1,null,10,null,!1,C.aR,!0,!0,!0,!0,C.W,C.E)})()};
 ((a,b)=>{a[b]=a.current
-a.eventLog.push({p:"main.dart.js_14",e:"endPart",h:b})})($__dart_deferred_initializers__,"U0rtqTTCFgCHB3dFq/rT1axrkkA=");
+a.eventLog.push({p:"main.dart.js_14",e:"endPart",h:b})})($__dart_deferred_initializers__,"GYZ77r+TpbGDEOfa5dixlg6Mbbs=");

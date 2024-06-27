@@ -97,7 +97,7 @@ return new A.bx(x,y.z)},
 gcm(){return C.ba},
 gcU(){return new A.aO(new B.afM(),y.x)},
 gbO(){return new A.bx(B.aLD(this.fx),y.B)},
-ghP(){return C.zw},
+ghP(){return C.zB},
 ghO(){return C.dD},
 gcs(){return C.dC},
 ge_(){return new A.aO(new B.afO(),y.D)},
@@ -105,7 +105,7 @@ gi_(){return A.a_(this.fx).Q},
 ghX(){return A.a_(this.fx).f},
 ge7(){return A.a_(this.fx).y}}
 B.of.prototype={
-E(d){return E.e1(B.atR(D.W8,new B.Zz(this,d)),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nElevatedButton(\n  onPressed: () => _showDialog(context),\n  child: const Text('Show Dialog'),\n),\n\n...\n\nFuture<void> _showDialog(BuildContext context) async {\n  return showDialog<void>(\n    context: context,\n    builder: (BuildContext context) {\n      return BackdropFilter(\n        filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),\n        child: Align(\n          /// Tilt here\n          child: Tilt(\n            borderRadius: BorderRadius.circular(30),\n            tiltConfig: const TiltConfig(\n              enableRevert: false,\n              enableSensorRevert: false,\n            ),\n            lightConfig: const LightConfig(\n              disable: false,\n              direction: LightDirection.all,\n            ),\n            shadowConfig: const ShadowConfig(disable: true),\n            child: BackdropFilter(\n              filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),\n              child: Container(\n                width: 350,\n                height: 200,\n                padding: const EdgeInsets.all(32),\n                color: Colors.white12,\n                child: Column(\n                  crossAxisAlignment: CrossAxisAlignment.start,\n                  children: [\n                    const Text(\n                      'Flutter Tilt',\n                      style: TextStyle(\n                        fontSize: 18,\n                        color: Colors.white,\n                      ),\n                    ),\n                    Expanded(\n                      child: Align(\n                        alignment: Alignment.bottomRight,\n                        child: ElevatedButton(\n                          child: const Text('Close'),\n                          onPressed: () => Navigator.of(context).pop(),\n                        ),\n                      ),\n                    ),\n                  ],\n                ),\n              ),\n            ),\n          ),\n        ),\n      );\n    },\n  );\n}\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",300,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/dialog.dart","Dialog",null)},
+E(d){return E.e2(B.atR(D.Wc,new B.Zz(this,d)),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nElevatedButton(\n  onPressed: () => _showDialog(context),\n  child: const Text('Show Dialog'),\n),\n\n...\n\nFuture<void> _showDialog(BuildContext context) async {\n  return showDialog<void>(\n    context: context,\n    builder: (BuildContext context) {\n      return BackdropFilter(\n        filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),\n        child: Align(\n          /// Tilt here\n          child: Tilt(\n            borderRadius: BorderRadius.circular(30),\n            tiltConfig: const TiltConfig(\n              enableRevert: false,\n              enableSensorRevert: false,\n            ),\n            lightConfig: const LightConfig(\n              disable: false,\n              direction: LightDirection.all,\n            ),\n            shadowConfig: const ShadowConfig(disable: true),\n            child: BackdropFilter(\n              filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),\n              child: Container(\n                width: 350,\n                height: 200,\n                padding: const EdgeInsets.all(32),\n                color: Colors.white12,\n                child: Column(\n                  crossAxisAlignment: CrossAxisAlignment.start,\n                  children: [\n                    const Text(\n                      'Flutter Tilt',\n                      style: TextStyle(\n                        fontSize: 18,\n                        color: Colors.white,\n                      ),\n                    ),\n                    Expanded(\n                      child: Align(\n                        alignment: Alignment.bottomRight,\n                        child: ElevatedButton(\n                          child: const Text('Close'),\n                          onPressed: () => Navigator.of(context).pop(),\n                        ),\n                      ),\n                    ),\n                  ],\n                ),\n              ),\n            ),\n          ),\n        ),\n      );\n    },\n  );\n}\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",300,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/dialog.dart","Dialog",null)},
 CR(d){return this.abG(d)},
 abG(d){var x=0,w=A.U(y.v),v
 var $async$CR=A.V(function(e,f){if(e===1)return A.R(f,w)
@@ -149,9 +149,9 @@ B.Zz.prototype={
 $0(){return this.a.CR(this.b)},
 $S:0}
 B.Zy.prototype={
-$1(d){var x=null,w=$.a8(),v=w.rn(5,5,C.ad),u=A.bL(30)
-w=w.rn(10,10,C.ad)
-return A.Gp(new A.dZ(C.t,x,x,E.dg(x,u,A.Gp(A.b2(x,A.cT(A.b([D.VU,A.lU(new A.dZ(M.l7,x,x,B.atR(C.Wc,new B.Zx(d)),x),1,x)],y.l),C.as,C.F,C.z),C.l,D.Ch,x,200,x,I.mw,350),w),F.aP,D.Ha,x,x,G.ck,K.z8,x),x),v)},
+$1(d){var x=null,w=$.a8(),v=w.rn(5,5,C.ae),u=A.bI(30)
+w=w.rn(10,10,C.ae)
+return A.Gp(new A.e_(C.t,x,x,E.d7(x,u,A.Gp(A.aX(x,A.cT(A.b([D.VY,A.lV(new A.e_(M.l9,x,x,B.atR(C.Wg,new B.Zx(d)),x),1,x)],y.l),C.as,C.F,C.z),C.l,D.Cl,x,200,x,I.mz,350),w),F.aP,D.He,x,x,G.bY,K.zd,x),x),v)},
 $S:186}
 B.Zx.prototype={
 $0(){return A.tj(this.a,!1).el()},
@@ -160,11 +160,11 @@ x(B.I2,A.r0)
 x(B.P8,A.be)
 w(A.cZ,[B.afL,B.afN,B.afP,B.afM,B.afO,B.Zy])
 x(B.of,A.W)
-w(A.ef,[B.Zz,B.Zx])})()
+w(A.eg,[B.Zz,B.Zx])})()
 A.cD(b.typeUniverse,JSON.parse('{"I2":{"J":[],"c":[]},"P8":{"be":[]},"of":{"W":[],"c":[]},"aE_":{"cP":[],"aR":[],"aD":[],"c":[]}}'))
-var y={u:A.N("aE_"),l:A.N("o<c>"),z:A.N("bx<l>"),B:A.N("bx<cU>"),g:A.N("bx<j?>"),x:A.N("aO<F>"),d:A.N("aO<l?>"),D:A.N("aO<c0?>"),v:A.N("~")};(function constants(){D.Ch=new A.l(1040187391)
-D.Ha=new E.jg(!1,C.i,0,0.5,4,F.n4,null)
-D.VU=new A.b4("Flutter Tilt",null,L.yU,null,null,null,null,null)
-D.W8=new A.b4("Show Dialog",null,null,null,null,null,null,null)})()};
+var y={u:A.N("aE_"),l:A.N("o<c>"),z:A.N("bx<l>"),B:A.N("bx<cU>"),g:A.N("bx<j?>"),x:A.N("aO<F>"),d:A.N("aO<l?>"),D:A.N("aO<c0?>"),v:A.N("~")};(function constants(){D.Cl=new A.l(1040187391)
+D.He=new E.jh(!1,C.i,0,0.5,4,F.n7,null)
+D.VY=new A.b4("Flutter Tilt",null,L.yZ,null,null,null,null,null)
+D.Wc=new A.b4("Show Dialog",null,null,null,null,null,null,null)})()};
 ((a,b)=>{a[b]=a.current
-a.eventLog.push({p:"main.dart.js_23",e:"endPart",h:b})})($__dart_deferred_initializers__,"tskagi/FzNsdnuQc7Xou/Y1noWU=");
+a.eventLog.push({p:"main.dart.js_23",e:"endPart",h:b})})($__dart_deferred_initializers__,"xg2G97ggKTaZfA/e6yrsLlCYYGE=");
