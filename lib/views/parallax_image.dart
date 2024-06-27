@@ -28,6 +28,10 @@ class ParallaxImage extends StatelessWidget {
 
       /// Tilt here
       body: Tilt(
+        tiltConfig: const TiltConfig(
+          leaveCurve: Curves.easeInOutCubicEmphasized,
+          leaveDuration: Duration(milliseconds: 600),
+        ),
         lightConfig: const LightConfig(disable: true),
         shadowConfig: const ShadowConfig(disable: true),
         childLayout: ChildLayout(
@@ -81,6 +85,10 @@ import 'package:flutter_tilt/flutter_tilt.dart';
 ······
 
 Tilt(
+  tiltConfig: const TiltConfig(
+    leaveCurve: Curves.easeInOutCubicEmphasized,
+    leaveDuration: Duration(milliseconds: 600),
+  ),
   lightConfig: const LightConfig(disable: true),
   shadowConfig: const ShadowConfig(disable: true),
   childLayout: ChildLayout(
