@@ -2,7 +2,7 @@
 a[b][c]=a[b][c]||[]
 a[b][c].push({p:"main.dart.js_38",e:"beginPart"})})(self,"$__dart_deferred_initializers__","eventLog")
 $__dart_deferred_initializers__.current=function(a,b,c,$){var J,A,C,E,I,F,K,B={
-axl(d){var x=null
+axn(d){var x=null
 return new B.Ty(d,x,x,x,x,x,x,x,x,x)},
 akx:function akx(d,e){this.a=d
 this.b=e},
@@ -134,7 +134,7 @@ this.b=e},
 abU:function abU(d,e){this.a=d
 this.b=e},
 Bf:function Bf(){},
-aEF(d){var x,w,v,u=d.a,t=(u>>>16&255)/255,s=(u>>>8&255)/255,r=(u&255)/255,q=Math.max(t,Math.max(s,r)),p=Math.min(t,Math.min(s,r)),o=q-p,n=A.bh("hue")
+aEG(d){var x,w,v,u=d.a,t=(u>>>16&255)/255,s=(u>>>8&255)/255,r=(u&255)/255,q=Math.max(t,Math.max(s,r)),p=Math.min(t,Math.min(s,r)),o=q-p,n=A.bh("hue")
 if(q===0)n.b=0
 else if(q===t)n.b=60*C.c.cP((s-r)/o,6)
 else if(q===s)n.b=60*((r-t)/o+2)
@@ -178,8 +178,8 @@ age:function age(d,e){this.a=d
 this.b=e},
 agh:function agh(d,e){this.a=d
 this.b=e},
-aIb(){return new B.n3(null)},
-aJh(){return new B.Ud(new A.aP(new B.alW(),y.v),null,null,C.j)},
+aIc(){return new B.n3(null)},
+aJi(){return new B.Ud(new A.aP(new B.alW(),y.v),null,null,C.j)},
 n3:function n3(d){this.a=d},
 Ud:function Ud(d,e,f,g){var _=this
 _.d=d
@@ -212,7 +212,7 @@ alT:function alT(d){this.a=d},
 alK:function alK(d,e){this.a=d
 this.b=e},
 FI:function FI(){},
-awa(d){var x
+awc(d){var x
 d.ak(y.y)
 x=A.a_(d)
 return x.cp}},D,G,H,L,M
@@ -233,7 +233,7 @@ B.akx.prototype={
 J(){return"_SwitchType."+this.b}}
 B.M3.prototype={
 a3r(d){var x,w,v=A.a_(d)
-B.awa(d)
+B.awc(d)
 x=new B.Eq(d,A.a_(d).ax)
 switch(v.f.a){case 0:w=new A.C(x.gIM(),x.gZW())
 break
@@ -320,12 +320,12 @@ x.$1(d)},
 E(c8){var x,w,v,u,t,s,r,q,p,o,n,m,l,k,j,i,h,g,f,e,d,a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,b0,b1,b2,b3,b4,b5,b6,b7,b8,b9,c0,c1,c2,c3,c4,c5=this,c6=null,c7={}
 if(c5.e){c5.e=!1
 c5.Dz()}x=A.a_(c8)
-w=c7.a=B.awa(c8)
+w=c7.a=B.awc(c8)
 v=x.ax
 u=v.b
 c7.b=null
 switch(c5.a.k2.a){case 0:t=new B.Eq(c8,A.a_(c8).ax)
-s=B.axl(c8)
+s=B.axn(c8)
 c7.b=s
 r=s
 q=w
@@ -333,7 +333,7 @@ break
 case 1:p=x.UG(y.c)
 q=c7.a=(p==null?D.C9:p).adQ(x,w)
 switch(x.w.a){case 0:case 1:case 3:case 5:t=new B.Eq(c8,A.a_(c8).ax)
-s=B.axl(c8)
+s=B.axn(c8)
 c7.b=s
 r=s
 break
@@ -524,7 +524,7 @@ e.sadK(a7)
 e.saiU(a8)
 e.sadJ(a5)
 e.saiT(a6)
-e.sf_(A.apO(c8))
+e.sf_(A.apP(c8))
 e.szd(t.gzd())
 e.szk(t.gzk())
 e.salK(c5.p7$)
@@ -544,7 +544,7 @@ c3=c5.gLu()
 c3=c3
 c4=c5.gLu()
 c4=c4
-return A.c7(c6,A.en(c6,A.aqb(new B.on(!0,k,!1,c1,c5.ga4t(),c5.ga4D(),h,v,A.en(c6,A.c7(c6,A.ig(c6,c6,c6,e,q),!1,!0,!1,!1,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6),C.V,!1,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,b0,c4,a0,c3,c6),c6),1),o,!0,c6,c6,c6,c6,c5.gac9(),c5.gacb(),c5.gacd(),c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6),!1,c6,!1,!1,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,r,c6)}}
+return A.c7(c6,A.ep(c6,A.aqc(new B.on(!0,k,!1,c1,c5.ga4t(),c5.ga4D(),h,v,A.ep(c6,A.c7(c6,A.ig(c6,c6,c6,e,q),!1,!0,!1,!1,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6),C.V,!1,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,b0,c4,a0,c3,c6),c6),1),o,!0,c6,c6,c6,c6,c5.gac9(),c5.gacb(),c5.gacd(),c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6),!1,c6,!1,!1,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,c6,r,c6)}}
 B.Er.prototype={
 salK(d){if(d===this.db)return
 this.db=d
@@ -742,7 +742,7 @@ u=A.r(l,u,p)
 u.toString
 k=u}}}u=b3.aM
 u.toString
-j=A.ata(k,u)
+j=A.atb(k,u)
 u=b4<0.5
 i=u?b3.dy:b3.dx
 h=u?b3.R8:b3.p3
@@ -822,7 +822,7 @@ j=a1.W
 if(j!=null)j.l()
 j=a1.av
 j.toString
-a1.W=A.aJc(new A.ff(a6,a2,a2,j?a2:a1.b9,C.kw),a1.ga41())}j=a1.W
+a1.W=A.aJd(new A.fg(a6,a2,a2,j?a2:a1.b9,C.kw),a1.ga41())}j=a1.W
 j.toString
 x=j
 j=a1.av
@@ -852,10 +852,10 @@ a0=j==null?a2:j.w
 p=a0
 j=A.dp(u.a)
 o=A.b([],y.d)
-if(s!=null)J.dx(o,new A.f7("FILL",s))
-if(t!=null)J.dx(o,new A.f7("wght",t))
-if(r!=null)J.dx(o,new A.f7("GRAD",r))
-if(q!=null)J.dx(o,new A.f7("opsz",q))
+if(s!=null)J.dx(o,new A.f8("FILL",s))
+if(t!=null)J.dx(o,new A.f8("wght",t))
+if(r!=null)J.dx(o,new A.f8("GRAD",r))
+if(q!=null)J.dx(o,new A.f8("opsz",q))
 n=A.cn(a2,A.fN(a2,a2,w,a2,a2,a2,a2,a2,u.b,a2,a2,v,a2,o,a2,a2,a2,!1,a2,a2,a2,a2,u.c,p,a2,a2),j)
 o=a1.bB
 j=a1.y2
@@ -867,7 +867,7 @@ m=(b0.a-v)/2
 l=(b0.b-v)/2
 k=a3.M(0,new A.f(m,l))
 o.aA(a4,k)}}finally{a1.P=!1}},
-a91(d,e,f){var x,w,v,u=e.a,t=e.b,s=f.b,r=s/2,q=A.avr(u,t,u+f.a,t+s,new A.aI(r,r))
+a91(d,e,f){var x,w,v,u=e.a,t=e.b,s=f.b,r=s/2,q=A.avt(u,t,u+f.a,t+s,new A.aI(r,r))
 u=this.b9
 if(u!=null)for(t=u.length,x=0;x<t;++x){w=u[x]
 s=q.bL(w.b)
@@ -1103,7 +1103,7 @@ zY(d){return!1},
 k(d){return"<optimized out>#"+A.b8(this)}}
 B.y1.prototype={
 amW(){var x=this,w=x.d,v=(1-Math.abs(2*w-1))*x.c,u=x.b
-return A.aKk(x.a,u,v,v*(1-Math.abs(C.c.cP(u/60,2)-1)),w-v/2)},
+return A.aKl(x.a,u,v,v*(1-Math.abs(C.c.cP(u/60,2)-1)),w-v/2)},
 j(d,e){var x=this
 if(e==null)return!1
 if(x===e)return!0
@@ -1164,7 +1164,7 @@ else s=!1
 if(s)v=A.nO(w.w,v)
 return v}}
 B.n3.prototype={
-a8(){return B.aJh()}}
+a8(){return B.aJi()}}
 B.Ud.prototype={
 aw(){var x,w=this
 w.aL()
@@ -1219,22 +1219,22 @@ x.a.push(new B.alV(this))},
 E(d){var x,w,v,u,t,s,r=this,q=null,p=r.f
 if(p){x=r.e
 x===$&&A.a()}else x=q
-x=E.d7(q,A.bI(30),A.aX(q,q,C.l,q,K.ik,150,q,q,300),D.Cm,F.by,q,q,F.bE,D.WK,x)
+x=E.d8(q,A.bI(30),A.aX(q,q,C.l,q,K.ik,150,q,q,300),D.Cm,F.by,q,q,F.bE,D.WK,x)
 if(p){w=r.e
 w===$&&A.a()}else w=q
 v=y.p
-w=A.cT(A.b([x,new A.br(C.j8,new B.M3(p,new B.alP(r),r.d,q),q),E.d7(q,A.bI(30),A.aX(q,q,C.l,q,L.ln,150,q,q,300),D.Cn,F.by,q,q,F.bE,F.eS,w)],v),C.O,C.F,C.A)
+w=A.cT(A.b([x,new A.br(C.j8,new B.M3(p,new B.alP(r),r.d,q),q),E.d8(q,A.bI(30),A.aX(q,q,C.l,q,L.ln,150,q,q,300),D.Cn,F.by,q,q,F.bE,F.eS,w)],v),C.O,C.F,C.A)
 p=r.r
-x=G.em(M.zf,new B.alQ(r),p==null)
+x=G.eo(M.zf,new B.alQ(r),p==null)
 u=r.w
 u===$&&A.a()
-u=G.em(D.Ws,new B.alR(r),p===u)
+u=G.eo(D.Ws,new B.alR(r),p===u)
 t=r.x
 t===$&&A.a()
-t=G.em(D.W0,new B.alS(r),p===t)
+t=G.eo(D.W0,new B.alS(r),p===t)
 s=r.y
 s===$&&A.a()
-return E.e2(w,"import 'dart:async';\nimport 'dart:math' as math;\n\nimport 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nclass TiltStreamControllerDemo extends StatefulWidget {\n  const TiltStreamControllerDemo({super.key});\n\n  @override\n  State<TiltStreamControllerDemo> createState() =>\n      _TiltStreamControllerDemoState();\n}\n\nclass _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>\n    with TickerProviderStateMixin {\n  final WidgetStateProperty<Icon?> thumbIcon =\n      WidgetStateProperty.resolveWith<Icon?>(\n    (Set<WidgetState> states) {\n      return states.contains(WidgetState.selected)\n          ? const Icon(Remix.link_m)\n          : const Icon(Remix.link_unlink_m);\n    },\n  );\n  late StreamController<TiltStreamModel> tiltStreamController;\n  bool controllerBind = true;\n  AnimationController? animationSelected;\n\n  /// AnimationController around\n  late AnimationController aroundAnimationController;\n\n  /// AnimationController leftTop -> rightBottom\n  late AnimationController ltrbAnimationController;\n\n  /// AnimationController rightTop -> leftBottom\n  late AnimationController rtlbAnimationController;\n\n  @override\n  void initState() {\n    super.initState();\n    tiltStreamController = StreamController.broadcast();\n\n    aroundAnimation();\n    ltrbAnimation();\n    rtlbAnimation();\n    animationSelected = aroundAnimationController;\n    animationSelected?.repeat(reverse: false);\n  }\n\n  @override\n  void dispose() {\n    tiltStreamController.close();\n    aroundAnimationController.dispose();\n    ltrbAnimationController.dispose();\n    rtlbAnimationController.dispose();\n    super.dispose();\n  }\n\n  void stopAllAnimation() {\n    aroundAnimationController.stop();\n    ltrbAnimationController.stop();\n    rtlbAnimationController.stop();\n    tiltStreamController.add(\n      const TiltStreamModel(position: Offset.zero, gestureUse: false),\n    );\n  }\n\n  /// Animation around\n  void aroundAnimation() {\n    aroundAnimationController = AnimationController(\n      lowerBound: 0.0,\n      upperBound: 1.0,\n      duration: const Duration(milliseconds: 3000),\n      vsync: this,\n    );\n    aroundAnimationController.addListener(() {\n      final double radian =\n          aroundAnimationController.value * 360 * math.pi / 180;\n      const double r = 75;\n      // P = (cos\u03b8, sin\u03b8)\n      final double x = math.cos(radian) * r + 150;\n      final double y = math.sin(radian) * r + 75;\n      tiltStreamController.add(TiltStreamModel(position: Offset(x, y)));\n    });\n  }\n\n  /// Animation leftTop -> rightBottom\n  void ltrbAnimation() {\n    ltrbAnimationController = AnimationController(\n      lowerBound: 0.0,\n      upperBound: 1.0,\n      duration: const Duration(milliseconds: 3000),\n      vsync: this,\n    );\n    ltrbAnimationController.addListener(() {\n      final double x = ltrbAnimationController.value * 300;\n      final double y = ltrbAnimationController.value * 150;\n      tiltStreamController.add(TiltStreamModel(position: Offset(x, y)));\n    });\n  }\n\n  /// Animation rightTop -> leftBottom\n  void rtlbAnimation() {\n    rtlbAnimationController = AnimationController(\n      lowerBound: 0.0,\n      upperBound: 1.0,\n      duration: const Duration(milliseconds: 3000),\n      vsync: this,\n    );\n    rtlbAnimationController.addListener(() {\n      final double x = (1 - rtlbAnimationController.value) * 300;\n      final double y = (rtlbAnimationController.value) * 150;\n      tiltStreamController.add(TiltStreamModel(position: Offset(x, y)));\n    });\n  }\n\n  @override\n  Widget build(BuildContext context) {\n    return Column(\n      children: [\n        /// Tilt here\n        Tilt(\n          tiltStreamController: controllerBind ? tiltStreamController : null,\n          borderRadius: BorderRadius.circular(30),\n          tiltConfig: const TiltConfig(enableGestureSensors: false),\n          childLayout: const ChildLayout(\n            outer: [\n              Positioned(\n                child: TiltParallax(\n                  size: Offset(10, 10),\n                  child: Text(\n                    'Flutter Tilt 1 \u2728',\n                    style: TextStyle(\n                      fontSize: 14,\n                      color: Colors.white,\n                    ),\n                  ),\n                ),\n              ),\n            ],\n          ),\n          child: Container(\n            width: 300,\n            height: 150,\n            decoration: const BoxDecoration(\n              gradient: LinearGradient(\n                begin: Alignment.topRight,\n                end: Alignment.bottomLeft,\n                colors: [Color(0xFF80d0c7), Color(0xFF13547a)],\n              ),\n            ),\n          ),\n        ),\n\n        /// bind\n        Padding(\n          padding: const EdgeInsets.all(20),\n          child: Switch(\n            thumbIcon: thumbIcon,\n            value: controllerBind,\n            onChanged: (value) {\n              setState(() {\n                controllerBind = value;\n              });\n            },\n          ),\n        ),\n\n        /// Tilt here\n        Tilt(\n          tiltStreamController: controllerBind ? tiltStreamController : null,\n          borderRadius: BorderRadius.circular(30),\n          tiltConfig: const TiltConfig(enableGestureSensors: true),\n          childLayout: const ChildLayout(\n            outer: [\n              Positioned(\n                child: TiltParallax(\n                  size: Offset(10, 10),\n                  child: Text(\n                    'Flutter Tilt 2 \u2728',\n                    style: TextStyle(\n                      fontSize: 14,\n                      color: Colors.white,\n                    ),\n                  ),\n                ),\n              ),\n            ],\n          ),\n          child: Container(\n            width: 300,\n            height: 150,\n            decoration: const BoxDecoration(\n              gradient: LinearGradient(\n                begin: Alignment.topCenter,\n                end: Alignment.bottomCenter,\n                colors: [Color(0xFF8989ba), Color(0xFFa7a6cb)],\n              ),\n            ),\n          ),\n        ),\n\n        /// Tools\n        /// Animation\n        const Text(\n          'Animation',\n          style: TextStyle(\n            fontSize: 16,\n            fontWeight: FontWeight.bold,\n          ),\n        ),\n        const SizedBox(height: 12),\n        Wrap(\n          spacing: 12,\n          runSpacing: 12,\n          children: [\n            FilterChip(\n              label: const Text('none'),\n              selected: animationSelected == null,\n              onSelected: (bool value) {\n                setState(() {\n                  if (value) {\n                    stopAllAnimation();\n                    animationSelected = null;\n                  }\n                });\n              },\n            ),\n            FilterChip(\n              label: const Text('around'),\n              selected: animationSelected == aroundAnimationController,\n              onSelected: (bool value) {\n                setState(() {\n                  if (value) {\n                    animationSelected = aroundAnimationController\n                      ..repeat(reverse: false);\n                  } else {\n                    stopAllAnimation();\n                  }\n                });\n              },\n            ),\n            FilterChip(\n              label: const Text('leftTop -> rightBottom'),\n              selected: animationSelected == ltrbAnimationController,\n              onSelected: (bool value) {\n                setState(() {\n                  if (value) {\n                    animationSelected = ltrbAnimationController\n                      ..repeat(reverse: true);\n                  } else {\n                    stopAllAnimation();\n                  }\n                });\n              },\n            ),\n            FilterChip(\n              label: const Text('rightTop -> leftBottom'),\n              selected: animationSelected == rtlbAnimationController,\n              onSelected: (bool value) {\n                setState(() {\n                  if (value) {\n                    animationSelected = rtlbAnimationController\n                      ..repeat(reverse: true);\n                  } else {\n                    stopAllAnimation();\n                  }\n                });\n              },\n            ),\n          ],\n        ),\n      ],\n    );\n  }\n}\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",800,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/tilt_stream_controller.dart","TiltStreamController",A.b([D.Wd,F.kt,A.l5(C.aL,A.b([x,u,t,G.em(D.W4,new B.alT(r),p===s)],v),C.aL,12,12)],v))}}
+return E.e3(w,"import 'dart:async';\nimport 'dart:math' as math;\n\nimport 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nclass TiltStreamControllerDemo extends StatefulWidget {\n  const TiltStreamControllerDemo({super.key});\n\n  @override\n  State<TiltStreamControllerDemo> createState() =>\n      _TiltStreamControllerDemoState();\n}\n\nclass _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>\n    with TickerProviderStateMixin {\n  final WidgetStateProperty<Icon?> thumbIcon =\n      WidgetStateProperty.resolveWith<Icon?>(\n    (Set<WidgetState> states) {\n      return states.contains(WidgetState.selected)\n          ? const Icon(Remix.link_m)\n          : const Icon(Remix.link_unlink_m);\n    },\n  );\n  late StreamController<TiltStreamModel> tiltStreamController;\n  bool controllerBind = true;\n  AnimationController? animationSelected;\n\n  /// AnimationController around\n  late AnimationController aroundAnimationController;\n\n  /// AnimationController leftTop -> rightBottom\n  late AnimationController ltrbAnimationController;\n\n  /// AnimationController rightTop -> leftBottom\n  late AnimationController rtlbAnimationController;\n\n  @override\n  void initState() {\n    super.initState();\n    tiltStreamController = StreamController.broadcast();\n\n    aroundAnimation();\n    ltrbAnimation();\n    rtlbAnimation();\n    animationSelected = aroundAnimationController;\n    animationSelected?.repeat(reverse: false);\n  }\n\n  @override\n  void dispose() {\n    tiltStreamController.close();\n    aroundAnimationController.dispose();\n    ltrbAnimationController.dispose();\n    rtlbAnimationController.dispose();\n    super.dispose();\n  }\n\n  void stopAllAnimation() {\n    aroundAnimationController.stop();\n    ltrbAnimationController.stop();\n    rtlbAnimationController.stop();\n    tiltStreamController.add(\n      const TiltStreamModel(position: Offset.zero, gestureUse: false),\n    );\n  }\n\n  /// Animation around\n  void aroundAnimation() {\n    aroundAnimationController = AnimationController(\n      lowerBound: 0.0,\n      upperBound: 1.0,\n      duration: const Duration(milliseconds: 3000),\n      vsync: this,\n    );\n    aroundAnimationController.addListener(() {\n      final double radian =\n          aroundAnimationController.value * 360 * math.pi / 180;\n      const double r = 75;\n      // P = (cos\u03b8, sin\u03b8)\n      final double x = math.cos(radian) * r + 150;\n      final double y = math.sin(radian) * r + 75;\n      tiltStreamController.add(TiltStreamModel(position: Offset(x, y)));\n    });\n  }\n\n  /// Animation leftTop -> rightBottom\n  void ltrbAnimation() {\n    ltrbAnimationController = AnimationController(\n      lowerBound: 0.0,\n      upperBound: 1.0,\n      duration: const Duration(milliseconds: 3000),\n      vsync: this,\n    );\n    ltrbAnimationController.addListener(() {\n      final double x = ltrbAnimationController.value * 300;\n      final double y = ltrbAnimationController.value * 150;\n      tiltStreamController.add(TiltStreamModel(position: Offset(x, y)));\n    });\n  }\n\n  /// Animation rightTop -> leftBottom\n  void rtlbAnimation() {\n    rtlbAnimationController = AnimationController(\n      lowerBound: 0.0,\n      upperBound: 1.0,\n      duration: const Duration(milliseconds: 3000),\n      vsync: this,\n    );\n    rtlbAnimationController.addListener(() {\n      final double x = (1 - rtlbAnimationController.value) * 300;\n      final double y = (rtlbAnimationController.value) * 150;\n      tiltStreamController.add(TiltStreamModel(position: Offset(x, y)));\n    });\n  }\n\n  @override\n  Widget build(BuildContext context) {\n    return Column(\n      children: [\n        /// Tilt here\n        Tilt(\n          tiltStreamController: controllerBind ? tiltStreamController : null,\n          borderRadius: BorderRadius.circular(30),\n          tiltConfig: const TiltConfig(enableGestureSensors: false),\n          childLayout: const ChildLayout(\n            outer: [\n              Positioned(\n                child: TiltParallax(\n                  size: Offset(10, 10),\n                  child: Text(\n                    'Flutter Tilt 1 \u2728',\n                    style: TextStyle(\n                      fontSize: 14,\n                      color: Colors.white,\n                    ),\n                  ),\n                ),\n              ),\n            ],\n          ),\n          child: Container(\n            width: 300,\n            height: 150,\n            decoration: const BoxDecoration(\n              gradient: LinearGradient(\n                begin: Alignment.topRight,\n                end: Alignment.bottomLeft,\n                colors: [Color(0xFF80d0c7), Color(0xFF13547a)],\n              ),\n            ),\n          ),\n        ),\n\n        /// bind\n        Padding(\n          padding: const EdgeInsets.all(20),\n          child: Switch(\n            thumbIcon: thumbIcon,\n            value: controllerBind,\n            onChanged: (value) {\n              setState(() {\n                controllerBind = value;\n              });\n            },\n          ),\n        ),\n\n        /// Tilt here\n        Tilt(\n          tiltStreamController: controllerBind ? tiltStreamController : null,\n          borderRadius: BorderRadius.circular(30),\n          tiltConfig: const TiltConfig(enableGestureSensors: true),\n          childLayout: const ChildLayout(\n            outer: [\n              Positioned(\n                child: TiltParallax(\n                  size: Offset(10, 10),\n                  child: Text(\n                    'Flutter Tilt 2 \u2728',\n                    style: TextStyle(\n                      fontSize: 14,\n                      color: Colors.white,\n                    ),\n                  ),\n                ),\n              ),\n            ],\n          ),\n          child: Container(\n            width: 300,\n            height: 150,\n            decoration: const BoxDecoration(\n              gradient: LinearGradient(\n                begin: Alignment.topCenter,\n                end: Alignment.bottomCenter,\n                colors: [Color(0xFF8989ba), Color(0xFFa7a6cb)],\n              ),\n            ),\n          ),\n        ),\n\n        /// Tools\n        /// Animation\n        const Text(\n          'Animation',\n          style: TextStyle(\n            fontSize: 16,\n            fontWeight: FontWeight.bold,\n          ),\n        ),\n        const SizedBox(height: 12),\n        Wrap(\n          spacing: 12,\n          runSpacing: 12,\n          children: [\n            FilterChip(\n              label: const Text('none'),\n              selected: animationSelected == null,\n              onSelected: (bool value) {\n                setState(() {\n                  if (value) {\n                    stopAllAnimation();\n                    animationSelected = null;\n                  }\n                });\n              },\n            ),\n            FilterChip(\n              label: const Text('around'),\n              selected: animationSelected == aroundAnimationController,\n              onSelected: (bool value) {\n                setState(() {\n                  if (value) {\n                    animationSelected = aroundAnimationController\n                      ..repeat(reverse: false);\n                  } else {\n                    stopAllAnimation();\n                  }\n                });\n              },\n            ),\n            FilterChip(\n              label: const Text('leftTop -> rightBottom'),\n              selected: animationSelected == ltrbAnimationController,\n              onSelected: (bool value) {\n                setState(() {\n                  if (value) {\n                    animationSelected = ltrbAnimationController\n                      ..repeat(reverse: true);\n                  } else {\n                    stopAllAnimation();\n                  }\n                });\n              },\n            ),\n            FilterChip(\n              label: const Text('rightTop -> leftBottom'),\n              selected: animationSelected == rtlbAnimationController,\n              onSelected: (bool value) {\n                setState(() {\n                  if (value) {\n                    animationSelected = rtlbAnimationController\n                      ..repeat(reverse: true);\n                  } else {\n                    stopAllAnimation();\n                  }\n                });\n              },\n            ),\n          ],\n        ),\n      ],\n    );\n  }\n}\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",800,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/tilt_stream_controller.dart","TiltStreamController",A.b([D.Wd,F.kt,A.l5(C.aL,A.b([x,u,t,G.eo(D.W4,new B.alT(r),p===s)],v),C.aL,12,12)],v))}}
 B.FI.prototype={
 bj(){this.c4()
 this.bT()
@@ -1243,7 +1243,7 @@ l(){var x=this,w=x.aR$
 if(w!=null)w.G(x.gdu())
 x.aR$=null
 x.aD()}}
-var z=a.updateTypes(["~(A)","A(on)","~(fC)","~(fD)","~(ek)","~(A?)","~()","~(hS)","~([aF?])","~([mV?])","~(jf)","~(ju)","~(jv)"])
+var z=a.updateTypes(["~(A)","A(on)","~(fC)","~(fD)","~(em)","~(A?)","~()","~(hS)","~([aF?])","~([mV?])","~(jf)","~(ju)","~(jv)"])
 B.ahL.prototype={
 $1(d){if(d.p(0,C.x))return this.a.a.r
 if(d.p(0,C.y))return this.a.a.e
@@ -1257,7 +1257,7 @@ B.ahK.prototype={
 $0(){this.a.e=!0},
 $S:0}
 B.ahN.prototype={
-$1(d){var x=A.fn(this.b.a.cy,d,y.Q)
+$1(d){var x=A.fo(this.b.a.cy,d,y.Q)
 if(x==null)x=null
 if(x==null){x=this.a.b.ge_().a.$1(d)
 x.toString}return x},
@@ -1265,8 +1265,8 @@ $S:187}
 B.akw.prototype={
 $1(d){var x,w=this.b,v=this.a,u=this.c,t=y.h,s=y.e,r=y.W,q=y.M,p=v.ok,o=s.h("dj<aj.T>")
 if(d){p.toString
-x=A.b([new A.ec(new A.dj(new A.dM(D.mo),new A.af(w,p,s),o),11,r),new A.ec(new A.dj(new A.dM(D.mn),new A.af(p,u,s),o),72,r),new A.ec(new A.rj(u,u,q),17,r)],t)}else{p.toString
-x=A.b([new A.ec(new A.rj(w,w,q),17,r),new A.ec(new A.dj(new A.dM(new A.kl(D.mn)),new A.af(w,p,s),o),72,r),new A.ec(new A.dj(new A.dM(new A.kl(D.mo)),new A.af(p,u,s),o),11,r)],t)}w=A.aqL(x,y.Y)
+x=A.b([new A.ed(new A.dj(new A.dM(D.mo),new A.af(w,p,s),o),11,r),new A.ed(new A.dj(new A.dM(D.mn),new A.af(p,u,s),o),72,r),new A.ed(new A.rj(u,u,q),17,r)],t)}else{p.toString
+x=A.b([new A.ed(new A.rj(w,w,q),17,r),new A.ed(new A.dj(new A.dM(new A.kl(D.mn)),new A.af(w,p,s),o),72,r),new A.ed(new A.dj(new A.dM(new A.kl(D.mo)),new A.af(p,u,s),o),11,r)],t)}w=A.aqM(x,y.Y)
 v=v.db
 v.toString
 return new A.al(v,w,w.$ti.h("al<aj.T>"))},
@@ -1284,7 +1284,7 @@ $S:6}
 B.akp.prototype={
 $1(d){var x
 if(d.p(0,C.H)){x=D.ms.c_(this.a.y)
-x=B.aEF(A.I(204,x.gm()>>>16&255,x.gm()>>>8&255,x.gm()&255))
+x=B.aEG(A.I(204,x.gm()>>>16&255,x.gm()>>>8&255,x.gm()&255))
 return new B.y1(x.a,x.b,0.835,0.69).amW()}return C.z},
 $S:6}
 B.akm.prototype={
@@ -1546,8 +1546,8 @@ u(A.J,[B.CV,B.on,B.n3])
 u(A.Y,[B.Ft,B.Cx,B.FI])
 v(B.Fu,B.Ft)
 v(B.CW,B.Fu)
-u(A.cZ,[B.ahL,B.ahM,B.ahN,B.akw,B.ako,B.akq,B.akp,B.akm,B.akt,B.aku,B.akv,B.aks,B.akr,B.akn,B.agi,B.agf,B.agd,B.age,B.agh,B.alW,B.alP,B.alQ,B.alR,B.alS,B.alT])
-u(A.eg,[B.ahK,B.abV,B.abW,B.abT,B.abU,B.agg,B.agb,B.agc,B.aga,B.alJ,B.alU,B.alV,B.alO,B.alN,B.alM,B.alL,B.alK])
+u(A.d_,[B.ahL,B.ahM,B.ahN,B.akw,B.ako,B.akq,B.akp,B.akm,B.akt,B.aku,B.akv,B.aks,B.akr,B.akn,B.agi,B.agf,B.agd,B.age,B.agh,B.alW,B.alP,B.alQ,B.alR,B.alS,B.alT])
+u(A.ei,[B.ahK,B.abV,B.abW,B.abT,B.abU,B.agg,B.agb,B.agc,B.aga,B.alJ,B.alU,B.alV,B.alO,B.alN,B.alM,B.alL,B.alK])
 v(B.Bf,A.dy)
 v(B.Er,B.Bf)
 u(A.z,[B.k3,B.Tw,B.Vv,B.Vw,B.Bg,B.y1])
@@ -1556,30 +1556,30 @@ u(A.iK,[B.Tx,B.Ty])
 v(B.akl,B.Vv)
 v(B.Eq,B.Vw)
 v(B.Ud,B.FI)
-x(B.Ft,A.d6)
+x(B.Ft,A.d7)
 x(B.Fu,B.Bg)
 w(B.Vv,B.Tw)
 w(B.Vw,B.Tw)
-x(B.FI,A.d6)})()
-A.cD(b.typeUniverse,JSON.parse('{"CV":{"J":[],"c":[]},"M3":{"W":[],"c":[]},"CW":{"Y":["CV"]},"Er":{"a3":[]},"Tz":{"k3":["iK"],"k3.T":"iK"},"Tx":{"iK":[]},"Ty":{"iK":[]},"Bf":{"a3":[]},"on":{"J":[],"c":[]},"Cx":{"Y":["on"]},"n3":{"J":[],"c":[]},"Ud":{"Y":["n3"]},"aHK":{"aR":[],"aD":[],"c":[]}}'))
+x(B.FI,A.d7)})()
+A.cD(b.typeUniverse,JSON.parse('{"CV":{"J":[],"c":[]},"M3":{"W":[],"c":[]},"CW":{"Y":["CV"]},"Er":{"a3":[]},"Tz":{"k3":["iK"],"k3.T":"iK"},"Tx":{"iK":[]},"Ty":{"iK":[]},"Bf":{"a3":[]},"on":{"J":[],"c":[]},"Cx":{"Y":["on"]},"n3":{"J":[],"c":[]},"Ud":{"Y":["n3"]},"aHL":{"aR":[],"aD":[],"c":[]}}'))
 A.ES(b.typeUniverse,JSON.parse('{"Bg":1}'))
 var y=(function rtii(){var x=A.N
-return{E:x("aB<aF>"),D:x("ci<nQ>"),M:x("rj<C>"),I:x("eI"),V:x("o<cS>"),d:x("o<f7>"),h:x("o<ec<C>>"),p:x("o<c>"),f:x("o<~(aB<aF>)>"),z:x("aU<Y<J>>"),j:x("as<~(aB<aF>)>"),Y:x("C"),y:x("aHK"),c:x("iK"),W:x("ec<C>"),e:x("af<C>"),t:x("af<F>"),n:x("eA"),C:x("bH"),i:x("fQ<bT>"),k:x("aP<l>"),F:x("aP<c0>"),b:x("aP<l?>"),v:x("aP<dR?>"),o:x("aP<c0?>"),Q:x("c0?")}})();(function constants(){var x=a.makeConstList
+return{E:x("aB<aF>"),D:x("ci<nQ>"),M:x("rj<C>"),I:x("eJ"),V:x("o<cS>"),d:x("o<f8>"),h:x("o<ed<C>>"),p:x("o<c>"),f:x("o<~(aB<aF>)>"),z:x("aU<Y<J>>"),j:x("as<~(aB<aF>)>"),Y:x("C"),y:x("aHL"),c:x("iK"),W:x("ed<C>"),e:x("af<C>"),t:x("af<F>"),n:x("eC"),C:x("bH"),i:x("fQ<bT>"),k:x("aP<l>"),F:x("aP<c0>"),b:x("aP<l?>"),v:x("aP<dS?>"),o:x("aP<c0?>"),Q:x("c0?")}})();(function constants(){var x=a.makeConstList
 D.C9=new B.Tz()
 D.VY=new A.b4("Flutter Tilt 1 \u2728",null,C.kG,null,null,null,null,null)
 D.WN=new H.n1(D.VY,C.h2,null,null)
-D.O0=new A.eQ(null,null,null,null,null,null,D.WN,null)
+D.O0=new A.eR(null,null,null,null,null,null,D.WN,null)
 D.IU=A.b(x([D.O0]),y.p)
 D.Cm=new E.h0(D.IU,C.ac,C.ac)
 D.VZ=new A.b4("Flutter Tilt 2 \u2728",null,C.kG,null,null,null,null,null)
 D.WO=new H.n1(D.VZ,C.h2,null,null)
-D.O1=new A.eQ(null,null,null,null,null,null,D.WO,null)
+D.O1=new A.eR(null,null,null,null,null,null,D.WO,null)
 D.IV=A.b(x([D.O1]),y.p)
 D.Cn=new E.h0(D.IV,C.ac,C.ac)
 D.CB=new A.l(167772160)
-D.mn=new A.d_(0.2,0,0,1)
-D.mo=new A.d_(0.31,0,0.56,1)
-D.mr=new A.d_(0.175,0.885,0.32,1.275)
+D.mn=new A.d0(0.2,0,0,1)
+D.mo=new A.d0(0.31,0,0.56,1)
+D.mr=new A.d0(0.175,0.885,0.32,1.275)
 D.iF=new A.l(4281648985)
 D.lZ=new A.l(4281389400)
 D.lY=new A.l(4280584765)
@@ -1591,9 +1591,9 @@ D.lI=new A.l(1031305344)
 D.lQ=new A.l(1719171200)
 D.Ev=new A.c_(D.iP,"secondarySystemFill",null,D.iP,D.lM,D.lI,D.lQ,D.iP,D.lM,D.lI,D.lQ,0)
 D.GG=new A.by(61103,"Remix","remixicon_updated",!1)
-D.GT=new A.dR(D.GG,null,null,null,null)
+D.GT=new A.dS(D.GG,null,null,null,null)
 D.GC=new A.by(61104,"Remix","remixicon_updated",!1)
-D.GU=new A.dR(D.GC,null,null,null,null)
+D.GU=new A.dS(D.GC,null,null,null,null)
 D.E7=new A.l(637534208)
 D.tK=new A.f(0,3)
 D.B2=new A.cS(0,C.c1,D.E7,D.tK,8)
@@ -1607,10 +1607,10 @@ D.W0=new A.b4("leftTop -> rightBottom",null,null,null,null,null,null,null)
 D.W4=new A.b4("rightTop -> leftBottom",null,null,null,null,null,null,null)
 D.Wd=new A.b4("Animation",null,I.cQ,null,null,null,null,null)
 D.Ws=new A.b4("around",null,null,null,null,null,null,null)
-D.WK=new E.dX(!1,null,10,null,!1,null,!1,!0,!0,!0,C.W,C.E)
+D.WK=new E.dY(!1,null,10,null,!1,null,!1,!0,!0,!0,C.W,C.E)
 D.WR=new E.bT(C.e,F.bv,!1)
 D.Y2=new A.bx(2,A.N("bx<F>"))
 D.Y3=new A.bx(C.i,A.N("bx<l>"))
 D.Zf=new B.akx(0,"material")})()};
 ((a,b)=>{a[b]=a.current
-a.eventLog.push({p:"main.dart.js_38",e:"endPart",h:b})})($__dart_deferred_initializers__,"M1+9tqr9zzext2lmRy4AoJ1S8qg=");
+a.eventLog.push({p:"main.dart.js_38",e:"endPart",h:b})})($__dart_deferred_initializers__,"gzib1lGdFpG8N2vr9l0nx5gLoHU=");

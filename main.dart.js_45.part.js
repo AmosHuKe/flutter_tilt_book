@@ -2,7 +2,7 @@
 a[b][c]=a[b][c]||[]
 a[b][c].push({p:"main.dart.js_45",e:"beginPart"})})(self,"$__dart_deferred_initializers__","eventLog")
 $__dart_deferred_initializers__.current=function(a,b,c,$){var C,D,I,G,F,K,L,M,H,E,N,A={
-aI9(){return new A.n0(null)},
+aIa(){return new A.n0(null)},
 n0:function n0(d){this.a=d},
 U9:function U9(d,e){var _=this
 _.d=d
@@ -66,21 +66,21 @@ A.n0.prototype={
 a8(){return new A.U9(C.bN([B.dx,B.dy],y.f),D.j)}}
 A.U9.prototype={
 E(d){var x,w,v,u,t,s,r,q,p,o,n=this,m=null,l=n.d,k=C.k(l).c,j=C.i(C.a0(l,!0,k)),i=C.bI(30)
-k=O.awq(20,C.a0(l,!0,k),!1)
-k=F.d7(m,i,C.aX(D.u,K.bF,D.l,m,B.AR,200,m,m,350),H.aR,H.by,new A.alm(n),new A.aln(n),H.bE,k,m)
-i=E.em(N.zf,new A.alo(n),l.p(0,B.kI))
-x=E.em(B.W3,new A.alr(n),l.p(0,B.dx))
-w=E.em(B.VW,new A.als(n),l.p(0,B.dy))
-v=E.em(B.VV,new A.alt(n),l.p(0,B.eT))
-u=E.em(B.Wt,new A.alu(n),l.p(0,B.eU))
-t=E.em(B.Wm,new A.alv(n),l.p(0,$.aoQ()))
-s=E.em(B.We,new A.alw(n),l.p(0,$.aoR()))
-r=E.em(B.Ww,new A.alx(n),l.p(0,$.aoO()))
-q=E.em(B.Wr,new A.aly(n),l.p(0,$.aoP()))
-p=E.em(B.Wg,new A.alp(n),l.p(0,B.kL))
+k=O.aws(20,C.a0(l,!0,k),!1)
+k=F.d8(m,i,C.aX(D.u,K.bF,D.l,m,B.AR,200,m,m,350),H.aR,H.by,new A.alm(n),new A.aln(n),H.bE,k,m)
+i=E.eo(N.zf,new A.alo(n),l.p(0,B.kI))
+x=E.eo(B.W3,new A.alr(n),l.p(0,B.dx))
+w=E.eo(B.VW,new A.als(n),l.p(0,B.dy))
+v=E.eo(B.VV,new A.alt(n),l.p(0,B.eT))
+u=E.eo(B.Wt,new A.alu(n),l.p(0,B.eU))
+t=E.eo(B.Wm,new A.alv(n),l.p(0,$.aoQ()))
+s=E.eo(B.We,new A.alw(n),l.p(0,$.aoR()))
+r=E.eo(B.Ww,new A.alx(n),l.p(0,$.aoO()))
+q=E.eo(B.Wr,new A.aly(n),l.p(0,$.aoP()))
+p=E.eo(B.Wg,new A.alp(n),l.p(0,B.kL))
 l=l.p(0,B.kJ)&&l.p(0,B.kK)
 o=y.e
-l=C.l5(D.aL,C.b([i,x,w,v,u,t,s,r,q,p,E.em(B.Wq,new A.alq(n),l)],o),D.aL,12,12)
+l=C.l5(D.aL,C.b([i,x,w,v,u,t,s,r,q,p,E.eo(B.Wq,new A.alq(n),l)],o),D.aL,12,12)
 p=n.e
 i=p==null
 x=i?m:p.b.a
@@ -92,7 +92,7 @@ u=i?m:p.d.a
 u=C.bC("x: "+C.i(u==null?0:u)+"\xb0",m,m,m,m)
 t=i?m:p.d.b
 t=C.bC("y: "+C.i(t==null?0:t)+"\xb0",m,m,m,m)
-return F.e2(k,"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: TiltConfig(direction: "+j+"),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: const BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topLeft,\n        end: Alignment.bottomRight,\n        colors: [Color(0xFF667eea), Color(0xFF764ba2)],\n      ),\n    ),\n    child: const Text(\n      'Flutter Tilt \u2728',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",500,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/tilt_direction.dart","Tilt Direction",C.b([l,H.ku,C.l5(D.aL,C.b([new I.B9(350,200,p,m),C.d5(C.cT(C.b([G.zh,x,w,G.dt,v,u,t,G.dt,G.zi,C.bC(C.i(i?m:p.c),m,m,m,m)],o),D.as,D.F,D.A),m,200)],o),D.aL,24,64)],o))}}
+return F.e3(k,"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: TiltConfig(direction: "+j+"),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: const BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topLeft,\n        end: Alignment.bottomRight,\n        colors: [Color(0xFF667eea), Color(0xFF764ba2)],\n      ),\n    ),\n    child: const Text(\n      'Flutter Tilt \u2728',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",500,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/tilt_direction.dart","Tilt Direction",C.b([l,H.ku,C.l5(D.aL,C.b([new I.B9(350,200,p,m),C.d6(C.cT(C.b([G.zh,x,w,G.dt,v,u,t,G.dt,G.zi,C.bC(C.i(i?m:p.c),m,m,m,m)],o),D.as,D.F,D.A),m,200)],o),D.aL,24,64)],o))}}
 var z=a.updateTypes(["~(n_,hA)"])
 A.aln.prototype={
 $2(d,e){var x=this.a
@@ -211,10 +211,10 @@ $S:0};(function inheritance(){var x=a.inherit,w=a.inheritMany
 x(A.n0,C.J)
 x(A.U9,C.Y)
 w(C.ka,[A.aln,A.alm])
-w(C.eg,[A.alc,A.ald,A.all,A.alk,A.alj,A.ali,A.alh,A.alg,A.alf,A.ale,A.alb,A.ala,A.al9])
-w(C.cZ,[A.alo,A.alr,A.als,A.alt,A.alu,A.alv,A.alw,A.alx,A.aly,A.alp,A.alq])})()
+w(C.ei,[A.alc,A.ald,A.all,A.alk,A.alj,A.ali,A.alh,A.alg,A.alf,A.ale,A.alb,A.ala,A.al9])
+w(C.d_,[A.alo,A.alr,A.als,A.alt,A.alu,A.alv,A.alw,A.alx,A.aly,A.alp,A.alq])})()
 C.cD(b.typeUniverse,JSON.parse('{"n0":{"J":[],"c":[]},"U9":{"Y":["n0"]}}'))
-var y={e:C.N("o<c>"),f:C.N("eb")};(function constants(){var x=a.makeConstList
+var y={e:C.N("o<c>"),f:C.N("ec")};(function constants(){var x=a.makeConstList
 B.Dg=new C.l(4284907242)
 B.Dj=new C.l(4285942690)
 B.IE=C.b(x([B.Dg,B.Dj]),C.N("o<l>"))
@@ -230,17 +230,17 @@ B.Wq=new C.b4("Left: 0.8, Right: 0.3, Top: 0.7, Bottom: 0.4",null,null,null,null
 B.Wr=new C.b4("bottomRight",null,null,null,null,null,null,null)
 B.Wt=new C.b4("right",null,null,null,null,null,null,null)
 B.Ww=new C.b4("bottomLeft",null,null,null,null,null,null,null)
-B.kI=new F.eb(0,0)
-B.dx=new F.eb(0,1)
-B.dy=new F.eb(0,-1)
-B.eT=new F.eb(1,0)
-B.kJ=new F.eb(0.8,0.7)
-B.kK=new F.eb(-0.3,-0.4)
-B.eU=new F.eb(-1,0)
-B.kL=new F.eb(0.8,0.4)})();(function lazyInitializers(){var x=a.lazy
-x($,"aQ0","aoQ",()=>B.dx.M(0,B.eT))
-x($,"aQ1","aoR",()=>B.dx.M(0,B.eU))
-x($,"aPZ","aoO",()=>B.dy.M(0,B.eT))
-x($,"aQ_","aoP",()=>B.dy.M(0,B.eU))})()};
+B.kI=new F.ec(0,0)
+B.dx=new F.ec(0,1)
+B.dy=new F.ec(0,-1)
+B.eT=new F.ec(1,0)
+B.kJ=new F.ec(0.8,0.7)
+B.kK=new F.ec(-0.3,-0.4)
+B.eU=new F.ec(-1,0)
+B.kL=new F.ec(0.8,0.4)})();(function lazyInitializers(){var x=a.lazy
+x($,"aQ1","aoQ",()=>B.dx.M(0,B.eT))
+x($,"aQ2","aoR",()=>B.dx.M(0,B.eU))
+x($,"aQ_","aoO",()=>B.dy.M(0,B.eT))
+x($,"aQ0","aoP",()=>B.dy.M(0,B.eU))})()};
 ((a,b)=>{a[b]=a.current
-a.eventLog.push({p:"main.dart.js_45",e:"endPart",h:b})})($__dart_deferred_initializers__,"0aLXh8l5S+pH8Y0JgDkQCpgdjAQ=");
+a.eventLog.push({p:"main.dart.js_45",e:"endPart",h:b})})($__dart_deferred_initializers__,"djK21miItrfKJVD8IdS0vOOJTHE=");
