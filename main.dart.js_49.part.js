@@ -1,147 +1,54 @@
 ((a,b,c)=>{a[b]=a[b]||{}
 a[b][c]=a[b][c]||[]
 a[b][c].push({p:"main.dart.js_49",e:"beginPart"})})(self,"$__dart_deferred_initializers__","eventLog")
-$__dart_deferred_initializers__.current=function(a,b,c,$){var A,C,E,F,B={
-at2(d,e,f){return new B.j6(d,e,f,null)},
-aeG:function aeG(d,e){this.a=d
+$__dart_deferred_initializers__.current=function(a,b,c,$){var A,E,F,G,C,B={
+aK5(){return new B.mE(null)},
+mE:function mE(d){this.a=d},
+Rh:function Rh(d){this.d=d
+this.c=this.a=null},
+ale:function ale(d){this.a=d},
+ald:function ald(d,e){this.a=d
 this.b=e},
-j6:function j6(d,e,f,g){var _=this
-_.d=d
-_.r=e
-_.x=f
-_.a=g},
-aeI:function aeI(d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,a0,a1,a2,a3,a4,a5){var _=this
-_.fr=d
-_.fx=e
-_.fy=f
-_.go=g
-_.k1=_.id=$
-_.a=h
-_.b=i
-_.c=j
-_.d=k
-_.e=l
-_.f=m
-_.r=n
-_.w=o
-_.x=p
-_.y=q
-_.z=r
-_.Q=s
-_.as=t
-_.at=u
-_.ax=v
-_.ay=w
-_.ch=x
-_.CW=a0
-_.cx=a1
-_.cy=a2
-_.db=a3
-_.dx=a4
-_.dy=a5},
-aeJ:function aeJ(d){this.a=d}},D
+alc:function alc(d,e,f){this.a=d
+this.b=e
+this.c=f}},D,H,I
 A=c[0]
-C=c[2]
-E=c[31]
-F=c[75]
-B=a.updateHolder(c[27],B)
-D=c[74]
-B.aeG.prototype={
-J(){return"_ChipVariant."+this.b}}
-B.j6.prototype={
-E(d){var x,w,v,u=null,t=E.at1(d)
-A.a_(d)
-x=this.x
-w=x?t.ch:u
-v=t.y
-if(v==null){A.a_(d)
-v=!0}return E.avv(!1,u,C.f4,u,u,u,C.l,u,new B.aeI(d,!0,x,D.cp,u,u,u,u,u,u,u,u,u,!0,u,u,u,u,F.k4,u,u,u,u,u,u,u,u),u,u,u,u,u,u,u,u,!0,this.d,u,w,u,u,this.r,u,u,x,t.f,u,u,u,v,u,u,u,u)}}
-B.aeI.prototype={
-gds(){var x,w=this,v=w.id
-if(v===$){x=A.a_(w.fr)
-w.id!==$&&A.ad()
-v=w.id=x.ax}return v},
-gcU(){if(this.go===D.cp)var x=0
-else x=this.fx?1:0
-return x},
-gpu(){return 1},
-gf0(){var x,w,v,u=this,t=u.k1
-if(t===$){x=A.a_(u.fr)
-u.k1!==$&&A.ad()
-t=u.k1=x.p2}x=t.as
-if(x==null)x=null
-else{if(u.fx)if(u.fy){w=u.gds()
-v=w.as
-w=v==null?w.z:v}else{w=u.gds()
-v=w.rx
-w=v==null?w.k3:v}else w=u.gds().k3
-w=x.cW(w)
-x=w}return x},
-gao(){return new A.aP(new B.aeJ(this),y.d)},
-gbS(){if(this.go===D.cp)var x=C.z
-else{x=this.gds().x1
-if(x==null)x=C.m}return x},
-gcm(){return C.z},
-gmr(){var x,w,v=this
-if(v.fx)if(v.fy){x=v.gds()
-w=x.as
-x=w==null?x.z:w}else x=v.gds().b
-else x=v.gds().k3
-return x},
-goN(){var x,w,v=this
-if(v.fx)if(v.fy){x=v.gds()
-w=x.as
-x=w==null?x.z:w}else{x=v.gds()
-w=x.rx
-x=w==null?x.k3:w}else x=v.gds().k3
-return x},
-ge6(){var x,w,v=this
-if(v.go===D.cp&&!v.fy)if(v.fx){x=v.gds()
-w=x.ry
-if(w==null){w=x.ab
-x=w==null?x.k3:w}else x=w
-x=new A.bw(x,1,C.J,-1)}else{x=v.gds().k3.a
-x=new A.bw(A.I(31,x>>>16&255,x>>>8&255,x&255),1,C.J,-1)}else x=F.ll
-return x},
-gf_(){var x,w,v=this,u=null
-if(v.fx)if(v.fy){x=v.gds()
-w=x.as
-x=w==null?x.z:w}else x=v.gds().b
-else x=v.gds().k3
-return new A.cc(18,u,u,u,u,x,u,u,u)},
-gbO(){return C.d6},
-gmW(){var x=this.gf0(),w=x==null?null:x.r
-if(w==null)w=14
-x=A.c6(this.fr,C.bM)
-x=x==null?null:x.gck()
-x=A.lP(C.e8,C.e7,A.E(w*(x==null?C.a_:x).a/14-1,0,1))
-x.toString
-return x}}
-var z=a.updateTypes([])
-B.aeJ.prototype={
-$1(d){var x,w,v=this
-if(d.p(0,C.y)&&d.p(0,C.x)){x=v.a
-if(x.go===D.cp){x=x.gds().k3.a
-x=A.I(31,x>>>16&255,x>>>8&255,x&255)}else{x=x.gds().k3.a
-x=A.I(31,x>>>16&255,x>>>8&255,x&255)}return x}if(d.p(0,C.x)){x=v.a
-if(x.go===D.cp)x=null
-else{x=x.gds().k3.a
-x=A.I(31,x>>>16&255,x>>>8&255,x&255)}return x}if(d.p(0,C.y)){x=v.a
-if(x.go===D.cp){x=x.gds()
-w=x.Q
-x=w==null?x.y:w}else{x=x.gds()
-w=x.Q
-x=w==null?x.y:w}return x}x=v.a
-if(x.go===D.cp)x=null
-else{x=x.gds()
-w=x.p3
-x=w==null?x.k2:w}return x},
-$S:25};(function inheritance(){var x=a.inherit
-x(B.aeG,A.lb)
-x(B.j6,A.W)
-x(B.aeI,A.lJ)
-x(B.aeJ,A.d_)})()
-A.cD(b.typeUniverse,JSON.parse('{"j6":{"W":[],"c":[]}}'))
-var y={d:A.N("aP<l?>")};(function constants(){D.cp=new B.aeG(0,"flat")})()};
+E=c[2]
+F=c[34]
+G=c[38]
+C=c[37]
+B=a.updateHolder(c[18],B)
+D=c[63]
+H=c[23]
+I=c[27]
+B.mE.prototype={
+a8(){return new B.Rh(C.cb)}}
+B.Rh.prototype={
+E(d){var x=null,w=this.d.k(0),v=A.bM(30),u=H.az2(this.d,!1),t=y.f
+return F.ed(F.de(x,v,A.b3(E.t,G.bG,E.k,x,D.Ba,200,x,x,350),C.aU,u,x,x,C.bF,C.f5,x),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  lightConfig: LightConfig(direction: "+w+"),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: const BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topCenter,\n        end: Alignment.bottomCenter,\n        colors: [Color(0xFF537895), Color(0xFF09203f)],\n      ),\n    ),\n    child: const Text(\n      'Flutter Tilt \u2728',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",500,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/light_direction.dart","Light Direction",A.b([A.lo(E.aq,A.a0(new A.a3(D.J8,new B.ale(this),t),!0,t.h("ax.E")),E.aq,12,12)],y.e))}}
+var z=a.updateTypes(["jk(dx)"])
+B.ale.prototype={
+$1(d){var x=null,w=this.a
+return I.ax9(A.bB(d.b,x,x,x,x),new B.ald(w,d),w.d===d)},
+$S:z+0}
+B.ald.prototype={
+$1(d){var x=this.a
+x.a0(new B.alc(x,d,this.b))},
+$S:7}
+B.alc.prototype={
+$0(){if(this.b)this.a.d=this.c},
+$S:0};(function inheritance(){var x=a.inherit,w=a.inheritMany
+x(B.mE,A.I)
+x(B.Rh,A.X)
+w(A.d6,[B.ale,B.ald])
+x(B.alc,A.es)})()
+A.cJ(b.typeUniverse,JSON.parse('{"mE":{"I":[],"c":[]},"Rh":{"X":["mE"]}}'))
+var y={e:A.M("o<c>"),f:A.M("a3<dx,jk>")};(function constants(){var x=a.makeConstList
+D.Dn=new A.i(4283660437)
+D.CY=new A.i(4278788159)
+D.IP=A.b(x([D.Dn,D.CY]),A.M("o<i>"))
+D.HQ=new A.dy(E.bL,E.br,E.ak,D.IP,null,null)
+D.Ba=new A.bj(null,null,null,null,null,D.HQ,E.F)
+D.J8=A.b(x([C.nk,C.cb,C.nl,C.HF,C.HG,C.HH,C.HI,C.HJ,C.HK,C.HL,C.HB,C.HC,C.HD,C.HE]),A.M("o<dx>"))})()};
 ((a,b)=>{a[b]=a.current
-a.eventLog.push({p:"main.dart.js_49",e:"endPart",h:b})})($__dart_deferred_initializers__,"gsdI7Fe5onUhJjIe5BUyh1Vtnlc=");
+a.eventLog.push({p:"main.dart.js_49",e:"endPart",h:b})})($__dart_deferred_initializers__,"3BIMZ7x+3C1R1HXx8miisl61h0M=");
