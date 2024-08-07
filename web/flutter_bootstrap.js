@@ -4,8 +4,7 @@
 _flutter.loader.load({
   config: {
     assetBase: '/flutter_tilt_book/',
-    // https://github.com/flutter/flutter/issues/147610
-    // renderer: 'canvaskit',
+    renderer: 'canvaskit',
     canvasKitVariant: 'full',
     canvasKitBaseUrl: '/flutter_tilt_book/canvaskit/'
   },
