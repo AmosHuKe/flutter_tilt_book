@@ -2,15 +2,15 @@
 a[b][c]=a[b][c]||[]
 a[b][c].push({p:"main.dart.js_24",e:"beginPart"})})(self,"$__dart_deferred_initializers__","eventLog")
 $__dart_deferred_initializers__.current=function(a,b,c,$){var A,C,G,H,I,E,B={
-ay8(d,e){var x=null
-return new B.IV(e,x,x,x,x,x,x,!1,x,!0,d,x)},
-aQR(d){var x=A.Z(d),w=x.p2.as,v=w==null?null:w.r
+ay3(d,e){var x=null
+return new B.IU(e,x,x,x,x,x,x,!1,x,!0,d,x)},
+aQO(d){var x=A.Z(d),w=x.p2.as,v=w==null?null:w.r
 if(v==null)v=14
-w=A.cc(d,C.bJ)
-w=w==null?null:w.gcq()
+w=A.cb(d,C.bJ)
+w=w==null?null:w.gcp()
 if(w==null)w=C.a1
-return A.ax5(new A.ak(24,0,24,0),new A.ak(12,0,12,0),new A.ak(6,0,6,0),v*w.a/14)},
-IV:function IV(d,e,f,g,h,i,j,k,l,m,n,o){var _=this
+return A.ax0(new A.ak(24,0,24,0),new A.ak(12,0,12,0),new A.ak(6,0,6,0),v*w.a/14)},
+IU:function IU(d,e,f,g,h,i,j,k,l,m,n,o){var _=this
 _.c=d
 _.d=e
 _.e=f
@@ -55,7 +55,7 @@ ajF:function ajF(d){this.a=d},
 ajH:function ajH(d){this.a=d},
 ajE:function ajE(){},
 ajG:function ajG(){},
-aIi(){return new B.oM(null)},
+aIf(){return new B.oM(null)},
 oM:function oM(d){this.a=d},
 a_W:function a_W(d,e){this.a=d
 this.b=e},
@@ -73,65 +73,65 @@ K=c[47]
 L=c[48]
 M=c[46]
 F=c[37]
-B.IV.prototype={
-EU(d){var x=null
+B.IU.prototype={
+EQ(d){var x=null
 A.Z(d)
 A.Z(d)
 return new B.Qf(d,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,C.a5,!0,C.t,x,x,x)},
-Hf(d){var x
+Hc(d){var x
 d.ag(y.u)
 x=A.Z(d)
 return x.D.a}}
 B.Qf.prototype={
-gl8(){var x,w=this,v=w.fy
+gl7(){var x,w=this,v=w.fy
 if(v===$){x=A.Z(w.fx)
 w.fy!==$&&A.ac()
 v=w.fy=x.ax}return v},
-ghw(){return new A.bx(A.Z(this.fx).p2.as,y.g)},
-gcD(){return new A.aO(new B.ajD(this),y.d)},
-gd9(){return new A.aO(new B.ajF(this),y.d)},
-gcL(){return new A.aO(new B.ajH(this),y.d)},
-gbU(){var x=this.gl8().x1
+ghv(){return new A.bx(A.Z(this.fx).p2.as,y.g)},
+gcB(){return new A.aN(new B.ajD(this),y.d)},
+gd9(){return new A.aN(new B.ajF(this),y.d)},
+gcJ(){return new A.aN(new B.ajH(this),y.d)},
+gbU(){var x=this.gl7().x1
 if(x==null)x=C.l
 return new A.bx(x,y.z)},
-gcs(){return C.ba},
-gd2(){return new A.aO(new B.ajE(),y.x)},
-gbL(){return new A.bx(B.aQR(this.fx),y.B)},
+gcr(){return C.ba},
+gd2(){return new A.aN(new B.ajE(),y.x)},
+gbL(){return new A.bx(B.aQO(this.fx),y.B)},
 gi2(){return C.zY},
 gi1(){return C.dR},
-gcS(){return C.dQ},
-gee(){return new A.aO(new B.ajG(),y.D)},
+gcQ(){return C.dQ},
+ged(){return new A.aN(new B.ajG(),y.D)},
 gic(){return A.Z(this.fx).Q},
 gi9(){return A.Z(this.fx).f},
-gep(){return A.Z(this.fx).y}}
+geo(){return A.Z(this.fx).y}}
 B.oM.prototype={
-E(d){return E.ed(B.ay8(D.Ws,new B.a_W(this,d)),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nElevatedButton(\n  onPressed: () => _showDialog(context),\n  child: const Text('Show Dialog'),\n),\n\n...\n\nFuture<void> _showDialog(BuildContext context) async {\n  return showDialog<void>(\n    context: context,\n    builder: (BuildContext context) {\n      return BackdropFilter(\n        filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),\n        child: Align(\n          /// Tilt here\n          child: Tilt(\n            borderRadius: BorderRadius.circular(30),\n            tiltConfig: const TiltConfig(\n              enableRevert: false,\n              enableSensorRevert: false,\n            ),\n            lightConfig: const LightConfig(\n              disable: false,\n              direction: LightDirection.all,\n            ),\n            shadowConfig: const ShadowConfig(disable: true),\n            child: BackdropFilter(\n              filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),\n              child: Container(\n                width: 350,\n                height: 200,\n                padding: const EdgeInsets.all(32),\n                color: Colors.white12,\n                child: Column(\n                  crossAxisAlignment: CrossAxisAlignment.start,\n                  children: [\n                    const Text(\n                      'Flutter Tilt',\n                      style: TextStyle(\n                        fontSize: 18,\n                        color: Colors.white,\n                      ),\n                    ),\n                    Expanded(\n                      child: Align(\n                        alignment: Alignment.bottomRight,\n                        child: ElevatedButton(\n                          child: const Text('Close'),\n                          onPressed: () => Navigator.of(context).pop(),\n                        ),\n                      ),\n                    ),\n                  ],\n                ),\n              ),\n            ),\n          ),\n        ),\n      );\n    },\n  );\n}\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",300,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/dialog.dart","Dialog",null)},
-Di(d){return this.adg(d)},
-adg(d){var x=0,w=A.U(y.v),v
-var $async$Di=A.V(function(e,f){if(e===1)return A.R(f,w)
-while(true)switch(x){case 0:v=H.aDS(new B.a_V(),d,y.v)
+E(d){return E.ec(B.ay3(D.Ws,new B.a_W(this,d)),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nElevatedButton(\n  onPressed: () => _showDialog(context),\n  child: const Text('Show Dialog'),\n),\n\n...\n\nFuture<void> _showDialog(BuildContext context) async {\n  return showDialog<void>(\n    context: context,\n    builder: (BuildContext context) {\n      return BackdropFilter(\n        filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),\n        child: Align(\n          /// Tilt here\n          child: Tilt(\n            borderRadius: BorderRadius.circular(30),\n            tiltConfig: const TiltConfig(\n              enableRevert: false,\n              enableSensorRevert: false,\n            ),\n            lightConfig: const LightConfig(\n              disable: false,\n              direction: LightDirection.all,\n            ),\n            shadowConfig: const ShadowConfig(disable: true),\n            child: BackdropFilter(\n              filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),\n              child: Container(\n                width: 350,\n                height: 200,\n                padding: const EdgeInsets.all(32),\n                color: Colors.white12,\n                child: Column(\n                  crossAxisAlignment: CrossAxisAlignment.start,\n                  children: [\n                    const Text(\n                      'Flutter Tilt',\n                      style: TextStyle(\n                        fontSize: 18,\n                        color: Colors.white,\n                      ),\n                    ),\n                    Expanded(\n                      child: Align(\n                        alignment: Alignment.bottomRight,\n                        child: ElevatedButton(\n                          child: const Text('Close'),\n                          onPressed: () => Navigator.of(context).pop(),\n                        ),\n                      ),\n                    ),\n                  ],\n                ),\n              ),\n            ),\n          ),\n        ),\n      );\n    },\n  );\n}\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",300,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/dialog.dart","Dialog",null)},
+De(d){return this.adg(d)},
+adg(d){var x=0,w=A.T(y.v),v
+var $async$De=A.U(function(e,f){if(e===1)return A.Q(f,w)
+while(true)switch(x){case 0:v=H.aDP(new B.a_V(),d,y.v)
 x=1
 break
-case 1:return A.S(v,w)}})
-return A.T($async$Di,w)}}
+case 1:return A.R(v,w)}})
+return A.S($async$De,w)}}
 var z=a.updateTypes([])
 B.ajD.prototype={
 $1(d){var x,w
-if(d.p(0,C.w)){x=this.a.gl8().k3.a
-return A.J(31,x>>>16&255,x>>>8&255,x&255)}x=this.a.gl8()
+if(d.p(0,C.w)){x=this.a.gl7().k3.a
+return A.J(31,x>>>16&255,x>>>8&255,x&255)}x=this.a.gl7()
 w=x.p3
 return w==null?x.k2:w},
 $S:9}
 B.ajF.prototype={
 $1(d){var x
-if(d.p(0,C.w)){x=this.a.gl8().k3.a
-return A.J(97,x>>>16&255,x>>>8&255,x&255)}return this.a.gl8().b},
+if(d.p(0,C.w)){x=this.a.gl7().k3.a
+return A.J(97,x>>>16&255,x>>>8&255,x&255)}return this.a.gl7().b},
 $S:9}
 B.ajH.prototype={
 $1(d){var x
-if(d.p(0,C.E)){x=this.a.gl8().b
-return A.J(C.c.ab(25.5),x.gm()>>>16&255,x.gm()>>>8&255,x.gm()&255)}if(d.p(0,C.J)){x=this.a.gl8().b
-return A.J(20,x.gm()>>>16&255,x.gm()>>>8&255,x.gm()&255)}if(d.p(0,C.K)){x=this.a.gl8().b
+if(d.p(0,C.E)){x=this.a.gl7().b
+return A.J(C.c.ab(25.5),x.gm()>>>16&255,x.gm()>>>8&255,x.gm()&255)}if(d.p(0,C.J)){x=this.a.gl7().b
+return A.J(20,x.gm()>>>16&255,x.gm()>>>8&255,x.gm()&255)}if(d.p(0,C.K)){x=this.a.gl7().b
 return A.J(C.c.ab(25.5),x.gm()>>>16&255,x.gm()>>>8&255,x.gm()&255)}return null},
 $S:29}
 B.ajE.prototype={
@@ -146,25 +146,25 @@ $1(d){if(d.p(0,C.w))return C.b5
 return C.b_},
 $S:43}
 B.a_W.prototype={
-$0(){return this.a.Di(this.b)},
+$0(){return this.a.De(this.b)},
 $S:0}
 B.a_V.prototype={
-$1(d){var x=null,w=$.a4(),v=w.rO(5,5,C.ak),u=A.bM(30)
-w=w.rO(10,10,C.ak)
-return A.Hi(new A.e7(C.t,x,x,E.de(x,u,A.Hi(A.b2(x,A.d_(A.b([D.Wd,A.mh(new A.e7(M.lq,x,x,B.ay8(C.Ww,new B.a_U(d)),x),1,x)],y.l),C.ad,C.C,C.z),C.k,D.CK,x,200,x,I.mP,350),w),F.aU,D.Hz,x,x,G.bW,K.zz,x),x),v)},
+$1(d){var x=null,w=$.a4(),v=w.rN(5,5,C.ak),u=A.bM(30)
+w=w.rN(10,10,C.ak)
+return A.Hh(new A.e6(C.t,x,x,E.de(x,u,A.Hh(A.b2(x,A.d_(A.b([D.Wd,A.mh(new A.e6(M.lq,x,x,B.ay3(C.Ww,new B.a_U(d)),x),1,x)],y.l),C.ad,C.C,C.z),C.k,D.CK,x,200,x,I.mP,350),w),F.aU,D.Hz,x,x,G.bW,K.zz,x),x),v)},
 $S:200}
 B.a_U.prototype={
-$0(){return A.tU(this.a,!1).eB()},
+$0(){return A.tU(this.a,!1).eA()},
 $S:0};(function inheritance(){var x=a.inherit,w=a.inheritMany
-x(B.IV,A.rE)
-x(B.Qf,A.bh)
+x(B.IU,A.rE)
+x(B.Qf,A.bf)
 w(A.d6,[B.ajD,B.ajF,B.ajH,B.ajE,B.ajG,B.a_V])
 x(B.oM,A.Y)
 w(A.es,[B.a_W,B.a_U])})()
-A.cJ(b.typeUniverse,JSON.parse('{"IV":{"I":[],"c":[]},"Qf":{"bh":[]},"oM":{"Y":[],"c":[]},"aJ_":{"cV":[],"aS":[],"aF":[],"c":[]}}'))
-var y={u:A.M("aJ_"),l:A.M("o<c>"),z:A.M("bx<i>"),B:A.M("bx<cN>"),g:A.M("bx<l?>"),x:A.M("aO<F>"),d:A.M("aO<i?>"),D:A.M("aO<c3?>"),v:A.M("~")};(function constants(){D.CK=new A.i(1040187391)
+A.cJ(b.typeUniverse,JSON.parse('{"IU":{"I":[],"c":[]},"Qf":{"bf":[]},"oM":{"Y":[],"c":[]},"aIX":{"cV":[],"aR":[],"aF":[],"c":[]}}'))
+var y={u:A.M("aIX"),l:A.M("o<c>"),z:A.M("bx<i>"),B:A.M("bx<cN>"),g:A.M("bx<l?>"),x:A.M("aN<F>"),d:A.M("aN<i?>"),D:A.M("aN<c3?>"),v:A.M("~")};(function constants(){D.CK=new A.i(1040187391)
 D.Hz=new E.jx(!1,C.j,0,0.5,4,F.nm,null)
 D.Wd=new A.b5("Flutter Tilt",null,L.zk,null,null,null,null,null)
 D.Ws=new A.b5("Show Dialog",null,null,null,null,null,null,null)})()};
 ((a,b)=>{a[b]=a.current
-a.eventLog.push({p:"main.dart.js_24",e:"endPart",h:b})})($__dart_deferred_initializers__,"8+QtXHuyxILhxnCO1I2MxFLs19M=");
+a.eventLog.push({p:"main.dart.js_24",e:"endPart",h:b})})($__dart_deferred_initializers__,"kJ6eQ6Q1QeEnRg/TIwFl0J4jyRA=");
