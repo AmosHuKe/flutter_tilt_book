@@ -2,7 +2,7 @@
 a[b][c]=a[b][c]||[]
 a[b][c].push({p:"main.dart.js_47",e:"beginPart"})})(self,"$__dart_deferred_initializers__","eventLog")
 $__dart_deferred_initializers__.current=function(a,b,c,$){var C,D,F,I,G,K,L,M,H,E,N,A={
-aN7(){return new A.ns(null)},
+aN8(){return new A.ns(null)},
 ns:function ns(d){this.a=d},
 Vg:function Vg(d){var _=this
 _.d=d
@@ -64,13 +64,13 @@ A.ns.prototype={
 a8(){return new A.Vg(C.bQ([B.dK,B.dL],y.f))}}
 A.Vg.prototype={
 E(d){var x,w,v,u,t,s,r,q,p,o,n=this,m=null,l=n.d,k=C.j(l).c,j=C.k(C.a0(l,!0,k)),i=C.bM(30)
-k=O.aAS(20,C.a0(l,!0,k),!1)
+k=O.aAT(20,C.a0(l,!0,k),!1)
 k=F.de(m,i,C.b2(D.t,K.bG,D.k,m,B.B6,200,m,m,350),H.aU,H.bz,new A.api(n),new A.apj(n),H.bF,k,m)
 i=E.ex(N.zs,new A.apk(n),l.p(0,B.kS))
 x=E.ex(B.Wa,new A.apn(n),l.p(0,B.dK))
 w=E.ex(B.W2,new A.apo(n),l.p(0,B.dL))
-v=E.ex(B.W1,new A.app(n),l.p(0,B.f6))
-u=E.ex(B.WA,new A.apq(n),l.p(0,B.f7))
+v=E.ex(B.W1,new A.app(n),l.p(0,B.f5))
+u=E.ex(B.WA,new A.apq(n),l.p(0,B.f6))
 t=E.ex(B.Wt,new A.apr(n),l.p(0,$.asP()))
 s=E.ex(B.Wl,new A.aps(n),l.p(0,$.asQ()))
 r=E.ex(B.WD,new A.apt(n),l.p(0,$.asN()))
@@ -90,8 +90,8 @@ u=i?m:p.d.a
 u=C.bB("x: "+C.k(u==null?0:u)+"\xb0",m,m,m,m)
 t=i?m:p.d.b
 t=C.bB("y: "+C.k(t==null?0:t)+"\xb0",m,m,m,m)
-return F.ec(k,"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: TiltConfig(direction: "+j+"),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: const BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topLeft,\n        end: Alignment.bottomRight,\n        colors: [Color(0xFF667eea), Color(0xFF764ba2)],\n      ),\n    ),\n    child: const Text(\n      'Flutter Tilt \u2728',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",500,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/tilt_direction.dart","Tilt Direction",C.b([l,H.kD,C.lo(D.aq,C.b([new I.BS(350,200,p,m),C.d4(C.d_(C.b([G.zu,x,w,G.dE,v,u,t,G.dE,G.zv,C.bB(C.k(i?m:p.c),m,m,m,m)],o),D.ad,D.C,D.z),m,200)],o),D.aq,24,64)],o))}}
-var z=a.updateTypes(["~(nr,hR)"])
+return F.ec(k,"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: TiltConfig(direction: "+j+"),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: const BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topLeft,\n        end: Alignment.bottomRight,\n        colors: [Color(0xFF667eea), Color(0xFF764ba2)],\n      ),\n    ),\n    child: const Text(\n      'Flutter Tilt \u2728',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",500,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/tilt_direction.dart","Tilt Direction",C.b([l,H.kD,C.lo(D.aq,C.b([new I.BT(350,200,p,m),C.d4(C.d_(C.b([G.zu,x,w,G.dE,v,u,t,G.dE,G.zv,C.bB(C.k(i?m:p.c),m,m,m,m)],o),D.ad,D.C,D.z),m,200)],o),D.aq,24,64)],o))}}
+var z=a.updateTypes(["~(nr,hS)"])
 A.apj.prototype={
 $2(d,e){var x=this.a
 x.a0(new A.ap8(x,d))},
@@ -139,8 +139,8 @@ x.a0(new A.ape(x,d))},
 $S:7}
 A.ape.prototype={
 $0(){var x=this.a.d
-if(this.b)x.C(0,B.f6)
-else x.B(0,B.f6)},
+if(this.b)x.C(0,B.f5)
+else x.B(0,B.f5)},
 $S:0}
 A.apq.prototype={
 $1(d){var x=this.a
@@ -148,8 +148,8 @@ x.a0(new A.apd(x,d))},
 $S:7}
 A.apd.prototype={
 $0(){var x=this.a.d
-if(this.b)x.C(0,B.f7)
-else x.B(0,B.f7)},
+if(this.b)x.C(0,B.f6)
+else x.B(0,B.f6)},
 $S:0}
 A.apr.prototype={
 $1(d){var x=this.a
@@ -231,14 +231,14 @@ B.WD=new C.b5("bottomLeft",null,null,null,null,null,null,null)
 B.kS=new F.ek(0,0)
 B.dK=new F.ek(0,1)
 B.dL=new F.ek(0,-1)
-B.f6=new F.ek(1,0)
+B.f5=new F.ek(1,0)
 B.kT=new F.ek(0.8,0.7)
 B.kU=new F.ek(-0.3,-0.4)
-B.f7=new F.ek(-1,0)
+B.f6=new F.ek(-1,0)
 B.kV=new F.ek(0.8,0.4)})();(function lazyInitializers(){var x=a.lazy
-x($,"aVX","asP",()=>B.dK.M(0,B.f6))
-x($,"aVY","asQ",()=>B.dK.M(0,B.f7))
-x($,"aVV","asN",()=>B.dL.M(0,B.f6))
-x($,"aVW","asO",()=>B.dL.M(0,B.f7))})()};
+x($,"aVY","asP",()=>B.dK.M(0,B.f5))
+x($,"aVZ","asQ",()=>B.dK.M(0,B.f6))
+x($,"aVW","asN",()=>B.dL.M(0,B.f5))
+x($,"aVX","asO",()=>B.dL.M(0,B.f6))})()};
 ((a,b)=>{a[b]=a.current
-a.eventLog.push({p:"main.dart.js_47",e:"endPart",h:b})})($__dart_deferred_initializers__,"+nIMlJ5GEfxKBaA/04MWs7icT+s=");
+a.eventLog.push({p:"main.dart.js_47",e:"endPart",h:b})})($__dart_deferred_initializers__,"6EEGzU9ebfMMDU4prBDvkRikUsw=");
