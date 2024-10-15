@@ -2,7 +2,7 @@
 a[b][c]=a[b][c]||[]
 a[b][c].push({p:"main.dart.js_12",e:"beginPart"})})(self,"$__dart_deferred_initializers__","eventLog")
 $__dart_deferred_initializers__.current=function(a,b,c,$){var B,D,G,A={
-aKP(){return new A.pV(null)},
+aKQ(){return new A.pV(null)},
 pV:function pV(d){this.a=d},
 wT:function wT(d){this.a=d},
 On:function On(d,e){var _=this
@@ -12,14 +12,14 @@ _.r=!1
 _.dN$=d
 _.bm$=e
 _.c=_.a=null},
-ahk:function ahk(d){this.a=d},
-ahi:function ahi(d){this.a=d},
+ahl:function ahl(d){this.a=d},
 ahj:function ahj(d){this.a=d},
-aha:function aha(d){this.a=d},
+ahk:function ahk(d){this.a=d},
 ahb:function ahb(d){this.a=d},
-ah9:function ah9(d){this.a=d},
-ah7:function ah7(d){this.a=d},
+ahc:function ahc(d){this.a=d},
+aha:function aha(d){this.a=d},
 ah8:function ah8(d){this.a=d},
+ah9:function ah9(d){this.a=d},
 FZ:function FZ(){}},C,H,E,F,I,K,L
 B=c[0]
 D=c[2]
@@ -45,18 +45,18 @@ w=y.g
 v.e=new B.al(B.cz(C.Er,x,C.Ex),new B.ag(1.2,1.26,w),w.h("al<aj.T>"))
 w=v.d
 w.b1()
-w=w.bu$
+w=w.bv$
 w.b=!0
-w.a.push(new A.ahk(v))},
+w.a.push(new A.ahl(v))},
 l(){var x=this.d
 x===$&&B.a()
 x.l()
-this.a_G()},
+this.a_H()},
 E(d){var x,w=this,v=null,u=B.bM(24),t=w.e
 t===$&&B.a()
-t=B.acs(D.t,I.f3(L.kL("assets/parallax_card/Artwork-MichaHuigen.jpg",D.aW,v,360),K.hk),D.aW,t)
+t=B.act(D.t,I.f3(L.kL("assets/parallax_card/Artwork-MichaHuigen.jpg",D.aW,v,360),K.hk),D.aW,t)
 x=w.f
-return B.mH(D.bj,B.iO(E.de(v,u,F.kE,new E.he(D.ai,B.b([t,B.auk(0,B.aH1(B.b2(v,C.Nj,D.k,v,C.Be,v,v,v,v),D.bR,x))],y.e),D.ai),G.eu,v,v,H.yr,C.WI,v),D.b_,v,new A.ah7(w),new A.ah8(w),v),new A.ah9(w),new A.aha(w),v,v,v,new A.ahb(w))}}
+return B.mH(D.bj,B.iO(E.de(v,u,F.kE,new E.he(D.ai,B.b([t,B.aul(0,B.aH2(B.b2(v,C.Nj,D.k,v,C.Be,v,v,v,v),D.bR,x))],y.e),D.ai),G.eu,v,v,H.yr,C.WI,v),D.b_,v,new A.ah8(w),new A.ah9(w),v),new A.aha(w),new A.ahb(w),v,v,v,new A.ahc(w))}}
 A.FZ.prototype={
 l(){var x=this,w=x.bm$
 if(w!=null)w.H(x.gfe())
@@ -66,69 +66,69 @@ bf(){this.c9()
 this.bW()
 this.ff()}}
 var z=a.updateTypes([])
-A.ahk.prototype={
+A.ahl.prototype={
 $0(){var x=this.a,w=x.d
 w===$&&B.a()
 w=w.Q
 w===$&&B.a()
 switch(w.a){case 1:if(x.f===1)return
-x.a0(new A.ahi(x))
+x.a0(new A.ahj(x))
 break
 case 2:if(x.f===0)return
-x.a0(new A.ahj(x))
+x.a0(new A.ahk(x))
 break
 case 0:case 3:break}},
 $S:0}
-A.ahi.prototype={
+A.ahj.prototype={
 $0(){return this.a.f=1},
 $S:0}
-A.ahj.prototype={
+A.ahk.prototype={
 $0(){return this.a.f=0},
 $S:0}
-A.aha.prototype={
+A.ahb.prototype={
 $1(d){var x=this.a
 if(x.r)return
 x=x.d
 x===$&&B.a()
 x.by()},
-$S:38}
-A.ahb.prototype={
+$S:46}
+A.ahc.prototype={
 $1(d){var x=this.a
 if(x.r)return
 x=x.d
 x===$&&B.a()
 x.ce()},
 $S:108}
-A.ah9.prototype={
+A.aha.prototype={
 $1(d){var x=this.a
 if(x.r)return
 x=x.d
 x===$&&B.a()
 x.ce()},
 $S:82}
-A.ah7.prototype={
-$1(d){var x=this.a
-x.r=!0
-x=x.d
-x===$&&B.a()
-x.by()},
-$S:39}
 A.ah8.prototype={
 $1(d){var x=this.a
 x.r=!0
 x=x.d
 x===$&&B.a()
+x.by()},
+$S:40}
+A.ah9.prototype={
+$1(d){var x=this.a
+x.r=!0
+x=x.d
+x===$&&B.a()
 x.ce()},
-$S:36};(function aliases(){var x=A.FZ.prototype
-x.a_G=x.l})();(function inheritance(){var x=a.mixinHard,w=a.inherit,v=a.inheritMany
+$S:37};(function aliases(){var x=A.FZ.prototype
+x.a_H=x.l})();(function inheritance(){var x=a.mixinHard,w=a.inherit,v=a.inheritMany
 w(A.pV,B.Y)
 w(A.wT,B.I)
 w(A.FZ,B.X)
 w(A.On,A.FZ)
-v(B.es,[A.ahk,A.ahi,A.ahj])
-v(B.d6,[A.aha,A.ahb,A.ah9,A.ah7,A.ah8])
+v(B.es,[A.ahl,A.ahj,A.ahk])
+v(B.d6,[A.ahb,A.ahc,A.aha,A.ah8,A.ah9])
 x(A.FZ,B.eG)})()
-B.cJ(b.typeUniverse,JSON.parse('{"wT":{"I":[],"c":[]},"pV":{"Y":[],"c":[]},"On":{"X":["wT"]}}'))
+B.cI(b.typeUniverse,JSON.parse('{"wT":{"I":[],"c":[]},"pV":{"Y":[],"c":[]},"On":{"X":["wT"]}}'))
 var y={e:B.M("o<c>"),g:B.M("ag<F>")};(function constants(){var x=a.makeConstList
 C.Ar=new A.wT(null)
 C.IV=B.b(x([D.mo,D.N]),B.M("o<i>"))
@@ -136,7 +136,7 @@ C.HM=new B.dy(D.bL,D.br,D.ak,C.IV,null,null)
 C.Be=new B.be(null,null,null,null,null,C.HM,D.F)
 C.Er=new B.d7(0.16,1,0.3,1)
 C.Ex=new B.d7(0.6,0.04,0.98,0.335)
-C.Fh=new B.aD(24e5)
+C.Fh=new B.aE(24e5)
 C.FO=new B.ak(28,20,28,20)
 C.Wv=new B.b5("Artwork",null,D.dJ,null,null,null,null,null)
 C.SO=new B.l(!0,D.j,null,null,null,null,40,D.am,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
@@ -149,4 +149,4 @@ C.En=new B.rU(D.aE,D.tu,D.z,D.ad,null,D.bq,null,C.IE,null)
 C.Nj=new B.bp(C.FO,C.En,null)
 C.WI=new E.e1(!1,null,6,null,!0,D.aW,!0,!0,!0,!1,D.bR,D.G)})()};
 ((a,b)=>{a[b]=a.current
-a.eventLog.push({p:"main.dart.js_12",e:"endPart",h:b})})($__dart_deferred_initializers__,"8bpSkx++ttOKEz9KLD41ltH5Ve8=");
+a.eventLog.push({p:"main.dart.js_12",e:"endPart",h:b})})($__dart_deferred_initializers__,"hcRVkOe4iULf86s07rlLDHq6i1U=");
