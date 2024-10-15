@@ -41,9 +41,9 @@ jobs:
         run: |
           flutter --version
           flutter pub get
-      - name: Build web (CanvasKit)
+      - name: Build web (wasm)
         run: |
-          flutter build web --web-renderer canvaskit --release
+          flutter build web --wasm --release
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:

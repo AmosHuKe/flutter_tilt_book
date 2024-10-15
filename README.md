@@ -2,7 +2,7 @@
 
 https://amoshuke.github.io/flutter_tilt_book
 
-Flutter 3.24.2
+Flutter 3.24.3
 
 ```sh
 # run
@@ -11,8 +11,8 @@ $ flutter run -d chrome
 # build web
 $ flutter build web --release
 
-# build web canvaskit
-$ flutter build web --web-renderer canvaskit --release
+# build web wasm
+$ flutter build web --wasm --release
 ```
 
 © AmosHuKe
