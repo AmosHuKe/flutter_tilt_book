@@ -1,8 +1,8 @@
-# flutter_tilt_book
+# Flutter Tilt Book
 
 https://amoshuke.github.io/flutter_tilt_book
 
-Flutter 3.24.3
+Flutter 3.24.5
 
 ```sh
 # run
