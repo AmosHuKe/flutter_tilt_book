@@ -14,7 +14,7 @@ D=a.updateHolder(c[16],D)
 B=c[58]
 D.pi.prototype={
 E(d){var y=null
-return F.ec(F.de(y,A.bM(30),A.b2(C.t,G.bG,C.k,y,B.B9,200,y,y,350),E.aU,E.bz,y,y,E.bF,H.zz,y),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: const TiltConfig(\n    enableRevert: false,\n    enableSensorRevert: false,\n  ),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: const BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topCenter,\n        end: Alignment.bottomCenter,\n        colors: [Color(0xFF3cba92), Color(0xFF0ba360)],\n      ),\n    ),\n    child: const Text(\n      'Flutter Tilt \u2728',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",500,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/keep_tilt.dart","Keep Tilt",y)}}
+return F.ef(F.de(y,A.bM(30),A.b2(C.t,G.bG,C.k,y,B.B9,200,y,y,350),E.aU,E.bz,y,y,E.bF,H.zz,y),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: const TiltConfig(\n    enableRevert: false,\n    enableSensorRevert: false,\n  ),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: const BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topCenter,\n        end: Alignment.bottomCenter,\n        colors: [Color(0xFF3cba92), Color(0xFF0ba360)],\n      ),\n    ),\n    child: const Text(\n      'Flutter Tilt \u2728',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",500,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/keep_tilt.dart","Keep Tilt",y)}}
 var z=a.updateTypes([]);(function inheritance(){var y=a.inherit
 y(D.pi,A.Y)})()
 A.cI(b.typeUniverse,JSON.parse('{"pi":{"Y":[],"c":[]}}'));(function constants(){var y=a.makeConstList
@@ -24,4 +24,4 @@ B.IO=A.b(y([B.Dg,B.D_]),A.M("o<i>"))
 B.HO=new A.dy(C.bL,C.br,C.ak,B.IO,null,null)
 B.B9=new A.be(null,null,null,null,null,B.HO,C.F)})()};
 ((a,b)=>{a[b]=a.current
-a.eventLog.push({p:"main.dart.js_46",e:"endPart",h:b})})($__dart_deferred_initializers__,"izz3ggSl83y2Hkn+Rf4/fNI2vAU=");
+a.eventLog.push({p:"main.dart.js_46",e:"endPart",h:b})})($__dart_deferred_initializers__,"uggfamcoIRdYNNyt4Bj3dmrN3wc=");

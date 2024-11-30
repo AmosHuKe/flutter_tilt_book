@@ -4,7 +4,7 @@ a[b][c].push({p:"main.dart.js_47",e:"beginPart"})})(self,"$__dart_deferred_initi
 $__dart_deferred_initializers__.current=function(a,b,c,$){var C,D,F,I,G,K,L,M,H,E,N,A={
 aN9(){return new A.ns(null)},
 ns:function ns(d){this.a=d},
-Vg:function Vg(d){var _=this
+Vh:function Vh(d){var _=this
 _.d=d
 _.c=_.a=_.e=null},
 apk:function apk(d){this.a=d},
@@ -61,24 +61,24 @@ A=a.updateHolder(c[17],A)
 B=c[71]
 O=c[25]
 A.ns.prototype={
-a8(){return new A.Vg(C.bQ([B.dK,B.dL],y.f))}}
-A.Vg.prototype={
+a8(){return new A.Vh(C.bQ([B.dK,B.dL],y.f))}}
+A.Vh.prototype={
 E(d){var x,w,v,u,t,s,r,q,p,o,n=this,m=null,l=n.d,k=C.j(l).c,j=C.k(C.a0(l,!0,k)),i=C.bM(30)
 k=O.aAU(20,C.a0(l,!0,k),!1)
 k=F.de(m,i,C.b2(D.t,K.bG,D.k,m,B.B6,200,m,m,350),H.aU,H.bz,new A.apj(n),new A.apk(n),H.bF,k,m)
-i=E.ex(N.zs,new A.apl(n),l.p(0,B.kS))
-x=E.ex(B.Wa,new A.apo(n),l.p(0,B.dK))
-w=E.ex(B.W2,new A.app(n),l.p(0,B.dL))
-v=E.ex(B.W1,new A.apq(n),l.p(0,B.f5))
-u=E.ex(B.WA,new A.apr(n),l.p(0,B.f6))
-t=E.ex(B.Wt,new A.aps(n),l.p(0,$.asQ()))
-s=E.ex(B.Wl,new A.apt(n),l.p(0,$.asR()))
-r=E.ex(B.WD,new A.apu(n),l.p(0,$.asO()))
-q=E.ex(B.Wy,new A.apv(n),l.p(0,$.asP()))
-p=E.ex(B.Wn,new A.apm(n),l.p(0,B.kV))
+i=E.ez(N.zs,new A.apl(n),l.p(0,B.kS))
+x=E.ez(B.Wa,new A.apo(n),l.p(0,B.dK))
+w=E.ez(B.W2,new A.app(n),l.p(0,B.dL))
+v=E.ez(B.W1,new A.apq(n),l.p(0,B.f5))
+u=E.ez(B.WA,new A.apr(n),l.p(0,B.f6))
+t=E.ez(B.Wt,new A.aps(n),l.p(0,$.asQ()))
+s=E.ez(B.Wl,new A.apt(n),l.p(0,$.asR()))
+r=E.ez(B.WD,new A.apu(n),l.p(0,$.asO()))
+q=E.ez(B.Wy,new A.apv(n),l.p(0,$.asP()))
+p=E.ez(B.Wn,new A.apm(n),l.p(0,B.kV))
 l=l.p(0,B.kT)&&l.p(0,B.kU)
 o=y.e
-l=C.lo(D.aq,C.b([i,x,w,v,u,t,s,r,q,p,E.ex(B.Wx,new A.apn(n),l)],o),D.aq,12,12)
+l=C.lp(D.aq,C.b([i,x,w,v,u,t,s,r,q,p,E.ez(B.Wx,new A.apn(n),l)],o),D.aq,12,12)
 p=n.e
 i=p==null
 x=i?m:p.b.a
@@ -90,7 +90,7 @@ u=i?m:p.d.a
 u=C.bB("x: "+C.k(u==null?0:u)+"\xb0",m,m,m,m)
 t=i?m:p.d.b
 t=C.bB("y: "+C.k(t==null?0:t)+"\xb0",m,m,m,m)
-return F.ec(k,"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: TiltConfig(direction: "+j+"),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: const BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topLeft,\n        end: Alignment.bottomRight,\n        colors: [Color(0xFF667eea), Color(0xFF764ba2)],\n      ),\n    ),\n    child: const Text(\n      'Flutter Tilt \u2728',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",500,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/tilt_direction.dart","Tilt Direction",C.b([l,H.kD,C.lo(D.aq,C.b([new I.BT(350,200,p,m),C.d4(C.d_(C.b([G.zu,x,w,G.dE,v,u,t,G.dE,G.zv,C.bB(C.k(i?m:p.c),m,m,m,m)],o),D.ad,D.C,D.z),m,200)],o),D.aq,24,64)],o))}}
+return F.ef(k,"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: TiltConfig(direction: "+j+"),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: const BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topLeft,\n        end: Alignment.bottomRight,\n        colors: [Color(0xFF667eea), Color(0xFF764ba2)],\n      ),\n    ),\n    child: const Text(\n      'Flutter Tilt \u2728',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",500,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/tilt_direction.dart","Tilt Direction",C.b([l,H.kD,C.lp(D.aq,C.b([new I.BT(350,200,p,m),C.d4(C.d0(C.b([G.zu,x,w,G.dE,v,u,t,G.dE,G.zv,C.bB(C.k(i?m:p.c),m,m,m,m)],o),D.ad,D.C,D.z),m,200)],o),D.aq,24,64)],o))}}
 var z=a.updateTypes(["~(nr,hS)"])
 A.apk.prototype={
 $2(d,e){var x=this.a
@@ -207,12 +207,12 @@ x.C(0,B.kU)}else{x.B(0,B.kT)
 x.B(0,B.kU)}},
 $S:0};(function inheritance(){var x=a.inherit,w=a.inheritMany
 x(A.ns,C.I)
-x(A.Vg,C.X)
+x(A.Vh,C.X)
 w(C.kr,[A.apk,A.apj])
-w(C.es,[A.ap9,A.apa,A.api,A.aph,A.apg,A.apf,A.ape,A.apd,A.apc,A.apb,A.ap8,A.ap7,A.ap6])
+w(C.eu,[A.ap9,A.apa,A.api,A.aph,A.apg,A.apf,A.ape,A.apd,A.apc,A.apb,A.ap8,A.ap7,A.ap6])
 w(C.d6,[A.apl,A.apo,A.app,A.apq,A.apr,A.aps,A.apt,A.apu,A.apv,A.apm,A.apn])})()
-C.cI(b.typeUniverse,JSON.parse('{"ns":{"I":[],"c":[]},"Vg":{"X":["ns"]}}'))
-var y={e:C.M("o<c>"),f:C.M("ek")};(function constants(){var x=a.makeConstList
+C.cI(b.typeUniverse,JSON.parse('{"ns":{"I":[],"c":[]},"Vh":{"X":["ns"]}}'))
+var y={e:C.M("o<c>"),f:C.M("en")};(function constants(){var x=a.makeConstList
 B.Dv=new C.i(4284907242)
 B.Dy=new C.i(4285942690)
 B.IQ=C.b(x([B.Dv,B.Dy]),C.M("o<i>"))
@@ -228,17 +228,17 @@ B.Wx=new C.b5("Left: 0.8, Right: 0.3, Top: 0.7, Bottom: 0.4",null,null,null,null
 B.Wy=new C.b5("bottomRight",null,null,null,null,null,null,null)
 B.WA=new C.b5("right",null,null,null,null,null,null,null)
 B.WD=new C.b5("bottomLeft",null,null,null,null,null,null,null)
-B.kS=new F.ek(0,0)
-B.dK=new F.ek(0,1)
-B.dL=new F.ek(0,-1)
-B.f5=new F.ek(1,0)
-B.kT=new F.ek(0.8,0.7)
-B.kU=new F.ek(-0.3,-0.4)
-B.f6=new F.ek(-1,0)
-B.kV=new F.ek(0.8,0.4)})();(function lazyInitializers(){var x=a.lazy
+B.kS=new F.en(0,0)
+B.dK=new F.en(0,1)
+B.dL=new F.en(0,-1)
+B.f5=new F.en(1,0)
+B.kT=new F.en(0.8,0.7)
+B.kU=new F.en(-0.3,-0.4)
+B.f6=new F.en(-1,0)
+B.kV=new F.en(0.8,0.4)})();(function lazyInitializers(){var x=a.lazy
 x($,"aVZ","asQ",()=>B.dK.N(0,B.f5))
 x($,"aW_","asR",()=>B.dK.N(0,B.f6))
 x($,"aVX","asO",()=>B.dL.N(0,B.f5))
 x($,"aVY","asP",()=>B.dL.N(0,B.f6))})()};
 ((a,b)=>{a[b]=a.current
-a.eventLog.push({p:"main.dart.js_47",e:"endPart",h:b})})($__dart_deferred_initializers__,"xoEGJXLP4rnqyoqnaWqJ6KaQZvs=");
+a.eventLog.push({p:"main.dart.js_47",e:"endPart",h:b})})($__dart_deferred_initializers__,"n6OWPLonMOH4hyDcWS9zI+pMPfQ=");
