@@ -1,67 +1,152 @@
 ((a,b,c)=>{a[b]=a[b]||{}
 a[b][c]=a[b][c]||[]
 a[b][c].push({p:"main.dart.js_17",e:"beginPart"})})(self,"$__dart_deferred_initializers__","eventLog")
-$__dart_deferred_initializers__.current=function(a,b,c,$){var A,B,G,E={
-aHb(){return new E.oq(null)},
-oq:function oq(d){this.a=d}},C,I,D,F,H
-A=c[0]
-B=c[2]
-G=c[41]
-E=a.updateHolder(c[7],E)
-C=c[40]
-I=c[42]
-D=c[34]
-F=c[37]
-H=c[29]
-E.oq.prototype={
-E(d){var x,w,v,u,t,s,r,q,p,o,n,m,l,k,j,i,h=null,g="Flutter Tilt",f=A.aW(d,h,y.h).w.a.a,e=f<1580?0.8:1
-if(f<1420)e=0.7
-if(f<1340)e=0.6
-if(f<1280)e=1
-if(f<1150)e=0.8
-if(f<990)e=0.7
-if(f<910)e=0.6
-if(f<830)e=0.5
-if(f<768)e=0.8
-if(f<715)e=0.6
-if(f<560)e=0.4
-if(f<410)e=0.2
-x=y.e
-w=A.b([],x)
-if(e<=0.6)w.push(C.Nf)
-v=A.bM(24)
-u=12*e
-t=A.bM(u)
-s=2*e
-r=500*e
-q=20*e
-p=16*e
-o=6*e
-n=24*e
-t=D.de(A.jg(C.iJ,1,s),t,A.b2(h,A.d0(A.b([A.d0(A.b([A.f0(A.b([A.bB(g,h,h,h,A.fY(h,h,B.cf,h,h,h,h,h,h,h,h,p,h,h,B.am,h,h,!0,h,h,h,h,h,h,h,h)),A.d4(h,h,o),A.p7(C.jr,B.cf,h,p)],x),B.H,B.C,B.z),A.bB("Widget",h,h,h,A.fY(h,h,B.j,h,h,h,h,h,h,h,h,n,h,h,B.am,h,h,!0,h,h,h,h,h,h,h,h))],x),B.ad,B.C,B.z),H.kM("assets/bento_grids/1.png",B.bv,h,h)],x),B.ad,B.cd,B.z),B.k,C.fp,h,r,h,new A.ak(q,q,q,q),250*e),F.aU,C.jv,h,h,G.bW,C.kR,h)
-m=A.d4(h,h,n)
-l=A.bM(u)
-k=A.jg(C.iJ,1,s)
-j=237*e
-i=new A.ak(q,q,q,q).RA(0)
-i=D.de(k,l,A.b2(h,A.f0(A.b([A.d0(A.b([A.f0(A.b([A.bB(g,h,h,h,A.fY(h,h,B.cf,h,h,h,h,h,h,h,h,p,h,h,B.am,h,h,!0,h,h,h,h,h,h,h,h)),A.d4(h,h,o),A.p7(C.jr,B.cf,h,p)],x),B.H,B.C,B.z),A.bB("Element",h,h,h,A.fY(h,h,B.j,h,h,h,h,h,h,h,h,n,h,h,B.am,h,h,!0,h,h,h,h,h,h,h,h))],x),B.ad,B.C,B.z),H.kM("assets/bento_grids/2.png",B.bv,h,h)],x),B.ad,B.cd,B.z),B.k,C.fp,h,j,h,i,r),F.aU,C.jv,h,h,G.bW,C.kR,h)
-l=A.d4(h,n,h)
-u=A.bM(u)
-s=A.jg(C.iJ,1,s)
-q=new A.ak(q,q,q,q).RA(0)
-w.push(A.f0(A.b([A.b2(h,A.f0(A.b([t,m,A.d0(A.b([i,l,D.de(s,u,A.b2(h,A.f0(A.b([A.d0(A.b([A.f0(A.b([A.bB(g,h,h,h,A.fY(h,h,B.cf,h,h,h,h,h,h,h,h,p,h,h,B.am,h,h,!0,h,h,h,h,h,h,h,h)),A.d4(h,h,o),A.p7(C.jr,B.cf,h,p)],x),B.H,B.C,B.z),A.bB("RenderObject",h,h,h,A.fY(h,h,B.j,h,h,h,h,h,h,h,h,n,h,h,B.am,h,h,!0,h,h,h,h,h,h,h,h))],x),B.ad,B.C,B.z),H.kM("assets/bento_grids/3.png",B.bv,h,h)],x),B.ad,B.cd,B.z),B.k,C.fp,h,j,h,q,r),F.aU,C.jv,h,h,G.bW,C.kR,h)],x),B.H,B.C,B.z)],x),B.H,B.C,B.z),B.k,h,new A.be(C.fp,h,h,v,h,h,B.F),h,h,I.mP,h)],x),B.H,B.C,B.ce))
-return D.ef(A.d0(w,B.H,B.C,B.z),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nContainer(\n  padding: const EdgeInsets.all(32),\n  decoration: BoxDecoration(\n    color: const Color(0xFF010101),\n    borderRadius: BorderRadius.circular(24),\n  ),\n  child: Row(\n    children: [\n      /// Tilt here\n      Tilt(\n        tiltConfig: const TiltConfig(\n          angle: 2,\n          enableGestureSensors: false,\n          filterQuality: FilterQuality.high,\n        ),\n        lightConfig: const LightConfig(\n          enableReverse: true,\n          color: Color(0xFF4A3186),\n          spreadFactor: 2,\n        ),\n        shadowConfig: const ShadowConfig(disable: true),\n        borderRadius: BorderRadius.circular(12),\n        border: Border.all(\n          color: const Color(0xFF181818),\n          width: 2,\n          strokeAlign: BorderSide.strokeAlignOutside,\n        ),\n        child: Container(\n          width: 250,\n          height: 500,\n          color: const Color(0xFF010101),\n          padding: const EdgeInsets.all(20),\n          child: Column(\n            crossAxisAlignment: CrossAxisAlignment.start,\n            mainAxisAlignment: MainAxisAlignment.spaceBetween,\n            children: [\n              const Column(\n                crossAxisAlignment: CrossAxisAlignment.start,\n                children: [\n                  Row(\n                    children: [\n                      Text(\n                        'Flutter Tilt',\n                        style: TextStyle(\n                          fontSize: 16,\n                          color: Colors.grey,\n                          fontWeight: FontWeight.bold,\n                        ),\n                      ),\n                      SizedBox(width: 6),\n                      Icon(\n                        Icons.arrow_right_alt,\n                        size: 16,\n                        color: Colors.grey,\n                      ),\n                    ],\n                  ),\n                  Text(\n                    'Widget',\n                    style: TextStyle(\n                      fontSize: 24,\n                      color: Colors.white,\n                      fontWeight: FontWeight.bold,\n                    ),\n                  ),\n                ],\n              ),\n              Image.asset('assets/bento_grids/1.png'),\n            ],\n          ),\n        ),\n      ),\n      const SizedBox(width: 24),\n      Column(\n        children: [\n          /// Tilt here\n          Tilt(\n            tiltConfig: const TiltConfig(\n              angle: 2,\n              enableGestureSensors: false,\n              filterQuality: FilterQuality.high,\n            ),\n            lightConfig: const LightConfig(\n              enableReverse: true,\n              color: Color(0xFF4A3186),\n              spreadFactor: 2,\n            ),\n            shadowConfig: const ShadowConfig(disable: true),\n            borderRadius: BorderRadius.circular(12),\n            border: Border.all(\n              color: const Color(0xFF181818),\n              width: 2,\n              strokeAlign: BorderSide.strokeAlignOutside,\n            ),\n            child: Container(\n              width: 500,\n              height: 237,\n              color: const Color(0xFF010101),\n              padding:\n                  const EdgeInsets.all(20).copyWith(right: 0),\n              child: Row(\n                crossAxisAlignment: CrossAxisAlignment.start,\n                mainAxisAlignment: MainAxisAlignment.spaceBetween,\n                children: [\n                  const Column(\n                    crossAxisAlignment: CrossAxisAlignment.start,\n                    children: [\n                      Row(\n                        children: [\n                          Text(\n                            'Flutter Tilt',\n                            style: TextStyle(\n                              fontSize: 16,\n                              color: Colors.grey,\n                              fontWeight: FontWeight.bold,\n                            ),\n                          ),\n                          SizedBox(width: 6),\n                          Icon(\n                            Icons.arrow_right_alt,\n                            size: 16,\n                            color: Colors.grey,\n                          ),\n                        ],\n                      ),\n                      Text(\n                        'Element',\n                        style: TextStyle(\n                          fontSize: 24,\n                          color: Colors.white,\n                          fontWeight: FontWeight.bold,\n                        ),\n                      ),\n                    ],\n                  ),\n                  Image.asset('assets/bento_grids/2.png'),\n                ],\n              ),\n            ),\n          ),\n          const SizedBox(height: 24),\n\n          /// Tilt here\n          Tilt(\n            tiltConfig: const TiltConfig(\n              angle: 2,\n              enableGestureSensors: false,\n              filterQuality: FilterQuality.high,\n            ),\n            lightConfig: const LightConfig(\n              enableReverse: true,\n              color: Color(0xFF4A3186),\n              spreadFactor: 2,\n            ),\n            shadowConfig: const ShadowConfig(disable: true),\n            borderRadius: BorderRadius.circular(12),\n            border: Border.all(\n              color: const Color(0xFF181818),\n              width: 2,\n              strokeAlign: BorderSide.strokeAlignOutside,\n            ),\n            child: Container(\n              width: 500,\n              height: 237,\n              color: const Color(0xFF010101),\n              padding:\n                  const EdgeInsets.all(20).copyWith(right: 0),\n              child: Row(\n                crossAxisAlignment: CrossAxisAlignment.start,\n                mainAxisAlignment: MainAxisAlignment.spaceBetween,\n                children: [\n                  const Column(\n                    crossAxisAlignment: CrossAxisAlignment.start,\n                    children: [\n                      Row(\n                        children: [\n                          Text(\n                            'Flutter Tilt',\n                            style: TextStyle(\n                              fontSize: 16,\n                              color: Colors.grey,\n                              fontWeight: FontWeight.bold,\n                            ),\n                          ),\n                          SizedBox(width: 6),\n                          Icon(\n                            Icons.arrow_right_alt,\n                            size: 16,\n                            color: Colors.grey,\n                          ),\n                        ],\n                      ),\n                      Text(\n                        'RenderObject',\n                        style: TextStyle(\n                          fontSize: 24,\n                          color: Colors.white,\n                          fontWeight: FontWeight.bold,\n                        ),\n                      ),\n                    ],\n                  ),\n                  Image.asset('assets/bento_grids/3.png'),\n                ],\n              ),\n            ),\n          ),\n        ],\n      ),\n    ],\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",1024,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/bento_grids.dart","Bento Grids",h)}}
-var z=a.updateTypes([]);(function inheritance(){var x=a.inherit
-x(E.oq,A.Y)})()
-A.cI(b.typeUniverse,JSON.parse('{"oq":{"Y":[],"c":[]}}'))
-var y={e:A.M("o<c>"),h:A.M("fV")};(function constants(){C.fp=new A.i(4278255873)
-C.iJ=new A.i(4279769112)
-C.jr=new A.bA(57503,"MaterialIcons",null,!0)
-C.Dm=new A.i(4283052422)
-C.jv=new D.jx(!1,C.Dm,0,0.5,2,F.cb,!0)
-C.FN=new A.ak(24,24,24,24)
-C.WB=new A.b5("Please use wide screen or landscape phone.",null,null,null,null,null,null,null)
-C.Nf=new A.bp(C.FN,C.WB,null)
-C.kR=new D.e4(!1,null,2,null,!1,B.aW,!1,!0,!0,!0,B.Z,B.G)})()};
+$__dart_deferred_initializers__.current=function(a,b,c,$){var B,D,G,A={
+aLb(){return new A.pY(null)},
+pY:function pY(d){this.a=d},
+wV:function wV(d){this.a=d},
+Oz:function Oz(d,e){var _=this
+_.e=_.d=$
+_.f=0
+_.r=!1
+_.dN$=d
+_.bm$=e
+_.c=_.a=null},
+ahA:function ahA(d){this.a=d},
+ahy:function ahy(d){this.a=d},
+ahz:function ahz(d){this.a=d},
+ahq:function ahq(d){this.a=d},
+ahr:function ahr(d){this.a=d},
+ahp:function ahp(d){this.a=d},
+ahn:function ahn(d){this.a=d},
+aho:function aho(d){this.a=d},
+G6:function G6(){}},C,H,E,F,I,K,L
+B=c[0]
+D=c[2]
+G=c[62]
+A=a.updateHolder(c[6],A)
+C=c[68]
+H=c[69]
+E=c[35]
+F=c[38]
+I=c[33]
+K=c[63]
+L=c[30]
+A.pY.prototype={
+E(d){return E.e0(C.Aw,"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nAnimationCard(),\n\n...\n\nclass AnimationCard extends StatefulWidget {\n  const AnimationCard({super.key});\n\n  @override\n  State<AnimationCard> createState() => _AnimationCardState();\n}\n\nclass _AnimationCardState extends State<AnimationCard>\n    with SingleTickerProviderStateMixin {\n  late AnimationController scaleAnimationController;\n  late Animation<double> scaleAnimation;\n  double opacity = 0;\n  bool isHover = false;\n\n  @override\n  void initState() {\n    super.initState();\n    scaleAnimationController = AnimationController(\n      vsync: this,\n      duration: const Duration(milliseconds: 2400),\n      reverseDuration: const Duration(milliseconds: 1000),\n    );\n    scaleAnimation = Tween(begin: 1.2, end: 1.26).animate(\n      CurvedAnimation(\n        parent: scaleAnimationController,\n        curve: const Cubic(0.16, 1, 0.3, 1),\n        reverseCurve: Curves.easeInCirc,\n      ),\n    );\n    scaleAnimationController.addListener(() {\n      switch (scaleAnimationController.status) {\n        case AnimationStatus.forward:\n          if (opacity == 1) return;\n          setState(() => opacity = 1);\n        case AnimationStatus.reverse:\n          if (opacity == 0) return;\n          setState(() => opacity = 0);\n        case AnimationStatus.dismissed:\n        case AnimationStatus.completed:\n      }\n    });\n  }\n\n  @override\n  void dispose() {\n    scaleAnimationController.dispose();\n    super.dispose();\n  }\n\n  @override\n  Widget build(BuildContext context) {\n    return Listener(\n      onPointerDown: (_) {\n        if (isHover) return;\n        scaleAnimationController.forward();\n      },\n      onPointerUp: (_) {\n        if (isHover) return;\n        scaleAnimationController.reverse();\n      },\n      onPointerCancel: (_) {\n        if (isHover) return;\n        scaleAnimationController.reverse();\n      },\n      child: MouseRegion(\n        cursor: SystemMouseCursors.click,\n        onEnter: (_) {\n          isHover = true;\n          scaleAnimationController.forward();\n        },\n        onExit: (_) {\n          isHover = true;\n          scaleAnimationController.reverse();\n        },\n        // Tilt here\n        child: Tilt(\n          borderRadius: BorderRadius.circular(24),\n          tiltConfig: const TiltConfig(\n            angle: 6.0,\n            enableReverse: true,\n            enableOutsideAreaMove: false,\n            leaveDuration: Duration(milliseconds: 600),\n            filterQuality: FilterQuality.high,\n          ),\n          lightConfig: const LightConfig(disable: true),\n          shadowConfig: const ShadowConfig(enableReverse: true),\n          childLayout: ChildLayout(\n            inner: [\n              ScaleTransition(\n                scale: scaleAnimation,\n                alignment: Alignment.center,\n                filterQuality: FilterQuality.high,\n                child: TiltParallax(\n                  child: Image.asset(\n                    'assets/parallax_card/Artwork-MichaHuigen.jpg',\n                    filterQuality: FilterQuality.high,\n                    width: 360.0,\n                  ),\n                ),\n              ),\n              Positioned.fill(\n                child: AnimatedOpacity(\n                  opacity: opacity,\n                  duration: const Duration(milliseconds: 600),\n                  child: Container(\n                    decoration: const BoxDecoration(\n                      gradient: LinearGradient(\n                        begin: Alignment.topCenter,\n                        end: Alignment.bottomCenter,\n                        colors: [Colors.black12, Colors.black87],\n                      ),\n                    ),\n                    child: const Padding(\n                      padding: EdgeInsets.symmetric(\n                        horizontal: 28,\n                        vertical: 20,\n                      ),\n                      child: Column(\n                        crossAxisAlignment: CrossAxisAlignment.start,\n                        mainAxisAlignment: MainAxisAlignment.end,\n                        children: [\n                          Text(\n                            'Artwork',\n                            style: TextStyle(\n                              color: Colors.white,\n                              fontSize: 20.0,\n                            ),\n                          ),\n                          Text(\n                            'Micha Huigen',\n                            style: TextStyle(\n                              color: Colors.white,\n                              fontSize: 40.0,\n                              fontWeight: FontWeight.bold,\n                            ),\n                          ),\n                          SizedBox(height: 12),\n                          Align(\n                            alignment: Alignment.centerRight,\n                            child: Text(\n                              'Flutter Tilt',\n                              style: TextStyle(\n                                color: Colors.white60,\n                                fontSize: 14.0,\n                                fontWeight: FontWeight.bold,\n                              ),\n                            ),\n                          ),\n                        ],\n                      ),\n                    ),\n                  ),\n                ),\n              ),\n            ],\n          ),\n          child: const SizedBox(),\n        ),\n      ),\n    );\n  }\n}\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",1314,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/parallax_card.dart","Parallax Card",null)}}
+A.wV.prototype={
+a6(){return new A.Oz(null,null)}}
+A.Oz.prototype={
+ar(){var x,w,v=this
+v.aH()
+x=B.bv(null,C.Fl,0,D.c8,1,null,v)
+v.d=x
+w=y.g
+v.e=new B.al(B.cz(C.Ev,x,C.EB),new B.ah(1.2,1.26,w),w.h("al<aj.T>"))
+w=v.d
+w.b1()
+w=w.bv$
+w.b=!0
+w.a.push(new A.ahA(v))},
+l(){var x=this.d
+x===$&&B.a()
+x.l()
+this.a_P()},
+E(d){var x,w=this,v=null,u=B.bM(24),t=w.e
+t===$&&B.a()
+t=B.acJ(D.t,I.e9(L.iI("assets/parallax_card/Artwork-MichaHuigen.jpg",D.aX,v,360),K.hl),D.aX,t)
+x=w.f
+return B.mL(D.bl,B.iR(E.d6(v,u,F.hT,new E.fK(D.ae,B.b([t,B.auE(0,B.aHn(B.aY(v,C.Nn,D.k,v,C.Bi,v,v,v,v),D.bS,x))],y.e),D.ae),G.dn,F.a6,v,v,H.yv,C.WP,v),D.b0,v,new A.ahn(w),new A.aho(w),v),new A.ahp(w),new A.ahq(w),v,v,v,new A.ahr(w))}}
+A.G6.prototype={
+l(){var x=this,w=x.bm$
+if(w!=null)w.H(x.gff())
+x.bm$=null
+x.av()},
+bf(){this.ca()
+this.bW()
+this.fg()}}
+var z=a.updateTypes([])
+A.ahA.prototype={
+$0(){var x=this.a,w=x.d
+w===$&&B.a()
+w=w.Q
+w===$&&B.a()
+switch(w.a){case 1:if(x.f===1)return
+x.a_(new A.ahy(x))
+break
+case 2:if(x.f===0)return
+x.a_(new A.ahz(x))
+break
+case 0:case 3:break}},
+$S:0}
+A.ahy.prototype={
+$0(){return this.a.f=1},
+$S:0}
+A.ahz.prototype={
+$0(){return this.a.f=0},
+$S:0}
+A.ahq.prototype={
+$1(d){var x=this.a
+if(x.r)return
+x=x.d
+x===$&&B.a()
+x.by()},
+$S:42}
+A.ahr.prototype={
+$1(d){var x=this.a
+if(x.r)return
+x=x.d
+x===$&&B.a()
+x.ce()},
+$S:82}
+A.ahp.prototype={
+$1(d){var x=this.a
+if(x.r)return
+x=x.d
+x===$&&B.a()
+x.ce()},
+$S:80}
+A.ahn.prototype={
+$1(d){var x=this.a
+x.r=!0
+x=x.d
+x===$&&B.a()
+x.by()},
+$S:40}
+A.aho.prototype={
+$1(d){var x=this.a
+x.r=!0
+x=x.d
+x===$&&B.a()
+x.ce()},
+$S:34};(function aliases(){var x=A.G6.prototype
+x.a_P=x.l})();(function inheritance(){var x=a.mixinHard,w=a.inherit,v=a.inheritMany
+w(A.pY,B.Y)
+w(A.wV,B.I)
+w(A.G6,B.X)
+w(A.Oz,A.G6)
+v(B.eh,[A.ahA,A.ahy,A.ahz])
+v(B.d2,[A.ahq,A.ahr,A.ahp,A.ahn,A.aho])
+x(A.G6,B.eH)})()
+B.cD(b.typeUniverse,JSON.parse('{"wV":{"I":[],"c":[]},"pY":{"Y":[],"c":[]},"Oz":{"X":["wV"]}}'))
+var y={e:B.M("o<c>"),g:B.M("ah<F>")};(function constants(){var x=a.makeConstList
+C.Aw=new A.wV(null)
+C.IY=B.b(x([D.mq,D.N]),B.M("o<i>"))
+C.HP=new B.dy(D.bM,D.bt,D.am,C.IY,null,null)
+C.Bi=new B.b6(null,null,null,null,null,C.HP,D.A)
+C.Ev=new B.d8(0.16,1,0.3,1)
+C.EB=new B.d8(0.6,0.04,0.98,0.335)
+C.Fl=new B.aE(24e5)
+C.FS=new B.ak(28,20,28,20)
+C.WB=new B.b5("Artwork",null,D.dM,null,null,null,null,null)
+C.ST=new B.l(!0,D.j,null,null,null,null,40,D.aj,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+C.Wv=new B.b5("Micha Huigen",null,C.ST,null,null,null,null,null)
+C.Um=new B.l(!0,D.m3,null,null,null,null,14,D.aj,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
+C.Wu=new B.b5("Flutter Tilt",null,C.Um,null,null,null,null,null)
+C.Ar=new B.eg(D.ir,null,null,C.Wu,null)
+C.IH=B.b(x([C.WB,C.Wv,F.hS,C.Ar]),y.e)
+C.Er=new B.rW(D.aG,D.ty,D.z,D.af,null,D.bs,null,C.IH,null)
+C.Nn=new B.bp(C.FS,C.Er,null)
+C.WP=new E.e8(!1,null,6,null,!0,D.aX,!0,!0,!0,!1,D.bS,D.G)})()};
 ((a,b)=>{a[b]=a.current
-a.eventLog.push({p:"main.dart.js_17",e:"endPart",h:b})})($__dart_deferred_initializers__,"DLwToGrMTyWepXUX/fVgCv+VNUk=");
+a.eventLog.push({p:"main.dart.js_17",e:"endPart",h:b})})($__dart_deferred_initializers__,"9ratZTWTQ9DKLHX4UvDTbWemNfg=");

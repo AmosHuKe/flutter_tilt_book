@@ -1,25 +1,51 @@
 ((a,b,c)=>{a[b]=a[b]||{}
 a[b][c]=a[b][c]||[]
 a[b][c].push({p:"main.dart.js_54",e:"beginPart"})})(self,"$__dart_deferred_initializers__","eventLog")
-$__dart_deferred_initializers__.current=function(a,b,c,$){var B,A,D,G,E,H,I,K,C={
-aJS(){return new C.pc(null)},
-pc:function pc(d){this.a=d}},F
-B=c[0]
-A=c[2]
-D=c[34]
-G=c[38]
-E=c[37]
-H=c[32]
-I=c[56]
-K=c[35]
-C=a.updateHolder(c[20],C)
-F=c[57]
-C.pc.prototype={
-E(d){var x=null,w=B.bM(30),v=B.b([B.d2(x,H.f4(B.b2(A.t,G.bG,A.k,A.l,x,60,x,x,200),I.tU),x,x,x,x,x,x)],y.a)
-return D.ef(D.de(x,w,B.b2(A.t,x,A.k,x,K.ix,200,x,x,350),new D.hf(v,A.ai,A.ai),E.bz,x,x,E.bF,F.WM,x),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  tiltConfig: const TiltConfig(initial: Offset(-1.0, -1.0)),\n  childLayout: ChildLayout(\n    outer: [\n      Positioned(\n        child: TiltParallax(\n          size: const Offset(20, 20),\n          child: Container(\n            width: 200,\n            height: 60,\n            alignment: Alignment.center,\n            color: Colors.black,\n            child: const Text(\n              'Flutter Tilt \u2728',\n              style: TextStyle(\n                fontSize: 20,\n                color: Colors.white,\n              ),\n            ),\n          ),\n        ),\n      ),\n    ],\n  ),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: const BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topRight,\n        end: Alignment.bottomLeft,\n        colors: [Color(0xFF80d0c7), Color(0xFF13547a)],\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",500,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/initial_tilt.dart","Initial Tilt",x)}}
-var z=a.updateTypes([]);(function inheritance(){var x=a.inherit
-x(C.pc,B.Y)})()
-B.cI(b.typeUniverse,JSON.parse('{"pc":{"Y":[],"c":[]}}'))
-var y={a:B.M("o<c>")};(function constants(){F.WM=new D.e4(!1,A.MU,10,null,!1,null,!0,!0,!0,!0,A.Z,A.G)})()};
+$__dart_deferred_initializers__.current=function(a,b,c,$){var C,D,G,H,E,I,B,K,A={
+aMJ(){return new A.nj(null)},
+nj:function nj(d){this.a=d},
+Ul:function Ul(d){this.d=d
+this.c=this.a=null},
+aok:function aok(d){this.a=d},
+aoj:function aoj(d,e){this.a=d
+this.b=e},
+aoi:function aoi(d,e,f){this.a=d
+this.b=e
+this.c=f}},F,L
+C=c[0]
+D=c[2]
+G=c[62]
+H=c[29]
+E=c[35]
+I=c[39]
+B=c[38]
+K=c[71]
+A=a.updateHolder(c[20],A)
+F=c[72]
+L=c[25]
+A.nj.prototype={
+a6(){return new A.Ul(B.yx)}}
+A.Ul.prototype={
+E(d){var x=null,w=this.d.k(0),v=C.bM(30),u=L.aAA(this.d,!1),t=y.c
+return E.e0(E.d6(x,v,C.aY(D.t,I.bH,D.k,x,K.lA,200,x,x,350),B.aV,G.dn,B.a6,x,x,u,B.f6,x),"import 'package:flutter_tilt/flutter_tilt.dart';\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n\nTilt(\n  borderRadius: BorderRadius.circular(30),\n  lightConfig: const LightConfig(disable: true),\n  shadowConfig: ShadowConfig(direction: "+w+"),\n  child: Container(\n    width: 350,\n    height: 200,\n    alignment: Alignment.center,\n    decoration: const BoxDecoration(\n      gradient: LinearGradient(\n        begin: Alignment.topCenter,\n        end: Alignment.bottomCenter,\n        colors: [Color(0xFF8989ba), Color(0xFFa7a6cb)],\n      ),\n    ),\n    child: const Text(\n      'Flutter Tilt \u2728',\n      style: TextStyle(\n        fontSize: 20,\n        color: Colors.white,\n      ),\n    ),\n  ),\n),\n\n\xb7\xb7\xb7\xb7\xb7\xb7\n",500,"https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/shadow_direction.dart","Shadow Direction",C.b([C.k2(D.an,C.Z(new C.a3(F.JV,new A.aok(this),t),!0,t.h("aw.E")),D.an,12,12)],y.e))}}
+var z=a.updateTypes(["hh(dA)"])
+A.aok.prototype={
+$1(d){var x=null,w=this.a
+return H.atv(C.bx(d.b,x,x,x,x),new A.aoj(w,d),w.d===d)},
+$S:z+0}
+A.aoj.prototype={
+$1(d){var x=this.a
+x.a_(new A.aoi(x,d,this.b))},
+$S:7}
+A.aoi.prototype={
+$0(){if(this.b)this.a.d=this.c},
+$S:0};(function inheritance(){var x=a.inherit,w=a.inheritMany
+x(A.nj,C.I)
+x(A.Ul,C.X)
+w(C.d2,[A.aok,A.aoj])
+x(A.aoi,C.eh)})()
+C.cD(b.typeUniverse,JSON.parse('{"nj":{"I":[],"c":[]},"Ul":{"X":["nj"]}}'))
+var y={e:C.M("o<c>"),c:C.M("a3<dA,hh>")};(function constants(){var x=a.makeConstList
+F.JV=C.b(x([B.yw,B.yx,B.PD,B.PE,B.PF,B.PG,B.PH,B.PI,B.PJ,B.PK,B.Pz,B.PA,B.PB,B.PC]),C.M("o<dA>"))})()};
 ((a,b)=>{a[b]=a.current
-a.eventLog.push({p:"main.dart.js_54",e:"endPart",h:b})})($__dart_deferred_initializers__,"3YvHyasKabF7MPxskrINvekRdZw=");
+a.eventLog.push({p:"main.dart.js_54",e:"endPart",h:b})})($__dart_deferred_initializers__,"t91RHMwbRs5IF4E9NV6IrMV6GeU=");
