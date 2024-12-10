@@ -15,6 +15,7 @@ import '../views/keep_tilt.dart' deferred as keep_tilt_widget;
 import '../views/layout.dart' deferred as layout_widget;
 import '../views/layout2.dart' deferred as layout2_widget;
 import '../views/light_direction.dart' deferred as light_direction_widget;
+import '../views/light_shadow_mode.dart' deferred as light_shadow_mode;
 import '../views/multiple_tilt.dart' deferred as multiple_tilt_widget;
 import '../views/parallax_card.dart' deferred as parallax_card_widget;
 import '../views/parallax_image.dart' deferred as parallax_image_widget;
@@ -59,6 +60,15 @@ class Config {
       widget: DeferredWidget(
         parallax_image_widget.loadLibrary,
         () => parallax_image_widget.ParallaxImage(),
+      ),
+    ),
+    RouterData(
+      title: 'LightShadowMode',
+      icon: Remix.landscape_line,
+      name: 'Tilt-LightShadowMode',
+      widget: DeferredWidget(
+        light_shadow_mode.loadLibrary,
+        () => light_shadow_mode.LightShadowModeDemo(),
       ),
     ),
     RouterData(

@@ -4,13 +4,20 @@ import 'package:flutter_tilt/flutter_tilt.dart';
 
 import 'package:flutter_tilt_book/layouts/page_layout.dart';
 
-class ParallaxImage extends StatelessWidget {
-  const ParallaxImage({super.key});
+class LightShadowModeDemo extends StatefulWidget {
+  const LightShadowModeDemo({super.key});
+
+  @override
+  State<LightShadowModeDemo> createState() => _LightShadowModeDemoState();
+}
+
+class _LightShadowModeDemoState extends State<LightShadowModeDemo> {
+  /// 适应屏幕
+  double scaleFactor = 1;
+  LightShadowMode lightShadowMode = LightShadowMode.projector;
 
   @override
   Widget build(BuildContext context) {
-    /// 适应屏幕
-    double scaleFactor = 1;
     final screenWidth = MediaQuery.of(context).size.width;
     if (screenWidth < 1500) scaleFactor = 0.8;
     if (screenWidth < 1360) scaleFactor = 0.6;
@@ -20,10 +27,10 @@ class ParallaxImage extends StatelessWidget {
     if (screenWidth < 768) scaleFactor = 0.4;
 
     return PageLayout(
-      title: 'Parallax Image',
-      dartCode: code(),
+      title: 'Tilt.lightShadowMode',
+      dartCode: code(lightShadowMode: lightShadowMode),
       sourceCodeLink:
-          'https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/parallax_image.dart',
+          'https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/light_shadow_mode.dart',
       minHeight: 580,
 
       /// Tilt here
@@ -32,8 +39,15 @@ class ParallaxImage extends StatelessWidget {
           leaveCurve: Curves.easeInOutCubicEmphasized,
           leaveDuration: Duration(milliseconds: 600),
         ),
+        lightShadowMode: lightShadowMode,
         lightConfig: const LightConfig(disable: true),
-        shadowConfig: const ShadowConfig(disable: true),
+        shadowConfig: const ShadowConfig(
+          maxIntensity: 0.6,
+          projectorScaleFrom: 1.0,
+          projectorScaleTo: 1.0,
+          projectorBlurSigmaFrom: 2.0,
+          projectorBlurSigmaTo: 10.0,
+        ),
         childLayout: ChildLayout(
           outer: [
             Positioned(
@@ -69,17 +83,43 @@ class ParallaxImage extends StatelessWidget {
             ),
           ],
         ),
-        child: Image.asset(
-          'assets/parallax_image/1.png',
+        child: SizedBox(
           width: 742 * scaleFactor,
           height: 337 * scaleFactor,
         ),
       ),
+
+      /// tools
+      tools: [
+        const Text(
+          'Tilt.lightShadowMode',
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const SizedBox(height: 12),
+        Wrap(
+          spacing: 12,
+          runSpacing: 12,
+          children: LightShadowMode.values.map((LightShadowMode value) {
+            return ChoiceChip(
+              label: Text(value.name),
+              selected: lightShadowMode == value,
+              onSelected: (bool selected) {
+                setState(() {
+                  selected ? lightShadowMode = value : null;
+                });
+              },
+            );
+          }).toList(),
+        ),
+      ],
     );
   }
 }
 
-String code() => '''
+String code({LightShadowMode? lightShadowMode}) => '''
 import 'package:flutter_tilt/flutter_tilt.dart';
 
 ······
@@ -89,11 +129,18 @@ Tilt(
     leaveCurve: Curves.easeInOutCubicEmphasized,
     leaveDuration: Duration(milliseconds: 600),
   ),
+  lightShadowMode: $lightShadowMode,
   lightConfig: const LightConfig(disable: true),
-  shadowConfig: const ShadowConfig(disable: true),
+  shadowConfig: const ShadowConfig(
+    maxIntensity: 0.6,
+    projectorScaleFrom: 1.0,
+    projectorScaleTo: 1.0,
+    projectorBlurSigmaFrom: 2.0,
+    projectorBlurSigmaTo: 10.0,
+  ),
   childLayout: ChildLayout(
     outer: [
-      const Positioned.fill(
+      Positioned(
         top: 80,
         left: 140,
         child: TiltParallax(
@@ -109,7 +156,7 @@ Tilt(
         ),
       ),
       TiltParallax(
-        size: const Offset(20, 20),
+        size: Offset(20, 20),
         child: Image.asset(
           'assets/parallax_image/2.png',
           width: 742,
@@ -117,7 +164,7 @@ Tilt(
         ),
       ),
       TiltParallax(
-        size: const Offset(30, 30),
+        size: Offset(30, 30),
         child: Image.asset(
           'assets/parallax_image/3.png',
           width: 742,
@@ -126,8 +173,7 @@ Tilt(
       ),
     ],
   ),
-  child: Image.asset(
-    'assets/parallax_image/1.png',
+  child: SizedBox(
     width: 742,
     height: 337,
   ),
