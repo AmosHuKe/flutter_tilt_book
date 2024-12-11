@@ -87,10 +87,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_tilt
-      sha256: a6329795858108a9596442794d511503b1abb986fb6816646a75fcba99c31094
+      sha256: "9e45c846e8a56cf0fadaddd51b237559f39af4e07607f9538e64c8c15cf6d1f8"
       url: "https://pub.dev"
     source: hosted
-    version: "3.2.0-rc.1"
+    version: "3.2.0-rc.2"
   flutter_web_plugins:
     dependency: transitive
     description: flutter
