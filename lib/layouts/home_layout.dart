@@ -169,8 +169,8 @@ class NavigatorContainer extends StatelessWidget {
                         begin: Alignment.bottomCenter,
                         end: Alignment.topCenter,
                         colors: [
-                          const Color(0xFF171819).withOpacity(0.0),
-                          const Color(0xFF171819).withOpacity(0.6),
+                          const Color(0xFF171819).withValues(alpha: 0.0),
+                          const Color(0xFF171819).withValues(alpha: 0.6),
                           const Color(0xFF171819),
                         ],
                       ),
@@ -192,8 +192,8 @@ class NavigatorContainer extends StatelessWidget {
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
                         colors: [
-                          const Color(0xFF171819).withOpacity(0.0),
-                          const Color(0xFF171819).withOpacity(0.6),
+                          const Color(0xFF171819).withValues(alpha: 0.0),
+                          const Color(0xFF171819).withValues(alpha: 0.6),
                           const Color(0xFF171819),
                         ],
                       ),
