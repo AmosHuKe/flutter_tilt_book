@@ -1,6 +1,7 @@
 include: package:flutter_lints/flutter.yaml
 
 analyzer:
+  exclude: [lib/**.gr.dart]
   errors:
     always_declare_return_types: error
     avoid_renaming_method_parameters: error
