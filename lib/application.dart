@@ -10,6 +10,8 @@ class Application extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final appRouter = AppRouter();
+
     return MaterialApp.router(
       title: Config.appTitle,
       debugShowCheckedModeBanner: false,
@@ -18,7 +20,7 @@ class Application extends StatelessWidget {
         useMaterial3: true,
         fontFamilyFallback: const ['Roboto', 'Noto Emoji'],
       ),
-      routerConfig: R.config,
+      routerConfig: appRouter.config(),
     ).animate().fadeIn(duration: 400.ms, curve: Curves.easeIn);
   }
 }

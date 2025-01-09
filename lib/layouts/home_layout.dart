@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
 
-import 'package:go_router/go_router.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:remixicon_updated/remixicon_updated.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../config/config.dart';
-import '../router.dart';
 import '../widgets/book_divider.dart';
 import '../widgets/layout.dart';
 
+@RoutePage()
 class HomeLayout extends StatelessWidget {
-  const HomeLayout({super.key, required this.child});
-
-  final Widget child;
+  const HomeLayout({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +49,7 @@ class HomeLayout extends StatelessWidget {
               ),
 
               /// 主内容
-              Expanded(child: BodyContainer(child: child)),
+              const Expanded(child: BodyContainer()),
             ],
           ),
           child: Row(
@@ -65,7 +63,7 @@ class HomeLayout extends StatelessWidget {
               ),
 
               /// 主内容
-              Expanded(child: BodyContainer(child: child)),
+              const Expanded(child: BodyContainer()),
             ],
           ),
         ),
@@ -76,9 +74,7 @@ class HomeLayout extends StatelessWidget {
 
 /// 主内容
 class BodyContainer extends StatelessWidget {
-  const BodyContainer({super.key, required this.child});
-
-  final Widget child;
+  const BodyContainer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -93,7 +89,7 @@ class BodyContainer extends StatelessWidget {
             ? const BorderRadius.vertical(top: Radius.circular(24))
             : BorderRadius.circular(36),
       ),
-      child: child,
+      child: const AutoRouter(),
     );
   }
 }
@@ -142,15 +138,16 @@ class NavigatorContainer extends StatelessWidget {
                   parent: BouncingScrollPhysics(),
                 ),
                 children: List.generate(
-                  R.routerData.length + 1,
+                  Config.routeData.length + 1,
                   (index) {
-                    if (index == R.routerData.length) {
+                    if (index == Config.routeData.length) {
                       return const SizedBox(height: 100);
                     }
+                    final routeData = Config.routeData[index];
                     return NavigatorItem(
-                      title: R.routerData[index].title,
-                      icon: R.routerData[index].icon,
-                      routerName: R.routerData[index].name,
+                      title: routeData.title,
+                      icon: routeData.icon,
+                      pathName: routeData.pathName,
                     );
                   },
                 ),
@@ -210,25 +207,36 @@ class NavigatorContainer extends StatelessWidget {
 }
 
 /// 导航按钮
-class NavigatorItem extends StatelessWidget {
+class NavigatorItem extends StatefulWidget {
   const NavigatorItem({
     super.key,
     required this.title,
     required this.icon,
-    required this.routerName,
+    required this.pathName,
   });
 
   final String title;
   final IconData icon;
-  final String routerName;
+  final String pathName;
+
+  @override
+  State<NavigatorItem> createState() => _NavigatorItemState();
+}
+
+class _NavigatorItemState extends State<NavigatorItem> {
+  bool selected = false;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    RouterScope.of(context, watch: true);
+    selected = AutoRouter.of(context).isPathActive(widget.pathName);
+  }
 
   @override
   Widget build(BuildContext context) {
-    final bool selected =
-        GoRouterState.of(context).matchedLocation == '/$routerName';
-
     return GestureDetector(
-      onTap: () => context.goNamed(routerName),
+      onTap: () => AutoRouter.of(context).replaceNamed(widget.pathName),
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
         child: Container(
@@ -248,14 +256,14 @@ class NavigatorItem extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(bottom: 2),
                         child: Icon(
-                          icon,
+                          widget.icon,
                           size: 14,
                           color: const Color(0xFF848486),
                         ),
                       ),
                       const SizedBox(width: 6),
                       Text(
-                        title,
+                        widget.title,
                         style: const TextStyle(
                           color: Color(0xFF848486),
                           fontSize: 14,
@@ -276,14 +284,14 @@ class NavigatorItem extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(bottom: 2),
                         child: Icon(
-                          icon,
+                          widget.icon,
                           size: 14,
                           color: const Color(0xFFE7E7E8),
                         ),
                       ),
                       const SizedBox(width: 6),
                       Text(
-                        title,
+                        widget.title,
                         style: const TextStyle(
                           color: Color(0xFFE7E7E8),
                           fontSize: 14,

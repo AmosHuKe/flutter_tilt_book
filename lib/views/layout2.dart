@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter_tilt/flutter_tilt.dart';
 
 import 'package:flutter_tilt_book/layouts/page_layout.dart';
 
+@RoutePage(deferredLoading: true)
 class Layout2Demo extends StatelessWidget {
   const Layout2Demo({super.key});
 

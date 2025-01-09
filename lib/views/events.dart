@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter_tilt/flutter_tilt.dart';
 
 import 'package:flutter_tilt_book/layouts/page_layout.dart';
 import 'package:flutter_tilt_book/widgets/tilt_box.dart';
 
+@RoutePage(deferredLoading: true)
 class Events extends StatefulWidget {
   const Events({super.key});
 

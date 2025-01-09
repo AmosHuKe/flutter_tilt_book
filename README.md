@@ -8,6 +8,9 @@ Flutter 3.27.1
 # run
 $ flutter run -d chrome
 
+# run the generator
+$ dart run build_runner watch
+
 # build web
 $ flutter build web --release
 

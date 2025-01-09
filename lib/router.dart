@@ -1,37 +1,62 @@
 import 'package:flutter/widgets.dart';
 
-import 'package:go_router/go_router.dart';
+import 'package:auto_route/auto_route.dart';
 
-import '../layouts/home_layout.dart';
 import 'config/config.dart';
 
-class R {
-  static final routerData = Config.routerData;
+import './router.gr.dart';
 
-  static final config = GoRouter(
-    initialLocation: '/${routerData[0].name}',
-    routes: [
-      ShellRoute(
-        builder: (_, state, child) => HomeLayout(child: child),
-        routes: List.generate(
-          routerData.length,
-          (index) => GoRoute(
-            name: routerData[index].name,
-            path: '/${routerData[index].name}',
-            pageBuilder: (_, state) => CustomTransitionPage(
-              key: state.pageKey,
-              child: routerData[index].widget,
-              transitionsBuilder: (_, animation, secondaryAnimation, child) {
-                return FadeTransition(
-                  opacity: CurveTween(curve: Curves.easeInOutCirc)
-                      .animate(animation),
-                  child: child,
-                );
-              },
-            ),
-          ),
+@AutoRouterConfig(generateForDir: ['lib'])
+class AppRouter extends RootStackRouter {
+  static final configRouteData = Config.routeData;
+
+  @override
+  RouteType get defaultRouteType => const RouteType.cupertino();
+
+  @override
+  List<AutoRoute> get routes => [
+        CustomRoute(
+          initial: true,
+          path: '/',
+          page: HomeLayout.page,
+          transitionsBuilder: (
+            BuildContext context,
+            Animation<double> animation,
+            Animation<double> secondaryAnimation,
+            Widget child,
+          ) {
+            return FadeTransition(
+              opacity:
+                  CurveTween(curve: Curves.easeInOutCirc).animate(animation),
+              child: child,
+            );
+          },
+          children: [
+            RedirectRoute(path: '', redirectTo: configRouteData.first.pathName),
+            ...List.generate(configRouteData.length, (int index) {
+              final routeData = configRouteData[index];
+              return CustomRoute(
+                path: routeData.pathName,
+                page: routeData.pageInfo,
+                transitionsBuilder: (
+                  BuildContext context,
+                  Animation<double> animation,
+                  Animation<double> secondaryAnimation,
+                  Widget child,
+                ) {
+                  return FadeTransition(
+                    opacity: CurveTween(curve: Curves.easeInOutCirc)
+                        .animate(animation),
+                    child: child,
+                  );
+                },
+              );
+            }),
+          ],
         ),
-      ),
-    ],
-  );
+        RedirectRoute(
+          path: '*',
+          redirectTo: '/',
+        ),
+      ];
 }

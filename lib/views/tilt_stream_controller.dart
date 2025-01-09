@@ -3,11 +3,13 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter_tilt/flutter_tilt.dart';
 import 'package:remixicon_updated/remixicon_updated.dart';
 
 import '../layouts/page_layout.dart';
 
+@RoutePage(deferredLoading: true)
 class TiltStreamControllerDemo extends StatefulWidget {
   const TiltStreamControllerDemo({super.key});
 
