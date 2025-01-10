@@ -497,8 +497,6 @@ class CompiledApp {
       _1675: x0 => new Int32Array(x0),
       _1679: x0 => new Float32Array(x0),
       _1681: x0 => new Float64Array(x0),
-      _1687: f => finalizeWrapper(f, function(x0) { return dartInstance.exports._1687(f,arguments.length,x0) }),
-      _1688: f => finalizeWrapper(f, function(x0) { return dartInstance.exports._1688(f,arguments.length,x0) }),
       _1714: (decoder, codeUnits) => decoder.decode(codeUnits),
       _1715: () => new TextDecoder("utf-8", {fatal: true}),
       _1716: () => new TextDecoder("utf-8", {fatal: false}),
