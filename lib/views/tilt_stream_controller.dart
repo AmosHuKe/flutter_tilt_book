@@ -9,7 +9,7 @@ import 'package:remixicon_updated/remixicon_updated.dart';
 
 import '../layouts/page_layout.dart';
 
-@RoutePage(deferredLoading: true)
+@RoutePage()
 class TiltStreamControllerDemo extends StatefulWidget {
   const TiltStreamControllerDemo({super.key});
 

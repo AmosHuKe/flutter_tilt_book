@@ -6,7 +6,7 @@ import 'package:flutter_tilt/flutter_tilt.dart';
 
 import 'package:flutter_tilt_book/layouts/page_layout.dart';
 
-@RoutePage(deferredLoading: true)
+@RoutePage()
 class MultipleTilt extends StatelessWidget {
   const MultipleTilt({super.key});
 

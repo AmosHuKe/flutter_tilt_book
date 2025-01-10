@@ -6,7 +6,7 @@ import 'package:flutter_tilt/flutter_tilt.dart';
 
 import 'package:flutter_tilt_book/layouts/page_layout.dart';
 
-@RoutePage(deferredLoading: true)
+@RoutePage()
 class DialogDemo extends StatelessWidget {
   const DialogDemo({super.key});
 

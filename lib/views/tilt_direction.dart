@@ -6,7 +6,7 @@ import 'package:flutter_tilt/flutter_tilt.dart';
 import 'package:flutter_tilt_book/layouts/page_layout.dart';
 import 'package:flutter_tilt_book/widgets/tilt_box.dart';
 
-@RoutePage(deferredLoading: true)
+@RoutePage()
 class TiltDirectionDemo extends StatefulWidget {
   const TiltDirectionDemo({super.key});
 

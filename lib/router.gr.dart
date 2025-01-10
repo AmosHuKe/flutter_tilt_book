@@ -11,28 +11,26 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i22;
 import 'package:flutter_tilt_book/layouts/home_layout.dart' as _i8;
-import 'package:flutter_tilt_book/views/animation.dart' deferred as _i1;
-import 'package:flutter_tilt_book/views/bento_grids.dart' deferred as _i2;
-import 'package:flutter_tilt_book/views/default.dart' deferred as _i3;
-import 'package:flutter_tilt_book/views/dialog.dart' deferred as _i4;
-import 'package:flutter_tilt_book/views/disable_effects.dart' deferred as _i5;
-import 'package:flutter_tilt_book/views/events.dart' deferred as _i6;
-import 'package:flutter_tilt_book/views/example.dart' deferred as _i7;
-import 'package:flutter_tilt_book/views/initial_tilt.dart' deferred as _i9;
-import 'package:flutter_tilt_book/views/keep_tilt.dart' deferred as _i10;
-import 'package:flutter_tilt_book/views/layout.dart' deferred as _i12;
-import 'package:flutter_tilt_book/views/layout2.dart' deferred as _i11;
-import 'package:flutter_tilt_book/views/light_direction.dart' deferred as _i13;
-import 'package:flutter_tilt_book/views/light_shadow_mode.dart'
-    deferred as _i14;
-import 'package:flutter_tilt_book/views/multiple_tilt.dart' deferred as _i15;
-import 'package:flutter_tilt_book/views/parallax_card.dart' deferred as _i16;
-import 'package:flutter_tilt_book/views/parallax_image.dart' deferred as _i17;
-import 'package:flutter_tilt_book/views/reverse_tilt.dart' deferred as _i18;
-import 'package:flutter_tilt_book/views/shadow_direction.dart' deferred as _i19;
-import 'package:flutter_tilt_book/views/tilt_direction.dart' deferred as _i20;
-import 'package:flutter_tilt_book/views/tilt_stream_controller.dart'
-    deferred as _i21;
+import 'package:flutter_tilt_book/views/animation.dart' as _i1;
+import 'package:flutter_tilt_book/views/bento_grids.dart' as _i2;
+import 'package:flutter_tilt_book/views/default.dart' as _i3;
+import 'package:flutter_tilt_book/views/dialog.dart' as _i4;
+import 'package:flutter_tilt_book/views/disable_effects.dart' as _i5;
+import 'package:flutter_tilt_book/views/events.dart' as _i6;
+import 'package:flutter_tilt_book/views/example.dart' as _i7;
+import 'package:flutter_tilt_book/views/initial_tilt.dart' as _i9;
+import 'package:flutter_tilt_book/views/keep_tilt.dart' as _i10;
+import 'package:flutter_tilt_book/views/layout.dart' as _i12;
+import 'package:flutter_tilt_book/views/layout2.dart' as _i11;
+import 'package:flutter_tilt_book/views/light_direction.dart' as _i13;
+import 'package:flutter_tilt_book/views/light_shadow_mode.dart' as _i14;
+import 'package:flutter_tilt_book/views/multiple_tilt.dart' as _i15;
+import 'package:flutter_tilt_book/views/parallax_card.dart' as _i16;
+import 'package:flutter_tilt_book/views/parallax_image.dart' as _i17;
+import 'package:flutter_tilt_book/views/reverse_tilt.dart' as _i18;
+import 'package:flutter_tilt_book/views/shadow_direction.dart' as _i19;
+import 'package:flutter_tilt_book/views/tilt_direction.dart' as _i20;
+import 'package:flutter_tilt_book/views/tilt_stream_controller.dart' as _i21;
 
 /// generated route for
 /// [_i1.AnimationDemo]
@@ -45,7 +43,7 @@ class AnimationDemo extends _i22.PageRouteInfo<void> {
   static _i22.PageInfo page = _i22.PageInfo(
     name,
     builder: (data) {
-      return _i22.DeferredWidget(_i1.loadLibrary, () => _i1.AnimationDemo());
+      return const _i1.AnimationDemo();
     },
   );
 }
@@ -61,7 +59,7 @@ class BentoGrids extends _i22.PageRouteInfo<void> {
   static _i22.PageInfo page = _i22.PageInfo(
     name,
     builder: (data) {
-      return _i22.DeferredWidget(_i2.loadLibrary, () => _i2.BentoGrids());
+      return const _i2.BentoGrids();
     },
   );
 }
@@ -77,7 +75,7 @@ class Default extends _i22.PageRouteInfo<void> {
   static _i22.PageInfo page = _i22.PageInfo(
     name,
     builder: (data) {
-      return _i22.DeferredWidget(_i3.loadLibrary, () => _i3.Default());
+      return const _i3.Default();
     },
   );
 }
@@ -93,7 +91,7 @@ class DialogDemo extends _i22.PageRouteInfo<void> {
   static _i22.PageInfo page = _i22.PageInfo(
     name,
     builder: (data) {
-      return _i22.DeferredWidget(_i4.loadLibrary, () => _i4.DialogDemo());
+      return const _i4.DialogDemo();
     },
   );
 }
@@ -109,7 +107,7 @@ class DisableEffects extends _i22.PageRouteInfo<void> {
   static _i22.PageInfo page = _i22.PageInfo(
     name,
     builder: (data) {
-      return _i22.DeferredWidget(_i5.loadLibrary, () => _i5.DisableEffects());
+      return const _i5.DisableEffects();
     },
   );
 }
@@ -125,7 +123,7 @@ class Events extends _i22.PageRouteInfo<void> {
   static _i22.PageInfo page = _i22.PageInfo(
     name,
     builder: (data) {
-      return _i22.DeferredWidget(_i6.loadLibrary, () => _i6.Events());
+      return const _i6.Events();
     },
   );
 }
@@ -141,7 +139,7 @@ class Example extends _i22.PageRouteInfo<void> {
   static _i22.PageInfo page = _i22.PageInfo(
     name,
     builder: (data) {
-      return _i22.DeferredWidget(_i7.loadLibrary, () => _i7.Example());
+      return const _i7.Example();
     },
   );
 }
@@ -173,7 +171,7 @@ class InitialTilt extends _i22.PageRouteInfo<void> {
   static _i22.PageInfo page = _i22.PageInfo(
     name,
     builder: (data) {
-      return _i22.DeferredWidget(_i9.loadLibrary, () => _i9.InitialTilt());
+      return const _i9.InitialTilt();
     },
   );
 }
@@ -189,7 +187,7 @@ class KeepTilt extends _i22.PageRouteInfo<void> {
   static _i22.PageInfo page = _i22.PageInfo(
     name,
     builder: (data) {
-      return _i22.DeferredWidget(_i10.loadLibrary, () => _i10.KeepTilt());
+      return const _i10.KeepTilt();
     },
   );
 }
@@ -205,7 +203,7 @@ class Layout2Demo extends _i22.PageRouteInfo<void> {
   static _i22.PageInfo page = _i22.PageInfo(
     name,
     builder: (data) {
-      return _i22.DeferredWidget(_i11.loadLibrary, () => _i11.Layout2Demo());
+      return const _i11.Layout2Demo();
     },
   );
 }
@@ -221,7 +219,7 @@ class LayoutDemo extends _i22.PageRouteInfo<void> {
   static _i22.PageInfo page = _i22.PageInfo(
     name,
     builder: (data) {
-      return _i22.DeferredWidget(_i12.loadLibrary, () => _i12.LayoutDemo());
+      return const _i12.LayoutDemo();
     },
   );
 }
@@ -237,10 +235,7 @@ class LightDirectionDemo extends _i22.PageRouteInfo<void> {
   static _i22.PageInfo page = _i22.PageInfo(
     name,
     builder: (data) {
-      return _i22.DeferredWidget(
-        _i13.loadLibrary,
-        () => _i13.LightDirectionDemo(),
-      );
+      return const _i13.LightDirectionDemo();
     },
   );
 }
@@ -256,10 +251,7 @@ class LightShadowModeDemo extends _i22.PageRouteInfo<void> {
   static _i22.PageInfo page = _i22.PageInfo(
     name,
     builder: (data) {
-      return _i22.DeferredWidget(
-        _i14.loadLibrary,
-        () => _i14.LightShadowModeDemo(),
-      );
+      return const _i14.LightShadowModeDemo();
     },
   );
 }
@@ -275,7 +267,7 @@ class MultipleTilt extends _i22.PageRouteInfo<void> {
   static _i22.PageInfo page = _i22.PageInfo(
     name,
     builder: (data) {
-      return _i22.DeferredWidget(_i15.loadLibrary, () => _i15.MultipleTilt());
+      return const _i15.MultipleTilt();
     },
   );
 }
@@ -291,7 +283,7 @@ class ParallaxCard extends _i22.PageRouteInfo<void> {
   static _i22.PageInfo page = _i22.PageInfo(
     name,
     builder: (data) {
-      return _i22.DeferredWidget(_i16.loadLibrary, () => _i16.ParallaxCard());
+      return const _i16.ParallaxCard();
     },
   );
 }
@@ -307,7 +299,7 @@ class ParallaxImage extends _i22.PageRouteInfo<void> {
   static _i22.PageInfo page = _i22.PageInfo(
     name,
     builder: (data) {
-      return _i22.DeferredWidget(_i17.loadLibrary, () => _i17.ParallaxImage());
+      return const _i17.ParallaxImage();
     },
   );
 }
@@ -323,7 +315,7 @@ class ReverseTilt extends _i22.PageRouteInfo<void> {
   static _i22.PageInfo page = _i22.PageInfo(
     name,
     builder: (data) {
-      return _i22.DeferredWidget(_i18.loadLibrary, () => _i18.ReverseTilt());
+      return const _i18.ReverseTilt();
     },
   );
 }
@@ -339,10 +331,7 @@ class ShadowDirectionDemo extends _i22.PageRouteInfo<void> {
   static _i22.PageInfo page = _i22.PageInfo(
     name,
     builder: (data) {
-      return _i22.DeferredWidget(
-        _i19.loadLibrary,
-        () => _i19.ShadowDirectionDemo(),
-      );
+      return const _i19.ShadowDirectionDemo();
     },
   );
 }
@@ -358,10 +347,7 @@ class TiltDirectionDemo extends _i22.PageRouteInfo<void> {
   static _i22.PageInfo page = _i22.PageInfo(
     name,
     builder: (data) {
-      return _i22.DeferredWidget(
-        _i20.loadLibrary,
-        () => _i20.TiltDirectionDemo(),
-      );
+      return const _i20.TiltDirectionDemo();
     },
   );
 }
@@ -377,10 +363,7 @@ class TiltStreamControllerDemo extends _i22.PageRouteInfo<void> {
   static _i22.PageInfo page = _i22.PageInfo(
     name,
     builder: (data) {
-      return _i22.DeferredWidget(
-        _i21.loadLibrary,
-        () => _i21.TiltStreamControllerDemo(),
-      );
+      return const _i21.TiltStreamControllerDemo();
     },
   );
 }
