@@ -27,7 +27,7 @@ class _BookSyntaxHighlightState extends State<BookSyntaxHighlight> {
   void loadSyntaxHighlight(String dartCode) {
     /// 为了顶部切换动画流畅
     Future.delayed(kTabScrollDuration, () {
-      final Highlight highlight = Highlight();
+      final highlight = Highlight();
       const languages = ['dart'];
       highlight.registerLanguages({'dart': highlight_languages.langDart});
 
@@ -38,7 +38,7 @@ class _BookSyntaxHighlightState extends State<BookSyntaxHighlight> {
       );
 
       /// Define your styles.
-      const TextStyle defaultStyle = TextStyle(
+      const defaultStyle = TextStyle(
         fontSize: 14,
         height: 1.3,
         wordSpacing: 4,
@@ -46,7 +46,7 @@ class _BookSyntaxHighlightState extends State<BookSyntaxHighlight> {
       );
 
       /// Convert highlight result to TextSpan
-      final TextSpanRenderer renderer = TextSpanRenderer(
+      final renderer = TextSpanRenderer(
         defaultStyle,
         highlight_styles.a11YLightTheme,
       );

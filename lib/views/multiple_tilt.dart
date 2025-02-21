@@ -63,8 +63,7 @@ class AnimationCard extends StatefulWidget {
   State<AnimationCard> createState() => _AnimationCardState();
 }
 
-class _AnimationCardState extends State<AnimationCard>
-    with SingleTickerProviderStateMixin {
+class _AnimationCardState extends State<AnimationCard> with SingleTickerProviderStateMixin {
   late AnimationController scaleAnimationController;
   late Animation<double> scaleAnimation;
 
@@ -203,8 +202,7 @@ class AnimationCard extends StatefulWidget {
   State<AnimationCard> createState() => _AnimationCardState();
 }
 
-class _AnimationCardState extends State<AnimationCard>
-    with SingleTickerProviderStateMixin {
+class _AnimationCardState extends State<AnimationCard> with SingleTickerProviderStateMixin {
   late AnimationController scaleAnimationController;
   late Animation<double> scaleAnimation;
 

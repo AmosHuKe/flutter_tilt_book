@@ -34,15 +34,13 @@ class _EventsState extends State<Events> {
       /// Tilt here
       body: Tilt(
         borderRadius: BorderRadius.circular(30),
-        onGestureMove:
-            (TiltDataModel tiltDataModel, GesturesType gesturesType) {
+        onGestureMove: (TiltDataModel tiltDataModel, GesturesType gesturesType) {
           setState(() {
             tiltData = tiltDataModel;
             gestureMove = gesturesType.name;
           });
         },
-        onGestureLeave:
-            (TiltDataModel tiltDataModel, GesturesType gesturesType) {
+        onGestureLeave: (TiltDataModel tiltDataModel, GesturesType gesturesType) {
           setState(() {
             tiltData = tiltDataModel;
             gestureLeave = gesturesType.name;
@@ -134,15 +132,13 @@ String gestureLeave = '';
 
 Tilt(
   borderRadius: BorderRadius.circular(30),
-  onGestureMove:
-      (TiltDataModel tiltDataModel, GesturesType gesturesType) {
+  onGestureMove: (TiltDataModel tiltDataModel, GesturesType gesturesType) {
     setState(() {
       tiltData = tiltDataModel;
       gestureMove = gesturesType.name;
     });
   },
-  onGestureLeave:
-      (TiltDataModel tiltDataModel, GesturesType gesturesType) {
+  onGestureLeave: (TiltDataModel tiltDataModel, GesturesType gesturesType) {
     setState(() {
       tiltData = tiltDataModel;
       gestureLeave = gesturesType.name;

@@ -141,8 +141,7 @@ class BentoGrids extends StatelessWidget {
                             width: 500 * scaleFactor,
                             height: 237 * scaleFactor,
                             color: const Color(0xFF010101),
-                            padding: EdgeInsets.all(20 * scaleFactor)
-                                .copyWith(right: 0),
+                            padding: EdgeInsets.all(20 * scaleFactor).copyWith(right: 0),
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -208,8 +207,7 @@ class BentoGrids extends StatelessWidget {
                             width: 500 * scaleFactor,
                             height: 237 * scaleFactor,
                             color: const Color(0xFF010101),
-                            padding: EdgeInsets.all(20 * scaleFactor)
-                                .copyWith(right: 0),
+                            padding: EdgeInsets.all(20 * scaleFactor).copyWith(right: 0),
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,

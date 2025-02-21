@@ -60,14 +60,12 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
             ),
           ),
         ),
-        onGestureMove:
-            (TiltDataModel tiltDataModel, GesturesType gesturesType) {
+        onGestureMove: (TiltDataModel tiltDataModel, GesturesType gesturesType) {
           setState(() {
             tiltData = tiltDataModel;
           });
         },
-        onGestureLeave:
-            (TiltDataModel tiltDataModel, GesturesType gesturesType) {
+        onGestureLeave: (TiltDataModel tiltDataModel, GesturesType gesturesType) {
           setState(() {
             tiltData = tiltDataModel;
           });

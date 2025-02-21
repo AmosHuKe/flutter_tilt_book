@@ -26,8 +26,7 @@ class AppRouter extends RootStackRouter {
             Widget child,
           ) {
             return FadeTransition(
-              opacity:
-                  CurveTween(curve: Curves.easeInOutCirc).animate(animation),
+              opacity: CurveTween(curve: Curves.easeInOutCirc).animate(animation),
               child: child,
             );
           },
@@ -45,8 +44,7 @@ class AppRouter extends RootStackRouter {
                   Widget child,
                 ) {
                   return FadeTransition(
-                    opacity: CurveTween(curve: Curves.easeInOutCirc)
-                        .animate(animation),
+                    opacity: CurveTween(curve: Curves.easeInOutCirc).animate(animation),
                     child: child,
                   );
                 },

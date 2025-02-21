@@ -38,8 +38,7 @@ class HomeLayout extends StatelessWidget {
                     child: Builder(
                       builder: (context) => IconButton(
                         onPressed: () => Scaffold.of(context).openDrawer(),
-                        icon:
-                            const Icon(Remix.menu_2_line, color: Colors.white),
+                        icon: const Icon(Remix.menu_2_line, color: Colors.white),
                       ),
                     ),
                   ),
@@ -78,7 +77,7 @@ class BodyContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Layout layout = Layout(context);
+    final layout = Layout(context);
 
     return Container(
       margin: layout.sm ? null : const EdgeInsets.all(12),
@@ -243,8 +242,7 @@ class _NavigatorItemState extends State<NavigatorItem> {
           margin: const EdgeInsets.symmetric(vertical: 6),
           padding: const EdgeInsets.symmetric(vertical: 4),
           child: AnimatedCrossFade(
-            crossFadeState:
-                selected ? CrossFadeState.showSecond : CrossFadeState.showFirst,
+            crossFadeState: selected ? CrossFadeState.showSecond : CrossFadeState.showFirst,
             duration: const Duration(milliseconds: 400),
             firstChild: Stack(
               alignment: AlignmentDirectional.centerStart,

@@ -14,14 +14,12 @@ class TiltStreamControllerDemo extends StatefulWidget {
   const TiltStreamControllerDemo({super.key});
 
   @override
-  State<TiltStreamControllerDemo> createState() =>
-      _TiltStreamControllerDemoState();
+  State<TiltStreamControllerDemo> createState() => _TiltStreamControllerDemoState();
 }
 
 class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
     with TickerProviderStateMixin {
-  final WidgetStateProperty<Icon?> thumbIcon =
-      WidgetStateProperty.resolveWith<Icon?>(
+  final WidgetStateProperty<Icon?> thumbIcon = WidgetStateProperty.resolveWith<Icon?>(
     (Set<WidgetState> states) {
       return states.contains(WidgetState.selected)
           ? const Icon(Remix.link_m)
@@ -80,12 +78,11 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
       vsync: this,
     );
     aroundAnimationController.addListener(() {
-      final double radian =
-          aroundAnimationController.value * 360 * math.pi / 180;
-      const double r = 75;
+      final radian = aroundAnimationController.value * 360.0 * math.pi / 180.0;
+      const r = 75.0;
       // P = (cosθ, sinθ)
-      final double x = math.cos(radian) * r + 150;
-      final double y = math.sin(radian) * r + 75;
+      final x = math.cos(radian) * r + 150.0;
+      final y = math.sin(radian) * r + 75.0;
       tiltStreamController.add(TiltStreamModel(position: Offset(x, y)));
     });
   }
@@ -99,8 +96,8 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
       vsync: this,
     );
     ltrbAnimationController.addListener(() {
-      final double x = ltrbAnimationController.value * 300;
-      final double y = ltrbAnimationController.value * 150;
+      final x = ltrbAnimationController.value * 300.0;
+      final y = ltrbAnimationController.value * 150.0;
       tiltStreamController.add(TiltStreamModel(position: Offset(x, y)));
     });
   }
@@ -114,8 +111,8 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
       vsync: this,
     );
     rtlbAnimationController.addListener(() {
-      final double x = (1 - rtlbAnimationController.value) * 300;
-      final double y = (rtlbAnimationController.value) * 150;
+      final x = (1 - rtlbAnimationController.value) * 300.0;
+      final y = (rtlbAnimationController.value) * 150.0;
       tiltStreamController.add(TiltStreamModel(position: Offset(x, y)));
     });
   }
@@ -247,8 +244,7 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
               onSelected: (bool value) {
                 setState(() {
                   if (value) {
-                    animationSelected = aroundAnimationController
-                      ..repeat(reverse: false);
+                    animationSelected = aroundAnimationController..repeat(reverse: false);
                   } else {
                     stopAllAnimation();
                   }
@@ -261,8 +257,7 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
               onSelected: (bool value) {
                 setState(() {
                   if (value) {
-                    animationSelected = ltrbAnimationController
-                      ..repeat(reverse: true);
+                    animationSelected = ltrbAnimationController..repeat(reverse: true);
                   } else {
                     stopAllAnimation();
                   }
@@ -275,8 +270,7 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
               onSelected: (bool value) {
                 setState(() {
                   if (value) {
-                    animationSelected = rtlbAnimationController
-                      ..repeat(reverse: true);
+                    animationSelected = rtlbAnimationController..repeat(reverse: true);
                   } else {
                     stopAllAnimation();
                   }
@@ -302,14 +296,12 @@ class TiltStreamControllerDemo extends StatefulWidget {
   const TiltStreamControllerDemo({super.key});
 
   @override
-  State<TiltStreamControllerDemo> createState() =>
-      _TiltStreamControllerDemoState();
+  State<TiltStreamControllerDemo> createState() => _TiltStreamControllerDemoState();
 }
 
 class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
     with TickerProviderStateMixin {
-  final WidgetStateProperty<Icon?> thumbIcon =
-      WidgetStateProperty.resolveWith<Icon?>(
+  final WidgetStateProperty<Icon?> thumbIcon = WidgetStateProperty.resolveWith<Icon?>(
     (Set<WidgetState> states) {
       return states.contains(WidgetState.selected)
           ? const Icon(Remix.link_m)
@@ -368,12 +360,11 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
       vsync: this,
     );
     aroundAnimationController.addListener(() {
-      final double radian =
-          aroundAnimationController.value * 360 * math.pi / 180;
-      const double r = 75;
+      final radian = aroundAnimationController.value * 360.0 * math.pi / 180.0;
+      const r = 75.0;
       // P = (cosθ, sinθ)
-      final double x = math.cos(radian) * r + 150;
-      final double y = math.sin(radian) * r + 75;
+      final x = math.cos(radian) * r + 150.0;
+      final y = math.sin(radian) * r + 75.0;
       tiltStreamController.add(TiltStreamModel(position: Offset(x, y)));
     });
   }
@@ -387,8 +378,8 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
       vsync: this,
     );
     ltrbAnimationController.addListener(() {
-      final double x = ltrbAnimationController.value * 300;
-      final double y = ltrbAnimationController.value * 150;
+      final x = ltrbAnimationController.value * 300.0;
+      final y = ltrbAnimationController.value * 150.0;
       tiltStreamController.add(TiltStreamModel(position: Offset(x, y)));
     });
   }
@@ -402,8 +393,8 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
       vsync: this,
     );
     rtlbAnimationController.addListener(() {
-      final double x = (1 - rtlbAnimationController.value) * 300;
-      final double y = (rtlbAnimationController.value) * 150;
+      final x = (1 - rtlbAnimationController.value) * 300.0;
+      final y = (rtlbAnimationController.value) * 150.0;
       tiltStreamController.add(TiltStreamModel(position: Offset(x, y)));
     });
   }
@@ -526,8 +517,7 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
               onSelected: (bool value) {
                 setState(() {
                   if (value) {
-                    animationSelected = aroundAnimationController
-                      ..repeat(reverse: false);
+                    animationSelected = aroundAnimationController..repeat(reverse: false);
                   } else {
                     stopAllAnimation();
                   }
@@ -540,8 +530,7 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
               onSelected: (bool value) {
                 setState(() {
                   if (value) {
-                    animationSelected = ltrbAnimationController
-                      ..repeat(reverse: true);
+                    animationSelected = ltrbAnimationController..repeat(reverse: true);
                   } else {
                     stopAllAnimation();
                   }
@@ -554,8 +543,7 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
               onSelected: (bool value) {
                 setState(() {
                   if (value) {
-                    animationSelected = rtlbAnimationController
-                      ..repeat(reverse: true);
+                    animationSelected = rtlbAnimationController..repeat(reverse: true);
                   } else {
                     stopAllAnimation();
                   }

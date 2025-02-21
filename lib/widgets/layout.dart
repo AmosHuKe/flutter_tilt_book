@@ -32,8 +32,8 @@ class LayoutAdaptive extends StatelessWidget {
   Widget build(BuildContext context) {
     return Builder(
       builder: (context) {
-        final Layout layout = Layout(context);
-        Widget layoutChild = child;
+        final layout = Layout(context);
+        var layoutChild = child;
         if (mdChild != null && layout.md) layoutChild = mdChild!;
         if (smChild != null && layout.sm) layoutChild = smChild!;
         return layoutChild;

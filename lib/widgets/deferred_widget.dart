@@ -47,8 +47,7 @@ class _DeferredWidgetState extends State<DeferredWidget> {
     if (DeferredWidget._loadedModules.contains(widget.libraryLoader)) {
       _onLibraryLoaded();
     } else {
-      DeferredWidget.preload(widget.libraryLoader)
-          .then((dynamic _) => _onLibraryLoaded());
+      DeferredWidget.preload(widget.libraryLoader).then((dynamic _) => _onLibraryLoaded());
     }
     super.initState();
   }

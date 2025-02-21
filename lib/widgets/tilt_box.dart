@@ -17,9 +17,9 @@ class TiltBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Offset angle = tiltData?.angle ?? Offset.zero;
-    final Offset areaProgress = tiltData?.areaProgress ?? Offset.zero;
-    final Offset? position = tiltData?.position;
+    final angle = tiltData?.angle ?? Offset.zero;
+    final areaProgress = tiltData?.areaProgress ?? Offset.zero;
+    final position = tiltData?.position;
 
     return Transform(
       alignment: Alignment.center,

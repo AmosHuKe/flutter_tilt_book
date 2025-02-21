@@ -37,7 +37,7 @@ class PageLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Layout layout = Layout(context);
+    final layout = Layout(context);
 
     return Container(
       decoration: BoxDecoration(
@@ -108,8 +108,7 @@ class BodyContainer extends StatefulWidget {
   State<BodyContainer> createState() => _BodyContainerState();
 }
 
-class _BodyContainerState extends State<BodyContainer>
-    with SingleTickerProviderStateMixin {
+class _BodyContainerState extends State<BodyContainer> with SingleTickerProviderStateMixin {
   int initialIndex = 0;
 
   late TabController tabController = TabController(
@@ -118,8 +117,7 @@ class _BodyContainerState extends State<BodyContainer>
     vsync: this,
   )..addListener(() => pageController.jumpToPage(tabController.index));
 
-  late PageController pageController =
-      PageController(initialPage: initialIndex);
+  late PageController pageController = PageController(initialPage: initialIndex);
 
   @override
   void dispose() {
@@ -129,7 +127,7 @@ class _BodyContainerState extends State<BodyContainer>
 
   @override
   Widget build(BuildContext context) {
-    final Layout layout = Layout(context);
+    final layout = Layout(context);
 
     return Container(
       padding: EdgeInsets.all(layout.sm ? 12 : 24),
@@ -145,9 +143,8 @@ class _BodyContainerState extends State<BodyContainer>
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
-                crossAxisAlignment: layout.sm
-                    ? CrossAxisAlignment.center
-                    : CrossAxisAlignment.start,
+                crossAxisAlignment:
+                    layout.sm ? CrossAxisAlignment.center : CrossAxisAlignment.start,
                 children: [
                   /// Title
                   Text(
@@ -161,8 +158,7 @@ class _BodyContainerState extends State<BodyContainer>
                   /// Source Code
                   if (widget.sourceCodeLink != null)
                     GestureDetector(
-                      onTap: () =>
-                          launchUrl(Uri.parse(widget.sourceCodeLink ?? '')),
+                      onTap: () => launchUrl(Uri.parse(widget.sourceCodeLink ?? '')),
                       child: const MouseRegion(
                         cursor: SystemMouseCursors.click,
                         child: Row(
@@ -212,8 +208,7 @@ class _BodyContainerState extends State<BodyContainer>
                   ),
                   labelColor: Colors.white,
                   unselectedLabelColor: Colors.black,
-                  overlayColor:
-                      const WidgetStatePropertyAll(Colors.transparent),
+                  overlayColor: const WidgetStatePropertyAll(Colors.transparent),
                   tabs: const [
                     /// Preview
                     Tab(
@@ -286,7 +281,7 @@ class ToolsContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Layout layout = Layout(context);
+    final layout = Layout(context);
 
     return Container(
       padding: EdgeInsets.all(layout.sm ? 12 : 24),
