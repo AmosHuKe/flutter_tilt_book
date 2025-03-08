@@ -235,7 +235,7 @@ class _NavigatorItemState extends State<NavigatorItem> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => AutoRouter.of(context).replaceNamed(widget.pathName),
+      onTap: () => AutoRouter.of(context).replacePath(widget.pathName),
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
         child: Container(
