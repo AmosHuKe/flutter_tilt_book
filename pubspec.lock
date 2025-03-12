@@ -247,10 +247,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_tilt
-      sha256: c9ff3d75be627cb8d081f92f53b76885ecd5516269d345b5c7e246d1732191ee
+      sha256: "2bfc76f9962a7706e9a50295098ffc0f53658d67085b1bdfcb20f63421136296"
       url: "https://pub.dev"
     source: hosted
-    version: "3.2.0"
+    version: "3.2.1"
   flutter_web_plugins:
     dependency: transitive
     description: flutter
@@ -404,10 +404,10 @@ packages:
     dependency: transitive
     description:
       name: package_config
-      sha256: "92d4488434b520a62570293fbd33bb556c7d49230791c1b4bbd973baf6d2dc67"
+      sha256: f096c55ebb7deb7e384101542bfba8c52696c1b56fca2eb62827989ef2353bbc
       url: "https://pub.dev"
     source: hosted
-    version: "2.1.1"
+    version: "2.2.0"
   path:
     dependency: transitive
     description:
