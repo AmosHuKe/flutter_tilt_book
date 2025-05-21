@@ -31,13 +31,7 @@ class AnimationDemo extends StatelessWidget {
             Positioned(
               child: TiltParallax(
                 size: Offset(40, 40),
-                child: Text(
-                  'Flutter Tilt ✨',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.white,
-                  ),
-                ),
+                child: Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
               ),
             ),
           ],
@@ -75,13 +69,7 @@ Tilt(
       Positioned(
         child: TiltParallax(
           size: Offset(40, 40),
-          child: Text(
-            'Flutter Tilt ✨',
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-            ),
-          ),
+          child: Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
         ),
       ),
     ],

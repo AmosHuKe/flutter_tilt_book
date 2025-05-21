@@ -15,11 +15,12 @@ class AppRouter extends RootStackRouter {
 
   @override
   List<AutoRoute> get routes => [
-        CustomRoute(
-          initial: true,
-          path: '/',
-          page: HomeLayout.page,
-          transitionsBuilder: (
+    CustomRoute(
+      initial: true,
+      path: '/',
+      page: HomeLayout.page,
+      transitionsBuilder:
+          (
             BuildContext context,
             Animation<double> animation,
             Animation<double> secondaryAnimation,
@@ -30,14 +31,15 @@ class AppRouter extends RootStackRouter {
               child: child,
             );
           },
-          children: [
-            RedirectRoute(path: '', redirectTo: configRouteData.first.pathName),
-            ...List.generate(configRouteData.length, (int index) {
-              final routeData = configRouteData[index];
-              return CustomRoute(
-                path: routeData.pathName,
-                page: routeData.pageInfo,
-                transitionsBuilder: (
+      children: [
+        RedirectRoute(path: '', redirectTo: configRouteData.first.pathName),
+        ...List.generate(configRouteData.length, (int index) {
+          final routeData = configRouteData[index];
+          return CustomRoute(
+            path: routeData.pathName,
+            page: routeData.pageInfo,
+            transitionsBuilder:
+                (
                   BuildContext context,
                   Animation<double> animation,
                   Animation<double> secondaryAnimation,
@@ -48,13 +50,10 @@ class AppRouter extends RootStackRouter {
                     child: child,
                   );
                 },
-              );
-            }),
-          ],
-        ),
-        RedirectRoute(
-          path: '*',
-          redirectTo: '/',
-        ),
-      ];
+          );
+        }),
+      ],
+    ),
+    RedirectRoute(path: '*', redirectTo: '/'),
+  ];
 }

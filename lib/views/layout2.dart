@@ -29,9 +29,7 @@ class Layout2Demo extends StatelessWidget {
           Tilt(
             borderRadius: BorderRadius.circular(20),
             border: Border.all(width: 4),
-            tiltConfig: const TiltConfig(
-              leaveCurve: Curves.easeInOutCubicEmphasized,
-            ),
+            tiltConfig: const TiltConfig(leaveCurve: Curves.easeInOutCubicEmphasized),
             lightConfig: const LightConfig(disable: true),
             shadowConfig: const ShadowConfig(disable: true),
             childLayout: ChildLayout(
@@ -106,10 +104,7 @@ class Layout2Demo extends StatelessWidget {
                   child: Container(
                     width: 64,
                     height: 64,
-                    decoration: const BoxDecoration(
-                      color: Colors.black,
-                      shape: BoxShape.circle,
-                    ),
+                    decoration: const BoxDecoration(color: Colors.black, shape: BoxShape.circle),
                   ),
                 ),
                 TiltParallax(
@@ -163,9 +158,7 @@ Wrap(
     Tilt(
       borderRadius: BorderRadius.circular(20),
       border: Border.all(width: 4),
-      tiltConfig: const TiltConfig(
-        leaveCurve: Curves.easeInOutCubicEmphasized,
-      ),
+      tiltConfig: const TiltConfig(leaveCurve: Curves.easeInOutCubicEmphasized),
       lightConfig: const LightConfig(disable: true),
       shadowConfig: const ShadowConfig(disable: true),
       childLayout: ChildLayout(
@@ -240,10 +233,7 @@ Wrap(
             child: Container(
               width: 64,
               height: 64,
-              decoration: const BoxDecoration(
-                color: Colors.black,
-                shape: BoxShape.circle,
-              ),
+              decoration: const BoxDecoration(color: Colors.black, shape: BoxShape.circle),
             ),
           ),
           TiltParallax(

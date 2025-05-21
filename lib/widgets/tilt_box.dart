@@ -27,21 +27,9 @@ class TiltBox extends StatelessWidget {
       child: Stack(
         alignment: AlignmentDirectional.center,
         children: [
-          Container(
-            color: Colors.black,
-            width: width,
-            height: height,
-          ),
-          Positioned(
-            left: 0,
-            right: 0,
-            child: Container(color: Colors.white, height: 1),
-          ),
-          Positioned(
-            top: 0,
-            bottom: 0,
-            child: Container(color: Colors.white, width: 1),
-          ),
+          Container(color: Colors.black, width: width, height: height),
+          Positioned(left: 0, right: 0, child: Container(color: Colors.white, height: 1)),
+          Positioned(top: 0, bottom: 0, child: Container(color: Colors.white, width: 1)),
           Positioned(
             left: 10,
             child: Padding(
@@ -103,10 +91,7 @@ class TiltBox extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  decoration: const BoxDecoration(
-                    color: Colors.red,
-                    shape: BoxShape.circle,
-                  ),
+                  decoration: const BoxDecoration(color: Colors.red, shape: BoxShape.circle),
                   width: 4,
                   height: 4,
                 ),

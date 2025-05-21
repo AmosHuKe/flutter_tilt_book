@@ -32,13 +32,7 @@ class Default extends StatelessWidget {
               colors: [Color(0xFFff9a9e), Color(0xFFfad0c4)],
             ),
           ),
-          child: const Text(
-            'Flutter Tilt ✨',
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-            ),
-          ),
+          child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
         ),
       ),
     );
@@ -63,13 +57,7 @@ Tilt(
         colors: [Color(0xFFff9a9e), Color(0xFFfad0c4)],
       ),
     ),
-    child: const Text(
-      'Flutter Tilt ✨',
-      style: TextStyle(
-        fontSize: 20,
-        color: Colors.white,
-      ),
-    ),
+    child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
   ),
 ),
 

@@ -15,10 +15,7 @@ class TiltDirectionDemo extends StatefulWidget {
 }
 
 class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
-  Set<TiltDirection> tiltDirection = <TiltDirection>{
-    TiltDirection.top,
-    TiltDirection.bottom,
-  };
+  Set<TiltDirection> tiltDirection = <TiltDirection>{TiltDirection.top, TiltDirection.bottom};
   TiltDataModel? tiltData;
   final double width = 350;
   final double height = 200;
@@ -28,11 +25,7 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
   Widget build(BuildContext context) {
     return PageLayout(
       title: 'Tilt Direction',
-      dartCode: code(
-        width: width,
-        height: height,
-        tiltDirection: tiltDirection,
-      ),
+      dartCode: code(width: width, height: height, tiltDirection: tiltDirection),
       sourceCodeLink:
           'https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/tilt_direction.dart',
       minHeight: 500,
@@ -52,13 +45,7 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
               colors: [Color(0xFF667eea), Color(0xFF764ba2)],
             ),
           ),
-          child: const Text(
-            'Flutter Tilt ✨',
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-            ),
-          ),
+          child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
         ),
         onGestureMove: (TiltDataModel tiltDataModel, GesturesType gesturesType) {
           setState(() {
@@ -190,7 +177,8 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
             ),
             FilterChip(
               label: const Text('Left: 0.8, Right: 0.3, Top: 0.7, Bottom: 0.4'),
-              selected: tiltDirection.contains(const TiltDirection(0.8, 0.7)) &&
+              selected:
+                  tiltDirection.contains(const TiltDirection(0.8, 0.7)) &&
                   tiltDirection.contains(const TiltDirection(-0.3, -0.4)),
               onSelected: (bool value) {
                 setState(() {
@@ -211,12 +199,7 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
           spacing: 64,
           runSpacing: 24,
           children: [
-            TiltBox(
-              width: width,
-              height: height,
-              maxAngle: angle,
-              tiltData: tiltData,
-            ),
+            TiltBox(width: width, height: height, maxAngle: angle, tiltData: tiltData),
             SizedBox(
               width: 200,
               child: Column(
@@ -231,10 +214,7 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
                   const SizedBox(height: 8),
                   Text(
                     'angle (max: $angle):',
-                    style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                    ),
+                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                   ),
                   Text('x: ${tiltData?.angle.dx ?? 0}°'),
                   Text('y: ${tiltData?.angle.dy ?? 0}°'),
@@ -278,13 +258,7 @@ Tilt(
         colors: [Color(0xFF667eea), Color(0xFF764ba2)],
       ),
     ),
-    child: const Text(
-      'Flutter Tilt ✨',
-      style: TextStyle(
-        fontSize: 20,
-        color: Colors.white,
-      ),
-    ),
+    child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
   ),
 ),
 

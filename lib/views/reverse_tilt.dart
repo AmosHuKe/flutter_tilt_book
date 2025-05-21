@@ -34,13 +34,7 @@ class ReverseTilt extends StatelessWidget {
               colors: [Color(0xFFffb199), Color(0xFFff0844)],
             ),
           ),
-          child: const Text(
-            'Flutter Tilt ✨',
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-            ),
-          ),
+          child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
         ),
       ),
     );
@@ -67,13 +61,7 @@ Tilt(
         colors: [Color(0xFFffb199), Color(0xFFff0844)],
       ),
     ),
-    child: const Text(
-      'Flutter Tilt ✨',
-      style: TextStyle(
-        fontSize: 20,
-        color: Colors.white,
-      ),
-    ),
+    child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
   ),
 ),
 

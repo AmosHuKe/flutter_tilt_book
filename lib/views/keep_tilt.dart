@@ -21,10 +21,7 @@ class KeepTilt extends StatelessWidget {
       /// Tilt here
       body: Tilt(
         borderRadius: BorderRadius.circular(30),
-        tiltConfig: const TiltConfig(
-          enableRevert: false,
-          enableSensorRevert: false,
-        ),
+        tiltConfig: const TiltConfig(enableRevert: false, enableSensorRevert: false),
         child: Container(
           width: 350,
           height: 200,
@@ -36,13 +33,7 @@ class KeepTilt extends StatelessWidget {
               colors: [Color(0xFF3cba92), Color(0xFF0ba360)],
             ),
           ),
-          child: const Text(
-            'Flutter Tilt ✨',
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-            ),
-          ),
+          child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
         ),
       ),
     );
@@ -56,10 +47,7 @@ import 'package:flutter_tilt/flutter_tilt.dart';
 
 Tilt(
   borderRadius: BorderRadius.circular(30),
-  tiltConfig: const TiltConfig(
-    enableRevert: false,
-    enableSensorRevert: false,
-  ),
+  tiltConfig: const TiltConfig(enableRevert: false, enableSensorRevert: false),
   child: Container(
     width: 350,
     height: 200,
@@ -71,13 +59,7 @@ Tilt(
         colors: [Color(0xFF3cba92), Color(0xFF0ba360)],
       ),
     ),
-    child: const Text(
-      'Flutter Tilt ✨',
-      style: TextStyle(
-        fontSize: 20,
-        color: Colors.white,
-      ),
-    ),
+    child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
   ),
 ),
 

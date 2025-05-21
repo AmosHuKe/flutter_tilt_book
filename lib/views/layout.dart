@@ -38,13 +38,7 @@ class LayoutDemo extends StatelessWidget {
                   height: 60,
                   alignment: Alignment.center,
                   color: Colors.black,
-                  child: const Text(
-                    'outer',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                    ),
-                  ),
+                  child: const Text('outer', style: TextStyle(fontSize: 20, color: Colors.white)),
                 ),
               ),
             ),
@@ -59,13 +53,7 @@ class LayoutDemo extends StatelessWidget {
                   height: 60,
                   alignment: Alignment.center,
                   color: Colors.black,
-                  child: const Text(
-                    'inner',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                    ),
-                  ),
+                  child: const Text('inner', style: TextStyle(fontSize: 20, color: Colors.white)),
                 ),
               ),
             ),
@@ -91,13 +79,7 @@ class LayoutDemo extends StatelessWidget {
                     ),
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: const Text(
-                    'behind',
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white,
-                    ),
-                  ),
+                  child: const Text('behind', style: TextStyle(fontSize: 18, color: Colors.white)),
                 ),
               ),
             ),
@@ -121,13 +103,7 @@ class LayoutDemo extends StatelessWidget {
                     ),
                     borderRadius: BorderRadius.circular(25),
                   ),
-                  child: const Text(
-                    'behind',
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white,
-                    ),
-                  ),
+                  child: const Text('behind', style: TextStyle(fontSize: 18, color: Colors.white)),
                 ),
               ),
             ),
@@ -147,13 +123,7 @@ class LayoutDemo extends StatelessWidget {
               ],
             ),
           ),
-          child: const Text(
-            'child',
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-            ),
-          ),
+          child: const Text('child', style: TextStyle(fontSize: 20, color: Colors.white)),
         ),
       ),
     );
@@ -184,13 +154,7 @@ Tilt(
             height: 60,
             alignment: Alignment.center,
             color: Colors.black,
-            child: const Text(
-              'outer',
-              style: TextStyle(
-                fontSize: 20,
-                color: Colors.white,
-              ),
-            ),
+            child: const Text('outer', style: TextStyle(fontSize: 20, color: Colors.white)),
           ),
         ),
       ),
@@ -205,13 +169,7 @@ Tilt(
             height: 60,
             alignment: Alignment.center,
             color: Colors.black,
-            child: const Text(
-              'inner',
-              style: TextStyle(
-                fontSize: 20,
-                color: Colors.white,
-              ),
-            ),
+            child: const Text('inner', style: TextStyle(fontSize: 20, color: Colors.white)),
           ),
         ),
       ),
@@ -237,13 +195,7 @@ Tilt(
               ),
               borderRadius: BorderRadius.circular(20),
             ),
-            child: const Text(
-              'behind',
-              style: TextStyle(
-                fontSize: 18,
-                color: Colors.white,
-              ),
-            ),
+            child: const Text('behind', style: TextStyle(fontSize: 18, color: Colors.white)),
           ),
         ),
       ),
@@ -267,13 +219,7 @@ Tilt(
               ),
               borderRadius: BorderRadius.circular(25),
             ),
-            child: const Text(
-              'behind',
-              style: TextStyle(
-                fontSize: 18,
-                color: Colors.white,
-              ),
-            ),
+            child: const Text('behind', style: TextStyle(fontSize: 18, color: Colors.white)),
           ),
         ),
       ),
@@ -293,13 +239,7 @@ Tilt(
         ],
       ),
     ),
-    child: const Text(
-      'child',
-      style: TextStyle(
-        fontSize: 20,
-        color: Colors.white,
-      ),
-    ),
+    child: const Text('child', style: TextStyle(fontSize: 20, color: Colors.white)),
   ),
 ),
 

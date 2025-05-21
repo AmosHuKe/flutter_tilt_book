@@ -51,13 +51,7 @@ class _EventsState extends State<Events> {
           height: height,
           alignment: Alignment.center,
           color: Colors.blueAccent,
-          child: const Text(
-            'Flutter Tilt ✨',
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-            ),
-          ),
+          child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
         ),
       ),
 
@@ -67,12 +61,7 @@ class _EventsState extends State<Events> {
           spacing: 64,
           runSpacing: 24,
           children: [
-            TiltBox(
-              width: width,
-              height: height,
-              maxAngle: angle,
-              tiltData: tiltData,
-            ),
+            TiltBox(width: width, height: height, maxAngle: angle, tiltData: tiltData),
             SizedBox(
               width: 200,
               child: Column(
@@ -99,10 +88,7 @@ class _EventsState extends State<Events> {
                   Text('x: 100% * ${tiltData?.areaProgress.dx ?? 0}'),
                   Text('y: 100% * ${tiltData?.areaProgress.dy ?? 0}'),
                   const SizedBox(height: 8),
-                  const Text(
-                    'angle:',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                  ),
+                  const Text('angle:', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                   Text('x: ${tiltData?.angle.dx ?? 0}°'),
                   Text('y: ${tiltData?.angle.dy ?? 0}°'),
                   const SizedBox(height: 8),
@@ -121,7 +107,8 @@ class _EventsState extends State<Events> {
   }
 }
 
-String code({required double width, required double height}) => '''
+String code({required double width, required double height}) =>
+    '''
 import 'package:flutter_tilt/flutter_tilt.dart';
 
 ······
@@ -149,13 +136,7 @@ Tilt(
     height: $height,
     alignment: Alignment.center,
     color: Colors.blueAccent,
-    child: const Text(
-      'Flutter Tilt ✨',
-      style: TextStyle(
-        fontSize: 20,
-        color: Colors.white,
-      ),
-    ),
+    child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
   ),
 ),
 

@@ -36,7 +36,7 @@ import 'package:flutter_tilt_book/views/tilt_stream_controller.dart' as _i21;
 /// [_i1.AnimationDemo]
 class AnimationDemo extends _i22.PageRouteInfo<void> {
   const AnimationDemo({List<_i22.PageRouteInfo>? children})
-      : super(AnimationDemo.name, initialChildren: children);
+    : super(AnimationDemo.name, initialChildren: children);
 
   static const String name = 'AnimationDemo';
 
@@ -52,7 +52,7 @@ class AnimationDemo extends _i22.PageRouteInfo<void> {
 /// [_i2.BentoGrids]
 class BentoGrids extends _i22.PageRouteInfo<void> {
   const BentoGrids({List<_i22.PageRouteInfo>? children})
-      : super(BentoGrids.name, initialChildren: children);
+    : super(BentoGrids.name, initialChildren: children);
 
   static const String name = 'BentoGrids';
 
@@ -68,7 +68,7 @@ class BentoGrids extends _i22.PageRouteInfo<void> {
 /// [_i3.Default]
 class Default extends _i22.PageRouteInfo<void> {
   const Default({List<_i22.PageRouteInfo>? children})
-      : super(Default.name, initialChildren: children);
+    : super(Default.name, initialChildren: children);
 
   static const String name = 'Default';
 
@@ -84,7 +84,7 @@ class Default extends _i22.PageRouteInfo<void> {
 /// [_i4.DialogDemo]
 class DialogDemo extends _i22.PageRouteInfo<void> {
   const DialogDemo({List<_i22.PageRouteInfo>? children})
-      : super(DialogDemo.name, initialChildren: children);
+    : super(DialogDemo.name, initialChildren: children);
 
   static const String name = 'DialogDemo';
 
@@ -100,7 +100,7 @@ class DialogDemo extends _i22.PageRouteInfo<void> {
 /// [_i5.DisableEffects]
 class DisableEffects extends _i22.PageRouteInfo<void> {
   const DisableEffects({List<_i22.PageRouteInfo>? children})
-      : super(DisableEffects.name, initialChildren: children);
+    : super(DisableEffects.name, initialChildren: children);
 
   static const String name = 'DisableEffects';
 
@@ -116,7 +116,7 @@ class DisableEffects extends _i22.PageRouteInfo<void> {
 /// [_i6.Events]
 class Events extends _i22.PageRouteInfo<void> {
   const Events({List<_i22.PageRouteInfo>? children})
-      : super(Events.name, initialChildren: children);
+    : super(Events.name, initialChildren: children);
 
   static const String name = 'Events';
 
@@ -132,7 +132,7 @@ class Events extends _i22.PageRouteInfo<void> {
 /// [_i7.Example]
 class Example extends _i22.PageRouteInfo<void> {
   const Example({List<_i22.PageRouteInfo>? children})
-      : super(Example.name, initialChildren: children);
+    : super(Example.name, initialChildren: children);
 
   static const String name = 'Example';
 
@@ -148,7 +148,7 @@ class Example extends _i22.PageRouteInfo<void> {
 /// [_i8.HomeLayout]
 class HomeLayout extends _i22.PageRouteInfo<void> {
   const HomeLayout({List<_i22.PageRouteInfo>? children})
-      : super(HomeLayout.name, initialChildren: children);
+    : super(HomeLayout.name, initialChildren: children);
 
   static const String name = 'HomeLayout';
 
@@ -164,7 +164,7 @@ class HomeLayout extends _i22.PageRouteInfo<void> {
 /// [_i9.InitialTilt]
 class InitialTilt extends _i22.PageRouteInfo<void> {
   const InitialTilt({List<_i22.PageRouteInfo>? children})
-      : super(InitialTilt.name, initialChildren: children);
+    : super(InitialTilt.name, initialChildren: children);
 
   static const String name = 'InitialTilt';
 
@@ -180,7 +180,7 @@ class InitialTilt extends _i22.PageRouteInfo<void> {
 /// [_i10.KeepTilt]
 class KeepTilt extends _i22.PageRouteInfo<void> {
   const KeepTilt({List<_i22.PageRouteInfo>? children})
-      : super(KeepTilt.name, initialChildren: children);
+    : super(KeepTilt.name, initialChildren: children);
 
   static const String name = 'KeepTilt';
 
@@ -196,7 +196,7 @@ class KeepTilt extends _i22.PageRouteInfo<void> {
 /// [_i11.Layout2Demo]
 class Layout2Demo extends _i22.PageRouteInfo<void> {
   const Layout2Demo({List<_i22.PageRouteInfo>? children})
-      : super(Layout2Demo.name, initialChildren: children);
+    : super(Layout2Demo.name, initialChildren: children);
 
   static const String name = 'Layout2Demo';
 
@@ -212,7 +212,7 @@ class Layout2Demo extends _i22.PageRouteInfo<void> {
 /// [_i12.LayoutDemo]
 class LayoutDemo extends _i22.PageRouteInfo<void> {
   const LayoutDemo({List<_i22.PageRouteInfo>? children})
-      : super(LayoutDemo.name, initialChildren: children);
+    : super(LayoutDemo.name, initialChildren: children);
 
   static const String name = 'LayoutDemo';
 
@@ -228,7 +228,7 @@ class LayoutDemo extends _i22.PageRouteInfo<void> {
 /// [_i13.LightDirectionDemo]
 class LightDirectionDemo extends _i22.PageRouteInfo<void> {
   const LightDirectionDemo({List<_i22.PageRouteInfo>? children})
-      : super(LightDirectionDemo.name, initialChildren: children);
+    : super(LightDirectionDemo.name, initialChildren: children);
 
   static const String name = 'LightDirectionDemo';
 
@@ -244,7 +244,7 @@ class LightDirectionDemo extends _i22.PageRouteInfo<void> {
 /// [_i14.LightShadowModeDemo]
 class LightShadowModeDemo extends _i22.PageRouteInfo<void> {
   const LightShadowModeDemo({List<_i22.PageRouteInfo>? children})
-      : super(LightShadowModeDemo.name, initialChildren: children);
+    : super(LightShadowModeDemo.name, initialChildren: children);
 
   static const String name = 'LightShadowModeDemo';
 
@@ -260,7 +260,7 @@ class LightShadowModeDemo extends _i22.PageRouteInfo<void> {
 /// [_i15.MultipleTilt]
 class MultipleTilt extends _i22.PageRouteInfo<void> {
   const MultipleTilt({List<_i22.PageRouteInfo>? children})
-      : super(MultipleTilt.name, initialChildren: children);
+    : super(MultipleTilt.name, initialChildren: children);
 
   static const String name = 'MultipleTilt';
 
@@ -276,7 +276,7 @@ class MultipleTilt extends _i22.PageRouteInfo<void> {
 /// [_i16.ParallaxCard]
 class ParallaxCard extends _i22.PageRouteInfo<void> {
   const ParallaxCard({List<_i22.PageRouteInfo>? children})
-      : super(ParallaxCard.name, initialChildren: children);
+    : super(ParallaxCard.name, initialChildren: children);
 
   static const String name = 'ParallaxCard';
 
@@ -292,7 +292,7 @@ class ParallaxCard extends _i22.PageRouteInfo<void> {
 /// [_i17.ParallaxImage]
 class ParallaxImage extends _i22.PageRouteInfo<void> {
   const ParallaxImage({List<_i22.PageRouteInfo>? children})
-      : super(ParallaxImage.name, initialChildren: children);
+    : super(ParallaxImage.name, initialChildren: children);
 
   static const String name = 'ParallaxImage';
 
@@ -308,7 +308,7 @@ class ParallaxImage extends _i22.PageRouteInfo<void> {
 /// [_i18.ReverseTilt]
 class ReverseTilt extends _i22.PageRouteInfo<void> {
   const ReverseTilt({List<_i22.PageRouteInfo>? children})
-      : super(ReverseTilt.name, initialChildren: children);
+    : super(ReverseTilt.name, initialChildren: children);
 
   static const String name = 'ReverseTilt';
 
@@ -324,7 +324,7 @@ class ReverseTilt extends _i22.PageRouteInfo<void> {
 /// [_i19.ShadowDirectionDemo]
 class ShadowDirectionDemo extends _i22.PageRouteInfo<void> {
   const ShadowDirectionDemo({List<_i22.PageRouteInfo>? children})
-      : super(ShadowDirectionDemo.name, initialChildren: children);
+    : super(ShadowDirectionDemo.name, initialChildren: children);
 
   static const String name = 'ShadowDirectionDemo';
 
@@ -340,7 +340,7 @@ class ShadowDirectionDemo extends _i22.PageRouteInfo<void> {
 /// [_i20.TiltDirectionDemo]
 class TiltDirectionDemo extends _i22.PageRouteInfo<void> {
   const TiltDirectionDemo({List<_i22.PageRouteInfo>? children})
-      : super(TiltDirectionDemo.name, initialChildren: children);
+    : super(TiltDirectionDemo.name, initialChildren: children);
 
   static const String name = 'TiltDirectionDemo';
 
@@ -356,7 +356,7 @@ class TiltDirectionDemo extends _i22.PageRouteInfo<void> {
 /// [_i21.TiltStreamControllerDemo]
 class TiltStreamControllerDemo extends _i22.PageRouteInfo<void> {
   const TiltStreamControllerDemo({List<_i22.PageRouteInfo>? children})
-      : super(TiltStreamControllerDemo.name, initialChildren: children);
+    : super(TiltStreamControllerDemo.name, initialChildren: children);
 
   static const String name = 'TiltStreamControllerDemo';
 

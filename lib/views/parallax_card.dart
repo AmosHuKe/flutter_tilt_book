@@ -134,21 +134,12 @@ class _AnimationCardState extends State<AnimationCard> with SingleTickerProvider
                       ),
                     ),
                     child: const Padding(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 28,
-                        vertical: 20,
-                      ),
+                      padding: EdgeInsets.symmetric(horizontal: 28, vertical: 20),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Text(
-                            'Artwork',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20.0,
-                            ),
-                          ),
+                          Text('Artwork', style: TextStyle(color: Colors.white, fontSize: 20.0)),
                           Text(
                             'Micha Huigen',
                             style: TextStyle(
@@ -305,21 +296,12 @@ class _AnimationCardState extends State<AnimationCard> with SingleTickerProvider
                       ),
                     ),
                     child: const Padding(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 28,
-                        vertical: 20,
-                      ),
+                      padding: EdgeInsets.symmetric(horizontal: 28, vertical: 20),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Text(
-                            'Artwork',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20.0,
-                            ),
-                          ),
+                          Text('Artwork', style: TextStyle(color: Colors.white, fontSize: 20.0)),
                           Text(
                             'Micha Huigen',
                             style: TextStyle(

@@ -1,11 +1,10 @@
 name: flutter_tilt_book
 description: Flutter Tilt - Examples of the flutter_tilt package.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-version: 2.5.33+52
+version: 2.5.34+53
 
 environment:
-  # TODO: 如果使用 ^3.7.0 会使用新的格式化方案，暂时使用以下，详见：https://github.com/dart-lang/dart_style/issues/1253
-  sdk: '>=3.6.0 <4.0.0'
+  sdk: ^3.8.0
 
 dependencies:
   flutter:

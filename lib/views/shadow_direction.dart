@@ -41,13 +41,7 @@ class _ShadowDirectionDemoState extends State<ShadowDirectionDemo> {
               colors: [Color(0xFF8989ba), Color(0xFFa7a6cb)],
             ),
           ),
-          child: const Text(
-            'Flutter Tilt ✨',
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-            ),
-          ),
+          child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
         ),
       ),
 
@@ -73,7 +67,8 @@ class _ShadowDirectionDemoState extends State<ShadowDirectionDemo> {
   }
 }
 
-String code({required ShadowDirection shadowDirection}) => '''
+String code({required ShadowDirection shadowDirection}) =>
+    '''
 import 'package:flutter_tilt/flutter_tilt.dart';
 
 ······
@@ -93,13 +88,7 @@ Tilt(
         colors: [Color(0xFF8989ba), Color(0xFFa7a6cb)],
       ),
     ),
-    child: const Text(
-      'Flutter Tilt ✨',
-      style: TextStyle(
-        fontSize: 20,
-        color: Colors.white,
-      ),
-    ),
+    child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
   ),
 ),
 

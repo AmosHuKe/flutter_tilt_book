@@ -19,13 +19,13 @@ class TiltStreamControllerDemo extends StatefulWidget {
 
 class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
     with TickerProviderStateMixin {
-  final WidgetStateProperty<Icon?> thumbIcon = WidgetStateProperty.resolveWith<Icon?>(
-    (Set<WidgetState> states) {
-      return states.contains(WidgetState.selected)
-          ? const Icon(Remix.link_m)
-          : const Icon(Remix.link_unlink_m);
-    },
-  );
+  final WidgetStateProperty<Icon?> thumbIcon = WidgetStateProperty.resolveWith<Icon?>((
+    Set<WidgetState> states,
+  ) {
+    return states.contains(WidgetState.selected)
+        ? const Icon(Remix.link_m)
+        : const Icon(Remix.link_unlink_m);
+  });
   late StreamController<TiltStreamModel> tiltStreamController;
   bool controllerBind = true;
   AnimationController? animationSelected;
@@ -64,9 +64,7 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
     aroundAnimationController.stop();
     ltrbAnimationController.stop();
     rtlbAnimationController.stop();
-    tiltStreamController.add(
-      const TiltStreamModel(position: Offset.zero, gestureUse: false),
-    );
+    tiltStreamController.add(const TiltStreamModel(position: Offset.zero, gestureUse: false));
   }
 
   /// Animation around
@@ -139,10 +137,7 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
                     size: Offset(10, 10),
                     child: Text(
                       'Flutter Tilt 1 ✨',
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.white,
-                      ),
+                      style: TextStyle(fontSize: 14, color: Colors.white),
                     ),
                   ),
                 ),
@@ -187,10 +182,7 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
                     size: Offset(10, 10),
                     child: Text(
                       'Flutter Tilt 2 ✨',
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.white,
-                      ),
+                      style: TextStyle(fontSize: 14, color: Colors.white),
                     ),
                   ),
                 ),
@@ -214,13 +206,7 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
       /// tools
       tools: [
         /// Animation
-        const Text(
-          'Animation',
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        const Text('Animation', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
         const SizedBox(height: 12),
         Wrap(
           spacing: 12,
@@ -346,9 +332,7 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
     aroundAnimationController.stop();
     ltrbAnimationController.stop();
     rtlbAnimationController.stop();
-    tiltStreamController.add(
-      const TiltStreamModel(position: Offset.zero, gestureUse: false),
-    );
+    tiltStreamController.add(const TiltStreamModel(position: Offset.zero, gestureUse: false));
   }
 
   /// Animation around
@@ -415,10 +399,7 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
                   size: Offset(10, 10),
                   child: Text(
                     'Flutter Tilt 1 ✨',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.white,
-                    ),
+                    style: TextStyle(fontSize: 14, color: Colors.white),
                   ),
                 ),
               ),
@@ -463,10 +444,7 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
                   size: Offset(10, 10),
                   child: Text(
                     'Flutter Tilt 2 ✨',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.white,
-                    ),
+                    style: TextStyle(fontSize: 14, color: Colors.white),
                   ),
                 ),
               ),
@@ -487,13 +465,7 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
 
         /// Tools
         /// Animation
-        const Text(
-          'Animation',
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        const Text('Animation', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
         const SizedBox(height: 12),
         Wrap(
           spacing: 12,

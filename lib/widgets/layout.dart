@@ -13,12 +13,7 @@ class Layout {
 }
 
 class LayoutAdaptive extends StatelessWidget {
-  const LayoutAdaptive({
-    super.key,
-    required this.child,
-    this.smChild,
-    this.mdChild,
-  });
+  const LayoutAdaptive({super.key, required this.child, this.smChild, this.mdChild});
 
   final Widget child;
 

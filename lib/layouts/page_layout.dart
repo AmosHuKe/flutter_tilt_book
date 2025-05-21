@@ -143,16 +143,14 @@ class _BodyContainerState extends State<BodyContainer> with SingleTickerProvider
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
-                crossAxisAlignment:
-                    layout.sm ? CrossAxisAlignment.center : CrossAxisAlignment.start,
+                crossAxisAlignment: layout.sm
+                    ? CrossAxisAlignment.center
+                    : CrossAxisAlignment.start,
                 children: [
                   /// Title
                   Text(
                     widget.title,
-                    style: const TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
 
                   /// Source Code
@@ -168,12 +166,7 @@ class _BodyContainerState extends State<BodyContainer> with SingleTickerProvider
                               padding: EdgeInsets.only(bottom: 2, right: 4),
                               child: Icon(Remix.external_link_line, size: 12),
                             ),
-                            Text(
-                              'Source Code',
-                              style: TextStyle(
-                                fontSize: 12,
-                              ),
-                            ),
+                            Text('Source Code', style: TextStyle(fontSize: 12)),
                           ],
                         ),
                       ),
@@ -186,9 +179,7 @@ class _BodyContainerState extends State<BodyContainer> with SingleTickerProvider
               /// Action
               Container(
                 width: 94,
-                padding: const EdgeInsets.symmetric(
-                  vertical: 4,
-                ),
+                padding: const EdgeInsets.symmetric(vertical: 4),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: const BorderRadius.all(Radius.circular(100)),
@@ -202,25 +193,16 @@ class _BodyContainerState extends State<BodyContainer> with SingleTickerProvider
                   indicatorWeight: 0,
                   indicatorSize: TabBarIndicatorSize.label,
                   indicatorPadding: const EdgeInsets.symmetric(horizontal: -12),
-                  indicator: const BoxDecoration(
-                    color: Color(0xFF171819),
-                    shape: BoxShape.circle,
-                  ),
+                  indicator: const BoxDecoration(color: Color(0xFF171819), shape: BoxShape.circle),
                   labelColor: Colors.white,
                   unselectedLabelColor: Colors.black,
                   overlayColor: const WidgetStatePropertyAll(Colors.transparent),
                   tabs: const [
                     /// Preview
-                    Tab(
-                      height: 36,
-                      icon: Icon(Remix.eye_line, size: 14),
-                    ),
+                    Tab(height: 36, icon: Icon(Remix.eye_line, size: 14)),
 
                     /// Code
-                    Tab(
-                      height: 36,
-                      icon: Icon(Remix.code_s_slash_line, size: 14),
-                    ),
+                    Tab(height: 36, icon: Icon(Remix.code_s_slash_line, size: 14)),
                   ],
                 ),
               ),
@@ -239,9 +221,7 @@ class _BodyContainerState extends State<BodyContainer> with SingleTickerProvider
                 LayoutAdaptive(
                   mdChild: Padding(
                     padding: const EdgeInsets.only(top: 40, bottom: 40),
-                    child: Column(
-                      children: [widget.body],
-                    ),
+                    child: Column(children: [widget.body]),
                   ),
                   child: ListView(
                     children: [
@@ -257,11 +237,7 @@ class _BodyContainerState extends State<BodyContainer> with SingleTickerProvider
                 ClipRRect(
                   borderRadius: BorderRadius.circular(24),
                   child: SelectionArea(
-                    child: ListView(
-                      children: [
-                        BookSyntaxHighlight(dartCode: widget.dartCode),
-                      ],
-                    ),
+                    child: ListView(children: [BookSyntaxHighlight(dartCode: widget.dartCode)]),
                   ),
                 ),
               ],
@@ -295,35 +271,19 @@ class ToolsContainer extends StatelessWidget {
             direction: layout.sm ? Axis.vertical : Axis.horizontal,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: const [
-              Text(
-                'Tools',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              Text('Tools', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
             ],
           ),
           const SizedBox(height: 24),
           if (tools != null)
             LayoutAdaptive(
-              mdChild: Column(
-                children: [...?tools],
-              ),
-              child: Expanded(
-                child: ListView(
-                  children: [...?tools],
-                ),
-              ),
+              mdChild: Column(children: [...?tools]),
+              child: Expanded(child: ListView(children: [...?tools])),
             ),
           if (tools == null)
             const Center(
               heightFactor: 6,
-              child: Icon(
-                Remix.emotion_line,
-                size: 36,
-                color: Colors.grey,
-              ),
+              child: Icon(Remix.emotion_line, size: 36, color: Colors.grey),
             ),
         ],
       ),

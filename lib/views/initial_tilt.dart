@@ -34,10 +34,7 @@ class InitialTilt extends StatelessWidget {
                   color: Colors.black,
                   child: const Text(
                     'Flutter Tilt ✨',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                    ),
+                    style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
                 ),
               ),
@@ -81,10 +78,7 @@ Tilt(
             color: Colors.black,
             child: const Text(
               'Flutter Tilt ✨',
-              style: TextStyle(
-                fontSize: 20,
-                color: Colors.white,
-              ),
+              style: TextStyle(fontSize: 20, color: Colors.white),
             ),
           ),
         ),

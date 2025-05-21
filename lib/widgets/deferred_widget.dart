@@ -12,9 +12,7 @@ class DeferredWidget extends StatefulWidget {
     this.libraryLoader,
     this.createWidget, {
     super.key,
-    this.placeholder = const Center(
-      child: CupertinoActivityIndicator(color: Colors.grey),
-    ),
+    this.placeholder = const Center(child: CupertinoActivityIndicator(color: Colors.grey)),
   });
 
   final LibraryLoader libraryLoader;

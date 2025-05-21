@@ -18,10 +18,7 @@ class DialogDemo extends StatelessWidget {
       sourceCodeLink:
           'https://github.com/AmosHuKe/flutter_tilt_book/blob/main/lib/views/dialog.dart',
       minHeight: 300,
-      body: ElevatedButton(
-        onPressed: () => _showDialog(context),
-        child: const Text('Show Dialog'),
-      ),
+      body: ElevatedButton(onPressed: () => _showDialog(context), child: const Text('Show Dialog')),
     );
   }
 
@@ -35,14 +32,8 @@ class DialogDemo extends StatelessWidget {
             /// Tilt here
             child: Tilt(
               borderRadius: BorderRadius.circular(30),
-              tiltConfig: const TiltConfig(
-                enableRevert: false,
-                enableSensorRevert: false,
-              ),
-              lightConfig: const LightConfig(
-                disable: false,
-                direction: LightDirection.all,
-              ),
+              tiltConfig: const TiltConfig(enableRevert: false, enableSensorRevert: false),
+              lightConfig: const LightConfig(disable: false, direction: LightDirection.all),
               shadowConfig: const ShadowConfig(disable: true),
               child: BackdropFilter(
                 filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
@@ -56,10 +47,7 @@ class DialogDemo extends StatelessWidget {
                     children: [
                       const Text(
                         'Flutter Tilt',
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.white,
-                        ),
+                        style: TextStyle(fontSize: 18, color: Colors.white),
                       ),
                       Expanded(
                         child: Align(
@@ -87,10 +75,7 @@ import 'package:flutter_tilt/flutter_tilt.dart';
 
 ······
 
-ElevatedButton(
-  onPressed: () => _showDialog(context),
-  child: const Text('Show Dialog'),
-),
+ElevatedButton(onPressed: () => _showDialog(context), child: const Text('Show Dialog')),
 
 ...
 
@@ -104,14 +89,8 @@ Future<void> _showDialog(BuildContext context) async {
           /// Tilt here
           child: Tilt(
             borderRadius: BorderRadius.circular(30),
-            tiltConfig: const TiltConfig(
-              enableRevert: false,
-              enableSensorRevert: false,
-            ),
-            lightConfig: const LightConfig(
-              disable: false,
-              direction: LightDirection.all,
-            ),
+            tiltConfig: const TiltConfig(enableRevert: false, enableSensorRevert: false),
+            lightConfig: const LightConfig(disable: false, direction: LightDirection.all),
             shadowConfig: const ShadowConfig(disable: true),
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
@@ -119,16 +98,13 @@ Future<void> _showDialog(BuildContext context) async {
                 width: 350,
                 height: 200,
                 padding: const EdgeInsets.all(32),
-                color: Colors.white12,
+                color: Colors.white24,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
                       'Flutter Tilt',
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
-                      ),
+                      style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                     Expanded(
                       child: Align(

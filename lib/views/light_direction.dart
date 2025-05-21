@@ -40,13 +40,7 @@ class _LightDirectionDemoState extends State<LightDirectionDemo> {
               colors: [Color(0xFF537895), Color(0xFF09203f)],
             ),
           ),
-          child: const Text(
-            'Flutter Tilt ✨',
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-            ),
-          ),
+          child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
         ),
       ),
 
@@ -72,7 +66,8 @@ class _LightDirectionDemoState extends State<LightDirectionDemo> {
   }
 }
 
-String code({required LightDirection lightDirection}) => '''
+String code({required LightDirection lightDirection}) =>
+    '''
 import 'package:flutter_tilt/flutter_tilt.dart';
 
 ······
@@ -91,13 +86,7 @@ Tilt(
         colors: [Color(0xFF537895), Color(0xFF09203f)],
       ),
     ),
-    child: const Text(
-      'Flutter Tilt ✨',
-      style: TextStyle(
-        fontSize: 20,
-        color: Colors.white,
-      ),
-    ),
+    child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
   ),
 ),
 

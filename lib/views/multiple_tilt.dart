@@ -74,12 +74,10 @@ class _AnimationCardState extends State<AnimationCard> with SingleTickerProvider
       vsync: this,
       duration: const Duration(milliseconds: 350),
     );
-    scaleAnimation = Tween(begin: 1.0, end: 1.05).animate(
-      CurvedAnimation(
-        parent: scaleAnimationController,
-        curve: Curves.easeOut,
-      ),
-    );
+    scaleAnimation = Tween(
+      begin: 1.0,
+      end: 1.05,
+    ).animate(CurvedAnimation(parent: scaleAnimationController, curve: Curves.easeOut));
   }
 
   @override
@@ -108,10 +106,7 @@ class _AnimationCardState extends State<AnimationCard> with SingleTickerProvider
             child: Tilt(
               borderRadius: BorderRadius.circular(20),
               tiltConfig: const TiltConfig(filterQuality: FilterQuality.high),
-              lightConfig: const LightConfig(
-                minIntensity: 0.1,
-                maxIntensity: 0.4,
-              ),
+              lightConfig: const LightConfig(minIntensity: 0.1, maxIntensity: 0.4),
               child: widget.child,
             ),
           ),
@@ -138,10 +133,7 @@ class _AnimationCardState extends State<AnimationCard> with SingleTickerProvider
                   enableSensorRevert: false,
                   filterQuality: FilterQuality.high,
                 ),
-                lightConfig: const LightConfig(
-                  minIntensity: 0.1,
-                  maxIntensity: 0.4,
-                ),
+                lightConfig: const LightConfig(minIntensity: 0.1, maxIntensity: 0.4),
                 shadowConfig: const ShadowConfig(disable: true),
                 child: widget.child,
               ),
@@ -213,12 +205,10 @@ class _AnimationCardState extends State<AnimationCard> with SingleTickerProvider
       vsync: this,
       duration: const Duration(milliseconds: 350),
     );
-    scaleAnimation = Tween(begin: 1.0, end: 1.05).animate(
-      CurvedAnimation(
-        parent: scaleAnimationController,
-        curve: Curves.easeOut,
-      ),
-    );
+    scaleAnimation = Tween(
+      begin: 1.0,
+      end: 1.05,
+    ).animate(CurvedAnimation(parent: scaleAnimationController, curve: Curves.easeOut));
   }
 
   @override
@@ -247,10 +237,7 @@ class _AnimationCardState extends State<AnimationCard> with SingleTickerProvider
             child: Tilt(
               borderRadius: BorderRadius.circular(20),
               tiltConfig: const TiltConfig(filterQuality: FilterQuality.high),
-              lightConfig: const LightConfig(
-                minIntensity: 0.1,
-                maxIntensity: 0.4,
-              ),
+              lightConfig: const LightConfig(minIntensity: 0.1, maxIntensity: 0.4),
               child: widget.child,
             ),
           ),
@@ -277,10 +264,7 @@ class _AnimationCardState extends State<AnimationCard> with SingleTickerProvider
                   enableSensorRevert: false,
                   filterQuality: FilterQuality.high,
                 ),
-                lightConfig: const LightConfig(
-                  minIntensity: 0.1,
-                  maxIntensity: 0.4,
-                ),
+                lightConfig: const LightConfig(minIntensity: 0.1, maxIntensity: 0.4),
                 shadowConfig: const ShadowConfig(disable: true),
                 child: widget.child,
               ),

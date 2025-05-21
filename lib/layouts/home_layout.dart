@@ -20,9 +20,7 @@ class HomeLayout extends StatelessWidget {
         width: 200,
         padding: const EdgeInsets.only(top: 24, bottom: 24, right: 24),
         color: const Color(0xFF171819),
-        child: const SafeArea(
-          child: NavigatorContainer(),
-        ),
+        child: const SafeArea(child: NavigatorContainer()),
       ),
       body: SafeArea(
         child: LayoutAdaptive(
@@ -103,53 +101,37 @@ class NavigatorContainer extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         /// Title
-        const Padding(
-          padding: EdgeInsets.only(top: 12, left: 24),
-          child: LogoTitle(),
-        ),
-        const BookDivider(
-          padding: EdgeInsets.only(left: 24, top: 24, bottom: 12),
-        ),
+        const Padding(padding: EdgeInsets.only(top: 12, left: 24), child: LogoTitle()),
+        const BookDivider(padding: EdgeInsets.only(left: 24, top: 24, bottom: 12)),
 
         /// Banner
         const BannerContainer(),
-        const BookDivider(
-          padding: EdgeInsets.only(left: 24, top: 12, bottom: 24),
-        ),
+        const BookDivider(padding: EdgeInsets.only(left: 24, top: 12, bottom: 24)),
 
         /// Menu
         const Padding(
           padding: EdgeInsets.only(left: 24, bottom: 12),
           child: Text(
             'MENU',
-            style: TextStyle(
-              color: Color(0xFF616163),
-              fontSize: 12,
-              fontWeight: FontWeight.bold,
-            ),
+            style: TextStyle(color: Color(0xFF616163), fontSize: 12, fontWeight: FontWeight.bold),
           ),
         ),
         Expanded(
           child: Stack(
             children: [
               ListView(
-                physics: const AlwaysScrollableScrollPhysics(
-                  parent: BouncingScrollPhysics(),
-                ),
-                children: List.generate(
-                  Config.routeData.length + 1,
-                  (index) {
-                    if (index == Config.routeData.length) {
-                      return const SizedBox(height: 100);
-                    }
-                    final routeData = Config.routeData[index];
-                    return NavigatorItem(
-                      title: routeData.title,
-                      icon: routeData.icon,
-                      pathName: routeData.pathName,
-                    );
-                  },
-                ),
+                physics: const AlwaysScrollableScrollPhysics(parent: BouncingScrollPhysics()),
+                children: List.generate(Config.routeData.length + 1, (index) {
+                  if (index == Config.routeData.length) {
+                    return const SizedBox(height: 100);
+                  }
+                  final routeData = Config.routeData[index];
+                  return NavigatorItem(
+                    title: routeData.title,
+                    icon: routeData.icon,
+                    pathName: routeData.pathName,
+                  );
+                }),
               ),
 
               /// 模拟内阴影，视觉提醒用户上方还有更多菜单
@@ -207,12 +189,7 @@ class NavigatorContainer extends StatelessWidget {
 
 /// 导航按钮
 class NavigatorItem extends StatefulWidget {
-  const NavigatorItem({
-    super.key,
-    required this.title,
-    required this.icon,
-    required this.pathName,
-  });
+  const NavigatorItem({super.key, required this.title, required this.icon, required this.pathName});
 
   final String title;
   final IconData icon;
@@ -253,19 +230,12 @@ class _NavigatorItemState extends State<NavigatorItem> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(bottom: 2),
-                        child: Icon(
-                          widget.icon,
-                          size: 14,
-                          color: const Color(0xFF848486),
-                        ),
+                        child: Icon(widget.icon, size: 14, color: const Color(0xFF848486)),
                       ),
                       const SizedBox(width: 6),
                       Text(
                         widget.title,
-                        style: const TextStyle(
-                          color: Color(0xFF848486),
-                          fontSize: 14,
-                        ),
+                        style: const TextStyle(color: Color(0xFF848486), fontSize: 14),
                       ),
                     ],
                   ),
@@ -281,19 +251,12 @@ class _NavigatorItemState extends State<NavigatorItem> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(bottom: 2),
-                        child: Icon(
-                          widget.icon,
-                          size: 14,
-                          color: const Color(0xFFE7E7E8),
-                        ),
+                        child: Icon(widget.icon, size: 14, color: const Color(0xFFE7E7E8)),
                       ),
                       const SizedBox(width: 6),
                       Text(
                         widget.title,
-                        style: const TextStyle(
-                          color: Color(0xFFE7E7E8),
-                          fontSize: 14,
-                        ),
+                        style: const TextStyle(color: Color(0xFFE7E7E8), fontSize: 14),
                       ),
                     ],
                   ),
@@ -340,18 +303,11 @@ class BannerContainer extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(bottom: 4, right: 8),
-                        child: Icon(
-                          Config.bookLinkData[index].icon,
-                          size: 20,
-                          color: Colors.white,
-                        ),
+                        child: Icon(Config.bookLinkData[index].icon, size: 20, color: Colors.white),
                       ),
                       Text(
                         Config.bookLinkData[index].title,
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 14,
-                        ),
+                        style: const TextStyle(color: Colors.white, fontSize: 14),
                       ),
                     ],
                   ),
@@ -371,12 +327,6 @@ class LogoTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text(
-      Config.appTitle,
-      style: TextStyle(
-        color: Colors.white,
-        fontSize: 20,
-      ),
-    );
+    return const Text(Config.appTitle, style: TextStyle(color: Colors.white, fontSize: 20));
   }
 }

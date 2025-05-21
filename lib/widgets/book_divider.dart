@@ -9,10 +9,7 @@ class BookDivider extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: padding,
-      child: const Divider(
-        color: Color(0xFF2A2B2D),
-        height: 1,
-      ),
+      child: const Divider(color: Color(0xFF2A2B2D), height: 1),
     );
   }
 }

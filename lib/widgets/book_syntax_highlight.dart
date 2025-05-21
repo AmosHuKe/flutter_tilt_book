@@ -32,24 +32,13 @@ class _BookSyntaxHighlightState extends State<BookSyntaxHighlight> {
       highlight.registerLanguages({'dart': highlight_languages.langDart});
 
       /// Highlight your text or code.
-      final HighlightResult result = highlight.highlightAuto(
-        dartCode,
-        languages,
-      );
+      final HighlightResult result = highlight.highlightAuto(dartCode, languages);
 
       /// Define your styles.
-      const defaultStyle = TextStyle(
-        fontSize: 14,
-        height: 1.3,
-        wordSpacing: 4,
-        letterSpacing: 1,
-      );
+      const defaultStyle = TextStyle(fontSize: 14, height: 1.3, wordSpacing: 4, letterSpacing: 1);
 
       /// Convert highlight result to TextSpan
-      final renderer = TextSpanRenderer(
-        defaultStyle,
-        highlight_styles.a11YLightTheme,
-      );
+      final renderer = TextSpanRenderer(defaultStyle, highlight_styles.a11YLightTheme);
       result.render(renderer);
       if (mounted) {
         setState(() {

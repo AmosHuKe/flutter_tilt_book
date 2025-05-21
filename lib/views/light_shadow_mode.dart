@@ -85,20 +85,14 @@ class _LightShadowModeDemoState extends State<LightShadowModeDemo> {
             ),
           ],
         ),
-        child: SizedBox(
-          width: 742 * scaleFactor,
-          height: 337 * scaleFactor,
-        ),
+        child: SizedBox(width: 742 * scaleFactor, height: 337 * scaleFactor),
       ),
 
       /// tools
       tools: [
         const Text(
           'Tilt.lightShadowMode',
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 12),
         Wrap(
@@ -121,7 +115,8 @@ class _LightShadowModeDemoState extends State<LightShadowModeDemo> {
   }
 }
 
-String code({LightShadowMode? lightShadowMode}) => '''
+String code({LightShadowMode? lightShadowMode}) =>
+    '''
 import 'package:flutter_tilt/flutter_tilt.dart';
 
 ······
@@ -175,10 +170,7 @@ Tilt(
       ),
     ],
   ),
-  child: SizedBox(
-    width: 742,
-    height: 337,
-  ),
+  child: SizedBox(width: 742, height: 337),
 ),
 
 ······

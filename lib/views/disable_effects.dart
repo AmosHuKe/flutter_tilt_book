@@ -42,13 +42,7 @@ class _DisableEffectsState extends State<DisableEffects> {
           height: 200,
           alignment: Alignment.center,
           color: Colors.blueAccent,
-          child: const Text(
-            'Flutter Tilt ✨',
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-            ),
-          ),
+          child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
         ),
       ),
 
@@ -92,11 +86,7 @@ class _DisableEffectsState extends State<DisableEffects> {
   }
 }
 
-String code({
-  required bool disableTilt,
-  required bool disableLight,
-  required bool disableShadow,
-}) =>
+String code({required bool disableTilt, required bool disableLight, required bool disableShadow}) =>
     '''
 import 'package:flutter_tilt/flutter_tilt.dart';
 
@@ -112,13 +102,7 @@ Tilt(
     height: 200,
     alignment: Alignment.center,
     color: Colors.blueAccent,
-    child: const Text(
-      'Flutter Tilt ✨',
-      style: TextStyle(
-        fontSize: 20,
-        color: Colors.white,
-      ),
-    ),
+    child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
   ),
 ),
 

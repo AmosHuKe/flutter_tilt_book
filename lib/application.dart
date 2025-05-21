@@ -16,10 +16,7 @@ class Application extends StatelessWidget {
       title: Config.appTitle,
       debugShowCheckedModeBanner: false,
       color: const Color(0xFF171819),
-      theme: ThemeData(
-        useMaterial3: true,
-        fontFamilyFallback: const ['Roboto', 'Noto Emoji'],
-      ),
+      theme: ThemeData(useMaterial3: true, fontFamilyFallback: const ['Roboto', 'Noto Emoji']),
       routerConfig: appRouter.config(),
     ).animate().fadeIn(duration: 400.ms, curve: Curves.easeIn);
   }
