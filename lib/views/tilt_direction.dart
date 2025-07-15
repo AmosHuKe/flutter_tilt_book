@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_tilt/flutter_tilt.dart';
 
-import 'package:flutter_tilt_book/layouts/page_layout.dart';
-import 'package:flutter_tilt_book/widgets/tilt_box.dart';
+import '../layouts/page_layout.dart';
+import '../widgets/tilt_box.dart';
 
 @RoutePage()
 class TiltDirectionDemo extends StatefulWidget {

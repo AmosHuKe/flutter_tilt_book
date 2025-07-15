@@ -1,7 +1,6 @@
 import 'package:remixicon_updated/remixicon_updated.dart';
 
-import 'package:flutter_tilt_book/router.gr.dart';
-
+import '../router.gr.dart';
 import '../models/book_link.dart';
 import '../models/route.dart';
 

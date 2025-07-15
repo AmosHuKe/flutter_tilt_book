@@ -1,5 +1,4 @@
 import 'package:flutter/widgets.dart';
-
 import 'package:auto_route/auto_route.dart';
 
 class RouteData {

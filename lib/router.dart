@@ -1,9 +1,7 @@
 import 'package:flutter/widgets.dart';
-
 import 'package:auto_route/auto_route.dart';
 
 import 'config/config.dart';
-
 import './router.gr.dart';
 
 @AutoRouterConfig(generateForDir: ['lib'])

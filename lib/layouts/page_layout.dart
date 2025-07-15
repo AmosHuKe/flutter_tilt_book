@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:remixicon_updated/remixicon_updated.dart';
 import 'package:url_launcher/url_launcher.dart';
 
