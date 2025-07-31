@@ -52,6 +52,24 @@ class Config {
       pageInfo: MultipleTilt.page,
     ),
     RouteData(
+      title: 'Layout',
+      icon: Remix.layout_2_line,
+      pathName: 'LayoutDemo',
+      pageInfo: LayoutDemo.page,
+    ),
+    RouteData(
+      title: 'Layout2',
+      icon: Remix.layout_4_line,
+      pathName: 'Layout2Demo',
+      pageInfo: Layout2Demo.page,
+    ),
+    RouteData(
+      title: 'Layout3',
+      icon: Remix.layout_2_line,
+      pathName: 'Layout3Demo',
+      pageInfo: Layout3Demo.page,
+    ),
+    RouteData(
       title: 'Bento Grids',
       icon: Remix.layout_masonry_line,
       pathName: 'BentoGrids',
@@ -74,18 +92,6 @@ class Config {
       icon: Remix.stack_line,
       pathName: 'Default',
       pageInfo: Default.page,
-    ),
-    RouteData(
-      title: 'Layout',
-      icon: Remix.layout_2_line,
-      pathName: 'LayoutDemo',
-      pageInfo: LayoutDemo.page,
-    ),
-    RouteData(
-      title: 'Layout2',
-      icon: Remix.layout_4_line,
-      pathName: 'Layout2Demo',
-      pageInfo: Layout2Demo.page,
     ),
     RouteData(
       title: 'Animation',
