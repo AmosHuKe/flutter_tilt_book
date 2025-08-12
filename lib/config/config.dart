@@ -4,19 +4,19 @@ import '../router.gr.dart';
 import '../models/book_link.dart';
 import '../models/route.dart';
 
-class Config {
+abstract final class Config {
   static const String appTitle = 'Flutter Tilt';
 
   static final List<BookLinkData> bookLinkData = [
     BookLinkData(
       title: 'Pub.dev',
       icon: Remix.flutter_fill,
-      url: 'https://pub.dev/packages/flutter_tilt',
+      uri: Uri.https('pub.dev', '/packages/flutter_tilt'),
     ),
     BookLinkData(
       title: 'Github.com',
       icon: Remix.github_fill,
-      url: 'https://github.com/fluttercandies/flutter_tilt',
+      uri: Uri.https('github.com', '/fluttercandies/flutter_tilt'),
     ),
   ];
 

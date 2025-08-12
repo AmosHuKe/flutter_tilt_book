@@ -292,7 +292,7 @@ class BannerContainer extends StatelessWidget {
         children: List.generate(
           Config.bookLinkData.length,
           (index) => GestureDetector(
-            onTap: () => launchUrl(Uri.parse(Config.bookLinkData[index].url)),
+            onTap: () => launchUrl(Config.bookLinkData[index].uri),
             child: MouseRegion(
               cursor: SystemMouseCursors.click,
               child: Row(

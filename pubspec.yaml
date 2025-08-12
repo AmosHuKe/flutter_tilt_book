@@ -1,7 +1,7 @@
 name: flutter_tilt_book
 description: Flutter Tilt - Examples of the flutter_tilt package.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-version: 2.5.38+57
+version: 2.5.39+58
 
 environment:
   sdk: ^3.8.0
@@ -10,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  flutter_tilt: ^3.2.1
+  flutter_tilt: ^3.2.2
 
   auto_route: ^10.1.0+1
   flutter_animate: ^4.5.2
