@@ -220,60 +220,62 @@ class _NavigatorItemState extends State<NavigatorItem> {
           child: AnimatedCrossFade(
             crossFadeState: selected ? CrossFadeState.showSecond : CrossFadeState.showFirst,
             duration: const Duration(milliseconds: 400),
-            firstChild: Stack(
-              alignment: AlignmentDirectional.centerStart,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 24),
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 2),
-                        child: Icon(widget.icon, size: 14, color: const Color(0xFF848486)),
-                      ),
-                      const SizedBox(width: 6),
-                      Text(
-                        widget.title,
-                        style: const TextStyle(color: Color(0xFF848486), fontSize: 14),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+            firstChild: _buildMenuItem(
+              title: widget.title,
+              icon: widget.icon,
+              textColor: const Color(0xFF848486),
+              indicatorColor: Colors.transparent,
             ),
-            secondChild: Stack(
-              alignment: AlignmentDirectional.centerStart,
+            secondChild: _buildMenuItem(
+              title: widget.title,
+              icon: widget.icon,
+              textColor: const Color(0xFFE7E7E8),
+              indicatorColor: const Color(0xFF186A75),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildMenuItem({
+    required String title,
+    required IconData icon,
+    required Color textColor,
+    required Color indicatorColor,
+  }) {
+    return Stack(
+      alignment: AlignmentDirectional.centerStart,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(left: 24),
+          child: SizedBox(
+            height: 18,
+            child: Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 24),
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 2),
-                        child: Icon(widget.icon, size: 14, color: const Color(0xFFE7E7E8)),
-                      ),
-                      const SizedBox(width: 6),
-                      Text(
-                        widget.title,
-                        style: const TextStyle(color: Color(0xFFE7E7E8), fontSize: 14),
-                      ),
-                    ],
-                  ),
+                  padding: const EdgeInsets.only(right: 6),
+                  child: Icon(icon, size: 14, color: textColor),
                 ),
-                Container(
-                  width: 2,
-                  height: 16,
-                  margin: const EdgeInsets.only(left: 2),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFF186A75),
-                    borderRadius: BorderRadius.circular(100),
-                  ),
+                Text(
+                  title,
+                  style: TextStyle(color: textColor, fontSize: 14, height: 1),
+                  strutStyle: const StrutStyle(fontSize: 14, height: 1, forceStrutHeight: true),
                 ),
               ],
             ),
           ),
         ),
-      ),
+        Container(
+          width: 2,
+          height: 16,
+          margin: const EdgeInsets.only(left: 6),
+          decoration: BoxDecoration(
+            color: indicatorColor,
+            borderRadius: BorderRadius.circular(100),
+          ),
+        ),
+      ],
     );
   }
 }
@@ -299,14 +301,20 @@ class BannerContainer extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(bottom: 4, right: 8),
+                        padding: const EdgeInsets.only(right: 8),
                         child: Icon(Config.bookLinkData[index].icon, size: 20, color: Colors.white),
                       ),
                       Text(
                         Config.bookLinkData[index].title,
-                        style: const TextStyle(color: Colors.white, fontSize: 14),
+                        style: const TextStyle(color: Colors.white, fontSize: 14, height: 1),
+                        strutStyle: const StrutStyle(
+                          fontSize: 14,
+                          height: 1,
+                          forceStrutHeight: true,
+                        ),
                       ),
                     ],
                   ),
