@@ -70,12 +70,6 @@ abstract final class Config {
       pageInfo: Layout3Demo.page,
     ),
     RouteData(
-      title: 'Bento Grids',
-      icon: Remix.layout_masonry_line,
-      pathName: 'BentoGrids',
-      pageInfo: BentoGrids.page,
-    ),
-    RouteData(
       title: 'Events',
       icon: Remix.drag_drop_line,
       pathName: 'Events',
@@ -98,6 +92,12 @@ abstract final class Config {
       icon: Remix.sketching,
       pathName: 'AnimationDemo',
       pageInfo: AnimationDemo.page,
+    ),
+    RouteData(
+      title: 'Smooth Enter',
+      icon: Remix.sketching,
+      pathName: 'SmoothGestureEnterDemo',
+      pageInfo: SmoothGestureEnterDemo.page,
     ),
     RouteData(
       title: 'TiltStreamController',
@@ -131,7 +131,7 @@ abstract final class Config {
     ),
     RouteData(
       title: 'Shadow Direction',
-      icon: Remix.bring_forward,
+      icon: Remix.ri_shadow_line,
       pathName: 'ShadowDirectionDemo',
       pageInfo: ShadowDirectionDemo.page,
     ),
@@ -146,6 +146,12 @@ abstract final class Config {
       icon: Remix.shape_line,
       pathName: 'DisableEffects',
       pageInfo: DisableEffects.page,
+    ),
+    RouteData(
+      title: 'Bento Grids',
+      icon: Remix.layout_masonry_line,
+      pathName: 'BentoGrids',
+      pageInfo: BentoGrids.page,
     ),
   ];
 }
