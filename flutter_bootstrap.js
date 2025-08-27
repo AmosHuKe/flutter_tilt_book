@@ -44,7 +44,7 @@ _flutter.loader.load({
     canvasKitBaseUrl: '/flutter_tilt_book/canvaskit/'
   },
   serviceWorkerSettings: {
-    serviceWorkerVersion: "526026925",
+    serviceWorkerVersion: "730455730",
   },
   onEntrypointLoaded: async function (engineInitializer) {
     const appRunner = await engineInitializer.initializeEngine();
