@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/overview</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/overview" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/overview" />
+<lastmod>2025-09-17T06:18:06.445Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/installation</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/installation" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/installation" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/changelog</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/changelog" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/changelog" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/migration-guides</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/migration-guides" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/migration-guides" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/migration-guides/migrate-to-v2-0-0</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/migration-guides/migrate-to-v2-0-0" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/migration-guides/migrate-to-v2-0-0" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/migration-guides/migrate-to-v0-1-0</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/migration-guides/migrate-to-v0-1-0" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/migration-guides/migrate-to-v0-1-0" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/widgets/tilt-widget</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/widgets/tilt-widget" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/widgets/tilt-widget" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/widgets/tiltparallax-widget</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/widgets/tiltparallax-widget" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/widgets/tiltparallax-widget" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/guides/simple-usage</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/guides/simple-usage" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/guides/simple-usage" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/guides/tilt-with-controller</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/guides/tilt-with-controller" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/guides/tilt-with-controller" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/guides/faq</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/guides/faq" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/guides/faq" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/guides/faq/keep-the-tilt-angle</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/guides/faq/keep-the-tilt-angle" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/guides/faq/keep-the-tilt-angle" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/guides/faq/how-to-disable-sensors</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/guides/faq/how-to-disable-sensors" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/guides/faq/how-to-disable-sensors" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/guides/faq/sensors-are-inactive-on-the-web</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/guides/faq/sensors-are-inactive-on-the-web" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/guides/faq/sensors-are-inactive-on-the-web" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/guides/faq/how-to-make-the-shadow-match-the-content</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/guides/faq/how-to-make-the-shadow-match-the-content" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/guides/faq/how-to-make-the-shadow-match-the-content" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/examples</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/examples" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/examples" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/demo</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/demo" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/examples/demo" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/parallax-image</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/parallax-image" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/examples/parallax-image" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/tilt-lightshadowmode</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/tilt-lightshadowmode" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/examples/tilt-lightshadowmode" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/parallax-card</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/parallax-card" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/examples/parallax-card" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/multiple-tilt</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/multiple-tilt" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/examples/multiple-tilt" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/layout-demo</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/layout-demo" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/examples/layout-demo" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/layout2-demo</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/layout2-demo" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/examples/layout2-demo" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/layout3-demo</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/layout3-demo" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/examples/layout3-demo" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/events</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/events" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/examples/events" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/dialog</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/dialog" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/examples/dialog" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/default</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/default" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/examples/default" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/animation-demo</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/animation-demo" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/examples/animation-demo" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/smooth-gesture-enter-demo</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/smooth-gesture-enter-demo" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/examples/smooth-gesture-enter-demo" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/tilt-stream-controller-demo</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/tilt-stream-controller-demo" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/examples/tilt-stream-controller-demo" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/reverse-tilt</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/reverse-tilt" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/examples/reverse-tilt" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/keep-tilt</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/keep-tilt" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/examples/keep-tilt" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/tilt-direction-demo</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/tilt-direction-demo" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/examples/tilt-direction-demo" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/light-direction-demo</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/light-direction-demo" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/examples/light-direction-demo" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/shadow-direction-demo</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/shadow-direction-demo" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/examples/shadow-direction-demo" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/initial-tilt</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/initial-tilt" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/examples/initial-tilt" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/disable-effects</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/disable-effects" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/examples/disable-effects" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/bento-grids</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://amoshuke.github.io/flutter_tilt_book/en/docs/examples/bento-grids" />
+<xhtml:link rel="alternate" hreflang="zh" href="https://amoshuke.github.io/flutter_tilt_book/zh/docs/examples/bento-grids" />
+<lastmod>2025-09-17T06:18:06.446Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+</urlset>
