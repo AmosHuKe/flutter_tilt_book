@@ -76,6 +76,8 @@ jobs:
           npm run generate-dist-scripts
           npm run build
         shell: bash
+        env:
+          NEXT_PUBLIC_FLUTTER_TILT_EXAMPLE_URL: /flutter_tilt_book
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
