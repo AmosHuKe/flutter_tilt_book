@@ -559,7 +559,7 @@
     "slug": "/guides/faq/how-to-make-the-shadow-match-the-content",
     "title": "How to make the shadow match the content",
     "description": "",
-    "content": "You can use the following code:\n\n```diff {4} showLineNumbers\n...\n\nTilt(\n+ lightShadowMode: LightShadowMode.projector,\n  ...\n),\n\n...\n```\n\nFor more information, see: [Tilt widget - LightShadowMode][].\n\nYou should assess the performance risks yourself.\nIf your scenario runs smoothly, then you can use it.\n\n<Note type=\"warning\" title=\"Performance risk exists\">\n  Apply a shadow to the entire `Tilt` widget, similar to a projector effect.\n  will display a shadow that exactly matches the non-transparent parts of the\n  widget.\\\n  Recommended for the following scenarios:\n\n  * Images only\n  * No data states\n  * No Hero tags\n</Note>\n\n[Tilt widget - LightShadowMode]: /en/docs/widgets/tilt-widget/#lightshadowmode\n",
+    "content": "You can use the following code:\n\n```diff {4} showLineNumbers\n...\n\nTilt(\n+ lightShadowMode: LightShadowMode.projector,\n  ...\n),\n\n...\n```\n\nFor more information, see: [Tilt widget - LightShadowMode][].\n\nYou should assess the performance risks yourself.\nIf your scenario runs smoothly, then you can use it.\n\n<Note type=\"warning\" title=\"Performance risk exists\">\n  Apply a shadow to the entire `Tilt` widget, similar to a projector effect.\\\n  will display a shadow that exactly matches the non-transparent parts of the widget.\\\n  Recommended for the following scenarios:\n\n  * Images only\n  * No data states\n  * No Hero tags\n</Note>\n\n[Tilt widget - LightShadowMode]: /en/docs/widgets/tilt-widget/#lightshadowmode\n",
     "_searchMeta": {
       "cleanContent": "you can use the following code: for more information see: tilt widget - lightshadowmode you should assess the performance risks yourself if your scenario runs smoothly then you can use it apply a shadow to the entire tilt widget similar to a projector effect will display a shadow that exactly matches the non-transparent parts of the widget recommended for the following scenarios: images only no data states no hero tags tilt widget - lightshadowmode : en docs widgets tilt-widget lightshadowmode",
       "headings": [],
@@ -724,7 +724,7 @@
     "slug": "/migration-guides",
     "title": "Migration Guide",
     "description": "This document gathered all breaking changes and migrations requirement between major versions.",
-    "content": "* [Migrate to v2.0.0](/docs/migration-guides/migrate-to-v2.0.0)\n* [Migrate to v0.1.0](/docs/migration-guides/migrate-to-v0.1.0)\n",
+    "content": "* [Migrate to v2.0.0](/en/docs/migration-guides/migrate-to-v2.0.0)\n* [Migrate to v0.1.0](/en/docs/migration-guides/migrate-to-v0.1.0)\n",
     "_searchMeta": {
       "cleanContent": "migrate to v2 0 0 migrate to v0 1 0",
       "headings": [],
