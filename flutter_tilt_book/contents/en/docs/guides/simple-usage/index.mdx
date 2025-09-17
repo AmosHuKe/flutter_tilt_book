@@ -1,0 +1,100 @@
+---
+title: Simple usage
+description: Simple examples to help you get started quickly.
+keywords: ["documents", "guide", "simple usage"]
+---
+
+## Tilt
+
+[Tilt widget][Tilt widget parameters] will have default tilt, shadow, and light effects.
+
+```dart {6} showLineNumbers
+/// Import flutter_tilt
+import 'package:flutter_tilt/flutter_tilt.dart';
+
+...
+
+Tilt(
+  child: Container(
+    width: 150.0,
+    height: 300.0,
+    color: Colors.grey,
+  ),
+),
+
+...
+
+```
+
+## Parallax
+
+[TiltParallax widget][TiltParallax widget parameters] can only be used in the `childLayout` of `Tilt` widget.
+
+```dart {6,7,11,19} showLineNumbers
+/// Import flutter_tilt
+import 'package:flutter_tilt/flutter_tilt.dart';
+
+...
+
+Tilt(
+  childLayout: const ChildLayout(
+    outer: [
+      /// Parallax here
+      Positioned(
+        child: TiltParallax(
+          child: Text('Parallax'),
+        ),
+      ),
+      /// Parallax here
+      Positioned(
+        top: 20.0,
+        left: 20.0,
+        child: TiltParallax(
+          size: Offset(-10.0, -10.0),
+          child: Text('Tilt'),
+        ),
+      ),
+    ],
+  ),
+  child: Container(
+    width: 150.0,
+    height: 300.0,
+    color: Colors.brown,
+  ),
+),
+
+...
+
+```
+
+## More parameters
+
+<NavCardGrid>
+  <NavCard
+    subtitle="Widget"
+    title="Tilt Widget"
+    description={
+      <div>
+        Learn about Tilt widget parameters.
+        <br />
+        Tilt widget will have default tilt, shadow, and light effects.
+      </div>
+    }
+    href="/docs/widgets/tilt-widget"
+  />
+  <NavCard
+    subtitle="Widget"
+    title="TiltParallax Widget"
+    description={
+      <div>
+        Learn about TiltParallax widget parameters.
+        <br />
+        Parallax effect in the Tilt widget.
+      </div>
+    }
+    href="/docs/widgets/tiltparallax-widget"
+  />
+</NavCardGrid>
+
+[Tilt widget parameters]: /en/docs/widgets/tilt-widget
+[TiltParallax widget parameters]: /en/docs/widgets/tiltparallax-widget

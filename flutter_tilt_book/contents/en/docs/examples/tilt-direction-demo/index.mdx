@@ -1,0 +1,33 @@
+---
+title: Tilt Direction
+description:
+keywords: ["documents", "examples", "Tilt Direction"]
+---
+
+<ExampleCodeWidget name="TiltDirectionDemo" height={950}>
+```dart
+import 'package:flutter_tilt/flutter_tilt.dart';
+
+······
+
+Tilt(
+  borderRadius: BorderRadius.circular(30),
+  tiltConfig: TiltConfig(direction: [TiltDirection(0.0, 1.0), TiltDirection(0.0, -1.0)]),
+  child: Container(
+    width: 350,
+    height: 200,
+    alignment: Alignment.center,
+    decoration: const BoxDecoration(
+      gradient: LinearGradient(
+        begin: Alignment.topLeft,
+        end: Alignment.bottomRight,
+        colors: [Color(0xFF667eea), Color(0xFF764ba2)],
+      ),
+    ),
+    child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
+  ),
+),
+
+······
+```
+</ExampleCodeWidget>

@@ -1,0 +1,35 @@
+---
+title: Migrate to v0.1.0
+description:
+keywords: ["documents", "migration guide"]
+---
+
+### Summary
+
+The `childInner` parameter of the `Tilt widget` has been changed to `childLayout.outer`.
+
+### Details
+
+Before:
+
+```dart showLineNumbers
+Tilt(
+  childInner: [
+    /// code
+  ]
+  ...
+)
+```
+
+After:
+
+```dart showLineNumbers
+Tilt(
+  childLayout: ChildLayout(
+    outer: [
+      /// code
+    ]
+  )
+  ...
+)
+```

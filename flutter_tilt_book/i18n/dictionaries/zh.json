@@ -1,0 +1,65 @@
+{
+  "home": {
+    "title": "Flutter Tilt",
+    "description": "在 Flutter 上轻松创建倾斜视差悬停效果！",
+    "get-started": "查看文档",
+    "preview-examples": "预览示例"
+  },
+  "docs": {
+    "sidebar-menu": {
+      "overview": "概览",
+      "get-started": {
+        "get-started": "开始",
+        "installation": "安装",
+        "changelog": "更新日志",
+        "migration-guides": {
+          "migration-guides": "迁移指南",
+          "migrate-to-v2-0-0": "^1.0.0 到 ^2.0.0",
+          "migrate-to-v0-1-0": "^0.0.1 到 ^0.1.0"
+        }
+      },
+      "widgets": {
+        "widgets": "Widget",
+        "tilt": "Tilt widget",
+        "tiltparallax": "TiltParallax widget"
+      },
+      "guides": {
+        "guides": "指南",
+        "simple-usage": "简单使用",
+        "tilt-with-controller": "使用代码控制倾斜",
+        "faq": {
+          "faq": "常见问题",
+          "keep-the-tilt-angle": "保持倾斜角度",
+          "how-to-disable-sensors": "如何禁用传感器",
+          "sensors-are-inactive-on-the-web": "传感器失效 (Web)",
+          "how-to-make-the-shadow-match-the-content": "如何使阴影与内容匹配"
+        }
+      },
+      "examples": {
+        "examples": "示例",
+        "demo": "Demo",
+        "parallax-image": "Parallax Image",
+        "tilt-lightshadowmode": "LightShadowMode",
+        "parallax-card": "Parallax Card",
+        "multiple-tilt": "Multiple Tilt",
+        "layout-demo": "Layout",
+        "layout2-demo": "Layout2",
+        "layout3-demo": "Layout3",
+        "events": "Events",
+        "dialog": "Dialog",
+        "default": "Default",
+        "animation-demo": "Animation",
+        "smooth-gesture-enter-demo": "Smooth Gesture Enter",
+        "tilt-stream-controller-demo": "TiltStreamController",
+        "reverse-tilt": "Reverse Tilt",
+        "keep-tilt": "Keep Tilt",
+        "tilt-direction-demo": "Tilt Direction",
+        "light-direction-demo": "Light Direction",
+        "shadow-direction-demo": "Shadow Direction",
+        "initial-tilt": "Initial Tilt",
+        "disable-effects": "Disable Effects",
+        "bento-grids": "Bento Grids"
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+---
+title: Installation
+description: This guide covers compatibility notes and how to add the flutter_tilt package.
+keywords: ["documents", "installation", "compatibility", "package"]
+---
+
+## Installation
+
+<Step>
+<StepItem title="Compatibility">
+
+#### Platforms compatibility
+
+<div className="max-w-xl">
+| Android | iOS   | Web   | macOS | Windows | Linux |
+| :-----: | :---: | :---: | :---: | :-----: | :---: |
+| ✅      | ✅   | ✅    | ✅   | ✅     | ✅    |
+</div>
+
+#### Sensors compatibility
+
+Sensors are only available on these platforms.  
+Platforms without sensors support do not affect the normal use of other features.
+
+<div className="max-w-xl">
+| Android | iOS   | Web (HTTPS)                                              | macOS | Windows | Linux |
+| :-----: | :---: | :------------------------------------------------------: | :---: | :-----: | :---: |
+| ✅      | ✅   | [Browser compatibility][Gyroscope Browser compatibility] | ❌    | ❌     | ❌    |
+</div>
+
+<br />
+
+<Note title="Note">
+  Currently Web uses the [Sensor API - Gyroscope], but it is not compatible with
+  some of the major browsers, such as Safari, Firefox.
+</Note>
+
+[Gyroscope Browser compatibility]: https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs#browser_compatibility
+[Sensor API - Gyroscope]: https://developer.mozilla.org/en-US/docs/Web/API/Gyroscope
+
+</StepItem>
+<StepItem title="Add flutter_tilt">
+
+#### Versions compatibility
+
+<div className="max-w-xl">
+| Package              | Flutter<br />v3.0.0+ | Flutter<br />v3.10.0+ | Flutter<br />v3.19.0+ |
+| -------------------- | :------------------: | :-------------------: | :-------------------: |
+| flutter_tilt v3.0.0+ | ❌ | ❌ | ✅ |
+| flutter_tilt v2.0.0+ | ❌ | ✅ | ✅ |
+| flutter_tilt v1.0.0+ | ✅ | ❌ | ❌ |
+</div>
+
+#### Add flutter_tilt
+
+Run this command with Flutter,
+
+```bash
+$ flutter pub add flutter_tilt
+```
+
+or add `flutter_tilt` to `pubspec.yaml` dependencies manually.
+
+```yaml:pubspec.yaml {3} showLineNumbers
+...
+dependencies:
+  flutter_tilt: latest_version
+...
+```
+
+</StepItem>
+<StepItem title="Import flutter_tilt">
+
+Now in your Dart code, you can use:
+
+```dart
+import 'package:flutter_tilt/flutter_tilt.dart';
+```
+
+</StepItem>
+<StepItem title="Get started">
+
+<NavCardGrid>
+  <NavCard
+    subtitle="Guide"
+    title="Simple usage"
+    description="Simple examples to help you get started quickly."
+    href="/en/docs/guides/simple-usage"
+  />
+  <NavCard
+    subtitle="Widgets"
+    title="Tilt widget"
+    description={
+      <div>
+        Learn about Tilt widget parameters.
+        <br />
+        Tilt widget will have default tilt, shadow, and light effects.
+      </div>
+    }
+    href="/en/docs/widgets/tilt-widget"
+  />
+  <NavCard
+    subtitle="Widgets"
+    title="TiltParallax widget"
+    description={
+      <div>
+        Learn about TiltParallax widget parameters.
+        <br />
+        Parallax effect in the Tilt widget.
+      </div>
+    }
+    href="/en/docs/widgets/tiltparallax-widget"
+  />
+</NavCardGrid>
+
+</StepItem>
+</Step>

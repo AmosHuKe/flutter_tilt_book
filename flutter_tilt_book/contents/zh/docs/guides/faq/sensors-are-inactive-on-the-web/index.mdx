@@ -1,0 +1,26 @@
+---
+title: Sensors are inactive on the web
+description:
+keywords: ["documents", "guide", "faq", "sensors"]
+---
+
+You need to check the following:
+
+### Browser compatibility
+
+Currently Web uses the [Sensor API - Gyroscope],
+but it is not compatible with some of the major browsers, such as Safari, Firefox.
+
+For more information, see [Browser compatibility][Gyroscope browser compatibility].
+
+### Secure contexts
+
+You should consider using `HTTPS`,
+browsers can only use sensors in secure contexts ([relevant limitations][Secure contexts relevant limitations]).
+
+You can refer to [issue 22][] to enable it, or enable it yourself using other methods.
+
+[Gyroscope browser compatibility]: https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs#browser_compatibility
+[Sensor API - Gyroscope]: https://developer.mozilla.org/en-US/docs/Web/API/Gyroscope
+[Secure contexts relevant limitations]: https://developer.mozilla.org/en-US/docs/Web/API/Gyroscope#:~:text=Secure%20context%3A%20This%20feature%20is%20available%20only%20in%20secure%20contexts%20(HTTPS)%2C%20in%20some%20or%20all%20supporting%20browsers.
+[issue 22]: https://github.com/fluttercandies/flutter_tilt/issues/22#issuecomment-2713822610

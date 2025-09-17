@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cd flutter_tilt_book
+
+./tools/generate-search-data.sh || exit 1

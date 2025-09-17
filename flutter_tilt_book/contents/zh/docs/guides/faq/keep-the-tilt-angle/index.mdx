@@ -1,0 +1,22 @@
+---
+title: Keep the tilt angle
+description:
+keywords: ["documents", "guide", "faq", "keep"]
+---
+
+You can use the following code:
+
+```diff {5-6} showLineNumbers
+...
+
+Tilt(
+  tiltConfig: const TiltConfig(
++   enableRevert: false,
++   enableSensorRevert: false,
+    ...
+  ),
+  ...
+),
+
+...
+```

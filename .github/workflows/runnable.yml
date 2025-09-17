@@ -23,12 +23,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
-          flutter-version-file: pubspec.yaml
-      - name: Prepare dependencies
+          flutter-version-file: flutter_tilt_example/pubspec.yaml
+      - name: Prepare dependencies (flutter_tilt_example)
         run: |
+          cd flutter_tilt_example
           flutter --version
           flutter pub get
       - name: Check Dart code formatting
@@ -37,6 +41,15 @@ jobs:
       - name: Analyze Dart code
         run: |
           flutter analyze . --no-fatal-infos
+      - name: Prepare dependencies (flutter_tilt_book)
+        run: |
+          cd ../flutter_tilt_book
+          node --version
+          npm --version
+          npm ci
+      - name: Check code formatting
+        run: |
+          npm run format:check
 
   test-build:
     needs: [code-analysis]
@@ -67,6 +80,7 @@ jobs:
           flutter-version-file: pubspec.yaml
       - name: Prepare dependencies
         run: |
+          cd flutter_tilt_example
           dart --version
           flutter --version
           flutter pub get

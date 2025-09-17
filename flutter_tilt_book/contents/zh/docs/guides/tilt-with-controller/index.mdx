@@ -1,0 +1,67 @@
+---
+title: Tilt with controller
+description: Use the controller to tilt the widget
+keywords: ["documents", "guide", "controller"]
+---
+
+If you want to control the tilt programmatically, you can see the following:
+
+## Configure Tilt.tiltStreamController
+
+```dart {3,8} showLineNumbers
+...
+
+final tiltStreamController = StreamController<TiltStreamModel>.broadcast();
+
+...
+
+Tilt(
+  tiltStreamController: tiltStreamController,
+  ...
+),
+
+...
+```
+
+## Using the controller
+
+The current gesture is being used:
+
+`TiltStreamModel.position` is the current trigger position, It will have the tilt effect of the corresponding position.
+
+For example:  
+There is a widget size, width: 10, height: 10,
+
+- Offset(0, 0): Maximum tilt top left.
+- Offset(10, 10): Maximum tilt bottom right.
+
+```dart showLineNumbers
+tiltStreamController.add(
+  TiltStreamModel(
+    position: Offset(xx, xx),
+  ),
+);
+```
+
+To stop using the current gesture:
+
+By default, `TiltStreamModel` uses the `GesturesType.controller` gesture type.  
+`TiltStreamModel.gestureUse` is used to determine if the gesture is being used and will be processed according to the [gesture priority][].
+
+```dart showLineNumbers
+tiltStreamController.add(
+  TiltStreamModel(
+    position: Offset(xx, xx),
+    gestureUse: false,
+  ),
+);
+```
+
+## More
+
+You can also see an example: [Example - TiltStreamController][].  
+For more information, see: [Tilt widget - StreamController\<TiltStreamModel\>][].
+
+[gesture priority]: /en/docs/widgets/tilt-widget/#gesture-priority
+[Example - TiltStreamController]: /en/docs/examples/tilt-stream-controller-demo
+[Tilt widget - StreamController\<TiltStreamModel\>]: /en/docs/widgets/tilt-widget/#streamcontrollertiltstreammodel

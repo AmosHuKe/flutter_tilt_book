@@ -1,0 +1,21 @@
+---
+title: How to disable sensors
+description:
+keywords: ["documents", "guide", "faq", "sensors"]
+---
+
+You can use the following code:
+
+```diff {5} showLineNumbers
+...
+
+Tilt(
+  tiltConfig: const TiltConfig(
++   enableGestureSensors: false,
+    ...
+  ),
+  ...
+),
+
+...
+```

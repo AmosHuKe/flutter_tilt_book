@@ -1,0 +1,65 @@
+{
+  "home": {
+    "title": "Flutter Tilt",
+    "description": "Easily apply tilt parallax hover effects for Flutter!",
+    "get-started": "Get Started",
+    "preview-examples": "Preview Examples"
+  },
+  "docs": {
+    "sidebar-menu": {
+      "overview": "Overview",
+      "get-started": {
+        "get-started": "Get Started",
+        "installation": "Installation",
+        "changelog": "Changelog",
+        "migration-guides": {
+          "migration-guides": "Migration guides",
+          "migrate-to-v2-0-0": "^1.0.0 to ^2.0.0",
+          "migrate-to-v0-1-0": "^0.0.1 to ^0.1.0"
+        }
+      },
+      "widgets": {
+        "widgets": "Widgets",
+        "tilt": "Tilt widget",
+        "tiltparallax": "TiltParallax widget"
+      },
+      "guides": {
+        "guides": "Guides",
+        "simple-usage": "Simple usage",
+        "tilt-with-controller": "Tilt with controller",
+        "faq": {
+          "faq": "FAQ",
+          "keep-the-tilt-angle": "Keep the tilt angle",
+          "how-to-disable-sensors": "How to disable sensors",
+          "sensors-are-inactive-on-the-web": "Sensors are inactive (Web)",
+          "how-to-make-the-shadow-match-the-content": "How to make the shadow match the content"
+        }
+      },
+      "examples": {
+        "examples": "Examples",
+        "demo": "Demo",
+        "parallax-image": "Parallax Image",
+        "tilt-lightshadowmode": "LightShadowMode",
+        "parallax-card": "Parallax Card",
+        "multiple-tilt": "Multiple Tilt",
+        "layout-demo": "Layout",
+        "layout2-demo": "Layout2",
+        "layout3-demo": "Layout3",
+        "events": "Events",
+        "dialog": "Dialog",
+        "default": "Default",
+        "animation-demo": "Animation",
+        "smooth-gesture-enter-demo": "Smooth Gesture Enter",
+        "tilt-stream-controller-demo": "TiltStreamController",
+        "reverse-tilt": "Reverse Tilt",
+        "keep-tilt": "Keep Tilt",
+        "tilt-direction-demo": "Tilt Direction",
+        "light-direction-demo": "Light Direction",
+        "shadow-direction-demo": "Shadow Direction",
+        "initial-tilt": "Initial Tilt",
+        "disable-effects": "Disable Effects",
+        "bento-grids": "Bento Grids"
+      }
+    }
+  }
+}

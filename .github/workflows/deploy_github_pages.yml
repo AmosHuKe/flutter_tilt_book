@@ -14,12 +14,17 @@ jobs:
   code-analysis:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-      - name: Prepare dependencies
+          flutter-version-file: flutter_tilt_example/pubspec.yaml
+      - name: Prepare dependencies (flutter_tilt_example)
         run: |
+          cd flutter_tilt_example
           flutter --version
           flutter pub get
       - name: Check Dart code formatting
@@ -28,24 +33,47 @@ jobs:
       - name: Analyze Dart code
         run: |
           flutter analyze .
+      - name: Prepare dependencies (flutter_tilt_book)
+        run: |
+          cd ../flutter_tilt_book
+          node --version
+          npm --version
+          npm ci
+      - name: Check code formatting
+        run: |
+          npm run format:check
 
   deploy:
     needs: [code-analysis]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
       - name: Prepare dependencies
         run: |
+          cd flutter_tilt_example
           flutter --version
           flutter pub get
-      - name: Build web (wasm)
+          cd ../flutter_tilt_book
+          node --version
+          npm --version
+          npm ci
+      - name: Build flutter_tilt_example Web (wasm)
         run: |
-          flutter build web --wasm --release
+          bash .tools/build-flutter-tilt-example.sh
+        shell: bash
+      - name: Build flutter_tilt_bool Web
+        run: |
+          npm run generate-dist-scripts
+          npm run build
+        shell: bash
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: 'pages-book'
-          folder: 'build/web'
+          folder: 'out'
