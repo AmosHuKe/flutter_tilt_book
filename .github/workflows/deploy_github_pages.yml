@@ -55,6 +55,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
+          flutter-version-file: flutter_tilt_example/pubspec.yaml
       - name: Prepare dependencies
         run: |
           cd flutter_tilt_example

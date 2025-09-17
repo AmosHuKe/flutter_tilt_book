@@ -82,7 +82,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
-          flutter-version-file: pubspec.yaml
+          flutter-version-file: flutter_tilt_example/pubspec.yaml
       - name: Prepare dependencies
         run: |
           dart --version
