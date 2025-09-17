@@ -21,7 +21,7 @@ export const Settings = {
   imageAlt: "Flutter Tilt Documentation",
 
   packageName: "Flutter Tilt",
-  packageVersion: "v3.3.1",
+  packageVersion: "v3.3.2",
   packageLink: "https://pub.dev/packages/flutter_tilt",
 
   twitterHandle: "https://pub.dev/packages/flutter_tilt",
