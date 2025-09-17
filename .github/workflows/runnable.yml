@@ -37,18 +37,20 @@ jobs:
           flutter pub get
       - name: Check Dart code formatting
         run: |
+          cd flutter_tilt_book
           dart format . -o none --set-exit-if-changed
       - name: Analyze Dart code
         run: |
           flutter analyze . --no-fatal-infos
       - name: Prepare dependencies (flutter_tilt_book)
         run: |
-          cd ../flutter_tilt_book
+          cd flutter_tilt_book
           node --version
           npm --version
           npm ci
       - name: Check code formatting
         run: |
+          cd flutter_tilt_book
           npm run format:check
 
   test-build:
@@ -68,6 +70,9 @@ jobs:
             build: Web
     name: 'Test Build :: ${{ matrix.os }} :: ${{ matrix.build }}'
     runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: ./flutter_tilt_example
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-java@v4
@@ -80,7 +85,6 @@ jobs:
           flutter-version-file: pubspec.yaml
       - name: Prepare dependencies
         run: |
-          cd flutter_tilt_example
           dart --version
           flutter --version
           flutter pub get

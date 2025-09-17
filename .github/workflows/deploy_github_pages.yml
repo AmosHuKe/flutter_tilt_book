@@ -35,12 +35,13 @@ jobs:
           flutter analyze .
       - name: Prepare dependencies (flutter_tilt_book)
         run: |
-          cd ../flutter_tilt_book
+          cd flutter_tilt_book
           node --version
           npm --version
           npm ci
       - name: Check code formatting
         run: |
+          cd flutter_tilt_book
           npm run format:check
 
   deploy:
@@ -65,10 +66,12 @@ jobs:
           npm ci
       - name: Build flutter_tilt_example Web (wasm)
         run: |
+          cd flutter_tilt_book
           bash .tools/build-flutter-tilt-example.sh
         shell: bash
       - name: Build flutter_tilt_bool Web
         run: |
+          cd flutter_tilt_book
           npm run generate-dist-scripts
           npm run build
         shell: bash
