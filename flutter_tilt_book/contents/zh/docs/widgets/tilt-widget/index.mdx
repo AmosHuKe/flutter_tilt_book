@@ -1,55 +1,57 @@
 ---
 title: Tilt widget
-description: Learn about Tilt widget parameters. Tilt widget will have default tilt, shadow, and light effects.
+description: 了解 Tilt widget 参数。 Tilt widget 默认有倾斜、阴影和光照的效果。
 keywords: ["documents", "widgets", "tilt widget"]
 ---
 
-## Gesture priority
+## 手势优先级
 
-When multiple gestures are enabled, they are triggered based on priority:
+启用多个手势时，会按照优先级触发手势：
 
 **Touch > Hover > Controller > Sensors**
 
-## Tilt widget parameters
+## Tilt widget 参数
 
-| Parameter                   | Type                                                                            | Default                | Description                                                          |
-| --------------------------- | ------------------------------------------------------------------------------- | ---------------------- | -------------------------------------------------------------------- |
-| child <sup>`required`</sup> | `Widget`                                                                        | -                      | Create a widget that its child widget can be tilted.                 |
-| childLayout                 | [`ChildLayout`][ChildLayout]                                                    | `ChildLayout()`        | Other child layouts. <br/> e.g. parallax outer, inner, behind.       |
-| tiltStreamController        | [`StreamController<TiltStreamModel>?`][StreamController&lt;TiltStreamModel&gt;] | `null`                 | `StreamController<TiltStreamModel>.broadcast()` to control the tilt. |
-| disable                     | `bool`                                                                          | `false`                | Disable all effects.                                                 |
-| fps                         | `int`                                                                           | `120`                  | Gesture triggered frames.                                            |
-| border                      | `BoxBorder?`                                                                    | `null`                 | BoxDecoration border.                                                |
-| borderRadius                | `BorderRadiusGeometry?`                                                         | `null`                 | BoxDecoration borderRadius.                                          |
-| clipBehavior                | `Clip`                                                                          | `Clip.antiAlias`       | Flutter clipBehavior.                                                |
-| tiltConfig                  | [`TiltConfig`][TiltConfig]                                                      | `TiltConfig()`         | Tilt effect config.                                                  |
-| lightShadowMode             | [`LightShadowMode`][LightShadowMode]                                            | `LightShadowMode.base` | Light & Shadow Mode.                                                 |
-| lightConfig                 | [`LightConfig`][LightConfig]                                                    | `LightConfig()`        | Light effect config.                                                 |
-| shadowConfig                | [`ShadowConfig`][ShadowConfig]                                                  | `ShadowConfig()`       | Shadow effect config.                                                |
-| onGestureMove               | `void Function(TiltDataModel, GesturesType)?`                                   | `null`                 | Gesture move callback.                                               |
-| onGestureLeave              | `void Function(TiltDataModel, GesturesType)?`                                   | `null`                 | Gesture leave callback.                                              |
+| 参数名 | 类型 | 默认值 | 描述 |  
+| --- | --- | --- | --- |
+| child <sup>`必选`</sup> | `Widget` | - | 创建一个 widget，使 child widget 有倾斜效果。 |  
+| childLayout | [`ChildLayout`][ChildLayout] | `ChildLayout()` | 其它 child 布局。 <br/> 例如：位于 child 外部、内部、后面的视差布局。 |  
+| tiltStreamController | [`StreamController<TiltStreamModel>?`][StreamController&lt;TiltStreamModel&gt;] | `null` | 使用 `StreamController<TiltStreamModel>.broadcast()` 来自定义控制倾斜。 |  
+| disable | `bool` | `false` | 禁用所有效果。 |  
+| fps | `int` | `120` | 手势触发的帧数。 |  
+| border | `BoxBorder?` | `null` | BoxDecoration border。 |  
+| borderRadius | `BorderRadiusGeometry?` | `null` | BoxDecoration borderRadius。 |  
+| clipBehavior | `Clip` | `Clip.antiAlias` | Flutter 中的 clipBehavior。 |  
+| tiltConfig | [`TiltConfig`][TiltConfig] | `TiltConfig()` | 倾斜效果配置。 |  
+| lightShadowMode | [`LightShadowMode`][LightShadowMode] | `LightShadowMode.base` | 光影 Mode。 |  
+| lightConfig | [`LightConfig`][LightConfig] | `LightConfig()` | 光照效果配置。 |  
+| shadowConfig | [`ShadowConfig`][ShadowConfig] | `ShadowConfig()` | 阴影效果配置。 |  
+| onGestureMove | `void Function(TiltDataModel, GesturesType)?` | `null` | 手势移动的回调触发。 |  
+| onGestureLeave | `void Function(TiltDataModel, GesturesType)?` | `null` | 手势离开的回调触发。 |  
+
 
 ## ChildLayout
 
-| Parameter | Type           | Default      | Description                                                                                                              |
-| --------- | -------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| outer     | `List<Widget>` | `<Widget>[]` | As with Stack, you can use the Stack layout to create widgets that are outer of the child. <br/> e.g. parallax effects.  |
-| inner     | `List<Widget>` | `<Widget>[]` | As with Stack, you can use the Stack layout to create widgets that are inner of the child. <br/> e.g. parallax effects.  |
-| behind    | `List<Widget>` | `<Widget>[]` | As with Stack, you can use the Stack layout to create widgets that are behind of the child. <br/> e.g. parallax effects. |
+| 参数名 | 类型 | 默认值 | 描述 |  
+| --- | --- | --- | --- |
+| outer | `List<Widget>` | `<Widget>[]` | 与 Stack 一样，你可以使用 Stack 布局来创建一些位于 `child 外部` 的 widget。 <br/> 例如：视差效果。 |  
+| inner | `List<Widget>` | `<Widget>[]` | 与 Stack 一样，你可以使用 Stack 布局来创建一些位于 `child 内部` 的 widget。 <br/> 例如：视差效果。 |  
+| behind | `List<Widget>` | `<Widget>[]` | 与 Stack 一样，你可以使用 Stack 布局来创建一些位于 `child 后面` 的 widget。 <br/> 例如：视差效果。 |  
+
 
 ## StreamController\<TiltStreamModel\>
 
 ```dart showLineNumbers
 final StreamController<TiltStreamModel> tiltStreamController = StreamController<TiltStreamModel>.broadcast();
 
-/// The current gesture is being used
+/// 正在使用当前手势
 tiltStreamController.add(
   TiltStreamModel(
     position: Offset(xx, xx),
   ),
 );
 
-/// Stop using the current gesture
+/// 停止使用当前手势
 tiltStreamController.add(
   TiltStreamModel(
     position: Offset(xx, xx),
@@ -61,84 +63,89 @@ tiltStreamController.add(
 
 <br/>
 
-| Parameter                      | Type           | Default                   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ------------------------------ | -------------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| position <sup>`required`</sup> | `Offset`       | -                         | The current trigger position, <br/> It will have the tilt effect of the corresponding position. <br/> e.g. <br/> There is a widget size, width: 10, height: 10, <br/> (0, 0): Maximum tilt top left. <br/> (10, 10): Maximum tilt bottom right.                                                                                                                                                                                                                                                                                                     |
-| gesturesType                   | `GesturesType` | `GesturesType.controller` | Trigger gesture type. <br/> It is triggered according to the [gesture priority][]. <br/> If you need to customize the control with animation or other means. <br/> `Recommended` use of `GesturesType.controller`. <br/> If other types are used for triggering, <br/> Then it will be affected by the configuration and effects associated with that type. <br/> e.g. <br/> When custom triggering `GesturesType.sensors`. <br/> If `TiltConfig.enableSensorRevert` is configured to be false, <br/> it will also not revert to the initial state. |
-| gestureUse                     | `bool`         | `true`                    | Whether the gesture is being used. <br/> It is used to determine if the gesture is being used and will be processed according to the gesture priority. <br/> e.g. <br/> If `GesturesType.touch` is never assigned false when triggered, gestures with a lower priority than `GesturesType.touch` will never be triggered.                                                                                                                                                                                                                           |
+| 参数名 | 类型 | 默认值 | 描述 |  
+| --- | --- | --- | --- |
+| position <sup>`必选`</sup> | `Offset` | - | 当前触发的坐标位置， <br/> 会触发对应位置的倾斜效果。 <br/> 例如： <br/> 有一个组件尺寸为 width: 10, height: 10, <br/> (0, 0)：会触发最左上的倾斜。 <br/> (10, 10)：会触发最右下的倾斜。 |  
+| gesturesType | `GesturesType` | `GesturesType.controller` | 触发手势类型。 <br/> 会根据 [手势优先级][] 进行触发。 <br/> 如果需要自定义动画或其他方式自行控制， <br/> `推荐` 使用 `GesturesType.controller`。 <br/> 如果使用其他的类型进行触发， <br/> 那么就会受到对应类型相关配置、效果的影响。 <br/> 例如： <br/> 自行触发 `GesturesType.sensors` 的时候。 <br/> 配置 `TiltConfig.enableSensorRevert` 为 false 的情况下， <br/> 将同样不会复原至初始状态。 |  
+| gestureUse | `bool` | `true` | 手势是否正在使用。 <br/> 用于确定手势是否正在使用，并根据手势优先级进行处理。 <br/> 例如： <br/> 如果在触发 `GesturesType.touch` 的时候永远不赋值为 false，那么优先级低于 `GesturesType.touch` 的手势将永远不会被触发。 |  
+
 
 ## TiltConfig
 
-| Parameter               | Type                   | Default                        | Description                                                                                                                                                                                                                                                                                 |
-| ----------------------- | ---------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| disable                 | `bool`                 | `false`                        | Only disable the tilt effect.                                                                                                                                                                                                                                                               |
-| initial                 | `Offset?`              | `null`                         | Initial tilt progress, range `(x, y): (1, 1) to (-1, -1)`, <br/> you can exceed the range, but the maximum tilt angle during gesture movement is always tilted according to `[TiltConfig.angle]`. <br/> e.g. (0.0, 0.0) center <br/> (1.0, 1.0) Maximum tilt top left `[TiltConfig.angle]`. |
-| angle                   | `double`               | `10.0`                         | Maximum tilt angle. <br/> e.g. 180 will flip.                                                                                                                                                                                                                                               |
-| direction               | `List<TiltDirection>?` | `null`                         | Tilt Direction, multiple directions, customized direction values.                                                                                                                                                                                                                           |
-| enableReverse           | `bool`                 | `false`                        | Tilt reverse, can be tilted up or down.                                                                                                                                                                                                                                                     |
-| filterQuality           | `FilterQuality`        | `null`                         | Flutter FilterQuality.                                                                                                                                                                                                                                                                      |
-| enableGestureSensors    | `bool`                 | `true`                         | Gyroscope sensor triggered tilt. <br/> Only the following gestures: <br/> `GesturesType.sensors`                                                                                                                                                                                            |
-| sensorFactor            | `double`               | `10.0`                         | Sensor trigger factor (sensitivity). <br/> Only the following gestures: <br/> `GesturesType.sensors`                                                                                                                                                                                        |
-| enableSensorRevert      | `bool`                 | `true`                         | Enable sensor tilt revert, will revert to the initial state. <br/> Only the following gestures: <br/> `GesturesType.sensors`                                                                                                                                                                |
-| sensorRevertFactor      | `double`               | `0.05`                         | Sensor revert factor (damping), range of values: `0-1`. <br/> Only the following gestures: <br/> `GesturesType.sensors`                                                                                                                                                                     |
-| sensorMoveDuration      | `Duration`             | `Duration(milliseconds: 50)`   | Animation duration during sensor move. <br/> Only the following gestures: <br/> `GesturesType.sensors`                                                                                                                                                                                      |
-| enableGestureHover      | `bool`                 | `true`                         | Hover gesture triggered tilt. <br/> Only the following gestures: <br/> `GesturesType.hover`                                                                                                                                                                                                 |
-| enableGestureTouch      | `bool`                 | `true`                         | Touch gesture triggered tilt. <br/> Only the following gestures: <br/> `GesturesType.touch`                                                                                                                                                                                                 |
-| enableRevert            | `bool`                 | `true`                         | Enable tilt revert, will revert to the initial state. <br/> Only the following gestures: <br/> `GesturesType.touch` <br/> `GesturesType.hover` <br/> `GesturesType.controller`                                                                                                              |
-| enableOutsideAreaMove   | `bool`                 | `true`                         | Tilt can continue to be triggered outside the area. <br/> Only the following gestures: <br/> `GesturesType.touch` <br/> `GesturesType.controller`                                                                                                                                           |
-| enterDuration           | `Duration`             | `Duration(milliseconds: 1000)` | Animation duration during gesture enter, must be used with `[moveDuration]` and `[enterToMoveDuration]`. <br/> Only the following gestures: <br/> `GesturesType.touch` <br/> `GesturesType.hover`                                                                                           |
-| moveDuration            | `Duration`             | `Duration(milliseconds: 100)`  | Animation duration during gesture move. <br/> Only the following gestures: <br/> `GesturesType.touch` <br/> `GesturesType.hover`                                                                                                                                                            |
-| enterToMoveDuration     | `Duration`             | `Duration(milliseconds: 600)`  | The duration of the transition from enter to move, must be used with `[enterDuration]` and `[moveDuration]`. <br/> Only the following gestures: <br/> `GesturesType.touch` <br/> `GesturesType.hover`                                                                                       |
-| leaveDuration           | `Duration`             | `Duration(milliseconds: 300)`  | Animation duration after gesture leave. <br/> Only the following gestures: <br/> `GesturesType.touch` <br/> `GesturesType.hover`                                                                                                                                                            |
-| moveCurve               | `Curve`                | `Curves.linear`                | Animation curve during gesture move. <br/> Only the following gestures: <br/> `GesturesType.touch` <br/> `GesturesType.hover`                                                                                                                                                               |
-| enterToMoveCurve        | `Curve`                | `Curves.easeOutCubic`          | The curve of the transition from enter to move, must be used with `[enterToMoveDuration]`. <br/> Only the following gestures: <br/> `GesturesType.touch` <br/> `GesturesType.hover`                                                                                                         |
-| leaveCurve              | `Curve`                | `Curves.linear`                | Animation curve after gesture leave. <br/> Only the following gestures: <br/> `GesturesType.touch` <br/> `GesturesType.hover`                                                                                                                                                               |
-| controllerMoveDuration  | `Duration`             | `Duration(milliseconds: 100)`  | Animation duration during controller gesture move. <br/> Only the following gestures: <br/> `GesturesType.controller`                                                                                                                                                                       |
-| controllerLeaveDuration | `Duration`             | `Duration(milliseconds: 300)`  | Animation duration after controller gesture leave. <br/> Only the following gestures: <br/> `GesturesType.controller`                                                                                                                                                                       |
+| 参数名 | 类型 | 默认值 | 描述 |  
+| --- | --- | --- | --- |
+| disable | `bool` | `false` | 仅禁用倾斜效果。 |  
+| initial | `Offset?` | `null` | 倾斜进度的初始值，范围 `(x, y)：(1, 1) 至 (-1, -1)`，<br/> 你可以超过这个范围，但是手势移动过程中的最大倾斜角度始终按照 `[TiltConfig.angle]` 进行倾斜。 <br/> 例如：(0.0, 0.0) 中心 <br/> (1.0, 1.0) 左上角最大倾斜角度 `[TiltConfig.angle]`。 |  
+| angle | `double` | `10.0` | 最大倾斜角度。 <br/> 例如：180 会翻转。 |  
+| direction | `List<TiltDirection>?` | `null` | 倾斜方向，多方向、自定义方向值。 |  
+| enableReverse | `bool` | `false` | 倾斜反向，可以向上或向下倾斜。 |  
+| filterQuality | `FilterQuality` | `null` | Flutter FilterQuality。 |  
+| enableGestureSensors | `bool` | `true` | 陀螺仪传感器触发倾斜。 <br/> 仅以下手势生效： <br/> `GesturesType.sensors` |  
+| sensorFactor | `double` | `10.0` | 传感器触发系数（灵敏度）。 <br/> 仅以下手势生效： <br/> `GesturesType.sensors` |  
+| enableSensorRevert | `bool` | `true` | 启用传感器倾斜复原，会复原至初始状态。 <br/> 仅以下手势生效： <br/> `GesturesType.sensors` |  
+| sensorRevertFactor | `double` | `0.05` | 传感器复原系数（阻尼），数值范围：`0-1`。 <br/> 仅以下手势生效： <br/> `GesturesType.sensors` |  
+| sensorMoveDuration | `Duration` | `Duration(milliseconds: 50)` | 传感器移动时的动画持续时间。 <br/> 仅以下手势生效： <br/> `GesturesType.sensors` |  
+| enableGestureHover | `bool` | `true` | Hover 手势触发倾斜。 <br/> 仅以下手势生效： <br/> `GesturesType.hover` |  
+| enableGestureTouch | `bool` | `true` | Touch 手势触发倾斜。 <br/> 仅以下手势生效： <br/> `GesturesType.touch` |  
+| enableRevert | `bool` | `true` | 启用倾斜复原，会复原至初始状态。 <br/> 仅以下手势生效： <br/> `GesturesType.touch` <br/> `GesturesType.hover` <br/> `GesturesType.controller` |  
+| enableOutsideAreaMove | `bool` | `true` | 可以继续在区域外触发倾斜。 <br/> 仅以下手势生效： <br/> `GesturesType.touch` <br/> `GesturesType.controller` |  
+| enterDuration | `Duration` | `Duration(milliseconds: 1000)` | 手势刚进入时的动画持续时间，需要搭配 `[moveDuration]` 和 `[enterToMoveDuration]` 使用。 <br/> 仅以下手势生效： <br/> `GesturesType.touch` <br/> `GesturesType.hover` |  
+| moveDuration | `Duration` | `Duration(milliseconds: 100)` | 手势移动时的动画持续时间。 <br/> 仅以下手势生效： <br/> `GesturesType.touch` <br/> `GesturesType.hover` |  
+| enterToMoveDuration | `Duration` | `Duration(milliseconds: 600)` | 手势从 Enter 过渡至 Move 的持续时间，需要搭配 `[enterDuration]` 和 `[moveDuration]` 使用。 <br/> 仅以下手势生效： <br/> `GesturesType.touch` <br/> `GesturesType.hover` |  
+| leaveDuration | `Duration` | `Duration(milliseconds: 300)` | 手势离开后的动画持续时间。 <br/> 仅以下手势生效： <br/> `GesturesType.touch` <br/> `GesturesType.hover` |  
+| moveCurve | `Curve` | `Curves.linear` | 手势移动时的动画曲线。 <br/> 仅以下手势生效： <br/> `GesturesType.touch` <br/> `GesturesType.hover` |  
+| enterToMoveCurve | `Curve` | `Curves.easeOutCubic` | 手势从 Enter 过渡至 Move 的曲线，需要搭配 `[enterToMoveDuration]` 使用。 <br/> 仅以下手势生效： <br/> `GesturesType.touch` <br/> `GesturesType.hover` |  
+| leaveCurve | `Curve` | `Curves.linear` | 手势离开后的动画曲线。 <br/> 仅以下手势生效： <br/> `GesturesType.touch` <br/> `GesturesType.hover` |  
+| controllerMoveDuration | `Duration` | `Duration(milliseconds: 100)` | controller 手势移动时的动画持续时间。 <br/> 仅以下手势生效： <br/> `GesturesType.controller` |  
+| controllerLeaveDuration | `Duration` | `Duration(milliseconds: 300)` | controller 手势离开后的动画持续时间。 <br/> 仅以下手势生效： <br/> `GesturesType.controller` |  
+
 
 ## LightShadowMode
 
-| Enum Value                | Description                                                                                                                                                                                                                                                                                                           |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| LightShadowMode.base      | `[No performance risk]` <br/> Use normal shadow effects only for `Tilt.child` without performance degradation.                                                                                                                                                                                                        |
-| LightShadowMode.projector | `[Performance risk exists]` <br/> Apply a shadow to the entire `Tilt` widget, similar to a projector effect. <br/> will display a shadow that exactly matches the non-transparent parts of the widget. <br/> Recommended for the following scenarios: <br/> - Images only <br/> - No data states <br/> - No Hero tags |
+| 枚举值 | 描述 |  
+| --- | --- |
+| LightShadowMode.base | `[无性能风险]` <br/> 仅对 `Tilt.child` 使用普通阴影效果，无性能损耗。 |  
+| LightShadowMode.projector | `[有性能风险]` <br/> 对整个 `Tilt` widget 使用类似投影仪效果的阴影，<br/> 会显示与 widget 非透明部分完全一致的阴影。 <br/> 建议在以下场景使用：<br/> - 仅图片 <br/> - 无数据状态 <br/> - 无 Hero 标签 |  
+
 
 ## LightConfig
 
-| Parameter      | Type             | Default                 | Description                                                                                                                                                                           |
-| -------------- | ---------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| disable        | `bool`           | `false`                 | Only disable the light effect.                                                                                                                                                        |
-| color          | `Color`          | `Color(0xFFFFFFFF)`     | Light color.                                                                                                                                                                          |
-| minIntensity   | `double`         | `0.0`                   | Color minimum opacity, also initial opacity.                                                                                                                                          |
-| maxIntensity   | `double`         | `0.5`                   | Color maximum opacity for tilt progresses.                                                                                                                                            |
-| spreadFactor   | `double`         | `4.0`                   | Light spread factor, relative to current widget size.                                                                                                                                 |
-| projectorScale | `double`         | `1.1`                   | Light area size scale. <br/> Only the following mode: <br/> `[LightShadowMode.projector]`                                                                                             |
-| direction      | `LightDirection` | `LightDirection.around` | Light direction. <br/> Affects: <br/> `[ShadowConfig.direction]` (not affected after configuration).                                                                                  |
-| enableReverse  | `bool`           | `false`                 | Reverse light direction. <br/> Affects: <br/> `[ShadowConfig.direction]` (not affected after configuration). <br/> `[ShadowConfig.enableReverse]` (not affected after configuration). |
+| 参数名 | 类型 | 默认值 | 描述 |  
+| --- | --- | --- | --- |
+| disable | `bool` | `false` | 仅禁用光照效果。 |  
+| color | `Color` | `Color(0xFFFFFFFF)` | 光照颜色。 |  
+| minIntensity | `double` | `0.0` | 颜色最小不透明度，也是初始不透明度。 |  
+| maxIntensity | `double` | `0.5` | 颜色最大不透明度，跟随倾斜最大进度。 |  
+| spreadFactor | `double` | `4.0` | 光源扩散系数，相对于当前 widget 尺寸。 |  
+| projectorScale | `double` | `1.1` | 光照区域尺寸比例。 <br/> 仅以下模式生效：<br/> `[LightShadowMode.projector]` |  
+| direction | `LightDirection` | `LightDirection.around` | 光照方向。 <br/> 影响：<br/> `[ShadowConfig.direction]`（配置后不受影响）。 |  
+| enableReverse | `bool` | `false` | 反转光照方向。 <br/> 影响：<br/> `[ShadowConfig.direction]`（配置后不受影响）。 <br/> `[ShadowConfig.enableReverse]`（配置后不受影响）。 |  
+
 
 ## ShadowConfig
 
-| Parameter              | Type               | Default             | Description                                                                                                                  |
-| ---------------------- | ------------------ | ------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| disable                | `bool`             | `false`             | Only disable the shadow effect.                                                                                              |
-| color                  | `Color`            | `Color(0xFF9E9E9E)` | Shadow color.                                                                                                                |
-| minIntensity           | `double`           | `0.0`               | Color minimum opacity, also initial opacity.                                                                                 |
-| maxIntensity           | `double`           | `0.5`               | Color maximum opacity as tilt progresses.                                                                                    |
-| offsetInitial          | `Offset`           | `Offset(0.0, 0.0)`  | Initial value of shadow offset. <br/> e.g. (0.0, 0.0) center. <br/> (40.0, 40.0) Offset 40 to the top left.                  |
-| offsetFactor           | `double`           | `0.1`               | Shadow offset factor, relative to current widget size.                                                                       |
-| spreadInitial          | `double`           | `0.0`               | Initial value of shadow spread radius. <br/> Only the following mode: <br/> `[LightShadowMode.base]`                         |
-| spreadFactor           | `double`           | `0.0`               | Shadow spread radius factor, relative to current widget size. <br/> Only the following mode: <br/> `[LightShadowMode.base]`  |
-| minBlurRadius          | `double`           | `10.0`              | Minimum blur radius, also initial blur radius. <br/> Only the following mode: <br/> `[LightShadowMode.base]`                 |
-| maxBlurRadius          | `double`           | `20.0`              | Maximum blur radius for tilt progresses. <br/> Only the following mode: <br/> `[LightShadowMode.base]`                       |
-| projectorScaleFrom     | `double`           | `1.0`               | Size scale for minimum progress, also initial size scale. <br/> Only the following mode: <br/> `[LightShadowMode.projector]` |
-| projectorScaleTo       | `double`           | `1.0`               | Size scale for maximum progress. <br/> Only the following mode: <br/> `[LightShadowMode.projector]`                          |
-| projectorBlurSigmaFrom | `double`           | `5.0`               | Blur sigma for minimum progress, also initial blur sigma. <br/> Only the following mode: <br/> `[LightShadowMode.projector]` |
-| projectorBlurSigmaTo   | `double`           | `10.0`              | Blur sigma for maximum progress. <br/> Only the following mode: <br/> `[LightShadowMode.projector]`                          |
-| direction              | `ShadowDirection?` | `null`              | Shadow direction.                                                                                                            |
-| enableReverse          | `bool?`            | `null`              | Reverse shadow direction.                                                                                                    |
+| 参数名 | 类型 | 默认值 | 描述 |  
+| --- | --- | --- | --- |
+| disable | `bool` | `false` | 仅禁用阴影效果。 |  
+| color | `Color` | `Color(0xFF9E9E9E)` | 阴影颜色。 |  
+| minIntensity | `double` | `0.0` | 颜色最小不透明度，也是初始不透明度。 |  
+| maxIntensity | `double` | `0.5` | 颜色最大不透明度，跟随倾斜最大进度。 |  
+| offsetInitial | `Offset` | `Offset(0.0, 0.0)` | 阴影偏移初始值。 <br/> 例如：(0.0, 0.0) 中心 <br/> (40.0, 40.0) 向左上角偏移 40。 |  
+| offsetFactor | `double` | `0.1` | 阴影偏移系数，相对于当前 widget 尺寸。 |  
+| spreadInitial | `double` | `0.0` | 阴影扩散半径初始值。<br/> 仅以下模式生效：<br/> `[LightShadowMode.base]` |  
+| spreadFactor | `double` | `0.0` | 阴影扩散半径系数，相对于当前 widget 尺寸。<br/> 仅以下模式生效：<br/> `[LightShadowMode.base]` |  
+| minBlurRadius | `double` | `10.0` | 最小阴影模糊半径，也是初始模糊半径。<br/> 仅以下模式生效：<br/> `[LightShadowMode.base]` |  
+| maxBlurRadius | `double` | `20.0` | 最大阴影模糊半径，跟随倾斜最大进度。<br/> 仅以下模式生效：<br/> `[LightShadowMode.base]` |  
+| projectorScaleFrom | `double` | `1.0` | 最小倾斜进度的阴影尺寸比例，也是初始尺寸比例。<br/> 仅以下模式生效：<br/> `[LightShadowMode.projector]` |  
+| projectorScaleTo | `double` | `1.0` | 最大倾斜进度的阴影尺寸比例。 <br/> 仅以下模式生效：<br/> `[LightShadowMode.projector]` |  
+| projectorBlurSigmaFrom | `double` | `5.0` | 最小倾斜进度的阴影模糊 Sigma，也是初始模糊 Sigma。<br/> 仅以下模式生效：<br/> `[LightShadowMode.projector]` |  
+| projectorBlurSigmaTo | `double` | `10.0` | 最大倾斜进度的阴影模糊 Sigma。<br/> 仅以下模式生效：<br/> `[LightShadowMode.projector]` |  
+| direction | `ShadowDirection?` | `null` | 阴影方向。 |  
+| enableReverse | `bool?` | `null` | 反转阴影方向。 |  
 
-[gesture priority]: #gesture-priority
-[Tilt widget parameters]: #tilt-widget-parameters
+
+[手势优先级]: #手势优先级
+[Tilt widget 参数]: #tilt-widget-参数-
 [ChildLayout]: #childlayout
 [StreamController&lt;TiltStreamModel&gt;]: #streamcontrollertiltstreammodel
 [TiltConfig]: #tiltconfig

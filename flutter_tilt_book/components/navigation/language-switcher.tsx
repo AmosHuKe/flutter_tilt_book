@@ -1,7 +1,6 @@
 "use client"
 
 import { usePathname } from "next/navigation"
-import { Link } from "lib/transition"
 import { RiTranslate2 } from "react-icons/ri"
 
 import { Button } from "@/components/ui/button"
@@ -12,7 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
-export function LanguageSwitcher() {
+export function LanguageSwitcher({ basePath }: { basePath?: string }) {
   const pathname = usePathname()
 
   function getRestPath() {
@@ -35,12 +34,16 @@ export function LanguageSwitcher() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
-        <DropdownMenuItem>
-          <Link href={`/en${restPath}`}>English</Link>
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Link href={`/zh${restPath}`}>简体中文</Link>
-        </DropdownMenuItem>
+        <a href={`${basePath}/en${restPath}`}>
+          <DropdownMenuItem className="cursor-pointer">
+            English
+          </DropdownMenuItem>
+        </a>
+        <a href={`${basePath}/zh${restPath}`}>
+          <DropdownMenuItem className="cursor-pointer">
+            简体中文
+          </DropdownMenuItem>
+        </a>
       </DropdownMenuContent>
     </DropdownMenu>
   )

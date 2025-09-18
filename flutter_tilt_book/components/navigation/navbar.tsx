@@ -69,7 +69,7 @@ export async function Navbar({ locale }: { locale: string }) {
           </div>
           <Search locale={locale} documentRoutes={translatedRoutes} />
           <div className="flex gap-2 sm:ml-0">
-            <LanguageSwitcher />
+            <LanguageSwitcher basePath={Settings.basePath} />
             <ThemeModeToggle />
           </div>
         </div>
