@@ -57,7 +57,7 @@ const RESOURCES = {"canvaskit/skwasm.js": "1ef3ea3a0fec4569e5d531da25f34095",
 "assets/shaders/ink_sparkle.frag": "ecc85a2e95f5e9f53123dcaf8cb9b6ce",
 "assets/packages/remixicon_updated/fonts/Remix.ttf": "c1f9443f4d49d2ed763a67eea90212d0",
 "main.dart.mjs": "c55d14cbff42fd9e44312dc195645338",
-"flutter_bootstrap.js": "22d2cef7895f6715fa64c54852549527",
+"flutter_bootstrap.js": "809a6d7c57ec9f261e878d3560c87412",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "index.html": "59b77d1708eb4353348d1a740ebbfc75",
 "/": "59b77d1708eb4353348d1a740ebbfc75"};
