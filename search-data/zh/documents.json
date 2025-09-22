@@ -61,7 +61,6 @@
         "0.0.1-dev.0"
       ],
       "keywords": [
-        "documents",
         "changelog",
         "3.3.2",
         "3.3.1",
@@ -207,8 +206,7 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
-        "examples",
+        "示例",
         "Animation"
       ]
     }
@@ -222,8 +220,7 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
-        "examples",
+        "示例",
         "Bento Grids"
       ]
     }
@@ -237,8 +234,7 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
-        "examples",
+        "示例",
         "Default"
       ]
     }
@@ -252,8 +248,7 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
-        "examples",
+        "示例",
         "Demo"
       ]
     }
@@ -267,8 +262,7 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
-        "examples",
+        "示例",
         "Dialog"
       ]
     }
@@ -282,8 +276,7 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
-        "examples",
+        "示例",
         "Disable Effects"
       ]
     }
@@ -297,23 +290,21 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
-        "examples",
+        "示例",
         "Events"
       ]
     }
   },
   {
     "slug": "/examples",
-    "title": "Examples",
-    "description": "Explore examples with source code.",
-    "content": "You can preview all Flutter examples in a new tab:\n\nOr preview all examples on this page:\n",
+    "title": "示例",
+    "description": "探索附带源码的示例。",
+    "content": "你可以在新标签页中预览所有 Flutter 示例：\n\n或者，在当前页面预览所有示例：\n",
     "_searchMeta": {
-      "cleanContent": "you can preview all flutter examples in a new tab: or preview all examples on this page:",
+      "cleanContent": "flutter",
       "headings": [],
       "keywords": [
-        "documents",
-        "examples"
+        "示例"
       ]
     }
   },
@@ -326,8 +317,7 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
-        "examples",
+        "示例",
         "Initial Tilt"
       ]
     }
@@ -341,8 +331,7 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
-        "examples",
+        "示例",
         "Keep Tilt"
       ]
     }
@@ -356,8 +345,7 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
-        "examples",
+        "示例",
         "Layout"
       ]
     }
@@ -371,8 +359,7 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
-        "examples",
+        "示例",
         "Layout2"
       ]
     }
@@ -386,8 +373,7 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
-        "examples",
+        "示例",
         "Layout3"
       ]
     }
@@ -401,8 +387,7 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
-        "examples",
+        "示例",
         "Light Direction"
       ]
     }
@@ -416,8 +401,7 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
-        "examples",
+        "示例",
         "Multiple Tilt"
       ]
     }
@@ -431,8 +415,7 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
-        "examples",
+        "示例",
         "Parallax Card"
       ]
     }
@@ -446,8 +429,7 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
-        "examples",
+        "示例",
         "Parallax Image"
       ]
     }
@@ -461,8 +443,7 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
-        "examples",
+        "示例",
         "Reverse Tilt"
       ]
     }
@@ -476,8 +457,7 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
-        "examples",
+        "示例",
         "Shadow Direction"
       ]
     }
@@ -491,8 +471,7 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
-        "examples",
+        "示例",
         "Smooth Gesture Enter"
       ]
     }
@@ -506,8 +485,7 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
-        "examples",
+        "示例",
         "Tilt Direction"
       ]
     }
@@ -521,8 +499,7 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
-        "examples",
+        "示例",
         "Tilt-LightShadowMode"
       ]
     }
@@ -536,8 +513,7 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
-        "examples",
+        "示例",
         "TiltStreamController"
       ]
     }
@@ -551,7 +527,6 @@
       "cleanContent": "you can use the following code:",
       "headings": [],
       "keywords": [
-        "documents",
         "guide",
         "faq",
         "sensors",
@@ -568,7 +543,6 @@
       "cleanContent": "you can use the following code: for more information see: tilt widget - lightshadowmode you should assess the performance risks yourself if your scenario runs smoothly then you can use it apply a shadow to the entire tilt widget similar to a projector effect will display a shadow that exactly matches the non-transparent parts of the widget recommended for the following scenarios: images only no data states no hero tags tilt widget - lightshadowmode : zh docs widgets tilt-widget lightshadowmode",
       "headings": [],
       "keywords": [
-        "documents",
         "guide",
         "faq",
         "shadow",
@@ -586,7 +560,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "guide",
         "faq"
       ]
@@ -601,7 +574,6 @@
       "cleanContent": "you can use the following code:",
       "headings": [],
       "keywords": [
-        "documents",
         "guide",
         "faq",
         "keep",
@@ -618,7 +590,6 @@
       "cleanContent": "you need to check the following: browser compatibility currently web uses the sensor api - gyroscope but it is not compatible with some of the major browsers such as safari firefox for more information see browser compatibility gyroscope browser compatibility secure contexts you should consider using https browsers can only use sensors in secure contexts relevant limitations secure contexts relevant limitations you can refer to issue 22 to enable it or enable it yourself using other methods gyroscope browser compatibility : https: developer mozilla org en-us docs web api sensorapis browsercompatibility sensor api - gyroscope : https: developer mozilla org en-us docs web api gyroscope secure contexts relevant limitations : https: developer mozilla org en-us docs web api gyroscope : :text secure 20context 3a 20this 20feature 20is 20available 20only 20in 20secure 20contexts 20 https 2c 20in 20some 20or 20all 20supporting 20browsers issue 22 : https: github com fluttercandies flutter_tilt issues 22 issuecomment-2713822610",
       "headings": [],
       "keywords": [
-        "documents",
         "guide",
         "faq",
         "sensors",
@@ -635,35 +606,33 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "guide"
       ]
     }
   },
   {
     "slug": "/guides/simple-usage",
-    "title": "Simple usage",
-    "description": "Simple examples to help you get started quickly.",
-    "content": "## Tilt\n\n[Tilt widget][Tilt widget parameters] will have default tilt, shadow, and light effects.\n\n```dart {6} showLineNumbers\n/// Import flutter_tilt\nimport 'package:flutter_tilt/flutter_tilt.dart';\n\n...\n\nTilt(\n  child: Container(\n    width: 150.0,\n    height: 300.0,\n    color: Colors.grey,\n  ),\n),\n\n...\n\n```\n\n## Parallax\n\n[TiltParallax widget][TiltParallax widget parameters] can only be used in the `childLayout` of `Tilt` widget.\n\n```dart {6,7,11,19} showLineNumbers\n/// Import flutter_tilt\nimport 'package:flutter_tilt/flutter_tilt.dart';\n\n...\n\nTilt(\n  childLayout: const ChildLayout(\n    outer: [\n      /// Parallax here\n      Positioned(\n        child: TiltParallax(\n          child: Text('Parallax'),\n        ),\n      ),\n      /// Parallax here\n      Positioned(\n        top: 20.0,\n        left: 20.0,\n        child: TiltParallax(\n          size: Offset(-10.0, -10.0),\n          child: Text('Tilt'),\n        ),\n      ),\n    ],\n  ),\n  child: Container(\n    width: 150.0,\n    height: 300.0,\n    color: Colors.brown,\n  ),\n),\n\n...\n\n```\n\n## More parameters\n\n[Tilt widget parameters]: /zh/docs/widgets/tilt-widget\n\n[TiltParallax widget parameters]: /zh/docs/widgets/tiltparallax-widget\n",
+    "title": "简单使用",
+    "description": "简单示例帮助你快速上手。",
+    "content": "## 倾斜\n\n[Tilt widget][Tilt widget parameters] widget 默认有倾斜、阴影和光照的效果。\n\n```dart {6} showLineNumbers\n/// 导入 flutter_tilt\nimport 'package:flutter_tilt/flutter_tilt.dart';\n\n...\n\nTilt(\n  child: Container(\n    width: 150.0,\n    height: 300.0,\n    color: Colors.grey,\n  ),\n),\n\n...\n\n```\n\n## 视差\n\n[TiltParallax widget][TiltParallax widget parameters] 只能在 `Tilt` widget 的 `childLayout` 中使用。\n\n```dart {6,7,11,19} showLineNumbers\n/// 导入 flutter_tilt\nimport 'package:flutter_tilt/flutter_tilt.dart';\n\n...\n\nTilt(\n  childLayout: const ChildLayout(\n    outer: [\n      /// 此处为视差\n      Positioned(\n        child: TiltParallax(\n          child: Text('Parallax'),\n        ),\n      ),\n      /// 此处为视差\n      Positioned(\n        top: 20.0,\n        left: 20.0,\n        child: TiltParallax(\n          size: Offset(-10.0, -10.0),\n          child: Text('Tilt'),\n        ),\n      ),\n    ],\n  ),\n  child: Container(\n    width: 150.0,\n    height: 300.0,\n    color: Colors.brown,\n  ),\n),\n\n...\n\n```\n\n## 更多参数\n\n[Tilt widget parameters]: /zh/docs/widgets/tilt-widget\n\n[TiltParallax widget parameters]: /zh/docs/widgets/tiltparallax-widget\n",
     "_searchMeta": {
-      "cleanContent": "tilt tilt widget tilt widget parameters will have default tilt shadow and light effects parallax tiltparallax widget tiltparallax widget parameters can only be used in the childlayout of tilt widget more parameters tilt widget parameters : zh docs widgets tilt-widget tiltparallax widget parameters : zh docs widgets tiltparallax-widget",
+      "cleanContent": "tilt widget tilt widget parameters widget tiltparallax widget tiltparallax widget parameters tilt widget childlayout tilt widget parameters : zh docs widgets tilt-widget tiltparallax widget parameters : zh docs widgets tiltparallax-widget",
       "headings": [
-        "Tilt",
-        "Parallax",
-        "More parameters"
+        "倾斜",
+        "视差",
+        "更多参数"
       ],
       "keywords": [
-        "documents",
-        "guide",
-        "simple usage",
-        "Tilt",
-        "Parallax",
-        "More parameters",
-        "dart {6} showLineNumbers\n/// Import flutter_tilt\nimport 'package:flutter_tilt/flutter_tilt.dart';\n\n...\n\nTilt(\n  child: Container(\n    width: 150.0,\n    height: 300.0,\n    color: Colors.grey,\n  ),\n),\n\n...",
-        "## Parallax\n\n[TiltParallax widget][TiltParallax widget parameters] can only be used in the",
-        "of",
-        "widget.",
-        "dart {6,7,11,19} showLineNumbers\n/// Import flutter_tilt\nimport 'package:flutter_tilt/flutter_tilt.dart';\n\n...\n\nTilt(\n  childLayout: const ChildLayout(\n    outer: [\n      /// Parallax here\n      Positioned(\n        child: TiltParallax(\n          child: Text('Parallax'),\n        ),\n      ),\n      /// Parallax here\n      Positioned(\n        top: 20.0,\n        left: 20.0,\n        child: TiltParallax(\n          size: Offset(-10.0, -10.0),\n          child: Text('Tilt'),\n        ),\n      ),\n    ],\n  ),\n  child: Container(\n    width: 150.0,\n    height: 300.0,\n    color: Colors.brown,\n  ),\n),\n\n..."
+        "指南",
+        "简单使用",
+        "倾斜",
+        "视差",
+        "更多参数",
+        "dart {6} showLineNumbers\n/// 导入 flutter_tilt\nimport 'package:flutter_tilt/flutter_tilt.dart';\n\n...\n\nTilt(\n  child: Container(\n    width: 150.0,\n    height: 300.0,\n    color: Colors.grey,\n  ),\n),\n\n...",
+        "## 视差\n\n[TiltParallax widget][TiltParallax widget parameters] 只能在",
+        "widget 的",
+        "中使用。",
+        "dart {6,7,11,19} showLineNumbers\n/// 导入 flutter_tilt\nimport 'package:flutter_tilt/flutter_tilt.dart';\n\n...\n\nTilt(\n  childLayout: const ChildLayout(\n    outer: [\n      /// 此处为视差\n      Positioned(\n        child: TiltParallax(\n          child: Text('Parallax'),\n        ),\n      ),\n      /// 此处为视差\n      Positioned(\n        top: 20.0,\n        left: 20.0,\n        child: TiltParallax(\n          size: Offset(-10.0, -10.0),\n          child: Text('Tilt'),\n        ),\n      ),\n    ],\n  ),\n  child: Container(\n    width: 150.0,\n    height: 300.0,\n    color: Colors.brown,\n  ),\n),\n\n..."
       ]
     }
   },
@@ -680,7 +649,6 @@
         "More"
       ],
       "keywords": [
-        "documents",
         "guide",
         "controller",
         "Configure Tilt.tiltStreamController",
@@ -700,26 +668,24 @@
   },
   {
     "slug": "/installation",
-    "title": "Installation",
-    "description": "This guide covers compatibility notes and how to add the flutter_tilt package.",
-    "content": "## Installation\n\n<Step>\n  <StepItem title=\"Compatibility\">\n    #### Platforms compatibility\n\n    <div className=\"max-w-xl\">\n      | Android | iOS   | Web   | macOS | Windows | Linux |\n      | :-----: | :---: | :---: | :---: | :-----: | :---: |\n      | ✅      | ✅   | ✅    | ✅   | ✅     | ✅    |\n    </div>\n\n    #### Sensors compatibility\n\n    Sensors are only available on these platforms.\\\n    Platforms without sensors support do not affect the normal use of other features.\n\n    <div className=\"max-w-xl\">\n      | Android | iOS   | Web (HTTPS)                                              | macOS | Windows | Linux |\n      | :-----: | :---: | :------------------------------------------------------: | :---: | :-----: | :---: |\n      | ✅      | ✅   | [Browser compatibility][Gyroscope Browser compatibility] | ❌    | ❌     | ❌    |\n    </div>\n\n    <br />\n\n    <Note title=\"Note\">\n      Currently Web uses the [Sensor API - Gyroscope], but it is not compatible with\n      some of the major browsers, such as Safari, Firefox.\n    </Note>\n\n    [Gyroscope Browser compatibility]: https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs#browser_compatibility\n\n    [Sensor API - Gyroscope]: https://developer.mozilla.org/en-US/docs/Web/API/Gyroscope\n  </StepItem>\n\n  <StepItem title=\"Add flutter_tilt\">\n    #### Versions compatibility\n\n    <div className=\"max-w-xl\">\n      | Package              | Flutter<br />v3.0.0+ | Flutter<br />v3.10.0+ | Flutter<br />v3.19.0+ |\n      | -------------------- | :------------------: | :-------------------: | :-------------------: |\n      | flutter\\_tilt v3.0.0+ | ❌ | ❌ | ✅ |\n      | flutter\\_tilt v2.0.0+ | ❌ | ✅ | ✅ |\n      | flutter\\_tilt v1.0.0+ | ✅ | ❌ | ❌ |\n    </div>\n\n    #### Add flutter\\_tilt\n\n    Run this command with Flutter,\n\n    ```bash\n    $ flutter pub add flutter_tilt\n    ```\n\n    or add `flutter_tilt` to `pubspec.yaml` dependencies manually.\n\n    ```yaml:pubspec.yaml {3} showLineNumbers\n    ...\n    dependencies:\n      flutter_tilt: latest_version\n    ...\n    ```\n  </StepItem>\n\n  <StepItem title=\"Import flutter_tilt\">\n    Now in your Dart code, you can use:\n\n    ```dart\n    import 'package:flutter_tilt/flutter_tilt.dart';\n    ```\n  </StepItem>\n\n  <StepItem title=\"Get started\" />\n</Step>\n",
+    "title": "安装",
+    "description": "本指南介绍了相关兼容性以及如何添加 flutter_tilt package。",
+    "content": "## 安装\n\n<Step>\n  <StepItem title=\"兼容性\">\n    #### 平台兼容\n\n    <div className=\"max-w-xl\">\n      | Android | iOS   | Web   | macOS | Windows | Linux |\n      | :-----: | :---: | :---: | :---: | :-----: | :---: |\n      | ✅      | ✅   | ✅    | ✅   | ✅     | ✅    |\n    </div>\n\n    #### 传感器兼容\n\n    传感器仅在以下平台触发。\\\n    不支持传感器的平台不会影响其他功能的正常使用。\n\n    <div className=\"max-w-xl\">\n      | Android | iOS   | Web (HTTPS)                                              | macOS | Windows | Linux |\n      | :-----: | :---: | :------------------------------------------------------: | :---: | :-----: | :---: |\n      | ✅      | ✅   | [浏览器兼容][Gyroscope Browser compatibility] | ❌    | ❌     | ❌    |\n    </div>\n\n    <br />\n\n    <Note title=\"注意\">\n      目前 Web 使用 [Sensor API - Gyroscope][]，但它不兼容部分主流浏览器，比如 Safari、Firefox。\n    </Note>\n\n    [Gyroscope Browser compatibility]: https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs#browser_compatibility\n\n    [Sensor API - Gyroscope]: https://developer.mozilla.org/en-US/docs/Web/API/Gyroscope\n  </StepItem>\n\n  <StepItem title=\"添加 flutter_tilt\">\n    #### 版本兼容\n\n    <div className=\"max-w-xl\">\n      | Package              | Flutter<br />v3.0.0+ | Flutter<br />v3.10.0+ | Flutter<br />v3.19.0+ |\n      | -------------------- | :------------------: | :-------------------: | :-------------------: |\n      | flutter\\_tilt v3.0.0+ | ❌ | ❌ | ✅ |\n      | flutter\\_tilt v2.0.0+ | ❌ | ✅ | ✅ |\n      | flutter\\_tilt v1.0.0+ | ✅ | ❌ | ❌ |\n    </div>\n\n    #### 添加 flutter\\_tilt\n\n    使用 Flutter 运行以下指令，\n\n    ```bash\n    $ flutter pub add flutter_tilt\n    ```\n\n    或手动将 `flutter_tilt` 添加到 `pubspec.yaml` 依赖项中。\n\n    ```yaml:pubspec.yaml {3} showLineNumbers\n    ...\n    dependencies:\n      flutter_tilt: latest_version\n    ...\n    ```\n  </StepItem>\n\n  <StepItem title=\"导入 flutter_tilt\">\n    在你的 Dart 代码中，你可以这样导入：\n\n    ```dart\n    import 'package:flutter_tilt/flutter_tilt.dart';\n    ```\n  </StepItem>\n\n  <StepItem title=\"开始\" />\n</Step>\n",
     "_searchMeta": {
-      "cleanContent": "installation stepitem title compatibility platforms compatibility div classname max-w-xl android ios web macos windows linux :-----: :---: :---: :---: :-----: :---: div sensors compatibility sensors are only available on these platforms platforms without sensors support do not affect the normal use of other features div classname max-w-xl android ios web https macos windows linux :-----: :---: :------------------------------------------------------: :---: :-----: :---: browser compatibility gyroscope browser compatibility div br note title note currently web uses the sensor api - gyroscope but it is not compatible with some of the major browsers such as safari firefox gyroscope browser compatibility : https: developer mozilla org en-us docs web api sensorapis browsercompatibility sensor api - gyroscope : https: developer mozilla org en-us docs web api gyroscope stepitem versions compatibility div classname max-w-xl package flutter br v3 0 0 flutter br v3 10 0 flutter br v3 19 0 -------------------- :------------------: :-------------------: :-------------------: flutter _tilt v3 0 0 flutter _tilt v2 0 0 flutter _tilt v1 0 0 div add flutter _tilt run this command with flutter or add flutter_tilt to pubspec yaml dependencies manually stepitem stepitem title import flutter_tilt now in your dart code you can use: stepitem stepitem title get started",
+      "cleanContent": "stepitem title div classname max-w-xl android ios web macos windows linux :-----: :---: :---: :---: :-----: :---: div div classname max-w-xl android ios web https macos windows linux :-----: :---: :------------------------------------------------------: :---: :-----: :---: gyroscope browser compatibility div br note title web sensor api - gyroscope safari firefox gyroscope browser compatibility : https: developer mozilla org en-us docs web api sensorapis browsercompatibility sensor api - gyroscope : https: developer mozilla org en-us docs web api gyroscope stepitem div classname max-w-xl package flutter br v3 0 0 flutter br v3 10 0 flutter br v3 19 0 -------------------- :------------------: :-------------------: :-------------------: flutter _tilt v3 0 0 flutter _tilt v2 0 0 flutter _tilt v1 0 0 div flutter _tilt flutter flutter_tilt pubspec yaml stepitem stepitem title flutter_tilt dart stepitem stepitem title",
       "headings": [
-        "Installation"
+        "安装"
       ],
       "keywords": [
-        "documents",
-        "installation",
-        "compatibility",
+        "安装",
+        "兼容性",
         "package",
-        "Installation",
         "bash\n    $ flutter pub add flutter_tilt",
-        "or add",
-        "to",
-        "dependencies manually.",
+        "或手动将",
+        "添加到",
+        "依赖项中。",
         "yaml:pubspec.yaml {3} showLineNumbers\n    ...\n    dependencies:\n      flutter_tilt: latest_version\n    ...",
-        "</StepItem>\n\n  <StepItem title=\"Import flutter_tilt\">\n    Now in your Dart code, you can use:",
+        "</StepItem>\n\n  <StepItem title=\"导入 flutter_tilt\">\n    在你的 Dart 代码中，你可以这样导入：",
         "dart\n    import 'package:flutter_tilt/flutter_tilt.dart';"
       ]
     }
@@ -733,7 +699,6 @@
       "cleanContent": "migrate to v2 0 0 migrate to v0 1 0",
       "headings": [],
       "keywords": [
-        "documents",
         "migration guide"
       ]
     }
@@ -747,7 +712,6 @@
       "cleanContent": "summary the childinner parameter of the tilt widget has been changed to childlayout outer details before: after:",
       "headings": [],
       "keywords": [
-        "documents",
         "migration guide",
         "childInner",
         "Tilt widget",
@@ -767,7 +731,6 @@
       "cleanContent": "summary bumping flutter sdk minimum version to 3 3 0 changed enablemousehover in tiltconfig to enablegesturehover to keep the tilt you need to configure tiltconfig enablerevert: false enablesensorrevert: false details changed enablemousehover in tiltconfig to enablegesturehover to keep the tilt",
       "headings": [],
       "keywords": [
-        "documents",
         "migration guide",
         "3.3.0",
         "enableMouseHover",
@@ -782,18 +745,17 @@
   },
   {
     "slug": "/overview",
-    "title": "Overview",
+    "title": "介绍",
     "description": "",
-    "content": "## Features ✨\n\n* 📦 Tilt effect\n* 🔦 Light effect\n* 💡 Shadow effect\n* 👀 Parallax effect\n* 📱 Gyroscope sensor support ([Sensors compatibility][])\n* 🧱 Multiple layouts\n* 👇 Supports hover, touch, and sensors events ([Gesture priority][])\n* 🖼️ Smooth animation\n* ⚙️ Many custom parameters\n\n<br />\n\n<Step>\n  <StepItem title=\"Get Started\" />\n\n  <StepItem title=\"Widgets\" />\n\n  <StepItem title=\"Examples\" />\n</Step>\n\n[Sensors compatibility]: /zh/docs/installation/#sensors-compatibility\n\n[Gesture priority]: /zh/docs/widgets/tilt-widget/#gesture-priority\n",
+    "content": "## 特性 ✨\n\n* 📦 倾斜效果\n* 🔦 光照效果\n* 💡 阴影效果\n* 👀 视差效果\n* 📱 陀螺仪传感器支持 ([传感器兼容][Sensors compatibility])\n* 🧱 多种布局位置\n* 👇 支持鼠标、触摸和传感器事件 ([手势优先级][Gesture priority])\n* 🖼️ 流畅的动画\n* ⚙️ 许多自定义参数\n\n<br />\n\n<Step>\n  <StepItem title=\"开始\" />\n\n  <StepItem title=\"Widget\" />\n\n  <StepItem title=\"示例\" />\n</Step>\n\n[Sensors compatibility]: /zh/docs/installation/#传感器兼容\n\n[Gesture priority]: /zh/docs/widgets/tilt-widget/#手势优先级\n",
     "_searchMeta": {
-      "cleanContent": "features tilt effect light effect shadow effect parallax effect gyroscope sensor support sensors compatibility multiple layouts supports hover touch and sensors events gesture priority smooth animation many custom parameters br stepitem title get started stepitem title widgets stepitem title examples sensors compatibility : zh docs installation sensors-compatibility gesture priority : zh docs widgets tilt-widget gesture-priority",
+      "cleanContent": "sensors compatibility gesture priority br stepitem title stepitem title widget stepitem title sensors compatibility : zh docs installation gesture priority : zh docs widgets tilt-widget",
       "headings": [
-        "Features ✨"
+        "特性 ✨"
       ],
       "keywords": [
-        "documents",
-        "overview",
-        "Features ✨"
+        "介绍",
+        "特性 ✨"
       ]
     }
   },
@@ -806,7 +768,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "widgets"
       ]
     }
@@ -829,7 +790,6 @@
         "ShadowConfig"
       ],
       "keywords": [
-        "documents",
         "widgets",
         "tilt widget",
         "手势优先级",
@@ -978,7 +938,6 @@
         "TiltParallax widget 参数"
       ],
       "keywords": [
-        "documents",
         "widgets",
         "TiltParallax widget",
         "TiltParallax widget 参数",
