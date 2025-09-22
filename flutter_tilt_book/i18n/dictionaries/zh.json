@@ -6,8 +6,9 @@
     "preview-examples": "预览示例"
   },
   "docs": {
+    "docs": "文档",
     "sidebar-menu": {
-      "overview": "概览",
+      "overview": "介绍",
       "get-started": {
         "get-started": "开始",
         "installation": "安装",

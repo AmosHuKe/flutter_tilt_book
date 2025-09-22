@@ -31,7 +31,7 @@ export default function Anchor({
 }: AnchorProps) {
   const path = usePathname()
   let isMatch = absolute
-    ? props.href.toString().split("/")[0] == path.split("/")[0]
+    ? props.href.toString().split("/")[2] == path.split("/")[2]
     : path.includes(props.href.toString())
 
   if (props.href.toString().includes("http")) isMatch = false

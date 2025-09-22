@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { GitHubLink, Navigations, PubDevLink } from "@/settings/navigation"
+import { getTranslations } from "next-intl/server"
 import { LuArrowUpRight } from "react-icons/lu"
 import { RiFlutterFill, RiGithubFill } from "react-icons/ri"
 
@@ -78,13 +79,15 @@ export async function Navbar({ locale }: { locale: string }) {
   )
 }
 
-export function NavMenu({
+export async function NavMenu({
   locale,
   isSheet = false,
 }: {
   locale: string
   isSheet?: boolean
 }) {
+  const t = await getTranslations({ locale })
+
   return (
     <>
       {Navigations.map((item) => {
@@ -98,7 +101,7 @@ export function NavMenu({
             target={item.external ? "_blank" : undefined}
             rel={item.external ? "noopener noreferrer" : undefined}
           >
-            {item.title}{" "}
+            {t(item.title)}{" "}
             {item.external && (
               <LuArrowUpRight className="h-3 w-3 align-super" strokeWidth={3} />
             )}

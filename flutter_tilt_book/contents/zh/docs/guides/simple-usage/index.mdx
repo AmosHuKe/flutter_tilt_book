@@ -1,15 +1,15 @@
 ---
-title: Simple usage
-description: Simple examples to help you get started quickly.
-keywords: ["documents", "guide", "simple usage"]
+title: 简单使用
+description: 简单示例帮助你快速上手。
+keywords: ["documents", "指南", "简单使用"]
 ---
 
-## Tilt
+## 倾斜
 
-[Tilt widget][Tilt widget parameters] will have default tilt, shadow, and light effects.
+[Tilt widget][Tilt widget parameters] widget 默认有倾斜、阴影和光照的效果。  
 
 ```dart {6} showLineNumbers
-/// Import flutter_tilt
+/// 导入 flutter_tilt
 import 'package:flutter_tilt/flutter_tilt.dart';
 
 ...
@@ -26,12 +26,12 @@ Tilt(
 
 ```
 
-## Parallax
+## 视差
 
-[TiltParallax widget][TiltParallax widget parameters] can only be used in the `childLayout` of `Tilt` widget.
+[TiltParallax widget][TiltParallax widget parameters] 只能在 `Tilt` widget 的 `childLayout` 中使用。  
 
 ```dart {6,7,11,19} showLineNumbers
-/// Import flutter_tilt
+/// 导入 flutter_tilt
 import 'package:flutter_tilt/flutter_tilt.dart';
 
 ...
@@ -39,13 +39,13 @@ import 'package:flutter_tilt/flutter_tilt.dart';
 Tilt(
   childLayout: const ChildLayout(
     outer: [
-      /// Parallax here
+      /// 此处为视差
       Positioned(
         child: TiltParallax(
           child: Text('Parallax'),
         ),
       ),
-      /// Parallax here
+      /// 此处为视差
       Positioned(
         top: 20.0,
         left: 20.0,
@@ -67,7 +67,7 @@ Tilt(
 
 ```
 
-## More parameters
+## 更多参数
 
 <NavCardGrid>
   <NavCard

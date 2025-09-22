@@ -1,15 +1,15 @@
 ---
-title: Installation
-description: This guide covers compatibility notes and how to add the flutter_tilt package.
-keywords: ["documents", "installation", "compatibility", "package"]
+title: 安装
+description: 本指南介绍了相关兼容性以及如何添加 flutter_tilt package。
+keywords: ["documents", "安装", "兼容性", "package"]
 ---
 
-## Installation
+## 安装
 
 <Step>
-<StepItem title="Compatibility">
+<StepItem title="兼容性">
 
-#### Platforms compatibility
+#### 平台兼容
 
 <div className="max-w-xl">
 | Android | iOS   | Web   | macOS | Windows | Linux |
@@ -17,31 +17,30 @@ keywords: ["documents", "installation", "compatibility", "package"]
 | ✅      | ✅   | ✅    | ✅   | ✅     | ✅    |
 </div>
 
-#### Sensors compatibility
+#### 传感器兼容
 
-Sensors are only available on these platforms.  
-Platforms without sensors support do not affect the normal use of other features.
+传感器仅在以下平台触发。  
+不支持传感器的平台不会影响其他功能的正常使用。 
 
 <div className="max-w-xl">
 | Android | iOS   | Web (HTTPS)                                              | macOS | Windows | Linux |
 | :-----: | :---: | :------------------------------------------------------: | :---: | :-----: | :---: |
-| ✅      | ✅   | [Browser compatibility][Gyroscope Browser compatibility] | ❌    | ❌     | ❌    |
+| ✅      | ✅   | [浏览器兼容][Gyroscope Browser compatibility] | ❌    | ❌     | ❌    |
 </div>
 
 <br />
 
-<Note title="Note">
-  Currently Web uses the [Sensor API - Gyroscope], but it is not compatible with
-  some of the major browsers, such as Safari, Firefox.
+<Note title="注意">
+目前 Web 使用 [Sensor API - Gyroscope][]，但它不兼容部分主流浏览器，比如 Safari、Firefox。
 </Note>
 
 [Gyroscope Browser compatibility]: https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs#browser_compatibility
 [Sensor API - Gyroscope]: https://developer.mozilla.org/en-US/docs/Web/API/Gyroscope
 
 </StepItem>
-<StepItem title="Add flutter_tilt">
+<StepItem title="添加 flutter_tilt">
 
-#### Versions compatibility
+#### 版本兼容
 
 <div className="max-w-xl">
 | Package              | Flutter<br />v3.0.0+ | Flutter<br />v3.10.0+ | Flutter<br />v3.19.0+ |
@@ -51,15 +50,15 @@ Platforms without sensors support do not affect the normal use of other features
 | flutter_tilt v1.0.0+ | ✅ | ❌ | ❌ |
 </div>
 
-#### Add flutter_tilt
+#### 添加 flutter_tilt
 
-Run this command with Flutter,
+使用 Flutter 运行以下指令，  
 
 ```bash
 $ flutter pub add flutter_tilt
 ```
 
-or add `flutter_tilt` to `pubspec.yaml` dependencies manually.
+或手动将 `flutter_tilt` 添加到 `pubspec.yaml` 依赖项中。  
 
 ```yaml:pubspec.yaml {3} showLineNumbers
 ...
@@ -69,26 +68,26 @@ dependencies:
 ```
 
 </StepItem>
-<StepItem title="Import flutter_tilt">
+<StepItem title="导入 flutter_tilt">
 
-Now in your Dart code, you can use:
+在你的 Dart 代码中，你可以这样导入：
 
 ```dart
 import 'package:flutter_tilt/flutter_tilt.dart';
 ```
 
 </StepItem>
-<StepItem title="Get started">
+<StepItem title="开始">
 
 <NavCardGrid>
   <NavCard
-    subtitle="Guide"
-    title="Simple usage"
-    description="Simple examples to help you get started quickly."
+    subtitle="指南"
+    title="简单使用"
+    description="简单示例帮助你快速上手。"
     href="/zh/docs/guides/simple-usage"
   />
   <NavCard
-    subtitle="Widgets"
+    subtitle="Widget"
     title="Tilt widget"
     description={
       <div>
@@ -100,7 +99,7 @@ import 'package:flutter_tilt/flutter_tilt.dart';
     href="/zh/docs/widgets/tilt-widget"
   />
   <NavCard
-    subtitle="Widgets"
+    subtitle="Widget"
     title="TiltParallax widget"
     description={
       <div>

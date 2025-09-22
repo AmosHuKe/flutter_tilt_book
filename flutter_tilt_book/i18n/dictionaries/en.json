@@ -6,6 +6,7 @@
     "preview-examples": "Preview Examples"
   },
   "docs": {
+    "docs": "Docs",
     "sidebar-menu": {
       "overview": "Overview",
       "get-started": {
