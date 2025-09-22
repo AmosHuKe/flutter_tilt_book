@@ -61,7 +61,6 @@
         "0.0.1-dev.0"
       ],
       "keywords": [
-        "documents",
         "changelog",
         "3.3.2",
         "3.3.1",
@@ -207,7 +206,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "示例",
         "Animation"
       ]
@@ -222,7 +220,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "示例",
         "Bento Grids"
       ]
@@ -237,7 +234,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "示例",
         "Default"
       ]
@@ -252,7 +248,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "示例",
         "Demo"
       ]
@@ -267,7 +262,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "示例",
         "Dialog"
       ]
@@ -282,7 +276,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "示例",
         "Disable Effects"
       ]
@@ -297,7 +290,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "示例",
         "Events"
       ]
@@ -312,7 +304,6 @@
       "cleanContent": "flutter",
       "headings": [],
       "keywords": [
-        "documents",
         "示例"
       ]
     }
@@ -326,7 +317,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "示例",
         "Initial Tilt"
       ]
@@ -341,7 +331,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "示例",
         "Keep Tilt"
       ]
@@ -356,7 +345,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "示例",
         "Layout"
       ]
@@ -371,7 +359,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "示例",
         "Layout2"
       ]
@@ -386,7 +373,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "示例",
         "Layout3"
       ]
@@ -401,7 +387,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "示例",
         "Light Direction"
       ]
@@ -416,7 +401,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "示例",
         "Multiple Tilt"
       ]
@@ -431,7 +415,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "示例",
         "Parallax Card"
       ]
@@ -446,7 +429,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "示例",
         "Parallax Image"
       ]
@@ -461,7 +443,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "示例",
         "Reverse Tilt"
       ]
@@ -476,7 +457,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "示例",
         "Shadow Direction"
       ]
@@ -491,7 +471,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "示例",
         "Smooth Gesture Enter"
       ]
@@ -506,7 +485,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "示例",
         "Tilt Direction"
       ]
@@ -521,7 +499,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "示例",
         "Tilt-LightShadowMode"
       ]
@@ -536,7 +513,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "示例",
         "TiltStreamController"
       ]
@@ -551,7 +527,6 @@
       "cleanContent": "you can use the following code:",
       "headings": [],
       "keywords": [
-        "documents",
         "guide",
         "faq",
         "sensors",
@@ -568,7 +543,6 @@
       "cleanContent": "you can use the following code: for more information see: tilt widget - lightshadowmode you should assess the performance risks yourself if your scenario runs smoothly then you can use it apply a shadow to the entire tilt widget similar to a projector effect will display a shadow that exactly matches the non-transparent parts of the widget recommended for the following scenarios: images only no data states no hero tags tilt widget - lightshadowmode : zh docs widgets tilt-widget lightshadowmode",
       "headings": [],
       "keywords": [
-        "documents",
         "guide",
         "faq",
         "shadow",
@@ -586,7 +560,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "guide",
         "faq"
       ]
@@ -601,7 +574,6 @@
       "cleanContent": "you can use the following code:",
       "headings": [],
       "keywords": [
-        "documents",
         "guide",
         "faq",
         "keep",
@@ -618,7 +590,6 @@
       "cleanContent": "you need to check the following: browser compatibility currently web uses the sensor api - gyroscope but it is not compatible with some of the major browsers such as safari firefox for more information see browser compatibility gyroscope browser compatibility secure contexts you should consider using https browsers can only use sensors in secure contexts relevant limitations secure contexts relevant limitations you can refer to issue 22 to enable it or enable it yourself using other methods gyroscope browser compatibility : https: developer mozilla org en-us docs web api sensorapis browsercompatibility sensor api - gyroscope : https: developer mozilla org en-us docs web api gyroscope secure contexts relevant limitations : https: developer mozilla org en-us docs web api gyroscope : :text secure 20context 3a 20this 20feature 20is 20available 20only 20in 20secure 20contexts 20 https 2c 20in 20some 20or 20all 20supporting 20browsers issue 22 : https: github com fluttercandies flutter_tilt issues 22 issuecomment-2713822610",
       "headings": [],
       "keywords": [
-        "documents",
         "guide",
         "faq",
         "sensors",
@@ -635,7 +606,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "guide"
       ]
     }
@@ -653,7 +623,6 @@
         "更多参数"
       ],
       "keywords": [
-        "documents",
         "指南",
         "简单使用",
         "倾斜",
@@ -680,7 +649,6 @@
         "More"
       ],
       "keywords": [
-        "documents",
         "guide",
         "controller",
         "Configure Tilt.tiltStreamController",
@@ -709,7 +677,6 @@
         "安装"
       ],
       "keywords": [
-        "documents",
         "安装",
         "兼容性",
         "package",
@@ -732,7 +699,6 @@
       "cleanContent": "migrate to v2 0 0 migrate to v0 1 0",
       "headings": [],
       "keywords": [
-        "documents",
         "migration guide"
       ]
     }
@@ -746,7 +712,6 @@
       "cleanContent": "summary the childinner parameter of the tilt widget has been changed to childlayout outer details before: after:",
       "headings": [],
       "keywords": [
-        "documents",
         "migration guide",
         "childInner",
         "Tilt widget",
@@ -766,7 +731,6 @@
       "cleanContent": "summary bumping flutter sdk minimum version to 3 3 0 changed enablemousehover in tiltconfig to enablegesturehover to keep the tilt you need to configure tiltconfig enablerevert: false enablesensorrevert: false details changed enablemousehover in tiltconfig to enablegesturehover to keep the tilt",
       "headings": [],
       "keywords": [
-        "documents",
         "migration guide",
         "3.3.0",
         "enableMouseHover",
@@ -790,7 +754,6 @@
         "特性 ✨"
       ],
       "keywords": [
-        "documents",
         "介绍",
         "特性 ✨"
       ]
@@ -805,7 +768,6 @@
       "cleanContent": "",
       "headings": [],
       "keywords": [
-        "documents",
         "widgets"
       ]
     }
@@ -828,7 +790,6 @@
         "ShadowConfig"
       ],
       "keywords": [
-        "documents",
         "widgets",
         "tilt widget",
         "手势优先级",
@@ -977,7 +938,6 @@
         "TiltParallax widget 参数"
       ],
       "keywords": [
-        "documents",
         "widgets",
         "TiltParallax widget",
         "TiltParallax widget 参数",
