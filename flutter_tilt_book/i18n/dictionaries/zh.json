@@ -1,4 +1,12 @@
 {
+  "toc": {
+    "title": "本页目录"
+  },
+  "feedback": {
+    "title": "当前页面",
+    "feedback": "反馈问题",
+    "edit-page": "编辑页面"
+  },
   "home": {
     "title": "Flutter Tilt",
     "description": "在 Flutter 上轻松创建倾斜视差悬停效果！",

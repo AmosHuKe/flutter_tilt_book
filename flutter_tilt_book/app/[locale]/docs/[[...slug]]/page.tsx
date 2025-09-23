@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation"
 import { hasLocale } from "next-intl"
+import { getTranslations } from "next-intl/server"
 
 import { getDocument } from "@/lib/markdown"
 import { Settings } from "@/lib/meta"
@@ -24,6 +25,8 @@ export default async function Pages({ params }: PageProps) {
 
   if (!res || !hasLocale(routing.locales, locale)) notFound()
 
+  const t = await getTranslations({ locale })
+
   const { frontmatter, content, tocs } = res
 
   return (
@@ -45,7 +48,7 @@ export default async function Pages({ params }: PageProps) {
           className="toc sticky top-16 hidden h-[94.5vh] min-w-[230px] gap-3 py-8 xl:flex xl:flex-col"
           aria-label="Table of contents"
         >
-          {Settings.toc && <Toc tocs={tocs} />}
+          {Settings.toc && <Toc title={t("toc.title")} tocs={tocs} />}
           {Settings.feedback && (
             <Feedback
               locale={locale}

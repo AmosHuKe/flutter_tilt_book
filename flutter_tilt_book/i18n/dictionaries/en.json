@@ -1,4 +1,12 @@
 {
+  "toc": {
+    "title": "On this page"
+  },
+  "feedback": {
+    "title": "Content",
+    "feedback": "Feedback",
+    "edit-page": "Edit page"
+  },
   "home": {
     "title": "Flutter Tilt",
     "description": "Easily apply tilt parallax hover effects for Flutter!",

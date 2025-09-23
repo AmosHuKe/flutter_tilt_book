@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { getTranslations } from "next-intl/server"
 import { LuArrowUpRight } from "react-icons/lu"
 
 import { Settings } from "@/lib/meta"
@@ -10,13 +11,18 @@ type SideBarEdit = {
   slug: string
 }
 
-export default function RightSideBar({ locale, slug, title }: SideBarEdit) {
+export default async function RightSideBar({
+  locale,
+  slug,
+  title,
+}: SideBarEdit) {
+  const t = await getTranslations({ locale })
   const feedbackUrl = `${Settings.currentRepoLink}/issues/new?title=Feedback for "${title}" - "${locale}/docs/${slug}"`
   const editUrl = `${Settings.currentRepoLink}/tree/main/flutter_tilt_book/contents/${locale}/docs/${slug}/index.mdx`
 
   return (
     <div className="flex flex-col gap-3 pl-2">
-      <h3 className="text-sm font-semibold">Content</h3>
+      <h3 className="text-sm font-semibold">{t("feedback.title")}</h3>
       <div className="flex flex-col gap-2">
         <Link
           href={feedbackUrl}
@@ -26,7 +32,8 @@ export default function RightSideBar({ locale, slug, title }: SideBarEdit) {
             "flex items-center text-sm text-zinc-800 no-underline dark:text-zinc-300/85"
           )}
         >
-          <LuArrowUpRight className="mr-1 inline-block h-4 w-4" /> Feedback
+          <LuArrowUpRight className="mr-1 inline-block h-4 w-4" />{" "}
+          {t("feedback.feedback")}
         </Link>
         <Link
           href={editUrl}
@@ -36,7 +43,8 @@ export default function RightSideBar({ locale, slug, title }: SideBarEdit) {
             "flex items-center text-sm text-zinc-800 no-underline dark:text-zinc-300/85"
           )}
         >
-          <LuArrowUpRight className="mr-1 inline-block h-4 w-4" /> Edit page
+          <LuArrowUpRight className="mr-1 inline-block h-4 w-4" />{" "}
+          {t("feedback.edit-page")}
         </Link>
       </div>
     </div>
