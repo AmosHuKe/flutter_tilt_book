@@ -11,7 +11,13 @@ function ScrollUp() {
   }
 }
 
-export function BackToTop({ className }: { className?: string }): ReactElement {
+export function BackToTop({
+  title,
+  className,
+}: {
+  title: string
+  className?: string
+}): ReactElement {
   const ref = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
@@ -38,7 +44,7 @@ export function BackToTop({ className }: { className?: string }): ReactElement {
       )}
     >
       <LuArrowUp className="mr-1 inline-block h-4 w-4 align-middle" />
-      <span>Scroll to top</span>
+      <span>{title}</span>
     </button>
   )
 }

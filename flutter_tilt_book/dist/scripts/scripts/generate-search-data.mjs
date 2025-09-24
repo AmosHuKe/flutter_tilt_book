@@ -102,14 +102,14 @@ function cleanContentForSearch(content) {
             .map((cell) => cell.trim())
             .join(" ");
     });
-    cleanedContent = cleanedContent.replace(/<(?:Note|Card|Step|FileTree|Folder|File|Mermaid)[^>]*>([\s\S]*?)<\/(?:Note|Card|Step|FileTree|Folder|File|Mermaid)>/g, "$1");
+    cleanedContent = cleanedContent.replace(/<(?:Note|NavCard|Step|FileTree|Folder|File|Mermaid)[^>]*>([\s\S]*?)<\/(?:Note|NavCard|Step|FileTree|Folder|File|Mermaid)>/g, "$1");
     cleanedContent = cleanedContent
         .replace(/^\s*[-*+]\s+/gm, "")
         .replace(/^\s*\d+\.\s+/gm, "")
         .replace(/^\s*\[[x\s]\]\s+/gm, "")
         .replace(/^\s*>\s+/gm, "");
     cleanedContent = cleanedContent
-        .replace(/[^\w\s-:]/g, " ")
+        .replace(/[^\w\s\u4e00-\u9fa5-:]/g, " ")
         .replace(/\s+/g, " ")
         .toLowerCase()
         .trim();

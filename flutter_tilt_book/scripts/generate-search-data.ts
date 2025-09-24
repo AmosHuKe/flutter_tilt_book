@@ -132,7 +132,7 @@ function cleanContentForSearch(content: string): string {
   })
 
   cleanedContent = cleanedContent.replace(
-    /<(?:Note|Card|Step|FileTree|Folder|File|Mermaid)[^>]*>([\s\S]*?)<\/(?:Note|Card|Step|FileTree|Folder|File|Mermaid)>/g,
+    /<(?:Note|NavCard|Step|FileTree|Folder|File|Mermaid)[^>]*>([\s\S]*?)<\/(?:Note|NavCard|Step|FileTree|Folder|File|Mermaid)>/g,
     "$1"
   )
 
@@ -143,7 +143,7 @@ function cleanContentForSearch(content: string): string {
     .replace(/^\s*>\s+/gm, "")
 
   cleanedContent = cleanedContent
-    .replace(/[^\w\s-:]/g, " ")
+    .replace(/[^\w\s\u4e00-\u9fa5-:]/g, " ")
     .replace(/\s+/g, " ")
     .toLowerCase()
     .trim()

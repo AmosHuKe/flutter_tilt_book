@@ -121,6 +121,15 @@ export function helperSearch(
   return res
 }
 
+function splitQuery(query: string): string[] {
+  // 英文按单词，中文按单字
+  return query
+    .trim()
+    .replace(/([\u4e00-\u9fa5])/g, " $1 ") // 汉字前后加空格
+    .split(/\s+/)
+    .filter((w) => w.length > 0)
+}
+
 function searchMatch(a: string, b: string): number {
   if (typeof a !== "string" || typeof b !== "string") return 0
 
@@ -256,7 +265,7 @@ function calculateProximityScore(query: string, content: string): number {
 
 function extractSnippet(content: string, query: string): string {
   const indices: number[] = []
-  const words = query.split(/\s+/)
+  const words = splitQuery(query)
 
   words.forEach((word) => {
     const index = content.indexOf(word)
@@ -403,8 +412,7 @@ export function debounce<T extends (...args: any[]) => any>(
 export function highlight(snippet: string, searchTerms: string): string {
   if (!snippet || !searchTerms) return snippet
 
-  const terms = searchTerms
-    .split(/\s+/)
+  const terms = splitQuery(searchTerms)
     .filter((term) => term.trim().length > 0)
     .map((term) => term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
 
