@@ -57,7 +57,10 @@ export default async function Pages({ params }: PageProps) {
             />
           )}
           {Settings.totop && (
-            <BackToTop className="mt-6 self-start text-sm text-zinc-800 dark:text-zinc-300/85" />
+            <BackToTop
+              title={t("scroll-to-top")}
+              className="mt-6 self-start text-sm text-zinc-800 dark:text-zinc-300/85"
+            />
           )}
         </aside>
       )}

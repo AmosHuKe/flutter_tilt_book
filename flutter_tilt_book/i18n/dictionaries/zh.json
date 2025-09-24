@@ -7,6 +7,7 @@
     "feedback": "反馈问题",
     "edit-page": "编辑页面"
   },
+  "scroll-to-top": "返回顶部",
   "home": {
     "title": "Flutter Tilt",
     "description": "在 Flutter 上轻松创建倾斜视差悬停效果！",
