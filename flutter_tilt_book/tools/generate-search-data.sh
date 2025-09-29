@@ -39,5 +39,3 @@ else
   echo "Error: Failed to generate search data"
   exit 1
 fi
-
-

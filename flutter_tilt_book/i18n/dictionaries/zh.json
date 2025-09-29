@@ -36,7 +36,7 @@
       "guides": {
         "guides": "指南",
         "simple-usage": "简单使用",
-        "tilt-with-controller": "使用代码控制倾斜",
+        "tilt-with-controller": "Tilt 控制器",
         "faq": {
           "faq": "常见问题",
           "keep-the-tilt-angle": "保持倾斜角度",

@@ -520,16 +520,16 @@
   },
   {
     "slug": "/guides/faq/how-to-disable-sensors",
-    "title": "How to disable sensors",
+    "title": "如何禁用传感器",
     "description": "",
-    "content": "You can use the following code:\n\n```diff {5} showLineNumbers\n...\r\n\r\nTilt(\r\n  tiltConfig: const TiltConfig(\r\n+   enableGestureSensors: false,\r\n    ...\r\n  ),\r\n  ...\r\n),\r\n\r\n...\n```\n",
+    "content": "你可以使用以下代码：\n\n```diff {5} showLineNumbers\n...\r\n\r\nTilt(\r\n  tiltConfig: const TiltConfig(\r\n+   enableGestureSensors: false,\r\n    ...\r\n  ),\r\n  ...\r\n),\r\n\r\n...\n```\n",
     "_searchMeta": {
-      "cleanContent": "you can use the following code:",
+      "cleanContent": "你可以使用以下代码",
       "headings": [],
       "keywords": [
-        "guide",
-        "faq",
-        "sensors",
+        "指南",
+        "常见问题",
+        "传感器",
         "diff {5} showLineNumbers\n...\r\n\r\nTilt(\r\n  tiltConfig: const TiltConfig(\r\n+   enableGestureSensors: false,\r\n    ...\r\n  ),\r\n  ...\r\n),\r\n\r\n..."
       ]
     }
@@ -567,32 +567,31 @@
   },
   {
     "slug": "/guides/faq/keep-the-tilt-angle",
-    "title": "Keep the tilt angle",
+    "title": "保持倾斜角度",
     "description": "",
-    "content": "You can use the following code:\n\n```diff {5-6} showLineNumbers\n...\r\n\r\nTilt(\r\n  tiltConfig: const TiltConfig(\r\n+   enableRevert: false,\r\n+   enableSensorRevert: false,\r\n    ...\r\n  ),\r\n  ...\r\n),\r\n\r\n...\n```\n",
+    "content": "你可以使用以下代码：\n\n```diff {5-6} showLineNumbers\n...\r\n\r\nTilt(\r\n  tiltConfig: const TiltConfig(\r\n+   enableRevert: false,\r\n+   enableSensorRevert: false,\r\n    ...\r\n  ),\r\n  ...\r\n),\r\n\r\n...\n```\n",
     "_searchMeta": {
-      "cleanContent": "you can use the following code:",
+      "cleanContent": "你可以使用以下代码",
       "headings": [],
       "keywords": [
-        "guide",
-        "faq",
-        "keep",
+        "指南",
+        "常见问题",
         "diff {5-6} showLineNumbers\n...\r\n\r\nTilt(\r\n  tiltConfig: const TiltConfig(\r\n+   enableRevert: false,\r\n+   enableSensorRevert: false,\r\n    ...\r\n  ),\r\n  ...\r\n),\r\n\r\n..."
       ]
     }
   },
   {
     "slug": "/guides/faq/sensors-are-inactive-on-the-web",
-    "title": "Sensors are inactive on the web",
+    "title": "传感器在 Web 端失效",
     "description": "",
-    "content": "You need to check the following:\n\n### Browser compatibility\n\nCurrently Web uses the [Sensor API - Gyroscope],\r\nbut it is not compatible with some of the major browsers, such as Safari, Firefox.\n\nFor more information, see [Browser compatibility][Gyroscope browser compatibility].\n\n### Secure contexts\n\nYou should consider using `HTTPS`,\r\nbrowsers can only use sensors in secure contexts ([relevant limitations][Secure contexts relevant limitations]).\n\nYou can refer to [issue 22][] to enable it, or enable it yourself using other methods.\n\n[Gyroscope browser compatibility]: https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs#browser_compatibility\n\n[Sensor API - Gyroscope]: https://developer.mozilla.org/en-US/docs/Web/API/Gyroscope\n\n[Secure contexts relevant limitations]: https://developer.mozilla.org/en-US/docs/Web/API/Gyroscope#:~:text=Secure%20context%3A%20This%20feature%20is%20available%20only%20in%20secure%20contexts%20\\(HTTPS\\)%2C%20in%20some%20or%20all%20supporting%20browsers.\n\n[issue 22]: https://github.com/fluttercandies/flutter_tilt/issues/22#issuecomment-2713822610\n",
+    "content": "你需要检查以下内容：\n\n### 浏览器兼容\n\n目前 Web 使用 [Sensor API - Gyroscope][]，但它不兼容部分主流浏览器，比如 Safari、Firefox。\n\n更多信息，请参阅：[浏览器兼容][Gyroscope browser compatibility]。\n\n### 安全上下文\n\n你应该考虑使用 `HTTPS`，\r\n浏览器只能在安全上下文中使用传感器（[相关限制][Secure contexts relevant limitations]）\n\n你可以参考 [issue 22][] 来启用它，\r\n或者通过其他方法自行启用。\n\n[Gyroscope browser compatibility]: https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs#browser_compatibility\n\n[Sensor API - Gyroscope]: https://developer.mozilla.org/en-US/docs/Web/API/Gyroscope\n\n[Secure contexts relevant limitations]: https://developer.mozilla.org/en-US/docs/Web/API/Gyroscope#:~:text=Secure%20context%3A%20This%20feature%20is%20available%20only%20in%20secure%20contexts%20\\(HTTPS\\)%2C%20in%20some%20or%20all%20supporting%20browsers.\n\n[issue 22]: https://github.com/fluttercandies/flutter_tilt/issues/22#issuecomment-2713822610\n",
     "_searchMeta": {
-      "cleanContent": "you need to check the following: browser compatibility currently web uses the sensor api - gyroscope but it is not compatible with some of the major browsers such as safari firefox for more information see browser compatibility gyroscope browser compatibility secure contexts you should consider using https browsers can only use sensors in secure contexts relevant limitations secure contexts relevant limitations you can refer to issue 22 to enable it or enable it yourself using other methods gyroscope browser compatibility : https: developer mozilla org en-us docs web api sensorapis browsercompatibility sensor api - gyroscope : https: developer mozilla org en-us docs web api gyroscope secure contexts relevant limitations : https: developer mozilla org en-us docs web api gyroscope : :text secure 20context 3a 20this 20feature 20is 20available 20only 20in 20secure 20contexts 20 https 2c 20in 20some 20or 20all 20supporting 20browsers issue 22 : https: github com fluttercandies flutter_tilt issues 22 issuecomment-2713822610",
+      "cleanContent": "你需要检查以下内容 浏览器兼容 目前 web 使用 sensor api - gyroscope 但它不兼容部分主流浏览器 比如 safari firefox 更多信息 请参阅 浏览器兼容 gyroscope browser compatibility 安全上下文 你应该考虑使用 https 浏览器只能在安全上下文中使用传感器 相关限制 secure contexts relevant limitations 你可以参考 issue 22 来启用它 或者通过其他方法自行启用 gyroscope browser compatibility : https: developer mozilla org en-us docs web api sensorapis browsercompatibility sensor api - gyroscope : https: developer mozilla org en-us docs web api gyroscope secure contexts relevant limitations : https: developer mozilla org en-us docs web api gyroscope : :text secure 20context 3a 20this 20feature 20is 20available 20only 20in 20secure 20contexts 20 https 2c 20in 20some 20or 20all 20supporting 20browsers issue 22 : https: github com fluttercandies flutter_tilt issues 22 issuecomment-2713822610",
       "headings": [],
       "keywords": [
-        "guide",
-        "faq",
-        "sensors",
+        "指南",
+        "常见问题",
+        "传感器",
         "HTTPS"
       ]
     }
@@ -638,30 +637,30 @@
   },
   {
     "slug": "/guides/tilt-with-controller",
-    "title": "Tilt with controller",
-    "description": "Use the controller to tilt the widget",
-    "content": "If you want to control the tilt programmatically, you can see the following:\n\n## Configure Tilt.tiltStreamController\n\n```dart {3,8} showLineNumbers\n...\r\n\r\nfinal tiltStreamController = StreamController<TiltStreamModel>.broadcast();\r\n\r\n...\r\n\r\nTilt(\r\n  tiltStreamController: tiltStreamController,\r\n  ...\r\n),\r\n\r\n...\n```\n\n## Using the controller\n\nThe current gesture is being used:\n\n`TiltStreamModel.position` is the current trigger position, It will have the tilt effect of the corresponding position.\n\nFor example:\\\nThere is a widget size, width: 10, height: 10,\n\n* Offset(0, 0): Maximum tilt top left.\n* Offset(10, 10): Maximum tilt bottom right.\n\n```dart showLineNumbers\ntiltStreamController.add(\r\n  TiltStreamModel(\r\n    position: Offset(xx, xx),\r\n  ),\r\n);\n```\n\nTo stop using the current gesture:\n\nBy default, `TiltStreamModel` uses the `GesturesType.controller` gesture type.\\\n`TiltStreamModel.gestureUse` is used to determine if the gesture is being used and will be processed according to the [手势优先级][].\n\n```dart showLineNumbers\ntiltStreamController.add(\r\n  TiltStreamModel(\r\n    position: Offset(xx, xx),\r\n    gestureUse: false,\r\n  ),\r\n);\n```\n\n## More\n\nYou can also see an example: [Example - TiltStreamController][].\\\nFor more information, see: [Tilt widget - StreamController\\<TiltStreamModel>][Tilt widget - StreamController<TiltStreamModel>].\n\n[手势优先级]: /zh/docs/widgets/tilt-widget/#手势优先级\n\n[Example - TiltStreamController]: /zh/docs/examples/tilt-stream-controller-demo\n\n[Tilt widget - StreamController<TiltStreamModel>]: /zh/docs/widgets/tilt-widget/#streamcontrollertiltstreammodel\n",
+    "title": "Tilt 控制器",
+    "description": "使用控制器来控制倾斜",
+    "content": "如果你需要通过编程的方式来控制倾斜，可以参考以下：\n\n## 配置 Tilt.tiltStreamController\n\n```dart {3,8} showLineNumbers\n...\r\n\r\nfinal tiltStreamController = StreamController<TiltStreamModel>.broadcast();\r\n\r\n...\r\n\r\nTilt(\r\n  tiltStreamController: tiltStreamController,\r\n  ...\r\n),\r\n\r\n...\n```\n\n## 使用控制器\n\n正在使用当前手势：\n\n`TiltStreamModel.position` 是当前触发的坐标位置，\r\n它将产生对应位置的倾斜效果。\n\n例如：\\\n有一个 widget 尺寸，宽度：10，高度：10。\n\n* Offset(0, 0)：会触发最左上的倾斜。\n* Offset(10, 10)：会触发最右下的倾斜。\n\n```dart showLineNumbers\ntiltStreamController.add(\r\n  TiltStreamModel(\r\n    position: Offset(xx, xx),\r\n  ),\r\n);\n```\n\n停止使用当前手势：\n\n默认情况下，`TiltStreamModel` 使用 `GesturesType.controller` 手势类型。\\\n`TiltStreamModel.gestureUse` 用于确定手势是否正在使用，并根据 [手势优先级][] 进行处理。\n\n```dart showLineNumbers\ntiltStreamController.add(\r\n  TiltStreamModel(\r\n    position: Offset(xx, xx),\r\n    gestureUse: false,\r\n  ),\r\n);\n```\n\n## 更多\n\n你还可以查看一个示例：[示例 - TiltStreamController][]。\\\n更多信息，请参阅：[Tilt widget - StreamController\\<TiltStreamModel>][Tilt widget - StreamController<TiltStreamModel>]。\n\n[手势优先级]: /zh/docs/widgets/tilt-widget/#手势优先级\n\n[示例 - TiltStreamController]: /zh/docs/examples/tilt-stream-controller-demo\n\n[Tilt widget - StreamController<TiltStreamModel>]: /zh/docs/widgets/tilt-widget/#streamcontrollertiltstreammodel\n",
     "_searchMeta": {
-      "cleanContent": "if you want to control the tilt programmatically you can see the following: configure tilt tiltstreamcontroller using the controller the current gesture is being used: tiltstreammodel position is the current trigger position it will have the tilt effect of the corresponding position for example: there is a widget size width: 10 height: 10 offset 0 0 : maximum tilt top left offset 10 10 : maximum tilt bottom right to stop using the current gesture: by default tiltstreammodel uses the gesturestype controller gesture type tiltstreammodel gestureuse is used to determine if the gesture is being used and will be processed according to the 手势优先级 more you can also see an example: example - tiltstreamcontroller for more information see: tilt widget - streamcontroller tiltstreammodel tilt widget - streamcontroller tiltstreammodel 手势优先级 : zh docs widgets tilt-widget 手势优先级 example - tiltstreamcontroller : zh docs examples tilt-stream-controller-demo tilt widget - streamcontroller tiltstreammodel : zh docs widgets tilt-widget streamcontrollertiltstreammodel",
+      "cleanContent": "如果你需要通过编程的方式来控制倾斜 可以参考以下 配置 tilt tiltstreamcontroller 使用控制器 正在使用当前手势 tiltstreammodel position 是当前触发的坐标位置 它将产生对应位置的倾斜效果 例如 有一个 widget 尺寸 宽度 10 高度 10 offset 0 0 会触发最左上的倾斜 offset 10 10 会触发最右下的倾斜 停止使用当前手势 默认情况下 tiltstreammodel 使用 gesturestype controller 手势类型 tiltstreammodel gestureuse 用于确定手势是否正在使用 并根据 手势优先级 进行处理 更多 你还可以查看一个示例 示例 - tiltstreamcontroller 更多信息 请参阅 tilt widget - streamcontroller tiltstreammodel tilt widget - streamcontroller tiltstreammodel 手势优先级 : zh docs widgets tilt-widget 手势优先级 示例 - tiltstreamcontroller : zh docs examples tilt-stream-controller-demo tilt widget - streamcontroller tiltstreammodel : zh docs widgets tilt-widget streamcontrollertiltstreammodel",
       "headings": [
-        "Configure Tilt.tiltStreamController",
-        "Using the controller",
-        "More"
+        "配置 Tilt.tiltStreamController",
+        "使用控制器",
+        "更多"
       ],
       "keywords": [
-        "guide",
-        "controller",
-        "Configure Tilt.tiltStreamController",
-        "Using the controller",
-        "More",
+        "指南",
+        "控制器",
+        "配置 Tilt.tiltStreamController",
+        "使用控制器",
+        "更多",
         "dart {3,8} showLineNumbers\n...\r\n\r\nfinal tiltStreamController = StreamController<TiltStreamModel>.broadcast();\r\n\r\n...\r\n\r\nTilt(\r\n  tiltStreamController: tiltStreamController,\r\n  ...\r\n),\r\n\r\n...",
-        "## Using the controller\n\nThe current gesture is being used:",
-        "is the current trigger position, It will have the tilt effect of the corresponding position.\n\nFor example:\\\nThere is a widget size, width: 10, height: 10,\n\n* Offset(0, 0): Maximum tilt top left.\n* Offset(10, 10): Maximum tilt bottom right.",
+        "## 使用控制器\n\n正在使用当前手势：",
+        "是当前触发的坐标位置，\r\n它将产生对应位置的倾斜效果。\n\n例如：\\\n有一个 widget 尺寸，宽度：10，高度：10。\n\n* Offset(0, 0)：会触发最左上的倾斜。\n* Offset(10, 10)：会触发最右下的倾斜。",
         "dart showLineNumbers\ntiltStreamController.add(\r\n  TiltStreamModel(\r\n    position: Offset(xx, xx),\r\n  ),\r\n);",
-        "To stop using the current gesture:\n\nBy default,",
-        "uses the",
-        "gesture type.\\",
-        "is used to determine if the gesture is being used and will be processed according to the [手势优先级][].",
+        "停止使用当前手势：\n\n默认情况下，",
+        "使用",
+        "手势类型。\\",
+        "用于确定手势是否正在使用，并根据 [手势优先级][] 进行处理。",
         "dart showLineNumbers\ntiltStreamController.add(\r\n  TiltStreamModel(\r\n    position: Offset(xx, xx),\r\n    gestureUse: false,\r\n  ),\r\n);"
       ]
     }

@@ -576,7 +576,6 @@
       "keywords": [
         "guide",
         "faq",
-        "keep",
         "diff {5-6} showLineNumbers\n...\r\n\r\nTilt(\r\n  tiltConfig: const TiltConfig(\r\n+   enableRevert: false,\r\n+   enableSensorRevert: false,\r\n    ...\r\n  ),\r\n  ...\r\n),\r\n\r\n..."
       ]
     }

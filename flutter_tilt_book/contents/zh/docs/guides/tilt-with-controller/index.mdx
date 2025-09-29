@@ -1,12 +1,12 @@
 ---
-title: Tilt with controller
-description: Use the controller to tilt the widget
-keywords: ["guide", "controller"]
+title: Tilt 控制器
+description: 使用控制器来控制倾斜
+keywords: ["指南", "控制器"]
 ---
 
-If you want to control the tilt programmatically, you can see the following:
+如果你需要通过编程的方式来控制倾斜，可以参考以下：
 
-## Configure Tilt.tiltStreamController
+## 配置 Tilt.tiltStreamController
 
 ```dart {3,8} showLineNumbers
 ...
@@ -23,17 +23,18 @@ Tilt(
 ...
 ```
 
-## Using the controller
+## 使用控制器
 
-The current gesture is being used:
+正在使用当前手势：
 
-`TiltStreamModel.position` is the current trigger position, It will have the tilt effect of the corresponding position.
+`TiltStreamModel.position` 是当前触发的坐标位置，
+它将产生对应位置的倾斜效果。
 
-For example:  
-There is a widget size, width: 10, height: 10,
+例如：  
+有一个 widget 尺寸，宽度：10，高度：10。
 
-- Offset(0, 0): Maximum tilt top left.
-- Offset(10, 10): Maximum tilt bottom right.
+- Offset(0, 0)：会触发最左上的倾斜。
+- Offset(10, 10)：会触发最右下的倾斜。
 
 ```dart showLineNumbers
 tiltStreamController.add(
@@ -43,10 +44,10 @@ tiltStreamController.add(
 );
 ```
 
-To stop using the current gesture:
+停止使用当前手势：
 
-By default, `TiltStreamModel` uses the `GesturesType.controller` gesture type.  
-`TiltStreamModel.gestureUse` is used to determine if the gesture is being used and will be processed according to the [手势优先级][].
+默认情况下，`TiltStreamModel` 使用 `GesturesType.controller` 手势类型。  
+`TiltStreamModel.gestureUse` 用于确定手势是否正在使用，并根据 [手势优先级][] 进行处理。
 
 ```dart showLineNumbers
 tiltStreamController.add(
@@ -57,11 +58,12 @@ tiltStreamController.add(
 );
 ```
 
-## More
+## 更多
 
-You can also see an example: [Example - TiltStreamController][].  
-For more information, see: [Tilt widget - StreamController\<TiltStreamModel\>][].
+你还可以查看一个示例：[示例 - TiltStreamController][]。  
+更多信息，请参阅：[Tilt widget - StreamController\<TiltStreamModel\>][]。
+
 
 [手势优先级]: /zh/docs/widgets/tilt-widget/#手势优先级
-[Example - TiltStreamController]: /zh/docs/examples/tilt-stream-controller-demo
+[示例 - TiltStreamController]: /zh/docs/examples/tilt-stream-controller-demo
 [Tilt widget - StreamController\<TiltStreamModel\>]: /zh/docs/widgets/tilt-widget/#streamcontrollertiltstreammodel
