@@ -1,4 +1,11 @@
 {
+  "search": {
+    "title": "搜索",
+    "placeholder": "搜索...",
+    "at-least-chars": "请输入至少 2 个字符。",
+    "searching": "搜索中...",
+    "no-results": "未找到相关内容："
+  },
   "toc": {
     "title": "本页目录"
   },

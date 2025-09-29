@@ -24,11 +24,21 @@ interface Document {
   noLink?: boolean
 }
 
+interface localeDictionaries {
+  title: string
+  placeholder: string
+  atLeastChars: string
+  searching: string
+  noResults: string
+}
+
 export default function Search({
   locale,
+  localeDictionaries,
   documentRoutes,
 }: {
   locale: string
+  localeDictionaries: localeDictionaries
   documentRoutes: Document[]
 }) {
   const [searchedInput, setSearchedInput] = useState("")
@@ -128,36 +138,38 @@ export default function Search({
             <LuSearch className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-zinc-500 dark:text-zinc-400" />
             <Input
               className="bg-background h-9 w-full rounded-md border pr-4 pl-10 text-sm shadow md:w-full"
-              placeholder="Search"
+              placeholder={localeDictionaries.title}
               type="search"
             />
           </div>
         </DialogTrigger>
         <DialogContent className="top-[45%] max-w-xs p-0 sm:top-[38%] sm:max-w-lg">
-          <DialogTitle className="sr-only">Search</DialogTitle>
+          <DialogTitle className="sr-only">
+            {localeDictionaries.title}
+          </DialogTitle>
           <DialogHeader>
             <input
               value={searchedInput}
               onChange={(e) => setSearchedInput(e.target.value)}
-              placeholder="Search..."
+              placeholder={localeDictionaries.placeholder}
               autoFocus
               className="h-14 border-b bg-transparent px-4 text-[15px] outline-none"
             />
           </DialogHeader>
           {searchedInput.length > 0 && searchedInput.length < 2 && (
             <p className="text-warning mx-auto mt-2 text-sm">
-              Please enter at least 2 characters.
+              {localeDictionaries.atLeastChars}
             </p>
           )}
           {isLoading ? (
             <p className="text-muted-foreground mx-auto mt-2 text-sm">
-              Searching...
+              {localeDictionaries.searching}
             </p>
           ) : (
             filteredResults.length === 0 &&
             searchedInput.length >= 2 && (
               <p className="text-muted-foreground mx-auto mt-2 text-sm">
-                No results found for{" "}
+                {localeDictionaries.noResults}{" "}
                 <span className="text-primary">{`"${searchedInput}"`}</span>
               </p>
             )

@@ -20,6 +20,7 @@ import { ThemeModeToggle } from "@/components/navigation/theme-toggle"
 
 export async function Navbar({ locale }: { locale: string }) {
   const translatedRoutes = await translateRoutes(locale, Routes)
+  const t = await getTranslations({ locale })
 
   return (
     <nav
@@ -68,7 +69,17 @@ export async function Navbar({ locale }: { locale: string }) {
               </Link>
             )}
           </div>
-          <Search locale={locale} documentRoutes={translatedRoutes} />
+          <Search
+            locale={locale}
+            localeDictionaries={{
+              title: t("search.title"),
+              placeholder: t("search.placeholder"),
+              atLeastChars: t("search.at-least-chars"),
+              searching: t("search.searching"),
+              noResults: t("search.no-results"),
+            }}
+            documentRoutes={translatedRoutes}
+          />
           <div className="flex gap-2 sm:ml-0">
             <LanguageSwitcher basePath={Settings.basePath} />
             <ThemeModeToggle />

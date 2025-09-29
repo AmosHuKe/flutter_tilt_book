@@ -1,7 +1,5 @@
-import { use } from "react"
 import { Link } from "lib/transition"
-import { useTranslations } from "next-intl"
-import { setRequestLocale } from "next-intl/server"
+import { getTranslations } from "next-intl/server"
 
 import { PageRoutes } from "@/lib/pageroutes"
 import { buttonVariants } from "@/components/ui/button"
@@ -10,10 +8,9 @@ type PageProps = {
   params: Promise<{ locale: string }>
 }
 
-export default function Home({ params }: Readonly<PageProps>) {
-  const { locale } = use(params)
-  setRequestLocale(locale)
-  const t = useTranslations("home")
+export default async function Home({ params }: Readonly<PageProps>) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: "home" })
 
   return (
     <section className="flex min-h-[86.5vh] flex-col items-center justify-center px-2 py-8 text-center">

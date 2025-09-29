@@ -1,4 +1,11 @@
 {
+  "search": {
+    "title": "Search",
+    "placeholder": "Search...",
+    "at-least-chars": "Please enter at least 2 characters.",
+    "searching": "Searching...",
+    "no-results": "No results found for"
+  },
   "toc": {
     "title": "On this page"
   },
