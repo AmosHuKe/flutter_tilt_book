@@ -1,18 +1,18 @@
 ---
-title: Migrate to v2.0.0
+title: 迁移到 v2.0.0
 description:
-keywords: ["migration guide"]
+keywords: ["迁移指南"]
 ---
 
-### Summary
+### 摘要
 
-- Bumping Flutter SDK minimum version to `3.3.0`.
-- Changed `enableMouseHover` in `TiltConfig` to `enableGestureHover`.
-- To keep the tilt, you need to configure `TiltConfig(enableRevert: false, enableSensorRevert: false,)`.
+- Flutter SDK 最低版本提升至 `3.3.0`。
+- 将 `TiltConfig` 中的 `enableMouseHover` 更名为 `enableGestureHover`。
+- 要保持倾斜，你需要配置 `TiltConfig(enableRevert: false, enableSensorRevert: false,)`。
 
-### Details
+### 详细
 
-#### Changed `enableMouseHover` in `TiltConfig` to `enableGestureHover`.
+#### 将 `TiltConfig` 中的 `enableMouseHover` 更名为 `enableGestureHover`
 
 ```diff {3-4}
 Tilt(
@@ -24,7 +24,7 @@ Tilt(
 )
 ```
 
-#### To keep the tilt.
+#### 保持倾斜
 
 ```diff {3-4}
 Tilt(

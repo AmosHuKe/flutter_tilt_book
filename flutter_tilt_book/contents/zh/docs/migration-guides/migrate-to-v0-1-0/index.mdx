@@ -1,33 +1,33 @@
 ---
-title: Migrate to v0.1.0
+title: 迁移到 v0.1.0
 description:
-keywords: ["migration guide"]
+keywords: ["迁移指南"]
 ---
 
-### Summary
+### 摘要
 
-The `childInner` parameter of the `Tilt widget` has been changed to `childLayout.outer`.
+`Tilt widget` 的 `childInner` 参数已更改为 `childLayout.outer`。
 
-### Details
+### 详细
 
-Before:
+之前：
 
 ```dart showLineNumbers
 Tilt(
   childInner: [
-    /// code
+    /// 代码
   ]
   ...
 )
 ```
 
-After:
+之后：
 
 ```dart showLineNumbers
 Tilt(
   childLayout: ChildLayout(
     outer: [
-      /// code
+      /// 代码
     ]
   )
   ...

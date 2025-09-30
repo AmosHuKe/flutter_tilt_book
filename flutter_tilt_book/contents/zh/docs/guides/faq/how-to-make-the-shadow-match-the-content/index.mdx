@@ -1,10 +1,10 @@
 ---
-title: How to make the shadow match the content
+title: 如何使阴影与内容匹配
 description:
-keywords: ["guide", "faq", "shadow"]
+keywords: ["指南", "常见问题", "阴影"]
 ---
 
-You can use the following code:
+你可以使用以下代码：
 
 ```diff {4} showLineNumbers
 ...
@@ -17,19 +17,19 @@ Tilt(
 ...
 ```
 
-For more information, see: [Tilt widget - LightShadowMode][].
+相关更多信息，请参阅：[Tilt widget - LightShadowMode][].
 
-You should assess the performance risks yourself.
-If your scenario runs smoothly, then you can use it.
+你应该自行评估性能风险，
+如果你应用的场景运行流畅，则可继续使用。
 
-<Note type="warning" title="Performance risk exists">
-Apply a shadow to the entire `Tilt` widget, similar to a projector effect.  
-will display a shadow that exactly matches the non-transparent parts of the widget.  
-Recommended for the following scenarios:
+<Note type="warning" title="存在性能风险">
+对整个 `Tilt` widget 使用类似投影仪效果的阴影，  
+会显示与 widget 非透明部分完全一致的阴影。  
+建议在以下场景使用：
 
-- Images only
-- No data states
-- No Hero tags
+- 仅图片
+- 无数据状态
+- 无 Hero 标签
 </Note>
 
 [Tilt widget - LightShadowMode]: /zh/docs/widgets/tilt-widget/#lightshadowmode
