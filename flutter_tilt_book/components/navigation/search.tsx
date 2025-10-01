@@ -3,7 +3,8 @@
 import { useEffect, useMemo, useState } from "react"
 import { LuFileText, LuSearch } from "react-icons/lu"
 
-import { advanceSearch, cn, debounce, highlight, search } from "@/lib/utils"
+import { advanceSearch, highlight, type search } from "@/lib/search-data-utils"
+import { cn, debounce } from "@/lib/utils"
 import {
   Dialog,
   DialogClose,
