@@ -38,7 +38,7 @@ const RESOURCES = {"flutter.js": "888483df48293866f9f41d3d9274a779",
 "assets/assets/bento_grids/1.png": "d87305e0f14219540b23bbf8db6dc072",
 "assets/assets/bento_grids/2.png": "da6ca7e21dbf20b44c2b6d060aae7bea",
 "assets/fonts/MaterialIcons-Regular.otf": "836673f4e9de986e774ecb05ba7d1345",
-"assets/NOTICES": "11ad9c8fe2f68427aab1a0dd8d10ab92",
+"assets/NOTICES": "12b65b41c2cce27e18d23ab51c8f0fac",
 "assets/packages/remixicon_updated/fonts/Remix.ttf": "c1f9443f4d49d2ed763a67eea90212d0",
 "assets/FontManifest.json": "89aaafdbc321fbedae9c5858acbc3f64",
 "assets/AssetManifest.bin": "1c0565baf57d6083a0edf293b04fc3ce",
@@ -58,9 +58,9 @@ const RESOURCES = {"flutter.js": "888483df48293866f9f41d3d9274a779",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "css/loading/loading.css": "13e1eef8ceb74521632bc8f17fc56d45",
 "main.dart.wasm": "ee706116301b0a516bc4c3b018b089ac",
-"flutter_bootstrap.js": "3bb87dfcb1895c16bc30dc1143a1afd0",
-"version.json": "66bac67bf4619847c2460144a369599c",
-"main.dart.js": "7e044b680c47669298137ac8e189e7c3"};
+"flutter_bootstrap.js": "53d563d833ffe6c2a8a76a00bf47fc57",
+"version.json": "c62314eae99f41892e9ea2cf57aa4633",
+"main.dart.js": "38c105eff7ddb3c6c42f3fc4c070771a"};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
