@@ -19,7 +19,7 @@ export function ViewTransitions({
   useEffect(() => {
     if (finishViewTransition) {
       finishViewTransition()
-      setFinishViewTransition(null)
+      requestAnimationFrame(() => setFinishViewTransition(null))
     }
   }, [finishViewTransition])
 

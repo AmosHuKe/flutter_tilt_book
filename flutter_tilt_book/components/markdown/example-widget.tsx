@@ -54,7 +54,7 @@ function Component({ name, height }: ExampleWidgetProps) {
           setIsObserving(false)
           return
         }
-        console.log("开始监控 iframe 资源加载")
+        console.info("开始监控 iframe 资源加载")
         observerRef.current = new iframeWindow.PerformanceObserver(
           (list: { getEntries: () => { name: string }[] }) => {
             const entries = list.getEntries()
@@ -83,10 +83,10 @@ function Component({ name, height }: ExampleWidgetProps) {
       setError(error)
       setIsObserving(false)
     }
-  }, [stopObserving])
+  }, [stopObserving, setError])
 
   useEffect(() => {
-    startObserving()
+    requestAnimationFrame(() => startObserving())
     return () => {
       stopObserving()
     }
@@ -108,7 +108,7 @@ function Component({ name, height }: ExampleWidgetProps) {
         <Loading />
         <span
           className={clsx(
-            "max-w-[240px] overflow-hidden text-right text-ellipsis whitespace-nowrap",
+            "max-w-60 overflow-hidden text-right text-ellipsis whitespace-nowrap",
             "text-xs font-normal text-zinc-600 dark:text-zinc-300",
             !resources ? "hidden" : ""
           )}

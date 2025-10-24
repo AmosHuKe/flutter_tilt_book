@@ -27,10 +27,10 @@ export default async function Pagination({
       <div>
         {res.prev && (
           <Link
-            className="border-input bg-background hover:bg-accent hover:text-accent-foreground focus-visible:ring-ring ml-auto inline-flex h-9 items-center justify-center rounded-md border px-4 py-2 text-sm font-medium whitespace-nowrap !no-underline shadow-sm transition-colors focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
+            className="border-input bg-background hover:bg-accent hover:text-accent-foreground focus-visible:ring-ring ml-auto inline-flex h-9 items-center justify-center rounded-md border px-4 py-2 text-sm font-medium whitespace-nowrap no-underline! shadow-sm transition-colors focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
             href={`/${locale}/docs${res.prev.href}`}
           >
-            <LuChevronLeft className="mr-1 h-[1rem] w-[1rem]" />
+            <LuChevronLeft className="mr-1 h-4 w-4" />
             <p className="max-w-[20vw] overflow-hidden overflow-ellipsis sm:max-w-[20vw]">
               {t(res.prev.title)}
             </p>
@@ -40,13 +40,13 @@ export default async function Pagination({
       <div>
         {res.next && (
           <Link
-            className="border-input bg-background hover:bg-accent hover:text-accent-foreground focus-visible:ring-ring ml-auto inline-flex h-9 items-center justify-center rounded-md border px-4 py-2 text-sm font-medium whitespace-nowrap !no-underline shadow-sm transition-colors focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
+            className="border-input bg-background hover:bg-accent hover:text-accent-foreground focus-visible:ring-ring ml-auto inline-flex h-9 items-center justify-center rounded-md border px-4 py-2 text-sm font-medium whitespace-nowrap no-underline! shadow-sm transition-colors focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
             href={`/${locale}/docs${res.next.href}`}
           >
             <p className="max-w-[20vw] overflow-hidden overflow-ellipsis sm:max-w-[20vw]">
               {t(res.next.title)}
             </p>
-            <LuChevronRight className="ml-1 h-[1rem] w-[1rem]" />
+            <LuChevronRight className="ml-1 h-4 w-4" />
           </Link>
         )}
       </div>

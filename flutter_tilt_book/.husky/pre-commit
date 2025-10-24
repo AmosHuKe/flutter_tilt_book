@@ -2,4 +2,8 @@
 
 cd flutter_tilt_book
 
+npm install
+npm run lint
+npm run format:check
+
 ./tools/generate-search-data.sh || exit 1

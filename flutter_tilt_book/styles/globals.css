@@ -126,9 +126,9 @@
 }
 
 .typography {
-  @apply prose prose-zinc;
+  @apply prose;
   @apply dark:prose-invert;
-  @apply w-[85vw] !min-w-full pt-2 text-sm sm:mx-auto lg:w-full;
+  @apply w-[85vw] min-w-full! pt-2 text-sm sm:mx-auto lg:w-full;
   @apply prose-headings:scroll-m-20;
   @apply prose-p:text-zinc-800;
   @apply dark:prose-p:text-zinc-300;
@@ -195,8 +195,8 @@ pre > code {
 }
 
 .highlight-line {
-  @apply dark:bg-zinc-800/90;
   @apply bg-zinc-200/60;
+  @apply dark:bg-zinc-800/90;
 }
 
 .highlight-comp > code {

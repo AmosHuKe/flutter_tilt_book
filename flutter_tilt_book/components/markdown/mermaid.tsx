@@ -42,7 +42,7 @@ const Mermaid = ({ chart, className }: MermaidProps) => {
   )
 
   useEffect(() => {
-    setMounted(true)
+    requestAnimationFrame(() => setMounted(true))
   }, [])
 
   useLayoutEffect(() => {

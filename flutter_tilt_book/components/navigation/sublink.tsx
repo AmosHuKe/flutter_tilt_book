@@ -43,9 +43,9 @@ export default function SubLink({
         path !== pathProps.href &&
         path.includes(pathProps.href)
       ) {
-        setIsOpen(true)
+        requestAnimationFrame(() => setIsOpen(true))
       } else {
-        setIsOpen(pathProps.isSubOpen ?? true)
+        requestAnimationFrame(() => setIsOpen(pathProps.isSubOpen ?? true))
       }
     }
   }, [path, pathProps])

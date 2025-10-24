@@ -1,17 +1,28 @@
-import { dirname } from "path"
-import { fileURLToPath } from "url"
+import typescriptParser from "@typescript-eslint/parser"
+import nextVitals from "eslint-config-next/core-web-vitals"
+import nextTypescript from "eslint-config-next/typescript"
+import prettier from "eslint-config-prettier/flat"
+import { defineConfig, globalIgnores } from "eslint/config"
 
-import { FlatCompat } from "@eslint/eslintrc"
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-})
-
-const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
-]
+const eslintConfig = defineConfig([
+  ...nextTypescript,
+  ...nextVitals,
+  prettier,
+  {
+    languageOptions: {
+      parser: typescriptParser,
+    },
+    rules: {
+      "no-console": ["error", { allow: ["info", "warn", "error"] }],
+    },
+  },
+  globalIgnores([
+    "node_modules/**",
+    ".next/**",
+    "out/**",
+    "build/**",
+    "next-env.d.ts",
+  ]),
+])
 
 export default eslintConfig

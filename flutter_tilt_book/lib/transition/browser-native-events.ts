@@ -59,9 +59,11 @@ export function useBrowserNativeTransitions() {
     }
   }, [])
 
-  if (currentViewTransition && currentPathname.current !== pathname) {
-    use(currentViewTransition[0])
-  }
+  useEffect(() => {
+    if (currentViewTransition && currentPathname.current !== pathname) {
+      use(currentViewTransition[0])
+    }
+  }, [currentViewTransition, pathname])
 
   const transitionRef = useRef(currentViewTransition)
   useEffect(() => {
