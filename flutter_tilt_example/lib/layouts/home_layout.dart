@@ -286,7 +286,7 @@ class BannerContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Padding(
       padding: const EdgeInsets.only(left: 24),
       child: Wrap(
         spacing: 8,

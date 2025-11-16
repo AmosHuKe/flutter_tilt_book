@@ -89,18 +89,18 @@ jobs:
           dart --version
           flutter --version
           flutter pub get
-      - name: Build
+      - name: Build iOS
         if: matrix.build == 'iOS'
         run: flutter build ios --no-codesign
-      - name: Build
+      - name: Build macOS
         if: matrix.build == 'macOS'
         run: flutter build macos --debug
-      - name: Build
+      - name: Build Android
         if: matrix.build == 'Android'
         run: flutter build apk --debug
-      - name: Build
+      - name: Build Windows
         if: matrix.build == 'Windows'
         run: flutter build windows --debug
-      - name: Build
+      - name: Build Web
         if: matrix.build == 'Web'
         run: flutter build web --wasm --release

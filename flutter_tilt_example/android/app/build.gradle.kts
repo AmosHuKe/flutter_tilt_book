@@ -8,7 +8,7 @@ plugins {
 android {
     namespace = "com.example.flutter_tilt_book"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = "27.0.12077973" // flutter.ndkVersion
+    ndkVersion = flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
