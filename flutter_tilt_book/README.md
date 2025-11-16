@@ -16,7 +16,7 @@ $ npm ci
 # dev - http://localhost:3001/flutter_tilt_book/
 $ npm run dev
 
-# build
+# build (/out)
 $ npm run build
 ```
 
