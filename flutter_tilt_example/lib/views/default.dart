@@ -14,7 +14,7 @@ class Default extends StatelessWidget {
       title: 'Default',
       dartCode: code(),
       sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/flutter_tilt_example/blob/main/lib/views/default.dart',
+          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/default.dart',
       minHeight: 500,
 
       /// Tilt here

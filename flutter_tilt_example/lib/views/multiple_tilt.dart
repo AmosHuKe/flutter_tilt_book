@@ -15,7 +15,7 @@ class MultipleTilt extends StatelessWidget {
       title: 'Multiple Tilt',
       dartCode: code(),
       sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/flutter_tilt_example/blob/main/lib/views/multiple_tilt.dart',
+          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/multiple_tilt.dart',
       minHeight: 1200,
       body: Padding(
         padding: const EdgeInsets.all(8),

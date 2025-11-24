@@ -31,7 +31,7 @@ class _LightShadowModeDemoState extends State<LightShadowModeDemo> {
       title: 'Tilt.lightShadowMode',
       dartCode: code(lightShadowMode: lightShadowMode),
       sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/flutter_tilt_example/blob/main/lib/views/light_shadow_mode.dart',
+          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/light_shadow_mode.dart',
       minHeight: 580,
 
       /// Tilt here

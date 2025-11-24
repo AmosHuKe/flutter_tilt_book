@@ -21,7 +21,7 @@ class _LightDirectionDemoState extends State<LightDirectionDemo> {
       title: 'Light Direction',
       dartCode: code(lightDirection: lightDirection),
       sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/flutter_tilt_example/blob/main/lib/views/light_direction.dart',
+          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/light_direction.dart',
       minHeight: 500,
 
       /// Tilt here

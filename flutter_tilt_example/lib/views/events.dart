@@ -27,7 +27,7 @@ class _EventsState extends State<Events> {
       title: 'Events',
       dartCode: code(width: width, height: height),
       sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/flutter_tilt_example/blob/main/lib/views/events.dart',
+          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/events.dart',
       minHeight: 460,
 
       /// Tilt here

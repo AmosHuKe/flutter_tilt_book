@@ -21,7 +21,7 @@ class _ShadowDirectionDemoState extends State<ShadowDirectionDemo> {
       title: 'Shadow Direction',
       dartCode: code(shadowDirection: shadowDirection),
       sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/flutter_tilt_example/blob/main/lib/views/shadow_direction.dart',
+          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/shadow_direction.dart',
       minHeight: 500,
 
       /// Tilt here

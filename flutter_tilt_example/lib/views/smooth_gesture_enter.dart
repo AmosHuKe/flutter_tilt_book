@@ -50,7 +50,7 @@ class _SmoothGestureEnterDemoState extends State<SmoothGestureEnterDemo> {
         enterToMoveCurve: enterToMoveCurve,
       ),
       sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/flutter_tilt_example/blob/main/lib/views/smooth_gesture_enter.dart',
+          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/smooth_gesture_enter.dart',
       minHeight: 800,
 
       /// Tilt here

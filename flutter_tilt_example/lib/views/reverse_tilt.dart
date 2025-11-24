@@ -14,7 +14,7 @@ class ReverseTilt extends StatelessWidget {
       title: 'Reverse Tilt',
       dartCode: code(),
       sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/flutter_tilt_example/blob/main/lib/views/reverse_tilt.dart',
+          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/reverse_tilt.dart',
       minHeight: 500,
 
       /// Tilt here

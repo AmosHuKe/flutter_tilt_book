@@ -14,7 +14,7 @@ class Example extends StatelessWidget {
       title: 'Example',
       dartCode: code(),
       sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/flutter_tilt_example/blob/main/lib/views/example.dart',
+          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/example.dart',
       minHeight: 740,
       body: const TiltDemo(),
     );

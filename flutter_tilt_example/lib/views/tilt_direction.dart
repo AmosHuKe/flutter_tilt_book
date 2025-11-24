@@ -26,7 +26,7 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
       title: 'Tilt Direction',
       dartCode: code(width: width, height: height, tiltDirection: tiltDirection),
       sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/flutter_tilt_example/blob/main/lib/views/tilt_direction.dart',
+          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/tilt_direction.dart',
       minHeight: 500,
 
       /// Tilt here

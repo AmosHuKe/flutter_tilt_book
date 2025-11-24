@@ -30,7 +30,7 @@ class BentoGrids extends StatelessWidget {
       title: 'Bento Grids',
       dartCode: code(),
       sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/flutter_tilt_example/blob/main/lib/views/bento_grids.dart',
+          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/bento_grids.dart',
       minHeight: 800,
       body: Column(
         children: [

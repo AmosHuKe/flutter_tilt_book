@@ -14,7 +14,7 @@ class LayoutDemo extends StatelessWidget {
       title: 'Layout',
       dartCode: code(),
       sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/flutter_tilt_example/blob/main/lib/views/layout.dart',
+          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/layout.dart',
       minHeight: 500,
 
       /// Tilt here

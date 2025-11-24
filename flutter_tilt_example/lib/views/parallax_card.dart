@@ -14,7 +14,7 @@ class ParallaxCard extends StatelessWidget {
       title: 'Parallax Card',
       dartCode: code(),
       sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/flutter_tilt_example/blob/main/lib/views/parallax_card.dart',
+          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/parallax_card.dart',
       minHeight: 700,
       body: const AnimationCard(),
     );
