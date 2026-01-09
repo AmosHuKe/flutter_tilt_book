@@ -1,7 +1,5 @@
 1:"$Sreact.fragment"
-2:I[97367,["/flutter_tilt_book/_next/static/chunks/ff1a16fafef87110.js","/flutter_tilt_book/_next/static/chunks/64c0a5e3a0354479.js"],"ViewportBoundary"]
-4:I[97367,["/flutter_tilt_book/_next/static/chunks/ff1a16fafef87110.js","/flutter_tilt_book/_next/static/chunks/64c0a5e3a0354479.js"],"MetadataBoundary"]
-5:"$Sreact.suspense"
-0:{"buildId":"-H7DP9JvCMYUBJZjSb8Y1","rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":"$@3"}],["$","div",null,{"hidden":true,"children":["$","$L4",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":"$@6"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"loading":null,"isPartial":false}
-3:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-6:[]
+2:I[97367,["/flutter_tilt_book/_next/static/chunks/ff1a16fafef87110.js","/flutter_tilt_book/_next/static/chunks/6153d1a363729c2c.js"],"ViewportBoundary"]
+3:I[97367,["/flutter_tilt_book/_next/static/chunks/ff1a16fafef87110.js","/flutter_tilt_book/_next/static/chunks/6153d1a363729c2c.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"SPby72XvHE37Cybiifg7v","rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"loading":null,"isPartial":false}
