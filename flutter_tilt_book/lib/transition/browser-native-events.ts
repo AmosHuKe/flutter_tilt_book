@@ -61,7 +61,11 @@ export function useBrowserNativeTransitions() {
 
   useEffect(() => {
     if (currentViewTransition && currentPathname.current !== pathname) {
-      use(currentViewTransition[0])
+      if (suspenseBoundaries.size > 0) {
+        use(currentViewTransition[0])
+      } else {
+        currentViewTransition[0].catch(() => {})
+      }
     }
   }, [currentViewTransition, pathname])
 
