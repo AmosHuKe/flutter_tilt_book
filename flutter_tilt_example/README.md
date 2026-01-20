@@ -1,6 +1,6 @@
 # Flutter Tilt Book
 
-Flutter 3.38.6
+Flutter 3.38.7
 
 ```sh
 # run
