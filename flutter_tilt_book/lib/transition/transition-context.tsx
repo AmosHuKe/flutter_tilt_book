@@ -1,7 +1,7 @@
 import type { Dispatch, SetStateAction } from "react"
 import { createContext, use, useEffect, useState } from "react"
 
-import { useBrowserNativeTransitions } from "./browser-native-events"
+// import { useBrowserNativeTransitions } from "./browser-native-events"
 
 const ViewTransitionsContext = createContext<
   Dispatch<SetStateAction<(() => void) | null>>
@@ -23,7 +23,8 @@ export function ViewTransitions({
     }
   }, [finishViewTransition])
 
-  useBrowserNativeTransitions()
+  // TODO: 暂时不需要
+  // useBrowserNativeTransitions()
 
   return (
     <ViewTransitionsContext.Provider value={setFinishViewTransition}>
