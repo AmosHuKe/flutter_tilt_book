@@ -34,7 +34,7 @@ addEventListener("message", eventListener);
 if (!window._flutter) {
   window._flutter = {};
 }
-_flutter.buildConfig = {"engineRevision":"78fc3012e45889657f72359b005af7beac47ba3d","builds":[{"compileTarget":"dart2wasm","renderer":"skwasm","mainWasmPath":"main.dart.wasm","jsSupportRuntimePath":"main.dart.mjs"},{"compileTarget":"dart2js","renderer":"canvaskit","mainJsPath":"main.dart.js"}]};
+_flutter.buildConfig = {"engineRevision":"587c18f873b8ab57330422bce09047420d9c7f42","builds":[{"compileTarget":"dart2wasm","renderer":"skwasm","mainWasmPath":"main.dart.wasm","jsSupportRuntimePath":"main.dart.mjs"},{"compileTarget":"dart2js","renderer":"canvaskit","mainJsPath":"main.dart.js"}]};
 
 
 _flutter.loader.load({
@@ -44,7 +44,7 @@ _flutter.loader.load({
     canvasKitBaseUrl: '/flutter_tilt_book/flutter_tilt_example/canvaskit/'
   },
   serviceWorkerSettings: {
-    serviceWorkerVersion: "3296656008",
+    serviceWorkerVersion: "1172874135",
   },
   onEntrypointLoaded: async function (engineInitializer) {
     const appRunner = await engineInitializer.initializeEngine();
