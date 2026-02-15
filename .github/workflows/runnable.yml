@@ -49,7 +49,7 @@ jobs:
           cd flutter_tilt_book
           node --version
           npm --version
-          npm ci
+          npm i
       - name: Check code formatting
         run: |
           cd flutter_tilt_book

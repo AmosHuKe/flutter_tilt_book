@@ -38,7 +38,7 @@ jobs:
           cd flutter_tilt_book
           node --version
           npm --version
-          npm ci
+          npm i
       - name: Check code formatting
         run: |
           cd flutter_tilt_book
@@ -65,7 +65,7 @@ jobs:
           cd ../flutter_tilt_book
           node --version
           npm --version
-          npm ci
+          npm i
       - name: Build flutter_tilt_example Web (wasm)
         run: |
           cd flutter_tilt_book
