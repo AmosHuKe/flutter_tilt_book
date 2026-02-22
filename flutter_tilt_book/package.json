@@ -3,8 +3,8 @@
   "version": "1.0.7",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3001",
-    "build": "next build",
+    "dev": "npm run generate-dist-scripts && next dev -p 3001",
+    "build": "npm run generate-dist-scripts && next build",
     "start": "next start -p 3001",
     "lint": "npx eslint . --quiet",
     "lint:fix": "npx eslint . --fix --quiet",
