@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-2:I[97367,["/flutter_tilt_book/_next/static/chunks/ff1a16fafef87110.js","/flutter_tilt_book/_next/static/chunks/7f52f8900b256e8a.js"],"ViewportBoundary"]
-3:I[97367,["/flutter_tilt_book/_next/static/chunks/ff1a16fafef87110.js","/flutter_tilt_book/_next/static/chunks/7f52f8900b256e8a.js"],"MetadataBoundary"]
+2:I[97367,["/flutter_tilt_book/_next/static/chunks/ff1a16fafef87110.js","/flutter_tilt_book/_next/static/chunks/a2dfb6fc5208ab9b.js"],"ViewportBoundary"]
+3:I[97367,["/flutter_tilt_book/_next/static/chunks/ff1a16fafef87110.js","/flutter_tilt_book/_next/static/chunks/a2dfb6fc5208ab9b.js"],"MetadataBoundary"]
 4:"$Sreact.suspense"
-0:{"buildId":"Kp7Ge9HK2bkplRWl3-0ol","rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"v7-sRNFedEQLr_Zsc3iK6","rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"loading":null,"isPartial":false}
