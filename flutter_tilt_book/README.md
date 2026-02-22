@@ -4,7 +4,7 @@
 
 | Tool    | Version  |
 | ------- | -------- |
-| Node.js | v22.21.1 |
+| Node.js | v22.22.0 |
 | NPM     | v10.9.4  |
 
 ## Run
