@@ -6,8 +6,8 @@ This is the main documentation website project for Flutter Tilt.
 
 |         | Version  |
 | ------- | -------- |
-| Node.js | v22.22.0 |
-| NPM     | v10.9.4  |
+| Node.js | v24.14.0 |
+| NPM     | v11.9.0  |
 
 ## Documentation
 
