@@ -120,7 +120,7 @@ class _TiltStreamControllerDemoState extends State<TiltStreamControllerDemo>
       dartCode: code(),
       sourceCodeLink:
           'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/tilt_stream_controller.dart',
-      minHeight: 600,
+      minHeight: 640,
       body: Column(
         children: [
           /// Tilt here
