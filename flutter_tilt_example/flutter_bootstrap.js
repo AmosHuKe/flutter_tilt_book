@@ -43,7 +43,7 @@ _flutter.loader.load({
     canvasKitBaseUrl: '/flutter_tilt_book/flutter_tilt_example/canvaskit/'
   },
   serviceWorkerSettings: {
-    serviceWorkerVersion: "2790686467" /* Flutter's service worker is deprecated and will be removed in a future Flutter release. */,
+    serviceWorkerVersion: "3068052707" /* Flutter's service worker is deprecated and will be removed in a future Flutter release. */,
   },
   onEntrypointLoaded: async function (engineInitializer) {
     const appRunner = await engineInitializer.initializeEngine();

@@ -2,4 +2,4 @@
 2:I[39756,["/flutter_tilt_book/_next/static/chunks/01xlw8hd842-c.js","/flutter_tilt_book/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
 3:I[37457,["/flutter_tilt_book/_next/static/chunks/01xlw8hd842-c.js","/flutter_tilt_book/_next/static/chunks/0n4z.7yu76je-.js"],"default"]
 4:[]
-0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"9iL7-921MlWcL1C8S7Qal"}
+0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"Cjj6AgMGa17ylmWHgdX_i"}
