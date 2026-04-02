@@ -1,7 +1,5 @@
-import { nextConfig } from "@/next.config.mjs"
-
 export const Settings = {
-  basePath: nextConfig.basePath,
+  basePath: "/flutter_tilt_book",
   url: "https://amoshuke.github.io",
   favicon: "/favicon.ico",
 

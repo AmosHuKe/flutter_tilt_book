@@ -88,7 +88,10 @@ export async function generateMetadata({ params }: PageProps) {
 }
 
 export async function generateStaticParams() {
-  return PageRoutes.filter((item) => item.href).map((item) => ({
-    slug: item.href.split("/").slice(1),
-  }))
+  return routing.locales.flatMap((locale) =>
+    PageRoutes.filter((item) => item.href).map((item) => ({
+      locale,
+      slug: item.href.split("/").slice(1),
+    }))
+  )
 }

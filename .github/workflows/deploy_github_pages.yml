@@ -74,7 +74,7 @@ jobs:
       - name: Build flutter_tilt_bool Web
         run: |
           cd flutter_tilt_book
-          npm run generate-dist-scripts
+          npm run generate-search-data
           npm run build
         shell: bash
         env:

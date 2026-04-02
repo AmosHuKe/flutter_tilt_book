@@ -1,10 +1,12 @@
 import createNextIntlPlugin from "next-intl/plugin"
 
+import { Settings } from "./settings/settings.ts"
+
 const withNextIntl = createNextIntlPlugin()
 
 /** @type {import('next').NextConfig} */
 export const nextConfig = {
-  basePath: "/flutter_tilt_book",
+  basePath: Settings.basePath,
   reactStrictMode: true,
   output: "export",
   distDir: "out",
