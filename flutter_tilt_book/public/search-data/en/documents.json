@@ -749,9 +749,9 @@
     "slug": "/overview",
     "title": "Overview",
     "description": "",
-    "content": "## Features ✨\n\n* 📦 Tilt effect\n* 🔦 Light effect\n* 💡 Shadow effect\n* 👀 Parallax effect\n* 📱 Gyroscope sensor support ([Sensors compatibility][])\n* 🧱 Multiple layouts\n* 👇 Supports hover, touch, and sensors events ([Gesture priority][])\n* 🖼️ Smooth animation\n* ⚙️ Many custom parameters\n\n<br />\n\n<Step>\n  <StepItem title=\"Get Started\" />\n\n  <StepItem title=\"Widgets\" />\n\n  <StepItem title=\"Examples\" />\n</Step>\n\n[Sensors compatibility]: /en/docs/installation/#sensors-compatibility\n\n[Gesture priority]: /en/docs/widgets/tilt-widget/#gesture-priority\n",
+    "content": "## Features ✨\n\n* 👀 Tilt & parallax effects\n* 🎨 Simulated light & shadow effects\n* 📱 Gyroscope sensor support ([Sensors compatibility][])\n* 🧱 Multiple layouts\n* 👇 Supports hover, touch, and sensors events ([Gesture priority][])\n* 🖼️ Smooth animation\n* ⚙️ Many custom parameters\n\n<br />\n\n<Step>\n  <StepItem title=\"Get Started\" />\n\n  <StepItem title=\"Widgets\" />\n\n  <StepItem title=\"Examples\" />\n</Step>\n\n[Sensors compatibility]: /en/docs/installation/#sensors-compatibility\n\n[Gesture priority]: /en/docs/widgets/tilt-widget/#gesture-priority\n",
     "_searchMeta": {
-      "cleanContent": "features tilt effect light effect shadow effect parallax effect gyroscope sensor support sensors compatibility multiple layouts supports hover touch and sensors events gesture priority smooth animation many custom parameters br stepitem title get started stepitem title widgets stepitem title examples sensors compatibility : en docs installation sensors-compatibility gesture priority : en docs widgets tilt-widget gesture-priority",
+      "cleanContent": "features tilt parallax effects simulated light shadow effects gyroscope sensor support sensors compatibility multiple layouts supports hover touch and sensors events gesture priority smooth animation many custom parameters br stepitem title get started stepitem title widgets stepitem title examples sensors compatibility : en docs installation sensors-compatibility gesture priority : en docs widgets tilt-widget gesture-priority",
       "headings": [
         "Features ✨"
       ],

@@ -748,9 +748,9 @@
     "slug": "/overview",
     "title": "介绍",
     "description": "",
-    "content": "## 特性 ✨\n\n* 📦 倾斜效果\n* 🔦 光照效果\n* 💡 阴影效果\n* 👀 视差效果\n* 📱 陀螺仪传感器支持 ([传感器兼容][Sensors compatibility])\n* 🧱 多种布局位置\n* 👇 支持鼠标、触摸和传感器事件 ([手势优先级][Gesture priority])\n* 🖼️ 流畅的动画\n* ⚙️ 许多自定义参数\n\n<br />\n\n<Step>\n  <StepItem title=\"开始\" />\n\n  <StepItem title=\"Widget\" />\n\n  <StepItem title=\"示例\" />\n</Step>\n\n[Sensors compatibility]: /zh/docs/installation/#传感器兼容\n\n[Gesture priority]: /zh/docs/widgets/tilt-widget/#手势优先级\n",
+    "content": "## 特性 ✨\n\n* 👀 倾斜与视差效果\n* 🎨 模拟光照与阴影效果\n* 📱 陀螺仪传感器支持 ([传感器兼容][Sensors compatibility])\n* 🧱 多种布局位置\n* 👇 支持鼠标、触摸和传感器事件 ([手势优先级][Gesture priority])\n* 🖼️ 流畅的动画\n* ⚙️ 许多自定义参数\n\n<br />\n\n<Step>\n  <StepItem title=\"开始\" />\n\n  <StepItem title=\"Widget\" />\n\n  <StepItem title=\"示例\" />\n</Step>\n\n[Sensors compatibility]: /zh/docs/installation/#传感器兼容\n\n[Gesture priority]: /zh/docs/widgets/tilt-widget/#手势优先级\n",
     "_searchMeta": {
-      "cleanContent": "特性 倾斜效果 光照效果 阴影效果 视差效果 陀螺仪传感器支持 传感器兼容 sensors compatibility 多种布局位置 支持鼠标 触摸和传感器事件 手势优先级 gesture priority 流畅的动画 许多自定义参数 br stepitem title 开始 stepitem title widget stepitem title 示例 sensors compatibility : zh docs installation 传感器兼容 gesture priority : zh docs widgets tilt-widget 手势优先级",
+      "cleanContent": "特性 倾斜与视差效果 模拟光照与阴影效果 陀螺仪传感器支持 传感器兼容 sensors compatibility 多种布局位置 支持鼠标 触摸和传感器事件 手势优先级 gesture priority 流畅的动画 许多自定义参数 br stepitem title 开始 stepitem title widget stepitem title 示例 sensors compatibility : zh docs installation 传感器兼容 gesture priority : zh docs widgets tilt-widget 手势优先级",
       "headings": [
         "特性 ✨"
       ],
