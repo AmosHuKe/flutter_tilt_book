@@ -1,0 +1,78 @@
+---
+title: 介绍
+description:
+keywords: ["介绍"]
+---
+
+## 特性 ✨
+
+- 👀 倾斜与视差效果
+- 🎨 模拟光照与阴影效果
+- 📱 陀螺仪传感器支持 ([传感器兼容][Sensors compatibility])
+- 🧱 多种布局位置
+- 👇 支持鼠标、触摸和传感器事件 ([手势优先级][Gesture priority])
+- 🖼️ 流畅的动画
+- ⚙️ 许多自定义参数
+
+<br/>
+
+<Step>
+  <StepItem title="开始">
+    <NavCardGrid>
+      <NavCard
+        subtitle="开始"
+        title="安装"
+        description="本指南介绍了相关兼容性以及如何添加 flutter_tilt package。"
+        href="/zh/docs/installation"
+      />
+      <NavCard
+        subtitle="指南"
+        title="简单使用"
+        description="简单示例帮助你快速上手。"
+        href="/zh/docs/guides/simple-usage"
+      />
+    </NavCardGrid>
+  </StepItem>
+
+  <StepItem title="Widget">
+    <NavCardGrid>
+      <NavCard
+        subtitle="Widget"
+        title="Tilt widget"
+        description={
+          <div>
+            了解 Tilt widget 参数。
+            <br />
+            Tilt widget 默认有倾斜、阴影和光照的效果。
+          </div>
+        }
+        href="/zh/docs/widgets/tilt-widget"
+      />
+      <NavCard
+        subtitle="Widget"
+        title="TiltParallax widget"
+        description={
+          <div>
+            了解 TiltParallax widget 参数。
+            <br />
+            Tilt widget 中的视差效果。
+          </div>
+        }
+        href="/zh/docs/widgets/tiltparallax-widget"
+      />
+    </NavCardGrid>
+  </StepItem>
+
+  <StepItem title="示例">
+    <NavCardGrid>
+      <NavCard
+        title="所有示例"
+        description="探索附带源码的示例。"
+        href="/zh/docs/examples"
+      />
+    </NavCardGrid>
+  </StepItem>
+</Step>
+
+[Sensors compatibility]: /zh/docs/installation/#传感器兼容
+[Gesture priority]: /zh/docs/widgets/tilt-widget/#手势优先级

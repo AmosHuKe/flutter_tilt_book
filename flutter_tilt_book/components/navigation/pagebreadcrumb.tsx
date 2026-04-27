@@ -15,9 +15,11 @@ import {
 
 export default function PageBreadcrumb({
   locale,
+  version,
   paths,
 }: {
   locale: string
+  version: string
   paths: string[]
 }) {
   return (
@@ -36,8 +38,8 @@ export default function PageBreadcrumb({
               <BreadcrumbItem>
                 {paths.slice(0, 1).map(async () => {
                   const slug = paths[0]
-                  const href = `/${locale}/docs/${slug}`
-                  const document = await getDocument(locale, slug)
+                  const href = `/${locale}/${version}/docs/${slug}`
+                  const document = await getDocument(locale, version, slug)
                   if (!document) return null
                   const title = document.frontmatter.title
 
@@ -57,8 +59,8 @@ export default function PageBreadcrumb({
               {paths.slice(-1).map(async (path, i) => {
                 const index = paths.length - 1 + i
                 const slug = paths.slice(0, index + 1).join("/")
-                const href = `/${locale}/docs/${slug}`
-                const document = await getDocument(locale, slug)
+                const href = `/${locale}/${version}/docs/${slug}`
+                const document = await getDocument(locale, version, slug)
                 if (!document) return null
                 const title = document.frontmatter.title
 
@@ -81,8 +83,8 @@ export default function PageBreadcrumb({
           ) : (
             paths.map(async (path, index) => {
               const slug = paths.slice(0, index + 1).join("/")
-              const href = `/${locale}/docs/${slug}`
-              const document = await getDocument(locale, slug)
+              const href = `/${locale}/${version}/docs/${slug}`
+              const document = await getDocument(locale, version, slug)
               if (!document) return null
               const title = document.frontmatter.title
 

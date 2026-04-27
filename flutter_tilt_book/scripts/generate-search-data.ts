@@ -1,7 +1,8 @@
 import { promises as fs } from "fs"
 import path from "path"
 
-import { Documents } from "@/settings/documents"
+import { Documents } from "@/settings/documents/documents"
+import { VersionSettings } from "@/settings/version"
 import grayMatter from "gray-matter"
 import remarkMdx from "remark-mdx"
 import remarkParse from "remark-parse"
@@ -13,12 +14,16 @@ import { visit } from "unist-util-visit"
 import { Paths } from "@/lib/pageroutes"
 import { routing } from "@/i18n/routing"
 
-const docsDir = (locale: string) =>
-  path.join(process.cwd(), `contents/${locale}/docs`)
+const docsDir = (locale: string, version: string) =>
+  path.join(process.cwd(), `contents/${version}/${locale}/docs`)
 const outputDir = path.join(process.cwd(), "public", "search-data")
 
 // Generate search-data JSON files for each locale
-routing.locales.forEach(async (locale) => await convertMdxToJson(locale))
+routing.locales.forEach((locale) => {
+  return VersionSettings.versions.forEach(
+    async (version) => await convertMdxToJson(locale, version)
+  )
+})
 
 interface MdxJsxFlowElement extends Node {
   name: string
@@ -35,8 +40,8 @@ function isRoute(
   return "href" in node && "title" in node
 }
 
-function createSlug(locale: string, filePath: string): string {
-  const relativePath = path.relative(docsDir(locale), filePath)
+function createSlug(locale: string, version: string, filePath: string): string {
+  const relativePath = path.relative(docsDir(locale, version), filePath)
   const parsed = path.parse(relativePath)
 
   const slugPath = parsed.dir ? `${parsed.dir}/${parsed.name}` : parsed.name
@@ -49,7 +54,11 @@ function createSlug(locale: string, filePath: string): string {
   }
 }
 
-function findDocumentBySlug(slug: string): Paths | null {
+function findDocumentBySlug(
+  locale: string,
+  version: string,
+  slug: string
+): Paths | null {
   function searchDocs(docs: Paths[], currentPath = ""): Paths | null {
     for (const doc of docs) {
       if (isRoute(doc)) {
@@ -63,7 +72,7 @@ function findDocumentBySlug(slug: string): Paths | null {
     }
     return null
   }
-  return searchDocs(Documents)
+  return searchDocs(Documents[version][locale])
 }
 
 async function ensureDirectoryExists(dir: string) {
@@ -151,7 +160,11 @@ function cleanContentForSearch(content: string): string {
   return cleanedContent
 }
 
-async function processMdxFile(locale: string, filePath: string) {
+async function processMdxFile(
+  locale: string,
+  version: string,
+  filePath: string
+) {
   const rawMdx = await fs.readFile(filePath, "utf-8")
   const { content, data: frontmatter } = grayMatter(rawMdx)
 
@@ -180,8 +193,8 @@ async function processMdxFile(locale: string, filePath: string) {
     ),
   ])
 
-  const slug = createSlug(locale, filePath)
-  const matchedDoc = findDocumentBySlug(slug)
+  const slug = createSlug(locale, version, filePath)
+  const matchedDoc = findDocumentBySlug(locale, version, slug)
 
   return {
     slug,
@@ -215,20 +228,20 @@ async function getMdxFiles(dir: string): Promise<string[]> {
   return files
 }
 
-async function convertMdxToJson(locale: string) {
+async function convertMdxToJson(locale: string, version: string) {
   try {
-    await ensureDirectoryExists(outputDir)
-    await ensureDirectoryExists(path.join(outputDir, locale))
+    const outputPath = path.join(outputDir, version, locale)
+    await ensureDirectoryExists(outputPath)
 
-    const mdxFiles = await getMdxFiles(docsDir(locale))
+    const mdxFiles = await getMdxFiles(docsDir(locale, version))
     const combinedData = []
 
     for (const file of mdxFiles) {
-      const jsonData = await processMdxFile(locale, file)
+      const jsonData = await processMdxFile(locale, version, file)
       combinedData.push(jsonData)
     }
 
-    const combinedOutputPath = path.join(outputDir, locale, "documents.json")
+    const combinedOutputPath = path.join(outputPath, "documents.json")
     await fs.writeFile(
       combinedOutputPath,
       JSON.stringify(combinedData, null, 2)

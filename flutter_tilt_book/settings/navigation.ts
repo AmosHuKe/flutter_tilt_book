@@ -1,9 +1,7 @@
-import { PageRoutes } from "@/lib/pageroutes"
-
 export const Navigations = [
   {
     title: "docs.docs",
-    href: `/docs${PageRoutes[0].href}`,
+    href: `/docs`,
     external: false,
   },
 ]

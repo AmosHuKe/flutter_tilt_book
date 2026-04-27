@@ -1,5 +1,4 @@
-import searchJsonEn from "@/public/search-data/en/documents.json"
-import searchJsonZh from "@/public/search-data/zh/documents.json"
+import { SearchData } from "@/settings/documents/search_data"
 
 import { Paths } from "@/lib/pageroutes"
 
@@ -9,7 +8,7 @@ interface SearchMeta {
   keywords: string[]
 }
 
-interface SearchDocument {
+export interface SearchDocument {
   slug: string
   title: string
   content: string
@@ -25,14 +24,8 @@ export type search = {
   relevance?: number
 }
 
-const searchData = (locale: string) => {
-  switch (locale) {
-    case "zh":
-      return searchJsonZh as SearchDocument[]
-    case "en":
-    default:
-      return searchJsonEn as SearchDocument[]
-  }
+const searchData = (locale: string, version: string): SearchDocument[] => {
+  return SearchData[version][locale] as SearchDocument[]
 }
 
 const memoizedSearchMatch = memoize(searchMatch)
@@ -285,13 +278,13 @@ function extractSnippet(content: string, query: string): string {
   return snippet
 }
 
-export function advanceSearch(locale: string, query: string) {
+export function advanceSearch(locale: string, version: string, query: string) {
   const lowerQuery = query.toLowerCase().trim()
   const queryWords = lowerQuery.split(/\s+/).filter((word) => word.length >= 2)
 
   if (queryWords.length === 0) return []
 
-  const chunks = chunkArray(searchData(locale), 100)
+  const chunks = chunkArray(searchData(locale, version), 100)
 
   const results = chunks.flatMap((chunk) =>
     chunk

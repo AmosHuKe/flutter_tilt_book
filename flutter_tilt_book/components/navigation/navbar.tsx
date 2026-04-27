@@ -18,8 +18,14 @@ import Search from "@/components/navigation/search"
 import { SheetLeft } from "@/components/navigation/sidebar"
 import { ThemeModeToggle } from "@/components/navigation/theme-toggle"
 
-export async function Navbar({ locale }: { locale: string }) {
-  const translatedRoutes = await translateRoutes(locale, Routes)
+export async function Navbar({
+  locale,
+  version,
+}: {
+  locale: string
+  version: string
+}) {
+  const translatedRoutes = translateRoutes(locale, Routes(locale, version))
   const t = await getTranslations({ locale })
 
   return (
@@ -32,14 +38,14 @@ export async function Navbar({ locale }: { locale: string }) {
     >
       <div className="mx-auto flex h-full items-center justify-between p-1 sm:p-3 md:gap-2">
         <div className="flex items-center gap-5">
-          <SheetLeft locale={locale} />
+          <SheetLeft locale={locale} version={version} />
           <div className="flex items-center gap-6">
             <div className="hidden gap-1 lg:flex lg:items-center">
               <Logo locale={locale} />
-              <span className="text-sm">{Settings.packageVersion}</span>
+              <span className="text-sm">{version}</span>
             </div>
             <div className="text-muted-foreground hidden items-center gap-5 text-sm font-medium lg:flex">
-              <NavMenu locale={locale} />
+              <NavMenu locale={locale} version={version} />
             </div>
           </div>
         </div>
@@ -71,6 +77,7 @@ export async function Navbar({ locale }: { locale: string }) {
           </div>
           <Search
             locale={locale}
+            version={version}
             localeDictionaries={{
               title: t("search.title"),
               placeholder: t("search.placeholder"),
@@ -92,9 +99,11 @@ export async function Navbar({ locale }: { locale: string }) {
 
 export async function NavMenu({
   locale,
+  version,
   isSheet = false,
 }: {
   locale: string
+  version: string
   isSheet?: boolean
 }) {
   const t = await getTranslations({ locale })
@@ -108,7 +117,7 @@ export async function NavMenu({
             absolute
             className={AnchorNavStyle}
             activeClassName={AnchorNavActiveStyle}
-            href={`/${locale}${item.href}`}
+            href={`/${locale}/${version}${item.href}`}
             target={item.external ? "_blank" : undefined}
             rel={item.external ? "noopener noreferrer" : undefined}
           >

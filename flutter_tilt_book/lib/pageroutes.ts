@@ -1,4 +1,4 @@
-import { Documents } from "@/settings/documents"
+import { Documents } from "@/settings/documents/documents"
 import { getTranslations } from "next-intl/server"
 
 export type Paths =
@@ -14,7 +14,9 @@ export type Paths =
       spacer: true
     }
 
-export const Routes: Paths[] = [...Documents]
+export function Routes(locale: string, version: string): Paths[] {
+  return [...Documents[version][locale]]
+}
 
 type Page = { title: string; href: string }
 
@@ -43,26 +45,24 @@ function getAllLinks(node: Paths): Page[] {
   return pages
 }
 
-export async function translateRoutes(
-  locale: string,
-  items: Paths[]
-): Promise<Paths[]> {
-  return Promise.all(
-    items.map(async (item) => {
-      const t = await getTranslations({ locale, namespace: "docs" })
-      const newItem = { ...item }
-      if ("title" in newItem) {
-        newItem.title = t(newItem.title)
-      }
-      if ("heading" in newItem && newItem.heading) {
-        newItem.heading = t(newItem.heading)
-      }
-      if ("items" in newItem && Array.isArray(newItem.items)) {
-        newItem.items = await translateRoutes(locale, newItem.items)
-      }
-      return newItem
-    })
-  )
+export function translateRoutes(locale: string, items: Paths[]): Paths[] {
+  return items.map((item) => {
+    const newItem = { ...item }
+    if ("title" in newItem) {
+      newItem.title = newItem.title
+    }
+    if ("heading" in newItem && newItem.heading) {
+      newItem.heading = newItem.heading
+    }
+    if ("items" in newItem && Array.isArray(newItem.items)) {
+      newItem.items = translateRoutes(locale, newItem.items)
+    }
+    return newItem
+  })
 }
 
-export const PageRoutes = Routes.map((it) => getAllLinks(it)).flat()
+export function PageRoutes(locale: string, version: string): Page[] {
+  return Routes(locale, version)
+    .map((it) => getAllLinks(it))
+    .flat()
+}

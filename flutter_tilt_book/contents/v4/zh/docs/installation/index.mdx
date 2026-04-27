@@ -1,0 +1,116 @@
+---
+title: 安装
+description: 本指南介绍了相关兼容性以及如何添加 flutter_tilt package。
+keywords: ["安装", "兼容性", "package"]
+---
+
+## 安装
+
+<Step>
+<StepItem title="兼容性">
+
+#### 平台兼容
+
+<div className="max-w-xl">
+| Android | iOS   | Web   | macOS | Windows | Linux |
+| :-----: | :---: | :---: | :---: | :-----: | :---: |
+| ✅      | ✅   | ✅    | ✅   | ✅     | ✅    |
+</div>
+
+#### 传感器兼容
+
+传感器仅在以下平台触发。  
+不支持传感器的平台不会影响其他功能的正常使用。 
+
+<div className="max-w-xl">
+| Android | iOS   | Web (HTTPS)                                              | macOS | Windows | Linux |
+| :-----: | :---: | :------------------------------------------------------: | :---: | :-----: | :---: |
+| ✅      | ✅   | [浏览器兼容][Gyroscope Browser compatibility] | ❌    | ❌     | ❌    |
+</div>
+
+<br />
+
+<Note title="注意">
+目前 Web 使用 [Sensor API - Gyroscope][]，但它不兼容部分主流浏览器，比如 Safari、Firefox。
+</Note>
+
+[Gyroscope Browser compatibility]: https://developer.mozilla.org/en-US/docs/Web/API/Sensor_APIs#browser_compatibility
+[Sensor API - Gyroscope]: https://developer.mozilla.org/en-US/docs/Web/API/Gyroscope
+
+</StepItem>
+<StepItem title="添加 flutter_tilt">
+
+#### 版本兼容
+
+<div className="max-w-xl">
+| Package              | Flutter<br />v3.0.0+ | Flutter<br />v3.10.0+ | Flutter<br />v3.19.0+ |
+| -------------------- | :------------------: | :-------------------: | :-------------------: |
+| flutter_tilt v3.0.0+ | ❌ | ❌ | ✅ |
+| flutter_tilt v2.0.0+ | ❌ | ✅ | ✅ |
+| flutter_tilt v1.0.0+ | ✅ | ❌ | ❌ |
+</div>
+
+#### 添加 flutter_tilt
+
+使用 Flutter 运行以下指令，  
+
+```bash
+$ flutter pub add flutter_tilt
+```
+
+或手动将 `flutter_tilt` 添加到 `pubspec.yaml` 依赖项中。  
+
+```yaml:pubspec.yaml {3} showLineNumbers
+...
+dependencies:
+  flutter_tilt: latest_version
+...
+```
+
+</StepItem>
+<StepItem title="导入 flutter_tilt">
+
+在你的 Dart 代码中，你可以这样导入：
+
+```dart
+import 'package:flutter_tilt/flutter_tilt.dart';
+```
+
+</StepItem>
+<StepItem title="开始">
+
+<NavCardGrid>
+  <NavCard
+    subtitle="指南"
+    title="简单使用"
+    description="简单示例帮助你快速上手。"
+    href="/zh/docs/guides/simple-usage"
+  />
+  <NavCard
+    subtitle="Widget"
+    title="Tilt widget"
+    description={
+      <div>
+        了解 Tilt widget 参数。
+        <br />
+        Tilt widget 默认有倾斜、阴影和光照的效果。
+      </div>
+    }
+    href="/zh/docs/widgets/tilt-widget"
+  />
+  <NavCard
+    subtitle="Widget"
+    title="TiltParallax widget"
+    description={
+      <div>
+        了解 TiltParallax widget 参数。
+        <br />
+        Tilt widget 中的视差效果。
+      </div>
+    }
+    href="/zh/docs/widgets/tiltparallax-widget"
+  />
+</NavCardGrid>
+
+</StepItem>
+</Step>

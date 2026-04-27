@@ -1,0 +1,21 @@
+---
+title: 如何禁用传感器
+description:
+keywords: ["指南", "常见问题", "传感器"]
+---
+
+你可以使用以下代码：
+
+```diff {5} showLineNumbers
+...
+
+Tilt(
+  tiltConfig: const TiltConfig(
++   enableGestureSensors: false,
+    ...
+  ),
+  ...
+),
+
+...
+```

@@ -1,14 +1,16 @@
 import { Routes, translateRoutes } from "@/lib/pageroutes"
 import SubLink from "@/components/navigation/sublink"
 
-export default async function PageMenu({
+export default function PageMenu({
   locale,
+  version,
   isSheet = false,
 }: {
   locale: string
+  version: string
   isSheet?: boolean
 }) {
-  const translatedRoutes = await translateRoutes(locale, Routes)
+  const translatedRoutes = translateRoutes(locale, Routes(locale, version))
 
   return (
     <div className="mt-5 flex flex-col gap-1 pb-6">
@@ -16,7 +18,7 @@ export default async function PageMenu({
         if ("spacer" in item) {
           return (
             <div key={`spacer-${index}`} className="my-1 mr-3">
-              <div className="h-[2px] rounded-xl bg-linear-to-r from-zinc-100 from-[60%] to-transparent to-[100%] dark:from-zinc-900" />
+              <div className="h-0.5 rounded-xl bg-linear-to-r from-zinc-100 from-60% to-transparent to-100% dark:from-zinc-900" />
             </div>
           )
         }
@@ -31,7 +33,7 @@ export default async function PageMenu({
               locale={locale}
               pathProps={{
                 ...item,
-                href: `/${locale}/docs${item.href}`,
+                href: `/${locale}/${version}/docs${item.href}`,
                 level: 0,
                 isSheet,
               }}

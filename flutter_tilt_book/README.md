@@ -37,9 +37,9 @@ $ npm run build
 
 ## Editing documentation
 
-The document menu can be edited in [`./settings/documents.ts`](./settings/documents.ts).
+The document menu can be edited in [`./settings/documents/`](./settings/documents/).
 
-Document content is located in [`./contents/[locale]/`](./contents/).  
+Document content is located in [`./contents/[version]/[locale]/`](./contents/).  
 Files should be named `index.mdx` and written in [`Markdown`](https://github.github.com/gfm/).
 
 ### Metadata
@@ -70,40 +70,43 @@ A full list of supported components can be found in [`./lib/components.ts`](./li
 
 - **i18n configuration**: [`./settings/i18n.ts`](./settings/i18n.ts)  
 - **UI dictionaries**: [`./i18n/dictionaries/`](./i18n/dictionaries/)  
-- **Document content**: [`./contents/[locale]/`](./contents/)  
+- **Document content**: [`./contents/[version]/[locale]/`](./contents/)  
 
 To add a new locale:  
 - Configure the locale in `./settings/i18n.ts`.  
-- Add the locale to `searchData` in `./lib/search-data-utils.ts`.  
-- Create the corresponding directory structure and content in `./contents/[new-locale]/`.  
+- Add the locale to `SearchData` in `./settings/documents/search_data.ts`.  
+- Create the corresponding directory structure and content in `./contents/[version]/[new-locale]/`.  
 
 ## Directory structure
 
 ```text
-├── app/                 # Next.js application source files
-│   ├── [locale]/        # Locale-specific pages and docs
-│   │   ├── docs/        # Locale documentation
-│   │   ├── layout.tsx   # Locale layout
-│   │   └── page.tsx     # Locale main page
-│   ├── error.tsx        # Global error page
-│   ├── layout.tsx       # Root layout
-│   ├── not-found.tsx    # 404 page
-│   ├── page.tsx         # Main page
-│   ├── robots.ts        # robots.txt generation
-│   └── sitemap.ts       # sitemap.xml generation
-├── components/          # Reusable UI components
-│   ├── markdown/        # Markdown-related components
-│   ├── navigation/      # Navigation components
-│   ├── providers/       # Context providers
-│   └── ui/              # UI elements (shadcn/ui primitives)
-├── contents/            # Documentation content for each locale
-├── i18n/                # i18n utilities and dictionaries
-├── lib/                 # Library utilities and helpers
-├── public/              # Static assets (images, search data, etc.)
-├── scripts/             # Scripts (e.g., search data generation via tsx)
-├── settings/            # Project settings and configuration
-├── styles/              # Global and component styles
-├── tools/               # Build tools and scripts
+├── app/                    # Next.js application source files
+│   ├── [locale]/           # Locale-specific pages and docs
+│   │   ├── [version]/      # Version-specific pages and docs
+│   │   │   ├── docs/       # Documentation pages
+│   │   │   ├── layout.tsx  # Version layout
+│   │   │   └── page.tsx    # Version main page
+│   │   ├── layout.tsx      # Locale layout
+│   │   └── page.tsx        # Locale main page
+│   ├── error.tsx           # Global error page
+│   ├── layout.tsx          # Root layout
+│   ├── not-found.tsx       # 404 page
+│   ├── page.tsx            # Main page
+│   ├── robots.ts           # robots.txt generation
+│   └── sitemap.ts          # sitemap.xml generation
+├── components/             # Reusable UI components
+│   ├── markdown/           # Markdown-related components
+│   ├── navigation/         # Navigation components
+│   ├── providers/          # Context providers
+│   └── ui/                 # UI elements (shadcn/ui primitives)
+├── contents/               # Documentation content for each locale
+├── i18n/                   # i18n utilities and dictionaries
+├── lib/                    # Library utilities and helpers
+├── public/                 # Static assets (images, search data, etc.)
+├── scripts/                # Scripts (e.g., search data generation via tsx)
+├── settings/               # Project settings and configuration
+├── styles/                 # Global and component styles
+├── tools/                  # Build tools and scripts
 ...
 ```
 

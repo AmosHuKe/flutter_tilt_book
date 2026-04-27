@@ -1,0 +1,22 @@
+---
+title: 保持倾斜角度
+description:
+keywords: ["指南", "常见问题"]
+---
+
+你可以使用以下代码：
+
+```diff {5-6} showLineNumbers
+...
+
+Tilt(
+  tiltConfig: const TiltConfig(
++   enableRevert: false,
++   enableSensorRevert: false,
+    ...
+  ),
+  ...
+),
+
+...
+```

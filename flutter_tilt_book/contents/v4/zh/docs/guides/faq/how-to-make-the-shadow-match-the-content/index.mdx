@@ -1,0 +1,35 @@
+---
+title: 如何使阴影与内容匹配
+description:
+keywords: ["指南", "常见问题", "阴影"]
+---
+
+你可以使用以下代码：
+
+```diff {4} showLineNumbers
+...
+
+Tilt(
++ lightShadowMode: LightShadowMode.projector,
+  ...
+),
+
+...
+```
+
+相关更多信息，请参阅：[Tilt widget - LightShadowMode][].
+
+你应该自行评估性能风险，
+如果你应用的场景运行流畅，则可继续使用。
+
+<Note type="warning" title="存在性能风险">
+对整个 `Tilt` widget 使用类似投影仪效果的阴影，  
+会显示与 widget 非透明部分完全一致的阴影。  
+建议在以下场景使用：
+
+- 仅图片
+- 无数据状态
+- 无 Hero 标签
+</Note>
+
+[Tilt widget - LightShadowMode]: /zh/docs/widgets/tilt-widget/#lightshadowmode

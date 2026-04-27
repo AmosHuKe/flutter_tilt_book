@@ -1,0 +1,100 @@
+---
+title: 简单使用
+description: 简单示例帮助你快速上手。
+keywords: ["指南", "简单使用"]
+---
+
+## 倾斜
+
+[Tilt widget][Tilt widget parameters] widget 默认有倾斜、阴影和光照的效果。  
+
+```dart {6} showLineNumbers
+/// 导入 flutter_tilt
+import 'package:flutter_tilt/flutter_tilt.dart';
+
+...
+
+Tilt(
+  child: Container(
+    width: 150.0,
+    height: 300.0,
+    color: Colors.grey,
+  ),
+),
+
+...
+
+```
+
+## 视差
+
+[TiltParallax widget][TiltParallax widget parameters] 只能在 `Tilt` widget 的 `childLayout` 中使用。  
+
+```dart {6,7,11,19} showLineNumbers
+/// 导入 flutter_tilt
+import 'package:flutter_tilt/flutter_tilt.dart';
+
+...
+
+Tilt(
+  childLayout: const ChildLayout(
+    outer: [
+      /// 此处为视差
+      Positioned(
+        child: TiltParallax(
+          child: Text('Parallax'),
+        ),
+      ),
+      /// 此处为视差
+      Positioned(
+        top: 20.0,
+        left: 20.0,
+        child: TiltParallax(
+          size: Offset(-10.0, -10.0),
+          child: Text('Tilt'),
+        ),
+      ),
+    ],
+  ),
+  child: Container(
+    width: 150.0,
+    height: 300.0,
+    color: Colors.brown,
+  ),
+),
+
+...
+
+```
+
+## 更多参数
+
+<NavCardGrid>
+  <NavCard
+    subtitle="Widget"
+    title="Tilt Widget"
+    description={
+      <div>
+        了解 Tilt widget 参数。
+        <br />
+        Tilt widget 默认有倾斜、阴影和光照的效果。
+      </div>
+    }
+    href="/zh/docs/widgets/tilt-widget"
+  />
+  <NavCard
+    subtitle="Widget"
+    title="TiltParallax Widget"
+    description={
+      <div>
+        了解 TiltParallax widget 参数。
+        <br />
+        Tilt widget 中的视差效果。
+      </div>
+    }
+    href="/zh/docs/widgets/tiltparallax-widget"
+  />
+</NavCardGrid>
+
+[Tilt widget parameters]: /zh/docs/widgets/tilt-widget
+[TiltParallax widget parameters]: /zh/docs/widgets/tiltparallax-widget

@@ -5,7 +5,6 @@ import { OpenGraph, TwitterCard } from "@/lib/metadata"
 export const Package = {
   name: websiteSettings.packageName,
   link: websiteSettings.packageLink,
-  version: websiteSettings.packageVersion,
 }
 
 export const Settings = {
@@ -20,7 +19,6 @@ export const Settings = {
   title: websiteSettings.sitename,
   basePath: websiteSettings.basePath,
   metadataBase: `${websiteSettings.url}${websiteSettings.basePath}`,
-  packageVersion: websiteSettings.packageVersion,
   description: websiteSettings.description,
   keywords: websiteSettings.keywords,
   icons: websiteSettings.favicon,

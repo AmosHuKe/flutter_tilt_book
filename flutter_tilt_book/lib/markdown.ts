@@ -60,26 +60,34 @@ async function parseMdx<Frontmatter>(rawMdx: string) {
   })
 }
 
-const documentPath = (locale: string, slug: string) => {
+const documentPath = (locale: string, version: string, slug: string) => {
   return Settings.gitload
-    ? `${GitHubLink.href}/raw/main/contents/${locale}/docs/${slug}/index.mdx`
-    : path.join(process.cwd(), `contents/${locale}/docs`, `${slug}/index.mdx`)
+    ? `${GitHubLink.href}/raw/main/contents/${version}/${locale}/docs/${slug}/index.mdx`
+    : path.join(
+        process.cwd(),
+        `contents/${version}/${locale}/docs`,
+        `${slug}/index.mdx`
+      )
 }
 
 const getDocumentPath = (() => {
   const cache = new Map<string, string>()
-  return (locale: string, slug: string) => {
-    const localeSlug = `${locale}/docs/${slug}`
-    if (!cache.has(localeSlug)) {
-      cache.set(localeSlug, documentPath(locale, slug))
+  return (locale: string, version: string, slug: string) => {
+    const pathSlug = `${locale}/${version}/docs/${slug}`
+    if (!cache.has(pathSlug)) {
+      cache.set(pathSlug, documentPath(locale, version, slug))
     }
-    return cache.get(localeSlug)!
+    return cache.get(pathSlug)!
   }
 })()
 
-export async function getDocument(locale: string, slug: string) {
+export async function getDocument(
+  locale: string,
+  version: string,
+  slug: string
+) {
   try {
-    const contentPath = getDocumentPath(locale, slug)
+    const contentPath = getDocumentPath(locale, version, slug)
     let rawMdx = ""
     let lastUpdated: string | null = null
 
@@ -99,7 +107,7 @@ export async function getDocument(locale: string, slug: string) {
     }
 
     const parsedMdx = await parseMdx<BaseMdxFrontmatter>(rawMdx)
-    const tocs = await getHeadings(locale, slug)
+    const tocs = await getHeadings(locale, version, slug)
 
     return {
       frontmatter: parsedMdx.frontmatter,
@@ -118,6 +126,7 @@ const headingsRegex = /^(#{2,4})\s(.+)$/gm
 // TODO: 解析后再处理 <h1> <h2> 等等
 export async function getHeadings(
   locale: string,
+  version: string,
   slug: string
 ): Promise<Array<{ level: number; text: React.ReactElement; href: string }>> {
   const extractedHeadings: Array<{
@@ -128,7 +137,8 @@ export async function getHeadings(
   let rawMdx = ""
 
   if (Settings.gitload) {
-    const contentPath = `${GitHubLink.href}/raw/main/contents/${locale}/docs/${slug}/index.mdx`
+    const contentPath = `${GitHubLink.href}/raw/main/contents/${version}/${locale}/docs/${slug}/index.mdx`
+
     try {
       const response = await fetch(contentPath)
       if (!response.ok) {
@@ -144,9 +154,10 @@ export async function getHeadings(
   } else {
     const contentPath = path.join(
       process.cwd(),
-      `contents/${locale}/docs`,
+      `contents/${version}/${locale}/docs`,
       `${slug}/index.mdx`
     )
+
     try {
       const stream = createReadStream(contentPath, { encoding: "utf-8" })
       for await (const chunk of stream) {
@@ -181,19 +192,22 @@ function innerslug(text: string) {
     .replace(/[^a-zA-Z0-9\u4e00-\u9fa5\-_]/g, "")
 }
 
-const pathIndexMap = new Map(
-  PageRoutes.map((route, index) => [route.href, index])
-)
+function pathIndexMap(locale: string, version: string) {
+  return new Map(
+    PageRoutes(locale, version).map((route, index) => [route.href, index])
+  )
+}
 
-export function getPreviousNext(path: string) {
-  const index = pathIndexMap.get(`/${path}`)
+export function getPreviousNext(locale: string, version: string, path: string) {
+  const index = pathIndexMap(locale, version).get(`/${path}`)
 
   if (index === undefined || index === -1) {
     return { prev: null, next: null }
   }
 
-  const prev = index > 0 ? PageRoutes[index - 1] : null
-  const next = index < PageRoutes.length - 1 ? PageRoutes[index + 1] : null
+  const pageRoutes = PageRoutes(locale, version)
+  const prev = index > 0 ? pageRoutes[index - 1] : null
+  const next = index < pageRoutes.length - 1 ? pageRoutes[index + 1] : null
 
   return { prev, next }
 }

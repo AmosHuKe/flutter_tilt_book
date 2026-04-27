@@ -15,20 +15,32 @@ import { Logo } from "@/components/navigation/logo"
 import { NavMenu } from "@/components/navigation/navbar"
 import PageMenu from "@/components/navigation/pagemenu"
 
-export function Sidebar({ locale }: { locale: string }) {
+export function Sidebar({
+  locale,
+  version,
+}: {
+  locale: string
+  version: string
+}) {
   return (
     <aside
-      className="sticky top-16 hidden h-[94.5vh] min-w-[280px] flex-[1] flex-col overflow-y-auto lg:flex"
+      className="sticky top-16 hidden h-[94.5vh] min-w-70 flex-1 flex-col overflow-y-auto lg:flex"
       aria-label="Page navigation"
     >
       <ScrollArea type="hover" className="h-full pr-4 pb-4">
-        <PageMenu locale={locale} />
+        <PageMenu locale={locale} version={version} />
       </ScrollArea>
     </aside>
   )
 }
 
-export function SheetLeft({ locale }: { locale: string }) {
+export function SheetLeft({
+  locale,
+  version,
+}: {
+  locale: string
+  version: string
+}) {
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -37,7 +49,7 @@ export function SheetLeft({ locale }: { locale: string }) {
           size="icon"
           className="flex cursor-pointer lg:hidden"
         >
-          <LuAlignLeft className="!size-6" />
+          <LuAlignLeft className="size-6!" />
         </Button>
       </SheetTrigger>
       <SheetContent className="flex h-full flex-col gap-0 px-0" side="left">
@@ -46,7 +58,7 @@ export function SheetLeft({ locale }: { locale: string }) {
           <SheetClose asChild>
             <div className="flex items-center gap-1">
               <Logo locale={locale} />
-              <span className="text-sm">{Settings.packageVersion}</span>
+              <span className="text-sm">{version}</span>
             </div>
           </SheetClose>
         </SheetHeader>
@@ -55,10 +67,10 @@ export function SheetLeft({ locale }: { locale: string }) {
           className="flex h-full flex-col gap-4 overflow-y-auto"
         >
           <div className="mx-0 mt-3 flex flex-col gap-2.5 pr-5 pl-2.5">
-            <NavMenu locale={locale} isSheet />
+            <NavMenu locale={locale} version={version} isSheet />
           </div>
           <div className="mx-0 pr-5 pl-2.5">
-            <PageMenu locale={locale} isSheet />
+            <PageMenu locale={locale} version={version} isSheet />
           </div>
         </ScrollArea>
       </SheetContent>

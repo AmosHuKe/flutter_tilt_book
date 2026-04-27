@@ -35,10 +35,12 @@ interface localeDictionaries {
 
 export default function Search({
   locale,
+  version,
   localeDictionaries,
   documentRoutes,
 }: {
   locale: string
+  version: string
   localeDictionaries: localeDictionaries
   documentRoutes: Document[]
 }) {
@@ -51,7 +53,7 @@ export default function Search({
     () =>
       debounce((input: string) => {
         setIsLoading(true)
-        const results = advanceSearch(locale, input.trim())
+        const results = advanceSearch(locale, version, input.trim())
         setFilteredResults(results)
         setIsLoading(false)
       }, 300),
@@ -63,7 +65,7 @@ export default function Search({
       if (isOpen && event.key === "Enter" && filteredResults.length > 2) {
         const selected = filteredResults[0]
         if ("href" in selected) {
-          window.location.href = `/${locale}/docs${selected.href}`
+          window.location.href = `/${locale}/${version}/docs${selected.href}`
           setIsOpen(false)
         }
       }
@@ -86,7 +88,7 @@ export default function Search({
 
   function renderDocuments(
     documents: Document[],
-    parentHref: string = `/${locale}/docs`
+    parentHref: string = `/${locale}/${version}/docs`
   ): React.ReactNode[] {
     if (!Array.isArray(documents) || documents.length === 0) {
       return []
@@ -175,7 +177,7 @@ export default function Search({
               </p>
             )
           )}
-          <ScrollArea className="max-h-[350px] w-full overflow-hidden">
+          <ScrollArea className="max-h-87.5 w-full overflow-hidden">
             <div className="flex w-full flex-col items-start px-1 pt-1 pb-4 sm:px-3">
               {searchedInput
                 ? filteredResults.map((item) => {
@@ -184,9 +186,9 @@ export default function Search({
                         <DialogClose key={item.href} asChild>
                           <Anchor
                             className={cn(
-                              "flex w-full max-w-[310px] flex-col gap-0.5 rounded-sm p-3 text-[15px] transition-all duration-300 hover:bg-zinc-100 sm:max-w-[480px] dark:hover:bg-zinc-900"
+                              "flex w-full max-w-77.5 flex-col gap-0.5 rounded-sm p-3 text-[15px] transition-all duration-300 hover:bg-zinc-100 sm:max-w-120 dark:hover:bg-zinc-900"
                             )}
-                            href={`/${locale}/docs${item.href}`}
+                            href={`/${locale}/${version}/docs${item.href}`}
                           >
                             <div className="flex h-full items-center gap-x-2">
                               <LuFileText className="h-[1.1rem] w-[1.1rem]" />

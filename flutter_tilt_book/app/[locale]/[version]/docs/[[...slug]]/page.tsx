@@ -1,4 +1,5 @@
-import { notFound } from "next/navigation"
+import { notFound, redirect } from "next/navigation"
+import { VersionSettings } from "@/settings/version"
 import { hasLocale } from "next-intl"
 import { getTranslations } from "next-intl/server"
 
@@ -15,15 +16,69 @@ import Pagination from "@/components/navigation/pagination"
 import Toc from "@/components/navigation/toc"
 
 type PageProps = {
-  params: Promise<{ locale: string; slug: string[] }>
+  params: Promise<{ locale: string; version: string; slug: string[] }>
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const { locale, version, slug = [] } = await params
+  const pathName = slug.join("/")
+  const res = await getDocument(locale, version, pathName)
+
+  if (
+    !res ||
+    !hasLocale(routing.locales, locale) ||
+    !VersionSettings.versions.includes(version)
+  ) {
+    return null
+  }
+
+  const { frontmatter, lastUpdated } = res
+
+  return {
+    title: `${frontmatter.title} - ${Settings.title}`,
+    description: frontmatter.description,
+    keywords: frontmatter.keywords,
+    ...(lastUpdated && {
+      lastModified: new Date(lastUpdated).toISOString(),
+    }),
+  }
+}
+
+export async function generateStaticParams() {
+  return routing.locales.flatMap((locale) =>
+    VersionSettings.versions.flatMap((version) => [
+      { locale, version, slug: [] },
+      ...PageRoutes(locale, version)
+        .filter((item) => item.href)
+        .map((item) => ({
+          locale,
+          slug: item.href.split("/").slice(1),
+        })),
+    ])
+  )
 }
 
 export default async function Pages({ params }: PageProps) {
-  const { locale, slug = [] } = await params
+  const { locale, version, slug = [] } = await params
   const pathName = slug.join("/")
-  const res = await getDocument(locale, pathName)
 
-  if (!res || !hasLocale(routing.locales, locale)) notFound()
+  if (
+    !hasLocale(routing.locales, locale) ||
+    !VersionSettings.versions.includes(version)
+  ) {
+    notFound()
+  }
+
+  if (pathName == "") {
+    redirect(
+      `/${locale}/${VersionSettings.latestVersion}/docs/${PageRoutes(locale, version)[0].href}`
+    )
+  }
+
+  const res = await getDocument(locale, version, pathName)
+  if (!res) {
+    notFound()
+  }
 
   const t = await getTranslations({ locale })
 
@@ -32,20 +87,20 @@ export default async function Pages({ params }: PageProps) {
   return (
     <div className="flex items-start gap-14">
       <section className="flex-3 pt-10">
-        <PageBreadcrumb locale={locale} paths={slug} />
+        <PageBreadcrumb locale={locale} version={version} paths={slug} />
 
         <Typography>
           <h1 className="mb-2! text-3xl font-semibold!">{frontmatter.title}</h1>
           <p className="-mt-4 text-sm">{frontmatter.description}</p>
           <Separator className="my-6" />
           <section>{content}</section>
-          <Pagination locale={locale} pathname={pathName} />
+          <Pagination locale={locale} version={version} pathname={pathName} />
         </Typography>
       </section>
 
       {Settings.rightbar && (
         <aside
-          className="toc sticky top-16 hidden h-[94.5vh] min-w-[230px] gap-3 py-8 xl:flex xl:flex-col"
+          className="toc sticky top-16 hidden h-[94.5vh] min-w-57.5 gap-3 py-8 xl:flex xl:flex-col"
           aria-label="Table of contents"
         >
           {Settings.toc && <Toc title={t("toc.title")} tocs={tocs} />}
@@ -65,33 +120,5 @@ export default async function Pages({ params }: PageProps) {
         </aside>
       )}
     </div>
-  )
-}
-
-export async function generateMetadata({ params }: PageProps) {
-  const { locale, slug = [] } = await params
-  const pathName = slug.join("/")
-  const res = await getDocument(locale, pathName)
-
-  if (!res) return null
-
-  const { frontmatter, lastUpdated } = res
-
-  return {
-    title: `${frontmatter.title} - ${Settings.title}`,
-    description: frontmatter.description,
-    keywords: frontmatter.keywords,
-    ...(lastUpdated && {
-      lastModified: new Date(lastUpdated).toISOString(),
-    }),
-  }
-}
-
-export async function generateStaticParams() {
-  return routing.locales.flatMap((locale) =>
-    PageRoutes.filter((item) => item.href).map((item) => ({
-      locale,
-      slug: item.href.split("/").slice(1),
-    }))
   )
 }
