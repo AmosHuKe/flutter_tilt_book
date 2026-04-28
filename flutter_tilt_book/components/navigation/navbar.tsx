@@ -30,7 +30,7 @@ export async function Navbar({
 
   return (
     <nav
-      className="bg-opacity-5 sticky top-0 z-50 h-16 w-full border-b px-2 backdrop-blur-xl backdrop-filter md:px-4"
+      className="bg-opacity-5 sticky top-0 z-50 h-16 w-full border-b px-2 backdrop-blur-xl backdrop-filter md:px-2"
       style={{
         backdropFilter: "blur(16px) saturate(1.5)",
         WebkitBackdropFilter: "blur(16px) saturate(1.5)",
@@ -41,8 +41,7 @@ export async function Navbar({
           <SheetLeft locale={locale} version={version} />
           <div className="flex items-center gap-6">
             <div className="hidden gap-1 lg:flex lg:items-center">
-              <Logo locale={locale} />
-              <span className="text-sm">{version}</span>
+              <Logo locale={locale} version={version} />
             </div>
             <div className="text-muted-foreground hidden items-center gap-5 text-sm font-medium lg:flex">
               <NavMenu locale={locale} version={version} />

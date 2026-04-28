@@ -668,6 +668,17 @@
     }
   },
   {
+    "slug": "/",
+    "title": "文档",
+    "description": "",
+    "content": "",
+    "_searchMeta": {
+      "cleanContent": "",
+      "headings": [],
+      "keywords": []
+    }
+  },
+  {
     "slug": "/installation",
     "title": "安装",
     "description": "本指南介绍了相关兼容性以及如何添加 flutter_tilt package。",

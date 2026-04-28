@@ -54,13 +54,9 @@ export function SheetLeft({
       </SheetTrigger>
       <SheetContent className="flex h-full flex-col gap-0 px-0" side="left">
         <DialogTitle className="sr-only">Menu</DialogTitle>
-        <SheetHeader>
-          <SheetClose asChild>
-            <div className="flex items-center gap-1">
-              <Logo locale={locale} />
-              <span className="text-sm">{version}</span>
-            </div>
-          </SheetClose>
+        <SheetHeader className="px-2">
+          <SheetClose />
+          <Logo locale={locale} version={version} />
         </SheetHeader>
         <ScrollArea
           type="always"

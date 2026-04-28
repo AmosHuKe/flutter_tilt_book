@@ -668,6 +668,17 @@
     }
   },
   {
+    "slug": "/",
+    "title": "Docs",
+    "description": "",
+    "content": "",
+    "_searchMeta": {
+      "cleanContent": "",
+      "headings": [],
+      "keywords": []
+    }
+  },
+  {
     "slug": "/installation",
     "title": "Installation",
     "description": "This guide covers compatibility notes and how to add the flutter_tilt package.",
