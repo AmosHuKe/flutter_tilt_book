@@ -71,7 +71,7 @@ export default async function Pages({ params }: PageProps) {
 
   if (pathName == "") {
     redirect(
-      `/${locale}/${VersionSettings.latestVersion}/docs/${PageRoutes(locale, version)[0].href}`
+      `/${locale}/${version}/docs/${PageRoutes(locale, version)[0].href}`
     )
   }
 
