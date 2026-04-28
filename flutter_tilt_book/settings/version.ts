@@ -3,7 +3,7 @@ type VersionSettingsType = {
   latestVersion: ReadonlyArray<string>[number]
 }
 
-const versions = ["v4", "v3"]
+const versions = ["v3", "v4-rc"]
 
 export const VersionSettings: VersionSettingsType = {
   versions,

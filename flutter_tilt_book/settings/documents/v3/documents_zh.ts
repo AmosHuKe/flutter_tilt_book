@@ -86,5 +86,96 @@ export const documents_v3_zh: Paths[] = [
     heading: "示例",
     title: "示例",
     href: "/examples",
+    isSubOpen: true,
+    items: [
+      {
+        title: "Demo",
+        href: "/demo",
+      },
+      {
+        title: "Parallax Image",
+        href: "/parallax-image",
+      },
+      {
+        title: "LightShadowMode",
+        href: "/tilt-lightshadowmode",
+      },
+      {
+        title: "Parallax Card",
+        href: "/parallax-card",
+      },
+      {
+        title: "Multiple Tilt",
+        href: "/multiple-tilt",
+      },
+      {
+        title: "Layout",
+        href: "/layout-demo",
+      },
+      {
+        title: "Layout2",
+        href: "/layout2-demo",
+      },
+      {
+        title: "Layout3",
+        href: "/layout3-demo",
+      },
+      {
+        title: "Events",
+        href: "/events",
+      },
+      {
+        title: "Dialog",
+        href: "/dialog",
+      },
+      {
+        title: "Default",
+        href: "/default",
+      },
+      {
+        title: "Animation",
+        href: "/animation-demo",
+      },
+      {
+        title: "Smooth Gesture Enter",
+        href: "/smooth-gesture-enter-demo",
+      },
+      {
+        title: "TiltStreamController",
+        href: "/tilt-stream-controller-demo",
+      },
+      {
+        title: "Reverse Tilt",
+        href: "/reverse-tilt",
+      },
+      {
+        title: "Keep Tilt",
+        href: "/keep-tilt",
+      },
+      {
+        title: "Tilt Direction",
+        href: "/tilt-direction-demo",
+      },
+      {
+        title: "Light Direction",
+        href: "/light-direction-demo",
+      },
+      {
+        title: "Shadow Direction",
+        href: "/shadow-direction-demo",
+      },
+      {
+        title: "Initial Tilt",
+        href: "/initial-tilt",
+      },
+      {
+        title: "Disable Effects",
+        href: "/disable-effects",
+      },
+      {
+        title: "Bento Grids",
+        href: "/bento-grids",
+      },
+    ],
   },
 ]
