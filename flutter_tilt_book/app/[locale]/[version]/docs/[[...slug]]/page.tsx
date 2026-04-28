@@ -70,9 +70,7 @@ export default async function Pages({ params }: PageProps) {
   }
 
   if (pathName == "") {
-    redirect(
-      `/${locale}/${version}/docs/${PageRoutes(locale, version)[0].href}`
-    )
+    redirect(`/${locale}/${version}/docs${PageRoutes(locale, version)[0].href}`)
   }
 
   const res = await getDocument(locale, version, pathName)
