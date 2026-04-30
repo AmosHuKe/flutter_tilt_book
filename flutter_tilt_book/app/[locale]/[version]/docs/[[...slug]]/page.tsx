@@ -52,6 +52,7 @@ export async function generateStaticParams() {
         .filter((item) => item.href)
         .map((item) => ({
           locale,
+          version,
           slug: item.href.split("/").slice(1),
         })),
     ])

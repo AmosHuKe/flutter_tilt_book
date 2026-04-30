@@ -1,5 +1,4 @@
 import { Documents } from "@/settings/documents/documents"
-import { getTranslations } from "next-intl/server"
 
 export type Paths =
   | {
