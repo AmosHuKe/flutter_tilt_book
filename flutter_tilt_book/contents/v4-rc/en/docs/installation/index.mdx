@@ -44,8 +44,9 @@ Platforms without sensors support do not affect the normal use of other features
 #### Versions compatibility
 
 <div className="max-w-xl">
-| Package              | Flutter<br />v3.0.0+ | Flutter<br />v3.10.0+ | Flutter<br />v3.19.0+ |
+| Min Flutter SDK      | Flutter<br />v3.0.0+ | Flutter<br />v3.10.0+ | Flutter<br />v3.19.0+ |
 | -------------------- | :------------------: | :-------------------: | :-------------------: |
+| flutter_tilt v4.0.0+ | ❌ | ❌ | ✅ |
 | flutter_tilt v3.0.0+ | ❌ | ❌ | ✅ |
 | flutter_tilt v2.0.0+ | ❌ | ✅ | ✅ |
 | flutter_tilt v1.0.0+ | ✅ | ❌ | ❌ |
@@ -87,20 +88,35 @@ import 'package:flutter_tilt/flutter_tilt.dart';
     description="Simple examples to help you get started quickly."
     href="/en/v4-rc/docs/guides/simple-usage"
   />
+</NavCardGrid>
+
+<br/>
+
+<NavCardGrid>
   <NavCard
-    subtitle="Widgets"
+    subtitle="Widget"
     title="Tilt widget"
     description={
       <div>
         Learn about Tilt widget parameters.
         <br />
-        Tilt widget will have default tilt, shadow, and light effects.
+        Tilt widget only manages gesture state, sensor state, and animation state.
       </div>
     }
     href="/en/v4-rc/docs/widgets/tilt-widget"
   />
   <NavCard
-    subtitle="Widgets"
+    subtitle="Widget"
+    title="TiltContainer"
+    description={
+      <div>
+        Learn about TiltContainer styles.
+      </div>
+    }
+    href="/en/v4-rc/docs/widgets/tilt-container"
+  />
+  <NavCard
+    subtitle="Widget"
     title="TiltParallax widget"
     description={
       <div>
@@ -109,7 +125,7 @@ import 'package:flutter_tilt/flutter_tilt.dart';
         Parallax effect in the Tilt widget.
       </div>
     }
-    href="/en/v4-rc/docs/widgets/tiltparallax-widget"
+    href="/en/v4-rc/docs/widgets/tilt-parallax-widget"
   />
 </NavCardGrid>
 

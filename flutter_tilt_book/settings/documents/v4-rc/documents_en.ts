@@ -23,26 +23,10 @@ export const documents_v4_en: Paths[] = [
     isSubOpen: false,
     items: [
       {
-        title: "^1.0.0 to ^2.0.0",
-        href: "/migrate-to-v2-0-0",
-      },
-      {
-        title: "^0.0.1 to ^0.1.0",
-        href: "/migrate-to-v0-1-0",
+        title: "^3.0.0 to ^4.0.0",
+        href: "/migrate-to-v4-0-0",
       },
     ],
-  },
-  {
-    spacer: true,
-  },
-  {
-    heading: "Widgets",
-    title: "Tilt widget",
-    href: "/widgets/tilt-widget",
-  },
-  {
-    title: "TiltParallax widget",
-    href: "/widgets/tiltparallax-widget",
   },
   {
     spacer: true,
@@ -78,6 +62,37 @@ export const documents_v4_en: Paths[] = [
         href: "/how-to-make-the-shadow-match-the-content",
       },
     ],
+  },
+  {
+    spacer: true,
+  },
+  {
+    heading: "Widgets",
+    title: "Tilt",
+    href: "/widgets/tilt-widget",
+  },
+  {
+    title: "TiltContainer",
+    href: "/widgets/tilt-container",
+    isSubOpen: false,
+    items: [
+      {
+        title: "TiltBaseContainer",
+        href: "/tilt-base-container-widget",
+      },
+      {
+        title: "TiltProjectorContainer",
+        href: "/tilt-projector-container-widget",
+      },
+    ],
+  },
+  {
+    title: "TiltParallax",
+    href: "/widgets/tilt-parallax-widget",
+  },
+  {
+    title: "TiltAnimatedBuilder",
+    href: "/widgets/tilt-animated-builder-widget",
   },
   {
     spacer: true,

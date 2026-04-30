@@ -6,19 +6,40 @@ keywords: ["guide", "simple usage"]
 
 ## Tilt
 
-[Tilt widget][Tilt widget parameters] will have default tilt, shadow, and light effects.
+The [Tilt widget][Tilt widget parameters] only manages gesture state, sensor state, and animation state.  
+You can combine the [TiltBaseContainer widget][TiltBaseContainer widget parameters] within the Tilt widget to wrap the default tilt, light, and shadow effects.  
+Alternatively, you can use the built-in `Tilt.base` widget to achieve the same effects.  
 
-```dart {6} showLineNumbers
+For more information about TiltContainer, check out [TiltContainer][].  
+
+```dart {7-8, 21} showLineNumbers
 /// Import flutter_tilt
 import 'package:flutter_tilt/flutter_tilt.dart';
 
 ...
 
+/// Tilt with TiltBaseContainer for default effects
 Tilt(
-  child: Container(
-    width: 150.0,
-    height: 300.0,
-    color: Colors.grey,
+  child: TiltBaseContainer(
+    child: SizedBox(
+      width: 150,
+      height: 300,
+      child: DecoratedBox(
+        decoration: const BoxDecoration(color: Colors.grey),
+      ),
+    ),
+  ),
+),
+
+/// Tilt with built-in Tilt.base for default effects.
+/// Tilt.base is a convenient widget that combines Tilt and TiltBaseContainer.
+Tilt.base(
+  child: SizedBox(
+    width: 150,
+    height: 300,
+    child: DecoratedBox(
+      decoration: const BoxDecoration(color: Colors.grey),
+    ),
   ),
 ),
 
@@ -28,38 +49,42 @@ Tilt(
 
 ## Parallax
 
-[TiltParallax widget][TiltParallax widget parameters] can only be used in the `childLayout` of `Tilt` widget.
+[TiltParallax widget][TiltParallax widget parameters] can only be used in the `Tilt` widget.
 
-```dart {6,7,11,19} showLineNumbers
+```dart {12, 20} showLineNumbers
 /// Import flutter_tilt
 import 'package:flutter_tilt/flutter_tilt.dart';
 
 ...
 
 Tilt(
-  childLayout: const ChildLayout(
-    outer: [
-      /// Parallax here
-      Positioned(
-        child: TiltParallax(
-          child: Text('Parallax'),
+  child: TiltBaseContainer(
+    childLayout: const ChildLayout(
+      outer: [
+        /// Parallax here
+        Positioned(
+          child: TiltParallax(
+            child: Text('Parallax'),
+          ),
         ),
-      ),
-      /// Parallax here
-      Positioned(
-        top: 20.0,
-        left: 20.0,
-        child: TiltParallax(
-          size: Offset(-10.0, -10.0),
-          child: Text('Tilt'),
+        /// Parallax here
+        Positioned(
+          top: 20.0,
+          left: 20.0,
+          child: TiltParallax(
+            offset: Offset(-10.0, -10.0),
+            child: Text('Tilt'),
+          ),
         ),
+      ],
+    ),
+    child: SizedBox(
+      width: 150,
+      height: 300,
+      child: DecoratedBox(
+        decoration: const BoxDecoration(color: Colors.brown),
       ),
-    ],
-  ),
-  child: Container(
-    width: 150.0,
-    height: 300.0,
-    color: Colors.brown,
+    ),
   ),
 ),
 
@@ -77,10 +102,20 @@ Tilt(
       <div>
         Learn about Tilt widget parameters.
         <br />
-        Tilt widget will have default tilt, shadow, and light effects.
+        Tilt widget only manages gesture state, sensor state, and animation state.
       </div>
     }
     href="/en/v4-rc/docs/widgets/tilt-widget"
+  />
+  <NavCard
+    subtitle="Widget"
+    title="TiltContainer"
+    description={
+      <div>
+        Learn about TiltContainer styles.
+      </div>
+    }
+    href="/en/v4-rc/docs/widgets/tilt-container"
   />
   <NavCard
     subtitle="Widget"
@@ -92,9 +127,11 @@ Tilt(
         Parallax effect in the Tilt widget.
       </div>
     }
-    href="/en/v4-rc/docs/widgets/tiltparallax-widget"
+    href="/en/v4-rc/docs/widgets/tilt-parallax-widget"
   />
 </NavCardGrid>
 
 [Tilt widget parameters]: /en/v4-rc/docs/widgets/tilt-widget
-[TiltParallax widget parameters]: /en/v4-rc/docs/widgets/tiltparallax-widget
+[TiltBaseContainer widget parameters]: /en/v4-rc/docs/widgets/tilt-base-container-widget
+[TiltContainer]: /en/v4-rc/docs/widgets/tilt-container/
+[TiltParallax widget parameters]: /en/v4-rc/docs/widgets/tilt-parallax-widget

@@ -620,9 +620,9 @@
     "slug": "/guides/simple-usage",
     "title": "简单使用",
     "description": "简单示例帮助你快速上手。",
-    "content": "## 倾斜\n\n[Tilt widget][Tilt widget parameters] widget 默认有倾斜、阴影和光照的效果。\n\n```dart {6} showLineNumbers\n/// 导入 flutter_tilt\r\nimport 'package:flutter_tilt/flutter_tilt.dart';\r\n\r\n...\r\n\r\nTilt(\r\n  child: Container(\r\n    width: 150.0,\r\n    height: 300.0,\r\n    color: Colors.grey,\r\n  ),\r\n),\r\n\r\n...\r\n\n```\n\n## 视差\n\n[TiltParallax widget][TiltParallax widget parameters] 只能在 `Tilt` widget 的 `childLayout` 中使用。\n\n```dart {6,7,11,19} showLineNumbers\n/// 导入 flutter_tilt\r\nimport 'package:flutter_tilt/flutter_tilt.dart';\r\n\r\n...\r\n\r\nTilt(\r\n  childLayout: const ChildLayout(\r\n    outer: [\r\n      /// 此处为视差\r\n      Positioned(\r\n        child: TiltParallax(\r\n          child: Text('Parallax'),\r\n        ),\r\n      ),\r\n      /// 此处为视差\r\n      Positioned(\r\n        top: 20.0,\r\n        left: 20.0,\r\n        child: TiltParallax(\r\n          size: Offset(-10.0, -10.0),\r\n          child: Text('Tilt'),\r\n        ),\r\n      ),\r\n    ],\r\n  ),\r\n  child: Container(\r\n    width: 150.0,\r\n    height: 300.0,\r\n    color: Colors.brown,\r\n  ),\r\n),\r\n\r\n...\r\n\n```\n\n## 更多参数\n\n[Tilt widget parameters]: /zh/v4-rc/docs/widgets/tilt-widget\n\n[TiltParallax widget parameters]: /zh/v4-rc/docs/widgets/tiltparallax-widget\n",
+    "content": "## 倾斜\n\n[Tilt widget][Tilt widget parameters] widget 默认有倾斜、阴影和光照的效果。\n\n```dart {6} showLineNumbers\n/// 导入 flutter_tilt\r\nimport 'package:flutter_tilt/flutter_tilt.dart';\r\n\r\n...\r\n\r\nTilt(\r\n  child: Container(\r\n    width: 150.0,\r\n    height: 300.0,\r\n    color: Colors.grey,\r\n  ),\r\n),\r\n\r\n...\r\n\n```\n\n## 视差\n\n[TiltParallax widget][TiltParallax widget parameters] 只能在 `Tilt` widget 的 `childLayout` 中使用。\n\n```dart {6,7,11,19} showLineNumbers\n/// 导入 flutter_tilt\r\nimport 'package:flutter_tilt/flutter_tilt.dart';\r\n\r\n...\r\n\r\nTilt(\r\n  childLayout: const ChildLayout(\r\n    outer: [\r\n      /// 此处为视差\r\n      Positioned(\r\n        child: TiltParallax(\r\n          child: Text('Parallax'),\r\n        ),\r\n      ),\r\n      /// 此处为视差\r\n      Positioned(\r\n        top: 20.0,\r\n        left: 20.0,\r\n        child: TiltParallax(\r\n          size: Offset(-10.0, -10.0),\r\n          child: Text('Tilt'),\r\n        ),\r\n      ),\r\n    ],\r\n  ),\r\n  child: Container(\r\n    width: 150.0,\r\n    height: 300.0,\r\n    color: Colors.brown,\r\n  ),\r\n),\r\n\r\n...\r\n\n```\n\n## 更多参数\n\n[Tilt widget parameters]: /zh/v4-rc/docs/widgets/tilt-widget\n\n[TiltParallax widget parameters]: /zh/v4-rc/docs/widgets/tilt-parallax-widget\n",
     "_searchMeta": {
-      "cleanContent": "倾斜 tilt widget tilt widget parameters widget 默认有倾斜 阴影和光照的效果 视差 tiltparallax widget tiltparallax widget parameters 只能在 tilt widget 的 childlayout 中使用 更多参数 tilt widget parameters : zh v4-rc docs widgets tilt-widget tiltparallax widget parameters : zh v4-rc docs widgets tiltparallax-widget",
+      "cleanContent": "倾斜 tilt widget tilt widget parameters widget 默认有倾斜 阴影和光照的效果 视差 tiltparallax widget tiltparallax widget parameters 只能在 tilt widget 的 childlayout 中使用 更多参数 tilt widget parameters : zh v4-rc docs widgets tilt-widget tiltparallax widget parameters : zh v4-rc docs widgets tilt-parallax-widget",
       "headings": [
         "倾斜",
         "视差",
@@ -790,6 +790,31 @@
     }
   },
   {
+    "slug": "/widgets/tilt-parallax-widget",
+    "title": "TiltParallax widget",
+    "description": "了解 TiltParallax widget 参数。 Tilt widget 中的视差效果。",
+    "content": "TiltParallax widget 只能在 `Tilt` widget 的 `childLayout` 中使用。\n\n## TiltParallax widget 参数\n\n| 参数名 | 类型 | 默认值 | 描述 |\\\n| --- | --- | --- | --- |\r\n| child <sup>`必选`</sup> | `Widget` | - | 创建视差 widget。 |\\\n| size | `Offset` | `Offset(10.0, 10.0)` | 视差大小。 |\\\n| filterQuality | `FilterQuality` | `null` | Flutter FilterQuality。 |\n",
+    "_searchMeta": {
+      "cleanContent": "tiltparallax widget 只能在 tilt widget 的 childlayout 中使用 tiltparallax widget 参数 参数名 类型 默认值 描述 --- --- --- --- child sup 必选 sup widget - 创建视差 widget size offset offset 10 0 10 0 视差大小 filterquality filterquality null flutter filterquality",
+      "headings": [
+        "TiltParallax widget 参数"
+      ],
+      "keywords": [
+        "widgets",
+        "TiltParallax widget",
+        "TiltParallax widget 参数",
+        "Tilt",
+        "childLayout",
+        "必选",
+        "Widget",
+        "Offset",
+        "Offset(10.0, 10.0)",
+        "FilterQuality",
+        "null"
+      ]
+    }
+  },
+  {
     "slug": "/widgets/tilt-widget",
     "title": "Tilt widget",
     "description": "了解 Tilt widget 参数。 Tilt widget 默认有倾斜、阴影和光照的效果。",
@@ -941,31 +966,6 @@
         "|\\\n| projectorBlurSigmaTo |",
         "| 最大倾斜进度的阴影模糊 Sigma。<br /> 仅以下模式生效：<br />",
         "| 阴影方向。 |\\\n| enableReverse |"
-      ]
-    }
-  },
-  {
-    "slug": "/widgets/tiltparallax-widget",
-    "title": "TiltParallax widget",
-    "description": "了解 TiltParallax widget 参数。 Tilt widget 中的视差效果。",
-    "content": "TiltParallax widget 只能在 `Tilt` widget 的 `childLayout` 中使用。\n\n## TiltParallax widget 参数\n\n| 参数名 | 类型 | 默认值 | 描述 |\\\n| --- | --- | --- | --- |\r\n| child <sup>`必选`</sup> | `Widget` | - | 创建视差 widget。 |\\\n| size | `Offset` | `Offset(10.0, 10.0)` | 视差大小。 |\\\n| filterQuality | `FilterQuality` | `null` | Flutter FilterQuality。 |\n",
-    "_searchMeta": {
-      "cleanContent": "tiltparallax widget 只能在 tilt widget 的 childlayout 中使用 tiltparallax widget 参数 参数名 类型 默认值 描述 --- --- --- --- child sup 必选 sup widget - 创建视差 widget size offset offset 10 0 10 0 视差大小 filterquality filterquality null flutter filterquality",
-      "headings": [
-        "TiltParallax widget 参数"
-      ],
-      "keywords": [
-        "widgets",
-        "TiltParallax widget",
-        "TiltParallax widget 参数",
-        "Tilt",
-        "childLayout",
-        "必选",
-        "Widget",
-        "Offset",
-        "Offset(10.0, 10.0)",
-        "FilterQuality",
-        "null"
       ]
     }
   }

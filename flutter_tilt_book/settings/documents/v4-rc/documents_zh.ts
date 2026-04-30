@@ -42,7 +42,7 @@ export const documents_v4_zh: Paths[] = [
   },
   {
     title: "TiltParallax widget",
-    href: "/widgets/tiltparallax-widget",
+    href: "/widgets/tilt-parallax-widget",
   },
   {
     spacer: true,

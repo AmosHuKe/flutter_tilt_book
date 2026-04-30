@@ -1,0 +1,99 @@
+---
+title: TiltBaseContainer
+description: Learn about TiltBaseContainer parameters. TiltBaseContainer widget will have default tilt, shadow, and light effects.
+keywords: ["widgets", "container", "TiltBaseContainer widget"]
+---
+
+`TiltBaseContainer` widget can only be used in the `Tilt` widget.  
+
+A base container widget that provides tilt and simulated light and shadow effects.  
+Use normal shadow effects only for `child`.  
+
+## Simple usage
+
+```dart {4-5, 18} showLineNumbers
+...
+
+/// Tilt with TiltBaseContainer for effects.
+Tilt(
+  child: TiltBaseContainer(
+    child: SizedBox(
+      width: 150,
+      height: 300,
+      child: DecoratedBox(
+        decoration: const BoxDecoration(color: Colors.grey),
+      ),
+    ),
+  ),
+),
+
+/// Tilt with built-in Tilt.base for effects.
+/// Tilt.base is a convenient widget that combines Tilt and TiltBaseContainer.
+Tilt.base(
+  child: SizedBox(
+    width: 150,
+    height: 300,
+    child: DecoratedBox(
+      decoration: const BoxDecoration(color: Colors.grey),
+    ),
+  ),
+),
+
+...
+```
+
+## TiltBaseContainer widget parameters
+
+| Parameter                   | Type                                                                            | Default                | Description                                                          |
+| --------------------------- | ------------------------------------------------------------------------------- | ---------------------- | -------------------------------------------------------------------- |
+| child <sup>`required`</sup> | `Widget`                                                                        | -                      | The main child widget to which tilt and effects are applied.         |
+| childLayout                 | [`ChildLayout`][ChildLayout]                                                    | `ChildLayout()`        | Other child layouts. <br/> e.g. parallax outer, inner, behind.       |
+| lightConfig                 | [`LightConfig`][LightConfig]                                                    | `LightConfig()`        | Light effect config.                                                 |
+| shadowConfig                | [`ShadowBaseConfig`][ShadowBaseConfig]                                          | `ShadowBaseConfig()`   | Shadow effect config.                                                |
+| border                      | `BoxBorder?`                                                                    | `null`                 | BoxDecoration border.                                                |
+| borderRadius                | `BorderRadiusGeometry?`                                                         | `null`                 | BoxDecoration borderRadius.                                          |
+| clipBehavior                | `Clip`                                                                          | `Clip.antiAlias`       | Clip behavior for the container.                                     |
+| filterQuality               | `FilterQuality?`                                                                | `null`                 | Filter quality for the transform.                                    |
+
+## ChildLayout
+
+| Parameter | Type           | Default      | Description                                                                                                              |
+| --------- | -------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| outer     | `List<Widget>` | `<Widget>[]` | As with Stack, you can use the Stack layout to create widgets that are outer of the child. <br/> e.g. parallax effects.  |
+| inner     | `List<Widget>` | `<Widget>[]` | As with Stack, you can use the Stack layout to create widgets that are inner of the child. <br/> e.g. parallax effects.  |
+| behind    | `List<Widget>` | `<Widget>[]` | As with Stack, you can use the Stack layout to create widgets that are behind of the child. <br/> e.g. parallax effects. |
+
+## LightConfig
+
+| Parameter      | Type             | Default                 | Description                                                                                                                                                                           |
+| -------------- | ---------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| disable        | `bool`           | `false`                 | Only disable the light effect.                                                                                                                                                        |
+| color          | `Color`          | `Color(0xFFFFFFFF)`     | Light color.                                                                                                                                                                          |
+| minIntensity   | `double`         | `0.0`                   | Color minimum opacity, also initial opacity.                                                                                                                                          |
+| maxIntensity   | `double`         | `0.5`                   | Color maximum opacity for tilt progresses.                                                                                                                                            |
+| spreadFactor   | `double`         | `4.0`                   | Light spread factor, relative to current widget size.                                                                                                                                 |
+| direction      | `LightDirection` | `LightDirection.around` | Light direction. <br/> Affects: <br/> `[ShadowBaseConfig.direction]` (not affected after configuration).                                                                                  |
+| enableReverse  | `bool`           | `false`                 | Reverse light direction. <br/> Affects: <br/> `[ShadowBaseConfig.direction]` (not affected after configuration). <br/> `[ShadowConfig.enableReverse]` (not affected after configuration). |
+
+## ShadowBaseConfig
+
+| Parameter              | Type               | Default             | Description                                                                                                                  |
+| ---------------------- | ------------------ | ------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| disable                | `bool`             | `false`             | Only disable the shadow effect.                                                                                              |
+| color                  | `Color`            | `Color(0xFF9E9E9E)` | Shadow color.                                                                                                                |
+| minIntensity           | `double`           | `0.0`               | Color minimum opacity, also initial opacity.                                                                                 |
+| maxIntensity           | `double`           | `0.5`               | Color maximum opacity as tilt progresses.                                                                                    |
+| offsetInitial          | `Offset`           | `Offset(0.0, 0.0)`  | Initial value of shadow offset. <br/> e.g. (0.0, 0.0) center. <br/> (40.0, 40.0) Offset 40 to the top left.                  |
+| offsetFactor           | `double`           | `0.1`               | Shadow offset factor, relative to current widget size.                                                                       |
+| direction              | `ShadowDirection?` | `null`              | Shadow direction.                                                                                                            |
+| enableReverse          | `bool?`            | `null`              | Reverse shadow direction.                                                                                                    |
+| spreadInitial          | `double`           | `0.0`               | Initial value of shadow spread radius.                                                                                       |
+| spreadFactor           | `double`           | `0.0`               | Shadow spread radius factor, relative to current widget size.                                                                |
+| minBlurRadius          | `double`           | `10.0`              | Minimum blur radius, also initial blur radius.                                                                               |
+| maxBlurRadius          | `double`           | `20.0`              | Maximum blur radius for tilt progresses.                                                                                     |
+
+
+[TiltBaseContainer widget parameters]: #tiltbasecontainer-widget-parameters
+[ChildLayout]: #childlayout
+[LightConfig]: #lightconfig
+[ShadowBaseConfig]: #shadowbaseconfig
