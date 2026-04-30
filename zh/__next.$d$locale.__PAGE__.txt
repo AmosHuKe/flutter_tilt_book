@@ -1,6 +1,6 @@
 1:"$Sreact.fragment"
 3:I[97367,["/flutter_tilt_book/_next/static/chunks/01xlw8hd842-c.js","/flutter_tilt_book/_next/static/chunks/0n4z.7yu76je-.js"],"OutletBoundary"]
 4:"$Sreact.suspense"
-0:{"rsc":["$","$1","c",{"children":["$L2",null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"--N_Td1u26wE7PRcHzC-a"}
+0:{"rsc":["$","$1","c",{"children":["$L2",null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"FPPD5qwsRv-fvzgFsfd9d"}
 5:null
 2:E{"digest":"NEXT_REDIRECT;replace;/zh/v3;307;"}
