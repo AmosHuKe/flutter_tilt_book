@@ -36,18 +36,6 @@ export const documents_v4_zh: Paths[] = [
     spacer: true,
   },
   {
-    heading: "Widget",
-    title: "Tilt widget",
-    href: "/widgets/tilt-widget",
-  },
-  {
-    title: "TiltParallax widget",
-    href: "/widgets/tilt-parallax-widget",
-  },
-  {
-    spacer: true,
-  },
-  {
     heading: "指南",
     title: "简单使用",
     href: "/guides/simple-usage",
@@ -78,6 +66,18 @@ export const documents_v4_zh: Paths[] = [
         href: "/how-to-make-the-shadow-match-the-content",
       },
     ],
+  },
+  {
+    spacer: true,
+  },
+  {
+    heading: "Widget",
+    title: "Tilt widget",
+    href: "/widgets/tilt-widget",
+  },
+  {
+    title: "TiltParallax widget",
+    href: "/widgets/tilt-parallax-widget",
   },
   {
     spacer: true,
