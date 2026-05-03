@@ -4,7 +4,56 @@ description: Learn about TiltAnimatedBuilder widget parameters. It allows you to
 keywords: ["widgets", "TiltAnimatedBuilder widget"]
 ---
 
-TiltAnimatedBuilder widget can only be used in the `Tilt` widget.
+`TiltAnimatedBuilder` widget can only be used in the `Tilt` widget.  
+
+It provides a customizable animation `builder` callback for rendering logic.  
+(for example, `Transform`).  
+
+## Simple usage
+
+```dart {3-4} showLineNumbers
+...
+
+Tilt(
+  child: TiltAnimatedBuilder(
+    builder: (context, tiltAnimatedState, child) {
+      final animatedTiltData = tiltAnimatedState.animatedTiltData;
+      final tiltTransform = animatedTiltData.transform;
+      final areaProgress = animatedTiltData.areaProgress;
+
+      return Transform(
+        alignment: AlignmentDirectional.center,
+        transform: tiltTransform,
+          child: MyCustomWidget(
+            progress: areaProgress,
+            child: child, // SomeWidget()
+          ),
+      );
+    },
+    child: SomeWidget(),
+  ),
+),
+
+...
+```
 
 ## TiltAnimatedBuilder widget parameters
 
+| Parameter                     | Type      | Default | Description       |
+| ----------------------------- | --------- | ------- | ----------------- |
+| builder <sup>`required`</sup> | Widget Function(<br/>&nbsp;&nbsp;<span style={{whiteSpace:'nowrap'}}>BuildContext context,</span><br/>&nbsp;&nbsp;<span style={{whiteSpace:'nowrap'}}>[TiltAnimatedState][] tiltAnimatedState,</span><br/>&nbsp;&nbsp;<span style={{whiteSpace:'nowrap'}}>Widget? child,</span><br/>); | - | Called every time the Tilt animation changes.<br/>The child passed to this builder should typically be included in the returned widget tree. |
+| child                         | `Widget?` | `null`  | The child widget passed to the `builder`. <br/> If part of the builder subtree does not depend on Tilt animation changes, prebuild it as child to avoid rebuilding it on every animation update. <br/> Using child is optional, but it can significantly improve performance in suitable cases and is a recommended practice. |
+
+## TiltAnimatedState
+
+| Parameter                   | Type            | Description                                                                                                                                                                                                                                                                                                    |
+| --------------------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| tiltConfig                  | `TiltConfig`    | The current tilt configuration.                                                                                                                                                                                                                                                                                |
+| animatedTiltData            | `TiltDataModel` | The current animated tilt data, <br/> which represents the interpolated result from the initial state to `targetTiltData` and is used for rendering the current animation progress. <br/> During the animation, `animatedTiltData` will gradually change from the initial state and approach `targetTiltData`. |
+| targetTiltData              | `TiltDataModel` | The current target tilt data, <br/> which is the final target data of the animation. <br/> During the animation, `animatedTiltData` will gradually change from the initial state and approach `targetTiltData`.                                                                                                |
+| currentGesturesType         | `GesturesType`  | The current gestures type.                                                                                                                                                                                                                                                                                     |
+| isCurrentGesturesTypeActive | `bool`          | Whether the gesture is currently active. <br/> Indicates whether the gesture is currently active, and is used to determine processing based on `gesture priority` of `GesturesType`.                                                                                                                           |
+
+
+[TiltAnimatedBuilder widget parameters]: #tiltanimatedbuilder-widget-parameters
+[TiltAnimatedState]: #tiltanimatedstate
