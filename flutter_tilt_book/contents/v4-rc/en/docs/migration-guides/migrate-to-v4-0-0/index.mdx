@@ -6,4 +6,206 @@ keywords: ["migration guide"]
 
 ### Summary
 
-### Details
+**Breaking changes**
+
+- `Tilt` widget now only manages gesture, sensor, and animation state (**no UI rendering**).
+  - To reproduce the previous default style, you need to compose `TiltBaseContainer` with `Tilt`, or use the built-in `Tilt.base`.
+- Replace `Tilt.TiltStreamController` with `Tilt.TiltController` to unify input stream management.
+- The previous `Tilt.lightShadowMode` parameter has been split into the independent widgets `TiltBaseContainer` and `TiltProjectorContainer`.
+  To reproduce the previous style, you need to compose them inside the `Tilt` widget,
+  or use `Tilt.base` and `Tilt.projector` directly.
+- `ShadowConfig` has been split into `ShadowBaseConfig` and `ShadowProjectorConfig`.
+- Rename `TiltParallax` parameter `size` to `offset`.
+
+**Deprecations**
+
+- The `lightConfig` of `TiltProjectorContainer` is now deprecated.
+  Because the current simulated light effect is not suitable for Projector,
+  it is now disabled by default and will be removed in a future release.
+
+### Tilt basic style (LightShadowMode.base)
+
+`Tilt` widget has been refactored to only manages gesture, sensor, and animation state, without handling UI rendering.  
+To reproduce the previous default style, you can compose the `TiltBaseContainer` with the `Tilt` widget, or simply use the built-in `Tilt.base` for a more convenient approach.  
+
+`ShadowConfig` has been split into `ShadowBaseConfig` and `ShadowProjectorConfig`.
+
+Parameter details:
+- [Tilt widget][]
+- [TiltBaseContainer widget][]
+
+Before:
+
+```dart showLineNumbers
+Tilt(
+  shadowConfig: ShadowConfig(xxx),
+  child: XxxWidget(),
+),
+
+// or
+
+Tilt(
+  lightShadowMode: LightShadowMode.base,
+  shadowConfig: ShadowConfig(xxx),
+  child: XxxWidget(),
+),
+```
+
+After:
+
+```dart {2-4, 13-14} showLineNumbers
+/// Tilt with TiltBaseContainer for effects.
+Tilt(
+  child: TiltBaseContainer(
+    shadowConfig: ShadowBaseConfig(xxx),
+    child: XxxWidget(),
+  ),
+),
+
+// or
+
+/// Tilt with built-in Tilt.base for effects.
+/// Tilt.base is a convenient widget that composes Tilt and TiltBaseContainer.
+Tilt.base(
+  shadowConfig: ShadowBaseConfig(xxx),
+  child: XxxWidget(),
+),
+```
+
+### LightShadowMode.projector style
+
+The previous `Tilt.lightShadowMode` parameter has been split into the independent widgets `TiltBaseContainer` and `TiltProjectorContainer`.  
+To reproduce the previous style, you need to compose them inside the `Tilt` widget, or use `Tilt.base` and `Tilt.projector` directly.  
+
+`ShadowConfig` has been split into `ShadowBaseConfig` and `ShadowProjectorConfig`.
+
+Parameter details:
+- [Tilt widget][]
+- [TiltProjectorContainer widget][]
+
+Before:
+
+```dart showLineNumbers
+Tilt(
+  lightShadowMode: LightShadowMode.projector,
+  shadowConfig: ShadowConfig(xxx),
+  child: XxxWidget(),
+),
+```
+
+After:
+
+```dart {2-4, 13-14} showLineNumbers
+/// Tilt with TiltProjectorContainer for effects.
+Tilt(
+  child: TiltProjectorContainer(
+    shadowConfig: ShadowProjectorConfig(xxx),
+    child: XxxWidget(),
+  ),
+),
+
+// or
+
+/// Tilt with built-in Tilt.projector for effects.
+/// Tilt.projector is a convenient widget that composes Tilt and TiltProjectorContainer.
+Tilt.projector(
+  shadowConfig: ShadowProjectorConfig(xxx),
+  child: XxxWidget(),
+),
+```
+
+### Tilt with controller
+
+The previous `Tilt.TiltStreamController` has been replaced with `Tilt.TiltController` to unify input stream management.
+
+Details: [Tilt with controller][]
+
+Before:
+
+```dart showLineNumbers
+final tiltStreamController = StreamController<TiltStreamModel>.broadcast();
+
+@override
+void dispose() {
+  tiltStreamController.close();
+  super.dispose();
+}
+
+...
+
+Tilt(
+  tiltStreamController: tiltStreamController,
+  ...
+),
+
+...
+
+/// move
+tiltStreamController.add(
+  TiltStreamModel(
+    position: Offset(xx, xx),
+    gestureUse: true,
+  ),
+);
+
+/// leave
+tiltStreamController.add(
+  TiltStreamModel(
+    position: Offset(xx, xx),
+    gestureUse: false,
+  ),
+);
+```
+
+After:
+
+```dart {1, 5, 12, 19, 22} showLineNumbers
+final tiltController = TiltController();
+
+@override
+void dispose() {
+  tiltController.dispose();
+  super.dispose();
+}
+
+...
+
+Tilt(
+  tiltController: tiltController,
+  ...
+),
+
+...
+
+/// move
+tiltController.move(position: Offset(xx, xx));
+
+/// leave
+tiltController.leave(position: Offset(xx, xx));
+```
+
+### Rename TiltParallax parameter
+
+Before:
+
+```dart showLineNumbers
+TiltParallax(
+  size: Offset(xx, xx),
+  child: XxxWidget(),
+),
+```
+
+After:
+
+```dart {2} showLineNumbers
+TiltParallax(
+  offset: Offset(xx, xx),
+  child: XxxWidget(),
+),
+```
+
+
+[Tilt widget]: /en/v4-rc/docs/widgets/tilt-widget/
+[TiltBaseContainer widget]: /en/v4-rc/docs/widgets/tilt-container/tilt-base-container-widget/
+[TiltProjectorContainer widget]: /en/v4-rc/docs/widgets/tilt-container/tilt-projector-container-widget/
+[Tilt with controller]: /en/v4-rc/docs/guides/tilt-with-controller/

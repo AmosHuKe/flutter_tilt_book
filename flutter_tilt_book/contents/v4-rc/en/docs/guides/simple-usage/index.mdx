@@ -6,8 +6,8 @@ keywords: ["guide", "simple usage"]
 
 ## Tilt
 
-The [Tilt widget][Tilt widget parameters] only manages gesture state, sensor state, and animation state.  
-You can combine the [TiltBaseContainer widget][TiltBaseContainer widget parameters] within the Tilt widget to wrap the default tilt, light, and shadow effects.  
+[Tilt widget][Tilt widget parameters] only manages gesture, sensor, and animation state (**no UI rendering**).  
+You can compose the [TiltBaseContainer widget][TiltBaseContainer widget parameters] within the Tilt widget to wrap the default tilt, light, and shadow effects.  
 Alternatively, you can use the built-in `Tilt.base` widget to achieve the same effects.  
 
 For more information about TiltContainer, check out [TiltContainer][].  
@@ -32,7 +32,7 @@ Tilt(
 ),
 
 /// Tilt with built-in Tilt.base for default effects.
-/// Tilt.base is a convenient widget that combines Tilt and TiltBaseContainer.
+/// Tilt.base is a convenient widget that composes Tilt and TiltBaseContainer.
 Tilt.base(
   child: SizedBox(
     width: 150,
@@ -112,7 +112,7 @@ Tilt(
       <div>
         Learn about Tilt widget parameters.
         <br />
-        Tilt widget only manages gesture state, sensor state, and animation state.
+        Tilt widget only manages gesture, sensor, and animation state.
       </div>
     }
     href="/en/v4-rc/docs/widgets/tilt-widget"
