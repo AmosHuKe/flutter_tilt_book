@@ -14,6 +14,14 @@ export const documents_v4_en: Paths[] = [
     href: "/installation",
   },
   {
+    title: "Simple usage",
+    href: "/guides/simple-usage",
+  },
+  {
+    spacer: true,
+  },
+  {
+    heading: "Upgrade",
     title: "Changelog",
     href: "/changelog",
   },
@@ -33,18 +41,15 @@ export const documents_v4_en: Paths[] = [
   },
   {
     heading: "Guides",
-    title: "Simple usage",
-    href: "/guides/simple-usage",
-  },
-  {
-    title: "Tilt with controller",
-    href: "/guides/tilt-with-controller",
-  },
-  {
-    title: "FAQ",
-    href: "/guides/faq",
+    title: "Guides",
+    href: "/guides",
+    noLink: true,
     isSubOpen: false,
     items: [
+      {
+        title: "Tilt with controller",
+        href: "/tilt-with-controller",
+      },
       {
         title: "Keep the tilt angle",
         href: "/keep-the-tilt-angle",
@@ -54,12 +59,20 @@ export const documents_v4_en: Paths[] = [
         href: "/how-to-disable-sensors",
       },
       {
-        title: "Sensors are inactive (Web)",
-        href: "/sensors-are-inactive-on-the-web",
-      },
-      {
         title: "How to make the shadow match the content",
         href: "/how-to-make-the-shadow-match-the-content",
+      },
+    ],
+  },
+  {
+    title: "FAQ",
+    href: "/faq",
+    noLink: true,
+    isSubOpen: false,
+    items: [
+      {
+        title: "Sensors are inactive (Web)",
+        href: "/sensors-are-inactive-on-the-web",
       },
     ],
   },
@@ -101,7 +114,7 @@ export const documents_v4_en: Paths[] = [
     heading: "Examples",
     title: "Examples",
     href: "/examples",
-    isSubOpen: true,
+    isSubOpen: false,
     items: [
       {
         title: "Demo",
