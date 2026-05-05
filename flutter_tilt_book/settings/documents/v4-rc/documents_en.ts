@@ -51,16 +51,16 @@ export const documents_v4_en: Paths[] = [
         href: "/tilt-with-controller",
       },
       {
-        title: "Keep the tilt angle",
-        href: "/keep-the-tilt-angle",
+        title: "Keep tilt angle",
+        href: "/keep-tilt-angle",
       },
       {
-        title: "How to disable sensors",
-        href: "/how-to-disable-sensors",
+        title: "Disable sensors",
+        href: "/disable-sensors",
       },
       {
-        title: "How to make the shadow match the content",
-        href: "/how-to-make-the-shadow-match-the-content",
+        title: "Match shadow to content",
+        href: "/match-shadow-to-content",
       },
     ],
   },
@@ -85,7 +85,7 @@ export const documents_v4_en: Paths[] = [
     href: "/widgets/tilt-widget",
   },
   {
-    title: "TiltContainer",
+    title: "Tilt container",
     href: "/widgets/tilt-container",
     isSubOpen: false,
     items: [

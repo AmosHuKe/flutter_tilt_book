@@ -24,7 +24,7 @@ export function Sidebar({
 }) {
   return (
     <aside
-      className="sticky top-16 hidden h-[94.5vh] min-w-70 flex-1 flex-col overflow-y-auto lg:flex"
+      className="sticky top-16 hidden h-[94.5vh] min-w-70 flex-1 flex-col lg:flex"
       aria-label="Page navigation"
     >
       <ScrollArea type="hover" className="h-full pr-4 pb-4">
