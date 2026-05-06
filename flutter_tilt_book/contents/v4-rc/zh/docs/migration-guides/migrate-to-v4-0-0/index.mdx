@@ -1,0 +1,211 @@
+---
+title: 迁移到 v4.0.0
+description:
+keywords: ["迁移指南"]
+---
+
+### 摘要
+
+**破坏性变更**
+
+- `Tilt` widget 只管理手势、传感器以及动画的状态（无 UI 渲染）。  
+  要还原之前的默认样式，你需要将 `Tilt` 与 `TiltBaseContainer` 组合使用，或者直接使用内置的 `Tilt.base`。
+- 将 `Tilt.TiltStreamController` 替换为 `Tilt.TiltController`，以统一输入流的管理。
+- 之前的 `Tilt.lightShadowMode` 参数已被拆分为独立的 `TiltBaseContainer` 和 `TiltProjectorContainer` widget。  
+  要重现之前的样式，你需要在 `Tilt` widget 内组合它们，  
+  或者直接使用 `Tilt.base` 和 `Tilt.projector`。  
+- `ShadowConfig` 已拆分为 `ShadowBaseConfig` 和 `ShadowProjectorConfig`。
+- `TiltParallax` 的参数 `size` 重命名为 `offset`。
+
+**弃用**
+
+- `TiltProjectorContainer` 的 `lightConfig` 现已弃用。  
+  由于当前模拟的光照效果不适用于 Projector，  
+  因此现在默认禁用，并将在未来版本中移除。  
+
+### Tilt 基础样式 (LightShadowMode.base)
+
+`Tilt` widget 已重构，现在仅管理手势、传感器和动画的状态，不再处理 UI 渲染。  
+要还原之前的默认样式，你可以将 `Tilt` 与 `TiltBaseContainer` 组合使用，或者直接使用更方便的内置 `Tilt.base`。  
+
+`ShadowConfig` 已拆分为 `ShadowBaseConfig` 和 `ShadowProjectorConfig`。  
+
+参数详情：
+- [Tilt widget][]
+- [TiltBaseContainer widget][]
+
+之前：
+
+```dart showLineNumbers
+Tilt(
+  shadowConfig: ShadowConfig(xxx),
+  child: XxxWidget(),
+),
+
+// 或者
+
+Tilt(
+  lightShadowMode: LightShadowMode.base,
+  shadowConfig: ShadowConfig(xxx),
+  child: XxxWidget(),
+),
+```
+
+之后：
+
+```dart {2-4, 13-14} showLineNumbers
+/// 搭配 TiltBaseContainer 为 Tilt 实现效果。
+Tilt(
+  child: TiltBaseContainer(
+    shadowConfig: ShadowBaseConfig(xxx),
+    child: XxxWidget(),
+  ),
+),
+
+// 或者
+
+/// Tilt 内置 Tilt.base 实现默认的效果。
+/// Tilt.base 是一个便捷的 widget，它由 Tilt 和 TiltBaseContainer 组合而成。
+Tilt.base(
+  shadowConfig: ShadowBaseConfig(xxx),
+  child: XxxWidget(),
+),
+```
+
+### LightShadowMode.projector 样式
+
+之前的 `Tilt.lightShadowMode` 参数已被拆分为独立的 `TiltBaseContainer` 和 `TiltProjectorContainer` widget。  
+要重现之前的样式，你需要在 `Tilt` widget 内组合它们，或者直接使用 `Tilt.base` 和 `Tilt.projector`。  
+
+`ShadowConfig` 已拆分为 `ShadowBaseConfig` 和 `ShadowProjectorConfig`。  
+
+参数详情：
+- [Tilt widget][]
+- [TiltProjectorContainer widget][]
+
+之前：
+
+```dart showLineNumbers
+Tilt(
+  lightShadowMode: LightShadowMode.projector,
+  shadowConfig: ShadowConfig(xxx),
+  child: XxxWidget(),
+),
+```
+
+之后：
+
+```dart {2-4, 13-14} showLineNumbers
+/// 搭配 TiltProjectorContainer 为 Tilt 实现效果。
+Tilt(
+  child: TiltProjectorContainer(
+    shadowConfig: ShadowProjectorConfig(xxx),
+    child: XxxWidget(),
+  ),
+),
+
+// 或者
+
+/// Tilt 内置 Tilt.projector 实现默认的效果。
+/// Tilt.projector 是一个便捷的 widget，它由 Tilt 和 TiltProjectorContainer 组合而成。
+Tilt.projector(
+  shadowConfig: ShadowProjectorConfig(xxx),
+  child: XxxWidget(),
+),
+```
+
+### Tilt 控制器
+
+之前的 `Tilt.TiltStreamController` 已被替换为 `Tilt.TiltController`，以统一输入流的管理。  
+
+详情：[Tilt 控制器][Tilt with controller]  
+
+之前：
+
+```dart showLineNumbers
+final tiltStreamController = StreamController<TiltStreamModel>.broadcast();
+
+@override
+void dispose() {
+  tiltStreamController.close();
+  super.dispose();
+}
+
+...
+
+Tilt(
+  tiltStreamController: tiltStreamController,
+  ...
+),
+
+...
+
+/// move
+tiltStreamController.add(
+  TiltStreamModel(
+    position: Offset(xx, xx),
+    gestureUse: true,
+  ),
+);
+
+/// leave
+tiltStreamController.add(
+  TiltStreamModel(
+    position: Offset(xx, xx),
+    gestureUse: false,
+  ),
+);
+```
+
+之后：
+
+```dart {1, 5, 12, 19, 22} showLineNumbers
+final tiltController = TiltController();
+
+@override
+void dispose() {
+  tiltController.dispose();
+  super.dispose();
+}
+
+...
+
+Tilt(
+  tiltController: tiltController,
+  ...
+),
+
+...
+
+/// move
+tiltController.move(position: Offset(xx, xx));
+
+/// leave
+tiltController.leave(position: Offset(xx, xx));
+```
+
+### 重命名 TiltParallax 参数
+
+之前：
+
+```dart showLineNumbers
+TiltParallax(
+  size: Offset(xx, xx),
+  child: XxxWidget(),
+),
+```
+
+之后：
+
+```dart {2} showLineNumbers
+TiltParallax(
+  offset: Offset(xx, xx),
+  child: XxxWidget(),
+),
+```
+
+
+[Tilt widget]: /zh/v4-rc/docs/widgets/tilt-widget/
+[TiltBaseContainer widget]: /zh/v4-rc/docs/widgets/tilt-container/tilt-base-container-widget/
+[TiltProjectorContainer widget]: /zh/v4-rc/docs/widgets/tilt-container/tilt-projector-container-widget/
+[Tilt with controller]: /zh/v4-rc/docs/guides/tilt-with-controller/

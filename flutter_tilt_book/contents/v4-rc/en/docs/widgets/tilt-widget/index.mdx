@@ -1,7 +1,7 @@
 ---
 title: Tilt widget
 description: Learn about Tilt widget parameters. Tilt widget only manages gesture, sensor, and animation state.
-keywords: ["widgets", "tilt widget"]
+keywords: ["widget", "tilt widget"]
 ---
 
 Tilt widget only manages gesture, sensor, and animation state (no UI rendering).  
@@ -30,13 +30,21 @@ When multiple gestures are enabled, they are triggered based on priority:
 ```dart showLineNumbers
 final TiltController tiltController = TiltController();
 
+...
+
+@override
+void dispose() {
+  tiltController.dispose();
+  super.dispose();
+}
+
+...
+
 /// Handle the "move" input event.
-///
 /// Should be used together with `leave` to indicate the end of the gesture.
 tiltController.move(position: Offset(xx, xx));
 
 /// Handle the "leave" input event.
-///
 /// Stop using the current gesture.
 tiltController.leave(position: Offset(xx, xx));
 ```
@@ -79,6 +87,5 @@ tiltController.leave(position: Offset(xx, xx));
 
 [Tilt container widget list]: /en/v4-rc/docs/widgets/tilt-container
 [gesture priority]: #gesture-priority
-[Tilt widget parameters]: #tilt-widget-parameters
 [TiltController]: #tiltcontroller
 [TiltConfig]: #tiltconfig

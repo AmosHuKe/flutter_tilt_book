@@ -32,9 +32,9 @@ Tilt(
 ## Using the controller
 
 Handle the `move` input event.  
-Should be used together with `leave` to indicate the end of the gesture.
+Should be used together with `leave` to indicate the end of the gesture.  
 
-`position` is the current trigger position, It will have the tilt effect of the corresponding position.
+`position` is the current trigger position, It will have the tilt effect of the corresponding position.  
 
 For example:  
 There is a widget size, width: 10, height: 10,  
@@ -47,7 +47,7 @@ tiltController.move(position: Offset(xx, xx));
 ```
 
 Handle the `leave` input event.  
-Stop using the current gesture.
+Stop using the current gesture.  
 
 ```dart
 tiltController.leave(position: Offset(xx, xx));
@@ -56,8 +56,8 @@ tiltController.leave(position: Offset(xx, xx));
 ## More
 
 You can also see an example: [Example - TiltStreamController][].  
-For more information, see: [Tilt widget - TiltController][].
+For more information, see: [Tilt widget - TiltController][].  
 
-[gesture priority]: /en/v4-rc/docs/widgets/tilt-widget/#gesture-priority
+
 [Example - TiltStreamController]: /en/v4-rc/docs/examples/tilt-stream-controller-demo
 [Tilt widget - TiltController]: /en/v4-rc/docs/widgets/tilt-widget/#tiltcontroller

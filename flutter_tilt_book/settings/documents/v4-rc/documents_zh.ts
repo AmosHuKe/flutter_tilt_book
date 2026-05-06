@@ -14,6 +14,14 @@ export const documents_v4_zh: Paths[] = [
     href: "/installation",
   },
   {
+    title: "简单用法",
+    href: "/guides/simple-usage",
+  },
+  {
+    spacer: true,
+  },
+  {
+    heading: "升级",
     title: "更新日志",
     href: "/changelog",
   },
@@ -23,12 +31,8 @@ export const documents_v4_zh: Paths[] = [
     isSubOpen: false,
     items: [
       {
-        title: "^1.0.0 到 ^2.0.0",
-        href: "/migrate-to-v2-0-0",
-      },
-      {
-        title: "^0.0.1 到 ^0.1.0",
-        href: "/migrate-to-v0-1-0",
+        title: "^3.0.0 到 ^4.0.0",
+        href: "/migrate-to-v4-0-0",
       },
     ],
   },
@@ -37,33 +41,38 @@ export const documents_v4_zh: Paths[] = [
   },
   {
     heading: "指南",
-    title: "简单使用",
-    href: "/guides/simple-usage",
-  },
-  {
-    title: "Tilt 控制器",
-    href: "/guides/tilt-with-controller",
-  },
-  {
-    title: "常见问题",
-    href: "/guides/faq",
+    title: "指南",
+    href: "/guides",
+    noLink: true,
     isSubOpen: false,
     items: [
       {
-        title: "保持倾斜角度",
-        href: "/keep-the-tilt-angle",
+        title: "Tilt 控制器",
+        href: "/tilt-with-controller",
       },
       {
-        title: "如何禁用传感器",
-        href: "/how-to-disable-sensors",
+        title: "保持倾斜角度",
+        href: "/keep-tilt-angle",
       },
+      {
+        title: "禁用传感器",
+        href: "/disable-sensors",
+      },
+      {
+        title: "使阴影与内容相匹配",
+        href: "/match-shadow-to-content",
+      },
+    ],
+  },
+  {
+    title: "常见问题",
+    href: "/faq",
+    noLink: true,
+    isSubOpen: false,
+    items: [
       {
         title: "传感器失效 (Web)",
         href: "/sensors-are-inactive-on-the-web",
-      },
-      {
-        title: "如何使阴影与内容匹配",
-        href: "/how-to-make-the-shadow-match-the-content",
       },
     ],
   },
@@ -72,12 +81,31 @@ export const documents_v4_zh: Paths[] = [
   },
   {
     heading: "Widget",
-    title: "Tilt widget",
+    title: "Tilt",
     href: "/widgets/tilt-widget",
   },
   {
-    title: "TiltParallax widget",
+    title: "Tilt 容器",
+    href: "/widgets/tilt-container",
+    isSubOpen: false,
+    items: [
+      {
+        title: "TiltBaseContainer",
+        href: "/tilt-base-container-widget",
+      },
+      {
+        title: "TiltProjectorContainer",
+        href: "/tilt-projector-container-widget",
+      },
+    ],
+  },
+  {
+    title: "TiltParallax",
     href: "/widgets/tilt-parallax-widget",
+  },
+  {
+    title: "TiltAnimatedBuilder",
+    href: "/widgets/tilt-animated-builder-widget",
   },
   {
     spacer: true,
@@ -86,7 +114,7 @@ export const documents_v4_zh: Paths[] = [
     heading: "示例",
     title: "示例",
     href: "/examples",
-    isSubOpen: true,
+    isSubOpen: false,
     items: [
       {
         title: "Demo",

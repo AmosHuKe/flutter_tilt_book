@@ -8,71 +8,101 @@ keywords: ["介绍"]
 
 - 👀 倾斜与视差效果
 - 🎨 模拟光照与阴影效果
-- 📱 陀螺仪传感器支持 ([传感器兼容][Sensors compatibility])
+- 📱 陀螺仪传感器支持 ([传感器兼容][Sensor compatibility])
 - 🧱 多种布局位置
 - 👇 支持鼠标、触摸和传感器事件 ([手势优先级][Gesture priority])
 - 🖼️ 流畅的动画
 - ⚙️ 许多自定义参数
 
-<br/>
+## 初次接触 flutter_tilt？
 
-<Step>
-  <StepItem title="开始">
-    <NavCardGrid>
-      <NavCard
-        subtitle="开始"
-        title="安装"
-        description="本指南介绍了相关兼容性以及如何添加 flutter_tilt package。"
-        href="/zh/v4-rc/docs/installation"
-      />
-      <NavCard
-        subtitle="指南"
-        title="简单使用"
-        description="简单示例帮助你快速上手。"
-        href="/zh/v4-rc/docs/guides/simple-usage"
-      />
-    </NavCardGrid>
-  </StepItem>
+<NavCardGrid>
+  <NavCard
+    subtitle="开始"
+    title="安装"
+    description="本指南介绍了相关兼容性以及如何添加 flutter_tilt package。"
+    href="/zh/v4-rc/docs/installation"
+  />
+  <NavCard
+    subtitle="指南"
+    title="简单用法"
+    description="简单示例帮助你快速上手。"
+    href="/zh/v4-rc/docs/guides/simple-usage"
+  />
+</NavCardGrid>
 
-  <StepItem title="Widget">
-    <NavCardGrid>
-      <NavCard
-        subtitle="Widget"
-        title="Tilt widget"
-        description={
-          <div>
-            了解 Tilt widget 参数。
-            <br />
-            Tilt widget 默认有倾斜、阴影和光照的效果。
-          </div>
-        }
-        href="/zh/v4-rc/docs/widgets/tilt-widget"
-      />
-      <NavCard
-        subtitle="Widget"
-        title="TiltParallax widget"
-        description={
-          <div>
-            了解 TiltParallax widget 参数。
-            <br />
-            Tilt widget 中的视差效果。
-          </div>
-        }
-        href="/zh/v4-rc/docs/widgets/tilt-parallax-widget"
-      />
-    </NavCardGrid>
-  </StepItem>
+## 迁移至 v4
 
-  <StepItem title="示例">
-    <NavCardGrid>
-      <NavCard
-        title="所有示例"
-        description="探索附带源码的示例。"
-        href="/zh/v4-rc/docs/examples"
-      />
-    </NavCardGrid>
-  </StepItem>
-</Step>
+<NavCardGrid>
+  <NavCard
+    subtitle="升级"
+    title="^3.0.0 到 ^4.0.0"
+    description=""
+    href="/zh/v4-rc/docs/migration-guides/migrate-to-v4-0-0/"
+  />
+</NavCardGrid>
 
-[Sensors compatibility]: /zh/v4-rc/docs/installation/#传感器兼容
+## 探索使用示例
+
+<NavCardGrid>
+  <NavCard
+    title="所有示例"
+    description="探索附带源码的示例。"
+    href="/zh/v4-rc/docs/examples"
+  />
+</NavCardGrid>
+
+## Widget API
+
+<NavCardGrid>
+  <NavCard
+    subtitle="Widget"
+    title="Tilt Widget"
+    description={
+      <div>
+        了解 Tilt widget 参数。
+        <br />
+        Tilt widget 仅管理手势、传感器以及动画的状态。
+      </div>
+    }
+    href="/zh/v4-rc/docs/widgets/tilt-widget"
+  />
+  <NavCard
+    subtitle="Widget"
+    title="Tilt 容器"
+    description={
+      <div>
+        了解 Tilt 容器的样式。
+      </div>
+    }
+    href="/zh/v4-rc/docs/widgets/tilt-container"
+  />
+  <NavCard
+    subtitle="Widget"
+    title="TiltParallax Widget"
+    description={
+      <div>
+        了解 TiltParallax widget 参数。
+        <br />
+        Tilt widget 中的视差效果。
+      </div>
+    }
+    href="/zh/v4-rc/docs/widgets/tilt-parallax-widget"
+  />
+  <NavCard
+    subtitle="Widget"
+    title="TiltAnimatedBuilder"
+    description={
+      <div>
+        了解 TiltAnimatedBuilder widget 参数。
+        <br />
+        它允许你自定义倾斜动画。
+      </div>
+    }
+    href="/zh/v4-rc/docs/widgets/tilt-animated-builder-widget"
+  />
+</NavCardGrid>
+
+
+[Sensor compatibility]: /zh/v4-rc/docs/installation/#传感器兼容
 [Gesture priority]: /zh/v4-rc/docs/widgets/tilt-widget/#手势优先级

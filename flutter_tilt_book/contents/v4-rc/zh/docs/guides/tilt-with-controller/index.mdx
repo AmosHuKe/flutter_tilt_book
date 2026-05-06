@@ -6,17 +6,23 @@ keywords: ["指南", "控制器"]
 
 如果你需要通过编程的方式来控制倾斜，可以参考以下：
 
-## 配置 Tilt.tiltStreamController
+## 配置 Tilt.tiltController
 
-```dart {3,8} showLineNumbers
+```dart {3, 7, 14} showLineNumbers
 ...
 
-final tiltStreamController = StreamController<TiltStreamModel>.broadcast();
+final tiltController = TiltController();
+
+@override
+void dispose() {
+  tiltController.dispose();
+  super.dispose();
+}
 
 ...
 
 Tilt(
-  tiltStreamController: tiltStreamController,
+  tiltController: tiltController,
   ...
 ),
 
@@ -25,10 +31,10 @@ Tilt(
 
 ## 使用控制器
 
-正在使用当前手势：
+处理 `move` 输入事件。  
+应与 `leave` 配合使用以表示手势结束。  
 
-`TiltStreamModel.position` 是当前触发的坐标位置，
-它将产生对应位置的倾斜效果。
+`position` 是当前触发的坐标位置，它将产生对应位置的倾斜效果。  
 
 例如：  
 有一个 widget 尺寸，宽度：10，高度：10。
@@ -36,34 +42,22 @@ Tilt(
 - Offset(0, 0)：会触发最左上的倾斜。
 - Offset(10, 10)：会触发最右下的倾斜。
 
-```dart showLineNumbers
-tiltStreamController.add(
-  TiltStreamModel(
-    position: Offset(xx, xx),
-  ),
-);
+```dart
+tiltController.move(position: Offset(xx, xx));
 ```
 
-停止使用当前手势：
+处理 `leave` 输入事件。  
+停止使用当前手势。  
 
-默认情况下，`TiltStreamModel` 使用 `GesturesType.controller` 手势类型。  
-`TiltStreamModel.gestureUse` 用于确定手势是否正在使用，并根据 [手势优先级][] 进行处理。
-
-```dart showLineNumbers
-tiltStreamController.add(
-  TiltStreamModel(
-    position: Offset(xx, xx),
-    gestureUse: false,
-  ),
-);
+```dart
+tiltController.leave(position: Offset(xx, xx));
 ```
 
 ## 更多
 
 你还可以查看一个示例：[示例 - TiltStreamController][]。  
-更多信息，请参阅：[Tilt widget - StreamController\<TiltStreamModel\>][]。
+更多信息，请参阅：[Tilt widget - TiltController][]。  
 
 
-[手势优先级]: /zh/v4-rc/docs/widgets/tilt-widget/#手势优先级
 [示例 - TiltStreamController]: /zh/v4-rc/docs/examples/tilt-stream-controller-demo
-[Tilt widget - StreamController\<TiltStreamModel\>]: /zh/v4-rc/docs/widgets/tilt-widget/#streamcontrollertiltstreammodel
+[Tilt widget - TiltController]: /zh/v4-rc/docs/widgets/tilt-widget/#tiltcontroller
