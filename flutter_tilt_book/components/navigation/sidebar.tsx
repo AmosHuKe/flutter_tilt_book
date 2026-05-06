@@ -24,10 +24,10 @@ export function Sidebar({
 }) {
   return (
     <aside
-      className="sticky top-16 hidden h-[94.5vh] min-w-70 flex-1 flex-col lg:flex"
+      className="sticky top-16 hidden h-[calc(100vh-64px)] min-w-70 flex-1 flex-col lg:flex"
       aria-label="Page navigation"
     >
-      <ScrollArea type="hover" className="h-full pr-4 pb-4">
+      <ScrollArea type="hover" className="h-full pr-4">
         <PageMenu locale={locale} version={version} />
       </ScrollArea>
     </aside>
@@ -58,17 +58,16 @@ export function SheetLeft({
           <SheetClose />
           <Logo locale={locale} version={version} />
         </SheetHeader>
-        <ScrollArea
-          type="always"
-          className="flex h-full flex-col gap-4 overflow-y-auto"
-        >
-          <div className="mx-0 mt-3 flex flex-col gap-2.5 pr-5 pl-2.5">
-            <NavMenu locale={locale} version={version} isSheet />
-          </div>
-          <div className="mx-0 pr-5 pl-2.5">
-            <PageMenu locale={locale} version={version} isSheet />
-          </div>
-        </ScrollArea>
+        <aside className="h-[calc(100vh-74px)]" aria-label="Page navigation">
+          <ScrollArea type="always" className="flex h-full flex-col gap-4">
+            <div className="mx-0 mt-3 flex flex-col gap-2.5 pr-5 pl-2.5">
+              <NavMenu locale={locale} version={version} isSheet />
+            </div>
+            <div className="mx-0 pr-5 pl-2.5">
+              <PageMenu locale={locale} version={version} isSheet />
+            </div>
+          </ScrollArea>
+        </aside>
       </SheetContent>
     </Sheet>
   )
