@@ -1,6 +1,5 @@
 import { LuAlignLeft } from "react-icons/lu"
 
-import { Settings } from "@/lib/meta"
 import { Button } from "@/components/ui/button"
 import { DialogTitle } from "@/components/ui/dialog"
 import { ScrollArea } from "@/components/ui/scroll-area"

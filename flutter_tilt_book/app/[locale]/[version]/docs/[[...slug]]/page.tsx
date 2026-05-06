@@ -99,13 +99,14 @@ export default async function Pages({ params }: PageProps) {
 
       {Settings.rightbar && (
         <aside
-          className="toc sticky top-16 hidden h-[94.5vh] min-w-57.5 gap-3 py-8 xl:flex xl:flex-col"
+          className="toc sticky top-16 hidden h-[calc(100vh-64px)] min-w-57.5 gap-3 py-8 xl:flex xl:flex-col"
           aria-label="Table of contents"
         >
           {Settings.toc && <Toc title={t("toc.title")} tocs={tocs} />}
           {Settings.feedback && (
             <Feedback
               locale={locale}
+              version={version}
               slug={pathName}
               title={frontmatter.title}
             />

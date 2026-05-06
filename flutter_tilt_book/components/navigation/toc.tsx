@@ -31,7 +31,7 @@ export default function Toc({ title, tocs }: TocProps) {
   return (
     <div className="flex w-full flex-col gap-3 pl-2">
       <h3 className="text-sm font-semibold">{title}</h3>
-      <ScrollArea type="always" className="max-h-[50vh] w-[250px] pt-0.5 pb-4">
+      <ScrollArea type="always" className="max-h-[40vh] w-62.5 pt-0.5 pb-4">
         <div className="flex flex-col gap-2.5 text-sm text-zinc-800 dark:text-zinc-300/85">
           {tocs.map(({ href, level, text }, index) => (
             <Link

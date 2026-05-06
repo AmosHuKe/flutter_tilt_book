@@ -7,18 +7,20 @@ import { cn } from "@/lib/utils"
 
 type SideBarEdit = {
   locale: string
+  version: string
   title: string
   slug: string
 }
 
 export default async function RightSideBar({
   locale,
+  version,
   slug,
   title,
 }: SideBarEdit) {
   const t = await getTranslations({ locale })
-  const feedbackUrl = `${Settings.currentRepoLink}/issues/new?title=Feedback for "${title}" - "${locale}/docs/${slug}"`
-  const editUrl = `${Settings.currentRepoLink}/tree/main/flutter_tilt_book/contents/${locale}/docs/${slug}/index.mdx`
+  const feedbackUrl = `${Settings.currentRepoLink}/issues/new?title=Feedback for "${title}" - "${locale}/${version}/docs/${slug}"`
+  const editUrl = `${Settings.currentRepoLink}/tree/main/flutter_tilt_book/contents/${version}/${locale}/docs/${slug}/index.mdx`
 
   return (
     <div className="flex flex-col gap-3 pl-2">
