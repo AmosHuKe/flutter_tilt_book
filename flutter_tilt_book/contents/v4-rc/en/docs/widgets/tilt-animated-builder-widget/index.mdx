@@ -24,10 +24,10 @@ Tilt(
       return Transform(
         alignment: AlignmentDirectional.center,
         transform: tiltTransform,
-          child: MyCustomWidget(
-            progress: areaProgress,
-            child: child, // SomeWidget()
-          ),
+        child: MyCustomWidget(
+          progress: areaProgress,
+          child: child, // SomeWidget()
+        ),
       );
     },
     child: SomeWidget(),
@@ -39,10 +39,10 @@ Tilt(
 
 ## TiltAnimatedBuilder widget parameters
 
-| Parameter                     | Type      | Default | Description       |
-| ----------------------------- | --------- | ------- | ----------------- |
-| builder <sup>`required`</sup> | Widget Function(<br/>&nbsp;&nbsp;<span style={{whiteSpace:'nowrap'}}>BuildContext context,</span><br/>&nbsp;&nbsp;<span style={{whiteSpace:'nowrap'}}>[TiltAnimatedState][] tiltAnimatedState,</span><br/>&nbsp;&nbsp;<span style={{whiteSpace:'nowrap'}}>Widget? child,</span><br/>); | - | Called every time the Tilt animation changes.<br/>The child passed to this builder should typically be included in the returned widget tree. |
-| child                         | `Widget?` | `null`  | The child widget passed to the `builder`. <br/> If part of the builder subtree does not depend on Tilt animation changes, prebuild it as child to avoid rebuilding it on every animation update. <br/> Using child is optional, but it can significantly improve performance in suitable cases and is a recommended practice. |
+| Parameter                     | Type                                                                                                                                                                                                                                                                                   | Default | Description                                                                                                                                                                                                                                                                                                                   |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| builder <sup>`required`</sup> | Widget Function(<br/>&nbsp;&nbsp;<span style={{whiteSpace:'nowrap'}}>BuildContext context,</span><br/>&nbsp;&nbsp;<span style={{whiteSpace:'nowrap'}}>[TiltAnimatedState][] tiltAnimatedState,</span><br/>&nbsp;&nbsp;<span style={{whiteSpace:'nowrap'}}>Widget? child,</span><br/>); | -       | Called every time the Tilt animation changes.<br/>The child passed to this builder should typically be included in the returned widget tree.                                                                                                                                                                                  |
+| child                         | `Widget?`                                                                                                                                                                                                                                                                              | `null`  | The child widget passed to the `builder`. <br/> If part of the builder subtree does not depend on Tilt animation changes, prebuild it as child to avoid rebuilding it on every animation update. <br/> Using child is optional, but it can significantly improve performance in suitable cases and is a recommended practice. |
 
 ## TiltAnimatedState
 

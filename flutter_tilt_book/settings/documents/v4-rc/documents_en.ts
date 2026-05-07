@@ -87,7 +87,7 @@ export const documents_v4_en: Paths[] = [
   {
     title: "Tilt container",
     href: "/widgets/tilt-container",
-    isSubOpen: false,
+    isSubOpen: true,
     items: [
       {
         title: "TiltBaseContainer",
@@ -114,7 +114,7 @@ export const documents_v4_en: Paths[] = [
     heading: "Examples",
     title: "Examples",
     href: "/examples",
-    isSubOpen: false,
+    isSubOpen: true,
     items: [
       {
         title: "Demo",

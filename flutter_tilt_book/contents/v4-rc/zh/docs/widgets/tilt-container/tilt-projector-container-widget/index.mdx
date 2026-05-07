@@ -1,25 +1,25 @@
 ---
-title: TiltProjectorContainer
-description: Learn about TiltProjectorContainer parameters. TiltProjectorContainer widget will have tilt and projector-like shadow effects.
+title: TiltProjectorContainer widget
+description: 了解 TiltBaseContainer  widget 参数。TiltProjectorContainer widget 具备倾斜效果以及类似投影的阴影效果。
 keywords: ["widget", "container", "TiltProjectorContainer widget"]
 ---
 
-`TiltProjectorContainer` widget can only be used in the `Tilt` widget.  
+`TiltProjectorContainer` widget 只能在 `Tilt` widget 中使用。  
 
-Apply a shadow to the entire `child` and `childLayout`, similar to a projector effect.  
-It will display a shadow that exactly matches the non-transparent parts of the widget.  
+对整个 `child`、`childLayout` 使用类似投影仪效果的阴影，  
+它会显示与 widget 非透明部分完全一致的阴影。  
 
-**Performance risk exists**  
+**存在性能风险**  
 
-Recommended for the following scenarios:  
-- Images only  
-- No data states  
-- No Hero tags  
+建议在以下场景使用：  
+- 仅图片
+- 无数据状态
+- 无 Hero 标签
 
-You should assess the performance risks yourself.  
-If your scenario runs smoothly, then you can use it.  
+你应该自行评估性能风险，
+如果你应用的场景运行流畅，则可继续使用。  
 
-## Simple usage
+## 简单用法
 
 ```dart {27-28, 36} showLineNumbers
 ...
@@ -47,7 +47,7 @@ final childLayout = ChildLayout(
 
 ...
 
-/// Tilt with TiltProjectorContainer for effects.
+/// 搭配 TiltProjectorContainer 为 Tilt 实现效果。
 Tilt(
   child: TiltProjectorContainer(
     childLayout: childLayout,
@@ -55,8 +55,8 @@ Tilt(
   ),
 ),
 
-/// Tilt with built-in Tilt.projector for effects.
-/// Tilt.projector is a convenient widget that composes Tilt and TiltProjectorContainer.
+/// Tilt 内置 Tilt.projector 实现效果。
+/// Tilt.projector 是一个便捷的 widget，它由 Tilt 和 TiltProjectorContainer 组合而成。
 Tilt.projector(
   childLayout: childLayout,
   child: SizedBox(width: 150, height: 300),
@@ -65,42 +65,42 @@ Tilt.projector(
 ...
 ```
 
-## TiltProjectorContainer widget parameters
+## TiltProjectorContainer widget 参数
 
-| Parameter                   | Type                                                                            | Default                   | Description                                                          |
-| --------------------------- | ------------------------------------------------------------------------------- | ------------------------- | -------------------------------------------------------------------- |
-| child <sup>`required`</sup> | `Widget`                                                                        | -                         | The main child widget to which tilt and effects are applied.         |
-| childLayout                 | [`ChildLayout`][ChildLayout]                                                    | `ChildLayout()`           | Other child layouts. <br/> e.g. parallax outer, inner, behind.       |
-| shadowConfig                | [`ShadowProjectorConfig`][ShadowProjectorConfig]                                | `ShadowProjectorConfig()` | Shadow effect config.                                                |
-| border                      | `BoxBorder?`                                                                    | `null`                    | BoxDecoration border.                                                |
-| borderRadius                | `BorderRadiusGeometry?`                                                         | `null`                    | BoxDecoration borderRadius.                                          |
-| clipBehavior                | `Clip`                                                                          | `Clip.antiAlias`          | Clip behavior for the container.                                     |
-| filterQuality               | `FilterQuality?`                                                                | `null`                    | Filter quality for the transform.                                    |
+| 参数名                      | 类型                                             | 默认值                    | 描述                                                                  |
+| --------------------------- | ------------------------------------------------ | ------------------------- | --------------------------------------------------------------------- |
+| child <sup>`required`</sup> | `Widget`                                         | -                         | 主要 child widget，倾斜和各种效果将应用于该 widget。                  |
+| childLayout                 | [`ChildLayout`][ChildLayout]                     | `ChildLayout()`           | 其它 child 布局。 <br/> 例如：位于 child 外部、内部、后面的视差布局。 |
+| shadowConfig                | [`ShadowProjectorConfig`][ShadowProjectorConfig] | `ShadowProjectorConfig()` | 阴影效果配置。                                                        |
+| border                      | `BoxBorder?`                                     | `null`                    | BoxDecoration border。                                                |
+| borderRadius                | `BorderRadiusGeometry?`                          | `null`                    | BoxDecoration borderRadius。                                          |
+| clipBehavior                | `Clip`                                           | `Clip.antiAlias`          | 容器的裁剪表现。                                                      |
+| filterQuality               | `FilterQuality?`                                 | `null`                    | Transform 的质量。                                                    |
 
 ## ChildLayout
 
-| Parameter | Type           | Default      | Description                                                                                                              |
-| --------- | -------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| outer     | `List<Widget>` | `<Widget>[]` | As with Stack, you can use the Stack layout to create widgets that are outer of the child. <br/> e.g. parallax effects.  |
-| inner     | `List<Widget>` | `<Widget>[]` | As with Stack, you can use the Stack layout to create widgets that are inner of the child. <br/> e.g. parallax effects.  |
-| behind    | `List<Widget>` | `<Widget>[]` | As with Stack, you can use the Stack layout to create widgets that are behind of the child. <br/> e.g. parallax effects. |
+| 参数名 | 类型           | 默认值       | 描述                                                                                               |
+| ------ | -------------- | ------------ | -------------------------------------------------------------------------------------------------- |
+| outer  | `List<Widget>` | `<Widget>[]` | 与 Stack 一样，你可以使用 Stack 布局来创建一些位于 `child 外部` 的 widget。 <br/> 例如：视差效果。 |
+| inner  | `List<Widget>` | `<Widget>[]` | 与 Stack 一样，你可以使用 Stack 布局来创建一些位于 `child 内部` 的 widget。 <br/> 例如：视差效果。 |
+| behind | `List<Widget>` | `<Widget>[]` | 与 Stack 一样，你可以使用 Stack 布局来创建一些位于 `child 后面` 的 widget。 <br/> 例如：视差效果。 |
 
 ## ShadowProjectorConfig
 
-| Parameter              | Type               | Default             | Description                                                                                                                  |
-| ---------------------- | ------------------ | ------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| disable                | `bool`             | `false`             | Only disable the shadow effect.                                                                                              |
-| color                  | `Color`            | `Color(0xFF9E9E9E)` | Shadow color.                                                                                                                |
-| minIntensity           | `double`           | `0.0`               | Color minimum opacity, also initial opacity.                                                                                 |
-| maxIntensity           | `double`           | `0.5`               | Color maximum opacity as tilt progresses.                                                                                    |
-| offsetInitial          | `Offset`           | `Offset(0.0, 0.0)`  | Initial value of shadow offset. <br/> e.g. (0.0, 0.0) center. <br/> (40.0, 40.0) Offset 40 to the top left.                  |
-| offsetFactor           | `double`           | `0.1`               | Shadow offset factor, relative to current widget size.                                                                       |
-| direction              | `ShadowDirection?` | `null`              | Shadow direction.                                                                                                            |
-| enableReverse          | `bool?`            | `null`              | Reverse shadow direction.                                                                                                    |
-| projectorScaleFrom     | `double`           | `1.0`               | Size scale for minimum progress, also initial size scale.                                                                    |
-| projectorScaleTo       | `double`           | `1.0`               | Size scale for maximum progress.                                                                                             |
-| projectorBlurSigmaFrom | `double`           | `5.0`               | Blur sigma for minimum progress, also initial blur sigma.                                                                    |
-| projectorBlurSigmaTo   | `double`           | `10.0`              | Blur sigma for maximum progress.                                                                                             |
+| 参数名                 | 类型               | 默认值              | 描述                                                                              |
+| ---------------------- | ------------------ | ------------------- | --------------------------------------------------------------------------------- |
+| disable                | `bool`             | `false`             | 仅禁用阴影效果。                                                                  |
+| color                  | `Color`            | `Color(0xFF9E9E9E)` | 阴影颜色。                                                                        |
+| minIntensity           | `double`           | `0.0`               | 颜色最小不透明度，也是初始不透明度。                                              |
+| maxIntensity           | `double`           | `0.5`               | 颜色最大不透明度，跟随倾斜最大进度。                                              |
+| offsetInitial          | `Offset`           | `Offset(0.0, 0.0)`  | 阴影偏移初始值。 <br/> 例如：(0.0, 0.0) 中心 <br/> (40.0, 40.0) 向左上角偏移 40。 |
+| offsetFactor           | `double`           | `0.1`               | 阴影偏移系数，相对于当前 widget 尺寸。                                            |
+| direction              | `ShadowDirection?` | `null`              | 阴影方向。                                                                        |
+| enableReverse          | `bool?`            | `null`              | 反转阴影方向。                                                                    |
+| projectorScaleFrom     | `double`           | `1.0`               | 最小倾斜进度的阴影尺寸比例，也是初始尺寸比例。                                    |
+| projectorScaleTo       | `double`           | `1.0`               | 最大倾斜进度的阴影尺寸比例。                                                      |
+| projectorBlurSigmaFrom | `double`           | `5.0`               | 最小倾斜进度的阴影模糊 Sigma，也是初始模糊 Sigma。                                |
+| projectorBlurSigmaTo   | `double`           | `10.0`              | 最大倾斜进度的阴影模糊 Sigma。                                                    |
 
 
 [ChildLayout]: #childlayout

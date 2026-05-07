@@ -1,6 +1,6 @@
 ---
-title: TiltProjectorContainer
-description: Learn about TiltProjectorContainer parameters. TiltProjectorContainer widget will have tilt and projector-like shadow effects.
+title: TiltProjectorContainer widget
+description: Learn about TiltProjectorContainer widget parameters. TiltProjectorContainer widget will have tilt and projector-like shadow effects.
 keywords: ["widget", "container", "TiltProjectorContainer widget"]
 ---
 
@@ -67,15 +67,15 @@ Tilt.projector(
 
 ## TiltProjectorContainer widget parameters
 
-| Parameter                   | Type                                                                            | Default                   | Description                                                          |
-| --------------------------- | ------------------------------------------------------------------------------- | ------------------------- | -------------------------------------------------------------------- |
-| child <sup>`required`</sup> | `Widget`                                                                        | -                         | The main child widget to which tilt and effects are applied.         |
-| childLayout                 | [`ChildLayout`][ChildLayout]                                                    | `ChildLayout()`           | Other child layouts. <br/> e.g. parallax outer, inner, behind.       |
-| shadowConfig                | [`ShadowProjectorConfig`][ShadowProjectorConfig]                                | `ShadowProjectorConfig()` | Shadow effect config.                                                |
-| border                      | `BoxBorder?`                                                                    | `null`                    | BoxDecoration border.                                                |
-| borderRadius                | `BorderRadiusGeometry?`                                                         | `null`                    | BoxDecoration borderRadius.                                          |
-| clipBehavior                | `Clip`                                                                          | `Clip.antiAlias`          | Clip behavior for the container.                                     |
-| filterQuality               | `FilterQuality?`                                                                | `null`                    | Filter quality for the transform.                                    |
+| Parameter                   | Type                                             | Default                   | Description                                                    |
+| --------------------------- | ------------------------------------------------ | ------------------------- | -------------------------------------------------------------- |
+| child <sup>`required`</sup> | `Widget`                                         | -                         | The main child widget to which tilt and effects are applied.   |
+| childLayout                 | [`ChildLayout`][ChildLayout]                     | `ChildLayout()`           | Other child layouts. <br/> e.g. parallax outer, inner, behind. |
+| shadowConfig                | [`ShadowProjectorConfig`][ShadowProjectorConfig] | `ShadowProjectorConfig()` | Shadow effect config.                                          |
+| border                      | `BoxBorder?`                                     | `null`                    | BoxDecoration border.                                          |
+| borderRadius                | `BorderRadiusGeometry?`                          | `null`                    | BoxDecoration borderRadius.                                    |
+| clipBehavior                | `Clip`                                           | `Clip.antiAlias`          | Clip behavior for the container.                               |
+| filterQuality               | `FilterQuality?`                                 | `null`                    | Filter quality for the transform.                              |
 
 ## ChildLayout
 
@@ -87,20 +87,20 @@ Tilt.projector(
 
 ## ShadowProjectorConfig
 
-| Parameter              | Type               | Default             | Description                                                                                                                  |
-| ---------------------- | ------------------ | ------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| disable                | `bool`             | `false`             | Only disable the shadow effect.                                                                                              |
-| color                  | `Color`            | `Color(0xFF9E9E9E)` | Shadow color.                                                                                                                |
-| minIntensity           | `double`           | `0.0`               | Color minimum opacity, also initial opacity.                                                                                 |
-| maxIntensity           | `double`           | `0.5`               | Color maximum opacity as tilt progresses.                                                                                    |
-| offsetInitial          | `Offset`           | `Offset(0.0, 0.0)`  | Initial value of shadow offset. <br/> e.g. (0.0, 0.0) center. <br/> (40.0, 40.0) Offset 40 to the top left.                  |
-| offsetFactor           | `double`           | `0.1`               | Shadow offset factor, relative to current widget size.                                                                       |
-| direction              | `ShadowDirection?` | `null`              | Shadow direction.                                                                                                            |
-| enableReverse          | `bool?`            | `null`              | Reverse shadow direction.                                                                                                    |
-| projectorScaleFrom     | `double`           | `1.0`               | Size scale for minimum progress, also initial size scale.                                                                    |
-| projectorScaleTo       | `double`           | `1.0`               | Size scale for maximum progress.                                                                                             |
-| projectorBlurSigmaFrom | `double`           | `5.0`               | Blur sigma for minimum progress, also initial blur sigma.                                                                    |
-| projectorBlurSigmaTo   | `double`           | `10.0`              | Blur sigma for maximum progress.                                                                                             |
+| Parameter              | Type               | Default             | Description                                                                                                 |
+| ---------------------- | ------------------ | ------------------- | ----------------------------------------------------------------------------------------------------------- |
+| disable                | `bool`             | `false`             | Only disable the shadow effect.                                                                             |
+| color                  | `Color`            | `Color(0xFF9E9E9E)` | Shadow color.                                                                                               |
+| minIntensity           | `double`           | `0.0`               | Color minimum opacity, also initial opacity.                                                                |
+| maxIntensity           | `double`           | `0.5`               | Color maximum opacity as tilt progresses.                                                                   |
+| offsetInitial          | `Offset`           | `Offset(0.0, 0.0)`  | Initial value of shadow offset. <br/> e.g. (0.0, 0.0) center. <br/> (40.0, 40.0) Offset 40 to the top left. |
+| offsetFactor           | `double`           | `0.1`               | Shadow offset factor, relative to current widget size.                                                      |
+| direction              | `ShadowDirection?` | `null`              | Shadow direction.                                                                                           |
+| enableReverse          | `bool?`            | `null`              | Reverse shadow direction.                                                                                   |
+| projectorScaleFrom     | `double`           | `1.0`               | Size scale for minimum progress, also initial size scale.                                                   |
+| projectorScaleTo       | `double`           | `1.0`               | Size scale for maximum progress.                                                                            |
+| projectorBlurSigmaFrom | `double`           | `5.0`               | Blur sigma for minimum progress, also initial blur sigma.                                                   |
+| projectorBlurSigmaTo   | `double`           | `10.0`              | Blur sigma for maximum progress.                                                                            |
 
 
 [ChildLayout]: #childlayout

@@ -1,20 +1,20 @@
 ---
-title: TiltBaseContainer
-description: Learn about TiltBaseContainer parameters. TiltBaseContainer widget will have default tilt, shadow, and light effects.
+title: TiltBaseContainer widget
+description: 了解 TiltBaseContainer widget 参数。TiltBaseContainer widget 具备默认的倾斜、光照以及阴影效果。
 keywords: ["widget", "container", "TiltBaseContainer widget"]
 ---
 
-`TiltBaseContainer` widget can only be used in the `Tilt` widget.  
+`TiltBaseContainer` widget 只能在 `Tilt` widget 中使用。  
 
-A base container widget that provides tilt and simulated light and shadow effects.  
-Use normal shadow effects only for `child`.  
+一个基础容器 widget，提供倾斜和模拟的光影效果。  
+仅对 `child` 使用普通阴影效果。  
 
-## Simple usage
+## 简单用法
 
 ```dart {4-5, 18} showLineNumbers
 ...
 
-/// Tilt with TiltBaseContainer for effects.
+/// 搭配 TiltBaseContainer 为 Tilt 实现效果。
 Tilt(
   child: TiltBaseContainer(
     child: SizedBox(
@@ -27,8 +27,8 @@ Tilt(
   ),
 ),
 
-/// Tilt with built-in Tilt.base for effects.
-/// Tilt.base is a convenient widget that composes Tilt and TiltBaseContainer.
+/// Tilt 内置 Tilt.base 实现效果。
+/// Tilt.base 是一个便捷的 widget，它由 Tilt 和 TiltBaseContainer 组合而成。
 Tilt.base(
   child: SizedBox(
     width: 150,
@@ -42,55 +42,55 @@ Tilt.base(
 ...
 ```
 
-## TiltBaseContainer widget parameters
+## TiltBaseContainer widget 参数
 
-| Parameter                   | Type                                                                            | Default                | Description                                                          |
-| --------------------------- | ------------------------------------------------------------------------------- | ---------------------- | -------------------------------------------------------------------- |
-| child <sup>`required`</sup> | `Widget`                                                                        | -                      | The main child widget to which tilt and effects are applied.         |
-| childLayout                 | [`ChildLayout`][ChildLayout]                                                    | `ChildLayout()`        | Other child layouts. <br/> e.g. parallax outer, inner, behind.       |
-| lightConfig                 | [`LightConfig`][LightConfig]                                                    | `LightConfig()`        | Light effect config.                                                 |
-| shadowConfig                | [`ShadowBaseConfig`][ShadowBaseConfig]                                          | `ShadowBaseConfig()`   | Shadow effect config.                                                |
-| border                      | `BoxBorder?`                                                                    | `null`                 | BoxDecoration border.                                                |
-| borderRadius                | `BorderRadiusGeometry?`                                                         | `null`                 | BoxDecoration borderRadius.                                          |
-| clipBehavior                | `Clip`                                                                          | `Clip.antiAlias`       | Clip behavior for the container.                                     |
-| filterQuality               | `FilterQuality?`                                                                | `null`                 | Filter quality for the transform.                                    |
+| 参数名                      | 类型                                   | 默认值               | 描述                                                                  |
+| --------------------------- | -------------------------------------- | -------------------- | --------------------------------------------------------------------- |
+| child <sup>`required`</sup> | `Widget`                               | -                    | 主要 child widget，倾斜和各种效果将应用于该 widget。                  |
+| childLayout                 | [`ChildLayout`][ChildLayout]           | `ChildLayout()`      | 其它 child 布局。 <br/> 例如：位于 child 外部、内部、后面的视差布局。 |
+| lightConfig                 | [`LightConfig`][LightConfig]           | `LightConfig()`      | 光照效果配置。                                                        |
+| shadowConfig                | [`ShadowBaseConfig`][ShadowBaseConfig] | `ShadowBaseConfig()` | 阴影效果配置。                                                        |
+| border                      | `BoxBorder?`                           | `null`               | BoxDecoration border。                                                |
+| borderRadius                | `BorderRadiusGeometry?`                | `null`               | BoxDecoration borderRadius。                                          |
+| clipBehavior                | `Clip`                                 | `Clip.antiAlias`     | 容器的裁剪表现。                                                      |
+| filterQuality               | `FilterQuality?`                       | `null`               | Transform 的质量。                                                    |
 
 ## ChildLayout
 
-| Parameter | Type           | Default      | Description                                                                                                              |
-| --------- | -------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| outer     | `List<Widget>` | `<Widget>[]` | As with Stack, you can use the Stack layout to create widgets that are outer of the child. <br/> e.g. parallax effects.  |
-| inner     | `List<Widget>` | `<Widget>[]` | As with Stack, you can use the Stack layout to create widgets that are inner of the child. <br/> e.g. parallax effects.  |
-| behind    | `List<Widget>` | `<Widget>[]` | As with Stack, you can use the Stack layout to create widgets that are behind of the child. <br/> e.g. parallax effects. |
+| 参数名 | 类型           | 默认值       | 描述                                                                                               |
+| ------ | -------------- | ------------ | -------------------------------------------------------------------------------------------------- |
+| outer  | `List<Widget>` | `<Widget>[]` | 与 Stack 一样，你可以使用 Stack 布局来创建一些位于 `child 外部` 的 widget。 <br/> 例如：视差效果。 |
+| inner  | `List<Widget>` | `<Widget>[]` | 与 Stack 一样，你可以使用 Stack 布局来创建一些位于 `child 内部` 的 widget。 <br/> 例如：视差效果。 |
+| behind | `List<Widget>` | `<Widget>[]` | 与 Stack 一样，你可以使用 Stack 布局来创建一些位于 `child 后面` 的 widget。 <br/> 例如：视差效果。 |
 
 ## LightConfig
 
-| Parameter      | Type             | Default                 | Description                                                                                                                                                                           |
-| -------------- | ---------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| disable        | `bool`           | `false`                 | Only disable the light effect.                                                                                                                                                        |
-| color          | `Color`          | `Color(0xFFFFFFFF)`     | Light color.                                                                                                                                                                          |
-| minIntensity   | `double`         | `0.0`                   | Color minimum opacity, also initial opacity.                                                                                                                                          |
-| maxIntensity   | `double`         | `0.5`                   | Color maximum opacity for tilt progresses.                                                                                                                                            |
-| spreadFactor   | `double`         | `4.0`                   | Light spread factor, relative to current widget size.                                                                                                                                 |
-| direction      | `LightDirection` | `LightDirection.around` | Light direction. <br/> Affects: <br/> `[ShadowBaseConfig.direction]` (not affected after configuration).                                                                                  |
-| enableReverse  | `bool`           | `false`                 | Reverse light direction. <br/> Affects: <br/> `[ShadowBaseConfig.direction]` (not affected after configuration). <br/> `[ShadowConfig.enableReverse]` (not affected after configuration). |
+| 参数名        | 类型             | 默认值                  | 描述                                                                                                                                             |
+| ------------- | ---------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| disable       | `bool`           | `false`                 | 仅禁用光照效果。                                                                                                                                 |
+| color         | `Color`          | `Color(0xFFFFFFFF)`     | 光照颜色。                                                                                                                                       |
+| minIntensity  | `double`         | `0.0`                   | 颜色最小不透明度，也是初始不透明度。                                                                                                             |
+| maxIntensity  | `double`         | `0.5`                   | 颜色最大不透明度，跟随倾斜最大进度。                                                                                                             |
+| spreadFactor  | `double`         | `4.0`                   | 光源扩散系数，相对于当前 widget 尺寸。                                                                                                           |
+| direction     | `LightDirection` | `LightDirection.around` | 光照方向。 <br/> 影响：<br/> `[ShadowBaseConfig.direction]`（配置后不受影响）。                                                                  |
+| enableReverse | `bool`           | `false`                 | 反转光照方向。 <br/> 影响：<br/> `[ShadowBaseConfig.direction]`（配置后不受影响）。 <br/> `[ShadowBaseConfig.enableReverse]`（配置后不受影响）。 |
 
 ## ShadowBaseConfig
 
-| Parameter              | Type               | Default             | Description                                                                                                                  |
-| ---------------------- | ------------------ | ------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| disable                | `bool`             | `false`             | Only disable the shadow effect.                                                                                              |
-| color                  | `Color`            | `Color(0xFF9E9E9E)` | Shadow color.                                                                                                                |
-| minIntensity           | `double`           | `0.0`               | Color minimum opacity, also initial opacity.                                                                                 |
-| maxIntensity           | `double`           | `0.5`               | Color maximum opacity as tilt progresses.                                                                                    |
-| offsetInitial          | `Offset`           | `Offset(0.0, 0.0)`  | Initial value of shadow offset. <br/> e.g. (0.0, 0.0) center. <br/> (40.0, 40.0) Offset 40 to the top left.                  |
-| offsetFactor           | `double`           | `0.1`               | Shadow offset factor, relative to current widget size.                                                                       |
-| direction              | `ShadowDirection?` | `null`              | Shadow direction.                                                                                                            |
-| enableReverse          | `bool?`            | `null`              | Reverse shadow direction.                                                                                                    |
-| spreadInitial          | `double`           | `0.0`               | Initial value of shadow spread radius.                                                                                       |
-| spreadFactor           | `double`           | `0.0`               | Shadow spread radius factor, relative to current widget size.                                                                |
-| minBlurRadius          | `double`           | `10.0`              | Minimum blur radius, also initial blur radius.                                                                               |
-| maxBlurRadius          | `double`           | `20.0`              | Maximum blur radius for tilt progresses.                                                                                     |
+| 参数名        | 类型               | 默认值              | 描述                                                                              |
+| ------------- | ------------------ | ------------------- | --------------------------------------------------------------------------------- |
+| disable       | `bool`             | `false`             | 仅禁用阴影效果。                                                                  |
+| color         | `Color`            | `Color(0xFF9E9E9E)` | 阴影颜色。                                                                        |
+| minIntensity  | `double`           | `0.0`               | 颜色最小不透明度，也是初始不透明度。                                              |
+| maxIntensity  | `double`           | `0.5`               | 颜色最大不透明度，跟随倾斜最大进度。                                              |
+| offsetInitial | `Offset`           | `Offset(0.0, 0.0)`  | 阴影偏移初始值。 <br/> 例如：(0.0, 0.0) 中心 <br/> (40.0, 40.0) 向左上角偏移 40。 |
+| offsetFactor  | `double`           | `0.1`               | 阴影偏移系数，相对于当前 widget 尺寸。                                            |
+| direction     | `ShadowDirection?` | `null`              | 阴影方向。                                                                        |
+| enableReverse | `bool?`            | `null`              | 反转阴影方向。                                                                    |
+| spreadInitial | `double`           | `0.0`               | 阴影扩散半径初始值。                                                              |
+| spreadFactor  | `double`           | `0.0`               | 阴影扩散半径系数，相对于当前 widget 尺寸。                                        |
+| minBlurRadius | `double`           | `10.0`              | 最小阴影模糊半径，也是初始模糊半径。                                              |
+| maxBlurRadius | `double`           | `20.0`              | 最大阴影模糊半径，跟随倾斜最大进度。                                              |
 
 
 [ChildLayout]: #childlayout
