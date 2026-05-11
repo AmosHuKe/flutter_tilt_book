@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  flutter_tilt: 4.0.0-rc.1
+  flutter_tilt: 4.0.0-rc.2
 
   auto_route: 11.1.0
   flutter_animate: 4.5.2

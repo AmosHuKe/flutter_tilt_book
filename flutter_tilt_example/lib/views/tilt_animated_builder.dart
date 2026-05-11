@@ -38,7 +38,7 @@ class TiltExample extends StatelessWidget {
         leaveDuration: Duration(milliseconds: 900),
       ),
       child: TiltAnimatedBuilder(
-        builder: (context, tiltAnimatedState, child) {
+        builder: (BuildContext context, TiltAnimatedState tiltAnimatedState, Widget? child) {
           final animatedTiltData = tiltAnimatedState.animatedTiltData;
           return Transform(
             alignment: Alignment.center,
@@ -339,7 +339,7 @@ class TiltExample extends StatelessWidget {
         leaveDuration: Duration(milliseconds: 900),
       ),
       child: TiltAnimatedBuilder(
-        builder: (context, tiltAnimatedState, child) {
+        builder: (BuildContext context, TiltAnimatedState tiltAnimatedState, Widget? child) {
           final animatedTiltData = tiltAnimatedState.animatedTiltData;
           return Transform(
             alignment: Alignment.center,

@@ -47,7 +47,7 @@ class TiltExample extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 20 * scaleFactor, horizontal: 140 * scaleFactor),
         child: TiltAnimatedBuilder(
-          builder: (context, tiltAnimatedState, child) {
+          builder: (BuildContext context, TiltAnimatedState tiltAnimatedState, Widget? child) {
             final animatedTiltData = tiltAnimatedState.animatedTiltData;
             return Transform(
               alignment: Alignment.center,
@@ -719,7 +719,7 @@ class TiltExample extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 20, horizontal: 140),
         child: TiltAnimatedBuilder(
-          builder: (context, tiltAnimatedState, child) {
+          builder: (BuildContext context, TiltAnimatedState tiltAnimatedState, Widget? child) {
             final animatedTiltData = tiltAnimatedState.animatedTiltData;
             return Transform(
               alignment: Alignment.center,
