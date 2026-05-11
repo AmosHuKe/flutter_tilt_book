@@ -16,19 +16,19 @@ class Example extends StatelessWidget {
       sourceCodeLink:
           'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/example.dart',
       minHeight: 740,
-      body: const TiltDemo(),
+      body: const TiltExample(),
     );
   }
 }
 
-class TiltDemo extends StatefulWidget {
-  const TiltDemo({super.key});
+class TiltExample extends StatefulWidget {
+  const TiltExample({super.key});
 
   @override
-  State<TiltDemo> createState() => _TiltDemoState();
+  State<TiltExample> createState() => _TiltExampleState();
 }
 
-class _TiltDemoState extends State<TiltDemo> {
+class _TiltExampleState extends State<TiltExample> {
   int _counter = 0;
 
   void _incrementCounter() {
@@ -48,60 +48,48 @@ class _TiltDemoState extends State<TiltDemo> {
           titleTextStyle: TextStyle(color: Colors.white),
         ),
       ),
-
-      /// Tilt here
       child: Tilt(
-        borderRadius: BorderRadius.circular(24),
         tiltConfig: const TiltConfig(angle: 15),
-        lightConfig: const LightConfig(minIntensity: 0.1),
-        shadowConfig: const ShadowConfig(
-          minIntensity: 0.05,
-          maxIntensity: 0.4,
-          offsetFactor: 0.08,
-          minBlurRadius: 10,
-          maxBlurRadius: 15,
-        ),
-        childLayout: ChildLayout(
-          outer: [
-            Positioned(
-              top: 200,
-              child: TiltParallax(
-                size: const Offset(-20, -20),
-                child: Text('$_counter', style: const TextStyle(fontSize: 20)),
+        child: TiltBaseContainer(
+          lightConfig: const LightConfig(minIntensity: 0.1),
+          shadowConfig: const ShadowBaseConfig(
+            minIntensity: 0.05,
+            maxIntensity: 0.4,
+            offsetFactor: 0.08,
+            minBlurRadius: 10,
+            maxBlurRadius: 15,
+          ),
+          borderRadius: BorderRadius.circular(24),
+          childLayout: ChildLayout(
+            outer: [
+              Positioned(
+                top: 200,
+                child: TiltParallax(
+                  offset: const Offset(-20, -20),
+                  child: Text('$_counter', style: const TextStyle(fontSize: 20)),
+                ),
               ),
-            ),
-            Positioned(
-              bottom: 10,
-              right: 10,
-              child: TiltParallax(
-                size: const Offset(25, 25),
-                child: SizedBox(
-                  width: 48,
-                  height: 48,
-                  child: FloatingActionButton(
-                    onPressed: _incrementCounter,
-                    tooltip: 'Increment',
-                    elevation: 0.0,
-                    child: const Icon(Icons.add),
+              Positioned(
+                bottom: 10,
+                right: 10,
+                child: TiltParallax(
+                  offset: const Offset(25, 25),
+                  child: SizedBox(
+                    width: 48,
+                    height: 48,
+                    child: FloatingActionButton(
+                      onPressed: _incrementCounter,
+                      tooltip: 'Increment',
+                      elevation: 0.0,
+                      child: const Icon(Icons.add),
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
+          child: const MyHomePage(title: 'Flutter Tilt Demo'),
         ),
-        // onGestureMove:
-        //     (TiltDataModel tiltDataModel, GesturesType gesturesType) {
-        //   print('--- onGestureMove ---');
-        //   print(tiltDataModel.areaProgress);
-        //   print(gesturesType.name);
-        // },
-        // onGestureLeave:
-        //     (TiltDataModel tiltDataModel, GesturesType gesturesType) {
-        //   print('--- onGestureLeave ---');
-        //   print(tiltDataModel.areaProgress);
-        //   print(gesturesType.name);
-        // },
-        child: const MyHomePage(title: 'Flutter Tilt Demo'),
       ),
     );
   }
@@ -143,18 +131,14 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 String code() => '''
-import 'package:flutter_tilt/flutter_tilt.dart';
-
-······
-
-class TiltDemo extends StatefulWidget {
-  const TiltDemo({super.key});
+class TiltExample extends StatefulWidget {
+  const TiltExample({super.key});
 
   @override
-  State<TiltDemo> createState() => _TiltDemoState();
+  State<TiltExample> createState() => _TiltExampleState();
 }
 
-class _TiltDemoState extends State<TiltDemo> {
+class _TiltExampleState extends State<TiltExample> {
   int _counter = 0;
 
   void _incrementCounter() {
@@ -165,64 +149,57 @@ class _TiltDemoState extends State<TiltDemo> {
 
   @override
   Widget build(BuildContext context) {
-    return ThemeData(
-      useMaterial3: true,
-      colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.brown),
-      appBarTheme: const AppBarTheme(
-        backgroundColor: Colors.brown,
-        titleTextStyle: TextStyle(color: Colors.white),
-      ),
-
-      /// Tilt here
-      child: Tilt(
-        borderRadius: BorderRadius.circular(24),
-        tiltConfig: const TiltConfig(angle: 15),
-        lightConfig: const LightConfig(minIntensity: 0.1),
-        shadowConfig: const ShadowConfig(
-          minIntensity: 0.05,
-          maxIntensity: 0.4,
-          offsetFactor: 0.08,
-          minBlurRadius: 10,
-          maxBlurRadius: 15,
+    return Theme(
+      data: ThemeData(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.brown),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.brown,
+          titleTextStyle: TextStyle(color: Colors.white),
         ),
-        childLayout: ChildLayout(
-          outer: [
-            Positioned(
-              top: 200,
-              child: TiltParallax(
-                size: const Offset(-20, -20),
-                child: Text('\$_counter', style: const TextStyle(fontSize: 20)),
+      ),
+      child: Tilt(
+        tiltConfig: const TiltConfig(angle: 15),
+        child: TiltBaseContainer(
+          lightConfig: const LightConfig(minIntensity: 0.1),
+          shadowConfig: const ShadowBaseConfig(
+            minIntensity: 0.05,
+            maxIntensity: 0.4,
+            offsetFactor: 0.08,
+            minBlurRadius: 10,
+            maxBlurRadius: 15,
+          ),
+          borderRadius: BorderRadius.circular(24),
+          childLayout: ChildLayout(
+            outer: [
+              Positioned(
+                top: 200,
+                child: TiltParallax(
+                  offset: const Offset(-20, -20),
+                  child: Text('\$_counter', style: const TextStyle(fontSize: 20)),
+                ),
               ),
-            ),
-            Positioned(
-              bottom: 10,
-              right: 10,
-              child: TiltParallax(
-                size: const Offset(25, 25),
-                child: SizedBox(
-                  width: 50,
-                  height: 50,
-                  child: FloatingActionButton(
-                    onPressed: _incrementCounter,
-                    tooltip: 'Increment',
-                    child: const Icon(Icons.add),
+              Positioned(
+                bottom: 10,
+                right: 10,
+                child: TiltParallax(
+                  offset: const Offset(25, 25),
+                  child: SizedBox(
+                    width: 48,
+                    height: 48,
+                    child: FloatingActionButton(
+                      onPressed: _incrementCounter,
+                      tooltip: 'Increment',
+                      elevation: 0.0,
+                      child: const Icon(Icons.add),
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
+          child: const MyHomePage(title: 'Flutter Tilt Demo'),
         ),
-        // onGestureMove: (TiltDataModel tiltDataModel, GesturesType gesturesType) {
-        //   print('--- onGestureMove ---');
-        //   print(tiltDataModel.areaProgress);
-        //   print(gesturesType.name);
-        // },
-        // onGestureLeave: (TiltDataModel tiltDataModel, GesturesType gesturesType) {
-        //   print('--- onGestureLeave ---');
-        //   print(tiltDataModel.areaProgress);
-        //   print(gesturesType.name);
-        // },
-        child: const MyHomePage(title: 'Flutter Tilt Demo'),
       ),
     );
   }
@@ -262,7 +239,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-
-······
 ''';

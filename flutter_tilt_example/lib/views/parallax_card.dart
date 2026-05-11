@@ -16,19 +16,19 @@ class ParallaxCard extends StatelessWidget {
       sourceCodeLink:
           'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/parallax_card.dart',
       minHeight: 700,
-      body: const AnimationCard(),
+      body: const TiltExample(),
     );
   }
 }
 
-class AnimationCard extends StatefulWidget {
-  const AnimationCard({super.key});
+class TiltExample extends StatefulWidget {
+  const TiltExample({super.key});
 
   @override
-  State<AnimationCard> createState() => _AnimationCardState();
+  State<TiltExample> createState() => _TiltExampleState();
 }
 
-class _AnimationCardState extends State<AnimationCard> with SingleTickerProviderStateMixin {
+class _TiltExampleState extends State<TiltExample> with SingleTickerProviderStateMixin {
   late AnimationController scaleAnimationController;
   late Animation<double> scaleAnimation;
   double opacity = 0;
@@ -94,80 +94,81 @@ class _AnimationCardState extends State<AnimationCard> with SingleTickerProvider
           isHover = true;
           scaleAnimationController.reverse();
         },
-        // Tilt here
         child: Tilt(
-          borderRadius: BorderRadius.circular(24),
           tiltConfig: const TiltConfig(
             angle: 6.0,
             enableReverse: true,
             enableOutsideAreaMove: false,
             leaveDuration: Duration(milliseconds: 600),
-            filterQuality: FilterQuality.high,
           ),
-          lightConfig: const LightConfig(disable: true),
-          shadowConfig: const ShadowConfig(enableReverse: true),
-          childLayout: ChildLayout(
-            inner: [
-              ScaleTransition(
-                scale: scaleAnimation,
-                alignment: Alignment.center,
-                filterQuality: FilterQuality.high,
-                child: TiltParallax(
-                  child: Image.asset(
-                    'assets/parallax_card/Artwork-MichaHuigen.jpg',
-                    filterQuality: FilterQuality.high,
-                    width: 360.0,
+          child: TiltBaseContainer(
+            lightConfig: const LightConfig(disable: true),
+            shadowConfig: const ShadowBaseConfig(enableReverse: true),
+            borderRadius: BorderRadius.circular(24),
+            filterQuality: FilterQuality.high,
+            childLayout: ChildLayout(
+              inner: [
+                ScaleTransition(
+                  scale: scaleAnimation,
+                  alignment: Alignment.center,
+                  filterQuality: FilterQuality.high,
+                  child: TiltParallax(
+                    child: Image.asset(
+                      'assets/parallax_card/Artwork-MichaHuigen.jpg',
+                      filterQuality: FilterQuality.high,
+                      width: 360.0,
+                    ),
                   ),
                 ),
-              ),
-              Positioned.fill(
-                child: AnimatedOpacity(
-                  opacity: opacity,
-                  duration: const Duration(milliseconds: 600),
-                  child: Container(
-                    decoration: const BoxDecoration(
-                      gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [Colors.black12, Colors.black87],
+                Positioned.fill(
+                  child: AnimatedOpacity(
+                    opacity: opacity,
+                    duration: const Duration(milliseconds: 600),
+                    child: const DecoratedBox(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [Colors.black12, Colors.black87],
+                        ),
                       ),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 28, vertical: 20),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text('Artwork', style: TextStyle(color: Colors.white, fontSize: 20.0)),
-                          Text(
-                            'Micha Huigen',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 40.0,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          SizedBox(height: 12),
-                          Align(
-                            alignment: Alignment.centerRight,
-                            child: Text(
-                              'Flutter Tilt',
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 28, vertical: 20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Text('Artwork', style: TextStyle(color: Colors.white, fontSize: 20.0)),
+                            Text(
+                              'Micha Huigen',
                               style: TextStyle(
-                                color: Colors.white60,
-                                fontSize: 14.0,
+                                color: Colors.white,
+                                fontSize: 40.0,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                          ),
-                        ],
+                            SizedBox(height: 12),
+                            Align(
+                              alignment: Alignment.centerRight,
+                              child: Text(
+                                'Flutter Tilt',
+                                style: TextStyle(
+                                  color: Colors.white60,
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
+            child: const SizedBox(),
           ),
-          child: const SizedBox(),
         ),
       ),
     );
@@ -175,22 +176,14 @@ class _AnimationCardState extends State<AnimationCard> with SingleTickerProvider
 }
 
 String code() => '''
-import 'package:flutter_tilt/flutter_tilt.dart';
-
-······
-
-AnimationCard(),
-
-...
-
-class AnimationCard extends StatefulWidget {
-  const AnimationCard({super.key});
+class TiltExample extends StatefulWidget {
+  const TiltExample({super.key});
 
   @override
-  State<AnimationCard> createState() => _AnimationCardState();
+  State<TiltExample> createState() => _TiltExampleState();
 }
 
-class _AnimationCardState extends State<AnimationCard> with SingleTickerProviderStateMixin {
+class _TiltExampleState extends State<TiltExample> with SingleTickerProviderStateMixin {
   late AnimationController scaleAnimationController;
   late Animation<double> scaleAnimation;
   double opacity = 0;
@@ -256,85 +249,84 @@ class _AnimationCardState extends State<AnimationCard> with SingleTickerProvider
           isHover = true;
           scaleAnimationController.reverse();
         },
-        // Tilt here
         child: Tilt(
-          borderRadius: BorderRadius.circular(24),
           tiltConfig: const TiltConfig(
             angle: 6.0,
             enableReverse: true,
             enableOutsideAreaMove: false,
             leaveDuration: Duration(milliseconds: 600),
-            filterQuality: FilterQuality.high,
           ),
-          lightConfig: const LightConfig(disable: true),
-          shadowConfig: const ShadowConfig(enableReverse: true),
-          childLayout: ChildLayout(
-            inner: [
-              ScaleTransition(
-                scale: scaleAnimation,
-                alignment: Alignment.center,
-                filterQuality: FilterQuality.high,
-                child: TiltParallax(
-                  child: Image.asset(
-                    'assets/parallax_card/Artwork-MichaHuigen.jpg',
-                    filterQuality: FilterQuality.high,
-                    width: 360.0,
+          child: TiltBaseContainer(
+            lightConfig: const LightConfig(disable: true),
+            shadowConfig: const ShadowBaseConfig(enableReverse: true),
+            borderRadius: BorderRadius.circular(24),
+            filterQuality: FilterQuality.high,
+            childLayout: ChildLayout(
+              inner: [
+                ScaleTransition(
+                  scale: scaleAnimation,
+                  alignment: Alignment.center,
+                  filterQuality: FilterQuality.high,
+                  child: TiltParallax(
+                    child: Image.asset(
+                      'assets/parallax_card/Artwork-MichaHuigen.jpg',
+                      filterQuality: FilterQuality.high,
+                      width: 360.0,
+                    ),
                   ),
                 ),
-              ),
-              Positioned.fill(
-                child: AnimatedOpacity(
-                  opacity: opacity,
-                  duration: const Duration(milliseconds: 600),
-                  child: Container(
-                    decoration: const BoxDecoration(
-                      gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [Colors.black12, Colors.black87],
+                Positioned.fill(
+                  child: AnimatedOpacity(
+                    opacity: opacity,
+                    duration: const Duration(milliseconds: 600),
+                    child: const DecoratedBox(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [Colors.black12, Colors.black87],
+                        ),
                       ),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 28, vertical: 20),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text('Artwork', style: TextStyle(color: Colors.white, fontSize: 20.0)),
-                          Text(
-                            'Micha Huigen',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 40.0,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          SizedBox(height: 12),
-                          Align(
-                            alignment: Alignment.centerRight,
-                            child: Text(
-                              'Flutter Tilt',
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 28, vertical: 20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Text('Artwork', style: TextStyle(color: Colors.white, fontSize: 20.0)),
+                            Text(
+                              'Micha Huigen',
                               style: TextStyle(
-                                color: Colors.white60,
-                                fontSize: 14.0,
+                                color: Colors.white,
+                                fontSize: 40.0,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                          ),
-                        ],
+                            SizedBox(height: 12),
+                            Align(
+                              alignment: Alignment.centerRight,
+                              child: Text(
+                                'Flutter Tilt',
+                                style: TextStyle(
+                                  color: Colors.white60,
+                                  fontSize: 14.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
+            child: const SizedBox(),
           ),
-          child: const SizedBox(),
         ),
       ),
     );
   }
 }
-
-······
 ''';

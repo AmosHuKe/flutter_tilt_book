@@ -16,35 +16,43 @@ class AnimationDemo extends StatelessWidget {
       sourceCodeLink:
           'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/animation.dart',
       minHeight: 500,
+      body: const TiltExample(),
+    );
+  }
+}
 
-      /// Tilt here
-      body: Tilt(
+class TiltExample extends StatelessWidget {
+  const TiltExample({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Tilt(
+      tiltConfig: const TiltConfig(
+        angle: 30,
+        leaveDuration: Duration(seconds: 1),
+        leaveCurve: Curves.bounceOut,
+      ),
+      child: TiltBaseContainer(
         borderRadius: BorderRadius.circular(30),
-        tiltConfig: const TiltConfig(
-          angle: 30,
-          leaveDuration: Duration(seconds: 1),
-          leaveCurve: Curves.bounceOut,
-        ),
         childLayout: const ChildLayout(
           outer: [
             Positioned(
               child: TiltParallax(
-                size: Offset(40, 40),
+                offset: Offset(40, 40),
                 child: Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
               ),
             ),
           ],
         ),
-        child: Container(
-          width: 350,
-          height: 200,
-          decoration: const BoxDecoration(
+        child: const DecoratedBox(
+          decoration: BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
               colors: [Color(0xFF80d0c7), Color(0xFF13547a)],
             ),
           ),
+          child: SizedBox(width: 350, height: 200),
         ),
       ),
     );
@@ -52,39 +60,41 @@ class AnimationDemo extends StatelessWidget {
 }
 
 String code() => '''
-import 'package:flutter_tilt/flutter_tilt.dart';
+class TiltExample extends StatelessWidget {
+  const TiltExample({super.key});
 
-······
-
-Tilt(
-  borderRadius: BorderRadius.circular(30),
-  tiltConfig: const TiltConfig(
-    angle: 30,
-    leaveDuration: Duration(seconds: 1),
-    leaveCurve: Curves.bounceOut,
-  ),
-  childLayout: const ChildLayout(
-    outer: [
-      Positioned(
-        child: TiltParallax(
-          size: Offset(40, 40),
-          child: Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
+  @override
+  Widget build(BuildContext context) {
+    return Tilt(
+      tiltConfig: const TiltConfig(
+        angle: 30,
+        leaveDuration: Duration(seconds: 1),
+        leaveCurve: Curves.bounceOut,
+      ),
+      child: TiltBaseContainer(
+        borderRadius: BorderRadius.circular(30),
+        childLayout: const ChildLayout(
+          outer: [
+            Positioned(
+              child: TiltParallax(
+                offset: Offset(40, 40),
+                child: Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
+              ),
+            ),
+          ],
+        ),
+        child: const DecoratedBox(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              colors: [Color(0xFF80d0c7), Color(0xFF13547a)],
+            ),
+          ),
+          child: SizedBox(width: 350, height: 200),
         ),
       ),
-    ],
-  ),
-  child: Container(
-    width: 350,
-    height: 200,
-    decoration: const BoxDecoration(
-      gradient: LinearGradient(
-        begin: Alignment.topRight,
-        end: Alignment.bottomLeft,
-        colors: [Color(0xFF80d0c7), Color(0xFF13547a)],
-      ),
-    ),
-  ),
-),
-
-······
+    );
+  }
+}
 ''';

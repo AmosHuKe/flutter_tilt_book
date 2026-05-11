@@ -16,9 +16,9 @@ class TiltDirectionDemo extends StatefulWidget {
 class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
   Set<TiltDirection> tiltDirection = <TiltDirection>{TiltDirection.top, TiltDirection.bottom};
   TiltDataModel? tiltData;
-  final double width = 350;
-  final double height = 200;
-  final double angle = 20.0;
+  static const double width = 350;
+  static const double height = 200;
+  static const double angle = 20.0;
 
   @override
   Widget build(BuildContext context) {
@@ -28,24 +28,11 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
       sourceCodeLink:
           'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/tilt_direction.dart',
       minHeight: 500,
-
-      /// Tilt here
-      body: Tilt(
-        borderRadius: BorderRadius.circular(30),
-        tiltConfig: TiltConfig(angle: angle, direction: tiltDirection.toList()),
-        child: Container(
-          width: width,
-          height: height,
-          alignment: Alignment.center,
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [Color(0xFF667eea), Color(0xFF764ba2)],
-            ),
-          ),
-          child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
-        ),
+      body: TiltExample(
+        width: width,
+        height: height,
+        angle: angle,
+        tiltDirection: tiltDirection,
         onGestureMove: (TiltDataModel tiltDataModel, GesturesType gesturesType) {
           setState(() {
             tiltData = tiltDataModel;
@@ -57,8 +44,6 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
           });
         },
       ),
-
-      /// tools
       tools: [
         Wrap(
           spacing: 12,
@@ -211,9 +196,9 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
                   Text('x: 100% * ${tiltData?.areaProgress.dx ?? 0}'),
                   Text('y: 100% * ${tiltData?.areaProgress.dy ?? 0}'),
                   const SizedBox(height: 8),
-                  Text(
+                  const Text(
                     'angle (max: $angle):',
-                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                   ),
                   Text('x: ${tiltData?.angle.dx ?? 0}°'),
                   Text('y: ${tiltData?.angle.dy ?? 0}°'),
@@ -233,33 +218,80 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
   }
 }
 
+class TiltExample extends StatelessWidget {
+  const TiltExample({
+    super.key,
+    required this.width,
+    required this.height,
+    required this.angle,
+    required this.tiltDirection,
+    required this.onGestureMove,
+    required this.onGestureLeave,
+  });
+
+  final double width;
+  final double height;
+  final double angle;
+  final Set<TiltDirection> tiltDirection;
+  final TiltCallback onGestureMove;
+  final TiltCallback onGestureLeave;
+
+  @override
+  Widget build(BuildContext context) {
+    return Tilt(
+      tiltConfig: TiltConfig(angle: angle, direction: tiltDirection.toList()),
+      onGestureMove: onGestureMove,
+      onGestureLeave: onGestureLeave,
+      child: TiltBaseContainer(
+        borderRadius: BorderRadius.circular(30),
+        child: Container(
+          width: width,
+          height: height,
+          alignment: Alignment.center,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [Color(0xFF667eea), Color(0xFF764ba2)],
+            ),
+          ),
+          child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
+        ),
+      ),
+    );
+  }
+}
+
 String code({
   required double width,
   required double height,
   required Set<TiltDirection> tiltDirection,
 }) =>
     '''
-import 'package:flutter_tilt/flutter_tilt.dart';
+class TiltExample extends StatelessWidget {
+  const TiltExample({super.key});
 
-······
-
-Tilt(
-  borderRadius: BorderRadius.circular(30),
-  tiltConfig: TiltConfig(direction: ${tiltDirection.toList()}),
-  child: Container(
-    width: $width,
-    height: $height,
-    alignment: Alignment.center,
-    decoration: const BoxDecoration(
-      gradient: LinearGradient(
-        begin: Alignment.topLeft,
-        end: Alignment.bottomRight,
-        colors: [Color(0xFF667eea), Color(0xFF764ba2)],
+  @override
+  Widget build(BuildContext context) {
+    return Tilt(
+      tiltConfig: TiltConfig(angle: angle, direction: ${tiltDirection.toList()}),
+      child: TiltBaseContainer(
+        borderRadius: BorderRadius.circular(30),
+        child: Container(
+          width: $width,
+          height: $height,
+          alignment: Alignment.center,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [Color(0xFF667eea), Color(0xFF764ba2)],
+            ),
+          ),
+          child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
+        ),
       ),
-    ),
-    child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
-  ),
-),
-
-······
+    );
+  }
+}
 ''';

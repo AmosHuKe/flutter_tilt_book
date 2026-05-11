@@ -42,15 +42,27 @@ abstract final class Config {
     ),
     RouteData(
       title: 'Parallax Image',
-      icon: Remix.landscape_line,
+      icon: Remix.image_2_line,
       pathName: 'ParallaxImage',
       pageInfo: ParallaxImage.page,
     ),
     RouteData(
-      title: 'LightShadowMode',
+      title: 'Tilt container',
       icon: Remix.landscape_line,
-      pathName: 'Tilt-LightShadowMode',
-      pageInfo: LightShadowModeDemo.page,
+      pathName: 'Tilt-container',
+      pageInfo: TiltContainerDemo.page,
+    ),
+    RouteData(
+      title: 'TiltAnimatedBuilder',
+      icon: Remix.image_2_line,
+      pathName: 'TiltAnimatedBuilderDemo',
+      pageInfo: TiltAnimatedBuilderDemo.page,
+    ),
+    RouteData(
+      title: 'TiltAnimatedBuilder2',
+      icon: Remix.image_2_line,
+      pathName: 'TiltAnimatedBuilder2Demo',
+      pageInfo: TiltAnimatedBuilder2Demo.page,
     ),
     RouteData(
       title: 'Parallax Card',
@@ -89,18 +101,6 @@ abstract final class Config {
       pageInfo: Events.page,
     ),
     RouteData(
-      title: 'Dialog',
-      icon: Remix.discuss_line,
-      pathName: 'Dialog',
-      pageInfo: DialogDemo.page,
-    ),
-    RouteData(
-      title: 'Default',
-      icon: Remix.stack_line,
-      pathName: 'Default',
-      pageInfo: Default.page,
-    ),
-    RouteData(
       title: 'Animation',
       icon: Remix.sketching,
       pathName: 'AnimationDemo',
@@ -113,10 +113,10 @@ abstract final class Config {
       pageInfo: SmoothGestureEnterDemo.page,
     ),
     RouteData(
-      title: 'TiltStreamController',
+      title: 'TiltController',
       icon: Remix.remote_control_line,
-      pathName: 'TiltStreamControllerDemo',
-      pageInfo: TiltStreamControllerDemo.page,
+      pathName: 'TiltControllerDemo',
+      pageInfo: TiltControllerDemo.page,
     ),
     RouteData(
       title: 'Reverse Tilt',

@@ -23,27 +23,7 @@ class _LightDirectionDemoState extends State<LightDirectionDemo> {
       sourceCodeLink:
           'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/light_direction.dart',
       minHeight: 500,
-
-      /// Tilt here
-      body: Tilt(
-        borderRadius: BorderRadius.circular(30),
-        lightConfig: LightConfig(direction: lightDirection),
-        child: Container(
-          width: 350,
-          height: 200,
-          alignment: Alignment.center,
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [Color(0xFF537895), Color(0xFF09203f)],
-            ),
-          ),
-          child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
-        ),
-      ),
-
-      /// tools
+      body: TiltExample(lightDirection: lightDirection),
       tools: [
         Wrap(
           spacing: 12,
@@ -65,29 +45,61 @@ class _LightDirectionDemoState extends State<LightDirectionDemo> {
   }
 }
 
+class TiltExample extends StatelessWidget {
+  const TiltExample({super.key, required this.lightDirection});
+
+  final LightDirection lightDirection;
+
+  @override
+  Widget build(BuildContext context) {
+    return Tilt(
+      child: TiltBaseContainer(
+        borderRadius: BorderRadius.circular(30),
+        lightConfig: LightConfig(direction: lightDirection),
+        child: Container(
+          width: 350,
+          height: 200,
+          alignment: Alignment.center,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Color(0xFF537895), Color(0xFF09203f)],
+            ),
+          ),
+          child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
+        ),
+      ),
+    );
+  }
+}
+
 String code({required LightDirection lightDirection}) =>
     '''
-import 'package:flutter_tilt/flutter_tilt.dart';
+class TiltExample extends StatelessWidget {
+  const TiltExample({super.key});
 
-······
-
-Tilt(
-  borderRadius: BorderRadius.circular(30),
-  lightConfig: LightConfig(direction: $lightDirection),
-  child: Container(
-    width: 350,
-    height: 200,
-    alignment: Alignment.center,
-    decoration: const BoxDecoration(
-      gradient: LinearGradient(
-        begin: Alignment.topCenter,
-        end: Alignment.bottomCenter,
-        colors: [Color(0xFF537895), Color(0xFF09203f)],
+  @override
+  Widget build(BuildContext context) {
+    return Tilt(
+      child: TiltBaseContainer(
+        borderRadius: BorderRadius.circular(30),
+        lightConfig: LightConfig(direction: $lightDirection),
+        child: Container(
+          width: 350,
+          height: 200,
+          alignment: Alignment.center,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Color(0xFF537895), Color(0xFF09203f)],
+            ),
+          ),
+          child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
+        ),
       ),
-    ),
-    child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
-  ),
-),
-
-······
+    );
+  }
+}
 ''';

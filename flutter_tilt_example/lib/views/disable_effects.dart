@@ -29,23 +29,11 @@ class _DisableEffectsState extends State<DisableEffects> {
       sourceCodeLink:
           'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/disable_effects.dart',
       minHeight: 500,
-
-      /// Tilt here
-      body: Tilt(
-        borderRadius: BorderRadius.circular(30),
-        tiltConfig: TiltConfig(disable: disableTilt),
-        lightConfig: LightConfig(disable: disableLight),
-        shadowConfig: ShadowConfig(disable: disableShadow),
-        child: Container(
-          width: 350,
-          height: 200,
-          alignment: Alignment.center,
-          color: Colors.blueAccent,
-          child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
-        ),
+      body: TiltExample(
+        disableTilt: disableTilt,
+        disableLight: disableLight,
+        disableShadow: disableShadow,
       ),
-
-      /// tools
       tools: [
         Wrap(
           spacing: 12,
@@ -85,25 +73,69 @@ class _DisableEffectsState extends State<DisableEffects> {
   }
 }
 
+class TiltExample extends StatelessWidget {
+  const TiltExample({
+    super.key,
+    required this.disableTilt,
+    required this.disableLight,
+    required this.disableShadow,
+  });
+
+  final bool disableTilt;
+  final bool disableLight;
+  final bool disableShadow;
+
+  @override
+  Widget build(BuildContext context) {
+    return Tilt(
+      tiltConfig: TiltConfig(disable: disableTilt),
+      child: TiltBaseContainer(
+        lightConfig: LightConfig(disable: disableLight),
+        shadowConfig: ShadowBaseConfig(disable: disableShadow),
+        borderRadius: BorderRadius.circular(30),
+        child: Container(
+          width: 350,
+          height: 200,
+          alignment: Alignment.center,
+          color: Colors.blueAccent,
+          child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
+        ),
+      ),
+    );
+  }
+}
+
 String code({required bool disableTilt, required bool disableLight, required bool disableShadow}) =>
     '''
-import 'package:flutter_tilt/flutter_tilt.dart';
+class TiltExample extends StatelessWidget {
+  const TiltExample({
+    super.key,
+    required this.disableTilt,
+    required this.disableLight,
+    required this.disableShadow,
+  });
 
-······
+  final bool disableTilt;
+  final bool disableLight;
+  final bool disableShadow;
 
-Tilt(
-  borderRadius: BorderRadius.circular(30),
-  tiltConfig: TiltConfig(disable: $disableTilt),
-  lightConfig: LightConfig(disable: $disableLight),
-  shadowConfig: ShadowConfig(disable: $disableShadow),
-  child: Container(
-    width: 350,
-    height: 200,
-    alignment: Alignment.center,
-    color: Colors.blueAccent,
-    child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
-  ),
-),
-
-······
+  @override
+  Widget build(BuildContext context) {
+    return Tilt(
+      tiltConfig: TiltConfig(disable: $disableTilt),
+      child: TiltBaseContainer(
+        lightConfig: LightConfig(disable: $disableLight),
+        shadowConfig: ShadowBaseConfig(disable: $disableShadow),
+        borderRadius: BorderRadius.circular(30),
+        child: Container(
+          width: 350,
+          height: 200,
+          alignment: Alignment.center,
+          color: Colors.blueAccent,
+          child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
+        ),
+      ),
+    );
+  }
+}
 ''';

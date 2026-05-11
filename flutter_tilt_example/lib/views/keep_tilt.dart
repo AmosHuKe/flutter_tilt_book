@@ -16,11 +16,20 @@ class KeepTilt extends StatelessWidget {
       sourceCodeLink:
           'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/keep_tilt.dart',
       minHeight: 500,
+      body: const TiltExample(),
+    );
+  }
+}
 
-      /// Tilt here
-      body: Tilt(
+class TiltExample extends StatelessWidget {
+  const TiltExample({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Tilt(
+      tiltConfig: const TiltConfig(enableRevert: false, enableSensorRevert: false),
+      child: TiltBaseContainer(
         borderRadius: BorderRadius.circular(30),
-        tiltConfig: const TiltConfig(enableRevert: false, enableSensorRevert: false),
         child: Container(
           width: 350,
           height: 200,
@@ -40,27 +49,30 @@ class KeepTilt extends StatelessWidget {
 }
 
 String code() => '''
-import 'package:flutter_tilt/flutter_tilt.dart';
+class TiltExample extends StatelessWidget {
+  const TiltExample({super.key});
 
-······
-
-Tilt(
-  borderRadius: BorderRadius.circular(30),
-  tiltConfig: const TiltConfig(enableRevert: false, enableSensorRevert: false),
-  child: Container(
-    width: 350,
-    height: 200,
-    alignment: Alignment.center,
-    decoration: const BoxDecoration(
-      gradient: LinearGradient(
-        begin: Alignment.topCenter,
-        end: Alignment.bottomCenter,
-        colors: [Color(0xFF3cba92), Color(0xFF0ba360)],
+  @override
+  Widget build(BuildContext context) {
+    return Tilt(
+      tiltConfig: const TiltConfig(enableRevert: false, enableSensorRevert: false),
+      child: TiltBaseContainer(
+        borderRadius: BorderRadius.circular(30),
+        child: Container(
+          width: 350,
+          height: 200,
+          alignment: Alignment.center,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [Color(0xFF3cba92), Color(0xFF0ba360)],
+            ),
+          ),
+          child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
+        ),
       ),
-    ),
-    child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
-  ),
-),
-
-······
+    );
+  }
+}
 ''';

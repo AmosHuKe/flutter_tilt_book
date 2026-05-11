@@ -10,14 +10,28 @@ class Layout2Demo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return PageLayout(
+      title: 'Layout',
+      dartCode: code(),
+      sourceCodeLink:
+          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/layout2.dart',
+      minHeight: 800,
+      body: const TiltExample(),
+    );
+  }
+}
+
+class TiltExample extends StatelessWidget {
+  const TiltExample({super.key});
+
+  @override
+  Widget build(BuildContext context) {
     final innerBox = <Widget>[];
     for (var i = 1; i <= 10; i++) {
       innerBox.add(
         TiltParallax(
-          size: Offset(-20.0 * i, -30.0 * i),
-          child: Container(
-            width: 200 * (1 - i * 0.05),
-            height: 200 * (1 - i * 0.05),
+          offset: Offset(-20.0 * i, -30.0 * i),
+          child: DecoratedBox(
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               border: Border.all(
@@ -25,150 +39,130 @@ class Layout2Demo extends StatelessWidget {
                 color: Colors.white.withValues(alpha: 1 - (i - 1) * 0.1),
               ),
             ),
+            child: SizedBox(width: 200 * (1 - i * 0.05), height: 200 * (1 - i * 0.05)),
           ),
         ),
       );
     }
 
-    return PageLayout(
-      title: 'Layout',
-      dartCode: code(),
-      sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/layout2.dart',
-      minHeight: 800,
-
-      /// Tilt here
-      body: Wrap(
-        spacing: 64,
-        runSpacing: 64,
-        alignment: WrapAlignment.center,
-        runAlignment: WrapAlignment.center,
-        children: [
-          Tilt(
-            borderRadius: BorderRadius.circular(24.0),
-            tiltConfig: const TiltConfig(
-              angle: 20,
-              leaveCurve: Curves.easeInOutCubicEmphasized,
-              leaveDuration: Duration(milliseconds: 1200),
+    return Tilt(
+      tiltConfig: const TiltConfig(
+        angle: 20,
+        leaveCurve: Curves.easeInOutCubicEmphasized,
+        leaveDuration: Duration(milliseconds: 1200),
+      ),
+      child: TiltBaseContainer(
+        lightConfig: const LightConfig(disable: true),
+        shadowConfig: const ShadowBaseConfig(disable: true),
+        borderRadius: BorderRadius.circular(24.0),
+        childLayout: ChildLayout(
+          inner: [
+            ...innerBox,
+            const Positioned(
+              left: 30.0,
+              top: 30.0,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Flutter Tilt', style: TextStyle(fontSize: 14, color: Colors.white70)),
+                  Text('Layout', style: TextStyle(fontSize: 32, color: Colors.white, height: 1)),
+                ],
+              ),
             ),
-            lightConfig: const LightConfig(disable: true),
-            shadowConfig: const ShadowConfig(disable: true),
-            childLayout: ChildLayout(
-              inner: [
-                ...innerBox,
-                const Positioned(
-                  left: 30.0,
-                  top: 30.0,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('Flutter Tilt', style: TextStyle(fontSize: 14, color: Colors.white70)),
-                      Text(
-                        'Layout',
-                        style: TextStyle(fontSize: 32, color: Colors.white, height: 1),
-                      ),
-                    ],
+            const Positioned(
+              left: 30.0,
+              bottom: 30.0,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Touch and move around.',
+                    style: TextStyle(fontSize: 14, color: Colors.white70),
                   ),
-                ),
-                const Positioned(
-                  left: 30.0,
-                  bottom: 30.0,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Touch and move around.',
-                        style: TextStyle(fontSize: 14, color: Colors.white70),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
-            child: Container(
-              width: 300,
-              height: 500,
-              decoration: const BoxDecoration(color: Colors.black),
-            ),
-          ),
-        ],
+          ],
+        ),
+        child: const DecoratedBox(
+          decoration: BoxDecoration(color: Colors.black),
+          child: SizedBox(width: 300, height: 500),
+        ),
       ),
     );
   }
 }
 
 String code() => '''
-import 'package:flutter_tilt/flutter_tilt.dart';
+class TiltExample extends StatelessWidget {
+  const TiltExample({super.key});
 
-······
-
-final innerBox = <Widget>[];
-for (var i = 1; i <= 10; i++) {
-  innerBox.add(
-    TiltParallax(
-      size: Offset(-20.0 * i, -30.0 * i),
-      child: Container(
-        width: 200 * (1 - i * 0.05),
-        height: 200 * (1 - i * 0.05),
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          border: Border.all(
-            width: 4 * (1 - i * 0.05),
-            color: Colors.white.withValues(alpha: 1 - (i - 1) * 0.1),
+  @override
+  Widget build(BuildContext context) {
+    final innerBox = <Widget>[];
+    for (var i = 1; i <= 10; i++) {
+      innerBox.add(
+        TiltParallax(
+          offset: Offset(-20.0 * i, -30.0 * i),
+          child: DecoratedBox(
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(
+                width: 4 * (1 - i * 0.05),
+                color: Colors.white.withValues(alpha: 1 - (i - 1) * 0.1),
+              ),
+            ),
+            child: SizedBox(width: 200 * (1 - i * 0.05), height: 200 * (1 - i * 0.05)),
           ),
         ),
+      );
+    }
+
+    return Tilt(
+      tiltConfig: const TiltConfig(
+        angle: 20,
+        leaveCurve: Curves.easeInOutCubicEmphasized,
+        leaveDuration: Duration(milliseconds: 1200),
       ),
-    ),
-  );
+      child: TiltBaseContainer(
+        lightConfig: const LightConfig(disable: true),
+        shadowConfig: const ShadowBaseConfig(disable: true),
+        borderRadius: BorderRadius.circular(24.0),
+        childLayout: ChildLayout(
+          inner: [
+            ...innerBox,
+            const Positioned(
+              left: 30.0,
+              top: 30.0,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Flutter Tilt', style: TextStyle(fontSize: 14, color: Colors.white70)),
+                  Text('Layout', style: TextStyle(fontSize: 32, color: Colors.white, height: 1)),
+                ],
+              ),
+            ),
+            const Positioned(
+              left: 30.0,
+              bottom: 30.0,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Touch and move around.',
+                    style: TextStyle(fontSize: 14, color: Colors.white70),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+        child: const DecoratedBox(
+          decoration: BoxDecoration(color: Colors.black),
+          child: SizedBox(width: 300, height: 500),
+        ),
+      ),
+    );
+  }
 }
-
-Tilt(
-  borderRadius: BorderRadius.circular(24.0),
-  tiltConfig: const TiltConfig(
-    angle: 20,
-    leaveCurve: Curves.easeInOutCubicEmphasized,
-    leaveDuration: Duration(milliseconds: 1200),
-  ),
-  lightConfig: const LightConfig(disable: true),
-  shadowConfig: const ShadowConfig(disable: true),
-  childLayout: ChildLayout(
-    inner: [
-      ...innerBox,
-      const Positioned(
-        left: 30.0,
-        top: 30.0,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text('Flutter Tilt', style: TextStyle(fontSize: 14, color: Colors.white70)),
-            Text(
-              'Layout',
-              style: TextStyle(fontSize: 32, color: Colors.white, height: 1),
-            ),
-          ],
-        ),
-      ),
-      const Positioned(
-        left: 30.0,
-        bottom: 30.0,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Touch and move around.',
-              style: TextStyle(fontSize: 14, color: Colors.white70),
-            ),
-          ],
-        ),
-      ),
-    ],
-  ),
-  child: Container(
-    width: 300,
-    height: 500,
-    decoration: const BoxDecoration(color: Colors.black),
-  ),
-),
-
-······
 ''';

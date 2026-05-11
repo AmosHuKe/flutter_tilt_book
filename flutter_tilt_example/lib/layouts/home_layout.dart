@@ -16,7 +16,7 @@ class HomeLayout extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFF171819),
       drawer: Container(
-        width: 200,
+        width: 220,
         padding: const EdgeInsets.only(top: 24, bottom: 24, right: 24),
         color: const Color(0xFF171819),
         child: const SafeArea(child: NavigatorContainer()),
@@ -52,7 +52,7 @@ class HomeLayout extends StatelessWidget {
             children: [
               /// 导航
               Container(
-                width: 200,
+                width: 220,
                 padding: const EdgeInsets.only(top: 24, bottom: 24, right: 24),
                 color: const Color(0xFF171819),
                 child: const NavigatorContainer(),
@@ -139,8 +139,7 @@ class NavigatorContainer extends StatelessWidget {
                 right: 0,
                 top: 0,
                 child: IgnorePointer(
-                  child: Container(
-                    height: 14,
+                  child: DecoratedBox(
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         begin: Alignment.bottomCenter,
@@ -152,6 +151,7 @@ class NavigatorContainer extends StatelessWidget {
                         ],
                       ),
                     ),
+                    child: const SizedBox(height: 14),
                   ),
                 ),
               ),
@@ -162,8 +162,7 @@ class NavigatorContainer extends StatelessWidget {
                 right: 0,
                 bottom: 0,
                 child: IgnorePointer(
-                  child: Container(
-                    height: 100,
+                  child: DecoratedBox(
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
@@ -175,6 +174,7 @@ class NavigatorContainer extends StatelessWidget {
                         ],
                       ),
                     ),
+                    child: const SizedBox(height: 100),
                   ),
                 ),
               ),

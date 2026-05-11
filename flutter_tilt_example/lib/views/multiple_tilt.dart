@@ -17,37 +17,46 @@ class MultipleTilt extends StatelessWidget {
       sourceCodeLink:
           'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/multiple_tilt.dart',
       minHeight: 1200,
-      body: Padding(
-        padding: const EdgeInsets.all(8),
-        child: Wrap(
-          spacing: 24,
-          runSpacing: 24,
-          alignment: WrapAlignment.center,
-          runAlignment: WrapAlignment.center,
-          children: [
-            AnimationCard(
-              child: Image.asset(
-                'assets/multiple_tilt_image/sun.png',
-                filterQuality: FilterQuality.high,
-                width: 159.5,
-              ),
+      body: const TiltExample(),
+    );
+  }
+}
+
+class TiltExample extends StatelessWidget {
+  const TiltExample({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8),
+      child: Wrap(
+        spacing: 24,
+        runSpacing: 24,
+        alignment: WrapAlignment.center,
+        runAlignment: WrapAlignment.center,
+        children: [
+          AnimationCard(
+            child: Image.asset(
+              'assets/multiple_tilt_image/sun.png',
+              filterQuality: FilterQuality.high,
+              width: 159.5,
             ),
-            AnimationCard(
-              child: Image.asset(
-                'assets/multiple_tilt_image/moon.png',
-                filterQuality: FilterQuality.high,
-                height: 275,
-              ),
+          ),
+          AnimationCard(
+            child: Image.asset(
+              'assets/multiple_tilt_image/moon.png',
+              filterQuality: FilterQuality.high,
+              height: 275,
             ),
-            AnimationCard(
-              child: Image.asset(
-                'assets/multiple_tilt_image/star.png',
-                filterQuality: FilterQuality.high,
-                width: 159.5,
-              ),
+          ),
+          AnimationCard(
+            child: Image.asset(
+              'assets/multiple_tilt_image/star.png',
+              filterQuality: FilterQuality.high,
+              width: 159.5,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -101,12 +110,14 @@ class _AnimationCardState extends State<AnimationCard> with SingleTickerProvider
           filterQuality: FilterQuality.high,
           child: GestureDetector(
             onTap: () => _showDialog(context),
-            // Tilt here
             child: Tilt(
-              borderRadius: BorderRadius.circular(20),
-              tiltConfig: const TiltConfig(filterQuality: FilterQuality.high),
-              lightConfig: const LightConfig(minIntensity: 0.1, maxIntensity: 0.4),
-              child: widget.child,
+              tiltConfig: const TiltConfig(),
+              child: TiltBaseContainer(
+                lightConfig: const LightConfig(minIntensity: 0.1, maxIntensity: 0.4),
+                borderRadius: BorderRadius.circular(20),
+                filterQuality: FilterQuality.high,
+                child: widget.child,
+              ),
             ),
           ),
         ),
@@ -127,17 +138,15 @@ class _AnimationCardState extends State<AnimationCard> with SingleTickerProvider
               child: Transform.scale(
                 scale: 1.2,
                 filterQuality: FilterQuality.high,
-                // Tilt here
                 child: Tilt(
-                  borderRadius: BorderRadius.circular(20),
-                  tiltConfig: const TiltConfig(
-                    enableRevert: false,
-                    enableSensorRevert: false,
+                  tiltConfig: const TiltConfig(enableRevert: false, enableSensorRevert: false),
+                  child: TiltBaseContainer(
+                    lightConfig: const LightConfig(minIntensity: 0.1, maxIntensity: 0.4),
+                    shadowConfig: const ShadowBaseConfig(disable: true),
+                    borderRadius: BorderRadius.circular(20),
                     filterQuality: FilterQuality.high,
+                    child: widget.child,
                   ),
-                  lightConfig: const LightConfig(minIntensity: 0.1, maxIntensity: 0.4),
-                  shadowConfig: const ShadowConfig(disable: true),
-                  child: widget.child,
                 ),
               ),
             ),
@@ -149,44 +158,45 @@ class _AnimationCardState extends State<AnimationCard> with SingleTickerProvider
 }
 
 String code() => '''
-import 'package:flutter_tilt/flutter_tilt.dart';
+class TiltExample extends StatelessWidget {
+  const TiltExample({super.key});
 
-······
-
-Padding(
-  padding: const EdgeInsets.all(8),
-  child: Wrap(
-    spacing: 24,
-    runSpacing: 24,
-    alignment: WrapAlignment.center,
-    runAlignment: WrapAlignment.center,
-    children: [
-      AnimationCard(
-        child: Image.asset(
-          'assets/multiple_tilt_image/sun.png',
-          filterQuality: FilterQuality.high,
-          width: 159.5,
-        ),
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8),
+      child: Wrap(
+        spacing: 24,
+        runSpacing: 24,
+        alignment: WrapAlignment.center,
+        runAlignment: WrapAlignment.center,
+        children: [
+          AnimationCard(
+            child: Image.asset(
+              'assets/multiple_tilt_image/sun.png',
+              filterQuality: FilterQuality.high,
+              width: 159.5,
+            ),
+          ),
+          AnimationCard(
+            child: Image.asset(
+              'assets/multiple_tilt_image/moon.png',
+              filterQuality: FilterQuality.high,
+              height: 275,
+            ),
+          ),
+          AnimationCard(
+            child: Image.asset(
+              'assets/multiple_tilt_image/star.png',
+              filterQuality: FilterQuality.high,
+              width: 159.5,
+            ),
+          ),
+        ],
       ),
-      AnimationCard(
-        child: Image.asset(
-          'assets/multiple_tilt_image/moon.png',
-          filterQuality: FilterQuality.high,
-          height: 275,
-        ),
-      ),
-      AnimationCard(
-        child: Image.asset(
-          'assets/multiple_tilt_image/star.png',
-          filterQuality: FilterQuality.high,
-          width: 159.5,
-        ),
-      ),
-    ],
-  ),
-),
-
-...
+    );
+  }
+}
 
 class AnimationCard extends StatefulWidget {
   const AnimationCard({super.key, required this.child});
@@ -236,12 +246,14 @@ class _AnimationCardState extends State<AnimationCard> with SingleTickerProvider
           filterQuality: FilterQuality.high,
           child: GestureDetector(
             onTap: () => _showDialog(context),
-            // Tilt here
             child: Tilt(
-              borderRadius: BorderRadius.circular(20),
-              tiltConfig: const TiltConfig(filterQuality: FilterQuality.high),
-              lightConfig: const LightConfig(minIntensity: 0.1, maxIntensity: 0.4),
-              child: widget.child,
+              tiltConfig: const TiltConfig(),
+              child: TiltBaseContainer(
+                lightConfig: const LightConfig(minIntensity: 0.1, maxIntensity: 0.4),
+                borderRadius: BorderRadius.circular(20),
+                filterQuality: FilterQuality.high,
+                child: widget.child,
+              ),
             ),
           ),
         ),
@@ -256,20 +268,22 @@ class _AnimationCardState extends State<AnimationCard> with SingleTickerProvider
         return BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
           child: Align(
-            child: Transform.scale(
-              scale: 1.2,
-              filterQuality: FilterQuality.high,
-              // Tilt here
-              child: Tilt(
-                borderRadius: BorderRadius.circular(20),
-                tiltConfig: const TiltConfig(
-                  enableRevert: false,
-                  enableSensorRevert: false,
-                  filterQuality: FilterQuality.high,
+            alignment: Alignment.topCenter,
+            child: Padding(
+              padding: const EdgeInsets.only(top: 200),
+              child: Transform.scale(
+                scale: 1.2,
+                filterQuality: FilterQuality.high,
+                child: Tilt(
+                  tiltConfig: const TiltConfig(enableRevert: false, enableSensorRevert: false),
+                  child: TiltBaseContainer(
+                    lightConfig: const LightConfig(minIntensity: 0.1, maxIntensity: 0.4),
+                    shadowConfig: const ShadowBaseConfig(disable: true),
+                    borderRadius: BorderRadius.circular(20),
+                    filterQuality: FilterQuality.high,
+                    child: widget.child,
+                  ),
                 ),
-                lightConfig: const LightConfig(minIntensity: 0.1, maxIntensity: 0.4),
-                shadowConfig: const ShadowConfig(disable: true),
-                child: widget.child,
               ),
             ),
           ),
@@ -278,6 +292,4 @@ class _AnimationCardState extends State<AnimationCard> with SingleTickerProvider
     );
   }
 }
-
-······
 ''';

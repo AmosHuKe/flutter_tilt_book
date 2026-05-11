@@ -10,30 +10,30 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i25;
-import 'package:flutter_tilt_book/layouts/home_embed_layout.dart' as _i8;
-import 'package:flutter_tilt_book/layouts/home_layout.dart' as _i9;
+import 'package:flutter_tilt_book/layouts/home_embed_layout.dart' as _i6;
+import 'package:flutter_tilt_book/layouts/home_layout.dart' as _i7;
 import 'package:flutter_tilt_book/views/animation.dart' as _i1;
 import 'package:flutter_tilt_book/views/bento_grids.dart' as _i2;
-import 'package:flutter_tilt_book/views/default.dart' as _i3;
-import 'package:flutter_tilt_book/views/dialog.dart' as _i4;
-import 'package:flutter_tilt_book/views/disable_effects.dart' as _i5;
-import 'package:flutter_tilt_book/views/events.dart' as _i6;
-import 'package:flutter_tilt_book/views/example.dart' as _i7;
-import 'package:flutter_tilt_book/views/initial_tilt.dart' as _i10;
-import 'package:flutter_tilt_book/views/keep_tilt.dart' as _i11;
-import 'package:flutter_tilt_book/views/layout.dart' as _i14;
-import 'package:flutter_tilt_book/views/layout2.dart' as _i12;
-import 'package:flutter_tilt_book/views/layout3.dart' as _i13;
-import 'package:flutter_tilt_book/views/light_direction.dart' as _i15;
-import 'package:flutter_tilt_book/views/light_shadow_mode.dart' as _i16;
-import 'package:flutter_tilt_book/views/multiple_tilt.dart' as _i17;
-import 'package:flutter_tilt_book/views/parallax_card.dart' as _i18;
-import 'package:flutter_tilt_book/views/parallax_image.dart' as _i19;
-import 'package:flutter_tilt_book/views/reverse_tilt.dart' as _i20;
-import 'package:flutter_tilt_book/views/shadow_direction.dart' as _i21;
-import 'package:flutter_tilt_book/views/smooth_gesture_enter.dart' as _i22;
-import 'package:flutter_tilt_book/views/tilt_direction.dart' as _i23;
-import 'package:flutter_tilt_book/views/tilt_stream_controller.dart' as _i24;
+import 'package:flutter_tilt_book/views/disable_effects.dart' as _i3;
+import 'package:flutter_tilt_book/views/events.dart' as _i4;
+import 'package:flutter_tilt_book/views/example.dart' as _i5;
+import 'package:flutter_tilt_book/views/initial_tilt.dart' as _i8;
+import 'package:flutter_tilt_book/views/keep_tilt.dart' as _i9;
+import 'package:flutter_tilt_book/views/layout.dart' as _i12;
+import 'package:flutter_tilt_book/views/layout2.dart' as _i10;
+import 'package:flutter_tilt_book/views/layout3.dart' as _i11;
+import 'package:flutter_tilt_book/views/light_direction.dart' as _i13;
+import 'package:flutter_tilt_book/views/multiple_tilt.dart' as _i14;
+import 'package:flutter_tilt_book/views/parallax_card.dart' as _i15;
+import 'package:flutter_tilt_book/views/parallax_image.dart' as _i16;
+import 'package:flutter_tilt_book/views/reverse_tilt.dart' as _i17;
+import 'package:flutter_tilt_book/views/shadow_direction.dart' as _i18;
+import 'package:flutter_tilt_book/views/smooth_gesture_enter.dart' as _i19;
+import 'package:flutter_tilt_book/views/tilt_animated_builder.dart' as _i21;
+import 'package:flutter_tilt_book/views/tilt_animated_builder2.dart' as _i20;
+import 'package:flutter_tilt_book/views/tilt_container.dart' as _i22;
+import 'package:flutter_tilt_book/views/tilt_controller.dart' as _i23;
+import 'package:flutter_tilt_book/views/tilt_direction.dart' as _i24;
 
 /// generated route for
 /// [_i1.AnimationDemo]
@@ -68,39 +68,7 @@ class BentoGrids extends _i25.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i3.Default]
-class Default extends _i25.PageRouteInfo<void> {
-  const Default({List<_i25.PageRouteInfo>? children})
-    : super(Default.name, initialChildren: children);
-
-  static const String name = 'Default';
-
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      return const _i3.Default();
-    },
-  );
-}
-
-/// generated route for
-/// [_i4.DialogDemo]
-class DialogDemo extends _i25.PageRouteInfo<void> {
-  const DialogDemo({List<_i25.PageRouteInfo>? children})
-    : super(DialogDemo.name, initialChildren: children);
-
-  static const String name = 'DialogDemo';
-
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      return const _i4.DialogDemo();
-    },
-  );
-}
-
-/// generated route for
-/// [_i5.DisableEffects]
+/// [_i3.DisableEffects]
 class DisableEffects extends _i25.PageRouteInfo<void> {
   const DisableEffects({List<_i25.PageRouteInfo>? children})
     : super(DisableEffects.name, initialChildren: children);
@@ -110,13 +78,13 @@ class DisableEffects extends _i25.PageRouteInfo<void> {
   static _i25.PageInfo page = _i25.PageInfo(
     name,
     builder: (data) {
-      return const _i5.DisableEffects();
+      return const _i3.DisableEffects();
     },
   );
 }
 
 /// generated route for
-/// [_i6.Events]
+/// [_i4.Events]
 class Events extends _i25.PageRouteInfo<void> {
   const Events({List<_i25.PageRouteInfo>? children})
     : super(Events.name, initialChildren: children);
@@ -126,13 +94,13 @@ class Events extends _i25.PageRouteInfo<void> {
   static _i25.PageInfo page = _i25.PageInfo(
     name,
     builder: (data) {
-      return const _i6.Events();
+      return const _i4.Events();
     },
   );
 }
 
 /// generated route for
-/// [_i7.Example]
+/// [_i5.Example]
 class Example extends _i25.PageRouteInfo<void> {
   const Example({List<_i25.PageRouteInfo>? children})
     : super(Example.name, initialChildren: children);
@@ -142,13 +110,13 @@ class Example extends _i25.PageRouteInfo<void> {
   static _i25.PageInfo page = _i25.PageInfo(
     name,
     builder: (data) {
-      return const _i7.Example();
+      return const _i5.Example();
     },
   );
 }
 
 /// generated route for
-/// [_i8.HomeEmbedLayout]
+/// [_i6.HomeEmbedLayout]
 class HomeEmbedLayout extends _i25.PageRouteInfo<void> {
   const HomeEmbedLayout({List<_i25.PageRouteInfo>? children})
     : super(HomeEmbedLayout.name, initialChildren: children);
@@ -158,13 +126,13 @@ class HomeEmbedLayout extends _i25.PageRouteInfo<void> {
   static _i25.PageInfo page = _i25.PageInfo(
     name,
     builder: (data) {
-      return const _i8.HomeEmbedLayout();
+      return const _i6.HomeEmbedLayout();
     },
   );
 }
 
 /// generated route for
-/// [_i9.HomeLayout]
+/// [_i7.HomeLayout]
 class HomeLayout extends _i25.PageRouteInfo<void> {
   const HomeLayout({List<_i25.PageRouteInfo>? children})
     : super(HomeLayout.name, initialChildren: children);
@@ -174,13 +142,13 @@ class HomeLayout extends _i25.PageRouteInfo<void> {
   static _i25.PageInfo page = _i25.PageInfo(
     name,
     builder: (data) {
-      return const _i9.HomeLayout();
+      return const _i7.HomeLayout();
     },
   );
 }
 
 /// generated route for
-/// [_i10.InitialTilt]
+/// [_i8.InitialTilt]
 class InitialTilt extends _i25.PageRouteInfo<void> {
   const InitialTilt({List<_i25.PageRouteInfo>? children})
     : super(InitialTilt.name, initialChildren: children);
@@ -190,13 +158,13 @@ class InitialTilt extends _i25.PageRouteInfo<void> {
   static _i25.PageInfo page = _i25.PageInfo(
     name,
     builder: (data) {
-      return const _i10.InitialTilt();
+      return const _i8.InitialTilt();
     },
   );
 }
 
 /// generated route for
-/// [_i11.KeepTilt]
+/// [_i9.KeepTilt]
 class KeepTilt extends _i25.PageRouteInfo<void> {
   const KeepTilt({List<_i25.PageRouteInfo>? children})
     : super(KeepTilt.name, initialChildren: children);
@@ -206,13 +174,13 @@ class KeepTilt extends _i25.PageRouteInfo<void> {
   static _i25.PageInfo page = _i25.PageInfo(
     name,
     builder: (data) {
-      return const _i11.KeepTilt();
+      return const _i9.KeepTilt();
     },
   );
 }
 
 /// generated route for
-/// [_i12.Layout2Demo]
+/// [_i10.Layout2Demo]
 class Layout2Demo extends _i25.PageRouteInfo<void> {
   const Layout2Demo({List<_i25.PageRouteInfo>? children})
     : super(Layout2Demo.name, initialChildren: children);
@@ -222,13 +190,13 @@ class Layout2Demo extends _i25.PageRouteInfo<void> {
   static _i25.PageInfo page = _i25.PageInfo(
     name,
     builder: (data) {
-      return const _i12.Layout2Demo();
+      return const _i10.Layout2Demo();
     },
   );
 }
 
 /// generated route for
-/// [_i13.Layout3Demo]
+/// [_i11.Layout3Demo]
 class Layout3Demo extends _i25.PageRouteInfo<void> {
   const Layout3Demo({List<_i25.PageRouteInfo>? children})
     : super(Layout3Demo.name, initialChildren: children);
@@ -238,13 +206,13 @@ class Layout3Demo extends _i25.PageRouteInfo<void> {
   static _i25.PageInfo page = _i25.PageInfo(
     name,
     builder: (data) {
-      return const _i13.Layout3Demo();
+      return const _i11.Layout3Demo();
     },
   );
 }
 
 /// generated route for
-/// [_i14.LayoutDemo]
+/// [_i12.LayoutDemo]
 class LayoutDemo extends _i25.PageRouteInfo<void> {
   const LayoutDemo({List<_i25.PageRouteInfo>? children})
     : super(LayoutDemo.name, initialChildren: children);
@@ -254,13 +222,13 @@ class LayoutDemo extends _i25.PageRouteInfo<void> {
   static _i25.PageInfo page = _i25.PageInfo(
     name,
     builder: (data) {
-      return const _i14.LayoutDemo();
+      return const _i12.LayoutDemo();
     },
   );
 }
 
 /// generated route for
-/// [_i15.LightDirectionDemo]
+/// [_i13.LightDirectionDemo]
 class LightDirectionDemo extends _i25.PageRouteInfo<void> {
   const LightDirectionDemo({List<_i25.PageRouteInfo>? children})
     : super(LightDirectionDemo.name, initialChildren: children);
@@ -270,29 +238,13 @@ class LightDirectionDemo extends _i25.PageRouteInfo<void> {
   static _i25.PageInfo page = _i25.PageInfo(
     name,
     builder: (data) {
-      return const _i15.LightDirectionDemo();
+      return const _i13.LightDirectionDemo();
     },
   );
 }
 
 /// generated route for
-/// [_i16.LightShadowModeDemo]
-class LightShadowModeDemo extends _i25.PageRouteInfo<void> {
-  const LightShadowModeDemo({List<_i25.PageRouteInfo>? children})
-    : super(LightShadowModeDemo.name, initialChildren: children);
-
-  static const String name = 'LightShadowModeDemo';
-
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      return const _i16.LightShadowModeDemo();
-    },
-  );
-}
-
-/// generated route for
-/// [_i17.MultipleTilt]
+/// [_i14.MultipleTilt]
 class MultipleTilt extends _i25.PageRouteInfo<void> {
   const MultipleTilt({List<_i25.PageRouteInfo>? children})
     : super(MultipleTilt.name, initialChildren: children);
@@ -302,13 +254,13 @@ class MultipleTilt extends _i25.PageRouteInfo<void> {
   static _i25.PageInfo page = _i25.PageInfo(
     name,
     builder: (data) {
-      return const _i17.MultipleTilt();
+      return const _i14.MultipleTilt();
     },
   );
 }
 
 /// generated route for
-/// [_i18.ParallaxCard]
+/// [_i15.ParallaxCard]
 class ParallaxCard extends _i25.PageRouteInfo<void> {
   const ParallaxCard({List<_i25.PageRouteInfo>? children})
     : super(ParallaxCard.name, initialChildren: children);
@@ -318,13 +270,13 @@ class ParallaxCard extends _i25.PageRouteInfo<void> {
   static _i25.PageInfo page = _i25.PageInfo(
     name,
     builder: (data) {
-      return const _i18.ParallaxCard();
+      return const _i15.ParallaxCard();
     },
   );
 }
 
 /// generated route for
-/// [_i19.ParallaxImage]
+/// [_i16.ParallaxImage]
 class ParallaxImage extends _i25.PageRouteInfo<void> {
   const ParallaxImage({List<_i25.PageRouteInfo>? children})
     : super(ParallaxImage.name, initialChildren: children);
@@ -334,13 +286,13 @@ class ParallaxImage extends _i25.PageRouteInfo<void> {
   static _i25.PageInfo page = _i25.PageInfo(
     name,
     builder: (data) {
-      return const _i19.ParallaxImage();
+      return const _i16.ParallaxImage();
     },
   );
 }
 
 /// generated route for
-/// [_i20.ReverseTilt]
+/// [_i17.ReverseTilt]
 class ReverseTilt extends _i25.PageRouteInfo<void> {
   const ReverseTilt({List<_i25.PageRouteInfo>? children})
     : super(ReverseTilt.name, initialChildren: children);
@@ -350,13 +302,13 @@ class ReverseTilt extends _i25.PageRouteInfo<void> {
   static _i25.PageInfo page = _i25.PageInfo(
     name,
     builder: (data) {
-      return const _i20.ReverseTilt();
+      return const _i17.ReverseTilt();
     },
   );
 }
 
 /// generated route for
-/// [_i21.ShadowDirectionDemo]
+/// [_i18.ShadowDirectionDemo]
 class ShadowDirectionDemo extends _i25.PageRouteInfo<void> {
   const ShadowDirectionDemo({List<_i25.PageRouteInfo>? children})
     : super(ShadowDirectionDemo.name, initialChildren: children);
@@ -366,13 +318,13 @@ class ShadowDirectionDemo extends _i25.PageRouteInfo<void> {
   static _i25.PageInfo page = _i25.PageInfo(
     name,
     builder: (data) {
-      return const _i21.ShadowDirectionDemo();
+      return const _i18.ShadowDirectionDemo();
     },
   );
 }
 
 /// generated route for
-/// [_i22.SmoothGestureEnterDemo]
+/// [_i19.SmoothGestureEnterDemo]
 class SmoothGestureEnterDemo extends _i25.PageRouteInfo<void> {
   const SmoothGestureEnterDemo({List<_i25.PageRouteInfo>? children})
     : super(SmoothGestureEnterDemo.name, initialChildren: children);
@@ -382,13 +334,77 @@ class SmoothGestureEnterDemo extends _i25.PageRouteInfo<void> {
   static _i25.PageInfo page = _i25.PageInfo(
     name,
     builder: (data) {
-      return const _i22.SmoothGestureEnterDemo();
+      return const _i19.SmoothGestureEnterDemo();
     },
   );
 }
 
 /// generated route for
-/// [_i23.TiltDirectionDemo]
+/// [_i20.TiltAnimatedBuilder2Demo]
+class TiltAnimatedBuilder2Demo extends _i25.PageRouteInfo<void> {
+  const TiltAnimatedBuilder2Demo({List<_i25.PageRouteInfo>? children})
+    : super(TiltAnimatedBuilder2Demo.name, initialChildren: children);
+
+  static const String name = 'TiltAnimatedBuilder2Demo';
+
+  static _i25.PageInfo page = _i25.PageInfo(
+    name,
+    builder: (data) {
+      return const _i20.TiltAnimatedBuilder2Demo();
+    },
+  );
+}
+
+/// generated route for
+/// [_i21.TiltAnimatedBuilderDemo]
+class TiltAnimatedBuilderDemo extends _i25.PageRouteInfo<void> {
+  const TiltAnimatedBuilderDemo({List<_i25.PageRouteInfo>? children})
+    : super(TiltAnimatedBuilderDemo.name, initialChildren: children);
+
+  static const String name = 'TiltAnimatedBuilderDemo';
+
+  static _i25.PageInfo page = _i25.PageInfo(
+    name,
+    builder: (data) {
+      return const _i21.TiltAnimatedBuilderDemo();
+    },
+  );
+}
+
+/// generated route for
+/// [_i22.TiltContainerDemo]
+class TiltContainerDemo extends _i25.PageRouteInfo<void> {
+  const TiltContainerDemo({List<_i25.PageRouteInfo>? children})
+    : super(TiltContainerDemo.name, initialChildren: children);
+
+  static const String name = 'TiltContainerDemo';
+
+  static _i25.PageInfo page = _i25.PageInfo(
+    name,
+    builder: (data) {
+      return const _i22.TiltContainerDemo();
+    },
+  );
+}
+
+/// generated route for
+/// [_i23.TiltControllerDemo]
+class TiltControllerDemo extends _i25.PageRouteInfo<void> {
+  const TiltControllerDemo({List<_i25.PageRouteInfo>? children})
+    : super(TiltControllerDemo.name, initialChildren: children);
+
+  static const String name = 'TiltControllerDemo';
+
+  static _i25.PageInfo page = _i25.PageInfo(
+    name,
+    builder: (data) {
+      return const _i23.TiltControllerDemo();
+    },
+  );
+}
+
+/// generated route for
+/// [_i24.TiltDirectionDemo]
 class TiltDirectionDemo extends _i25.PageRouteInfo<void> {
   const TiltDirectionDemo({List<_i25.PageRouteInfo>? children})
     : super(TiltDirectionDemo.name, initialChildren: children);
@@ -398,23 +414,7 @@ class TiltDirectionDemo extends _i25.PageRouteInfo<void> {
   static _i25.PageInfo page = _i25.PageInfo(
     name,
     builder: (data) {
-      return const _i23.TiltDirectionDemo();
-    },
-  );
-}
-
-/// generated route for
-/// [_i24.TiltStreamControllerDemo]
-class TiltStreamControllerDemo extends _i25.PageRouteInfo<void> {
-  const TiltStreamControllerDemo({List<_i25.PageRouteInfo>? children})
-    : super(TiltStreamControllerDemo.name, initialChildren: children);
-
-  static const String name = 'TiltStreamControllerDemo';
-
-  static _i25.PageInfo page = _i25.PageInfo(
-    name,
-    builder: (data) {
-      return const _i24.TiltStreamControllerDemo();
+      return const _i24.TiltDirectionDemo();
     },
   );
 }

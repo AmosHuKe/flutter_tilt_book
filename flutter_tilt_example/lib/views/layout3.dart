@@ -16,187 +16,177 @@ class Layout3Demo extends StatelessWidget {
       sourceCodeLink:
           'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/layout3.dart',
       minHeight: 800,
+      body: const TiltExample(),
+    );
+  }
+}
 
-      /// Tilt here
-      body: Wrap(
-        spacing: 64,
-        runSpacing: 64,
-        alignment: WrapAlignment.center,
-        runAlignment: WrapAlignment.center,
-        children: [
-          Tilt(
-            borderRadius: BorderRadius.circular(24.0),
-            border: Border.all(width: 3),
-            tiltConfig: const TiltConfig(
-              angle: 20,
-              initial: Offset(-0.4, -0.4),
-              enableReverse: true,
-              leaveCurve: Curves.easeInOutCubicEmphasized,
-              leaveDuration: Duration(milliseconds: 1200),
+class TiltExample extends StatelessWidget {
+  const TiltExample({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Tilt(
+      tiltConfig: const TiltConfig(
+        angle: 20,
+        initial: Offset(-0.4, -0.4),
+        enableReverse: true,
+        leaveCurve: Curves.easeInOutCubicEmphasized,
+        leaveDuration: Duration(milliseconds: 1200),
+      ),
+      child: TiltBaseContainer(
+        lightConfig: const LightConfig(disable: true),
+        shadowConfig: const ShadowBaseConfig(disable: true),
+        borderRadius: BorderRadius.circular(24.0),
+        border: Border.all(width: 3),
+        childLayout: ChildLayout(
+          inner: [
+            const TiltParallax(
+              offset: Offset(10, 10),
+              child: DecoratedBox(
+                decoration: BoxDecoration(color: Colors.black, shape: BoxShape.circle),
+                child: SizedBox(width: 64, height: 64),
+              ),
             ),
-            lightConfig: const LightConfig(disable: true),
-            shadowConfig: const ShadowConfig(disable: true),
-            childLayout: ChildLayout(
-              inner: [
-                TiltParallax(
-                  size: const Offset(10, 10),
-                  child: Container(
-                    width: 64,
-                    height: 64,
-                    decoration: const BoxDecoration(color: Colors.black, shape: BoxShape.circle),
-                  ),
+            TiltParallax(
+              offset: const Offset(20, 20),
+              child: Container(
+                width: 64,
+                height: 64,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(width: 4),
+                  shape: BoxShape.circle,
                 ),
-                TiltParallax(
-                  size: const Offset(20, 20),
-                  child: Container(
-                    width: 64,
-                    height: 64,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(width: 4),
-                      shape: BoxShape.circle,
-                    ),
-                    clipBehavior: Clip.hardEdge,
-                    child: Center(
-                      child: TiltParallax(
-                        size: const Offset(15, 15),
-                        child: Container(
-                          width: 32,
-                          height: 32,
-                          decoration: const BoxDecoration(
-                            color: Colors.black,
-                            shape: BoxShape.circle,
-                          ),
-                        ),
-                      ),
+                clipBehavior: Clip.hardEdge,
+                child: const Center(
+                  child: TiltParallax(
+                    offset: Offset(15, 15),
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(color: Colors.black, shape: BoxShape.circle),
+                      child: SizedBox(width: 32, height: 32),
                     ),
                   ),
                 ),
-
-                const Positioned(
-                  left: 30.0,
-                  top: 30.0,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('Flutter Tilt', style: TextStyle(fontSize: 12, color: Colors.black87)),
-                      Text('Layout', style: TextStyle(fontSize: 24, color: Colors.black)),
-                    ],
-                  ),
-                ),
-                const Positioned(
-                  left: 30.0,
-                  bottom: 30.0,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Touch and move around.',
-                        style: TextStyle(fontSize: 14, color: Colors.black87),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+              ),
             ),
-            child: Container(
-              width: 300,
-              height: 500,
-              decoration: const BoxDecoration(color: Colors.white),
+            const Positioned(
+              left: 30.0,
+              top: 30.0,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Flutter Tilt', style: TextStyle(fontSize: 12, color: Colors.black87)),
+                  Text('Layout', style: TextStyle(fontSize: 24, color: Colors.black)),
+                ],
+              ),
             ),
-          ),
-        ],
+            const Positioned(
+              left: 30.0,
+              bottom: 30.0,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Touch and move around.',
+                    style: TextStyle(fontSize: 14, color: Colors.black87),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+        child: const DecoratedBox(
+          decoration: BoxDecoration(color: Colors.white),
+          child: SizedBox(width: 300, height: 500),
+        ),
       ),
     );
   }
 }
 
 String code() => '''
-import 'package:flutter_tilt/flutter_tilt.dart';
+class TiltExample extends StatelessWidget {
+  const TiltExample({super.key});
 
-······
-
-Tilt(
-  borderRadius: BorderRadius.circular(24.0),
-  border: Border.all(width: 3),
-  tiltConfig: const TiltConfig(
-    angle: 20,
-    initial: Offset(-0.4, -0.4),
-    enableReverse: true,
-    leaveCurve: Curves.easeInOutCubicEmphasized,
-    leaveDuration: Duration(milliseconds: 1200),
-  ),
-  lightConfig: const LightConfig(disable: true),
-  shadowConfig: const ShadowConfig(disable: true),
-  childLayout: ChildLayout(
-    inner: [
-      TiltParallax(
-        size: const Offset(10, 10),
-        child: Container(
-          width: 64,
-          height: 64,
-          decoration: const BoxDecoration(color: Colors.black, shape: BoxShape.circle),
-        ),
+  @override
+  Widget build(BuildContext context) {
+    return Tilt(
+      tiltConfig: const TiltConfig(
+        angle: 20,
+        initial: Offset(-0.4, -0.4),
+        enableReverse: true,
+        leaveCurve: Curves.easeInOutCubicEmphasized,
+        leaveDuration: Duration(milliseconds: 1200),
       ),
-      TiltParallax(
-        size: const Offset(20, 20),
-        child: Container(
-          width: 64,
-          height: 64,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            border: Border.all(width: 4),
-            shape: BoxShape.circle,
-          ),
-          clipBehavior: Clip.hardEdge,
-          child: Center(
-            child: TiltParallax(
-              size: const Offset(15, 15),
+      child: TiltBaseContainer(
+        lightConfig: const LightConfig(disable: true),
+        shadowConfig: const ShadowBaseConfig(disable: true),
+        borderRadius: BorderRadius.circular(24.0),
+        border: Border.all(width: 3),
+        childLayout: ChildLayout(
+          inner: [
+            const TiltParallax(
+              offset: Offset(10, 10),
+              child: DecoratedBox(
+                decoration: BoxDecoration(color: Colors.black, shape: BoxShape.circle),
+                child: SizedBox(width: 64, height: 64),
+              ),
+            ),
+            TiltParallax(
+              offset: const Offset(20, 20),
               child: Container(
-                width: 32,
-                height: 32,
-                decoration: const BoxDecoration(
-                  color: Colors.black,
+                width: 64,
+                height: 64,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(width: 4),
                   shape: BoxShape.circle,
+                ),
+                clipBehavior: Clip.hardEdge,
+                child: const Center(
+                  child: TiltParallax(
+                    offset: Offset(15, 15),
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(color: Colors.black, shape: BoxShape.circle),
+                      child: SizedBox(width: 32, height: 32),
+                    ),
+                  ),
                 ),
               ),
             ),
-          ),
-        ),
-      ),
-
-      const Positioned(
-        left: 30.0,
-        top: 30.0,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text('Flutter Tilt', style: TextStyle(fontSize: 12, color: Colors.black87)),
-            Text('Layout', style: TextStyle(fontSize: 24, color: Colors.black)),
-          ],
-        ),
-      ),
-      const Positioned(
-        left: 30.0,
-        bottom: 30.0,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Touch and move around.',
-              style: TextStyle(fontSize: 14, color: Colors.black87),
+            const Positioned(
+              left: 30.0,
+              top: 30.0,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Flutter Tilt', style: TextStyle(fontSize: 12, color: Colors.black87)),
+                  Text('Layout', style: TextStyle(fontSize: 24, color: Colors.black)),
+                ],
+              ),
+            ),
+            const Positioned(
+              left: 30.0,
+              bottom: 30.0,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Touch and move around.',
+                    style: TextStyle(fontSize: 14, color: Colors.black87),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
+        child: const DecoratedBox(
+          decoration: BoxDecoration(color: Colors.white),
+          child: SizedBox(width: 300, height: 500),
+        ),
       ),
-    ],
-  ),
-  child: Container(
-    width: 300,
-    height: 500,
-    decoration: const BoxDecoration(color: Colors.white),
-  ),
-),
-
-······
+    );
+  }
+}
 ''';

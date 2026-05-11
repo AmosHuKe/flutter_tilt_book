@@ -49,7 +49,7 @@ class PageLayout extends StatelessWidget {
         ? const BorderRadius.vertical(top: Radius.circular(24))
         : BorderRadius.circular(24);
 
-    return Container(
+    return DecoratedBox(
       decoration: BoxDecoration(
         color: const Color(0xFFF6F7FA),
         borderRadius: showBorderRadius ? borderRadius : null,
@@ -143,126 +143,128 @@ class _BodyContainerState extends State<BodyContainer> with SingleTickerProvider
       true,
     );
 
-    return Container(
-      padding: EdgeInsets.all(layout.md ? 12 : 24),
+    return DecoratedBox(
       decoration: BoxDecoration(
         color: const Color(0xFFFFFFFF),
         borderRadius: showBorderRadius ? BorderRadius.circular(24) : null,
       ),
-      child: Column(
-        children: [
-          /// Title
-          Flex(
-            direction: layout.md ? Axis.vertical : Axis.horizontal,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Column(
-                crossAxisAlignment: layout.md
-                    ? CrossAxisAlignment.center
-                    : CrossAxisAlignment.start,
-                children: [
-                  /// Title
-                  Text(
-                    widget.title,
-                    style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
+      child: Padding(
+        padding: EdgeInsets.all(layout.md ? 12 : 24),
+        child: Column(
+          children: [
+            /// Title
+            Flex(
+              direction: layout.md ? Axis.vertical : Axis.horizontal,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  crossAxisAlignment: layout.md
+                      ? CrossAxisAlignment.center
+                      : CrossAxisAlignment.start,
+                  children: [
+                    /// Title
+                    Text(
+                      widget.title,
+                      style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
 
-                  /// Source Code
-                  if (widget.sourceCodeLink != null)
-                    GestureDetector(
-                      onTap: () => launchUrl(Uri.parse(widget.sourceCodeLink ?? '')),
-                      child: const MouseRegion(
-                        cursor: SystemMouseCursors.click,
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 2, right: 4),
-                              child: Icon(Remix.external_link_line, size: 12),
-                            ),
-                            Text('Source Code', style: TextStyle(fontSize: 12)),
-                          ],
+                    /// Source Code
+                    if (widget.sourceCodeLink != null)
+                      GestureDetector(
+                        onTap: () => launchUrl(Uri.parse(widget.sourceCodeLink ?? '')),
+                        child: const MouseRegion(
+                          cursor: SystemMouseCursors.click,
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(bottom: 2, right: 4),
+                                child: Icon(Remix.external_link_line, size: 12),
+                              ),
+                              Text('Source Code', style: TextStyle(fontSize: 12)),
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                ],
-              ),
-
-              if (layout.md) const SizedBox(height: 12),
-
-              /// Action
-              if (showCode)
-                Container(
-                  width: 94,
-                  padding: const EdgeInsets.symmetric(vertical: 4),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: const BorderRadius.all(Radius.circular(100)),
-                    border: Border.all(color: const Color(0xFFE9EAED)),
-                  ),
-                  child: TabBar(
-                    controller: tabController,
-                    isScrollable: true,
-                    tabAlignment: TabAlignment.center,
-                    dividerHeight: 0,
-                    indicatorWeight: 0,
-                    indicatorSize: TabBarIndicatorSize.label,
-                    indicatorPadding: const EdgeInsets.symmetric(horizontal: -12),
-                    indicator: const BoxDecoration(
-                      color: Color(0xFF171819),
-                      shape: BoxShape.circle,
-                    ),
-                    labelColor: Colors.white,
-                    unselectedLabelColor: Colors.black,
-                    overlayColor: const WidgetStatePropertyAll(Colors.transparent),
-                    tabs: const [
-                      /// Preview
-                      Tab(height: 36, icon: Icon(Remix.eye_line, size: 14)),
-
-                      /// Code
-                      Tab(height: 36, icon: Icon(Remix.code_s_slash_line, size: 14)),
-                    ],
-                  ),
-                ),
-            ],
-          ),
-
-          const SizedBox(height: 24),
-
-          /// Body
-          Expanded(
-            child: PageView(
-              controller: pageController,
-              physics: const NeverScrollableScrollPhysics(),
-              children: [
-                /// Preview
-                LayoutAdaptive(
-                  xlChild: Padding(
-                    padding: const EdgeInsets.only(top: 40, bottom: 40),
-                    child: Column(children: [widget.body]),
-                  ),
-                  child: ListView(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 50, bottom: 100),
-                        child: Center(child: widget.body),
-                      ),
-                    ],
-                  ),
+                  ],
                 ),
 
-                /// Code
+                if (layout.md) const SizedBox(height: 12),
+
+                /// Action
                 if (showCode)
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(24),
-                    child: SelectionArea(
-                      child: ListView(children: [BookSyntaxHighlight(dartCode: widget.dartCode)]),
+                  Container(
+                    width: 94,
+                    padding: const EdgeInsets.symmetric(vertical: 4),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: const BorderRadius.all(Radius.circular(100)),
+                      border: Border.all(color: const Color(0xFFE9EAED)),
+                    ),
+                    child: TabBar(
+                      controller: tabController,
+                      isScrollable: true,
+                      tabAlignment: TabAlignment.center,
+                      dividerHeight: 0,
+                      indicatorWeight: 0,
+                      indicatorSize: TabBarIndicatorSize.label,
+                      indicatorPadding: const EdgeInsets.symmetric(horizontal: -12),
+                      indicator: const BoxDecoration(
+                        color: Color(0xFF171819),
+                        shape: BoxShape.circle,
+                      ),
+                      labelColor: Colors.white,
+                      unselectedLabelColor: Colors.black,
+                      overlayColor: const WidgetStatePropertyAll(Colors.transparent),
+                      tabs: const [
+                        /// Preview
+                        Tab(height: 36, icon: Icon(Remix.eye_line, size: 14)),
+
+                        /// Code
+                        Tab(height: 36, icon: Icon(Remix.code_s_slash_line, size: 14)),
+                      ],
                     ),
                   ),
               ],
             ),
-          ),
-        ],
+
+            const SizedBox(height: 24),
+
+            /// Body
+            Expanded(
+              child: PageView(
+                controller: pageController,
+                physics: const NeverScrollableScrollPhysics(),
+                children: [
+                  /// Preview
+                  LayoutAdaptive(
+                    xlChild: Padding(
+                      padding: const EdgeInsets.only(top: 40, bottom: 40),
+                      child: Column(children: [widget.body]),
+                    ),
+                    child: ListView(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 50, bottom: 100),
+                          child: Center(child: widget.body),
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  /// Code
+                  if (showCode)
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(24),
+                      child: SelectionArea(
+                        child: ListView(children: [BookSyntaxHighlight(dartCode: widget.dartCode)]),
+                      ),
+                    ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -283,33 +285,35 @@ class ToolsContainer extends StatelessWidget {
       true,
     );
 
-    return Container(
-      padding: EdgeInsets.all(layout.md ? 12 : 24),
+    return DecoratedBox(
       decoration: BoxDecoration(
         color: const Color(0xFFFFFFFF),
         borderRadius: showBorderRadius ? BorderRadius.circular(24) : null,
       ),
-      child: Column(
-        children: [
-          Flex(
-            direction: layout.md ? Axis.vertical : Axis.horizontal,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
-              Text('Tools', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-            ],
-          ),
-          const SizedBox(height: 24),
-          if (tools != null)
-            LayoutAdaptive(
-              xlChild: Column(children: [...?tools]),
-              child: Expanded(child: ListView(children: [...?tools])),
+      child: Padding(
+        padding: EdgeInsets.all(layout.md ? 12 : 24),
+        child: Column(
+          children: [
+            Flex(
+              direction: layout.md ? Axis.vertical : Axis.horizontal,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                Text('Tools', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+              ],
             ),
-          if (tools == null)
-            const Center(
-              heightFactor: 6,
-              child: Icon(Remix.emotion_line, size: 36, color: Colors.grey),
-            ),
-        ],
+            const SizedBox(height: 24),
+            if (tools != null)
+              LayoutAdaptive(
+                xlChild: Column(children: [...?tools]),
+                child: Expanded(child: ListView(children: [...?tools])),
+              ),
+            if (tools == null)
+              const Center(
+                heightFactor: 6,
+                child: Icon(Remix.emotion_line, size: 36, color: Colors.grey),
+              ),
+          ],
+        ),
       ),
     );
   }

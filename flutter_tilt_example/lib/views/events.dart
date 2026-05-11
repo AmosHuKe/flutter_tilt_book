@@ -29,10 +29,9 @@ class _EventsState extends State<Events> {
       sourceCodeLink:
           'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/events.dart',
       minHeight: 460,
-
-      /// Tilt here
-      body: Tilt(
-        borderRadius: BorderRadius.circular(30),
+      body: TiltExample(
+        width: width,
+        height: height,
         onGestureMove: (TiltDataModel tiltDataModel, GesturesType gesturesType) {
           setState(() {
             tiltData = tiltDataModel;
@@ -45,16 +44,7 @@ class _EventsState extends State<Events> {
             gestureLeave = gesturesType.name;
           });
         },
-        child: Container(
-          width: width,
-          height: height,
-          alignment: Alignment.center,
-          color: Colors.blueAccent,
-          child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
-        ),
       ),
-
-      /// tools
       tools: [
         Wrap(
           spacing: 64,
@@ -106,38 +96,64 @@ class _EventsState extends State<Events> {
   }
 }
 
+class TiltExample extends StatelessWidget {
+  const TiltExample({
+    super.key,
+    required this.width,
+    required this.height,
+    required this.onGestureMove,
+    required this.onGestureLeave,
+  });
+
+  final double width;
+  final double height;
+  final TiltCallback onGestureMove;
+  final TiltCallback onGestureLeave;
+
+  @override
+  Widget build(BuildContext context) {
+    return Tilt(
+      onGestureMove: onGestureMove,
+      onGestureLeave: onGestureLeave,
+      child: TiltBaseContainer(
+        borderRadius: BorderRadius.circular(30),
+        child: Container(
+          width: width,
+          height: height,
+          alignment: Alignment.center,
+          color: Colors.blueAccent,
+          child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
+        ),
+      ),
+    );
+  }
+}
+
 String code({required double width, required double height}) =>
     '''
-import 'package:flutter_tilt/flutter_tilt.dart';
+class TiltExample extends StatelessWidget {
+  const TiltExample({super.key});
 
-······
-
-TiltDataModel? tiltData;
-String gestureMove = '';
-String gestureLeave = '';
-
-Tilt(
-  borderRadius: BorderRadius.circular(30),
-  onGestureMove: (TiltDataModel tiltDataModel, GesturesType gesturesType) {
-    setState(() {
-      tiltData = tiltDataModel;
-      gestureMove = gesturesType.name;
-    });
-  },
-  onGestureLeave: (TiltDataModel tiltDataModel, GesturesType gesturesType) {
-    setState(() {
-      tiltData = tiltDataModel;
-      gestureLeave = gesturesType.name;
-    });
-  },
-  child: Container(
-    width: $width,
-    height: $height,
-    alignment: Alignment.center,
-    color: Colors.blueAccent,
-    child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
-  ),
-),
-
-······
+  @override
+  Widget build(BuildContext context) {
+    return Tilt(
+      onGestureMove: (TiltDataModel tiltDataModel, GesturesType gesturesType) {
+        print('Move: \$tiltDataModel');
+      },
+      onGestureLeave: (TiltDataModel tiltDataModel, GesturesType gesturesType) {
+        print('Leave: \$tiltDataModel');
+      },
+      child: TiltBaseContainer(
+        borderRadius: BorderRadius.circular(30),
+        child: Container(
+          width: $width,
+          height: $height,
+          alignment: Alignment.center,
+          color: Colors.blueAccent,
+          child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
+        ),
+      ),
+    );
+  }
+}
 ''';
