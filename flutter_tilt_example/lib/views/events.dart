@@ -138,10 +138,10 @@ class TiltExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return Tilt(
       onGestureMove: (TiltDataModel tiltDataModel, GesturesType gesturesType) {
-        print('Move: \$tiltDataModel');
+        print('Move: \${tiltDataModel.areaProgress}');
       },
       onGestureLeave: (TiltDataModel tiltDataModel, GesturesType gesturesType) {
-        print('Leave: \$tiltDataModel');
+        print('Leave: \${tiltDataModel.areaProgress}');
       },
       child: TiltBaseContainer(
         borderRadius: BorderRadius.circular(30),

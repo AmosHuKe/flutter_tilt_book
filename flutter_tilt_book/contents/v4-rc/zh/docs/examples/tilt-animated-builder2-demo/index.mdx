@@ -1,0 +1,680 @@
+---
+title: TiltAnimatedBuilder
+description:
+keywords: ["示例", "TiltAnimatedBuilder"]
+---
+
+<ExampleCodeWidget pathName="TiltAnimatedBuilder2Demo" height={1400} previewText="预览" codeText="代码">
+```dart
+class TiltExample extends StatelessWidget {
+  const TiltExample({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Tilt(
+      tiltConfig: const TiltConfig(
+        angle: 25,
+        initial: Offset(0, -1),
+        enableRevert: false,
+        leaveCurve: Curves.linear,
+        leaveDuration: Duration(milliseconds: 300),
+      ),
+      child: Padding(
+        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 140),
+        child: TiltAnimatedBuilder(
+          builder: (BuildContext context, TiltAnimatedState tiltAnimatedState, Widget? child) {
+            final animatedTiltData = tiltAnimatedState.animatedTiltData;
+            return Transform(
+              alignment: Alignment.center,
+              transform: animatedTiltData.transform,
+              filterQuality: FilterQuality.high,
+              child: DecoratedBox(
+                /// BUG (Web 端) - 周围预留空间，避免倾斜时内容被 BUG 裁切。
+                decoration: const BoxDecoration(color: Colors.transparent),
+                child: Padding(
+                  /// BUG (Web 端) - 周围预留空间，避免倾斜时内容被 BUG 裁切。
+                  padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 40),
+                  child: AspectRatio(
+                    aspectRatio: 1.0,
+                    child: LayoutBuilder(
+                      builder: (context, constraints) {
+                        final width = constraints.maxWidth;
+                        final height = constraints.maxHeight;
+
+                        /// 盒脊宽度，占总宽度的 12%，剩余空间放置光盘
+                        final spineWidth = width * 0.12;
+
+                        /// 托盘圆心的 X 坐标
+                        final trayCenterX = spineWidth + (width - spineWidth) / 2;
+
+                        /// 托盘的半径
+                        final trayRadius = (width - spineWidth) * 0.48;
+
+                        /// 光盘直径
+                        final cdDiameter = trayRadius * 2;
+
+                        return Stack(
+                          alignment: AlignmentDirectional.center,
+                          children: [
+                            /// 光盘盒
+                            Positioned.fill(child: child!),
+
+                            /// 光盘
+                            Positioned(
+                              left: trayCenterX - trayRadius,
+                              top: (height / 2) - trayRadius,
+                              width: cdDiameter,
+                              height: cdDiameter,
+                              child: TiltParallax(
+                                offset: const Offset(20, 20),
+                                child: CustomPaint(
+                                  willChange: true,
+                                  painter: CDPainter(areaProgress: animatedTiltData.areaProgress),
+                                ),
+                              ),
+                            ),
+                          ],
+                        );
+                      },
+                    ),
+                  ),
+                ),
+              ),
+            );
+          },
+          child: Opacity(
+            opacity: 0.2,
+            child: AspectRatio(
+              aspectRatio: 1.0,
+              child: CustomPaint(willChange: false, painter: CDCasePainter()),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// CD 绘制器
+class CDPainter extends CustomPainter {
+  const CDPainter({required this.areaProgress});
+
+  /// Tilt.areaProgress，x/y 在 [-1, 1] 范围内
+  final Offset areaProgress;
+
+  /// 标准 CD 比例（以半径为 1.0 归一化，外半径 = 60 mm）
+  /// 直径 120 mm（半径 60 mm），中心孔直径 15 mm（半径 7.5 mm），数据区 50–116 mm（直径）
+  static const double kHoleRadius = 0.125; // 中心孔半径 7.5 mm / 外半径 60 mm
+  static const double kHubRadius = 0.267; // 芯轴塑料区半径 约 16 mm / 外半径 60 mm
+  static const double kClampRadius = 0.425; // 紧固区半径 约 25.5 mm / 外半径 60 mm
+  static const double kDataInnerRadius = 0.450; // 数据区起始半径 约 27 mm / 外半径 60 mm
+  static const double kDataOuterRadius = 0.967; // 数据区终止半径 约 58 mm / 外半径 60 mm
+
+  /// 螺旋轨道槽纹 Paint
+  static final Paint groovePaint = Paint()
+    ..color = Colors.black.withValues(alpha: 0.055)
+    ..style = PaintingStyle.stroke
+    ..strokeWidth = 0.45;
+
+  /// 外圆边缘高亮 Paint
+  static final Paint rimBrightPaint = Paint()
+    ..color = const Color(0x28FFFFFF)
+    ..style = PaintingStyle.stroke
+    ..strokeWidth = 1.8;
+
+  /// 外圆边缘暗边 Paint
+  static final Paint rimDarkPaint = Paint()
+    ..color = const Color(0x55101820)
+    ..style = PaintingStyle.stroke
+    ..strokeWidth = 1.0;
+
+  /// 芯轴区细刻纹 Paint
+  static final Paint hubGroovePaint = Paint()
+    ..color = Colors.black.withValues(alpha: 0.08)
+    ..style = PaintingStyle.stroke
+    ..strokeWidth = 0.4;
+
+  /// 芯轴区轮廓线 Paint
+  static final Paint hubRingPaint07 = Paint()
+    ..color = const Color(0x55606870)
+    ..style = PaintingStyle.stroke
+    ..strokeWidth = 0.7;
+
+  /// 芯轴区轮廓线 Paint
+  static final Paint hubRingPaint04 = Paint()
+    ..color = const Color(0x55606870)
+    ..style = PaintingStyle.stroke
+    ..strokeWidth = 0.4;
+
+  /// 中心孔 Paint
+  static final Paint holePaint = Paint()..color = Colors.white;
+
+  /// 中心孔边缘 Paint
+  static final Paint holeEdgePaint = Paint()
+    ..color = const Color(0xFF485058).withValues(alpha: 0.4)
+    ..style = PaintingStyle.stroke
+    ..strokeWidth = 0.6;
+
+  /// CD 衍射虹彩的光谱颜色
+  static const kSpectrumColors = <Color>[
+    Color(0xFF8800EE),
+    Color(0xFF0044FF),
+    Color(0xFF00CCDD),
+    Color(0xFF22FF55),
+    Color(0xFFEEFF00),
+    Color(0xFFFF6600),
+    Color(0xFFFF0033),
+  ];
+
+  /// 衍射虹彩弧段的渐变 stops 预计算，避免每帧重复计算
+  static final List<double> kArcAStops = precomputeArcStops(5, 0.08);
+  static final List<double> kArcBStops = precomputeArcStops(4, 0.068);
+
+  /// 衍射虹彩弧段的渐变 stops 预计算
+  static List<double> precomputeArcStops(int n, double arcHalfWidth) {
+    final spectrumCount = kSpectrumColors.length;
+    final stops = <double>[];
+    final slot = 1.0 / n;
+
+    /// 每条弧段包含一个透明起点 + spectrumCount 个颜色点，n 条弧段总共 n * (spectrumCount + 1) 个点，再加上最后的 1.0
+    for (var i = 0; i < n; i++) {
+      final arcCenter = (i + 0.5) * slot;
+      final arcStart = arcCenter - arcHalfWidth;
+      final arcEnd = arcCenter + arcHalfWidth;
+      stops.add(i == 0 ? 0.0 : i * slot);
+      for (var j = 0; j < spectrumCount; j++) {
+        final stop = arcStart + (j / (spectrumCount - 1)) * (arcEnd - arcStart);
+        stops.add(stop);
+      }
+    }
+    stops.add(1.0);
+    return stops;
+  }
+
+  /// colors 的 alpha 依赖 opacity（帧状态），每帧单独构建
+  static List<Color> buildArcColors(int n, double opacity) {
+    final colors = <Color>[];
+    for (var i = 0; i < n; i++) {
+      colors.add(Colors.transparent);
+      for (var j = 0; j < kSpectrumColors.length; j++) {
+        final envelope = math.sin(math.pi * j / (kSpectrumColors.length - 1)).clamp(0.0, 1.0);
+        colors.add(kSpectrumColors[j].withValues(alpha: opacity * envelope));
+      }
+    }
+    colors.add(Colors.transparent);
+    return colors;
+  }
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final center = Offset(size.width / 2, size.height / 2);
+    final radius = math.min(size.width, size.height) / 2;
+
+    /// 裁切为圆形
+    canvas.clipPath(Path()..addOval(Rect.fromCircle(center: center, radius: radius)));
+
+    /// 银色金属基底（含移动镜面高光）
+    drawMetallicBase(canvas, center, radius);
+
+    /// CD 染料层色调
+    drawDyeLayer(canvas, center, radius);
+
+    /// 衍射虹彩弧段（模拟 CD 轨道衍射产生的彩虹光谱，双层交错）
+    drawDiffractionIridescence(canvas, center, radius);
+
+    /// 白色镜面反射弧（模拟背面漫反射）
+    drawReflectionBand(canvas, center, radius);
+
+    /// 螺旋轨道槽纹
+    drawGrooves(canvas, center, radius);
+
+    /// 移动镜面高光
+    drawSpecular(canvas, center, radius);
+
+    /// 芯轴区域：紧固环 + 芯轴 + 中心孔
+    drawHub(canvas, center, radius);
+
+    /// 外圆边缘高亮
+    drawRim(canvas, center, radius);
+  }
+
+  /// 银色金属基底（含移动镜面高光）
+  void drawMetallicBase(Canvas canvas, Offset center, double radius) {
+    /// 高光位置随倾斜方向移动（倾斜时对侧更亮，模拟反光）
+    final highlightX = -areaProgress.dx * 0.35;
+    final highlightY = -areaProgress.dy * 0.35;
+
+    final paint = Paint()
+      ..shader = RadialGradient(
+        center: Alignment(highlightX, highlightY),
+        radius: 1.15,
+        colors: const [
+          Color(0xFFF0F4F8), // 高光：银白
+          Color(0xFFCDD5DC), // 中调：银灰
+          Color(0xFFAAB3BB), // 暗调：深银
+          Color(0xFF858E96), // 边缘：暗边
+        ],
+        stops: const [0.0, 0.30, 0.65, 1.0],
+      ).createShader(Rect.fromCircle(center: center, radius: radius));
+    canvas.drawCircle(center, radius, paint);
+  }
+
+  /// CD 染料层色调
+  /// CD 使用蓝绿/青色花青素染料 (cyanine dye)，
+  /// 从反射面看有轻微蓝绿金色调
+  void drawDyeLayer(Canvas canvas, Offset center, double radius) {
+    final dataInnerRadius = radius * kDataInnerRadius;
+    final dataOuterRadius = radius * kDataOuterRadius;
+    final rect = Rect.fromCircle(center: center, radius: dataOuterRadius);
+
+    /// 轻微金色底（金反射层特征）
+    final goldPaint = Paint()
+      ..shader = const RadialGradient(
+        radius: 1.0,
+        colors: [
+          Color(0x00C8A228),
+          Color(0x18C8A228),
+          Color(0x22C8A228),
+          Color(0x14C8A228),
+          Color(0x00C8A228),
+        ],
+        stops: [0.0, 0.20, 0.55, 0.85, 1.0],
+      ).createShader(rect)
+      ..blendMode = BlendMode.multiply;
+
+    withDataAreaClip(canvas, center, dataInnerRadius, dataOuterRadius, () {
+      canvas.drawRect(rect, goldPaint);
+    });
+
+    /// 蓝绿染料层
+    final dyePaint = Paint()
+      ..shader = const RadialGradient(
+        radius: 1.0,
+        colors: [
+          Color(0x00047A85),
+          Color(0x16047A85),
+          Color(0x20047A85),
+          Color(0x0C047A85),
+          Color(0x00047A85),
+        ],
+        stops: [0.0, 0.25, 0.58, 0.88, 1.0],
+      ).createShader(rect)
+      ..blendMode = BlendMode.overlay;
+
+    withDataAreaClip(canvas, center, dataInnerRadius, dataOuterRadius, () {
+      canvas.drawRect(rect, dyePaint);
+    });
+  }
+
+  /// 衍射虹彩弧段（模拟 CD 轨道衍射产生的彩虹光谱，双层交错）
+  void drawDiffractionIridescence(Canvas canvas, Offset center, double radius) {
+    /// 倾斜幅度
+    final magnitude = areaProgress.distance;
+
+    /// 倾斜方向角，distance 很小时回退到 0，避免角度在中心附近抖动
+    /// atan2 返回值在 -pi 到 pi 之间，映射到 0 ~ 360 度时需要调整
+    final tiltAngle = magnitude < 0.002 ? 0.0 : math.atan2(areaProgress.dy, areaProgress.dx);
+
+    /// 倾斜幅度 [0, 1]
+    final tiltMagnitude = magnitude.clamp(0.0, 1.0);
+
+    final dataInnerRadius = radius * kDataInnerRadius;
+    final dataOuterRadius = radius * kDataOuterRadius;
+    final rect = Rect.fromCircle(center: center, radius: dataOuterRadius);
+
+    /// 极淡薄膜底色（始终可见，极淡）
+    withDataAreaClip(canvas, center, dataInnerRadius, dataOuterRadius, () {
+      final baseOpacity = 0.05 + tiltMagnitude * 0.04;
+      canvas.drawRect(
+        rect,
+        Paint()
+          ..shader = RadialGradient(
+            center: Alignment(-areaProgress.dx * 0.10, -areaProgress.dy * 0.10),
+            radius: 1.0,
+            colors: [
+              Color.fromRGBO(120, 60, 255, baseOpacity),
+              Color.fromRGBO(0, 140, 255, baseOpacity),
+              Color.fromRGBO(0, 230, 160, baseOpacity),
+              Color.fromRGBO(220, 180, 0, baseOpacity * 0.6),
+            ],
+            stops: const [0.0, 0.33, 0.66, 1.0],
+          ).createShader(rect)
+          ..blendMode = BlendMode.overlay,
+      );
+    });
+
+    /// A 层：5 条弧，正向随倾斜旋转
+    ///
+    /// 每条弧宽 0.08（约 58°，arcHalfWidth * 2 * 360°），5 条弧占满整圈
+    final opacityA = tiltMagnitude * 0.72;
+    final colorsA = buildArcColors(5, opacityA);
+    withDataAreaClip(canvas, center, dataInnerRadius, dataOuterRadius, () {
+      canvas.drawRect(
+        rect,
+        Paint()
+          ..shader = SweepGradient(
+            center: Alignment.center,
+            colors: colorsA,
+            stops: kArcAStops,
+            transform: GradientRotation(tiltAngle),
+          ).createShader(rect)
+          ..blendMode = BlendMode.screen,
+      );
+    });
+
+    /// B 层：4 条弧，反向以 0.75× 速度旋转，初始偏移 45°，与 A 层形成错位
+    ///
+    /// 每条弧宽 0.068（约 49°，arcHalfWidth * 2 * 360°），4 条弧占满整圈
+    final opacityB = tiltMagnitude * 0.48;
+    final colorsB = buildArcColors(4, opacityB);
+    withDataAreaClip(canvas, center, dataInnerRadius, dataOuterRadius, () {
+      canvas.drawRect(
+        rect,
+        Paint()
+          ..shader = SweepGradient(
+            center: Alignment.center,
+            colors: colorsB,
+            stops: kArcBStops,
+            transform: GradientRotation(-tiltAngle * 0.75 + math.pi / 4),
+          ).createShader(rect)
+          ..blendMode = BlendMode.screen,
+      );
+    });
+  }
+
+  /// 白色镜面反射弧
+  /// 主弧对准倾斜方向，模拟背面漫反射
+  void drawReflectionBand(Canvas canvas, Offset center, double radius) {
+    final magnitude = areaProgress.distance;
+    if (magnitude < 0.008) return;
+
+    final tiltAngle = math.atan2(areaProgress.dy, areaProgress.dx);
+    final tiltMagnitude = magnitude.clamp(0.0, 1.0);
+    final dataInnerRadius = radius * kDataInnerRadius;
+    final dataOuterRadius = radius * kDataOuterRadius;
+    final rect = Rect.fromCircle(center: center, radius: dataOuterRadius);
+
+    /// 反射弧峰值不透明度，随倾斜幅度线性增加，0.82 是视觉调试出来的，不会太刺眼
+    final peakOpacity = tiltMagnitude * 0.82;
+
+    /// 绘制单条白色反射弧的内部函数，弧心在 stop=0.50 处。
+    /// rotOffset 加到 tiltAngle 上以控制弧心方向：
+    /// - 0: 弧心对准 tiltAngle 方向（主弧）
+    /// - math.pi: 弧心对准对面 180°（对面弧）
+    void drawArc(double rotOffset, double opacity) {
+      withDataAreaClip(canvas, center, dataInnerRadius, dataOuterRadius, () {
+        canvas.drawRect(
+          rect,
+          Paint()
+            ..shader = SweepGradient(
+              center: Alignment.center,
+              colors: [
+                Colors.transparent,
+                Colors.white.withValues(alpha: opacity * 0.08),
+                Colors.white.withValues(alpha: opacity * 0.45),
+                Colors.white.withValues(alpha: opacity * 0.55),
+                Colors.white.withValues(alpha: opacity * 0.45),
+                Colors.white.withValues(alpha: opacity * 0.08),
+                Colors.transparent,
+                Colors.transparent,
+              ],
+              stops: const [0.0, 0.44, 0.47, 0.50, 0.53, 0.56, 0.62, 1.00],
+              transform: GradientRotation(tiltAngle - math.pi + rotOffset),
+            ).createShader(rect)
+            ..blendMode = BlendMode.screen,
+        );
+      });
+    }
+
+    drawArc(0, peakOpacity); // 主弧：倾斜方向
+    drawArc(math.pi, peakOpacity * 0.55); // 对面弧：对侧 180°，对面弧亮度约 55%
+  }
+
+  /// 螺旋轨道槽纹
+  void drawGrooves(Canvas canvas, Offset center, double radius) {
+    /// 18 条槽纹，均匀分布在数据区内
+    const grooveCount = 18;
+    final innerRadius = radius * kDataInnerRadius;
+    final outerRadius = radius * kDataOuterRadius;
+    for (var i = 0; i <= grooveCount; i++) {
+      final grooveRadius = innerRadius + (outerRadius - innerRadius) * (i / grooveCount);
+      canvas.drawCircle(center, grooveRadius, groovePaint);
+    }
+  }
+
+  /// 移动镜面高光
+  void drawSpecular(Canvas canvas, Offset center, double radius) {
+    final specularX = -areaProgress.dx * radius * 0.28;
+    final specularY = -areaProgress.dy * radius * 0.28;
+
+    canvas.drawCircle(
+      center,
+      radius,
+      Paint()
+        ..shader = RadialGradient(
+          center: Alignment(specularX / radius, specularY / radius),
+          radius: 0.50,
+          colors: [Colors.white.withValues(alpha: 0.30), Colors.white.withValues(alpha: 0.0)],
+        ).createShader(Rect.fromCircle(center: center, radius: radius))
+        ..blendMode = BlendMode.screen,
+    );
+  }
+
+  /// 芯轴区域：紧固环 + 芯轴 + 中心孔
+  void drawHub(Canvas canvas, Offset center, double radius) {
+    final holeRadius = radius * kHoleRadius;
+    final hubRadius = radius * kHubRadius;
+    final clampRadius = radius * kClampRadius;
+
+    /// 紧固区（淡银灰）
+    canvas.drawCircle(
+      center,
+      clampRadius,
+      Paint()
+        ..shader = const RadialGradient(
+          center: Alignment(-0.15, -0.15),
+          radius: 1.0,
+          colors: [Color(0xFFDEE6EE), Color(0xFFC4CED8), Color(0xFFAEB8C2)],
+          stops: [0.0, 0.55, 1.0],
+        ).createShader(Rect.fromCircle(center: center, radius: clampRadius)),
+    );
+
+    /// 紧固区细刻纹
+    for (var i = 1; i <= 3; i++) {
+      canvas.drawCircle(center, clampRadius * (0.52 + i * 0.13), hubGroovePaint);
+    }
+
+    /// 芯轴塑料区
+    canvas.drawCircle(
+      center,
+      hubRadius,
+      Paint()
+        ..shader = const RadialGradient(
+          center: Alignment(-0.25, -0.25),
+          radius: 1.0,
+          colors: [Color(0xFFD4DCE5), Color(0xFFBCC6D0), Color(0xFF96A0AA)],
+          stops: [0.0, 0.50, 1.0],
+        ).createShader(Rect.fromCircle(center: center, radius: hubRadius)),
+    );
+
+    /// 芯轴轮廓线
+    canvas.drawCircle(center, hubRadius, hubRingPaint07);
+    canvas.drawCircle(center, clampRadius * 0.975, hubRingPaint04);
+
+    /// 中心孔（避免使用 saveLayer & BlendMode.clear，这里模拟孔洞，背景白色，就用白色圆，不透明）
+    canvas.drawCircle(center, holeRadius, holePaint);
+
+    /// 中心孔边缘
+    canvas.drawCircle(center, holeRadius, holeEdgePaint);
+  }
+
+  /// 外圆边缘高亮
+  void drawRim(Canvas canvas, Offset center, double radius) {
+    /// 亮边
+    canvas.drawCircle(center, radius - 1.0, rimBrightPaint);
+
+    /// 暗边（增加立体感）
+    canvas.drawCircle(center, radius - 0.4, rimDarkPaint);
+  }
+
+  /// 工具 - 在数据区环形区域内绘制
+  /// - [canvas] 画布
+  /// - [center] 圆心
+  /// - [innerRadius] 内半径（数据区起始）
+  /// - [outerRadius] 外半径（数据区终止）
+  /// - [draw] 绘制函数，在数据区环形区域内执行绘制
+  void withDataAreaClip(
+    Canvas canvas,
+    Offset center,
+    double innerRadius,
+    double outerRadius,
+    void Function() draw,
+  ) {
+    canvas.save();
+    final clip = Path()
+      ..addOval(Rect.fromCircle(center: center, radius: outerRadius))
+      ..addOval(Rect.fromCircle(center: center, radius: innerRadius));
+    clip.fillType = PathFillType.evenOdd;
+    canvas.clipPath(clip);
+    draw();
+    canvas.restore();
+  }
+
+  @override
+  bool shouldRepaint(CDPainter old) => old.areaProgress != areaProgress;
+}
+
+/// CD 盒
+class CDCasePainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final width = size.width;
+    final height = size.height;
+
+    /// 画笔设置：黑色细线，模拟蓝图/线稿效果
+    final linePaint = Paint()
+      ..color = const Color(0xFF1A1A1A)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.2
+      ..strokeCap = StrokeCap.square;
+
+    /// 光盘盒主外部轮廓 (实线)
+    final outerCase = Rect.fromLTRB(0, 0, width, height);
+    canvas.drawRect(outerCase, linePaint);
+
+    /// 光盘盒内部边缘 (略微向内缩进)
+    final innerOffset = width * 0.015;
+    final innerCase = outerCase.deflate(innerOffset);
+    canvas.drawRect(innerCase, linePaint);
+
+    /// 左侧盒脊 (Hinge/Spine) 区域
+    final spineWidth = outerCase.width * 0.12;
+    final spineX = outerCase.left + spineWidth;
+
+    /// 盒脊垂直分割线
+    canvas.drawLine(Offset(spineX, outerCase.top), Offset(spineX, outerCase.bottom), linePaint);
+    canvas.drawLine(
+      Offset(spineX + innerOffset, innerCase.top),
+      Offset(spineX + innerOffset, innerCase.bottom),
+      linePaint,
+    );
+
+    /// 盒脊上下两端的水平卡扣线
+    final topNotchY = outerCase.top + height * 0.06;
+    final bottomNotchY = outerCase.bottom - height * 0.06;
+
+    canvas.drawLine(Offset(outerCase.left, topNotchY), Offset(spineX, topNotchY), linePaint);
+    canvas.drawLine(Offset(outerCase.left, bottomNotchY), Offset(spineX, bottomNotchY), linePaint);
+
+    /// 盒脊内部小矩形装饰
+    canvas.drawRect(
+      Rect.fromLTRB(
+        outerCase.left + innerOffset * 1.5,
+        topNotchY + innerOffset,
+        spineX - innerOffset,
+        topNotchY + innerOffset * 3,
+      ),
+      linePaint,
+    );
+    canvas.drawRect(
+      Rect.fromLTRB(
+        outerCase.left + innerOffset * 1.5,
+        bottomNotchY - innerOffset * 3,
+        spineX - innerOffset,
+        bottomNotchY - innerOffset,
+      ),
+      linePaint,
+    );
+
+    /// 绘制卡住封面的半圆/凹槽 (上下左右的细节)
+    /// 底部左侧半圆
+    final notches = Path();
+    final radius = width * 0.025;
+    notches.addArc(
+      Rect.fromCircle(center: Offset(spineX + width * 0.1, outerCase.bottom), radius: radius),
+      math.pi,
+      math.pi,
+    );
+
+    /// 底部右侧半圆
+    notches.addArc(
+      Rect.fromCircle(
+        center: Offset(outerCase.right - width * 0.1, outerCase.bottom),
+        radius: radius,
+      ),
+      math.pi,
+      math.pi,
+    );
+
+    /// 顶部左侧半圆
+    notches.addArc(
+      Rect.fromCircle(center: Offset(spineX + width * 0.1, outerCase.top), radius: radius),
+      0,
+      math.pi,
+    );
+
+    /// 顶部右侧半圆
+    notches.addArc(
+      Rect.fromCircle(center: Offset(outerCase.right - width * 0.1, outerCase.top), radius: radius),
+      0,
+      math.pi,
+    );
+
+    /// 右侧边缘的垂直小卡槽
+    canvas.drawRect(
+      Rect.fromLTRB(
+        outerCase.right - innerOffset * 1.5,
+        topNotchY,
+        outerCase.right,
+        topNotchY + width * 0.04,
+      ),
+      linePaint,
+    );
+    canvas.drawRect(
+      Rect.fromLTRB(
+        outerCase.right - innerOffset * 1.5,
+        bottomNotchY - width * 0.04,
+        outerCase.right,
+        bottomNotchY,
+      ),
+      linePaint,
+    );
+
+    canvas.drawPath(notches, linePaint);
+
+    /// 绘制中心光盘的大圆托盘
+    /// 圆心稍微偏右，因为左侧有盒脊
+    final trayCenterX = spineX + (outerCase.right - spineX) / 2;
+    final trayCenterY = outerCase.center.dy;
+    final trayCenter = Offset(trayCenterX, trayCenterY);
+
+    /// 托盘外圆
+    final trayRadius = (outerCase.width - spineWidth) * 0.48;
+    canvas.drawCircle(trayCenter, trayRadius, linePaint);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
+}
+```
+</ExampleCodeWidget>

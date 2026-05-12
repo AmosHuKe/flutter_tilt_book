@@ -1,13 +1,13 @@
 ---
-title: Parallax Image
+title: Tilt container
 description:
-keywords: ["example", "Parallax Image"]
+keywords: ["example", "Tilt container"]
 ---
 
-<ExampleCodeWidget pathName="ParallaxImage" height={900}>
+<ExampleCodeWidget pathName="Tilt-container" height={800}>
 ```dart
-class TiltExample1 extends StatelessWidget {
-  const TiltExample1({super.key});
+class TiltExample extends StatelessWidget {
+  const TiltExample({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +16,14 @@ class TiltExample1 extends StatelessWidget {
         leaveCurve: Curves.easeInOutCubicEmphasized,
         leaveDuration: Duration(milliseconds: 600),
       ),
-      child: TiltBaseContainer(
-        lightConfig: const LightConfig(disable: true),
-        shadowConfig: const ShadowBaseConfig(disable: true),
+      child: TiltProjectorContainer(
+        shadowConfig: const ShadowProjectorConfig(
+          maxIntensity: 0.6,
+          projectorScaleFrom: 1.0,
+          projectorScaleTo: 1.0,
+          projectorBlurSigmaFrom: 2.0,
+          projectorBlurSigmaTo: 10.0,
+        ),
         childLayout: ChildLayout(
           outer: [
             const Positioned(
@@ -46,7 +51,7 @@ class TiltExample1 extends StatelessWidget {
             ),
           ],
         ),
-        child: Image.asset('assets/parallax_image/1.png', width: 742, height: 337),
+        child: const SizedBox(width: 742, height: 337),
       ),
     );
   }

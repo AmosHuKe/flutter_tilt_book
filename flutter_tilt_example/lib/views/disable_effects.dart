@@ -108,16 +108,7 @@ class TiltExample extends StatelessWidget {
 String code({required bool disableTilt, required bool disableLight, required bool disableShadow}) =>
     '''
 class TiltExample extends StatelessWidget {
-  const TiltExample({
-    super.key,
-    required this.disableTilt,
-    required this.disableLight,
-    required this.disableShadow,
-  });
-
-  final bool disableTilt;
-  final bool disableLight;
-  final bool disableShadow;
+  const TiltExample({super.key});
 
   @override
   Widget build(BuildContext context) {

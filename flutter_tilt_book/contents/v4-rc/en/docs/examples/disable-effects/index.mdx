@@ -1,29 +1,32 @@
 ---
 title: Disable Effects
 description:
-keywords: ["examples", "Disable Effects"]
+keywords: ["example", "Disable Effects"]
 ---
 
-<ExampleCodeWidget name="DisableEffects" height={650}>
+<ExampleCodeWidget pathName="DisableEffects" height={650}>
 ```dart
-import 'package:flutter_tilt/flutter_tilt.dart';
+class TiltExample extends StatelessWidget {
+  const TiltExample({super.key});
 
-······
-
-Tilt(
-  borderRadius: BorderRadius.circular(30),
-  tiltConfig: TiltConfig(disable: false),
-  lightConfig: LightConfig(disable: true),
-  shadowConfig: ShadowConfig(disable: true),
-  child: Container(
-    width: 350,
-    height: 200,
-    alignment: Alignment.center,
-    color: Colors.blueAccent,
-    child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
-  ),
-),
-
-······
+  @override
+  Widget build(BuildContext context) {
+    return Tilt(
+      tiltConfig: TiltConfig(disable: false),
+      child: TiltBaseContainer(
+        lightConfig: LightConfig(disable: true),
+        shadowConfig: ShadowBaseConfig(disable: true),
+        borderRadius: BorderRadius.circular(30),
+        child: Container(
+          width: 350,
+          height: 200,
+          alignment: Alignment.center,
+          color: Colors.blueAccent,
+          child: const Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
+        ),
+      ),
+    );
+  }
+}
 ```
 </ExampleCodeWidget>

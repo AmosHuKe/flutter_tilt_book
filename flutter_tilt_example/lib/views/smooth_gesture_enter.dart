@@ -387,7 +387,7 @@ class TiltExample1 extends StatelessWidget {
         enterDuration: Duration(milliseconds: ${enterDuration.inMilliseconds}),
         moveDuration: Duration(milliseconds: ${moveDuration.inMilliseconds}),
         enterToMoveDuration: Duration(milliseconds: ${enterToMoveDuration.inMilliseconds}),
-        enterToMoveCurve: $enterToMoveCurve,
+        enterToMoveCurve: Curves.easeOutCubic,
         leaveCurve: Curves.easeInOutCubicEmphasized,
         leaveDuration: Duration(milliseconds: 1200),
       ),

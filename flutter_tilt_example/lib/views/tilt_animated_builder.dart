@@ -92,7 +92,7 @@ class HolofoilContainer extends StatelessWidget {
       children: [
         /// BUG (Web 端) - 周围预留空间，避免倾斜时内容被 BUG 裁切。
         DecoratedBox(
-          decoration: const BoxDecoration(color: Colors.transparent),
+          decoration: const BoxDecoration(color: Colors.white),
           child: SizedBox(width: width * 1.2, height: height * 1.2),
         ),
 
@@ -393,7 +393,7 @@ class HolofoilContainer extends StatelessWidget {
       children: [
         /// BUG (Web 端) - 周围预留空间，避免倾斜时内容被 BUG 裁切。
         DecoratedBox(
-          decoration: const BoxDecoration(color: Colors.transparent),
+          decoration: const BoxDecoration(color: Colors.white),
           child: SizedBox(width: width * 1.2, height: height * 1.2),
         ),
 

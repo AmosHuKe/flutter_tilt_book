@@ -9,13 +9,13 @@ import Loading from "@/components/ui/loading"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 interface ExampleWidgetProps {
-  name: string
+  pathName: string
   height: number
   query?: Record<string, string>
 }
 
-function Component({ name, height }: ExampleWidgetProps) {
-  const flutterTiltExampleUrl = `${process.env["NEXT_PUBLIC_FLUTTER_TILT_EXAMPLE_URL"]}/flutter_tilt_example/index.html#/embed/${name}?showCode=false&showBorderRadius=false`
+function Component({ pathName, height }: ExampleWidgetProps) {
+  const flutterTiltExampleUrl = `${process.env["NEXT_PUBLIC_FLUTTER_TILT_EXAMPLE_URL"]}/flutter_tilt_example/index.html#/embed/${pathName}?showCode=false&showBorderRadius=false`
 
   const [resources, setResources] = useState<string>()
   const [isObserving, setIsObserving] = useState(false)
@@ -132,7 +132,7 @@ export const ExampleWidget = dynamic(() => Promise.resolve(Component), {
 
 export function ExampleCodeWidget({
   children,
-  name,
+  pathName,
   height,
   previewText = "Preview",
   codeText = "Code",
@@ -156,7 +156,7 @@ export function ExampleCodeWidget({
         </TabsList>
         <div style={{ minHeight: `${height}px` }}>
           <div hidden={tab !== "preview"}>
-            <ExampleWidget name={name} height={height} />
+            <ExampleWidget pathName={pathName} height={height} />
           </div>
           <div hidden={tab !== "code"}>{children}</div>
         </div>

@@ -125,8 +125,16 @@ export const documents_v4_en: Paths[] = [
         href: "/parallax-image",
       },
       {
-        title: "LightShadowMode",
-        href: "/tilt-lightshadowmode",
+        title: "Tilt container",
+        href: "/tilt-container",
+      },
+      {
+        title: "TiltAnimatedBuilder",
+        href: "/tilt-animated-builder-demo",
+      },
+      {
+        title: "TiltAnimatedBuilder2",
+        href: "/tilt-animated-builder2-demo",
       },
       {
         title: "Parallax Card",
@@ -153,14 +161,6 @@ export const documents_v4_en: Paths[] = [
         href: "/events",
       },
       {
-        title: "Dialog",
-        href: "/dialog",
-      },
-      {
-        title: "Default",
-        href: "/default",
-      },
-      {
         title: "Animation",
         href: "/animation-demo",
       },
@@ -169,8 +169,8 @@ export const documents_v4_en: Paths[] = [
         href: "/smooth-gesture-enter-demo",
       },
       {
-        title: "TiltStreamController",
-        href: "/tilt-stream-controller-demo",
+        title: "TiltController",
+        href: "/tilt-controller-demo",
       },
       {
         title: "Reverse Tilt",

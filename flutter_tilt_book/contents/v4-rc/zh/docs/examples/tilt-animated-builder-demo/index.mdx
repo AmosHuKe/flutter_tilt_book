@@ -1,0 +1,309 @@
+---
+title: TiltAnimatedBuilder
+description:
+keywords: ["示例", "TiltAnimatedBuilder"]
+---
+
+<ExampleCodeWidget pathName="TiltAnimatedBuilderDemo" height={1200} previewText="预览" codeText="代码">
+```dart
+class TiltExample extends StatelessWidget {
+  const TiltExample({super.key});
+
+  static const double width = 236.0 * 1.2;
+  static const double height = 330.0 * 1.2;
+
+  @override
+  Widget build(BuildContext context) {
+    return Tilt(
+      tiltConfig: const TiltConfig(
+        angle: 15,
+        leaveCurve: Curves.fastEaseInToSlowEaseOut,
+        leaveDuration: Duration(milliseconds: 900),
+      ),
+      child: TiltAnimatedBuilder(
+        builder: (BuildContext context, TiltAnimatedState tiltAnimatedState, Widget? child) {
+          final animatedTiltData = tiltAnimatedState.animatedTiltData;
+          return Transform(
+            alignment: Alignment.center,
+            transform: animatedTiltData.transform,
+            filterQuality: FilterQuality.high,
+            child: HolofoilContainer(
+              width: width,
+              height: height,
+              progress: animatedTiltData.areaProgress,
+              child: child!,
+            ),
+          );
+        },
+        child: SizedBox(
+          width: width,
+          height: height,
+          child: Image.asset('assets/tilt_animated_builder/froakie.jpg', fit: BoxFit.cover),
+        ),
+      ),
+    );
+  }
+}
+
+/// 根据 Tilt.areaProgress 绘制 Holofoil 效果的容器
+class HolofoilContainer extends StatelessWidget {
+  const HolofoilContainer({
+    super.key,
+    required this.width,
+    required this.height,
+    required this.progress,
+    required this.child,
+  });
+
+  final double width;
+  final double height;
+
+  /// Tilt.areaProgress，x/y 在 [-1, 1] 范围内
+  final Offset progress;
+
+  final Widget child;
+
+  /// 倾斜幅度，0 表示基本居中，1 表示接近当前归一化范围的边缘
+  /// x/y 在 [-1, 1] 范围内，对角线最大为 sqrt2，所以除以 sqrt2 进行归一化 0 ~ 1
+  double get tiltMagnitude => (progress.distance / math.sqrt2).clamp(0.0, 1.0);
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      alignment: AlignmentDirectional.center,
+      clipBehavior: Clip.hardEdge,
+      children: [
+        /// BUG (Web 端) - 周围预留空间，避免倾斜时内容被 BUG 裁切。
+        DecoratedBox(
+          decoration: const BoxDecoration(color: Colors.transparent),
+          child: SizedBox(width: width * 1.2, height: height * 1.2),
+        ),
+
+        /// 主 Holofoil Card
+        ClipRRect(
+          borderRadius: BorderRadius.circular(16),
+          clipBehavior: Clip.antiAlias,
+          child: SizedBox(
+            width: width,
+            height: height,
+            child: Stack(
+              alignment: AlignmentDirectional.center,
+              clipBehavior: Clip.hardEdge,
+              children: [
+                /// Card
+                child,
+
+                /// Holofoil
+                IgnorePointer(
+                  child: CustomPaint(
+                    willChange: true,
+                    size: Size(width, height),
+                    painter: HolofoilPainter(progress: progress),
+                  ),
+                ),
+
+                /// 方向性高光，随倾斜方向调整亮部与暗部
+                IgnorePointer(
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment(-progress.dx * 0.65, -progress.dy * 0.65 - 1.0),
+                        end: Alignment(progress.dx * 0.65, progress.dy * 0.65 + 1.0),
+                        colors: [
+                          Colors.white.withValues(alpha: 0.06 + tiltMagnitude * 0.10),
+                          Colors.transparent,
+                          Colors.transparent,
+                          Colors.black.withValues(alpha: 0.04 + tiltMagnitude * 0.06),
+                        ],
+                        stops: const [0.0, 0.38, 0.62, 1.0],
+                      ),
+                    ),
+                    child: SizedBox(width: width, height: height),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+/// 根据倾斜方向绘制 Holofoil 效果
+///
+/// 这里做的是视觉近似，不是严格的物理仿真
+class HolofoilPainter extends CustomPainter {
+  const HolofoilPainter({required this.progress});
+
+  /// Tilt.areaProgress，x/y 在 [-1, 1] 范围内
+  final Offset progress;
+
+  /// 倾斜幅度，0 表示基本居中，1 表示接近当前归一化范围的边缘
+  /// x/y 在 [-1, 1] 范围内，对角线最大为 sqrt2，所以除以 sqrt2 进行归一化 0 ~ 1
+  double get tiltMagnitude => (progress.distance / math.sqrt2).clamp(0.0, 1.0);
+
+  /// 绘制顺序会直接影响最终叠色结果
+  @override
+  void paint(Canvas canvas, Size size) {
+    final rect = Offset.zero & size;
+
+    /// 主色调渐变，模拟整体色彩随倾斜转动的色斑效果
+    paintDominantHue(canvas, rect);
+
+    /// 交叉彩色条纹，模拟 Holofoil 干涉纹理
+    paintSpectralBands(canvas, rect);
+  }
+
+  /// 主色调渐变，模拟整体色彩随倾斜转动的色斑效果，
+  ///
+  /// 色相由倾斜角决定，色斑位置由 [progress] 决定，[tiltMagnitude] 倾斜幅度控制整体不透明度
+  void paintDominantHue(Canvas canvas, Rect rect) {
+    /// 倾斜方向角，distance 很小时回退到 0，避免角度在中心附近抖动
+    /// atan2 返回值在 -pi 到 pi 之间，映射到 0 ~ 360 度时需要调整
+    final tiltAngle = progress.distance < 0.001 ? 0.0 : math.atan2(progress.dy, progress.dx);
+
+    /// 将倾斜角映射为 0 到 360 的色相值，用于主色调扫动（色相环旋转）
+    final primaryHue = (tiltAngle / (2 * math.pi) * 360 + 180) % 360;
+
+    /// 主色调渐变的整体不透明度，随倾斜幅度增加而增强，制造转动时色斑逐渐显现的感觉
+    final opacity = (0.03 + tiltMagnitude * 0.22).clamp(0.0, 1.0);
+
+    /// 色斑中心位置，基于 [progress] 计算，倾斜时色斑会偏向相应方向
+    final hueCenterX = rect.left + (0.5 + progress.dx * 0.58) * rect.width;
+
+    /// 色斑中心位置，基于 [progress] 计算，倾斜时色斑会偏向相应方向
+    final hueCenterY = rect.top + (0.5 + progress.dy * 0.58) * rect.height;
+
+    canvas.drawRect(
+      rect,
+      Paint()
+        ..shader =
+            RadialGradient(
+              colors: [
+                HSVColor.fromAHSV(opacity, primaryHue, 0.90, 1.0).toColor(),
+                HSVColor.fromAHSV(opacity * 0.60, (primaryHue + 50) % 360, 0.82, 1.0).toColor(),
+                HSVColor.fromAHSV(opacity * 0.22, (primaryHue + 160) % 360, 0.70, 1.0).toColor(),
+                Colors.transparent,
+              ],
+              stops: const [0.0, 0.32, 0.64, 1.0],
+            ).createShader(
+              Rect.fromCircle(
+                center: Offset(hueCenterX, hueCenterY),
+                radius: rect.longestSide * 0.90,
+              ),
+            ),
+    );
+  }
+
+  /// 交叉彩色条纹
+  /// 两组线性渐变分别负责粗条纹和细条纹，方向会随倾斜轻微变化
+  void paintSpectralBands(Canvas canvas, Rect rect) {
+    /// 归一化方向分量 -1 ~ 1，便于直接控制渐变方向位置
+    final normDx = progress.distance < 0.001
+        ? 0.0
+        : (progress.dx / progress.distance).clamp(-1.0, 1.0);
+    final normDy = progress.distance < 0.001
+        ? 0.0
+        : (progress.dy / progress.distance).clamp(-1.0, 1.0);
+
+    /// 用倾斜进度计算条纹的色相偏移，让条纹颜色分布随倾斜转动而变化
+    /// 215 和 108 是根据视觉经验选出的常数，调整它们会改变条纹的色相分布和动态变化规律
+    final phase = progress.dx * 215.0 + progress.dy * 108.0;
+
+    /// 粗条纹
+    const cyclesA = 3;
+    final opacityA = (0.04 + tiltMagnitude * 0.28).clamp(0.0, 1.0);
+    final alignmentXA = 1.00 + normDy * 0.07;
+    final alignmentYA = 0.50 - normDx * 0.05;
+
+    canvas.drawRect(
+      rect,
+      Paint()
+        ..shader = LinearGradient(
+          begin: Alignment(-alignmentXA, -alignmentYA),
+          end: Alignment(alignmentXA, alignmentYA),
+          colors: organicColors(
+            n: cyclesA * 10,
+            cycles: cyclesA,
+            phase: phase,
+            maxOpacity: opacityA,
+            warpAmplitude: 0.060,
+            warpFrequency: 8.0,
+          ),
+        ).createShader(rect),
+    );
+
+    /// 细条纹
+    const cyclesB = 2;
+    final opacityB = (0.01 + tiltMagnitude * 0.12).clamp(0.0, 1.0);
+    final alignmentXB = 0.50 + normDy * 0.04;
+    final alignmentYB = 1.00 - normDx * 0.07;
+
+    canvas.drawRect(
+      rect,
+      Paint()
+        ..shader = LinearGradient(
+          begin: Alignment(-alignmentXB, -alignmentYB),
+          end: Alignment(alignmentXB, alignmentYB),
+          colors: organicColors(
+            n: cyclesB * 8,
+            cycles: cyclesB,
+            phase: phase + 90.0,
+            maxOpacity: opacityB,
+            warpAmplitude: 0.090,
+            warpFrequency: 5.5,
+          ),
+        ).createShader(rect),
+    );
+  }
+
+  /// 生成非均匀的渐变颜色序列，让条纹边界更自然
+  ///
+  /// - [n] 颜色数量，越多条纹越细腻，但性能开销也会增加
+  /// - [cycles] 条纹周期数，越多条纹越密集，但过多会导致视觉混乱
+  /// - [phase] 色相偏移，让不同组条纹的颜色分布不同，增加层次感
+  /// - [maxOpacity] 最大不透明度，控制条纹的整体强度
+  /// - [warpAmplitude] 扰动幅度，增加条纹边界的自然感，过大会导致条纹过于扭曲
+  /// - [warpFrequency] 扰动频率，控制条纹边界的细节程度，过高会导致条纹过于杂乱
+  List<Color> organicColors({
+    required int n,
+    required int cycles,
+    required double phase,
+    required double maxOpacity,
+    required double warpAmplitude,
+    required double warpFrequency,
+  }) => List<Color>.generate(n + 1, (i) {
+    /// 线性分布的 stop 值（渐变位置参数），0 ~ 1
+    final tLinear = i / n;
+
+    /// 加入 sin 扰动，制造非均匀的条纹边界，避免过于机械化的重复感
+    final tWarped = (tLinear + warpAmplitude * math.sin(tLinear * math.pi * warpFrequency)).clamp(
+      0.0,
+      1.0,
+    );
+
+    /// 基于倾斜方向和进度计算色相，使条纹颜色随倾斜转动而变化
+    final hue = (phase + tWarped * 360.0 * cycles) % 360;
+
+    /// 基于 sin 函数计算饱和度，制造条纹内部的颜色变化
+    final saturation = (0.60 + 0.28 * math.sin(tWarped * math.pi * cycles * 2)).clamp(0.0, 1.0);
+
+    /// 用包络函数平滑控制透明度分布，避免条纹在两端生硬截断
+    final envelope =
+        (math.sin(tLinear * math.pi) * 0.55 + math.sin(tLinear * math.pi * 2.0) * 0.27 + 0.18)
+            .clamp(0.0, 1.0);
+
+    return HSVColor.fromAHSV(
+      (maxOpacity * envelope).clamp(0.0, 1.0),
+      hue,
+      saturation,
+      1.0,
+    ).toColor();
+  });
+
+  @override
+  bool shouldRepaint(HolofoilPainter old) => old.progress != progress;
+}
+```
+</ExampleCodeWidget>

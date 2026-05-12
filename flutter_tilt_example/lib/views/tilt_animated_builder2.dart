@@ -55,7 +55,7 @@ class TiltExample extends StatelessWidget {
               filterQuality: FilterQuality.high,
               child: DecoratedBox(
                 /// BUG (Web 端) - 周围预留空间，避免倾斜时内容被 BUG 裁切。
-                decoration: const BoxDecoration(color: Colors.transparent),
+                decoration: const BoxDecoration(color: Colors.white),
                 child: Padding(
                   /// BUG (Web 端) - 周围预留空间，避免倾斜时内容被 BUG 裁切。
                   padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 40),
@@ -727,7 +727,7 @@ class TiltExample extends StatelessWidget {
               filterQuality: FilterQuality.high,
               child: DecoratedBox(
                 /// BUG (Web 端) - 周围预留空间，避免倾斜时内容被 BUG 裁切。
-                decoration: const BoxDecoration(color: Colors.transparent),
+                decoration: const BoxDecoration(color: Colors.white),
                 child: Padding(
                   /// BUG (Web 端) - 周围预留空间，避免倾斜时内容被 BUG 裁切。
                   padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 40),
