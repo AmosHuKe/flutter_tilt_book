@@ -1,0 +1,160 @@
+---
+title: 简单用法
+description: 简单示例帮助你快速上手。
+keywords: ["指南", "简单用法"]
+---
+
+## 倾斜
+
+[Tilt widget][Tilt widget parameters] 仅管理手势、传感器以及动画的状态（无 UI 渲染）。  
+你可以在 Tilt widget 内组合 [TiltBaseContainer widget][TiltBaseContainer widget parameters]，来封装默认的倾斜、光影效果。  
+此外，你也可以使用内置的 `Tilt.base` widget 来实现相同的效果。  
+
+想要了解更多关于 Tilt 容器的信息，请查看 [Tilt 容器][Tilt container]。  
+
+```dart {7-8, 21} showLineNumbers
+/// 导入 flutter_tilt
+import 'package:flutter_tilt/flutter_tilt.dart';
+
+...
+
+/// 搭配 TiltBaseContainer 为 Tilt 实现默认的效果。
+Tilt(
+  child: TiltBaseContainer(
+    child: SizedBox(
+      width: 150,
+      height: 300,
+      child: DecoratedBox(
+        decoration: const BoxDecoration(color: Colors.grey),
+      ),
+    ),
+  ),
+),
+
+/// Tilt 内置 Tilt.base 实现默认的效果。
+/// Tilt.base 是一个便捷的 widget，它由 Tilt 和 TiltBaseContainer 组合而成。
+Tilt.base(
+  child: SizedBox(
+    width: 150,
+    height: 300,
+    child: DecoratedBox(
+      decoration: const BoxDecoration(color: Colors.grey),
+    ),
+  ),
+),
+
+...
+
+```
+
+## 视差
+
+[TiltParallax widget][TiltParallax widget parameters] 只能在 `Tilt` widget 中使用。  
+
+```dart {12, 20} showLineNumbers
+/// 导入 flutter_tilt
+import 'package:flutter_tilt/flutter_tilt.dart';
+
+...
+
+Tilt(
+  child: TiltBaseContainer(
+    childLayout: const ChildLayout(
+      outer: [
+        /// 此处为视差
+        Positioned(
+          child: TiltParallax(
+            child: Text('Parallax'),
+          ),
+        ),
+        /// 此处为视差
+        Positioned(
+          top: 20.0,
+          left: 20.0,
+          child: TiltParallax(
+            offset: Offset(-10.0, -10.0),
+            child: Text('Tilt'),
+          ),
+        ),
+      ],
+    ),
+    child: SizedBox(
+      width: 150,
+      height: 300,
+      child: DecoratedBox(
+        decoration: const BoxDecoration(color: Colors.brown),
+      ),
+    ),
+  ),
+),
+
+...
+
+```
+
+## 示例
+
+<NavCardGrid>
+  <NavCard
+    title="所有示例"
+    description="探索附带源码的示例。"
+    href="/zh/v4/docs/examples"
+  />
+</NavCardGrid>
+
+## 更多 widget
+
+<NavCardGrid>
+  <NavCard
+    subtitle="Widget"
+    title="Tilt"
+    description={
+      <div>
+        了解 Tilt widget 参数。
+        <br />
+        Tilt widget 仅管理手势、传感器以及动画的状态。
+      </div>
+    }
+    href="/zh/v4/docs/widgets/tilt-widget"
+  />
+  <NavCard
+    subtitle="Widget"
+    title="Tilt 容器"
+    description={
+      <div>
+        了解所有 Tilt 容器的样式。
+      </div>
+    }
+    href="/zh/v4/docs/widgets/tilt-container"
+  />
+  <NavCard
+    subtitle="Widget"
+    title="TiltParallax"
+    description={
+      <div>
+        了解 TiltParallax widget 参数。
+        <br />
+        Tilt widget 中的视差效果。
+      </div>
+    }
+    href="/zh/v4/docs/widgets/tilt-parallax-widget"
+  />
+  <NavCard
+    subtitle="Widget"
+    title="TiltAnimatedBuilder"
+    description={
+      <div>
+        了解 TiltAnimatedBuilder widget 参数。
+        <br />
+        它允许你自定义倾斜动画。
+      </div>
+    }
+    href="/zh/v4/docs/widgets/tilt-animated-builder-widget"
+  />
+</NavCardGrid>
+
+
+[Tilt widget parameters]: /zh/v4/docs/widgets/tilt-widget
+[TiltBaseContainer widget parameters]: /zh/v4/docs/widgets/tilt-container/tilt-base-container-widget
+[Tilt container]: /zh/v4/docs/widgets/tilt-container/
+[TiltParallax widget parameters]: /zh/v4/docs/widgets/tilt-parallax-widget

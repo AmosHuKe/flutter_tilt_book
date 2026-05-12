@@ -1,0 +1,91 @@
+---
+title: Tilt widget
+description: 了解 Tilt widget 参数。 Tilt widget 仅管理手势、传感器以及动画的状态。
+keywords: ["widget", "tilt widget"]
+---
+
+Tilt widget 仅管理手势、传感器以及动画的状态（无 UI 渲染）。  
+你可以在 Tilt widget 内部组合 [Tilt 容器 widget][Tilt container widget list] 来封装不同的效果。  
+
+## 手势优先级
+
+启用多个手势时，会按照优先级触发手势：
+
+**Touch > Hover > Controller > Sensors**
+
+## Tilt widget 参数
+
+| 参数名                  | 类型                                          | 默认值         | 描述                                                  |
+| ----------------------- | --------------------------------------------- | -------------- | ----------------------------------------------------- |
+| child <sup>`必选`</sup> | `Widget`                                      | -              | 创建一个 widget，使 child widget 具有相应的倾斜状态。 |
+| tiltController          | [`TiltController?`][TiltController]           | `null`         | 用于自定义倾斜输入的控制器。                          |
+| disable                 | `bool`                                        | `false`        | 禁用所有效果。                                        |
+| fps                     | `int`                                         | `120`          | 手势触发的帧数。                                      |
+| tiltConfig              | [`TiltConfig`][TiltConfig]                    | `TiltConfig()` | 倾斜效果配置。                                        |
+| onGestureMove           | `void Function(TiltDataModel, GesturesType)?` | `null`         | 手势移动的回调触发。                                  |
+| onGestureLeave          | `void Function(TiltDataModel, GesturesType)?` | `null`         | 手势离开的回调触发。                                  |
+
+## TiltController
+
+```dart showLineNumbers
+final TiltController tiltController = TiltController();
+
+...
+
+@override
+void dispose() {
+  tiltController.dispose();
+  super.dispose();
+}
+
+...
+
+/// 处理 `move` 输入事件。
+/// 应与 `leave` 配合使用以表示手势结束。
+tiltController.move(position: Offset(xx, xx));
+
+/// 处理 `leave` 输入事件。
+/// 停止使用当前手势。
+tiltController.leave(position: Offset(xx, xx));
+```
+
+<br/>
+
+| 参数名                     | 类型           | 默认值                    | 描述                                                                                                                                                                                                                                                                                                                                                                                             |
+| -------------------------- | -------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| position <sup>`必选`</sup> | `Offset`       | -                         | 当前触发的坐标位置， <br/> 会触发对应位置的倾斜效果。 <br/> 例如： <br/> 有一个组件尺寸为 width: 10, height: 10, <br/> (0, 0)：会触发最左上的倾斜。 <br/> (10, 10)：会触发最右下的倾斜。                                                                                                                                                                                                         |
+| gesturesType               | `GesturesType` | `GesturesType.controller` | 触发手势类型。 <br/> 会根据 [手势优先级][] 进行触发。 <br/> 如果需要自定义动画或其他方式自行控制， <br/> `推荐` 使用 `GesturesType.controller`。 <br/> 如果使用其他的类型进行触发， <br/> 那么就会受到对应类型相关配置、效果的影响。 <br/> 例如： <br/> 自行触发 `GesturesType.sensors` 的时候。 <br/> 配置 `TiltConfig.enableSensorRevert` 为 false 的情况下， <br/> 将同样不会复原至初始状态。 |
+
+## TiltConfig
+
+| 参数名                  | 类型                   | 默认值                         | 描述                                                                                                                                                                                                                                           |
+| ----------------------- | ---------------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| disable                 | `bool`                 | `false`                        | 仅禁用倾斜效果。                                                                                                                                                                                                                               |
+| initial                 | `Offset?`              | `null`                         | 倾斜进度的初始值，范围 `(x, y)：(1, 1) 至 (-1, -1)`，<br/> 你可以超过这个范围，但是手势移动过程中的最大倾斜角度始终按照 `[TiltConfig.angle]` 进行倾斜。 <br/> 例如：(0.0, 0.0) 中心 <br/> (1.0, 1.0) 左上角最大倾斜角度 `[TiltConfig.angle]`。 |
+| angle                   | `double`               | `10.0`                         | 最大倾斜角度。 <br/> 例如：180 会翻转。                                                                                                                                                                                                        |
+| direction               | `List<TiltDirection>?` | `null`                         | 倾斜方向，多方向、自定义方向值。                                                                                                                                                                                                               |
+| enableReverse           | `bool`                 | `false`                        | 倾斜反向，可以向上或向下倾斜。                                                                                                                                                                                                                 |
+| enableGestureSensors    | `bool`                 | `true`                         | 陀螺仪传感器触发倾斜。 <br/> 仅以下手势生效： <br/> `GesturesType.sensors`                                                                                                                                                                     |
+| sensorFactor            | `double`               | `10.0`                         | 传感器触发系数（灵敏度）。 <br/> 仅以下手势生效： <br/> `GesturesType.sensors`                                                                                                                                                                 |
+| enableSensorRevert      | `bool`                 | `true`                         | 启用传感器倾斜复原，会复原至初始状态。 <br/> 仅以下手势生效： <br/> `GesturesType.sensors`                                                                                                                                                     |
+| sensorRevertFactor      | `double`               | `0.05`                         | 传感器复原系数（阻尼），数值范围：`0-1`。 <br/> 仅以下手势生效： <br/> `GesturesType.sensors`                                                                                                                                                  |
+| sensorMoveDuration      | `Duration`             | `Duration(milliseconds: 50)`   | 传感器移动时的动画持续时间。 <br/> 仅以下手势生效： <br/> `GesturesType.sensors`                                                                                                                                                               |
+| enableGestureHover      | `bool`                 | `true`                         | Hover 手势触发倾斜。 <br/> 仅以下手势生效： <br/> `GesturesType.hover`                                                                                                                                                                         |
+| enableGestureTouch      | `bool`                 | `true`                         | Touch 手势触发倾斜。 <br/> 仅以下手势生效： <br/> `GesturesType.touch`                                                                                                                                                                         |
+| enableRevert            | `bool`                 | `true`                         | 启用倾斜复原，会复原至初始状态。 <br/> 仅以下手势生效： <br/> `GesturesType.touch` <br/> `GesturesType.hover` <br/> `GesturesType.controller`                                                                                                  |
+| enableOutsideAreaMove   | `bool`                 | `true`                         | 可以继续在区域外触发倾斜。 <br/> 仅以下手势生效： <br/> `GesturesType.touch` <br/> `GesturesType.controller`                                                                                                                                   |
+| enterDuration           | `Duration`             | `Duration(milliseconds: 1000)` | 手势刚进入时的动画持续时间，需要搭配 `[moveDuration]` 和 `[enterToMoveDuration]` 使用。 <br/> 仅以下手势生效： <br/> `GesturesType.touch` <br/> `GesturesType.hover`                                                                           |
+| moveDuration            | `Duration`             | `Duration(milliseconds: 100)`  | 手势移动时的动画持续时间。 <br/> 仅以下手势生效： <br/> `GesturesType.touch` <br/> `GesturesType.hover`                                                                                                                                        |
+| enterToMoveDuration     | `Duration`             | `Duration(milliseconds: 600)`  | 手势从 Enter 过渡至 Move 的持续时间，需要搭配 `[enterDuration]` 和 `[moveDuration]` 使用。 <br/> 仅以下手势生效： <br/> `GesturesType.touch` <br/> `GesturesType.hover`                                                                        |
+| leaveDuration           | `Duration`             | `Duration(milliseconds: 300)`  | 手势离开后的动画持续时间。 <br/> 仅以下手势生效： <br/> `GesturesType.touch` <br/> `GesturesType.hover`                                                                                                                                        |
+| moveCurve               | `Curve`                | `Curves.linear`                | 手势移动时的动画曲线。 <br/> 仅以下手势生效： <br/> `GesturesType.touch` <br/> `GesturesType.hover`                                                                                                                                            |
+| enterToMoveCurve        | `Curve`                | `Curves.easeOutCubic`          | 手势从 Enter 过渡至 Move 的曲线，需要搭配 `[enterToMoveDuration]` 使用。 <br/> 仅以下手势生效： <br/> `GesturesType.touch` <br/> `GesturesType.hover`                                                                                          |
+| leaveCurve              | `Curve`                | `Curves.linear`                | 手势离开后的动画曲线。 <br/> 仅以下手势生效： <br/> `GesturesType.touch` <br/> `GesturesType.hover`                                                                                                                                            |
+| controllerMoveDuration  | `Duration`             | `Duration(milliseconds: 100)`  | controller 手势移动时的动画持续时间。 <br/> 仅以下手势生效： <br/> `GesturesType.controller`                                                                                                                                                   |
+| controllerLeaveDuration | `Duration`             | `Duration(milliseconds: 300)`  | controller 手势离开后的动画持续时间。 <br/> 仅以下手势生效： <br/> `GesturesType.controller`                                                                                                                                                   |
+
+
+[Tilt container widget list]: /zh/v4/docs/widgets/tilt-container
+[手势优先级]: #手势优先级
+[TiltController]: #tiltcontroller
+[TiltConfig]: #tiltconfig

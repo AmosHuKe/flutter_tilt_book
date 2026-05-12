@@ -1,0 +1,63 @@
+---
+title: Tilt 控制器
+description: 使用控制器来控制倾斜
+keywords: ["指南", "控制器"]
+---
+
+如果你需要通过编程的方式来控制倾斜，可以参考以下：
+
+## 配置 Tilt.tiltController
+
+```dart {3, 7, 14} showLineNumbers
+...
+
+final tiltController = TiltController();
+
+@override
+void dispose() {
+  tiltController.dispose();
+  super.dispose();
+}
+
+...
+
+Tilt(
+  tiltController: tiltController,
+  ...
+),
+
+...
+```
+
+## 使用控制器
+
+处理 `move` 输入事件。  
+应与 `leave` 配合使用以表示手势结束。  
+
+`position` 是当前触发的坐标位置，它将产生对应位置的倾斜效果。  
+
+例如：  
+有一个 widget 尺寸，宽度：10，高度：10。
+
+- Offset(0, 0)：会触发最左上的倾斜。
+- Offset(10, 10)：会触发最右下的倾斜。
+
+```dart
+tiltController.move(position: Offset(xx, xx));
+```
+
+处理 `leave` 输入事件。  
+停止使用当前手势。  
+
+```dart
+tiltController.leave(position: Offset(xx, xx));
+```
+
+## 更多
+
+你还可以查看一个示例：[示例 - TiltController][]。  
+更多信息，请参阅：[Tilt widget - TiltController][]。  
+
+
+[示例 - TiltController]: /zh/v4/docs/examples/tilt-controller-demo
+[Tilt widget - TiltController]: /zh/v4/docs/widgets/tilt-widget/#tiltcontroller

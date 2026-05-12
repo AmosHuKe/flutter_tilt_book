@@ -1,3 +1,4 @@
+import { VersionSettings } from "@/settings/version"
 import { Link } from "lib/transition"
 import { getTranslations } from "next-intl/server"
 
@@ -26,16 +27,18 @@ export default async function Home({ params }: Readonly<PageProps>) {
         >
           {t("get-started")}
         </Link>
-        <Link
-          href={`/${locale}/${version}/docs/examples/`}
-          className={buttonVariants({
-            variant: "outline",
-            className: "px-6",
-            size: "lg",
-          })}
-        >
-          {t("preview-examples")}
-        </Link>
+        {version === VersionSettings.latestVersion && (
+          <Link
+            href={`/${locale}/${version}/docs/examples/`}
+            className={buttonVariants({
+              variant: "outline",
+              className: "px-6",
+              size: "lg",
+            })}
+          >
+            {t("preview-examples")}
+          </Link>
+        )}
       </div>
     </section>
   )

@@ -1,0 +1,160 @@
+---
+title: Simple usage
+description: Simple examples to help you get started quickly.
+keywords: ["guide", "simple usage"]
+---
+
+## Tilt
+
+[Tilt widget][Tilt widget parameters] only manages gesture, sensor, and animation state (no UI rendering).  
+You can compose the [TiltBaseContainer widget][TiltBaseContainer widget parameters] within the Tilt widget to wrap the default tilt, light, and shadow effects.  
+Alternatively, you can use the built-in `Tilt.base` widget to achieve the same effects.  
+
+For more information about Tilt container, check out [Tilt container][].  
+
+```dart {7-8, 21} showLineNumbers
+/// Import flutter_tilt
+import 'package:flutter_tilt/flutter_tilt.dart';
+
+...
+
+/// Tilt with TiltBaseContainer for default effects.
+Tilt(
+  child: TiltBaseContainer(
+    child: SizedBox(
+      width: 150,
+      height: 300,
+      child: DecoratedBox(
+        decoration: const BoxDecoration(color: Colors.grey),
+      ),
+    ),
+  ),
+),
+
+/// Tilt with built-in Tilt.base for default effects.
+/// Tilt.base is a convenient widget that composes Tilt and TiltBaseContainer.
+Tilt.base(
+  child: SizedBox(
+    width: 150,
+    height: 300,
+    child: DecoratedBox(
+      decoration: const BoxDecoration(color: Colors.grey),
+    ),
+  ),
+),
+
+...
+
+```
+
+## Parallax
+
+[TiltParallax widget][TiltParallax widget parameters] can only be used in the `Tilt` widget.
+
+```dart {12, 20} showLineNumbers
+/// Import flutter_tilt
+import 'package:flutter_tilt/flutter_tilt.dart';
+
+...
+
+Tilt(
+  child: TiltBaseContainer(
+    childLayout: const ChildLayout(
+      outer: [
+        /// Parallax here
+        Positioned(
+          child: TiltParallax(
+            child: Text('Parallax'),
+          ),
+        ),
+        /// Parallax here
+        Positioned(
+          top: 20.0,
+          left: 20.0,
+          child: TiltParallax(
+            offset: Offset(-10.0, -10.0),
+            child: Text('Tilt'),
+          ),
+        ),
+      ],
+    ),
+    child: SizedBox(
+      width: 150,
+      height: 300,
+      child: DecoratedBox(
+        decoration: const BoxDecoration(color: Colors.brown),
+      ),
+    ),
+  ),
+),
+
+...
+
+```
+
+## Examples
+
+<NavCardGrid>
+  <NavCard
+    title="All examples"
+    description="Explore examples with source code."
+    href="/en/v4/docs/examples"
+  />
+</NavCardGrid>
+
+## More widgets
+
+<NavCardGrid>
+  <NavCard
+    subtitle="Widget"
+    title="Tilt"
+    description={
+      <div>
+        Learn about Tilt widget parameters.
+        <br />
+        Tilt widget only manages gesture, sensor, and animation state.
+      </div>
+    }
+    href="/en/v4/docs/widgets/tilt-widget"
+  />
+  <NavCard
+    subtitle="Widget"
+    title="Tilt container"
+    description={
+      <div>
+        Learn about all Tilt container styles.
+      </div>
+    }
+    href="/en/v4/docs/widgets/tilt-container"
+  />
+  <NavCard
+    subtitle="Widget"
+    title="TiltParallax"
+    description={
+      <div>
+        Learn about TiltParallax widget parameters.
+        <br />
+        Parallax effect in the Tilt widget.
+      </div>
+    }
+    href="/en/v4/docs/widgets/tilt-parallax-widget"
+  />
+  <NavCard
+    subtitle="Widget"
+    title="TiltAnimatedBuilder"
+    description={
+      <div>
+        Learn about TiltAnimatedBuilder widget parameters.
+        <br />
+        It allows you to customize the tilt animation.
+      </div>
+    }
+    href="/en/v4/docs/widgets/tilt-animated-builder-widget"
+  />
+</NavCardGrid>
+
+
+[Tilt widget parameters]: /en/v4/docs/widgets/tilt-widget
+[TiltBaseContainer widget parameters]: /en/v4/docs/widgets/tilt-container/tilt-base-container-widget
+[Tilt container]: /en/v4/docs/widgets/tilt-container/
+[TiltParallax widget parameters]: /en/v4/docs/widgets/tilt-parallax-widget
