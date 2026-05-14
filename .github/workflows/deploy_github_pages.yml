@@ -1,6 +1,9 @@
 name: 'Deploy GitHub Pages'
 run-name: 'Deploy GitHub Pages'
 
+# Disable permissions for all of the available permissions
+permissions: {}
+
 on:
   workflow_dispatch:
   push:
@@ -14,11 +17,11 @@ jobs:
   code-analysis:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
+      - uses: actions/checkout@900f2210b1d28bbbd0bd22d17926b9e224e8f231
+      - uses: actions/setup-node@670825a89dc0abd596e7a3abd0f5e3f6e5faf37c
         with:
           node-version: 24
-      - uses: subosito/flutter-action@v2
+      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2
         with:
           channel: 'stable'
           flutter-version-file: flutter_tilt_example/pubspec.yaml
@@ -48,12 +51,14 @@ jobs:
   deploy:
     needs: [code-analysis]
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
+      - uses: actions/checkout@900f2210b1d28bbbd0bd22d17926b9e224e8f231
+      - uses: actions/setup-node@670825a89dc0abd596e7a3abd0f5e3f6e5faf37c
         with:
           node-version: 24
-      - uses: subosito/flutter-action@v2
+      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2
         with:
           channel: 'stable'
           flutter-version-file: flutter_tilt_example/pubspec.yaml
@@ -80,7 +85,7 @@ jobs:
         env:
           NEXT_PUBLIC_FLUTTER_TILT_EXAMPLE_URL: /flutter_tilt_book
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@8072b9c7e8f9bd5cda32539dde262854f2073722
         with:
           branch: 'pages-book'
           folder: 'flutter_tilt_book/out'
