@@ -85,7 +85,7 @@ jobs:
         env:
           NEXT_PUBLIC_FLUTTER_TILT_EXAMPLE_URL: /flutter_tilt_book
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@8072b9c7e8f9bd5cda32539dde262854f2073722
+        uses: JamesIves/github-pages-deploy-action@d92aa235d04922e8f08b40ce78cc5442fcfbfa2f
         with:
           branch: 'pages-book'
           folder: 'flutter_tilt_book/out'
