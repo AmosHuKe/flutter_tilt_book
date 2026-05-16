@@ -50,6 +50,7 @@ jobs:
 
   deploy:
     needs: [code-analysis]
+    if: github.repository == 'AmosHuKe/flutter_tilt_book'
     runs-on: ubuntu-latest
     permissions:
       contents: write
