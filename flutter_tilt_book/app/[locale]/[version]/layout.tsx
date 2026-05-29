@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Google_Sans, Roboto_Mono } from "next/font/google"
 import { notFound } from "next/navigation"
 import { GoogleAnalytics } from "@next/third-parties/google"
 import { hasLocale } from "next-intl"
@@ -22,9 +22,48 @@ type PageProps = {
   params: Promise<{ locale: string; version: string }>
 }
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
+const fontGoogleSans = Google_Sans({
+  variable: "--font-google-sans",
+  adjustFontFallback: false,
+  subsets: [
+    "armenian",
+    "bengali",
+    "canadian-aboriginal",
+    "cyrillic",
+    "cyrillic-ext",
+    "devanagari",
+    "ethiopic",
+    "georgian",
+    "greek",
+    "greek-ext",
+    "gujarati",
+    "gurmukhi",
+    "hebrew",
+    "khmer",
+    "lao",
+    "latin",
+    "latin-ext",
+    "malayalam",
+    "oriya",
+    "sinhala",
+    "symbols",
+    "tamil",
+    "telugu",
+    "thai",
+    "vietnamese",
+  ],
+})
+
+const fontRobotoMono = Roboto_Mono({
+  variable: "--font-roboto-mono",
+  subsets: [
+    "cyrillic",
+    "cyrillic-ext",
+    "greek",
+    "latin",
+    "latin-ext",
+    "vietnamese",
+  ],
 })
 
 const baseUrl = Settings.metadataBase
@@ -85,7 +124,9 @@ export default async function VersionLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       {Settings.gaConnected && <GoogleAnalytics gaId={Settings.gaId} />}
-      <body className={`${inter.variable} font-regular`}>
+      <body
+        className={`${fontGoogleSans.variable} ${fontRobotoMono.variable} font-regular`}
+      >
         <Providers>
           <Navbar locale={locale} version={version} />
           <main className="h-auto px-5 sm:pr-8 sm:pl-5">{children}</main>

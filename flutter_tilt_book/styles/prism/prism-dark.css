@@ -104,7 +104,7 @@
 }
 
 .dark .token.italic {
-  font-style: italic;
+  /* font-style: italic; */
 }
 
 .dark .token.constant {

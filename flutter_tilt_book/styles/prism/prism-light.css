@@ -7,7 +7,7 @@
 .token.doctype,
 .token.cdata {
   color: #008000;
-  font-style: italic;
+  /* font-style: italic; */
 }
 
 .token.namespace {
