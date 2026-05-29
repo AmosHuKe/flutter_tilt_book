@@ -223,8 +223,8 @@
     }
   },
   {
-    "slug": "/examples/animation-demo",
-    "title": "Animation",
+    "slug": "/examples/animation-curve-demo",
+    "title": "Animation Curve",
     "description": "",
     "content": "",
     "_searchMeta": {
@@ -232,7 +232,7 @@
       "headings": [],
       "keywords": [
         "example",
-        "Animation"
+        "Animation Curve"
       ]
     }
   },
@@ -247,6 +247,20 @@
       "keywords": [
         "example",
         "Bento Grids"
+      ]
+    }
+  },
+  {
+    "slug": "/examples/cd-demo",
+    "title": "CD",
+    "description": "",
+    "content": "",
+    "_searchMeta": {
+      "cleanContent": "",
+      "headings": [],
+      "keywords": [
+        "example",
+        "CD"
       ]
     }
   },
@@ -289,6 +303,20 @@
       "keywords": [
         "example",
         "Events"
+      ]
+    }
+  },
+  {
+    "slug": "/examples/holofoil-card-demo",
+    "title": "Holofoil Card",
+    "description": "",
+    "content": "",
+    "_searchMeta": {
+      "cleanContent": "",
+      "headings": [],
+      "keywords": [
+        "example",
+        "Holofoil Card"
       ]
     }
   },
@@ -470,34 +498,6 @@
       "keywords": [
         "example",
         "Smooth Gesture Enter"
-      ]
-    }
-  },
-  {
-    "slug": "/examples/tilt-animated-builder-demo",
-    "title": "TiltAnimatedBuilder",
-    "description": "",
-    "content": "",
-    "_searchMeta": {
-      "cleanContent": "",
-      "headings": [],
-      "keywords": [
-        "example",
-        "TiltAnimatedBuilder"
-      ]
-    }
-  },
-  {
-    "slug": "/examples/tilt-animated-builder2-demo",
-    "title": "TiltAnimatedBuilder",
-    "description": "",
-    "content": "",
-    "_searchMeta": {
-      "cleanContent": "",
-      "headings": [],
-      "keywords": [
-        "example",
-        "TiltAnimatedBuilder"
       ]
     }
   },
