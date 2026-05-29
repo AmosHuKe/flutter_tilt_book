@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_tilt/flutter_tilt.dart';
 
+import '../config/config.dart';
 import '../layouts/page_layout.dart';
 import '../widgets/tilt_box.dart';
 
@@ -25,8 +26,7 @@ class _TiltDirectionDemoState extends State<TiltDirectionDemo> {
     return PageLayout(
       title: 'Tilt Direction',
       dartCode: code(width: width, height: height, tiltDirection: tiltDirection),
-      sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/tilt_direction.dart',
+      sourceCodeLink: '${Config.repoUri}/lib/views/tilt_direction.dart',
       minHeight: 500,
       body: TiltExample(
         width: width,

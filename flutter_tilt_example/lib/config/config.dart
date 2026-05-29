@@ -19,6 +19,9 @@ enum RouteQueryParams {
 
 abstract final class Config {
   static const String appTitle = 'Flutter Tilt';
+  static final Uri repoUri = Uri.parse(
+    'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example',
+  );
 
   static final List<BookLinkData> bookLinkData = [
     BookLinkData(
@@ -30,6 +33,11 @@ abstract final class Config {
       title: 'Github.com',
       icon: Remix.github_fill,
       uri: Uri.https('github.com', '/fluttercandies/flutter_tilt'),
+    ),
+    BookLinkData(
+      title: 'Documentation',
+      icon: Remix.book_2_fill,
+      uri: Uri.parse('https://amoshuke.github.io/flutter_tilt_book/en/'),
     ),
   ];
 
@@ -53,17 +61,12 @@ abstract final class Config {
       pageInfo: TiltContainerDemo.page,
     ),
     RouteData(
-      title: 'TiltAnimatedBuilder',
+      title: 'Holofoil Card',
       icon: Remix.image_2_line,
-      pathName: 'TiltAnimatedBuilderDemo',
-      pageInfo: TiltAnimatedBuilderDemo.page,
+      pathName: 'HolofoilCardDemo',
+      pageInfo: HolofoilCardDemo.page,
     ),
-    RouteData(
-      title: 'TiltAnimatedBuilder2',
-      icon: Remix.image_2_line,
-      pathName: 'TiltAnimatedBuilder2Demo',
-      pageInfo: TiltAnimatedBuilder2Demo.page,
-    ),
+    RouteData(title: 'CD', icon: Remix.image_2_line, pathName: 'CDDemo', pageInfo: CDDemo.page),
     RouteData(
       title: 'Parallax Card',
       icon: Remix.image_2_line,
@@ -101,12 +104,6 @@ abstract final class Config {
       pageInfo: Events.page,
     ),
     RouteData(
-      title: 'Animation',
-      icon: Remix.sketching,
-      pathName: 'AnimationDemo',
-      pageInfo: AnimationDemo.page,
-    ),
-    RouteData(
       title: 'Smooth Enter',
       icon: Remix.sketching,
       pathName: 'SmoothGestureEnterDemo',
@@ -117,6 +114,12 @@ abstract final class Config {
       icon: Remix.remote_control_line,
       pathName: 'TiltControllerDemo',
       pageInfo: TiltControllerDemo.page,
+    ),
+    RouteData(
+      title: 'Animation Curve',
+      icon: Remix.sketching,
+      pathName: 'AnimationCurveDemo',
+      pageInfo: AnimationCurveDemo.page,
     ),
     RouteData(
       title: 'Reverse Tilt',

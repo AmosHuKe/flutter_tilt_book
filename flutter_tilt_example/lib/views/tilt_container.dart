@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_tilt/flutter_tilt.dart';
 
+import '../config/config.dart';
 import '../layouts/page_layout.dart';
 
 enum TiltContainer {
@@ -38,8 +39,7 @@ class _TiltContainerDemoState extends State<TiltContainerDemo> {
     return PageLayout(
       title: 'Tilt container',
       dartCode: code(),
-      sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/light_shadow_mode.dart',
+      sourceCodeLink: '${Config.repoUri}/lib/views/light_shadow_mode.dart',
       minHeight: 580,
       body: switch (tiltContainer) {
         TiltContainer.base => TiltBaseExample(scaleFactor: scaleFactor),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_tilt/flutter_tilt.dart';
 
+import '../config/config.dart';
 import '../layouts/page_layout.dart';
 import '../widgets/tilt_box.dart';
 
@@ -26,8 +27,7 @@ class _EventsState extends State<Events> {
     return PageLayout(
       title: 'Events',
       dartCode: code(width: width, height: height),
-      sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/events.dart',
+      sourceCodeLink: '${Config.repoUri}/lib/views/events.dart',
       minHeight: 460,
       body: TiltExample(
         width: width,

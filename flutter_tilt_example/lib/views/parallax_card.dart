@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_tilt/flutter_tilt.dart';
 
+import '../config/config.dart';
 import '../layouts/page_layout.dart';
 
 @RoutePage()
@@ -13,8 +14,7 @@ class ParallaxCard extends StatelessWidget {
     return PageLayout(
       title: 'Parallax Card',
       dartCode: code(),
-      sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/parallax_card.dart',
+      sourceCodeLink: '${Config.repoUri}/lib/views/parallax_card.dart',
       minHeight: 700,
       body: const TiltExample(),
     );

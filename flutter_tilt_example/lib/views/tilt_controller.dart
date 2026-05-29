@@ -4,6 +4,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter_tilt/flutter_tilt.dart';
 import 'package:remixicon_updated/remixicon_updated.dart';
 
+import '../config/config.dart';
 import '../layouts/page_layout.dart';
 
 @RoutePage()
@@ -116,8 +117,7 @@ class _TiltControllerDemoState extends State<TiltControllerDemo> with TickerProv
     return PageLayout(
       title: 'TiltStreamController',
       dartCode: code(),
-      sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/tilt_stream_controller.dart',
+      sourceCodeLink: '${Config.repoUri}/lib/views/tilt_stream_controller.dart',
       minHeight: 640,
       body: Column(
         children: [

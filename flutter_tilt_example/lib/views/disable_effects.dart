@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_tilt/flutter_tilt.dart';
 
+import '../config/config.dart';
 import '../layouts/page_layout.dart';
 
 @RoutePage()
@@ -26,8 +27,7 @@ class _DisableEffectsState extends State<DisableEffects> {
         disableLight: disableLight,
         disableShadow: disableShadow,
       ),
-      sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/disable_effects.dart',
+      sourceCodeLink: '${Config.repoUri}/lib/views/disable_effects.dart',
       minHeight: 500,
       body: TiltExample(
         disableTilt: disableTilt,

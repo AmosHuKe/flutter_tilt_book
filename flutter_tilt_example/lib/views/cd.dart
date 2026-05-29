@@ -4,19 +4,19 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_tilt/flutter_tilt.dart';
 
+import '../config/config.dart';
 import '../layouts/page_layout.dart';
 
 @RoutePage()
-class TiltAnimatedBuilder2Demo extends StatelessWidget {
-  const TiltAnimatedBuilder2Demo({super.key});
+class CDDemo extends StatelessWidget {
+  const CDDemo({super.key});
 
   @override
   Widget build(BuildContext context) {
     return PageLayout(
-      title: 'TiltAnimatedBuilder',
+      title: 'CD',
       dartCode: code(),
-      sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/tilt_animated_builder2.dart',
+      sourceCodeLink: '${Config.repoUri}/lib/views/cd.dart',
       minHeight: 1000,
       body: const LimitedBox(maxHeight: 500, child: TiltExample()),
     );

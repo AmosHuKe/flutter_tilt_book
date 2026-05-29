@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_tilt/flutter_tilt.dart';
 
+import '../config/config.dart';
 import '../layouts/page_layout.dart';
 
 @RoutePage()
-class AnimationDemo extends StatelessWidget {
-  const AnimationDemo({super.key});
+class AnimationCurveDemo extends StatelessWidget {
+  const AnimationCurveDemo({super.key});
 
   @override
   Widget build(BuildContext context) {
     return PageLayout(
-      title: 'Animation',
+      title: 'Animation Curve',
       dartCode: code(),
-      sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/animation.dart',
+      sourceCodeLink: '${Config.repoUri}/lib/views/animation_curve.dart',
       minHeight: 500,
       body: const TiltExample(),
     );

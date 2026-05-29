@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_tilt/flutter_tilt.dart';
 
+import '../config/config.dart';
 import '../layouts/page_layout.dart';
 
 @RoutePage()
@@ -13,8 +14,7 @@ class InitialTilt extends StatelessWidget {
     return PageLayout(
       title: 'Initial Tilt',
       dartCode: code(),
-      sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/initial_tilt.dart',
+      sourceCodeLink: '${Config.repoUri}/lib/views/initial_tilt.dart',
       minHeight: 500,
       body: const TiltExample(),
     );

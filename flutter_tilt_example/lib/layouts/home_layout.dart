@@ -289,8 +289,8 @@ class BannerContainer extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 24),
       child: Wrap(
-        spacing: 8,
-        runSpacing: 8,
+        spacing: 10,
+        runSpacing: 10,
         children: List.generate(
           Config.bookLinkData.length,
           (index) => GestureDetector(
@@ -305,7 +305,7 @@ class BannerContainer extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(right: 8),
-                        child: Icon(Config.bookLinkData[index].icon, size: 20, color: Colors.white),
+                        child: Icon(Config.bookLinkData[index].icon, size: 18, color: Colors.white),
                       ),
                       Text(
                         Config.bookLinkData[index].title,

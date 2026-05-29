@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_tilt/flutter_tilt.dart';
 
+import '../config/config.dart';
 import '../layouts/page_layout.dart';
 
 @RoutePage()
@@ -20,8 +21,7 @@ class _ShadowDirectionDemoState extends State<ShadowDirectionDemo> {
     return PageLayout(
       title: 'Shadow Direction',
       dartCode: code(shadowDirection: shadowDirection),
-      sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/shadow_direction.dart',
+      sourceCodeLink: '${Config.repoUri}/lib/views/shadow_direction.dart',
       minHeight: 500,
       body: TiltExample(shadowDirection: shadowDirection),
       tools: [

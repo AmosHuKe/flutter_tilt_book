@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter_tilt/flutter_tilt.dart';
 
+import '../config/config.dart';
 import '../layouts/page_layout.dart';
 
 @RoutePage()
@@ -20,8 +21,7 @@ class _LightDirectionDemoState extends State<LightDirectionDemo> {
     return PageLayout(
       title: 'Light Direction',
       dartCode: code(lightDirection: lightDirection),
-      sourceCodeLink:
-          'https://github.com/amoshuke/flutter_tilt_book/blob/main/flutter_tilt_example/lib/views/light_direction.dart',
+      sourceCodeLink: '${Config.repoUri}/lib/views/light_direction.dart',
       minHeight: 500,
       body: TiltExample(lightDirection: lightDirection),
       tools: [

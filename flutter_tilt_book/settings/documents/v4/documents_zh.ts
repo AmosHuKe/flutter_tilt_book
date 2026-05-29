@@ -129,12 +129,12 @@ export const documents_v4_zh: Paths[] = [
         href: "/tilt-container",
       },
       {
-        title: "TiltAnimatedBuilder",
-        href: "/tilt-animated-builder-demo",
+        title: "Holofoil Card",
+        href: "/holofoil-card-demo",
       },
       {
-        title: "TiltAnimatedBuilder2",
-        href: "/tilt-animated-builder2-demo",
+        title: "CD",
+        href: "/cd-demo",
       },
       {
         title: "Parallax Card",
@@ -161,16 +161,16 @@ export const documents_v4_zh: Paths[] = [
         href: "/events",
       },
       {
-        title: "Animation",
-        href: "/animation-demo",
-      },
-      {
         title: "Smooth Gesture Enter",
         href: "/smooth-gesture-enter-demo",
       },
       {
         title: "TiltController",
         href: "/tilt-controller-demo",
+      },
+      {
+        title: "Animation Curve",
+        href: "/animation-curve-demo",
       },
       {
         title: "Reverse Tilt",
