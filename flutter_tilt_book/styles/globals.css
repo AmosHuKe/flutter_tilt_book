@@ -153,8 +153,8 @@
 
 code {
   font-family:
-    var(--font-roboto-mono), ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+    var(--font-google-sans), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 pre {
@@ -164,6 +164,9 @@ pre {
 }
 
 pre > code {
+  font-family:
+    var(--font-roboto-mono), ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
   display: grid;
   max-width: inherit !important;
   padding: 14px 0 !important;
