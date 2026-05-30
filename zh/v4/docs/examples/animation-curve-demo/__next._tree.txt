@@ -1,4 +1,4 @@
-:HL["/flutter_tilt_book/_next/static/chunks/0zrx1onqh4ach.css","style"]
+:HL["/flutter_tilt_book/_next/static/chunks/0_or4.0wo6ct1.css","style"]
 :HL["/flutter_tilt_book/_next/static/media/0ec6c84bef5c67ea.p.0.nszny~.5pf5.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/flutter_tilt_book/_next/static/media/16c7924ea9b676a6.p.0lo13_6.xj66_.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/flutter_tilt_book/_next/static/media/1876d7d15f459a39.p.05vk_.ep7ksmp.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
@@ -30,4 +30,4 @@
 :HL["/flutter_tilt_book/_next/static/media/d4b09e548dc4ba91.p.11s4c_36ebzqm.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/flutter_tilt_book/_next/static/media/ee339b0464be7e84.p.0_~uu752o49g2.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/flutter_tilt_book/_next/static/media/f8b71b303845b64e.p.0d5f3z3dbmj.l.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"locale","param":{"type":"d","key":"zh","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"version","param":{"type":"d","key":"v4","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"docs","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"oc","key":"examples/animation-curve-demo","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}}}},"staleTime":300,"buildId":"qTCyCrsq7KXCQa9dAN0AC"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"locale","param":{"type":"d","key":"zh","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"version","param":{"type":"d","key":"v4","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"docs","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"oc","key":"examples/animation-curve-demo","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}}}},"staleTime":300,"buildId":"CVRRc17KMsD1D78z2r141"}
