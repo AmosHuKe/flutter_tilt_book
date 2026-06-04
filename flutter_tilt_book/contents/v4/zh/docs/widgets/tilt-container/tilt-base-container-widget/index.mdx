@@ -70,7 +70,7 @@ Tilt.base(
 | disable       | `bool`           | `false`                 | 仅禁用光照效果。                                                                                                                                 |
 | color         | `Color`          | `Color(0xFFFFFFFF)`     | 光照颜色。                                                                                                                                       |
 | minIntensity  | `double`         | `0.0`                   | 颜色最小不透明度，也是初始不透明度。                                                                                                             |
-| maxIntensity  | `double`         | `0.5`                   | 颜色最大不透明度，跟随倾斜最大进度。                                                                                                             |
+| maxIntensity  | `double`         | `0.25`                  | 颜色最大不透明度，跟随倾斜最大进度。                                                                                                             |
 | spreadFactor  | `double`         | `4.0`                   | 光源扩散系数，相对于当前 widget 尺寸。                                                                                                           |
 | direction     | `LightDirection` | `LightDirection.around` | 光照方向。 <br/> 影响：<br/> `[ShadowBaseConfig.direction]`（配置后不受影响）。                                                                  |
 | enableReverse | `bool`           | `false`                 | 反转光照方向。 <br/> 影响：<br/> `[ShadowBaseConfig.direction]`（配置后不受影响）。 <br/> `[ShadowBaseConfig.enableReverse]`（配置后不受影响）。 |
@@ -82,7 +82,7 @@ Tilt.base(
 | disable       | `bool`             | `false`             | 仅禁用阴影效果。                                                                  |
 | color         | `Color`            | `Color(0xFF9E9E9E)` | 阴影颜色。                                                                        |
 | minIntensity  | `double`           | `0.0`               | 颜色最小不透明度，也是初始不透明度。                                              |
-| maxIntensity  | `double`           | `0.5`               | 颜色最大不透明度，跟随倾斜最大进度。                                              |
+| maxIntensity  | `double`           | `0.25`              | 颜色最大不透明度，跟随倾斜最大进度。                                              |
 | offsetInitial | `Offset`           | `Offset(0.0, 0.0)`  | 阴影偏移初始值。 <br/> 例如：(0.0, 0.0) 中心 <br/> (40.0, 40.0) 向左上角偏移 40。 |
 | offsetFactor  | `double`           | `0.1`               | 阴影偏移系数，相对于当前 widget 尺寸。                                            |
 | direction     | `ShadowDirection?` | `null`              | 阴影方向。                                                                        |

@@ -113,7 +113,7 @@ class _AnimationCardState extends State<AnimationCard> with SingleTickerProvider
             child: Tilt(
               tiltConfig: const TiltConfig(),
               child: TiltBaseContainer(
-                lightConfig: const LightConfig(minIntensity: 0.1, maxIntensity: 0.4),
+                lightConfig: const LightConfig(minIntensity: 0.1, maxIntensity: 0.16),
                 borderRadius: BorderRadius.circular(20),
                 filterQuality: FilterQuality.high,
                 child: widget.child,
@@ -141,7 +141,7 @@ class _AnimationCardState extends State<AnimationCard> with SingleTickerProvider
                 child: Tilt(
                   tiltConfig: const TiltConfig(enableRevert: false, enableSensorRevert: false),
                   child: TiltBaseContainer(
-                    lightConfig: const LightConfig(minIntensity: 0.1, maxIntensity: 0.4),
+                    lightConfig: const LightConfig(minIntensity: 0.1, maxIntensity: 0.16),
                     shadowConfig: const ShadowBaseConfig(disable: true),
                     borderRadius: BorderRadius.circular(20),
                     filterQuality: FilterQuality.high,
@@ -249,7 +249,7 @@ class _AnimationCardState extends State<AnimationCard> with SingleTickerProvider
             child: Tilt(
               tiltConfig: const TiltConfig(),
               child: TiltBaseContainer(
-                lightConfig: const LightConfig(minIntensity: 0.1, maxIntensity: 0.4),
+                lightConfig: const LightConfig(minIntensity: 0.1, maxIntensity: 0.16),
                 borderRadius: BorderRadius.circular(20),
                 filterQuality: FilterQuality.high,
                 child: widget.child,
@@ -277,7 +277,7 @@ class _AnimationCardState extends State<AnimationCard> with SingleTickerProvider
                 child: Tilt(
                   tiltConfig: const TiltConfig(enableRevert: false, enableSensorRevert: false),
                   child: TiltBaseContainer(
-                    lightConfig: const LightConfig(minIntensity: 0.1, maxIntensity: 0.4),
+                    lightConfig: const LightConfig(minIntensity: 0.1, maxIntensity: 0.16),
                     shadowConfig: const ShadowBaseConfig(disable: true),
                     borderRadius: BorderRadius.circular(20),
                     filterQuality: FilterQuality.high,

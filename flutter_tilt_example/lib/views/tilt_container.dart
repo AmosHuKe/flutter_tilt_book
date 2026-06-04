@@ -144,7 +144,7 @@ class TiltProjectorExample extends StatelessWidget {
     return TiltWidget(
       child: TiltProjectorContainer(
         shadowConfig: const ShadowProjectorConfig(
-          maxIntensity: 0.6,
+          maxIntensity: 0.36,
           projectorScaleFrom: 1.0,
           projectorScaleTo: 1.0,
           projectorBlurSigmaFrom: 2.0,
@@ -188,7 +188,7 @@ class TiltExample extends StatelessWidget {
       ),
       child: TiltProjectorContainer(
         shadowConfig: const ShadowProjectorConfig(
-          maxIntensity: 0.6,
+          maxIntensity: 0.36,
           projectorScaleFrom: 1.0,
           projectorScaleTo: 1.0,
           projectorBlurSigmaFrom: 2.0,
