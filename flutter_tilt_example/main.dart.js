@@ -25171,7 +25171,7 @@ this.b=b
 this.c=c},
 dQ:function dQ(a,b){this.a=a
 this.b=b},
-aC4(a,b){return new A.hW(b,B.i,0,0.5,4,a,null)},
+aC4(a,b){return new A.hW(b,B.i,0,0.25,4,a,null)},
 hW:function hW(a,b,c,d,e,f,g){var _=this
 _.a=a
 _.b=b
@@ -25188,7 +25188,7 @@ _.d=d
 _.e=e
 _.f=f
 _.r=g},
-aDi(a,b){return new A.l2(20,b,B.bU,0,0.5,B.f,0.1,a,null)},
+aDi(a,b){return new A.l2(20,b,B.bU,0,0.25,B.f,0.1,a,null)},
 pR:function pR(){},
 l2:function l2(a,b,c,d,e,f,g,h,i){var _=this
 _.Q=a
@@ -83307,18 +83307,17 @@ A.ahU.prototype={
 $0(){return this.a.e=null},
 $S:0}
 A.Ps.prototype={
-WT(a,b,c,d){var s=this.a3J(b,-a.a,-a.b,d,c)
-return B.c.b9(s*c,d,c)},
-a3J(a,b,c,d,e){var s
-A:{if(a instanceof A.dG){s=this.a3L(a,b,c,d,e)
-break A}if(a instanceof A.dO){s=this.a3M(a,b,c,d,e)
+WT(a,b,c,d){return d+B.c.b9(this.a3J(b,-a.a,-a.b),0,1)*(c-d)},
+a3J(a,b,c){var s
+A:{if(a instanceof A.dG){s=this.a3L(a,b,c)
+break A}if(a instanceof A.dO){s=this.a3M(a,b,c)
 break A}s=null}return s},
-a3L(a,b,c,d,e){var s
+a3L(a,b,c){var s
 switch(a.a){case 0:s=0
 break
-case 1:s=B.c.b9(A.le(B.f,new A.h(b,c)),d,e)
+case 1:s=B.c.b9(A.le(B.f,new A.h(b,c)),0,1)
 break
-case 2:s=e
+case 2:s=1
 break
 case 3:s=c
 break
@@ -83328,7 +83327,7 @@ case 5:s=b
 break
 case 6:s=-b
 break
-case 7:s=e-B.c.b9(A.le(B.f,new A.h(b,c)),d,e)
+case 7:s=1-B.c.b9(A.le(B.f,new A.h(b,c)),0,1)
 break
 case 8:s=b+c
 break
@@ -83338,17 +83337,17 @@ case 9:s=-(b-c)
 break
 case 10:s=b-c
 break
-case 12:s=e-Math.abs(c)
+case 12:s=1-Math.abs(c)
 break
-case 13:s=e-Math.abs(b)
+case 13:s=1-Math.abs(b)
 break
 default:s=null}return s},
-a3M(a,b,c,d,e){var s
+a3M(a,b,c){var s
 switch(a.a){case 0:s=0
 break
-case 1:s=B.c.b9(A.le(B.f,new A.h(b,c)),d,e)
+case 1:s=B.c.b9(A.le(B.f,new A.h(b,c)),0,1)
 break
-case 2:s=e
+case 2:s=1
 break
 case 3:s=-c
 break
@@ -83358,7 +83357,7 @@ case 5:s=-b
 break
 case 6:s=b
 break
-case 7:s=e-B.c.b9(A.le(B.f,new A.h(b,c)),d,e)
+case 7:s=1-B.c.b9(A.le(B.f,new A.h(b,c)),0,1)
 break
 case 8:s=-(b+c)
 break
@@ -83368,9 +83367,9 @@ case 9:s=b-c
 break
 case 10:s=-(b-c)
 break
-case 12:s=e-Math.abs(c)
+case 12:s=1-Math.abs(c)
 break
-case 13:s=e-Math.abs(b)
+case 13:s=1-Math.abs(b)
 break
 default:s=null}return s}}
 A.CL.prototype={
@@ -84464,7 +84463,7 @@ A.Pt.prototype={
 F(a){var s=this,r=null
 return A.d0(A.dl(r,A.bS(30),A.c_(B.r,B.c9,B.o,B.uG,r,s.d,r,r,s.c),B.bh,r,B.bZ,B.c6),s.f,s.e,B.ff,r)}}
 A.t0.prototype={
-F(a){return A.dJ(B.a_1,"class TiltExample extends StatefulWidget {\n  const TiltExample({super.key});\n\n  @override\n  State<TiltExample> createState() => _TiltExampleState();\n}\n\nclass _TiltExampleState extends State<TiltExample> {\n  int _counter = 0;\n\n  void _incrementCounter() {\n    setState(() {\n      _counter++;\n    });\n  }\n\n  @override\n  Widget build(BuildContext context) {\n    return Theme(\n      data: ThemeData(\n        useMaterial3: true,\n        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.brown),\n        appBarTheme: const AppBarTheme(\n          backgroundColor: Colors.brown,\n          titleTextStyle: TextStyle(color: Colors.white),\n        ),\n      ),\n      child: Tilt(\n        tiltConfig: const TiltConfig(angle: 15),\n        child: TiltBaseContainer(\n          lightConfig: const LightConfig(minIntensity: 0.1),\n          shadowConfig: const ShadowBaseConfig(\n            minIntensity: 0.05,\n            maxIntensity: 0.4,\n            offsetFactor: 0.08,\n            minBlurRadius: 10,\n            maxBlurRadius: 15,\n          ),\n          borderRadius: BorderRadius.circular(24),\n          childLayout: ChildLayout(\n            outer: [\n              Positioned(\n                top: 200,\n                child: TiltParallax(\n                  offset: const Offset(-20, -20),\n                  child: Text('$_counter', style: const TextStyle(fontSize: 20)),\n                ),\n              ),\n              Positioned(\n                bottom: 10,\n                right: 10,\n                child: TiltParallax(\n                  offset: const Offset(25, 25),\n                  child: SizedBox(\n                    width: 48,\n                    height: 48,\n                    child: FloatingActionButton(\n                      onPressed: _incrementCounter,\n                      tooltip: 'Increment',\n                      elevation: 0.0,\n                      child: const Icon(Icons.add),\n                    ),\n                  ),\n                ),\n              ),\n            ],\n          ),\n          child: const MyHomePage(title: 'Flutter Tilt Demo'),\n        ),\n      ),\n    );\n  }\n}\n\nclass MyHomePage extends StatefulWidget {\n  const MyHomePage({super.key, required this.title});\n\n  final String title;\n\n  @override\n  State<MyHomePage> createState() => _MyHomePageState();\n}\n\nclass _MyHomePageState extends State<MyHomePage> {\n  @override\n  Widget build(BuildContext context) {\n    return SizedBox(\n      width: 250,\n      height: 450,\n      child: Scaffold(\n        primary: false,\n        backgroundColor: const Color(0x206D6E6F),\n        appBar: AppBar(\n          primary: false,\n          title: Text(widget.title, style: const TextStyle(fontSize: 18)),\n        ),\n        body: const Center(\n          child: Column(\n            mainAxisAlignment: MainAxisAlignment.center,\n            children: [\n              Text('You have pushed the button this many times', style: TextStyle(fontSize: 10)),\n            ],\n          ),\n        ),\n      ),\n    );\n  }\n}\n",740,$.dx().k(0)+"/lib/views/example.dart","Example",null)}}
+F(a){return A.dJ(B.a_1,"class TiltExample extends StatefulWidget {\n  const TiltExample({super.key});\n\n  @override\n  State<TiltExample> createState() => _TiltExampleState();\n}\n\nclass _TiltExampleState extends State<TiltExample> {\n  int _counter = 0;\n\n  void _incrementCounter() {\n    setState(() {\n      _counter++;\n    });\n  }\n\n  @override\n  Widget build(BuildContext context) {\n    return Theme(\n      data: ThemeData(\n        useMaterial3: true,\n        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.brown),\n        appBarTheme: const AppBarTheme(\n          backgroundColor: Colors.brown,\n          titleTextStyle: TextStyle(color: Colors.white),\n        ),\n      ),\n      child: Tilt(\n        tiltConfig: const TiltConfig(angle: 15),\n        child: TiltBaseContainer(\n          lightConfig: const LightConfig(minIntensity: 0.1),\n          shadowConfig: const ShadowBaseConfig(\n            minIntensity: 0.05,\n            maxIntensity: 0.16,\n            offsetFactor: 0.08,\n            minBlurRadius: 10,\n            maxBlurRadius: 15,\n          ),\n          borderRadius: BorderRadius.circular(24),\n          childLayout: ChildLayout(\n            outer: [\n              Positioned(\n                top: 200,\n                child: TiltParallax(\n                  offset: const Offset(-20, -20),\n                  child: Text('$_counter', style: const TextStyle(fontSize: 20)),\n                ),\n              ),\n              Positioned(\n                bottom: 10,\n                right: 10,\n                child: TiltParallax(\n                  offset: const Offset(25, 25),\n                  child: SizedBox(\n                    width: 48,\n                    height: 48,\n                    child: FloatingActionButton(\n                      onPressed: _incrementCounter,\n                      tooltip: 'Increment',\n                      elevation: 0.0,\n                      child: const Icon(Icons.add),\n                    ),\n                  ),\n                ),\n              ),\n            ],\n          ),\n          child: const MyHomePage(title: 'Flutter Tilt Demo'),\n        ),\n      ),\n    );\n  }\n}\n\nclass MyHomePage extends StatefulWidget {\n  const MyHomePage({super.key, required this.title});\n\n  final String title;\n\n  @override\n  State<MyHomePage> createState() => _MyHomePageState();\n}\n\nclass _MyHomePageState extends State<MyHomePage> {\n  @override\n  Widget build(BuildContext context) {\n    return SizedBox(\n      width: 250,\n      height: 450,\n      child: Scaffold(\n        primary: false,\n        backgroundColor: const Color(0x206D6E6F),\n        appBar: AppBar(\n          primary: false,\n          title: Text(widget.title, style: const TextStyle(fontSize: 18)),\n        ),\n        body: const Center(\n          child: Column(\n            mainAxisAlignment: MainAxisAlignment.center,\n            children: [\n              Text('You have pushed the button this many times', style: TextStyle(fontSize: 10)),\n            ],\n          ),\n        ),\n      ),\n    );\n  }\n}\n",740,$.dx().k(0)+"/lib/views/example.dart","Example",null)}}
 A.CG.prototype={
 a6(){return new A.Go()}}
 A.Go.prototype={
@@ -84579,7 +84578,7 @@ A.PE.prototype={
 F(a){var s=null,r=A.bS(30),q=A.aC4(this.c,!1)
 return A.d0(A.dl(s,r,A.c_(B.r,B.c9,B.o,s,B.BS,200,s,s,350),B.bh,s,q,B.c6),s,s,B.ff,s)}}
 A.tP.prototype={
-F(a){return A.dJ(B.a_8,"class TiltExample extends StatelessWidget {\n  const TiltExample({super.key});\n\n  @override\n  Widget build(BuildContext context) {\n    return Padding(\n      padding: const EdgeInsets.all(8),\n      child: Wrap(\n        spacing: 24,\n        runSpacing: 24,\n        alignment: WrapAlignment.center,\n        runAlignment: WrapAlignment.center,\n        children: [\n          AnimationCard(\n            child: Image.asset(\n              'assets/multiple_tilt_image/sun.png',\n              filterQuality: FilterQuality.high,\n              width: 159.5,\n            ),\n          ),\n          AnimationCard(\n            child: Image.asset(\n              'assets/multiple_tilt_image/moon.png',\n              filterQuality: FilterQuality.high,\n              height: 275,\n            ),\n          ),\n          AnimationCard(\n            child: Image.asset(\n              'assets/multiple_tilt_image/star.png',\n              filterQuality: FilterQuality.high,\n              width: 159.5,\n            ),\n          ),\n        ],\n      ),\n    );\n  }\n}\n\nclass AnimationCard extends StatefulWidget {\n  const AnimationCard({super.key, required this.child});\n\n  final Widget child;\n\n  @override\n  State<AnimationCard> createState() => _AnimationCardState();\n}\n\nclass _AnimationCardState extends State<AnimationCard> with SingleTickerProviderStateMixin {\n  late AnimationController scaleAnimationController;\n  late Animation<double> scaleAnimation;\n\n  @override\n  void initState() {\n    super.initState();\n    scaleAnimationController = AnimationController(\n      vsync: this,\n      duration: const Duration(milliseconds: 350),\n    );\n    scaleAnimation = Tween(\n      begin: 1.0,\n      end: 1.05,\n    ).animate(CurvedAnimation(parent: scaleAnimationController, curve: Curves.easeOut));\n  }\n\n  @override\n  void dispose() {\n    scaleAnimationController.dispose();\n    super.dispose();\n  }\n\n  @override\n  Widget build(BuildContext context) {\n    return Listener(\n      onPointerDown: (_) => scaleAnimationController.forward(),\n      onPointerUp: (_) => scaleAnimationController.reverse(),\n      onPointerCancel: (_) => scaleAnimationController.reverse(),\n      child: MouseRegion(\n        cursor: SystemMouseCursors.click,\n        onEnter: (_) => scaleAnimationController.forward(),\n        onExit: (_) => scaleAnimationController.reverse(),\n        child: ScaleTransition(\n          scale: scaleAnimation,\n          alignment: Alignment.center,\n          filterQuality: FilterQuality.high,\n          child: GestureDetector(\n            onTap: () => _showDialog(context),\n            child: Tilt(\n              tiltConfig: const TiltConfig(),\n              child: TiltBaseContainer(\n                lightConfig: const LightConfig(minIntensity: 0.1, maxIntensity: 0.4),\n                borderRadius: BorderRadius.circular(20),\n                filterQuality: FilterQuality.high,\n                child: widget.child,\n              ),\n            ),\n          ),\n        ),\n      ),\n    );\n  }\n\n  Future<void> _showDialog(BuildContext context) async {\n    return showDialog<void>(\n      context: context,\n      builder: (BuildContext context) {\n        return BackdropFilter(\n          filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),\n          child: Align(\n            alignment: Alignment.topCenter,\n            child: Padding(\n              padding: const EdgeInsets.only(top: 200),\n              child: Transform.scale(\n                scale: 1.2,\n                filterQuality: FilterQuality.high,\n                child: Tilt(\n                  tiltConfig: const TiltConfig(enableRevert: false, enableSensorRevert: false),\n                  child: TiltBaseContainer(\n                    lightConfig: const LightConfig(minIntensity: 0.1, maxIntensity: 0.4),\n                    shadowConfig: const ShadowBaseConfig(disable: true),\n                    borderRadius: BorderRadius.circular(20),\n                    filterQuality: FilterQuality.high,\n                    child: widget.child,\n                  ),\n                ),\n              ),\n            ),\n          ),\n        );\n      },\n    );\n  }\n}\n",1200,$.dx().k(0)+"/lib/views/multiple_tilt.dart","Multiple Tilt",null)}}
+F(a){return A.dJ(B.a_8,"class TiltExample extends StatelessWidget {\n  const TiltExample({super.key});\n\n  @override\n  Widget build(BuildContext context) {\n    return Padding(\n      padding: const EdgeInsets.all(8),\n      child: Wrap(\n        spacing: 24,\n        runSpacing: 24,\n        alignment: WrapAlignment.center,\n        runAlignment: WrapAlignment.center,\n        children: [\n          AnimationCard(\n            child: Image.asset(\n              'assets/multiple_tilt_image/sun.png',\n              filterQuality: FilterQuality.high,\n              width: 159.5,\n            ),\n          ),\n          AnimationCard(\n            child: Image.asset(\n              'assets/multiple_tilt_image/moon.png',\n              filterQuality: FilterQuality.high,\n              height: 275,\n            ),\n          ),\n          AnimationCard(\n            child: Image.asset(\n              'assets/multiple_tilt_image/star.png',\n              filterQuality: FilterQuality.high,\n              width: 159.5,\n            ),\n          ),\n        ],\n      ),\n    );\n  }\n}\n\nclass AnimationCard extends StatefulWidget {\n  const AnimationCard({super.key, required this.child});\n\n  final Widget child;\n\n  @override\n  State<AnimationCard> createState() => _AnimationCardState();\n}\n\nclass _AnimationCardState extends State<AnimationCard> with SingleTickerProviderStateMixin {\n  late AnimationController scaleAnimationController;\n  late Animation<double> scaleAnimation;\n\n  @override\n  void initState() {\n    super.initState();\n    scaleAnimationController = AnimationController(\n      vsync: this,\n      duration: const Duration(milliseconds: 350),\n    );\n    scaleAnimation = Tween(\n      begin: 1.0,\n      end: 1.05,\n    ).animate(CurvedAnimation(parent: scaleAnimationController, curve: Curves.easeOut));\n  }\n\n  @override\n  void dispose() {\n    scaleAnimationController.dispose();\n    super.dispose();\n  }\n\n  @override\n  Widget build(BuildContext context) {\n    return Listener(\n      onPointerDown: (_) => scaleAnimationController.forward(),\n      onPointerUp: (_) => scaleAnimationController.reverse(),\n      onPointerCancel: (_) => scaleAnimationController.reverse(),\n      child: MouseRegion(\n        cursor: SystemMouseCursors.click,\n        onEnter: (_) => scaleAnimationController.forward(),\n        onExit: (_) => scaleAnimationController.reverse(),\n        child: ScaleTransition(\n          scale: scaleAnimation,\n          alignment: Alignment.center,\n          filterQuality: FilterQuality.high,\n          child: GestureDetector(\n            onTap: () => _showDialog(context),\n            child: Tilt(\n              tiltConfig: const TiltConfig(),\n              child: TiltBaseContainer(\n                lightConfig: const LightConfig(minIntensity: 0.1, maxIntensity: 0.16),\n                borderRadius: BorderRadius.circular(20),\n                filterQuality: FilterQuality.high,\n                child: widget.child,\n              ),\n            ),\n          ),\n        ),\n      ),\n    );\n  }\n\n  Future<void> _showDialog(BuildContext context) async {\n    return showDialog<void>(\n      context: context,\n      builder: (BuildContext context) {\n        return BackdropFilter(\n          filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),\n          child: Align(\n            alignment: Alignment.topCenter,\n            child: Padding(\n              padding: const EdgeInsets.only(top: 200),\n              child: Transform.scale(\n                scale: 1.2,\n                filterQuality: FilterQuality.high,\n                child: Tilt(\n                  tiltConfig: const TiltConfig(enableRevert: false, enableSensorRevert: false),\n                  child: TiltBaseContainer(\n                    lightConfig: const LightConfig(minIntensity: 0.1, maxIntensity: 0.16),\n                    shadowConfig: const ShadowBaseConfig(disable: true),\n                    borderRadius: BorderRadius.circular(20),\n                    filterQuality: FilterQuality.high,\n                    child: widget.child,\n                  ),\n                ),\n              ),\n            ),\n          ),\n        );\n      },\n    );\n  }\n}\n",1200,$.dx().k(0)+"/lib/views/multiple_tilt.dart","Multiple Tilt",null)}}
 A.PB.prototype={
 F(a){var s=null
 return new A.bv(B.el,A.hD(B.lK,A.b([new A.o2(A.hT("assets/multiple_tilt_image/sun.png",B.aB,s,s,159.5),s),new A.o2(A.hT("assets/multiple_tilt_image/moon.png",B.aB,s,275,s),s),new A.o2(A.hT("assets/multiple_tilt_image/star.png",B.aB,s,s,159.5),s)],t.p),B.lK,24,24),s)}}
@@ -84953,7 +84952,7 @@ case 1:r=new A.PO(p.d,o)
 break
 default:r=o}q=t.i2
 q=A.V(new A.a3(B.LR,new A.asc(p),q),q.h("am.E"))
-return A.dJ(r,"class TiltExample extends StatelessWidget {\n  const TiltExample({super.key});\n\n  @override\n  Widget build(BuildContext context) {\n    return Tilt(\n      tiltConfig: const TiltConfig(\n        leaveCurve: Curves.easeInOutCubicEmphasized,\n        leaveDuration: Duration(milliseconds: 600),\n      ),\n      child: TiltProjectorContainer(\n        shadowConfig: const ShadowProjectorConfig(\n          maxIntensity: 0.6,\n          projectorScaleFrom: 1.0,\n          projectorScaleTo: 1.0,\n          projectorBlurSigmaFrom: 2.0,\n          projectorBlurSigmaTo: 10.0,\n        ),\n        childLayout: ChildLayout(\n          outer: [\n            const Positioned(\n              top: 80,\n              left: 140,\n              child: TiltParallax(\n                offset: Offset(10, 10),\n                child: Text(\n                  'Flutter Tilt',\n                  style: TextStyle(\n                    color: Colors.black54,\n                    fontSize: 40,\n                    fontWeight: FontWeight.bold,\n                  ),\n                ),\n              ),\n            ),\n            TiltParallax(\n              offset: const Offset(20, 20),\n              child: Image.asset('assets/parallax_image/2.png', width: 742, height: 337),\n            ),\n            TiltParallax(\n              offset: const Offset(30, 30),\n              child: Image.asset('assets/parallax_image/3.png', width: 742, height: 337),\n            ),\n          ],\n        ),\n        child: const SizedBox(width: 742, height: 337),\n      ),\n    );\n  }\n}\n",580,s+"/lib/views/light_shadow_mode.dart","Tilt container",A.b([B.ZE,B.ct,A.hD(B.a2,q,B.a2,12,12)],t.p))}}
+return A.dJ(r,"class TiltExample extends StatelessWidget {\n  const TiltExample({super.key});\n\n  @override\n  Widget build(BuildContext context) {\n    return Tilt(\n      tiltConfig: const TiltConfig(\n        leaveCurve: Curves.easeInOutCubicEmphasized,\n        leaveDuration: Duration(milliseconds: 600),\n      ),\n      child: TiltProjectorContainer(\n        shadowConfig: const ShadowProjectorConfig(\n          maxIntensity: 0.36,\n          projectorScaleFrom: 1.0,\n          projectorScaleTo: 1.0,\n          projectorBlurSigmaFrom: 2.0,\n          projectorBlurSigmaTo: 10.0,\n        ),\n        childLayout: ChildLayout(\n          outer: [\n            const Positioned(\n              top: 80,\n              left: 140,\n              child: TiltParallax(\n                offset: Offset(10, 10),\n                child: Text(\n                  'Flutter Tilt',\n                  style: TextStyle(\n                    color: Colors.black54,\n                    fontSize: 40,\n                    fontWeight: FontWeight.bold,\n                  ),\n                ),\n              ),\n            ),\n            TiltParallax(\n              offset: const Offset(20, 20),\n              child: Image.asset('assets/parallax_image/2.png', width: 742, height: 337),\n            ),\n            TiltParallax(\n              offset: const Offset(30, 30),\n              child: Image.asset('assets/parallax_image/3.png', width: 742, height: 337),\n            ),\n          ],\n        ),\n        child: const SizedBox(width: 742, height: 337),\n      ),\n    );\n  }\n}\n",580,s+"/lib/views/light_shadow_mode.dart","Tilt container",A.b([B.ZE,B.ct,A.hD(B.a2,q,B.a2,12,12)],t.p))}}
 A.asc.prototype={
 $1(a){var s=null,r=this.a
 return A.awk(A.bB(a.c,s,s,s,s),new A.asb(r,a),r.e===a)},
@@ -90899,15 +90898,15 @@ B.Jb=new A.tx(null)
 B.Jc=new A.oY("INFO",800)
 B.ol=new A.oY("WARNING",900)
 B.c_=new A.dG(1,"around")
-B.om=new A.hW(!1,B.i,0.1,0.4,4,B.c_,null)
+B.om=new A.hW(!1,B.i,0.1,0.16,4,B.c_,null)
+B.bZ=new A.hW(!1,B.i,0,0.25,4,B.c_,null)
+B.cP=new A.hW(!0,B.i,0,0.25,4,B.c_,null)
 B.En=new A.l(1,0.2901960784313726,0.19215686274509805,0.5254901960784314,B.e)
-B.kd=new A.hW(!1,B.En,0,0.5,2,B.c_,!0)
-B.bZ=new A.hW(!1,B.i,0,0.5,4,B.c_,null)
-B.Jd=new A.hW(!1,B.i,0.1,0.5,4,B.c_,null)
-B.cP=new A.hW(!0,B.i,0,0.5,4,B.c_,null)
+B.kd=new A.hW(!1,B.En,0,0.25,2,B.c_,!0)
+B.Jd=new A.hW(!1,B.i,0.1,0.25,4,B.c_,null)
 B.Je=new A.oZ(null)
 B.on=new A.dG(0,"none")
-B.Jr=new A.LG(!0,B.i,0,0.5,4,B.c_,null)
+B.Jr=new A.LG(!0,B.i,0,0.25,4,B.c_,null)
 B.a_2=new A.PJ(null)
 B.Js=new A.ty(1/0,500,B.a_2,null)
 B.lf=new A.cK(1/0,1/0,null,null)
@@ -92445,12 +92444,12 @@ B.zf=new A.dX([B.b4,B.cq,B.eY,B.bN,B.cr],t.Lu)
 B.C=new A.bX(4,"selected")
 B.zg=new A.dX([B.C],t.El)
 B.Sh=new A.l2(20,!1,B.bU,0,0.6,B.f,0.1,null,null)
-B.zh=new A.l2(20,!1,B.bU,0,0.5,B.f,0.1,null,!0)
-B.c6=new A.l2(20,!1,B.bU,0,0.5,B.f,0.1,null,null)
-B.c7=new A.l2(20,!0,B.bU,0,0.5,B.f,0.1,null,null)
-B.Si=new A.l2(15,!1,B.bU,0.05,0.4,B.f,0.08,null,null)
+B.c6=new A.l2(20,!1,B.bU,0,0.25,B.f,0.1,null,null)
+B.Si=new A.l2(15,!1,B.bU,0.05,0.16,B.f,0.08,null,null)
+B.c7=new A.l2(20,!0,B.bU,0,0.25,B.f,0.1,null,null)
+B.zh=new A.l2(20,!1,B.bU,0,0.25,B.f,0.1,null,!0)
 B.Sj=new A.pS(null)
-B.Sw=new A.OA(!1,B.bU,0,0.6,B.f,0.1,null,null)
+B.Sw=new A.OA(!1,B.bU,0,0.36,B.f,0.1,null,null)
 B.F_=new A.l(0.23529411764705882,0,0,0,B.e)
 B.OQ=new A.h(0,4)
 B.C0=new A.dq(0.5,B.cG,B.F_,B.OQ,10)
