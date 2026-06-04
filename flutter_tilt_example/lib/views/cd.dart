@@ -49,58 +49,60 @@ class TiltExample extends StatelessWidget {
         child: TiltAnimatedBuilder(
           builder: (BuildContext context, TiltAnimatedState tiltAnimatedState, Widget? child) {
             final animatedTiltData = tiltAnimatedState.animatedTiltData;
-            return Transform(
-              alignment: Alignment.center,
-              transform: animatedTiltData.transform,
-              filterQuality: FilterQuality.high,
-              child: DecoratedBox(
-                /// BUG (Web 端) - 周围预留空间，避免倾斜时内容被 BUG 裁切。
-                decoration: const BoxDecoration(color: Colors.white),
-                child: Padding(
+            return RepaintBoundary(
+              child: Transform(
+                alignment: Alignment.center,
+                transform: animatedTiltData.transform,
+                filterQuality: FilterQuality.high,
+                child: DecoratedBox(
                   /// BUG (Web 端) - 周围预留空间，避免倾斜时内容被 BUG 裁切。
-                  padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 40),
-                  child: AspectRatio(
-                    aspectRatio: 1.0,
-                    child: LayoutBuilder(
-                      builder: (context, constraints) {
-                        final width = constraints.maxWidth;
-                        final height = constraints.maxHeight;
+                  decoration: const BoxDecoration(color: Colors.white),
+                  child: Padding(
+                    /// BUG (Web 端) - 周围预留空间，避免倾斜时内容被 BUG 裁切。
+                    padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 40),
+                    child: AspectRatio(
+                      aspectRatio: 1.0,
+                      child: LayoutBuilder(
+                        builder: (context, constraints) {
+                          final width = constraints.maxWidth;
+                          final height = constraints.maxHeight;
 
-                        /// 盒脊宽度，占总宽度的 12%，剩余空间放置光盘
-                        final spineWidth = width * 0.12;
+                          /// 盒脊宽度，占总宽度的 12%，剩余空间放置光盘
+                          final spineWidth = width * 0.12;
 
-                        /// 托盘圆心的 X 坐标
-                        final trayCenterX = spineWidth + (width - spineWidth) / 2;
+                          /// 托盘圆心的 X 坐标
+                          final trayCenterX = spineWidth + (width - spineWidth) / 2;
 
-                        /// 托盘的半径
-                        final trayRadius = (width - spineWidth) * 0.48;
+                          /// 托盘的半径
+                          final trayRadius = (width - spineWidth) * 0.48;
 
-                        /// 光盘直径
-                        final cdDiameter = trayRadius * 2;
+                          /// 光盘直径
+                          final cdDiameter = trayRadius * 2;
 
-                        return Stack(
-                          alignment: AlignmentDirectional.center,
-                          children: [
-                            /// 光盘盒
-                            Positioned.fill(child: child!),
+                          return Stack(
+                            alignment: AlignmentDirectional.center,
+                            children: [
+                              /// 光盘盒
+                              Positioned.fill(child: child!),
 
-                            /// 光盘
-                            Positioned(
-                              left: trayCenterX - trayRadius,
-                              top: (height / 2) - trayRadius,
-                              width: cdDiameter,
-                              height: cdDiameter,
-                              child: TiltParallax(
-                                offset: const Offset(20, 20),
-                                child: CustomPaint(
-                                  willChange: true,
-                                  painter: CDPainter(areaProgress: animatedTiltData.areaProgress),
+                              /// 光盘
+                              Positioned(
+                                left: trayCenterX - trayRadius,
+                                top: (height / 2) - trayRadius,
+                                width: cdDiameter,
+                                height: cdDiameter,
+                                child: TiltParallax(
+                                  offset: const Offset(20, 20),
+                                  child: CustomPaint(
+                                    willChange: true,
+                                    painter: CDPainter(areaProgress: animatedTiltData.areaProgress),
+                                  ),
                                 ),
                               ),
-                            ),
-                          ],
-                        );
-                      },
+                            ],
+                          );
+                        },
+                      ),
                     ),
                   ),
                 ),
@@ -721,58 +723,60 @@ class TiltExample extends StatelessWidget {
         child: TiltAnimatedBuilder(
           builder: (BuildContext context, TiltAnimatedState tiltAnimatedState, Widget? child) {
             final animatedTiltData = tiltAnimatedState.animatedTiltData;
-            return Transform(
-              alignment: Alignment.center,
-              transform: animatedTiltData.transform,
-              filterQuality: FilterQuality.high,
-              child: DecoratedBox(
-                /// BUG (Web 端) - 周围预留空间，避免倾斜时内容被 BUG 裁切。
-                decoration: const BoxDecoration(color: Colors.white),
-                child: Padding(
+            return RepaintBoundary(
+              child: Transform(
+                alignment: Alignment.center,
+                transform: animatedTiltData.transform,
+                filterQuality: FilterQuality.high,
+                child: DecoratedBox(
                   /// BUG (Web 端) - 周围预留空间，避免倾斜时内容被 BUG 裁切。
-                  padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 40),
-                  child: AspectRatio(
-                    aspectRatio: 1.0,
-                    child: LayoutBuilder(
-                      builder: (context, constraints) {
-                        final width = constraints.maxWidth;
-                        final height = constraints.maxHeight;
+                  decoration: const BoxDecoration(color: Colors.white),
+                  child: Padding(
+                    /// BUG (Web 端) - 周围预留空间，避免倾斜时内容被 BUG 裁切。
+                    padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 40),
+                    child: AspectRatio(
+                      aspectRatio: 1.0,
+                      child: LayoutBuilder(
+                        builder: (context, constraints) {
+                          final width = constraints.maxWidth;
+                          final height = constraints.maxHeight;
 
-                        /// 盒脊宽度，占总宽度的 12%，剩余空间放置光盘
-                        final spineWidth = width * 0.12;
+                          /// 盒脊宽度，占总宽度的 12%，剩余空间放置光盘
+                          final spineWidth = width * 0.12;
 
-                        /// 托盘圆心的 X 坐标
-                        final trayCenterX = spineWidth + (width - spineWidth) / 2;
+                          /// 托盘圆心的 X 坐标
+                          final trayCenterX = spineWidth + (width - spineWidth) / 2;
 
-                        /// 托盘的半径
-                        final trayRadius = (width - spineWidth) * 0.48;
+                          /// 托盘的半径
+                          final trayRadius = (width - spineWidth) * 0.48;
 
-                        /// 光盘直径
-                        final cdDiameter = trayRadius * 2;
+                          /// 光盘直径
+                          final cdDiameter = trayRadius * 2;
 
-                        return Stack(
-                          alignment: AlignmentDirectional.center,
-                          children: [
-                            /// 光盘盒
-                            Positioned.fill(child: child!),
+                          return Stack(
+                            alignment: AlignmentDirectional.center,
+                            children: [
+                              /// 光盘盒
+                              Positioned.fill(child: child!),
 
-                            /// 光盘
-                            Positioned(
-                              left: trayCenterX - trayRadius,
-                              top: (height / 2) - trayRadius,
-                              width: cdDiameter,
-                              height: cdDiameter,
-                              child: TiltParallax(
-                                offset: const Offset(20, 20),
-                                child: CustomPaint(
-                                  willChange: true,
-                                  painter: CDPainter(areaProgress: animatedTiltData.areaProgress),
+                              /// 光盘
+                              Positioned(
+                                left: trayCenterX - trayRadius,
+                                top: (height / 2) - trayRadius,
+                                width: cdDiameter,
+                                height: cdDiameter,
+                                child: TiltParallax(
+                                  offset: const Offset(20, 20),
+                                  child: CustomPaint(
+                                    willChange: true,
+                                    painter: CDPainter(areaProgress: animatedTiltData.areaProgress),
+                                  ),
                                 ),
                               ),
-                            ),
-                          ],
-                        );
-                      },
+                            ],
+                          );
+                        },
+                      ),
                     ),
                   ),
                 ),
