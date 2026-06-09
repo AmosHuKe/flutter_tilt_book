@@ -8,6 +8,19 @@ keywords: ["更新日志"]
 请参阅 [迁移指南](/zh/v4/docs/migration-guides) 来了解各版本间的重大变更详情。
 </Note>
 
+## 4.0.3 (2026-06-09)
+
+**Fixes**
+
+- Fix shadow blur and spread appearing at full strength when centered or at small tilt angles.
+
+## 4.0.2 (2026-06-05)
+
+**Fixes**
+
+- Fix light/shadow not reaching `maxIntensity` for the `LightDirection.around` and `LightDirection.all` directions. ([#42](https://github.com/fluttercandies/flutter_tilt/pull/42))   
+  Now that it is fixed, if the effect looks too strong, set `maxIntensity` to the square of its previous value (e.g. `0.5` → `0.25`, `0.6` → `0.36`).
+
 ## 4.0.1 (2026-06-04)
 
 **Improvements**
