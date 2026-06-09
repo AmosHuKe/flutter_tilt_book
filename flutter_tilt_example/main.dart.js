@@ -83888,12 +83888,12 @@ r=j.f
 q=-r.a
 r=-r.b
 p=j.w
-o=Math.max(Math.max(1,A.le(B.f,new A.h(q,r)))*p.Q,10)
+o=Math.max(Math.min(1,A.le(B.f,new A.h(q,r)))*p.Q,10)
 n=j.d
 m=j.e
 l=A.le(new A.h(n,m),new A.h(n,m).af(0,1))
 p=p.b
-k=A.b([new A.dq(l-(l+Math.min(n,m)/10)*(1-Math.max(1,A.le(B.f,new A.h(q,r))))+0,B.cG,A.an(B.c.aC(255*j.gJD()),p.v()>>>16&255,p.v()>>>8&255,p.v()&255),s,o)],t.sq)}else k=i
+k=A.b([new A.dq(l-(l+Math.min(n,m)/10)*(1-Math.min(1,A.le(B.f,new A.h(q,r))))+0,B.cG,A.an(B.c.aC(255*j.gJD()),p.v()>>>16&255,p.v()>>>8&255,p.v()&255),s,o)],t.sq)}else k=i
 return A.c_(i,j.c,j.Q,i,new A.bp(i,i,j.y,j.z,k,i,B.M),i,i,i,i)}}
 A.PR.prototype={
 F(a){var s,r,q,p,o,n,m=this,l=null
@@ -83902,9 +83902,9 @@ s=m.gJy()
 r=m.f
 q=-r.a
 r=-r.b
-p=A.R(1,1,Math.max(1,A.le(B.f,new A.h(q,r))))
+p=A.R(1,1,Math.min(1,A.le(B.f,new A.h(q,r))))
 if(p==null)p=0
-o=A.R(2,10,Math.max(1,A.le(B.f,new A.h(q,r))))
+o=A.R(2,10,Math.min(1,A.le(B.f,new A.h(q,r))))
 if(o==null)o=0
 n=new A.aR(new Float64Array(16))
 n.cI()
