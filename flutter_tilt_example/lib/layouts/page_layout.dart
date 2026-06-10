@@ -129,8 +129,9 @@ class _BodyContainerState extends State<BodyContainer> with SingleTickerProvider
 
   @override
   void dispose() {
-    super.dispose();
     tabController.dispose();
+    pageController.dispose();
+    super.dispose();
   }
 
   @override
