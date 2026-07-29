@@ -11,16 +11,16 @@ This is the main documentation website project for Flutter Tilt.
 
 ## Documentation
 
-|         | Link  |
-| ------- | -------- |
-| Next.js | [Link](https://nextjs.org/docs/) |
-| Tailwind CSS | [Link](https://tailwindcss.com/docs/)  |
-| shadcn/ui | [Link](https://ui.shadcn.com/docs/) |
-| Radix UI | [Link](https://www.radix-ui.com/primitives/docs/) |
-| next-intl | [Link](https://next-intl.dev) |
-| React Icons | [Link](https://react-icons.github.io/react-icons/) |
-| Mermaid | [Link](https://github.com/mermaid-js/mermaid) |
-| Markdown | [Link](https://github.github.com/gfm/) |
+|              | Link                                               |
+| ------------ | -------------------------------------------------- |
+| Next.js      | [Link](https://nextjs.org/docs/)                   |
+| Tailwind CSS | [Link](https://tailwindcss.com/docs/)              |
+| shadcn/ui    | [Link](https://ui.shadcn.com/docs/)                |
+| Radix UI     | [Link](https://www.radix-ui.com/primitives/docs/)  |
+| next-intl    | [Link](https://next-intl.dev)                      |
+| React Icons  | [Link](https://react-icons.github.io/react-icons/) |
+| Mermaid      | [Link](https://github.com/mermaid-js/mermaid)      |
+| Markdown     | [Link](https://github.github.com/gfm/)             |
 
 ## Getting started
 

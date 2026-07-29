@@ -34,6 +34,7 @@ class TiltExample extends StatelessWidget {
     return Tilt(
       tiltConfig: const TiltConfig(
         angle: 15,
+        zOffset: -50,
         leaveCurve: Curves.fastEaseInToSlowEaseOut,
         leaveDuration: Duration(milliseconds: 900),
       ),
@@ -337,6 +338,7 @@ class TiltExample extends StatelessWidget {
     return Tilt(
       tiltConfig: const TiltConfig(
         angle: 15,
+        zOffset: -50,
         leaveCurve: Curves.fastEaseInToSlowEaseOut,
         leaveDuration: Duration(milliseconds: 900),
       ),

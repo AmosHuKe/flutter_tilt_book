@@ -132,10 +132,10 @@ export const documents_v4_en: Paths[] = [
         title: "Holofoil Card",
         href: "/holofoil-card-demo",
       },
-      {
-        title: "CD",
-        href: "/cd-demo",
-      },
+      // {
+      //   title: "CD",
+      //   href: "/cd-demo",
+      // },
       {
         title: "Parallax Card",
         href: "/parallax-card",

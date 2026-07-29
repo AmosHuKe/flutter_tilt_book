@@ -21,7 +21,7 @@
     "build-flutter-tilt-example": "bash tools/build-flutter-tilt-example.sh"
   },
   "dependencies": {
-    "@next/third-parties": "16.2.11",
+    "@next/third-parties": "16.2.12",
     "@radix-ui/react-accordion": "1.2.20",
     "@radix-ui/react-collapsible": "1.1.20",
     "@radix-ui/react-dialog": "1.1.23",
@@ -61,16 +61,16 @@
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "4.7.1",
     "@tailwindcss/typography": "0.5.20",
-    "@types/node": "26.1.1",
+    "@types/node": "26.1.2",
     "@types/react": "19.2.17",
     "@types/react-dom": "19.2.3",
     "@typescript-eslint/parser": "8.65.0",
     "autoprefixer": "10.5.4",
     "eslint": "10.8.0",
-    "eslint-config-next": "16.2.11",
+    "eslint-config-next": "16.2.12",
     "eslint-config-prettier": "10.1.8",
     "husky": "9.1.7",
-    "postcss": "8.5.23",
+    "postcss": "8.5.25",
     "prettier": "3.9.6",
     "prettier-plugin-tailwindcss": "0.8.1",
     "tailwindcss": "4.3.3",
