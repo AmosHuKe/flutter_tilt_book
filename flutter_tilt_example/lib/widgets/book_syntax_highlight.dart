@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
+import 'package:cupertino_ui/cupertino_ui.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:re_highlight/languages/dart.dart' as highlight_languages;
 import 'package:re_highlight/re_highlight.dart';
 import 'package:re_highlight/styles/a11y-light.dart' as highlight_styles;

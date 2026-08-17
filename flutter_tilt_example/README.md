@@ -6,7 +6,7 @@ This is an example project demonstrating the usage of Flutter Tilt.
 
 |         | Version  |
 | ------- | -------- |
-| Flutter | v3.44.x  |
+| Flutter | v3.47.x  |
 
 ## Getting started
 
