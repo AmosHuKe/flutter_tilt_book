@@ -66,7 +66,6 @@ abstract final class Config {
       pathName: 'HolofoilCardDemo',
       pageInfo: HolofoilCardDemo.page,
     ),
-    RouteData(title: 'CD', icon: Remix.image_2_line, pathName: 'CDDemo', pageInfo: CDDemo.page),
     RouteData(
       title: 'Parallax Card',
       icon: Remix.image_2_line,
