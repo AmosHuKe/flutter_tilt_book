@@ -30,6 +30,7 @@ class TiltExample extends StatelessWidget {
     for (var i = 1; i <= 10; i++) {
       innerBox.add(
         TiltParallax(
+          filterQuality: FilterQuality.low,
           offset: Offset(-20.0 * i, -30.0 * i),
           child: DecoratedBox(
             decoration: BoxDecoration(
@@ -52,6 +53,7 @@ class TiltExample extends StatelessWidget {
         leaveDuration: Duration(milliseconds: 1200),
       ),
       child: TiltBaseContainer(
+        filterQuality: FilterQuality.low,
         lightConfig: const LightConfig(disable: true),
         shadowConfig: const ShadowBaseConfig(disable: true),
         borderRadius: BorderRadius.circular(24.0),
@@ -103,6 +105,7 @@ class TiltExample extends StatelessWidget {
     for (var i = 1; i <= 10; i++) {
       innerBox.add(
         TiltParallax(
+          filterQuality: FilterQuality.low,
           offset: Offset(-20.0 * i, -30.0 * i),
           child: DecoratedBox(
             decoration: BoxDecoration(
@@ -125,6 +128,7 @@ class TiltExample extends StatelessWidget {
         leaveDuration: Duration(milliseconds: 1200),
       ),
       child: TiltBaseContainer(
+        filterQuality: FilterQuality.low,
         lightConfig: const LightConfig(disable: true),
         shadowConfig: const ShadowBaseConfig(disable: true),
         borderRadius: BorderRadius.circular(24.0),

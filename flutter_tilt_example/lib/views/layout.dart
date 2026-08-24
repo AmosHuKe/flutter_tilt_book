@@ -32,8 +32,8 @@ class TiltExample extends StatelessWidget {
         leaveDuration: Duration(seconds: 1),
         leaveCurve: Curves.elasticOut,
       ),
-
       child: TiltBaseContainer(
+        filterQuality: FilterQuality.low,
         shadowConfig: const ShadowBaseConfig(disable: true),
         borderRadius: BorderRadius.circular(30),
         childLayout: ChildLayout(
@@ -41,6 +41,7 @@ class TiltExample extends StatelessWidget {
             Positioned(
               left: 0,
               child: TiltParallax(
+                filterQuality: FilterQuality.low,
                 offset: const Offset(40, 40),
                 child: Container(
                   width: 60,
@@ -56,6 +57,7 @@ class TiltExample extends StatelessWidget {
             Positioned(
               right: 0,
               child: TiltParallax(
+                filterQuality: FilterQuality.low,
                 offset: const Offset(-40, -40),
                 child: Container(
                   width: 60,
@@ -71,6 +73,7 @@ class TiltExample extends StatelessWidget {
             Positioned(
               bottom: -10,
               child: TiltParallax(
+                filterQuality: FilterQuality.low,
                 offset: const Offset(-50, -50),
                 child: Container(
                   width: 350 * 0.8,
@@ -95,6 +98,7 @@ class TiltExample extends StatelessWidget {
             Positioned(
               bottom: -5,
               child: TiltParallax(
+                filterQuality: FilterQuality.low,
                 offset: const Offset(-25, -25),
                 child: Container(
                   width: 350 * 0.9,
@@ -151,8 +155,8 @@ class TiltExample extends StatelessWidget {
         leaveDuration: Duration(seconds: 1),
         leaveCurve: Curves.elasticOut,
       ),
-
       child: TiltBaseContainer(
+        filterQuality: FilterQuality.low,
         shadowConfig: const ShadowBaseConfig(disable: true),
         borderRadius: BorderRadius.circular(30),
         childLayout: ChildLayout(
@@ -160,6 +164,7 @@ class TiltExample extends StatelessWidget {
             Positioned(
               left: 0,
               child: TiltParallax(
+                filterQuality: FilterQuality.low,
                 offset: const Offset(40, 40),
                 child: Container(
                   width: 60,
@@ -175,6 +180,7 @@ class TiltExample extends StatelessWidget {
             Positioned(
               right: 0,
               child: TiltParallax(
+                filterQuality: FilterQuality.low,
                 offset: const Offset(-40, -40),
                 child: Container(
                   width: 60,
@@ -190,6 +196,7 @@ class TiltExample extends StatelessWidget {
             Positioned(
               bottom: -10,
               child: TiltParallax(
+                filterQuality: FilterQuality.low,
                 offset: const Offset(-50, -50),
                 child: Container(
                   width: 350 * 0.8,
@@ -214,6 +221,7 @@ class TiltExample extends StatelessWidget {
             Positioned(
               bottom: -5,
               child: TiltParallax(
+                filterQuality: FilterQuality.low,
                 offset: const Offset(-25, -25),
                 child: Container(
                   width: 350 * 0.9,

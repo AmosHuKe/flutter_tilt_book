@@ -127,11 +127,13 @@ class _TiltControllerDemoState extends State<TiltControllerDemo> with TickerProv
             tiltController: controllerBind ? tiltController : null,
             tiltConfig: const TiltConfig(enableGestureSensors: false),
             child: TiltBaseContainer(
+              filterQuality: FilterQuality.low,
               borderRadius: BorderRadius.circular(30),
               childLayout: const ChildLayout(
                 outer: [
                   Positioned(
                     child: TiltParallax(
+                      filterQuality: FilterQuality.low,
                       offset: Offset(10, 10),
                       child: Text(
                         'Flutter Tilt 1 ✨',
@@ -173,11 +175,13 @@ class _TiltControllerDemoState extends State<TiltControllerDemo> with TickerProv
             tiltController: controllerBind ? tiltController : null,
             tiltConfig: const TiltConfig(enableGestureSensors: true),
             child: TiltBaseContainer(
+              filterQuality: FilterQuality.low,
               borderRadius: BorderRadius.circular(30),
               childLayout: const ChildLayout(
                 outer: [
                   Positioned(
                     child: TiltParallax(
+                      filterQuality: FilterQuality.low,
                       offset: Offset(10, 10),
                       child: Text(
                         'Flutter Tilt 2 ✨',
@@ -380,11 +384,13 @@ class _TiltExampleState extends State<TiltExample> with TickerProviderStateMixin
           tiltController: controllerBind ? tiltController : null,
           tiltConfig: const TiltConfig(enableGestureSensors: false),
           child: TiltBaseContainer(
+            filterQuality: FilterQuality.low,
             borderRadius: BorderRadius.circular(30),
             childLayout: const ChildLayout(
               outer: [
                 Positioned(
                   child: TiltParallax(
+                    filterQuality: FilterQuality.low,
                     offset: Offset(10, 10),
                     child: Text(
                       'Flutter Tilt 1 ✨',
@@ -426,11 +432,13 @@ class _TiltExampleState extends State<TiltExample> with TickerProviderStateMixin
           tiltController: controllerBind ? tiltController : null,
           tiltConfig: const TiltConfig(enableGestureSensors: true),
           child: TiltBaseContainer(
+            filterQuality: FilterQuality.low,
             borderRadius: BorderRadius.circular(30),
             childLayout: const ChildLayout(
               outer: [
                 Positioned(
                   child: TiltParallax(
+                    filterQuality: FilterQuality.low,
                     offset: Offset(10, 10),
                     child: Text(
                       'Flutter Tilt 2 ✨',

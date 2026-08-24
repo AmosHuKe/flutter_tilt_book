@@ -14,6 +14,7 @@ class TiltExample extends StatelessWidget {
     return Tilt(
       tiltConfig: TiltConfig(disable: false),
       child: TiltBaseContainer(
+        filterQuality: FilterQuality.low,
         lightConfig: LightConfig(disable: true),
         shadowConfig: ShadowBaseConfig(disable: true),
         borderRadius: BorderRadius.circular(30),

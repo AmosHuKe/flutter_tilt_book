@@ -309,6 +309,7 @@ class TiltExample extends StatelessWidget {
         leaveDuration: const Duration(milliseconds: 1200),
       ),
       child: TiltBaseContainer(
+        filterQuality: FilterQuality.low,
         lightConfig: const LightConfig(disable: true),
         shadowConfig: const ShadowBaseConfig(disable: true),
         borderRadius: BorderRadius.circular(24.0),
@@ -392,6 +393,7 @@ class TiltExample1 extends StatelessWidget {
         leaveDuration: Duration(milliseconds: 1200),
       ),
       child: TiltBaseContainer(
+        filterQuality: FilterQuality.low,
         lightConfig: const LightConfig(disable: true),
         shadowConfig: const ShadowBaseConfig(disable: true),
         borderRadius: BorderRadius.circular(24.0),

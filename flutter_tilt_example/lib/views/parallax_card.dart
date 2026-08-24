@@ -113,6 +113,7 @@ class _TiltExampleState extends State<TiltExample> with SingleTickerProviderStat
                   alignment: Alignment.center,
                   filterQuality: FilterQuality.high,
                   child: TiltParallax(
+                    filterQuality: FilterQuality.high,
                     child: Image.asset(
                       'assets/parallax_card/Artwork-MichaHuigen.jpg',
                       filterQuality: FilterQuality.high,
@@ -268,6 +269,7 @@ class _TiltExampleState extends State<TiltExample> with SingleTickerProviderStat
                   alignment: Alignment.center,
                   filterQuality: FilterQuality.high,
                   child: TiltParallax(
+                    filterQuality: FilterQuality.high,
                     child: Image.asset(
                       'assets/parallax_card/Artwork-MichaHuigen.jpg',
                       filterQuality: FilterQuality.high,

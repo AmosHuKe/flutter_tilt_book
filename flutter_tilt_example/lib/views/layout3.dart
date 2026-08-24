@@ -35,6 +35,7 @@ class TiltExample extends StatelessWidget {
         leaveDuration: Duration(milliseconds: 1200),
       ),
       child: TiltBaseContainer(
+        filterQuality: FilterQuality.low,
         lightConfig: const LightConfig(disable: true),
         shadowConfig: const ShadowBaseConfig(disable: true),
         borderRadius: BorderRadius.circular(24.0),
@@ -42,6 +43,7 @@ class TiltExample extends StatelessWidget {
         childLayout: ChildLayout(
           inner: [
             const TiltParallax(
+              filterQuality: FilterQuality.low,
               offset: Offset(10, 10),
               child: DecoratedBox(
                 decoration: BoxDecoration(color: Colors.black, shape: BoxShape.circle),
@@ -49,6 +51,7 @@ class TiltExample extends StatelessWidget {
               ),
             ),
             TiltParallax(
+              filterQuality: FilterQuality.low,
               offset: const Offset(20, 20),
               child: Container(
                 width: 64,
@@ -61,6 +64,7 @@ class TiltExample extends StatelessWidget {
                 clipBehavior: Clip.hardEdge,
                 child: const Center(
                   child: TiltParallax(
+                    filterQuality: FilterQuality.low,
                     offset: Offset(15, 15),
                     child: DecoratedBox(
                       decoration: BoxDecoration(color: Colors.black, shape: BoxShape.circle),
@@ -120,6 +124,7 @@ class TiltExample extends StatelessWidget {
         leaveDuration: Duration(milliseconds: 1200),
       ),
       child: TiltBaseContainer(
+        filterQuality: FilterQuality.low,
         lightConfig: const LightConfig(disable: true),
         shadowConfig: const ShadowBaseConfig(disable: true),
         borderRadius: BorderRadius.circular(24.0),
@@ -127,6 +132,7 @@ class TiltExample extends StatelessWidget {
         childLayout: ChildLayout(
           inner: [
             const TiltParallax(
+              filterQuality: FilterQuality.low,
               offset: Offset(10, 10),
               child: DecoratedBox(
                 decoration: BoxDecoration(color: Colors.black, shape: BoxShape.circle),
@@ -134,6 +140,7 @@ class TiltExample extends StatelessWidget {
               ),
             ),
             TiltParallax(
+              filterQuality: FilterQuality.low,
               offset: const Offset(20, 20),
               child: Container(
                 width: 64,
@@ -146,6 +153,7 @@ class TiltExample extends StatelessWidget {
                 clipBehavior: Clip.hardEdge,
                 child: const Center(
                   child: TiltParallax(
+                    filterQuality: FilterQuality.low,
                     offset: Offset(15, 15),
                     child: DecoratedBox(
                       decoration: BoxDecoration(color: Colors.black, shape: BoxShape.circle),

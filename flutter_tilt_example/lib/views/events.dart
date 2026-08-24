@@ -116,6 +116,7 @@ class TiltExample extends StatelessWidget {
       onGestureMove: onGestureMove,
       onGestureLeave: onGestureLeave,
       child: TiltBaseContainer(
+        filterQuality: FilterQuality.low,
         borderRadius: BorderRadius.circular(30),
         child: Container(
           width: width,
@@ -144,6 +145,7 @@ class TiltExample extends StatelessWidget {
         print('Leave: \${tiltDataModel.areaProgress}');
       },
       child: TiltBaseContainer(
+        filterQuality: FilterQuality.low,
         borderRadius: BorderRadius.circular(30),
         child: Container(
           width: $width,

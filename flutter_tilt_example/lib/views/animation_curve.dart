@@ -33,11 +33,13 @@ class TiltExample extends StatelessWidget {
         leaveCurve: Curves.bounceOut,
       ),
       child: TiltBaseContainer(
+        filterQuality: FilterQuality.low,
         borderRadius: BorderRadius.circular(30),
         childLayout: const ChildLayout(
           outer: [
             Positioned(
               child: TiltParallax(
+                filterQuality: FilterQuality.low,
                 offset: Offset(40, 40),
                 child: Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
               ),
@@ -72,11 +74,13 @@ class TiltExample extends StatelessWidget {
         leaveCurve: Curves.bounceOut,
       ),
       child: TiltBaseContainer(
+        filterQuality: FilterQuality.low,
         borderRadius: BorderRadius.circular(30),
         childLayout: const ChildLayout(
           outer: [
             Positioned(
               child: TiltParallax(
+                filterQuality: FilterQuality.low,
                 offset: Offset(40, 40),
                 child: Text('Flutter Tilt ✨', style: TextStyle(fontSize: 20, color: Colors.white)),
               ),

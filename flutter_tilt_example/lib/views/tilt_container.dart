@@ -102,6 +102,7 @@ class TiltBody extends StatelessWidget {
           top: 80 * scaleFactor,
           left: 140 * scaleFactor,
           child: TiltParallax(
+            filterQuality: FilterQuality.low,
             offset: Offset(10 * scaleFactor, 10 * scaleFactor),
             child: Text(
               'Flutter Tilt',
@@ -114,6 +115,7 @@ class TiltBody extends StatelessWidget {
           ),
         ),
         TiltParallax(
+          filterQuality: FilterQuality.low,
           offset: Offset(20 * scaleFactor, 20 * scaleFactor),
           child: Image.asset(
             'assets/parallax_image/2.png',
@@ -122,6 +124,7 @@ class TiltBody extends StatelessWidget {
           ),
         ),
         TiltParallax(
+          filterQuality: FilterQuality.low,
           offset: Offset(30 * scaleFactor, 30 * scaleFactor),
           child: Image.asset(
             'assets/parallax_image/3.png',
@@ -143,6 +146,7 @@ class TiltProjectorExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return TiltWidget(
       child: TiltProjectorContainer(
+        filterQuality: FilterQuality.low,
         shadowConfig: const ShadowProjectorConfig(
           maxIntensity: 0.36,
           projectorScaleFrom: 1.0,
@@ -166,6 +170,7 @@ class TiltBaseExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return TiltWidget(
       child: TiltBaseContainer(
+        filterQuality: FilterQuality.low,
         lightConfig: const LightConfig(disable: true),
         shadowConfig: const ShadowBaseConfig(maxIntensity: 0.6),
         childLayout: TiltBody.childLayout(scaleFactor),
@@ -187,6 +192,7 @@ class TiltExample extends StatelessWidget {
         leaveDuration: Duration(milliseconds: 600),
       ),
       child: TiltProjectorContainer(
+        filterQuality: FilterQuality.low,
         shadowConfig: const ShadowProjectorConfig(
           maxIntensity: 0.36,
           projectorScaleFrom: 1.0,
@@ -200,6 +206,7 @@ class TiltExample extends StatelessWidget {
               top: 80,
               left: 140,
               child: TiltParallax(
+                filterQuality: FilterQuality.low,
                 offset: Offset(10, 10),
                 child: Text(
                   'Flutter Tilt',
@@ -212,10 +219,12 @@ class TiltExample extends StatelessWidget {
               ),
             ),
             TiltParallax(
+              filterQuality: FilterQuality.low,
               offset: const Offset(20, 20),
               child: Image.asset('assets/parallax_image/2.png', width: 742, height: 337),
             ),
             TiltParallax(
+              filterQuality: FilterQuality.low,
               offset: const Offset(30, 30),
               child: Image.asset('assets/parallax_image/3.png', width: 742, height: 337),
             ),

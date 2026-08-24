@@ -51,6 +51,7 @@ class _TiltExampleState extends State<TiltExample> {
       child: Tilt(
         tiltConfig: const TiltConfig(angle: 15),
         child: TiltBaseContainer(
+          filterQuality: FilterQuality.low,
           lightConfig: const LightConfig(minIntensity: 0.1),
           shadowConfig: const ShadowBaseConfig(
             minIntensity: 0.05,
@@ -65,6 +66,7 @@ class _TiltExampleState extends State<TiltExample> {
               Positioned(
                 top: 200,
                 child: TiltParallax(
+                  filterQuality: FilterQuality.low,
                   offset: const Offset(-20, -20),
                   child: Text('$_counter', style: const TextStyle(fontSize: 20)),
                 ),
@@ -73,6 +75,7 @@ class _TiltExampleState extends State<TiltExample> {
                 bottom: 10,
                 right: 10,
                 child: TiltParallax(
+                  filterQuality: FilterQuality.low,
                   offset: const Offset(25, 25),
                   child: SizedBox(
                     width: 48,
@@ -161,6 +164,7 @@ class _TiltExampleState extends State<TiltExample> {
       child: Tilt(
         tiltConfig: const TiltConfig(angle: 15),
         child: TiltBaseContainer(
+          filterQuality: FilterQuality.low,
           lightConfig: const LightConfig(minIntensity: 0.1),
           shadowConfig: const ShadowBaseConfig(
             minIntensity: 0.05,
@@ -175,6 +179,7 @@ class _TiltExampleState extends State<TiltExample> {
               Positioned(
                 top: 200,
                 child: TiltParallax(
+                  filterQuality: FilterQuality.low,
                   offset: const Offset(-20, -20),
                   child: Text('\$_counter', style: const TextStyle(fontSize: 20)),
                 ),
@@ -183,6 +188,7 @@ class _TiltExampleState extends State<TiltExample> {
                 bottom: 10,
                 right: 10,
                 child: TiltParallax(
+                  filterQuality: FilterQuality.low,
                   offset: const Offset(25, 25),
                   child: SizedBox(
                     width: 48,

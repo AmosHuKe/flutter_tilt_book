@@ -54,6 +54,7 @@ class TiltExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return Tilt(
       child: TiltBaseContainer(
+        filterQuality: FilterQuality.low,
         lightConfig: const LightConfig(disable: true),
         shadowConfig: ShadowBaseConfig(direction: shadowDirection),
         borderRadius: BorderRadius.circular(30),
@@ -84,6 +85,7 @@ class TiltExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return Tilt(
       child: TiltBaseContainer(
+        filterQuality: FilterQuality.low,
         lightConfig: const LightConfig(disable: true),
         shadowConfig: ShadowBaseConfig(direction: $shadowDirection),
         borderRadius: BorderRadius.circular(30),

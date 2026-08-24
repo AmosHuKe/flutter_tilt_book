@@ -50,6 +50,7 @@ class TiltExample extends StatelessWidget {
               top: 80 * scaleFactor,
               left: 140 * scaleFactor,
               child: TiltParallax(
+                filterQuality: FilterQuality.high,
                 offset: Offset(10 * scaleFactor, 10 * scaleFactor),
                 child: Text(
                   'Flutter Tilt',
@@ -109,6 +110,7 @@ class TiltExample1 extends StatelessWidget {
               top: 80,
               left: 140,
               child: TiltParallax(
+                filterQuality: FilterQuality.high,
                 offset: Offset(10, 10),
                 child: Text(
                   'Flutter Tilt',

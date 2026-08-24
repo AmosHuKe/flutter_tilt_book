@@ -14,11 +14,13 @@ class TiltExample extends StatelessWidget {
     return Tilt(
       tiltConfig: const TiltConfig(initial: Offset(-1.0, -1.0)),
       child: TiltBaseContainer(
+        filterQuality: FilterQuality.low,
         borderRadius: BorderRadius.circular(30),
         childLayout: ChildLayout(
           outer: [
             Positioned(
               child: TiltParallax(
+                filterQuality: FilterQuality.low,
                 offset: const Offset(20, 20),
                 child: Container(
                   width: 200,
