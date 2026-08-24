@@ -279,20 +279,6 @@
     }
   },
   {
-    "slug": "/examples/cd-demo",
-    "title": "CD",
-    "description": "",
-    "content": "",
-    "_searchMeta": {
-      "cleanContent": "",
-      "headings": [],
-      "keywords": [
-        "example",
-        "CD"
-      ]
-    }
-  },
-  {
     "slug": "/examples/demo",
     "title": "Demo",
     "description": "",
