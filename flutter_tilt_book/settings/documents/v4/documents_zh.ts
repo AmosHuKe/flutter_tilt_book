@@ -161,6 +161,10 @@ export const documents_v4_zh: Paths[] = [
         href: "/smooth-gesture-enter-demo",
       },
       {
+        title: "Perspective",
+        href: "/perspective-demo",
+      },
+      {
         title: "TiltController",
         href: "/tilt-controller-demo",
       },

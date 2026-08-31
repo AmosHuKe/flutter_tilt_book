@@ -109,6 +109,12 @@ abstract final class Config {
       pageInfo: SmoothGestureEnterDemo.page,
     ),
     RouteData(
+      title: 'Perspective',
+      icon: Remix.layout_4_line,
+      pathName: 'PerspectiveDemo',
+      pageInfo: PerspectiveDemo.page,
+    ),
+    RouteData(
       title: 'TiltController',
       icon: Remix.remote_control_line,
       pathName: 'TiltControllerDemo',
