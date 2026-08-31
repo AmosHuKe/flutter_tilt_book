@@ -474,6 +474,20 @@
     }
   },
   {
+    "slug": "/examples/perspective-demo",
+    "title": "Perspective",
+    "description": "",
+    "content": "",
+    "_searchMeta": {
+      "cleanContent": "",
+      "headings": [],
+      "keywords": [
+        "example",
+        "Perspective"
+      ]
+    }
+  },
+  {
     "slug": "/examples/reverse-tilt",
     "title": "Reverse Tilt",
     "description": "",
