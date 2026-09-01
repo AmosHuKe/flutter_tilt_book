@@ -600,6 +600,32 @@
     }
   },
   {
+    "slug": "/guides/adjust-3d-effects",
+    "title": "调整 3D 效果",
+    "description": "",
+    "content": "你可以通过调整以下参数来增强 3D 效果。\n\n还可以参考示例：\n\n## 透视强度\n\n透视强度（近大远小）。\\\n为 `null` 时，将默认按尺寸自适应。\n\n```diff {3} showLineNumbers\nTilt(\n  tiltConfig: const TiltConfig(\n+   perspectiveIntensity: 0.003,\n  ),\n),\n```\n\n## Z 轴偏移量\n\n旋转支点在 Z 轴方向的偏移量。\\\n不为 0 时，widget 将绕 Z 轴上的偏移支点产生倾斜摆动的效果。\n\n例如：\n\n* `-100`：支点位于 widget 后方 100 像素。\n* `100`：支点位于 widget 前方 100 像素。\n* `0`：支点位于 widget 中心。\n\n```diff {3} showLineNumbers\nTilt(\n  tiltConfig: const TiltConfig(\n+   zOffset: -200,\n  ),\n),\n```\n",
+    "_searchMeta": {
+      "cleanContent": "你可以通过调整以下参数来增强 3d 效果 还可以参考示例 透视强度 透视强度 近大远小 为 null 时 将默认按尺寸自适应 z 轴偏移量 旋转支点在 z 轴方向的偏移量 不为 0 时 widget 将绕 z 轴上的偏移支点产生倾斜摆动的效果 例如 -100 支点位于 widget 后方 100 像素 100 支点位于 widget 前方 100 像素 0 支点位于 widget 中心",
+      "headings": [
+        "透视强度",
+        "Z 轴偏移量"
+      ],
+      "keywords": [
+        "指南",
+        "3D 效果",
+        "透视强度",
+        "Z 轴偏移量",
+        "null",
+        "diff {3} showLineNumbers\nTilt(\n  tiltConfig: const TiltConfig(\n+   perspectiveIntensity: 0.003,\n  ),\n),",
+        "## Z 轴偏移量\n\n旋转支点在 Z 轴方向的偏移量。\\\n不为 0 时，widget 将绕 Z 轴上的偏移支点产生倾斜摆动的效果。\n\n例如：\n\n*",
+        "：支点位于 widget 后方 100 像素。\n*",
+        "：支点位于 widget 前方 100 像素。\n*",
+        "：支点位于 widget 中心。",
+        "diff {3} showLineNumbers\nTilt(\n  tiltConfig: const TiltConfig(\n+   zOffset: -200,\n  ),\n),"
+      ]
+    }
+  },
+  {
     "slug": "/guides/disable-sensors",
     "title": "禁用传感器",
     "description": "",

@@ -600,6 +600,32 @@
     }
   },
   {
+    "slug": "/guides/adjust-3d-effects",
+    "title": "Adjust 3D effects",
+    "description": "",
+    "content": "You can enhance the 3D effect by adjusting the following parameters.\n\nAlso see the Example:\n\n## Perspective intensity\n\nPerspective intensity (near-large, far-small).\\\nWhen `null`, it defaults to a size-adaptive value.\n\n```diff {3} showLineNumbers\nTilt(\n  tiltConfig: const TiltConfig(\n+   perspectiveIntensity: 0.003,\n  ),\n),\n```\n\n## Z-axis offset\n\nThe offset of the rotation pivot along the Z-axis.\\\nWhen non-zero, the widget produces a tilting and swinging effect around the offset pivot point on the Z-axis.\n\nFor example:\n\n* `-100`: The pivot is 100 pixels behind the widget.\n* `100`: The pivot is 100 pixels in front of the widget.\n* `0`: The pivot is at the center of the widget.\n\n```diff {3} showLineNumbers\nTilt(\n  tiltConfig: const TiltConfig(\n+   zOffset: -200,\n  ),\n),\n```\n",
+    "_searchMeta": {
+      "cleanContent": "you can enhance the 3d effect by adjusting the following parameters also see the example: perspective intensity perspective intensity near-large far-small when null it defaults to a size-adaptive value z-axis offset the offset of the rotation pivot along the z-axis when non-zero the widget produces a tilting and swinging effect around the offset pivot point on the z-axis for example: -100: the pivot is 100 pixels behind the widget 100: the pivot is 100 pixels in front of the widget 0: the pivot is at the center of the widget",
+      "headings": [
+        "Perspective intensity",
+        "Z-axis offset"
+      ],
+      "keywords": [
+        "guide",
+        "3D effects",
+        "Perspective intensity",
+        "Z-axis offset",
+        "null",
+        "diff {3} showLineNumbers\nTilt(\n  tiltConfig: const TiltConfig(\n+   perspectiveIntensity: 0.003,\n  ),\n),",
+        "## Z-axis offset\n\nThe offset of the rotation pivot along the Z-axis.\\\nWhen non-zero, the widget produces a tilting and swinging effect around the offset pivot point on the Z-axis.\n\nFor example:\n\n*",
+        ": The pivot is 100 pixels behind the widget.\n*",
+        ": The pivot is 100 pixels in front of the widget.\n*",
+        ": The pivot is at the center of the widget.",
+        "diff {3} showLineNumbers\nTilt(\n  tiltConfig: const TiltConfig(\n+   zOffset: -200,\n  ),\n),"
+      ]
+    }
+  },
+  {
     "slug": "/guides/disable-sensors",
     "title": "Disable sensors",
     "description": "",
