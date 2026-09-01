@@ -1,0 +1,49 @@
+---
+title: Adjust 3D effects
+description:
+keywords: ["guide", "3D effects"]
+---
+
+You can enhance the 3D effect by adjusting the following parameters.   
+
+Also see the Example:
+
+<NavCardGrid>
+  <NavCard
+    subtitle="Example"
+    title="Perspective"
+    external="true"
+    href="/en/v4/docs/examples/perspective-demo/"
+  />
+</NavCardGrid>
+
+## Perspective intensity
+
+Perspective intensity (near-large, far-small).  
+When `null`, it defaults to a size-adaptive value.  
+
+```diff {3} showLineNumbers
+Tilt(
+  tiltConfig: const TiltConfig(
++   perspectiveIntensity: 0.003,
+  ),
+),
+```
+
+## Z-axis offset
+
+The offset of the rotation pivot along the Z-axis.  
+When non-zero, the widget produces a tilting and swinging effect around the offset pivot point on the Z-axis.  
+
+For example:
+- `-100`: The pivot is 100 pixels behind the widget.
+- `100`: The pivot is 100 pixels in front of the widget.
+- `0`: The pivot is at the center of the widget.
+
+```diff {3} showLineNumbers
+Tilt(
+  tiltConfig: const TiltConfig(
++   zOffset: -200,
+  ),
+),
+```

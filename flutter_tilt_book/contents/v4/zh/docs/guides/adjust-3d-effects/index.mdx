@@ -1,0 +1,49 @@
+---
+title: 调整 3D 效果
+description:
+keywords: ["指南", "3D 效果"]
+---
+
+你可以通过调整以下参数来增强 3D 效果。   
+
+还可以参考示例：
+
+<NavCardGrid>
+  <NavCard
+    subtitle="示例"
+    title="Perspective"
+    external="true"
+    href="/zh/v4/docs/examples/perspective-demo/"
+  />
+</NavCardGrid>
+
+## 透视强度
+
+透视强度（近大远小）。  
+为 `null` 时，将默认按尺寸自适应。  
+
+```diff {3} showLineNumbers
+Tilt(
+  tiltConfig: const TiltConfig(
++   perspectiveIntensity: 0.003,
+  ),
+),
+```
+
+## Z 轴偏移量
+
+旋转支点在 Z 轴方向的偏移量。  
+不为 0 时，widget 将绕 Z 轴上的偏移支点产生倾斜摆动的效果。  
+
+例如：
+- `-100`：支点位于 widget 后方 100 像素。
+- `100`：支点位于 widget 前方 100 像素。
+- `0`：支点位于 widget 中心。
+
+```diff {3} showLineNumbers
+Tilt(
+  tiltConfig: const TiltConfig(
++   zOffset: -200,
+  ),
+),
+```

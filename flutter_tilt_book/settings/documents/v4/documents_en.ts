@@ -47,6 +47,10 @@ export const documents_v4_en: Paths[] = [
     isSubOpen: false,
     items: [
       {
+        title: "Adjust 3D effects",
+        href: "/adjust-3d-effects",
+      },
+      {
         title: "Tilt with controller",
         href: "/tilt-with-controller",
       },
