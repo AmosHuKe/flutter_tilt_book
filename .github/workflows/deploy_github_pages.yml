@@ -48,7 +48,7 @@ jobs:
       - name: Check code formatting
         run: |
           cd flutter_tilt_book
-          npm run lint
+          npm run lint:check
           npm run format:check
 
   deploy:
