@@ -1,16 +1,24 @@
 1:"$Sreact.fragment"
-2:I[39756,["/flutter_tilt_book/_next/static/chunks/3fntmmi971322.js"],"default"]
-3:I[8821,["/flutter_tilt_book/_next/static/chunks/3fntmmi971322.js","/flutter_tilt_book/_next/static/chunks/2z3im49q64f8y.js","/flutter_tilt_book/_next/static/chunks/4306l5xoyfeh7.js"],"default"]
-4:I[37457,["/flutter_tilt_book/_next/static/chunks/3fntmmi971322.js"],"default"]
-5:I[2155,["/flutter_tilt_book/_next/static/chunks/3fntmmi971322.js","/flutter_tilt_book/_next/static/chunks/0v7a6j89tmkwe.js"],"Link"]
-8:I[97367,["/flutter_tilt_book/_next/static/chunks/3fntmmi971322.js"],"OutletBoundary"]
-9:"$Sreact.suspense"
-b:I[97367,["/flutter_tilt_book/_next/static/chunks/3fntmmi971322.js"],"ViewportBoundary"]
-d:I[97367,["/flutter_tilt_book/_next/static/chunks/3fntmmi971322.js"],"MetadataBoundary"]
-f:I[68027,["/flutter_tilt_book/_next/static/chunks/3fntmmi971322.js"],"default",1]
-0:{"P":null,"c":["","en",""],"q":"","i":false,"f":[[["",{"children":[["locale","en","d",[]],{"children":["__PAGE__",{},"$undefined","$undefined",4608]},"$undefined","$undefined",4608]},"$undefined","$undefined",4624],[["$","$1","c",{"children":[[["$","script","script-0",{"src":"/flutter_tilt_book/_next/static/chunks/3fntmmi971322.js","async":true,"nonce":"$undefined"}]],["$","$L2",null,{"parallelRouterKey":"children","error":"$3","errorStyles":[],"errorScripts":[["$","script","script-0",{"src":"/flutter_tilt_book/_next/static/chunks/2z3im49q64f8y.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/flutter_tilt_book/_next/static/chunks/4306l5xoyfeh7.js","async":true,"nonce":"$undefined"}]],"template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"flex min-h-[86.5vh] flex-col items-center justify-center px-2 py-8 text-center","children":[["$","h1",null,{"className":"mb-4 text-4xl font-bold sm:text-7xl","children":"404"}],["$","p",null,{"className":"text-foreground mb-8 max-w-150 sm:text-base","children":"Page not found"}],["$","div",null,{"className":"flex items-center","children":["$","$L5",null,{"href":"/","children":"Return Home","data-slot":"button","className":"inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-10 rounded-md px-6 has-[>svg]:px-4","ref":null}]}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,"$L6"]}],{"children":[["$","$1","c",{"children":["$L7",null,["$","$L8",null,{"children":["$","$9",null,{"name":"Next.MetadataOutlet","children":"$@a"}]}]]}],{},null,false,null]},null,false,null]},null,false,null],["$","$1","h",{"children":[null,["$","$Lb",null,{"children":"$Lc"}],["$","div",null,{"hidden":true,"children":["$","$Ld",null,{"children":["$","$9",null,{"name":"Next.Metadata","children":"$Le"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],false]],"m":"$undefined","G":["$f",[]],"S":true,"h":null,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"DlKBkJ9hiUn7S1PFM4ygR"}
-6:["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]
-7:E{"digest":"NEXT_REDIRECT;replace;/en/v4;307;"}
-c:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-a:null
-e:[]
+2:"/flutter_tilt_book/_next/static/chunks/0umf92h1sb77c.js"
+3:I[39756,["$2"],"default"]
+4:"/flutter_tilt_book/_next/static/chunks/29x971ct1pf0g.js"
+5:"/flutter_tilt_book/_next/static/chunks/0jqyxfa15nsfp.js"
+6:I[8821,["$2","$4","$5"],"default"]
+7:I[37457,["$2"],"default"]
+8:"/flutter_tilt_book/_next/static/chunks/0y8acdp1ur96-.js"
+9:I[2155,["$2","$8"],"Link"]
+e:I[97367,["$2"],"OutletBoundary"]
+f:"$Sreact.suspense"
+11:"ViewportBoundary"
+12:I[97367,["$2"],"$11"]
+14:"MetadataBoundary"
+15:I[97367,["$2"],"$14"]
+17:I[68027,["$2"],"default",1]
+c:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":["$Ld",null,["$","$Le",null,{"children":["$","$f",null,{"name":"Next.MetadataOutlet","children":"$@10"}]}]]}],"p":false,"v":null}}]]
+a:[["children",{"s":{"n":"locale","t":"d","k":"en","s":[]},"h":512,"d":{"r":["$","$1","c",{"children":[null,"$Lb"]}],"p":false,"v":null},"c":"$Qc"}]]
+0:{"P":null,"c":["","en",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","script","script-0",{"src":"/flutter_tilt_book/_next/static/chunks/0umf92h1sb77c.js","async":true,"nonce":"$undefined"}]],["$","$L3",null,{"parallelRouterKey":"children","error":"$6","errorStyles":[],"errorScripts":[["$","script","script-0",{"src":"/flutter_tilt_book/_next/static/chunks/29x971ct1pf0g.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/flutter_tilt_book/_next/static/chunks/0jqyxfa15nsfp.js","async":true,"nonce":"$undefined"}]],"template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"flex min-h-[86.5vh] flex-col items-center justify-center px-2 py-8 text-center","children":[["$","h1",null,{"className":"mb-4 text-4xl font-bold sm:text-7xl","children":"404"}],["$","p",null,{"className":"text-foreground mb-8 max-w-150 sm:text-base","children":"Page not found"}],["$","div",null,{"className":"flex items-center","children":["$","$L9",null,{"href":"/","children":"Return Home","data-slot":"button","className":"inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-10 rounded-md px-6 has-[>svg]:px-4","ref":null}]}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":null},"c":"$Qa"},"h":{"r":["$","$1","h",{"children":[null,["$","$L12",null,{"children":"$L13"}],["$","$L15",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$f",null,{"name":"Next.Metadata","children":"$L16"}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":false,"v":null}},"m":"$undefined","G":["$17",[]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"o9Yz81bhDuVxH9cJUn8l-"}
+b:["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]
+d:E{"digest":"NEXT_REDIRECT;replace;/en/v4;307;"}
+13:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+10:null
+16:[]
