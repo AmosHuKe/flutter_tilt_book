@@ -81,8 +81,6 @@ export default function Search({
   useEffect(() => {
     if (searchedInput.length >= 2) {
       debouncedSearch(searchedInput)
-    } else {
-      setFilteredResults([])
     }
   }, [searchedInput, debouncedSearch])
 
@@ -153,7 +151,12 @@ export default function Search({
           <DialogHeader>
             <input
               value={searchedInput}
-              onChange={(e) => setSearchedInput(e.target.value)}
+              onChange={(e) => {
+                setSearchedInput(e.target.value)
+                if (e.target.value.length < 2) {
+                  setFilteredResults([])
+                }
+              }}
               placeholder={localeDictionaries.placeholder}
               autoFocus
               className="h-14 border-b bg-transparent px-4 text-[15px] outline-none"
