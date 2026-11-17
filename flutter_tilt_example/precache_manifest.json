@@ -1,0 +1,287 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "url": "assets/AssetManifest.9c8a14f8.bin",
+      "hash": "9c8a14f8",
+      "size": 2518,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/AssetManifest.bin.7bb6939e.json",
+      "hash": "7bb6939e",
+      "size": 3362,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/FontManifest.fd732762.json",
+      "hash": "fd732762",
+      "size": 1337,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/NOTICES.39a3d784",
+      "hash": "39a3d784",
+      "size": 1419344,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/assets/bento_grids/1.3b8e09da.png",
+      "hash": "3b8e09da",
+      "size": 56963,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/assets/bento_grids/2.2d9949ed.png",
+      "hash": "2d9949ed",
+      "size": 33817,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/assets/bento_grids/3.80586e37.png",
+      "hash": "80586e37",
+      "size": 27227,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/assets/fonts/Noto_Emoji/NotoEmoji-VariableFont_wght.7f8e29e4.ttf",
+      "hash": "7f8e29e4",
+      "size": 1966236,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/assets/fonts/Roboto/Roboto-Black.5ace0d08.ttf",
+      "hash": "5ace0d08",
+      "size": 168060,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/assets/fonts/Roboto/Roboto-BlackItalic.8b2f87fb.ttf",
+      "hash": "8b2f87fb",
+      "size": 174108,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/assets/fonts/Roboto/Roboto-Bold.ec685a46.ttf",
+      "hash": "ec685a46",
+      "size": 167336,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/assets/fonts/Roboto/Roboto-BoldItalic.61df597f.ttf",
+      "hash": "61df597f",
+      "size": 171508,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/assets/fonts/Roboto/Roboto-Italic.99e4a850.ttf",
+      "hash": "99e4a850",
+      "size": 170504,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/assets/fonts/Roboto/Roboto-Light.c576c506.ttf",
+      "hash": "c576c506",
+      "size": 167000,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/assets/fonts/Roboto/Roboto-LightItalic.a4840622.ttf",
+      "hash": "a4840622",
+      "size": 173172,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/assets/fonts/Roboto/Roboto-Medium.9d0d55a3.ttf",
+      "hash": "9d0d55a3",
+      "size": 168644,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/assets/fonts/Roboto/Roboto-MediumItalic.d3f317c9.ttf",
+      "hash": "d3f317c9",
+      "size": 173416,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/assets/fonts/Roboto/Roboto-Regular.4e147ab6.ttf",
+      "hash": "4e147ab6",
+      "size": 168260,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/assets/fonts/Roboto/Roboto-Thin.67248f7e.ttf",
+      "hash": "67248f7e",
+      "size": 168488,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/assets/fonts/Roboto/Roboto-ThinItalic.28ce251a.ttf",
+      "hash": "28ce251a",
+      "size": 172860,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/assets/multiple_tilt_image/moon.870e6227.png",
+      "hash": "870e6227",
+      "size": 10385,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/assets/multiple_tilt_image/star.68c1a440.png",
+      "hash": "68c1a440",
+      "size": 10903,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/assets/multiple_tilt_image/sun.0d25476a.png",
+      "hash": "0d25476a",
+      "size": 9230,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/assets/parallax_card/Artwork-MichaHuigen.1395b9c1.jpg",
+      "hash": "1395b9c1",
+      "size": 67228,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/assets/parallax_image/1.43eb622b.png",
+      "hash": "43eb622b",
+      "size": 85062,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/assets/parallax_image/2.1e4cf0a9.png",
+      "hash": "1e4cf0a9",
+      "size": 14139,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/assets/parallax_image/3.1b0b4ca7.png",
+      "hash": "1b0b4ca7",
+      "size": 37676,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/assets/tilt_animated_builder/froakie.4fb51d47.jpg",
+      "hash": "4fb51d47",
+      "size": 125686,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/fonts/MaterialIcons-Regular.b46ecc7a.otf",
+      "hash": "b46ecc7a",
+      "size": 1720,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/packages/material_ui/shaders/ink_sparkle.2dca5ab9.frag",
+      "hash": "2dca5ab9",
+      "size": 8890,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/packages/remixicon_updated/fonts/Remix.52dc04ef.ttf",
+      "hash": "52dc04ef",
+      "size": 5436,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/shaders/ink_sparkle.2dca5ab9.frag",
+      "hash": "2dca5ab9",
+      "size": 8890,
+      "urlHashed": true
+    },
+    {
+      "url": "assets/shaders/stretch_effect.ab412f07.frag",
+      "hash": "ab412f07",
+      "size": 6737,
+      "urlHashed": true
+    },
+    {
+      "url": "css/loading/loading.css",
+      "hash": "f1d69a17",
+      "size": 3904,
+      "urlHashed": false
+    },
+    {
+      "url": "favicon.png",
+      "hash": "7ab2525f",
+      "size": 917,
+      "urlHashed": false
+    },
+    {
+      "url": "flutter.js",
+      "hash": "d2e7708f",
+      "size": 13169,
+      "urlHashed": false
+    },
+    {
+      "url": "flutter_bootstrap.js",
+      "hash": "e9fee6d2",
+      "size": 15897,
+      "urlHashed": false
+    },
+    {
+      "url": "icons/Icon-192.png",
+      "hash": "3dce9907",
+      "size": 5292,
+      "urlHashed": false
+    },
+    {
+      "url": "icons/Icon-512.png",
+      "hash": "baccb205",
+      "size": 8252,
+      "urlHashed": false
+    },
+    {
+      "url": "icons/Icon-maskable-192.png",
+      "hash": "d2c842e2",
+      "size": 5594,
+      "urlHashed": false
+    },
+    {
+      "url": "icons/Icon-maskable-512.png",
+      "hash": "6aee06cd",
+      "size": 20998,
+      "urlHashed": false
+    },
+    {
+      "url": "index.html",
+      "hash": "303e4d74",
+      "size": 2210,
+      "urlHashed": false
+    },
+    {
+      "url": "main.dart.619ae4a6.wasm",
+      "hash": "619ae4a6",
+      "size": 2370451,
+      "urlHashed": true
+    },
+    {
+      "url": "main.dart.9f7b1d25.mjs",
+      "hash": "9f7b1d25",
+      "size": 32611,
+      "urlHashed": true
+    },
+    {
+      "url": "main.dart.c9cca444.js",
+      "hash": "c9cca444",
+      "size": 2808575,
+      "urlHashed": true
+    },
+    {
+      "url": "manifest.json",
+      "hash": "f75b85da",
+      "size": 934,
+      "urlHashed": false
+    },
+    {
+      "url": "version.json",
+      "hash": "18fca250",
+      "size": 107,
+      "urlHashed": false
+    }
+  ]
+}
