@@ -54,7 +54,7 @@ _flutter.loader.load({
     }
   },
   serviceWorkerSettings: {
-    serviceWorkerVersion: "3346474924" /* Flutter's service worker is deprecated and will be removed in a future Flutter release. */,
+    serviceWorkerVersion: "4172863184" /* Flutter's service worker is deprecated and will be removed in a future Flutter release. */,
   },
   onEntrypointLoaded: async function (engineInitializer) {
     const appRunner = await engineInitializer.initializeEngine();
