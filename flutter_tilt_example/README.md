@@ -6,7 +6,7 @@ This is an example project demonstrating the usage of Flutter Tilt.
 
 |         | Version  |
 | ------- | -------- |
-| Flutter | v3.47.x  |
+| Flutter | v3.50.x  |
 
 ## Getting started
 
@@ -17,11 +17,8 @@ $ flutter run -d chrome --web-port=3002
 # run the generator (required for router)
 $ dart run build_runner watch
 
-# build for web production (/build/web)
-$ flutter build web --release
-
 # build for web wasm production (/build/web)
-$ flutter build web --wasm --release
+$ flutter build web --wasm --release --web-content-hash
 ```
 
 ## Directory structure

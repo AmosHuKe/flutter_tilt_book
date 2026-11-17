@@ -4,7 +4,7 @@
 cd ../flutter_tilt_example || { echo "目录 flutter_tilt_example 不存在"; exit 1; }
 
 # 构建 flutter_tilt_example
-flutter build web --wasm --release || { echo "flutter_tilt_example 构建失败"; exit 1; }
+flutter build web --wasm --release --web-content-hash || { echo "flutter_tilt_example 构建失败"; exit 1; }
 
 # 返回到项目根目录
 cd ..

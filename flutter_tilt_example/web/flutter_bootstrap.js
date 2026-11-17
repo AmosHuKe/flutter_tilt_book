@@ -5,7 +5,12 @@ _flutter.loader.load({
   config: {
     assetBase: '/flutter_tilt_book/flutter_tilt_example/',
     canvasKitVariant: 'full',
-    canvasKitBaseUrl: '/flutter_tilt_book/flutter_tilt_example/canvaskit/'
+    canvasKitBaseUrl: '/flutter_tilt_book/flutter_tilt_example/canvaskit/',
+    wasmAllowList: {
+      blink: true,
+      webkit: true,
+      gecko: true,
+    }
   },
   serviceWorkerSettings: {
     serviceWorkerVersion: {{flutter_service_worker_version}},

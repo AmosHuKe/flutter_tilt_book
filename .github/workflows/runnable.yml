@@ -120,4 +120,4 @@ jobs:
           flutter build linux --debug
       - name: Build Web
         if: matrix.build == 'Web'
-        run: flutter build web --wasm --release
+        run: flutter build web --wasm --release --web-content-hash
